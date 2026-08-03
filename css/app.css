@@ -1236,9 +1236,8 @@ button.tabbar__item {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   min-height: 34px;
-  padding: 5px 11px 5px 9px;
+  padding: 5px 9px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-2);
@@ -1256,10 +1255,36 @@ button.tabbar__item {
 .theme-toggle[data-theme-toggle="dark"] { background: var(--green-900); color: #F3E8CF; border-color: transparent; }
 .theme-toggle[data-theme-toggle="light"] { background: color-mix(in srgb, var(--amber-500) 16%, transparent); color: var(--amber-500); border-color: transparent; }
 
-/* Under 380px the label is the first thing to go, not the button. */
-@media (max-width: 380px) {
-  .theme-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .theme-toggle { padding: 5px 9px; }
+/* The word is the answer to "what did I just switch it to", and that question
+ * has a short life. At rest the button is the icon alone; pressing it (or
+ * reaching it with a keyboard, or hovering on a pointer device) opens it just
+ * wide enough for the word, and it closes itself a second and a half later.
+ *
+ * Width and opacity rather than display, so it slides instead of jumping the
+ * app bar sideways. The button keeps its accessible name either way, so none of
+ * this reaches a screen reader. */
+.theme-toggle__label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width .22s var(--ease), opacity .16s var(--ease), margin-left .22s var(--ease);
+}
+.theme-toggle.is-revealing .theme-toggle__label,
+.theme-toggle:focus-visible .theme-toggle__label {
+  max-width: 5em;
+  opacity: 1;
+  margin-left: 6px;
+}
+
+/* Hover is a pointer affordance, not a touch one: on a phone it latches on
+ * after a tap and the button never closes again. */
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover .theme-toggle__label { max-width: 5em; opacity: 1; margin-left: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle__label { transition: none; }
 }
 
 /* ------------------------------------------------------------------ *

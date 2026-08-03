@@ -44,9 +44,25 @@ export const currentTheme = () => {
 
 export const nextTheme = (theme) => THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
 
+/**
+ * How long the word stays up after a press, in ms.
+ *
+ * The button sits in the app bar all day, so at rest it is the icon alone. The
+ * word is the answer to "what did I just switch it to", and that question has a
+ * short life — long enough to read at a glance, gone before it is clutter.
+ */
+const REVEAL_MS = 1600;
+
 /** Redraw whatever theme buttons are on screen. Called after any change. */
 export function refreshThemeToggles() {
   for (const btn of document.querySelectorAll('[data-theme-toggle]')) paint(btn, currentTheme());
+}
+
+/** Show the word, then take it away again. */
+function reveal(btn) {
+  clearTimeout(btn._revealTimer);
+  btn.classList.add('is-revealing');
+  btn._revealTimer = setTimeout(() => btn.classList.remove('is-revealing'), REVEAL_MS);
 }
 
 function paint(btn, theme) {
@@ -66,12 +82,18 @@ export function setTheme(theme) {
   refreshThemeToggles();
 }
 
-/** The button itself. Small, always in the same corner, never hidden behind a menu. */
+/**
+ * The button itself. Small, always in the same corner, never hidden behind a menu.
+ *
+ * Icon-only at rest and it grows to fit the word when pressed, so the app bar
+ * keeps its space for the wordmark. The accessible name carries the state in
+ * full at all times, whatever the width is doing.
+ */
 export function themeToggle() {
   const btn = h('button.theme-toggle', {
     type: 'button',
     'data-theme-toggle': 'system',
-    onclick: () => setTheme(nextTheme(currentTheme()))
+    onclick: () => { setTheme(nextTheme(currentTheme())); reveal(btn); }
   });
   paint(btn, currentTheme());
   return btn;
