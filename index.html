@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Diets — a heart-forward family meal planner</title>
+  <meta name="description" content="Roll dinner ideas, size the portions to your household, tick off what is already in the pantry, and walk out with a shopping list in aisle order. Vegetarian base, omnivore fork in the road, works offline.">
+  <meta name="theme-color" content="#1f6f4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1a15" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Diets">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="appbar">
+    <a class="appbar__brand" href="#/roll">
+      <span class="appbar__mark" aria-hidden="true">🌿</span>
+      <span>Diets<span class="appbar__by"> · ERRERLabs</span></span>
+    </a>
+    <button id="install-btn" class="btn btn--ghost btn--small" type="button" hidden onclick="window.__dietsInstall()">Install</button>
+  </header>
+
+  <div id="install-banner" class="install-banner" hidden>
+    <span>Add Diets to your home screen — it opens like an app and works offline.</span>
+    <button class="btn btn--small btn--primary" type="button" onclick="window.__dietsInstall()">Add</button>
+    <button class="icon-btn" type="button" aria-label="Dismiss" onclick="this.parentElement.hidden = true">✕</button>
+  </div>
+
+  <main id="main" class="main">
+    <div id="splash" class="splash">
+      <div class="splash__mark">🌿</div>
+      <p>Loading the kitchen…</p>
+      <noscript>
+        <p><strong>This app needs JavaScript.</strong> Everything runs locally in your browser — there is no server to fall back on.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

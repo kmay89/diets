@@ -1,0 +1,48 @@
+{
+  "schema": "errerlabs.diets.garden/1",
+  "location": {
+    "name": "Hudson, Ohio",
+    "county": "Summit County",
+    "zone": "6a/6b",
+    "lastFrostAvg": "May 10-15",
+    "firstFrostAvg": "October 10-15",
+    "growingDays": 150,
+    "note": "Frost dates are averages. A late frost in the third week of May happens roughly one year in four here — hold tomatoes, peppers, basil and squash until the soil is genuinely warm, or be ready to cover them."
+  },
+  "philosophy": "Grow the things that are expensive to buy, taste dramatically better fresh, or produce for months from one planting. Skip the things that are cheap and good at the store. Herbs, cherry tomatoes, greens and garlic clear that bar; onions, potatoes and corn generally do not.",
+  "startHere": {
+    "title": "If you grow five things, grow these",
+    "items": [
+      {"ing": "ing.basil", "why": "One plant supplies pesto and every tomato dish from July to frost. Store basil is $3 for a handful that dies in two days.", "how": "One plant in a pot by the kitchen door. Pinch flower tips weekly."},
+      {"ing": "ing.tomato.cherry", "why": "Sungold cherry tomatoes are the variety that converts children into vegetable eaters. Nothing at a store tastes like this.", "how": "One plant in a large pot or bed, caged. Water at the base, never the leaves."},
+      {"ing": "ing.kale.lacinato", "why": "Produces from June until December in this climate and gets sweeter after frost. It is the last green standing.", "how": "Four transplants in April and four more August 1. Pick outer leaves; the plant keeps going."},
+      {"ing": "ing.garlic", "why": "Plant in October, ignore all winter, harvest a year's supply in July. The highest return per minute of work in the garden.", "how": "Break a head into cloves, plant pointy end up 3 inches deep in mid-October, mulch with straw."},
+      {"ing": "ing.parsley.flat", "why": "The finishing herb for half the recipes here, and it survives light frost into November.", "how": "Two transplants in May. It is biennial — it will flower and quit in its second spring."}
+    ]
+  },
+  "calendar": [
+    {"month": "January", "tasks": ["Order seeds. Read the catalog by the fire; this is the whole point of January."], "harvest": ["Nothing outdoors except stored squash, garlic, potatoes and onions"], "recipeTie": ["rec.three-bean-chili", "rec.tomato-lentil-soup"]},
+    {"month": "February", "tasks": ["Start onion and leek seeds indoors under lights (Feb 1-15)."], "harvest": [], "recipeTie": ["rec.butternut-chickpea-curry"]},
+    {"month": "March", "tasks": ["Start peppers and eggplant indoors March 1-10.", "Direct sow spinach, arugula and peas outdoors in the last week if the soil can be worked."], "harvest": ["Overwintered kale, if you mulched it"], "recipeTie": ["rec.garlicky-greens"]},
+    {"month": "April", "tasks": ["Start tomatoes indoors April 1.", "Transplant broccoli, cabbage and lettuce outdoors mid-month.", "Direct sow carrots, beets, radishes, chard and more spinach.", "Plant seed potatoes."], "harvest": ["Asparagus (late April, established beds)", "Arugula", "Spinach"], "recipeTie": ["rec.slow-roasted-salmon", "rec.soft-scramble-greens"]},
+    {"month": "May", "tasks": ["Wait for the frost date. Transplant tomatoes, peppers, eggplant and basil after May 20.", "Direct sow beans, cucumbers, zucchini and squash after May 20.", "Plant sweet potato slips at the end of the month."], "harvest": ["Asparagus", "Lettuce", "Spinach", "Snap peas (late May)", "Strawberries (late May)"], "recipeTie": ["rec.everyday-big-salad", "rec.greek-quinoa-bowls"]},
+    {"month": "June", "tasks": ["Mulch everything. Stake tomatoes before they need it.", "Succession sow beans and cilantro."], "harvest": ["Snap peas", "Strawberries", "Lettuce", "Chard", "Kale", "Zucchini (late June)"], "recipeTie": ["rec.peanut-noodles", "rec.garden-stirfry"]},
+    {"month": "July", "tasks": ["Harvest garlic when the lower third of the leaves brown; cure it in a dry shaded place for two weeks.", "Sow fall carrots and beets.", "Water deeply twice a week rather than lightly every day."], "harvest": ["Zucchini", "Cucumbers", "Green beans", "Blueberries", "Basil", "First tomatoes"], "recipeTie": ["rec.summer-corn-zucchini-polenta", "rec.friday-garden-pizza"]},
+    {"month": "August", "tasks": ["Transplant fall broccoli, cabbage and kale August 1.", "Sow spinach and lettuce for fall at the end of the month.", "Preserve: freeze roasted tomatoes and pesto in ice cube trays."], "harvest": ["Tomatoes", "Peppers", "Eggplant", "Zucchini", "Beans", "Corn (local stands)", "Basil"], "recipeTie": ["rec.skillet-eggplant-parm", "rec.lentil-bolognese", "rec.garden-frittata"]},
+    {"month": "September", "tasks": ["Let peppers turn red on the plant — they double in sweetness.", "Plant garlic beds' soil amendments now."], "harvest": ["Tomatoes", "Peppers", "Butternut squash", "Kale", "Chard", "Apples (local orchards)"], "recipeTie": ["rec.stuffed-peppers", "rec.enchilada-skillet"]},
+    {"month": "October", "tasks": ["Plant garlic mid-month and mulch it with straw.", "Cure winter squash in a warm room for 10 days before storing cool.", "Bring the rosemary pot indoors before the first hard frost."], "harvest": ["Butternut squash", "Brussels sprouts", "Kale", "Carrots", "Leeks", "Beets"], "recipeTie": ["rec.lentil-shepherds-pie", "rec.white-bean-kale-soup"]},
+    {"month": "November", "tasks": ["Mulch the kale and it will feed you through December.", "Clean and oil tools."], "harvest": ["Brussels sprouts (sweeter after frost)", "Kale", "Leeks", "Carrots"], "recipeTie": ["rec.any-vegetable-roast"]},
+    {"month": "December", "tasks": ["Nothing. Rest."], "harvest": ["Kale under snow, if you mulched"], "recipeTie": ["rec.white-bean-kale-soup"]}
+  ],
+  "containerOnly": {
+    "title": "No garden bed? These five all work in pots on a deck",
+    "items": ["ing.basil", "ing.tomato.cherry", "ing.mint", "ing.rosemary", "ing.arugula"],
+    "note": "Mint should only ever be grown in a pot — in a bed it takes the whole bed in two seasons."
+  },
+  "localSources": [
+    {"name": "Hudson Farmers Market", "when": "Saturday mornings, roughly June through October, on the Green", "note": "Herbs, tomatoes, sweet corn and eggs. Go early for the good stuff."},
+    {"name": "Northeast Ohio orchards", "when": "September–October", "note": "Apples and cider within a short drive; worth building a fall weekend around."},
+    {"name": "Ohio sweet corn stands", "when": "Late July–August", "note": "Roadside corn picked that morning is a genuinely different vegetable from the store version."},
+    {"name": "Local maple sugarhouses", "when": "February–March", "note": "Geauga and Summit county syrup. Buy a quart in spring and it lasts the year."}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "errerlabs-diets",
+  "version": "1.0.0",
+  "description": "A private, offline-first family meal planner: roll dinner ideas, size portions to your household, and walk out with a shopping list in aisle order. Vegetarian base with an omnivore fork in the road, heart-forward by default.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ERRERLabs",
+  "private": false,
+  "homepage": "https://github.com/kmay89/diets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmay89/diets.git"
+  },
+  "keywords": [
+    "meal-planning",
+    "pwa",
+    "offline-first",
+    "nutrition",
+    "shopping-list",
+    "heart-health",
+    "vegetarian",
+    "usda",
+    "food-graph"
+  ],
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "python3 -m http.server 8080",
+    "build:graph": "node tools/build-graph.mjs",
+    "build:icons": "python3 tools/make-icons.py",
+    "build": "npm run build:graph && npm run build:icons",
+    "verify": "node tools/verify-data.mjs",
+    "test": "node --test \"test/*.test.mjs\" && node tools/verify-data.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

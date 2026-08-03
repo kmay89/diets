@@ -1,0 +1,172 @@
+/**
+ * ui.js — tiny DOM helpers. No framework, no build step, no dependencies.
+ *
+ * ERRERLabs — MIT licensed.
+ */
+
+/** Hyperscript: h('div.card', {onclick}, 'text', childNode) */
+export function h(spec, props = null, ...children) {
+  const [tagPart, ...classParts] = String(spec).split('.');
+  const [tag, id] = tagPart.split('#');
+  const node = document.createElement(tag || 'div');
+  if (id) node.id = id;
+  if (classParts.length) node.className = classParts.join(' ');
+
+  if (props && (typeof props !== 'object' || props instanceof Node || Array.isArray(props))) {
+    children.unshift(props);
+    props = null;
+  }
+
+  for (const [k, v] of Object.entries(props || {})) {
+    if (v == null || v === false) continue;
+    if (k === 'class') node.className = [node.className, v].filter(Boolean).join(' ');
+    else if (k === 'style' && typeof v === 'object') Object.assign(node.style, v);
+    else if (k === 'dataset') Object.assign(node.dataset, v);
+    else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2).toLowerCase(), v);
+    else if (k === 'html') node.innerHTML = v;
+    else if (k in node && k !== 'list' && k !== 'form') node[k] = v;
+    else node.setAttribute(k, v === true ? '' : v);
+  }
+
+  append(node, children);
+  return node;
+}
+
+function append(node, children) {
+  for (const c of children.flat(4)) {
+    if (c == null || c === false) continue;
+    node.appendChild(c instanceof Node ? c : document.createTextNode(String(c)));
+  }
+}
+
+export const frag = (...children) => {
+  const f = document.createDocumentFragment();
+  append(f, children);
+  return f;
+};
+
+export const $ = (sel, root = document) => root.querySelector(sel);
+export const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+export function clear(node) {
+  while (node.firstChild) node.removeChild(node.firstChild);
+  return node;
+}
+
+export function mount(node, ...children) {
+  clear(node);
+  append(node, children);
+  return node;
+}
+
+/* ---------- feedback ---------- */
+
+let toastTimer = null;
+export function toast(message, { kind = 'info', duration = 2600 } = {}) {
+  let host = $('#toast');
+  if (!host) {
+    host = h('div#toast', { role: 'status', 'aria-live': 'polite' });
+    document.body.appendChild(host);
+  }
+  host.className = `toast toast--${kind} is-visible`;
+  host.textContent = message;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => host.classList.remove('is-visible'), duration);
+}
+
+/** A bottom sheet / dialog. Returns the dialog element. */
+export function sheet(title, content, { actions = [], wide = false } = {}) {
+  const dialog = h('dialog.sheet', { class: wide ? 'sheet sheet--wide' : 'sheet' },
+    h('div.sheet__head',
+      h('h2.sheet__title', title),
+      h('button.icon-btn', { type: 'button', 'aria-label': 'Close', onclick: () => dialog.close() }, '✕')
+    ),
+    h('div.sheet__body', content),
+    actions.length ? h('div.sheet__actions', ...actions) : null
+  );
+  dialog.addEventListener('close', () => dialog.remove());
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+  document.body.appendChild(dialog);
+  dialog.showModal();
+  return dialog;
+}
+
+export function confirmSheet(title, message, { confirmLabel = 'Confirm', danger = false } = {}) {
+  return new Promise(resolve => {
+    let settled = false;
+    const done = (v) => { if (!settled) { settled = true; resolve(v); } };
+    const dlg = sheet(title, h('p.muted', message), {
+      actions: [
+        h('button.btn', { type: 'button', onclick: () => { done(false); dlg.close(); } }, 'Cancel'),
+        h('button', {
+          class: danger ? 'btn btn--danger' : 'btn btn--primary',
+          type: 'button',
+          onclick: () => { done(true); dlg.close(); }
+        }, confirmLabel)
+      ]
+    });
+    dlg.addEventListener('close', () => done(false));
+  });
+}
+
+/* ---------- formatting ---------- */
+
+export function minutes(n) {
+  if (n < 60) return `${n} min`;
+  const h1 = Math.floor(n / 60);
+  const m = n % 60;
+  return m ? `${h1} hr ${m} min` : `${h1} hr`;
+}
+
+export function titleCase(s) {
+  return String(s).replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+export function num(n, digits = 0) {
+  return Number(n).toLocaleString(undefined, { maximumFractionDigits: digits });
+}
+
+/** Simple horizontal bar for nutrient vs target. */
+export function meter(value, target, { label = '', unit = '', invert = false } = {}) {
+  const pct = target ? Math.min(140, Math.round((value / target) * 100)) : 0;
+  const over = invert ? value > target : pct > 115;
+  return h('div.meter',
+    h('div.meter__top',
+      h('span.meter__label', label),
+      h('span.meter__value', `${num(value)}${unit} / ${num(target)}${unit}`)
+    ),
+    h('div.meter__track',
+      h('div', { class: `meter__fill ${over ? 'is-over' : ''}`, style: { width: Math.min(pct, 100) + '%' } })
+    )
+  );
+}
+
+export function chip(text, { on = false, onclick = null, kind = '' } = {}) {
+  return h('button', {
+    type: 'button',
+    class: `chip ${on ? 'is-on' : ''} ${kind ? 'chip--' + kind : ''}`,
+    'aria-pressed': on ? 'true' : 'false',
+    onclick
+  }, text);
+}
+
+export function pill(text, kind = '') {
+  return h('span', { class: `pill ${kind ? 'pill--' + kind : ''}` }, text);
+}
+
+export function scoreBadge(heart) {
+  if (!heart || heart.score == null) return h('span.pill.pill--muted', 'component');
+  return h('span', {
+    class: `score score--${heart.grade}`,
+    title: `Heart-forward score ${heart.score}/100 — a sorting heuristic, not medical advice`
+  }, heart.grade);
+}
+
+/** Debounce for search inputs. */
+export function debounce(fn, ms = 180) {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn(...args), ms);
+  };
+}
