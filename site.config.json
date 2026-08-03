@@ -1,0 +1,26 @@
+{
+  "$comment": "The one place the public identity of the site lives. Change a value here, run `npm run build`, and every generated page, card, sitemap and share link follows. tools/verify-data.mjs checks that the hand-maintained files (index.html, robots.txt) still agree with it.",
+
+  "name": "Veg-Nourish",
+  "shortName": "Veg-Nourish",
+  "publisher": "ERRERLabs",
+  "tagline": "Cook one dinner everybody can eat.",
+  "description": "Roll a few dinner ideas, get portions sized to your family, and a shopping list in the order you walk the store. Vegetarian base with an omnivore fork in the road. Private and offline.",
+
+  "$comment_url": "The canonical origin, with no trailing slash. Every absolute URL in the generated pages, the sitemap and the share links is built from this. Whatever host it points at MUST be serving the site before links are shared — a link preview fetches og:image from this origin, so pointing it somewhere that is not live yet is how you get a card with a broken image.",
+  "url": "https://veg-nourish.com",
+
+  "$comment_alternates": "Other hostnames that serve the same site. Used only for documentation and for the consistency check.",
+  "alternates": [
+    "https://www.veg-nourish.com",
+    "https://veg-nourish.netlify.app"
+  ],
+
+  "$comment_share": "Recipe share pages live at <url>/r/<slug>/, where the slug is the recipe id without its 'rec.' prefix.",
+  "sharePath": "/r",
+  "cardPath": "/icons/cards",
+
+  "locale": "en_US",
+  "themeColor": "#1f6f4a",
+  "repository": "https://github.com/kmay89/diets"
+}

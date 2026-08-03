@@ -1,0 +1,11 @@
+# Veg-Nourish — veg-nourish.com
+# A single-page app; there is nothing behind these paths worth crawling and
+# no user data anywhere on the server to find.
+
+User-agent: *
+Allow: /$
+Disallow: /data/
+Disallow: /tools/
+Disallow: /test/
+
+Sitemap: https://veg-nourish.com/sitemap.xml

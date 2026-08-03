@@ -11,6 +11,7 @@ import { h, mount, chip, pill, toast, minutes, scoreBadge, meter, titleCase, deb
 import { getDb, nutritionFor, heartFor, substitutesFor, searchRecipes, pantryCoverage } from '../data.js';
 import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
+import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -101,6 +102,18 @@ export function render(root, { navigate, params }) {
           type: 'button',
           onclick: () => { setRecipeLike(recipe.id, st.recipeLikes[recipe.id] === 1 ? 0 : 1); toast('Favourited'); draw(); }
         }, st.recipeLikes[recipe.id] === 1 ? '★ Favourite' : '☆ Favourite'),
+        h('button.btn', {
+          type: 'button',
+          onclick: async () => {
+            try {
+              const how = await shareRecipe(recipe);
+              if (how === 'copied') toast('Link copied — paste it anywhere');
+            } catch (err) {
+              await copyText(recipeShareUrl(recipe.id));
+              toast('Link copied — paste it anywhere');
+            }
+          }
+        }, '📤 Share'),
         h('button.btn', { type: 'button', onclick: () => printRecipe(recipe, servings) }, '🖨 Print')
       )
     );

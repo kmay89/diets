@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v1.0.0';
+const VERSION = 'v1.2.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -33,6 +33,7 @@ const PRECACHE = [
   './js/views/list.js',
   './js/views/garden.js',
   './js/views/settings.js',
+  './js/share-page.js',
   './data/ingredients.json',
   './data/recipes.dinners.json',
   './data/recipes.daily.json',
@@ -44,7 +45,9 @@ const PRECACHE = [
   './icons/icon-512.png',
   './icons/maskable-192.png',
   './icons/maskable-512.png',
-  './icons/apple-touch-icon.png'
+  './icons/apple-touch-icon.png',
+  './icons/favicon-32.png',
+  './404.html'
 ];
 
 self.addEventListener('install', (event) => {
@@ -114,8 +117,25 @@ async function networkFirst(req) {
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch (err) {
-    return (await cache.match(req, { ignoreSearch: true }))
-      || (await cache.match('./index.html'))
+    const hit = await cache.match(req, { ignoreSearch: true });
+    if (hit) return hit;
+
+    // A shared recipe link opened with no signal: the static /r/<slug>/ page is
+    // not precached (44 pages is a lot to carry for something only crawlers and
+    // first-time visitors read), but the app itself is. Bounce into the app's
+    // route for that recipe rather than dumping the visitor on the home screen.
+    const slug = new URL(req.url).pathname.match(/^\/r\/([^/]+)\/?$/)?.[1];
+    if (slug) {
+      return new Response(
+        `<!doctype html><meta charset="utf-8"><title>Opening…</title>` +
+        `<meta http-equiv="refresh" content="0; url=/#/recipe/rec.${slug}">` +
+        `<link rel="canonical" href="/#/recipe/rec.${slug}">` +
+        `<p>Opening this recipe… <a href="/#/recipe/rec.${slug}">continue</a></p>`,
+        { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+      );
+    }
+
+    return (await cache.match('./index.html'))
       || new Response('Offline.', { status: 503 });
   }
 }

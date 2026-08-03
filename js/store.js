@@ -7,6 +7,9 @@
  * ERRERLabs — MIT licensed.
  */
 
+// Deliberately unchanged through the Veg-Nourish rename: this key is where
+// real households' saved data lives, and renaming it would silently wipe
+// every existing user's plan, pantry and preferences.
 const KEY = 'errerlabs.diets.v1';
 const SCHEMA = 1;
 
@@ -288,7 +291,7 @@ export function exportData() {
 export function importData(json) {
   const parsed = typeof json === 'string' ? JSON.parse(json) : json;
   const incoming = parsed.state || parsed;
-  if (!incoming || typeof incoming !== 'object') throw new Error('That file does not look like a Diets backup.');
+  if (!incoming || typeof incoming !== 'object') throw new Error('That file does not look like a Veg-Nourish backup.');
   state = migrate(incoming);
   persist();
   emit();

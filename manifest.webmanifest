@@ -1,8 +1,8 @@
 {
-  "name": "Diets — ERRERLabs",
-  "short_name": "Diets",
+  "name": "Veg-Nourish — ERRERLabs",
+  "short_name": "Veg-Nourish",
   "description": "Roll dinner ideas, size portions to your household, tick off what is already in the pantry, and walk out with a shopping list in aisle order. Vegetarian base, omnivore fork in the road, heart-forward by default, works offline.",
-  "id": "/errerlabs-diets",
+  "id": "/veg-nourish",
   "start_url": "./index.html#/roll",
   "scope": "./",
   "display": "standalone",
@@ -25,5 +25,6 @@
     { "name": "Shopping list", "short_name": "List", "url": "./index.html#/list", "description": "Open this week's list, grouped by aisle" },
     { "name": "The plan", "short_name": "Plan", "url": "./index.html#/plan", "description": "See what is being cooked this week" }
   ],
+  "launch_handler": { "client_mode": "focus-existing" },
   "prefer_related_applications": false
 }

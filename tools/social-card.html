@@ -1,0 +1,117 @@
+<!doctype html>
+<!--
+  social-card.html — the 1200x630 link-preview card.
+
+  Rendered to icons/social-card.png by tools/make-social-card.mjs. Edit this
+  file, re-run that script, and commit the PNG; the PNG is the artifact the
+  site actually serves, so a machine without a headless browser never needs to
+  build it.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { width: 1200px; height: 630px; }
+
+  body {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 84px;
+    background:
+      radial-gradient(120% 90% at 22% 18%, rgba(255,255,255,.13), rgba(255,255,255,0) 58%),
+      linear-gradient(160deg, #1f6f4a 0%, #14513a 46%, #0f2e21 100%);
+    color: #eef7f1;
+    font-family: "Liberation Sans", "DejaVu Sans", system-ui, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* A quiet diagonal sheen so the field is not a flat rectangle. */
+  body::after {
+    content: "";
+    position: absolute;
+    inset: -20% -30%;
+    background: linear-gradient(104deg, rgba(255,255,255,0) 44%, rgba(255,255,255,.055) 50%, rgba(255,255,255,0) 56%);
+    pointer-events: none;
+  }
+
+  .mark { flex: none; width: 300px; height: 300px; margin-top: -14px; }
+
+  .copy { position: relative; z-index: 1; }
+
+  h1 {
+    font-family: "Liberation Serif", "DejaVu Serif", Georgia, serif;
+    font-size: 92px;
+    line-height: 1.02;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+  }
+
+  h1 .thin { color: #a9dcc0; font-weight: 400; }
+
+  p.tag {
+    margin-top: 22px;
+    font-size: 34px;
+    line-height: 1.34;
+    color: #cfe8db;
+    max-width: 660px;
+  }
+
+  ul.bits {
+    display: flex;
+    gap: 10px;
+    margin-top: 32px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  ul.bits li {
+    font-size: 21px;
+    padding: 8px 17px;
+    border: 1.5px solid rgba(169, 220, 192, .45);
+    border-radius: 999px;
+    color: #d9efe3;
+  }
+
+  .url {
+    position: absolute;
+    right: 84px;
+    bottom: 52px;
+    font-size: 25px;
+    letter-spacing: .4px;
+    color: rgba(207, 232, 219, .78);
+  }
+</style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 512 512" aria-hidden="true">
+    <g stroke="#f5faf7" fill="none" stroke-linecap="round">
+      <path d="M132 130 V214" stroke-width="24"/>
+      <path d="M162 130 V214" stroke-width="24"/>
+      <path d="M192 130 V214" stroke-width="24"/>
+      <path d="M120 214 H204" stroke-width="27"/>
+      <path d="M162 208 V286" stroke-width="37"/>
+      <path d="M162 280 V386" stroke-width="26"/>
+    </g>
+    <g transform="translate(330 290) rotate(-35)">
+      <path d="M-98 0 A135 135 0 0 1 98 0 A135 135 0 0 1 -98 0" fill="#c8ecd8"/>
+      <path d="M-88 0 H88" stroke="#1f6f4a" stroke-width="9" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <div class="copy">
+    <h1>Cook one dinner<br><span class="thin">everybody can eat.</span></h1>
+    <p class="tag">Roll a few ideas, get portions sized to your family, shop in aisle order.</p>
+    <ul class="bits">
+      <li>Vegetarian base</li>
+      <li>Omnivore fork in the road</li>
+      <li>Works offline</li>
+    </ul>
+  </div>
+
+  <div class="url">veg-nourish.com</div>
+</body>
+</html>

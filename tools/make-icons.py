@@ -130,7 +130,8 @@ def render(size, maskable=False):
 
 
 def write_png(path, rows):
-    size = len(rows)
+    height = len(rows)
+    width = len(rows[0])
     raw = bytearray()
     for row in rows:
         raw.append(0)  # filter type 0
@@ -142,13 +143,65 @@ def write_png(path, rows):
                 + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF))
 
     png = b"\x89PNG\r\n\x1a\n"
-    png += chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 6, 0, 0, 0))
+    png += chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0))
     png += chunk(b"IDAT", zlib.compress(bytes(raw), 9))
     png += chunk(b"IEND", b"")
 
     with open(path, "wb") as fh:
         fh.write(png)
     return len(png)
+
+
+def render_social(width=1200, height=630):
+    """The 1200x630 card that link previews show. Same mark, wider field."""
+    rows = []
+    scale = 0.46          # mark size relative to the card height
+    cx, cy = 0.30, 0.5    # mark sits left of centre
+
+    for y in range(height):
+        row = []
+        for x in range(width):
+            u = (x + 0.5) / width
+            v = (y + 0.5) / height
+
+            colour = lerp(BG_TOP, BG_BOTTOM, v * 0.9)
+            glow = max(0.0, 1.0 - math.hypot((u - 0.22) * (width / height), v - 0.28) * 1.5)
+            colour = over(colour, (255, 255, 255), glow * 0.11)
+
+            # A quiet diagonal band, so the card is not a flat rectangle.
+            band = abs((u * 1.6 + v * 0.55) - 1.34)
+            colour = over(colour, (255, 255, 255), max(0.0, 0.30 - band) * 0.10)
+
+            mu = ((x + 0.5) / height - cx * (width / height)) / scale
+            mv = (v - cy) / scale
+
+            ang = math.radians(-35)
+            lx = mu * math.cos(ang) - mv * math.sin(ang)
+            ly = mu * math.sin(ang) + mv * math.cos(ang)
+            lx -= 0.16
+            r, offset = 0.34, 0.235
+            leaf_d = max(math.hypot(lx, ly - offset) - r, math.hypot(lx, ly + offset) - r)
+            leaf_a = 1.0 - smoothstep(0.0, 2.0 / height, leaf_d)
+            if leaf_a > 0:
+                colour = over(colour, LEAF, leaf_a)
+                tip = math.sqrt(r * r - offset * offset)
+                vein = segment_sdf(lx, ly, -tip * 0.92, 0.0, tip * 0.92, 0.0) - 0.012
+                colour = over(colour, VEIN, (1.0 - smoothstep(0.0, 2.0 / height, vein)) * leaf_a * 0.85)
+
+            fx, fy = mu + 0.235, mv
+            fork_d = 1e9
+            for off in (-0.075, 0.0, 0.075):
+                fork_d = min(fork_d, segment_sdf(fx, fy, off, -0.315, off, -0.105) - 0.030)
+            fork_d = min(fork_d, segment_sdf(fx, fy, -0.105, -0.105, 0.105, -0.105) - 0.034)
+            fork_d = min(fork_d, segment_sdf(fx, fy, 0.0, -0.12, 0.0, 0.075) - 0.046)
+            fork_d = min(fork_d, segment_sdf(fx, fy, 0.0, 0.06, 0.0, 0.325) - 0.032)
+            fork_a = 1.0 - smoothstep(0.0, 2.0 / height, fork_d)
+            if fork_a > 0:
+                colour = over(colour, FORK, fork_a)
+
+            row.append((colour[0], colour[1], colour[2], 255))
+        rows.append(row)
+    return rows
 
 
 def main():
@@ -165,6 +218,9 @@ def main():
         path = os.path.join(OUT, name)
         n = write_png(path, render(size, maskable))
         print(f"{name:24} {size:>4}px  {n / 1024:6.1f} KB")
+
+    n = write_png(os.path.join(OUT, "social-card.png"), render_social())
+    print(f"{'social-card.png':24} 1200x630  {n / 1024:6.1f} KB")
 
 
 if __name__ == "__main__":

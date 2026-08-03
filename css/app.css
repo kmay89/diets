@@ -1,5 +1,5 @@
 /*!
- * Diets — ERRERLabs. MIT licensed.
+ * Veg-Nourish — ERRERLabs. MIT licensed.
  * One stylesheet, no framework. Mobile-first, light and dark, print-aware.
  */
 
@@ -566,3 +566,22 @@ a { color: var(--green-600); }
   .list-item { break-inside: avoid; }
   a[href]::after { content: ""; }
 }
+
+/* ---------- shared recipe pages (/r/<slug>/) ---------- */
+
+.share-page .main { max-width: 760px; }
+.share-page .appbar { position: static; }
+.share-page .recipe { padding-bottom: 40px; }
+
+/* The static page has no checkboxes, so the rows are plain text. */
+.ing-list--static li {
+  display: flex;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ing-list--static li:last-child { border-bottom: none; }
+.ing-list--static .ing__qty { min-width: 96px; }
+
+.share-cta { background: var(--green-050); border-color: var(--green-300); }
+.share-cta .row-actions { margin-top: 12px; }

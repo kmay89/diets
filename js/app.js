@@ -89,25 +89,52 @@ function buildChrome() {
 /* ---------- install prompt ---------- */
 
 let deferredPrompt = null;
+const INSTALL_DISMISSED = 'errerlabs.diets.installDismissed';
+
+function showInstallAffordances(on) {
+  const banner = $('#install-banner');
+  const btn = $('#install-btn');
+  const dismissed = localStorage.getItem(INSTALL_DISMISSED) === '1';
+  if (banner) banner.hidden = !on || dismissed;
+  if (btn) btn.hidden = !on;
+}
+
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  const banner = $('#install-banner');
-  if (banner) banner.hidden = false;
+  showInstallAffordances(true);
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null;
+  showInstallAffordances(false);
+  toast('Installed — look for it on your home screen');
 });
 
 window.__dietsInstall = async () => {
   if (!deferredPrompt) {
-    toast('Use your browser menu → "Add to Home Screen"');
+    // iOS and desktop Safari never fire beforeinstallprompt; the browser menu
+    // is the only route there.
+    toast('Use your browser menu → "Add to Home Screen"', { duration: 4000 });
     return;
   }
   deferredPrompt.prompt();
   const { outcome } = await deferredPrompt.userChoice;
   deferredPrompt = null;
-  const banner = $('#install-banner');
-  if (banner) banner.hidden = true;
-  if (outcome === 'accepted') toast('Installed — look for it on your home screen');
+  showInstallAffordances(false);
+  if (outcome === 'accepted') toast('Installing…');
 };
+
+/** Wired here rather than with inline onclick, so the page needs no 'unsafe-inline'. */
+function wireInstallButtons() {
+  $('#install-btn')?.addEventListener('click', () => window.__dietsInstall());
+  $('#install-accept')?.addEventListener('click', () => window.__dietsInstall());
+  $('#install-dismiss')?.addEventListener('click', () => {
+    localStorage.setItem(INSTALL_DISMISSED, '1');
+    const banner = $('#install-banner');
+    if (banner) banner.hidden = true;
+  });
+}
 
 /* ---------- boot ---------- */
 
@@ -127,6 +154,7 @@ async function boot() {
 
   settingsView.applyTheme(getState().prefs.theme || 'system');
   buildChrome();
+  wireInstallButtons();
 
   const splash = $('#splash');
   if (splash) splash.remove();
