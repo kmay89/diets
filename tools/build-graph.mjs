@@ -87,8 +87,16 @@ for (const ing of ingredients) {
     node(`tag.${t}`, 'tag', t.replace(/-/g, ' '));
     edge(ing.id, 'HAS_TAG', `tag.${t}`);
   }
+  // A substitution is a bare id when it is one-for-one, and an object when it
+  // carries a ratio or a caveat. Reading only the string form does not fail —
+  // it silently drops every annotated pair out of the graph.
   for (const s of ing.subs || []) {
-    if (index.has(s)) edge(ing.id, 'SUBSTITUTES_WITH', s);
+    const sid = typeof s === 'string' ? s : s?.id;
+    if (!sid || !index.has(sid)) continue;
+    edge(ing.id, 'SUBSTITUTES_WITH', sid, {
+      ratio: (typeof s === 'object' && s.ratio) || 1,
+      note: (typeof s === 'object' && s.note) || null
+    });
   }
   if (ing.garden?.grow) {
     node(`crop.${ing.id}`, 'crop', ing.name, {

@@ -191,6 +191,52 @@
         "other"
       ]
     },
+    "kroger": {
+      "name": "Kroger",
+      "note": "Produce at the entrance, then the perimeter for meat, seafood and dairy. The natural-foods and international aisles are next to each other in the middle — collect tahini, miso, gochujang and dried chiles in one pass rather than doubling back.",
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "canned-jarred",
+        "dry-goods",
+        "international",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "nuts-seeds",
+        "baking",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
+    },
+    "meijer": {
+      "name": "Meijer",
+      "note": "A supercenter, so groceries are only half the building — enter on the grocery side or you will cross the whole store. Frozen runs along one long wall, which makes it worth saving for last.",
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "dry-goods",
+        "canned-jarred",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "nuts-seeds",
+        "baking",
+        "beverages",
+        "frozen",
+        "household",
+        "other"
+      ]
+    },
     "aldi": {
       "name": "Aldi",
       "note": "Single-loop store, so the aisle order barely matters. Great on frozen vegetables, olive oil, nuts, and canned beans; thinner on fresh herbs and specialty pantry items.",

@@ -72,7 +72,24 @@ for (const i of ingredients) {
   } else {
     warn(`${i.id}: no shop info; the list will show grams`);
   }
-  for (const s of i.subs || []) if (!index.has(s)) err(`${i.id}: substitute "${s}" does not exist`);
+  // A substitution is either a bare id (one for one) or an object carrying the
+  // ratio and the caveat. Both shapes are valid; a wrong one is not.
+  for (const s of i.subs || []) {
+    const sid = typeof s === 'string' ? s : s?.id;
+    if (!sid || !index.has(sid)) { err(`${i.id}: substitute "${JSON.stringify(s)}" does not exist`); continue; }
+    if (sid === i.id) err(`${i.id}: listed as its own substitute`);
+    if (typeof s === 'object') {
+      if (s.ratio != null && !(s.ratio > 0 && s.ratio < 100)) err(`${i.id} -> ${sid}: ratio ${s.ratio} is not a plausible multiplier`);
+      if (s.note != null && (typeof s.note !== 'string' || s.note.length < 12)) err(`${i.id} -> ${sid}: note is too short to be worth showing`);
+      const extra = Object.keys(s).filter(k => !['id', 'ratio', 'note'].includes(k));
+      if (extra.length) err(`${i.id} -> ${sid}: unknown substitution field(s) ${extra.join(', ')}`);
+    }
+    // A ratio far from 1 with no note is the dangerous combination: the app
+    // will confidently change the amount and say nothing about why.
+    if (typeof s === 'object' && s.ratio && (s.ratio < 0.5 || s.ratio > 2) && !s.note) {
+      warn(`${i.id} -> ${sid}: ratio ${s.ratio} is a big change with no note explaining it`);
+    }
+  }
 }
 
 /* ---------- recipes ---------- */

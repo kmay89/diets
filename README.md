@@ -73,6 +73,17 @@ plate** in Recipes, and **Treat night** on the roll screen stops the heart score
 dice for an evening. It never hides the score: a dish that grades an F still shows an F, and says in
 plain numbers which ingredient put it there and what to change if you want it lower.
 
+**↔ Swaps that are actually swaps.** No cilantro? Tap the arrow beside it and pick parsley — the
+ingredient line changes, and so does the nutrition panel, the heart score and the shopping list. The
+amounts are converted rather than copied, because a good number of these pairs are nowhere near one
+for one: a clove of garlic is an eighth of a teaspoon of powder, a pound of ground turkey is a cup of
+dry lentils. Anything that moves the amount by more than a factor of two has to say why, and the
+substitutes offered are filtered to the diet the recipe claims — a vegan dish is never offered honey.
+
+**🎯 Tastes, on every ingredient.** All 227 of them, one collapsed row per aisle with a search across
+the lot, so telling the app you will never eat fennel does not mean scanning a wall of buttons. Loved
+ingredients get pulled toward the top of every roll; anything marked never leaves the deck entirely.
+
 **📚 Every claim is sourced.** The health, cost and climate statements in this app live in a data
 file with their citations attached, rendered with numbered markers you can open. Each source shows
 what kind of evidence it is — randomised trial, meta-analysis, model, guideline — and what it *does
@@ -119,6 +130,7 @@ js/
   citations.js          the citation engine: markers, sources, references
   occasions.js          what is coming up, and what to cook for it
   feedback.js           synthesised sound and micro-animations
+  swaps.js              substitutions, converted through grams
   ui.js                 ~200 lines of DOM helpers
   views/                one module per screen
 data/
@@ -129,7 +141,7 @@ data/
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat
   claims.json           every factual statement, attached to those sources
-  aisles.json           department order + store layouts
+  aisles.json           department order + eight store layouts
   garden.json           zone 6a planting calendar (editable for any region)
   graph.json            generated — the food graph
 icons/

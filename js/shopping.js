@@ -14,6 +14,7 @@
 
 import { getDb, gramsForLine } from './data.js';
 import { formatQty } from './nutrition.js';
+import { withSwaps } from './swaps.js';
 
 /* ------------------------------------------------------------------ *
  * Building
@@ -28,8 +29,11 @@ export function buildList(state, { includeOptional = false, includePantry = fals
   const totals = new Map(); // ingredientId -> { grams, sources: [] }
 
   for (const entry of state.plan) {
-    const recipe = recipeIndex.get(entry.recipeId);
-    if (!recipe) continue;
+    const original = recipeIndex.get(entry.recipeId);
+    if (!original) continue;
+    // A swap the cook made on the recipe page has to reach the list, or they
+    // stand in the shop buying the thing they already decided not to use.
+    const recipe = withSwaps(original, state.swaps);
     const scale = (entry.servings || recipe.servings) / recipe.servings;
 
     const lines = [...recipe.ingredients];

@@ -11,6 +11,7 @@ import { h, mount, chip, toast } from '../ui.js';
 import { getDb } from '../data.js';
 import { getState, update, newMember, setLike, togglePantry, setPref } from '../store.js';
 import { memberCard } from './member-card.js';
+import { openTasteEditor } from './taste-editor.js';
 import { energyNeeds } from '../nutrition.js';
 
 const STEPS = ['welcome', 'household', 'health', 'time', 'tastes', 'pantry', 'done'];
@@ -227,7 +228,7 @@ const TASTE_GROUPS = [
 ];
 
 function tastesStep(state, draw) {
-  const { ingIndex } = getDb();
+  const { ingIndex, ingredients } = getDb();
   const cycle = (id) => {
     const cur = state.likes[id] || 0;
     setLike(id, cur === 0 ? 1 : cur === 1 ? -1 : 0);
@@ -252,7 +253,13 @@ function tastesStep(state, draw) {
         })
       )
     )),
-    h('p.fine-print', 'You can change any of this later, and the recipe screen lets you mark things as you cook.')
+    h('div.row-actions',
+      h('button.btn', {
+        type: 'button',
+        onclick: () => openTasteEditor(draw)
+      }, `Browse all ${ingredients.length} ingredients`)
+    ),
+    h('p.fine-print', 'These are the ones that come up most. The full list is there when you want it, and the recipe screen lets you mark things as you cook.')
   );
 }
 
@@ -268,7 +275,7 @@ const PANTRY_STAPLES = [
 ];
 
 function pantryStep(state, draw) {
-  const { ingIndex } = getDb();
+  const { ingIndex, ingredients } = getDb();
   return h('div.step',
     h('h1.step__title', 'What is already in the kitchen?'),
     h('p.lede', 'Tick what you keep on hand. Anything ticked drops off the shopping list and pulls matching meals up the roll. This is a five-second job you can redo any time.'),

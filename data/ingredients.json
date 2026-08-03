@@ -211,7 +211,11 @@
     "heart-star"
    ],
    "subs": [
-    "ing.spice.garlicpowder"
+    {
+     "id": "ing.spice.garlicpowder",
+     "ratio": 0.13,
+     "note": "One clove is about an eighth of a teaspoon of powder. Powder has no bite and cannot be browned, so it suits rubs and dry mixes rather than a pan."
+    }
    ],
    "garden": {
     "grow": true,
@@ -544,7 +548,11 @@
     "heat"
    ],
    "subs": [
-    "ing.spice.pepperflakes"
+    {
+     "id": "ing.spice.pepperflakes",
+     "ratio": 0.03,
+     "note": "Flakes bring heat but none of the green, vegetal flavour of a fresh chile."
+    }
    ],
    "garden": {
     "grow": true,
@@ -1232,8 +1240,10 @@
     "kid-friendly"
    ],
    "subs": [
-    "ing.romaine",
-    "ing.arugula"
+    {
+     "id": "ing.arugula",
+     "note": "Peppery rather than neutral, and it wilts — dress it at the table."
+    }
    ],
    "garden": {
     "grow": true,
@@ -1858,9 +1868,6 @@
     "potassium",
     "creamy"
    ],
-   "subs": [
-    "ing.tahini"
-   ],
    "garden": {
     "grow": false
    }
@@ -2360,7 +2367,11 @@
     "anti-inflammatory"
    ],
    "subs": [
-    "ing.spice.ginger.ground"
+    {
+     "id": "ing.spice.ginger.ground",
+     "ratio": 0.22,
+     "note": "Ground ginger is warmer and less bright. It works in a braise or a bake, not in a dressing."
+    }
    ],
    "garden": {
     "grow": false
@@ -2506,7 +2517,11 @@
    ],
    "subs": [
     "ing.parsley.flat",
-    "ing.spice.basil.dried"
+    {
+     "id": "ing.spice.basil.dried",
+     "ratio": 0.5,
+     "note": "Dried basil is for cooking into a sauce, not for finishing — add it early and it has time to open up."
+    }
    ],
    "garden": {
     "grow": true,
@@ -2649,7 +2664,11 @@
     "roasting"
    ],
    "subs": [
-    "ing.spice.thyme.dried"
+    {
+     "id": "ing.spice.thyme.dried",
+     "ratio": 0.5,
+     "note": "Thyme is milder and less resinous than rosemary — a fair swap in a braise, less so where rosemary is the point."
+    }
    ],
    "garden": {
     "grow": true,
@@ -2696,7 +2715,11 @@
     "roasting"
    ],
    "subs": [
-    "ing.spice.thyme.dried"
+    {
+     "id": "ing.spice.thyme.dried",
+     "ratio": 0.42,
+     "note": "Dried thyme is more concentrated than fresh, so this is about a third of the volume. Add it early rather than at the end."
+    }
    ],
    "garden": {
     "grow": true,
@@ -2746,7 +2769,11 @@
     "cheap"
    ],
    "subs": [
-    "ing.tofu.firm"
+    {
+     "id": "ing.tofu.firm",
+     "ratio": 1.25,
+     "note": "Crumble it and press out the water first. It scrambles, but it will not set or bind."
+    }
    ],
    "garden": {
     "grow": false
@@ -3033,7 +3060,11 @@
     "high-sodium"
    ],
    "subs": [
-    "ing.nutritionalyeast",
+    {
+     "id": "ing.nutritionalyeast",
+     "ratio": 0.6,
+     "note": "Savoury and cheesy, but it will not melt or brown. Use it as a finish, not inside a bake."
+    },
     "ing.cheese.pecorino"
    ],
    "garden": {
@@ -3414,7 +3445,11 @@
     "finisher"
    ],
    "subs": [
-    "ing.oil.olive"
+    {
+     "id": "ing.oil.olive",
+     "ratio": 0.71,
+     "note": "Fine in a batter or a pan. Not in anything that needs butter to be solid — pastry, creaming, or browning."
+    }
    ],
    "garden": {
     "grow": false
@@ -3564,7 +3599,11 @@
    ],
    "subs": [
     "ing.beans.cannellini",
-    "ing.lentil.brown"
+    {
+     "id": "ing.lentil.brown",
+     "ratio": 0.48,
+     "note": "Dry lentils need about 25 minutes of simmering and enough extra liquid to cover them."
+    }
    ],
    "garden": {
     "grow": false
@@ -3754,7 +3793,11 @@
    ],
    "subs": [
     "ing.lentil.red",
-    "ing.beans.black"
+    {
+     "id": "ing.beans.black",
+     "ratio": 2.1,
+     "note": "Canned beans are already cooked, so add them near the end rather than at the start."
+    }
    ],
    "garden": {
     "grow": false
@@ -4162,7 +4205,11 @@
    ],
    "subs": [
     "ing.chicken.thigh",
-    "ing.lentil.brown"
+    {
+     "id": "ing.lentil.brown",
+     "ratio": 0.42,
+     "note": "Add about two cups of extra liquid and 25 minutes. Brown the aromatics harder to make up the savour."
+    }
    ],
    "garden": {
     "grow": false
@@ -5605,7 +5652,11 @@
     "treat"
    ],
    "subs": [
-    "ing.cocoa"
+    {
+     "id": "ing.cocoa",
+     "ratio": 0.57,
+     "note": "Cocoa is chocolate with the fat taken out — add about a tablespoon of butter or oil per ounce of chocolate replaced."
+    }
    ],
    "garden": {
     "grow": false
@@ -5648,7 +5699,11 @@
     "sweetener"
    ],
    "subs": [
-    "ing.maple"
+    {
+     "id": "ing.maple",
+     "ratio": 1.1,
+     "note": "A liquid sweetener where a dry one was: take about three tablespoons of other liquid out per cup, and expect a softer bake."
+    }
    ],
    "garden": {
     "grow": false
@@ -5912,9 +5967,6 @@
     "pantry",
     "base"
    ],
-   "subs": [
-    "ing.broth.chicken"
-   ],
    "garden": {
     "grow": false
    },
@@ -6141,7 +6193,10 @@
     "high-sodium"
    ],
    "subs": [
-    "ing.tomatopaste"
+    {
+     "id": "ing.tomatopaste",
+     "note": "Paste brings the same concentrated tomato but none of the chew."
+    }
    ],
    "garden": {
     "grow": false
@@ -6777,7 +6832,11 @@
     "condiment"
    ],
    "subs": [
-    "ing.spice.pepperflakes"
+    {
+     "id": "ing.spice.pepperflakes",
+     "ratio": 0.05,
+     "note": "You lose the sweetness and the vinegar. A pinch of sugar and a splash of vinegar gets most of it back."
+    }
    ],
    "garden": {
     "grow": false
@@ -6870,7 +6929,11 @@
     "high-sodium"
    ],
    "subs": [
-    "ing.spice.curry"
+    {
+     "id": "ing.spice.curry",
+     "ratio": 0.4,
+     "note": "Powder needs frying in oil for a minute to wake up; paste does not."
+    }
    ],
    "garden": {
     "grow": false
@@ -7151,7 +7214,10 @@
     "vegetarian-swap"
    ],
    "subs": [
-    "ing.cheese.parmesan"
+    {
+     "id": "ing.cheese.parmesan",
+     "ratio": 1.67
+    }
    ],
    "garden": {
     "grow": false
@@ -8062,7 +8128,11 @@
     "pantry"
    ],
    "subs": [
-    "ing.basil"
+    {
+     "id": "ing.basil",
+     "ratio": 2.0,
+     "note": "Fresh basil goes in off the heat. Cooked, it turns grey and loses most of what you wanted from it."
+    }
    ],
    "garden": {
     "grow": false
@@ -8105,7 +8175,11 @@
     "pantry"
    ],
    "subs": [
-    "ing.thyme.fresh"
+    {
+     "id": "ing.thyme.fresh",
+     "ratio": 2.4,
+     "note": "Add the sprigs whole and fish them out at the end."
+    }
    ],
    "garden": {
     "grow": false
@@ -8320,7 +8394,11 @@
     "salt-replacer"
    ],
    "subs": [
-    "ing.garlic"
+    {
+     "id": "ing.garlic",
+     "ratio": 7.7,
+     "note": "Fresh garlic is far milder by weight than powder — about two cloves per teaspoon. Cook it in fat for a minute or it stays raw and harsh."
+    }
    ],
    "garden": {
     "grow": false
@@ -8363,7 +8441,11 @@
     "shortcut"
    ],
    "subs": [
-    "ing.onion.yellow"
+    {
+     "id": "ing.onion.yellow",
+     "ratio": 15.7,
+     "note": "Fresh onion brings water with it — give it a few minutes in the pan before the rest of the recipe carries on."
+    }
    ],
    "garden": {
     "grow": false
@@ -8671,7 +8753,11 @@
     "warm"
    ],
    "subs": [
-    "ing.ginger"
+    {
+     "id": "ing.ginger",
+     "ratio": 4.5,
+     "note": "Fresh ginger is mostly water, so it takes several times the weight of the ground. Grate it rather than chopping."
+    }
    ],
    "garden": {
     "grow": false
@@ -8804,7 +8890,11 @@
     "finishing"
    ],
    "subs": [
-    "ing.sugar.granulated"
+    {
+     "id": "ing.sugar.granulated",
+     "ratio": 0.83,
+     "note": "Powdered sugar has cornstarch in it and dissolves cold. Granulated will stay gritty in an icing."
+    }
    ],
    "garden": {
     "grow": false
@@ -8850,7 +8940,11 @@
     "freezer"
    ],
    "subs": [
-    "ing.cranberries.dried"
+    {
+     "id": "ing.cranberries.dried",
+     "ratio": 0.5,
+     "note": "Dried cranberries are sweetened, so cut the sugar in the recipe by about half."
+    }
    ],
    "garden": {
     "grow": false
@@ -8896,7 +8990,11 @@
     "roasting"
    ],
    "subs": [
-    "ing.spice.thyme.dried"
+    {
+     "id": "ing.spice.thyme.dried",
+     "ratio": 0.5,
+     "note": "A real change of flavour, not just of form. Sage is what makes brown butter taste like brown butter."
+    }
    ],
    "garden": {
     "grow": true,
@@ -9224,7 +9322,11 @@
     "flavor-bomb"
    ],
    "subs": [
-    "ing.spice.smokedpaprika",
+    {
+     "id": "ing.spice.smokedpaprika",
+     "ratio": 0.13,
+     "note": "Smoked paprika carries the smoke but almost no heat."
+    },
     "ing.sriracha"
    ],
    "garden": {
@@ -9718,7 +9820,7 @@
     0.17
    ],
    "diet": [
-    "vegetarian",
+    "vegetarian-check",
     "gluten-free"
    ],
    "tags": [
@@ -9814,7 +9916,11 @@
    ],
    "subs": [
     "ing.sriracha",
-    "ing.spice.pepperflakes"
+    {
+     "id": "ing.spice.pepperflakes",
+     "ratio": 0.12,
+     "note": "The crunch is the point of chili crisp and flakes have none of it. Fry them in a spoonful of oil with a sliced garlic clove."
+    }
    ]
   },
   {
@@ -10031,7 +10137,11 @@
    ],
    "subs": [
     "ing.chipotle.adobo",
-    "ing.spice.chili"
+    {
+     "id": "ing.spice.chili",
+     "ratio": 0.33,
+     "note": "Chili powder is a blend with cumin and oregano already in it, so go easy on those elsewhere in the recipe."
+    }
    ]
   },
   {
@@ -10071,9 +10181,16 @@
     "finishing"
    ],
    "subs": [
-    "ing.milk.1pct",
+    {
+     "id": "ing.milk.1pct",
+     "note": "Same volume, but it will not thicken and it can split if you boil it. Take the pan off the heat before it goes in."
+    },
     "ing.coconutmilk.light",
-    "ing.cashews"
+    {
+     "id": "ing.cashews",
+     "ratio": 0.35,
+     "note": "Soak them in boiling water for 15 minutes and blend with an equal volume of water until completely smooth."
+    }
    ]
   },
   {
@@ -10116,8 +10233,7 @@
     "storage"
    ],
    "subs": [
-    "ing.cabbage.green",
-    "ing.sriracha"
+    "ing.cabbage.green"
    ]
   },
   {
@@ -10286,7 +10402,11 @@
    ],
    "subs": [
     "ing.chipotle.adobo",
-    "ing.spice.smokedpaprika"
+    {
+     "id": "ing.spice.smokedpaprika",
+     "ratio": 0.14,
+     "note": "You lose the heat and the acidity — add a squeeze of lemon."
+    }
    ]
   },
   {

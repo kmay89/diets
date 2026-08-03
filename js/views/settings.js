@@ -7,11 +7,12 @@
 import { h, mount, chip, toast, sheet, confirmSheet, titleCase } from '../ui.js';
 import { getDb } from '../data.js';
 import {
-  getState, setPref, addMember, exportData, importData, resetAll, setLike
+  getState, setPref, addMember, exportData, importData, resetAll
 } from '../store.js';
 import { energyNeeds, dailyTargets } from '../nutrition.js';
 import { downloadFile } from '../shopping.js';
 import { memberCard } from './member-card.js';
+import { openTasteEditor } from './taste-editor.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 
 export function render(root, { navigate }) {
@@ -184,37 +185,6 @@ function toggle(title, desc, value, onchange, draw) {
     h('input', { type: 'checkbox', checked: value, onchange: (e) => { onchange(e.target.checked); draw(); } }),
     h('div', h('strong', title), h('p.muted', desc))
   );
-}
-
-function openTasteEditor(draw) {
-  const { ingredients } = getDb();
-  const state = getState();
-  const body = h('div');
-
-  const rebuild = () => {
-    const s = getState();
-    const rows = ingredients
-      .filter(i => !['spices', 'baking', 'household'].includes(i.aisle))
-      .map(i => {
-        const v = s.likes[i.id] || 0;
-        return h('button', {
-          type: 'button',
-          class: `chip chip--taste ${v === 1 ? 'is-love' : ''} ${v === -1 ? 'is-never' : ''}`,
-          onclick: () => {
-            setLike(i.id, v === 0 ? 1 : v === 1 ? -1 : 0);
-            rebuild();
-            draw();
-          }
-        }, `${v === 1 ? '♥ ' : v === -1 ? '✕ ' : ''}${i.name}`);
-      });
-    body.replaceChildren(
-      h('p.muted', 'Tap once for love, twice for never, a third time to clear.'),
-      h('div.chip-row', ...rows)
-    );
-  };
-  rebuild();
-
-  sheet('Food likes and dislikes', body, { wide: true });
 }
 
 function openImport(draw) {

@@ -47,6 +47,8 @@ function defaultState() {
     likes: {},
     /** recipeId -> 1 | -1 */
     recipeLikes: {},
+    /** recipeId -> { ingredientId: substituteId } — "use this instead, here" */
+    swaps: {},
     /** ingredientId -> true when it is already in the house */
     pantry: {},
     /** planned meals */
@@ -182,6 +184,28 @@ export function setRecipeLike(recipeId, value) {
     if (value === 0) delete s.recipeLikes[recipeId];
     else s.recipeLikes[recipeId] = value;
   });
+}
+
+/* ------------------------------------------------------------------ *
+ * Ingredient swaps
+ * ------------------------------------------------------------------ */
+
+/**
+ * Use something else in one recipe. Keyed by recipe so swapping the garlic in
+ * one dish does not quietly change every other dish that uses garlic.
+ */
+export function setSwap(recipeId, ingredientId, substituteId) {
+  update(s => {
+    s.swaps = s.swaps || {};
+    const forRecipe = s.swaps[recipeId] || (s.swaps[recipeId] = {});
+    if (!substituteId) delete forRecipe[ingredientId];
+    else forRecipe[ingredientId] = substituteId;
+    if (!Object.keys(forRecipe).length) delete s.swaps[recipeId];
+  });
+}
+
+export function clearSwaps(recipeId) {
+  update(s => { if (s.swaps) delete s.swaps[recipeId]; });
 }
 
 /* ------------------------------------------------------------------ *
