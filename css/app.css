@@ -178,8 +178,23 @@ a { color: var(--green-600); }
   font-size: .68rem;
   min-width: 0;
 }
+/* More is a <button> among four <a>s. It needs the button chrome stripped —
+ * but only that. An earlier `font: inherit` here reset the shorthand, taking
+ * the .68rem above and the active weight below with it, so every label
+ * rendered at the body's 16px and the row grew past the 62px the layout
+ * reserves for it: on a phone with a home indicator the labels were pushed
+ * off the bottom of the screen entirely. Family only. */
+button.tabbar__item {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .tabbar__icon { font-size: 19px; line-height: 1; }
 .tabbar__item.is-active { color: var(--green-600); background: var(--green-050); font-weight: 600; }
+/* The label is what gets clipped first if anything ever grows again. */
+.tabbar__label { line-height: 1.25; white-space: nowrap; }
 
 /* ---------- layout blocks ---------- */
 
@@ -998,7 +1013,6 @@ a { color: var(--green-600); }
 
 /* ---------- the More sheet ---------- */
 
-.tabbar__item { border: none; background: none; font: inherit; cursor: pointer; }
 .more-grid { display: grid; gap: var(--sp-2); }
 .more-item {
   display: flex; align-items: center; gap: var(--sp-4);
