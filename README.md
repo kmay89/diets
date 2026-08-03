@@ -129,15 +129,25 @@ js/
   shopping.js           list building, purchase units, exports, import
   citations.js          the citation engine: markers, sources, references
   occasions.js          what is coming up, and what to cook for it
+  collections.js        the saved filters behind the browse shelf
+  theme.js              the auto/light/dark switch in the top right
   feedback.js           synthesised sound and micro-animations
   swaps.js              substitutions, converted through grams
   ui.js                 ~200 lines of DOM helpers
   views/                one module per screen
 data/
-  ingredients.json      227 ingredients: nutrition, units, aisle, subs, garden info
+  ingredients.json      353 ingredients: nutrition, units, aisle, subs, garden info
+  recipes.index.json    the table of contents — the one list of recipe part files
   recipes.dinners.json  37 weeknight dinners
-  recipes.daily.json    22 breakfasts, lunches, sides, sauces and snacks
+  recipes.daily.json    31 breakfasts, lunches, sides, sauces and snacks
   recipes.occasions.json 30 holiday, cookout, potluck, bake-sale and 15-minute recipes
+  recipes.world.json    42 dishes from the cuisines of the world
+  recipes.regional.json 27 American regional, from the Lowcountry to Hawaii
+  recipes.methods.json  20 by method: grill, air fryer, sheet pan, one pot, slow cooker
+  recipes.sandwiches.json 12 sandwiches and handhelds
+  recipes.snacks.json   16 snacks, dips and smoothies
+  recipes.sweets.json   15 desserts, honestly scored
+  collections.json      52 saved filters in 5 groups — the ways into the collection
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat
   claims.json           every factual statement, attached to those sources
@@ -145,7 +155,7 @@ data/
   garden.json           zone 6a planting calendar (editable for any region)
   graph.json            generated — the food graph
 icons/
-  food/                 227 ingredient icons, named <slug>.svg
+  food/                 353 ingredient icons, named <slug>.svg
   cards/                per-recipe link-preview images
 tools/
   build-graph.mjs       compiles the graph from the source data
@@ -206,14 +216,21 @@ servings to 6, or adding the chicken, updates every number honestly.
 
 ## Making it yours
 
-**Add a recipe.** Append to `data/recipes.dinners.json` or `data/recipes.daily.json`, then run
-`npm run verify && npm run build:graph`. The verifier checks every ingredient reference, every unit,
+**Add a recipe.** Append to whichever part file fits — they are all listed in
+`data/recipes.index.json`, which is the single place the app, the build scripts and the tests read.
+A brand new part file is a one-line addition there. Then run `npm run verify && npm run build`. The verifier checks every ingredient reference, every unit,
 diet labeling (a "vegetarian" recipe containing chicken is an error), time sanity, and flags
 implausible nutrition.
 
 **Add an ingredient.** Append to `data/ingredients.json` with per-100 g values in the documented
 order, gram weights for each unit you want to use in recipes, an aisle, and how it is sold. An
-Atwater cross-check will warn if the calories and macros disagree.
+Atwater cross-check will warn if the calories and macros disagree. Then run
+`npm run build:icons.food`, which draws an icon for anything that does not have one so the set never
+has a hole in it — and `npm run build:art`, which lists it in `docs/ART.md` as wanting real art.
+
+**Add a way into the collection.** `data/collections.json`. A collection is a saved filter over
+courses, tags and cuisines, so a recipe joins one by being tagged honestly rather than by being
+added to a second list.
 
 **Change the store layout.** `data/aisles.json` → `storeLayouts`. Reorder the aisle ids to match how
 your store is actually laid out.

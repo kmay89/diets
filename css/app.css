@@ -4,26 +4,29 @@
  */
 
 :root {
-  --green-900: #0f2e21;
-  --green-700: #1f6f4a;
-  --green-600: #2b8a5e;
-  --green-300: #7fcaa4;
-  --green-050: #eaf6f0;
+  /* The palette the food-icon set was drawn in: charcoal ink on warm paper,
+   * deep green and clay. Matching the art to the interface is most of why the
+   * two now look like one thing. */
+  --green-900: #14332a;
+  --green-700: #244C3F;
+  --green-600: #2F6B52;
+  --green-300: #8FBFA5;
+  --green-050: #E7EFE8;
 
-  --clay-600: #a85536;
-  --clay-300: #e0a98f;
-  --amber-500: #b8860f;
+  --clay-600: #C66B3D;
+  --clay-300: #E5B394;
+  --amber-500: #B0812A;
 
-  --ink: #17201b;
-  --ink-soft: #55635b;
-  --ink-faint: #8b9a92;
-  --line: #e4eae6;
-  --surface: #ffffff;
-  --surface-2: #f7faf8;
-  --bg: #f4f7f5;
+  --ink: #303532;
+  --ink-soft: #5C645E;
+  --ink-faint: #8E958F;
+  --line: #E2DDCD;
+  --surface: #FFFDF9;
+  --surface-2: #F3EDDF;
+  --bg: #FAF7EF;
 
-  --radius: 16px;
-  --radius-sm: 10px;
+  --radius: 20px;
+  --radius-sm: 12px;
   /* Barely-there elevation. Heavy shadows are what make an interface feel busy. */
   --shadow: 0 1px 2px rgba(16, 40, 30, .04), 0 2px 10px rgba(16, 40, 30, .035);
   --shadow-lift: 0 2px 8px rgba(16, 40, 30, .07), 0 18px 40px rgba(16, 40, 30, .10);
@@ -42,28 +45,30 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink: #e8efea;
-    --ink-soft: #a8b8b0;
-    --ink-faint: #7e908a;
-    --line: #24312a;
-    --surface: #17221c;
-    --surface-2: #1d2922;
-    --bg: #101a15;
-    --green-050: #16302340;
+    --ink: #F3E8CF;
+    --ink-soft: #B9B4A4;
+    --ink-faint: #8B8A80;
+    --line: #2C312D;
+    --surface: #1D221F;
+    --surface-2: #252B27;
+    --bg: #141A17;
+    --green-300: #8FBFA5;
+    --green-050: #1E32294D;
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .28);
     --shadow-lift: 0 2px 6px rgba(0, 0, 0, .5), 0 14px 34px rgba(0, 0, 0, .4);
   }
 }
 
 :root[data-theme="dark"] {
-  --ink: #e8efea;
-  --ink-soft: #a8b8b0;
-  --ink-faint: #7e908a;
-  --line: #24312a;
-  --surface: #17221c;
-  --surface-2: #1d2922;
-  --bg: #101a15;
-  --green-050: #16302340;
+  --ink: #F3E8CF;
+  --ink-soft: #B9B4A4;
+  --ink-faint: #8B8A80;
+  --line: #2C312D;
+  --surface: #1D221F;
+  --surface-2: #252B27;
+  --bg: #141A17;
+  --green-300: #8FBFA5;
+  --green-050: #1E32294D;
   --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .28);
   --shadow-lift: 0 2px 6px rgba(0, 0, 0, .5), 0 14px 34px rgba(0, 0, 0, .4);
 }
@@ -1202,3 +1207,173 @@ a { color: var(--green-600); }
 .chip--taste { display: inline-flex; align-items: center; gap: 6px; }
 .tag-btn--icon { padding-inline: 9px; color: var(--ink-faint); }
 .tag-btn--icon:hover { color: var(--green-700); }
+
+/* ------------------------------------------------------------------ *
+ * Theme switch, top right of every screen
+ *
+ * Three states rather than two: Auto follows the phone and is the default,
+ * and it is genuinely different from choosing light. One tap moves through
+ * them; the label says which one you are in, because an icon alone leaves
+ * people guessing whether the sun means "it is light" or "make it light".
+ * ------------------------------------------------------------------ */
+
+.appbar__actions { display: flex; align-items: center; gap: var(--sp-2); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 5px 11px 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease);
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--green-300); }
+.theme-toggle:focus-visible { outline: 2px solid var(--green-600); outline-offset: 2px; }
+.theme-toggle__icon { font-size: 1rem; line-height: 1; }
+.theme-toggle[data-theme-toggle="dark"] { background: var(--green-900); color: #F3E8CF; border-color: transparent; }
+.theme-toggle[data-theme-toggle="light"] { background: color-mix(in srgb, var(--amber-500) 16%, transparent); color: var(--amber-500); border-color: transparent; }
+
+/* Under 380px the label is the first thing to go, not the button. */
+@media (max-width: 380px) {
+  .theme-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .theme-toggle { padding: 5px 9px; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Collection shelf — the way into 200-odd recipes that is not A-Z
+ * ------------------------------------------------------------------ */
+
+.eyebrow {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 6px;
+}
+
+.shelf {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  margin-bottom: var(--sp-3);
+  box-shadow: var(--shadow);
+}
+
+.shelf__groups { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.shelf__groups::-webkit-scrollbar { display: none; }
+
+.shelf__group {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: .84rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease);
+}
+.shelf__group:hover { color: var(--ink); border-color: var(--green-300); }
+.shelf__group.is-on { background: var(--green-700); border-color: var(--green-700); color: #F3E8CF; }
+.shelf__count { font-size: .7rem; opacity: .65; font-variant-numeric: tabular-nums; }
+
+.shelf__body { padding-top: var(--sp-3); }
+.shelf__blurb { font-size: .82rem; color: var(--ink-soft); margin: 0 0 var(--sp-2); }
+.shelf__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.shelf__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink);
+  font: inherit;
+  font-size: .82rem;
+  cursor: pointer;
+  transition: transform .16s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
+}
+.shelf__chip:hover { transform: translateY(-1px); border-color: var(--green-300); }
+.shelf__chip.is-on { background: var(--green-050); border-color: var(--green-600); color: var(--green-700); font-weight: 600; }
+.shelf__chip-icon { font-size: 1rem; line-height: 1; }
+.shelf__chip-count { font-size: .7rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.shelf__chip.is-on .shelf__chip-count { color: inherit; opacity: .7; }
+.shelf__note { font-size: .8rem; color: var(--ink-soft); margin: var(--sp-3) 0 0; }
+
+/* ------------------------------------------------------------------ *
+ * Recipe card artwork
+ *
+ * There is no photography in this app and there never will be — 230 honest
+ * photographs is not a thing a household can maintain. The ingredient icons
+ * carry it instead: the three things that say what the dish actually is.
+ * ------------------------------------------------------------------ */
+
+.recipe-card__art {
+  display: block;
+  width: calc(100% + var(--sp-5) * 2);
+  margin: calc(var(--sp-5) * -1) calc(var(--sp-5) * -1) var(--sp-3);
+  padding: var(--sp-4) var(--sp-4) var(--sp-3);
+  border: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(160deg, var(--green-050), color-mix(in srgb, var(--clay-300) 18%, transparent));
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .recipe-card__art { width: calc(100% + var(--sp-4) * 2); margin: calc(var(--sp-4) * -1) calc(var(--sp-4) * -1) var(--sp-3); }
+}
+
+.icon-collage { display: flex; align-items: center; justify-content: center; min-height: 58px; }
+.icon-collage__slot { display: block; margin-left: -10px; transform: rotate(calc((var(--i) - 1) * 7deg)); }
+.icon-collage__slot:first-child { margin-left: 0; }
+.icon-collage .food-icon { width: var(--food-icon-size); height: var(--food-icon-size); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .recipe-card:hover .icon-collage__slot { transform: rotate(calc((var(--i) - 1) * 7deg)) translateY(-2px); transition: transform .25s var(--ease); }
+}
+
+.field__hint { display: block; font-size: .76rem; color: var(--ink-faint); margin-top: 4px; }
+
+/* ------------------------------------------------------------------ *
+ * Entry hub — the four ways in, offered once at the end of setup
+ * ------------------------------------------------------------------ */
+
+.entry-grid { display: grid; gap: var(--sp-2); margin: var(--sp-3) 0 var(--sp-5); }
+
+.entry-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform .18s var(--ease), border-color .18s var(--ease), box-shadow .2s var(--ease);
+}
+.entry-card:hover { transform: translateY(-2px); border-color: var(--green-300); box-shadow: var(--shadow-lift); }
+.entry-card__icon { font-size: 1.7rem; line-height: 1; flex: none; }
+.entry-card__body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.entry-card__title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; }
+.entry-card__text { font-size: .84rem; color: var(--ink-soft); }
+.entry-card__go { margin-left: auto; color: var(--ink-faint); flex: none; }

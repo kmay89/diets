@@ -18,7 +18,7 @@ Serve it rather than opening `index.html` from disk — ES modules and service w
 
 ## Adding a recipe
 
-Append to `data/recipes.dinners.json` (dinners) or `data/recipes.daily.json` (everything else), then:
+Append to whichever part file fits — every one of them is listed in `data/recipes.index.json`, which is the single place the app, the build scripts and the tests read. Adding a whole new part file is a one-line change there. Then:
 
 ```bash
 npm run verify && npm run build:graph

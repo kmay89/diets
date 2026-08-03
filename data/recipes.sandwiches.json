@@ -1,0 +1,1504 @@
+{
+  "schema": "errerlabs.diets.recipes/1",
+  "part": "sandwiches",
+  "note": "Lunch that travels, and dinner when nobody wants to cook. Every one of these has a specific structural idea in it — something that keeps the bread from going soggy, or gets the filling to hold together, or makes it good four hours later in a cooler.",
+  "recipes": [
+    {
+      "id": "rec.banh-mi",
+      "title": "Bánh Mì",
+      "blurb": "Vietnam by way of the French colonial baguette: quick-pickled daikon and carrot, cold herbs, chile, and something savory in the middle. The pickle is the whole sandwich.",
+      "cuisine": "vietnamese",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 55,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "sandwich",
+        "make-ahead",
+        "quick",
+        "picnic",
+        "crave"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "picnic"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.baguette",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into 4 lengths and split"
+        },
+        {
+          "ing": "ing.daikon",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "matchsticks"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "matchsticks"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tofu.firm",
+          "qty": 1,
+          "unit": "block",
+          "prep": "cut into long slabs"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.hoisin",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sriracha",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into long spears"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "whole sprigs"
+        },
+        {
+          "ing": "ing.pepper.jalapeno",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced thin"
+        }
+      ],
+      "steps": [
+        "Pickle first: dissolve the sugar and salt in the rice vinegar plus 1/3 cup warm water, pour it over the daikon and carrot, and leave 30 minutes. They will still be crunchy — that is the point. This is đồ chua and it keeps three weeks in the fridge.",
+        "Marinate the tofu slabs in the soy and hoisin for 10 minutes, then pan-fry in the oil over medium-high, 3 minutes a side, until lacquered.",
+        "Stir the sriracha into the mayonnaise.",
+        "Pull some of the soft interior out of the baguette so the sandwich closes. Toast the halves cut side down in a dry pan for a minute.",
+        "Build: spicy mayonnaise on both sides, tofu, a generous fistful of drained pickles, cucumber spears, whole cilantro sprigs, jalapeño. Press it closed and cut on a hard diagonal."
+      ],
+      "omnivore": {
+        "label": "Pork or pâté",
+        "note": "Thin-sliced grilled pork shoulder in the same marinade, or a smear of pâté under the mayonnaise, which is the traditional version.",
+        "add": [
+          {
+            "ing": "ing.pork.shoulder",
+            "qty": 12,
+            "unit": "oz",
+            "prep": "sliced thin"
+          }
+        ]
+      },
+      "kidTweak": "Leave the jalapeño and sriracha off. Sweet pickled carrot and lacquered tofu in bread is not a hard sell.",
+      "restaurantTouch": "Whole cilantro sprigs, stems and all. Chopped cilantro disappears; sprigs give you a mouthful of it, which is what the sandwich is for.",
+      "leftovers": "The pickles keep 3 weeks and improve. Assemble sandwiches to order.",
+      "prepAhead": "Pickle a big jar on Sunday and bánh mì becomes a ten-minute lunch all week.",
+      "allergenNote": "Contains wheat, soy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.mushroom-cheesesteak",
+      "title": "Philly Mushroom Cheesesteak",
+      "blurb": "Mushrooms and onions chopped on the griddle the way South Philly does it, piled into a roll with provolone melted over the top. The chopping is the technique.",
+      "cuisine": "mid-atlantic",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "skillet",
+        "quick",
+        "weeknight",
+        "crave",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "large flat skillet",
+        "two spatulas"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 6,
+          "unit": "cup",
+          "prep": "sliced thick"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "sliced, or provolone"
+        },
+        {
+          "ing": "ing.roll.hoagie",
+          "qty": 4,
+          "unit": "each"
+        }
+      ],
+      "steps": [
+        "Get the skillet properly hot. Add the oil, then the mushrooms in one layer, and leave them alone 4 minutes so they brown instead of stew.",
+        "Add the onions and pepper and cook 6 minutes more.",
+        "Now chop: work two spatulas or a bench scraper through the pile on the heat, cutting everything smaller as it cooks. Ten passes. This is what a Philly griddle cook does to a steak and it is why the filling packs into a roll instead of sliding out.",
+        "Add the butter, soy sauce, salt and pepper. Cook 2 more minutes until nothing is watery. (A teaspoon of Worcestershire belongs here if nobody at the table is vegetarian — it contains anchovy.)",
+        "Divide the pile into four roll-shaped heaps in the pan, lay cheese over each, and cover the skillet for 60 seconds to melt.",
+        "Slide a split roll upside down over each heap, then scoop underneath with the spatula and flip the whole thing into the roll. That is the move."
+      ],
+      "omnivore": {
+        "label": "Shaved ribeye",
+        "note": "Half a pound of very thinly sliced steak, chopped on the griddle exactly the same way, added at the end so it cooks in 2 minutes.",
+        "add": [
+          {
+            "ing": "ing.beef.sirloin",
+            "qty": 8,
+            "unit": "oz",
+            "prep": "shaved very thin"
+          }
+        ]
+      },
+      "kidTweak": "Cut the sandwich in half crosswise. It is mushrooms, onions and melted cheese in bread — no negotiation needed.",
+      "restaurantTouch": "The chop on the heat. It is one minute of work and it is what makes this taste like a cheesesteak rather than a mushroom sandwich.",
+      "leftovers": "The filling keeps 3 days and is very good on eggs or pasta. Assemble to order.",
+      "allergenNote": "Contains wheat, dairy and soy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tempeh-reuben",
+      "title": "Tempeh Reuben",
+      "blurb": "Marinated tempeh, real sauerkraut, Swiss and a homemade Russian dressing, griddled in a rye sandwich until the cheese runs. The kraut gets squeezed — that is the trick.",
+      "cuisine": "mid-atlantic",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "sandwich",
+        "skillet",
+        "crave",
+        "quick"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tempeh",
+          "qty": 1,
+          "unit": "block",
+          "prep": "sliced into thin planks"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.coriander",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sauerkraut",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "drained and squeezed dry"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.ketchup",
+          "qty": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.horseradish",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.pickles.dill",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "finely chopped"
+        },
+        {
+          "ing": "ing.cheese.swiss",
+          "qty": 4,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.bread.rye",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "softened"
+        }
+      ],
+      "steps": [
+        "Steam the tempeh planks 10 minutes before anything else. Tempeh has a bitter edge raw and steaming takes it away — this is the step that decides whether people like tempeh.",
+        "Marinate them in the soy, vinegar, paprika, coriander and maple for 15 minutes, then fry in the oil until browned on both sides.",
+        "Russian dressing: mayonnaise, ketchup, horseradish and chopped pickle.",
+        "Squeeze the sauerkraut hard in your fist. Wet kraut makes a soggy reuben, every time.",
+        "Butter the outsides of the bread. Build inside: dressing, Swiss, tempeh, kraut, more Swiss, dressing. Cheese on both sides glues the sandwich together.",
+        "Griddle over medium, weighted with a heavy pan, 4 minutes a side, until the rye is dark and the cheese is running out the edges."
+      ],
+      "omnivore": {
+        "label": "Corned beef",
+        "note": "Warm sliced corned beef, piled higher than seems reasonable, in place of the tempeh.",
+        "add": [
+          {
+            "ing": "ing.ham.deli",
+            "qty": 8,
+            "unit": "oz"
+          }
+        ]
+      },
+      "kidTweak": "Sauerkraut is a big flavor. Make theirs as a plain Swiss grilled cheese on the same griddle.",
+      "restaurantTouch": "Cheese against both slices of bread, filling in the middle. It is structural, not indulgent.",
+      "leftovers": "Assemble to order. Cooked tempeh keeps 4 days and is good chopped into salads.",
+      "heartNote": "Sauerkraut and rye bread are both salty; at about 900 mg a sandwich this is a once-in-a-while lunch. Rinsing the kraut cuts roughly a third of that.",
+      "allergenNote": "Contains soy, wheat, dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.chickpea-salad-sandwich",
+      "title": "Smashed Chickpea Salad Sandwich",
+      "blurb": "Ten minutes, no cooking, and it holds up in a lunchbox better than anything with meat in it. Celery and pickle do the work here.",
+      "cuisine": "american",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 10,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "no-cook",
+        "quick",
+        "15-minute",
+        "meal-prep",
+        "budget",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "bowl",
+        "fork"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "picnic",
+        "weeknight-rush"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 3,
+          "unit": "stalk",
+          "prep": "diced small"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.25,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.pickles.dill",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.dill",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 4,
+          "unit": "leaf"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Smash the chickpeas with a fork or a potato masher until about two-thirds are broken and a third are still whole. That mix of textures is what makes it read as a salad rather than a paste.",
+        "Fold in everything else except the bread and the lettuce and tomato.",
+        "Taste for salt, lemon and pepper. It should be sharper than seems right in the bowl — bread mutes everything.",
+        "Build on toasted bread with lettuce laid against both slices as a moisture barrier, then tomato, then the filling."
+      ],
+      "kidTweak": "Serve it as a dip with crackers and cucumber rounds instead of a sandwich. Same lunchbox, less negotiation.",
+      "restaurantTouch": "Lettuce against the bread, not on top of the filling. It keeps a packed sandwich edible four hours later.",
+      "leftovers": "The filling keeps 4 days. Do not build sandwiches ahead.",
+      "heartNote": "About 13 g of protein and 11 g of fiber a sandwich, with a quarter of the saturated fat of the tuna-salad version.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.grilled-cheese-tomato-soup",
+      "title": "Grilled Cheese and Real Tomato Soup",
+      "blurb": "Mayonnaise on the outside of the bread instead of butter — it browns more evenly and cannot burn. The soup is four ingredients and forty minutes.",
+      "cuisine": "american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "soup",
+        "comfort",
+        "kid-favorite",
+        "budget",
+        "crave"
+      ],
+      "equipment": [
+        "dutch oven",
+        "blender",
+        "skillet"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "new-baby"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 2,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "smashed"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bread.sourdough",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.cheese.gruyere",
+          "qty": 2,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Cook the onion in the oil over medium for 10 minutes until soft and sweet. Add the garlic for 1.",
+        "Add the tomatoes, broth, sugar and salt. Simmer 25 minutes — long enough for the canned-tomato tinny edge to cook off completely.",
+        "Blend with the basil until smooth, then stir in the milk. Off the heat from here.",
+        "Grate both cheeses and mix them. Cheddar for flavor, gruyère for the melt; either alone is a compromise.",
+        "Spread mayonnaise on the outsides of the bread. It has a higher smoke point than butter and browns into an even, blistered crust.",
+        "Griddle over medium-low — low and slow, 4 minutes a side — so the cheese is fully molten by the time the bread is dark. Cut on the diagonal and serve with the soup for dipping."
+      ],
+      "kidTweak": "This is the dinner children remember. Let them dip.",
+      "restaurantTouch": "Medium-low heat, and a lid for the first two minutes. High heat gives you a browned sandwich full of solid cheese.",
+      "leftovers": "The soup keeps 5 days and freezes 3 months. Sandwiches, obviously, do not.",
+      "allergenNote": "Contains wheat, dairy and egg.",
+      "source": "ERRERLabs original",
+      "heartNote": "Bread and cheese are both salty before anything is added, which is why the soup takes half a teaspoon of salt rather than a full one and the sandwiches take five ounces of cheese for four rather than eight. It still eats like the diner version."
+    },
+    {
+      "id": "rec.croque-monsieur",
+      "title": "Croque Monsieur",
+      "blurb": "A ham and cheese sandwich with béchamel inside and on top, run under the broiler until it blisters. France's answer to lunch, and the sauce takes six minutes.",
+      "cuisine": "french",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 35,
+      "difficulty": "medium",
+      "diet": [],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "baked",
+        "comfort",
+        "crave",
+        "restaurant"
+      ],
+      "equipment": [
+        "saucepan",
+        "sheet pan",
+        "broiler"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cheese.gruyere",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.bread.sourdough",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.ham.deli",
+          "qty": 6,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Béchamel: melt the butter, whisk in the flour, and cook 2 minutes without letting it color. Add the milk in three additions, whisking smooth each time, and simmer 4 minutes until it coats a spoon.",
+        "Off the heat, add the nutmeg, salt, pepper and a third of the gruyère. Nutmeg in a béchamel is not optional in France.",
+        "Toast the bread lightly. Spread mustard on four slices, then a thin layer of béchamel, then ham and half the remaining cheese. Close the sandwiches.",
+        "Set them on a sheet pan. Spoon the rest of the béchamel over the tops and edges, and cover with the last of the cheese.",
+        "Broil 4-6 inches from the element for 4-5 minutes until bubbling and browned in spots. Watch it constantly.",
+        "Rest 2 minutes before eating. Molten béchamel is a genuine hazard."
+      ],
+      "vegetarianSwap": {
+        "label": "Croque aux champignons",
+        "note": "Mushrooms browned hard with thyme in place of the ham. With this much béchamel and gruyère nobody feels shortchanged.",
+        "add": [
+          {
+            "ing": "ing.mushroom.cremini",
+            "qty": 3,
+            "unit": "cup",
+            "prep": "sliced and browned"
+          }
+        ]
+      },
+      "kidTweak": "Cut into fingers. It is essentially a very serious grilled cheese.",
+      "restaurantTouch": "Add a fried egg on top and it becomes a croque madame, which is the better sandwich and nobody argues about it.",
+      "leftovers": "Eat it hot. Béchamel keeps 3 days and makes an excellent base for a gratin.",
+      "heartNote": "Rich by design — gruyère, butter and ham together put this among the highest saturated fat and sodium plates in the collection. It is a Sunday lunch with a salad, not a weekday habit.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.mushroom-poboy",
+      "title": "Oyster Mushroom Po'Boy",
+      "blurb": "Torn oyster mushrooms in a cornmeal crust taste uncannily like fried oysters. Dressed New Orleans style — lettuce, tomato, pickle and rémoulade.",
+      "cuisine": "creole",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 30,
+      "totalMin": 40,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "air-fryer",
+        "crave",
+        "restaurant"
+      ],
+      "equipment": [
+        "air fryer or skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.mushroom.oyster",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "torn into strips"
+        },
+        {
+          "ing": "ing.buttermilk",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.cornmeal",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.horseradish",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.baguette",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into 4 and split"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.pickles.dill",
+          "qty": 12,
+          "unit": "slice"
+        }
+      ],
+      "steps": [
+        "Soak the torn mushrooms in the buttermilk and hot sauce for 10 minutes.",
+        "Mix the cornmeal, flour, paprika, cayenne, garlic powder and salt. Dredge each piece, pressing the coating on, and let them sit 5 minutes so the crust sets.",
+        "Air fry at 400°F for 12-14 minutes, misting with oil and shaking halfway — or shallow-fry in the oil over medium-high, 3 minutes a side.",
+        "Rémoulade: mayonnaise, mustard, horseradish, lemon juice and a shake of hot sauce.",
+        "'Dressed' in New Orleans means lettuce, tomato, pickle and mayonnaise. Build that way, pile the mushrooms in hot, and eat immediately."
+      ],
+      "omnivore": {
+        "label": "Shrimp po'boy",
+        "note": "The same buttermilk soak, the same cornmeal dredge, 8 minutes at 400°F. It is the original for a reason.",
+        "add": [
+          {
+            "ing": "ing.shrimp",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "peeled"
+          }
+        ]
+      },
+      "kidTweak": "Serve the crisp mushrooms as nuggets with the rémoulade for dipping and skip the cayenne.",
+      "restaurantTouch": "Tear the mushrooms rather than cutting them. The ragged edges are what catch the crust and crisp.",
+      "leftovers": "Eat immediately. The rémoulade keeps a week.",
+      "allergenNote": "Contains wheat, dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.torta-de-frijoles",
+      "title": "Bean and Avocado Torta",
+      "blurb": "Mexico's great sandwich: a crusty roll, refried beans smeared on one side as glue, avocado, pickled onion and salsa. Fifteen minutes.",
+      "cuisine": "mexican",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "quick",
+        "15-minute",
+        "budget",
+        "meal-prep"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "weeknight-rush",
+        "picnic"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.pinto",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.roll.hoagie",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.cheese.quesofresco",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled"
+        },
+        {
+          "ing": "ing.salsa",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 4,
+          "unit": "leaf"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.pepper.jalapeno",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Quick-pickle the onion: toss the slices with the juice of one lime and 1/4 teaspoon salt and leave them. Twenty minutes turns them pink and sweet.",
+        "Fry the garlic and cumin in the oil for 30 seconds, add the beans and 1/4 cup water, and mash them into a thick paste over medium heat, 5 minutes. Season with the rest of the salt.",
+        "Split the rolls and toast them cut side down in a dry pan.",
+        "Spread the warm beans thickly on the bottom half — they are the glue that keeps everything else in place.",
+        "Layer avocado, cheese, salsa, pickled onion, lettuce, cilantro and jalapeño. Press the sandwich down hard before cutting; a torta is supposed to be compressed."
+      ],
+      "omnivore": {
+        "label": "Milanesa",
+        "note": "A breaded, fried thin chicken cutlet laid over the beans is the classic torta de milanesa.",
+        "add": [
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 2,
+            "unit": "each",
+            "prep": "pounded thin and breaded"
+          }
+        ]
+      },
+      "kidTweak": "Beans, avocado and cheese only. The pickled onions are usually the sticking point.",
+      "restaurantTouch": "Refried beans as the moisture barrier. It is why a torta survives a lunchbox and a sub does not.",
+      "leftovers": "Beans keep 4 days; pickled onions keep 2 weeks and improve everything they touch.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.caprese-ciabatta",
+      "title": "Pressed Caprese Sandwich",
+      "blurb": "Tomato, mozzarella, basil and good oil, pressed for an hour so the bread drinks the juices. Built for a cooler and better after two hours than at zero.",
+      "cuisine": "italian",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 75,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "no-cook",
+        "picnic",
+        "make-ahead",
+        "quick",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "heavy pan or books"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "picnic",
+        "potluck",
+        "cookout"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.baguette",
+          "qty": 1,
+          "unit": "each",
+          "prep": "split lengthwise"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced and salted"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 8,
+          "unit": "oz",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.balsamic",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.arugula",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.pepper.roasted",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "drained",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Salt the tomato slices and lay them on a towel for 10 minutes. Blot them. Unsalted, undrained tomato is what destroys a packed sandwich.",
+        "Rub the cut faces of the bread with the halved garlic clove, then drizzle with half the oil and all the vinegar.",
+        "Layer mozzarella first against the bottom bread, then tomato, basil, arugula, roasted peppers, pepper and the rest of the oil.",
+        "Close it, wrap it tightly in parchment or foil, and put a heavy pan on top for at least an hour — up to four in the fridge.",
+        "Cut into four through the wrapping. The bread should be compressed and stained pink at the edges."
+      ],
+      "omnivore": {
+        "label": "Add salami or prosciutto",
+        "note": "A few thin slices against the top half, so the fat softens into the crumb while it presses.",
+        "add": [
+          {
+            "ing": "ing.ham.deli",
+            "qty": 4,
+            "unit": "oz"
+          }
+        ]
+      },
+      "kidTweak": "Cheese-and-tomato bread that has been squashed on purpose. Skip the arugula and balsamic on theirs.",
+      "restaurantTouch": "The press. An hour under a cast-iron pan turns four separate ingredients into one thing.",
+      "leftovers": "Best 1-4 hours after pressing. Keeps overnight but the bread softens.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.crab-roll",
+      "title": "New England Crab Roll",
+      "blurb": "Cold lump crab dressed barely at all, piled in a griddled buttered roll. Five ingredients, and the restraint is the recipe.",
+      "cuisine": "new-england",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "no-cook",
+        "quick",
+        "15-minute",
+        "special-occasion",
+        "restaurant"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "summer"
+      ],
+      "primaryDiet": "pescatarian",
+      "occasions": [
+        "picnic",
+        "birthday"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.crab.lump",
+          "qty": 1,
+          "unit": "container"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 1,
+          "unit": "stalk",
+          "prep": "diced very fine"
+        },
+        {
+          "ing": "ing.chives",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "snipped"
+        },
+        {
+          "ing": "ing.spice.oldbay",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "softened"
+        },
+        {
+          "ing": "ing.bun.wholewheat",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 4,
+          "unit": "leaf"
+        }
+      ],
+      "steps": [
+        "Pick through the crab for shell. Fold — do not stir — the mayonnaise, lemon juice, celery, chives and Old Bay through it. Five or six strokes.",
+        "Taste before adding salt. Crab is naturally saline and Old Bay is mostly salt.",
+        "Butter the outsides of the rolls and griddle them on both flat sides over medium until golden. This is the New England move and it is worth the two minutes.",
+        "Line each roll with a lettuce leaf, pile the crab in high, and finish with more chives and a lemon wedge."
+      ],
+      "vegetarianSwap": {
+        "label": "Hearts of palm roll",
+        "note": "Shredded artichoke hearts, squeezed dry and dressed identically, in the same griddled roll.",
+        "add": [
+          {
+            "ing": "ing.artichoke.canned",
+            "qty": 1,
+            "unit": "can",
+            "prep": "drained and shredded"
+          }
+        ]
+      },
+      "kidTweak": "Sweet crab in a buttery roll. Leave the Old Bay off theirs if they are cautious.",
+      "restaurantTouch": "Three tablespoons of mayonnaise for a whole container of crab. Anything more and you are eating mayonnaise.",
+      "leftovers": "Eat the day it is made.",
+      "heartNote": "Crab is one of the leanest proteins in the store — about 30 g a roll with barely any fat beyond the dressing.",
+      "allergenNote": "Contains shellfish, wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.egg-salad-everything",
+      "title": "Everything-Bagel Egg Salad",
+      "blurb": "Jammy eggs rather than hard, folded with yogurt and everything seasoning. Ten minutes for the best lunchbox sandwich there is.",
+      "cuisine": "american",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "quick",
+        "15-minute",
+        "meal-prep",
+        "budget",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "saucepan"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "brunch",
+        "picnic"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.egg",
+          "qty": 8,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.everything",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.chives",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "snipped"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 2,
+          "unit": "stalk",
+          "prep": "diced fine"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 4,
+          "unit": "leaf"
+        }
+      ],
+      "steps": [
+        "Lower the eggs into already-boiling water and cook exactly 9 minutes, then ice-bath them. Nine minutes gives a yolk that is set but still bright and slightly fudgy — hard-boiled eggs are what make egg salad chalky.",
+        "Peel and chop coarsely. Some big pieces, some small.",
+        "Fold in the yogurt, mayonnaise, mustard, everything seasoning, chives, celery, lemon and pepper.",
+        "Taste before salting — everything seasoning brings its own.",
+        "Build on toasted bread with lettuce against both slices."
+      ],
+      "kidTweak": "Serve it on crackers or in a lettuce cup. Leave the everything seasoning off theirs and add a little more mustard.",
+      "restaurantTouch": "Yogurt for most of the binder, mayonnaise for the rest. You get the richness without the sandwich turning into a paste.",
+      "leftovers": "Keeps 3 days. Build sandwiches to order.",
+      "heartNote": "Eight eggs across four sandwiches is two each — fine for most healthy adults. For someone managing existing heart disease, use four whole eggs and six whites.",
+      "allergenNote": "Contains egg, wheat, dairy and sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.italian-sub",
+      "title": "Vegetarian Italian Sub",
+      "blurb": "Everything a real Italian sub does — oil and vinegar, oregano, sharp cheese, pickled heat — with roasted peppers, marinated artichokes and provolone carrying it.",
+      "cuisine": "italian-american",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "sandwich",
+        "no-cook",
+        "quick",
+        "15-minute",
+        "picnic",
+        "meal-prep"
+      ],
+      "equipment": [
+        "knife"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "picnic",
+        "game-day",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.roll.hoagie",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.pepper.roasted",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "drained and sliced"
+        },
+        {
+          "ing": "ing.artichoke.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and quartered"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "sliced, or provolone"
+        },
+        {
+          "ing": "ing.olives.kalamata",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "sliced paper thin"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Whisk the oil, vinegar, oregano, pepper flakes and salt into a dressing. This is the thing that makes a sub taste like a sub, and it goes on last.",
+        "Split the rolls without cutting all the way through, so they hinge.",
+        "Layer cheese against the bottom, then artichokes, roasted peppers, olives, onion and tomato.",
+        "Pile the shredded lettuce on top and dress it directly, then close the roll and press. Dressing the lettuce rather than the bread keeps everything below it crisp.",
+        "Wrap tightly in parchment and give it 15 minutes before cutting."
+      ],
+      "omnivore": {
+        "label": "The full salumi",
+        "note": "Capicola, salami and provolone, layered in the same order under the vegetables.",
+        "add": [
+          {
+            "ing": "ing.ham.deli",
+            "qty": 6,
+            "unit": "oz"
+          }
+        ]
+      },
+      "kidTweak": "Cheese, tomato and lettuce with a little oil. Skip the olives, onion and pepper flakes.",
+      "restaurantTouch": "Dress the lettuce, not the bread. Every good sub shop does this and almost no home cook does.",
+      "leftovers": "Wrapped tight, it holds 4 hours in a cooler and improves for the first two.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    }
+  ]
+}

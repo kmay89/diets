@@ -309,10 +309,34 @@ function doneStep(state) {
       summaryRow('Taste map', `${loves} loved, ${nevers} never`),
       summaryRow('Pantry', `${pantry} items on hand`)
     ),
-    h('p.lede', 'Next: roll a few dinners, check the ingredient lists against your kitchen, and send yourself a shopping list.'),
+    h('p.eyebrow', 'Where would you like to start?'),
+    h('div.entry-grid',
+      entryCard('🎲', 'Roll tonight', 'Deal a hand of dinners that fit your time, your diets and what is already in the kitchen.', '#/roll'),
+      entryCard('📖', 'Browse the collection', `${getDb().recipes.length} recipes by meal, method, cuisine and region.`, '#/browse'),
+      entryCard('🏠', 'Fill the pantry', 'Tick off what you already have and every list from here on gets shorter.', '#/pantry'),
+      entryCard('🌿', 'See the garden plan', 'What to plant this month in zone 6a, tied to the recipes it feeds.', '#/garden')
+    ),
     h('p.fine-print',
       'On an iPhone, tap Share and then “Add to Home Screen” — everywhere else it is in the browser menu. ',
       'It then opens like an app and works with no signal.')
+  );
+}
+
+/**
+ * The four ways in, offered once at the end of setup.
+ *
+ * A meal planner that opens on a dice screen assumes everybody wants the dice.
+ * Some people arrive wanting a specific cuisine, some want to use up a fridge.
+ * Naming all four takes one screen and saves the other three from hunting.
+ */
+function entryCard(icon, title, body, href) {
+  return h('a.entry-card', { href },
+    h('span.entry-card__icon', { 'aria-hidden': 'true' }, icon),
+    h('span.entry-card__body',
+      h('strong.entry-card__title', title),
+      h('span.entry-card__text', body)
+    ),
+    h('span.entry-card__go', { 'aria-hidden': 'true' }, '→')
   );
 }
 

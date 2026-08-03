@@ -6,6 +6,7 @@
 
 import { h, mount, chip, toast, sheet, confirmSheet, titleCase, rangeField } from '../ui.js';
 import { getDb } from '../data.js';
+import { setTheme, THEMES } from '../theme.js';
 import {
   getState, setPref, addMember, exportData, importData, resetAll
 } from '../store.js';
@@ -73,8 +74,10 @@ function view(draw, navigate) {
       h('label.field',
         h('span.field__label', 'Appearance'),
         h('select.input', {
-          onchange: (e) => { setPref('theme', e.target.value); applyTheme(e.target.value); draw(); }
-        }, ...['system', 'light', 'dark'].map(t => h('option', { value: t, selected: state.prefs.theme === t }, titleCase(t))))
+          onchange: (e) => { setTheme(e.target.value); draw(); }
+        }, ...THEMES.map(t => h('option', { value: t, selected: state.prefs.theme === t },
+          t === 'system' ? 'Auto — follow my device' : titleCase(t)))),
+        h('span.field__hint', 'The same switch lives in the top right of every screen.')
       )
     ),
 
@@ -223,8 +226,5 @@ function openImport(draw) {
   );
 }
 
-export function applyTheme(theme) {
-  const root = document.documentElement;
-  if (theme === 'system') root.removeAttribute('data-theme');
-  else root.setAttribute('data-theme', theme);
-}
+/** Kept as a re-export so older callers (and the tests) still have one name for it. */
+export { applyTheme } from '../theme.js';

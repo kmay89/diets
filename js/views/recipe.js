@@ -14,7 +14,8 @@ import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributor
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
-import { foodIcon } from '../food-icon.js';
+import { foodIcon, iconCollage } from '../food-icon.js';
+import { collectionsByGroup, collectionById, matchesCollection } from '../collections.js';
 import { withSwaps, swapCount, substitutionsFor, swappedLine } from '../swaps.js';
 import { printRecipe } from '../print.js';
 import { glancePanel } from './nutrition-panel.js';
@@ -397,22 +398,88 @@ let browseQuery = '';
 let browseCourse = 'all';
 let browseSort = 'heart';
 let browseOccasion = null;
+let browseCollection = null;
 let browseCrave = false;
+/** Which collection group's shelf is open. Null means the strip is collapsed. */
+let browseGroup = null;
+
+/**
+ * The collection shelf: five groups of ways in — meal type, method, world
+ * cuisine, American region, effort — with the chips for one group at a time.
+ *
+ * All fifty-odd collections shown at once is a wall nobody reads, and hiding
+ * them behind a dropdown is a wall nobody finds. One row of group names, one
+ * row of chips underneath.
+ */
+function collectionShelf(draw) {
+  const groups = collectionsByGroup();
+  if (!groups.length) return null;
+
+  const open = groups.find(g => g.group.id === browseGroup);
+
+  return h('section.shelf',
+    h('div.shelf__groups',
+      ...groups.map(({ group, collections }) => h('button', {
+        type: 'button',
+        class: `shelf__group ${browseGroup === group.id ? 'is-on' : ''}`,
+        onclick: () => {
+          browseGroup = browseGroup === group.id ? null : group.id;
+          play('tap');
+          draw();
+        }
+      }, group.name, h('span.shelf__count', collections.length)))
+    ),
+    open
+      ? h('div.shelf__body',
+          h('p.shelf__blurb', open.group.blurb),
+          h('div.shelf__chips',
+            ...open.collections.map(c => h('button', {
+              type: 'button',
+              class: `shelf__chip ${browseCollection === c.id ? 'is-on' : ''}`,
+              title: c.blurb,
+              onclick: () => {
+                browseCollection = browseCollection === c.id ? null : c.id;
+                browseOccasion = null;
+                play('tap');
+                draw();
+              }
+            },
+              h('span.shelf__chip-icon', { 'aria-hidden': 'true' }, c.icon || '🍽'),
+              h('span.shelf__chip-name', c.name),
+              h('span.shelf__chip-count', c.count)
+            ))
+          ),
+          browseCollection ? h('p.shelf__note', collectionById(browseCollection)?.blurb || '') : null
+        )
+      : null
+  );
+}
 
 export function renderBrowse(root, { navigate }) {
   // A link like #/browse?occasion=thanksgiving arrives from the roll screen.
   const fromLink = location.hash.match(/[?&]occasion=([\w-]+)/)?.[1];
   if (fromLink) browseOccasion = fromLink;
+  const fromCollection = location.hash.match(/[?&]collection=([\w-]+)/)?.[1];
+  if (fromCollection) { browseCollection = fromCollection; browseGroup = collectionById(fromCollection)?.group || null; }
 
   const draw = () => {
     mount(root, view());
-    requestAnimationFrame(() => stagger(root.querySelector('.card-grid'), { step: 28 }));
+    requestAnimationFrame(() => {
+      stagger(root.querySelector('.card-grid'), { step: 28 });
+      // The group strip scrolls, so the chosen group can end up off-screen
+      // behind the one you tapped. Pull it back into view.
+      root.querySelector('.shelf__group.is-on')?.scrollIntoView({ inline: 'center', block: 'nearest' });
+    });
   };
   const view = () => {
     const state = getState();
     let list = searchRecipes(browseQuery);
     if (browseCourse !== 'all') list = list.filter(r => r.course === browseCourse);
     if (browseOccasion) list = list.filter(r => (r.occasions || []).includes(browseOccasion));
+    if (browseCollection) {
+      const collection = collectionById(browseCollection);
+      if (collection) list = list.filter(r => matchesCollection(r, collection));
+    }
     if (browseCrave) list = list.filter(r => (r.tags || []).includes('crave'));
 
     list = [...list].sort((a, b) => {
@@ -426,18 +493,23 @@ export function renderBrowse(root, { navigate }) {
     return h('section.view',
       h('div.view__head',
         h('div',
-          h('h1.view__title', browseOccasion ? (occasionById(browseOccasion)?.name || 'Recipes') : 'Every recipe'),
+          h('p.eyebrow', 'The collection'),
+          h('h1.view__title',
+            browseCollection ? (collectionById(browseCollection)?.name || 'Recipes')
+              : browseOccasion ? (occasionById(browseOccasion)?.name || 'Recipes')
+                : 'Every recipe'),
           h('p.view__sub',
-            browseOccasion
-              ? occasionById(browseOccasion)?.blurb || ''
-              : `${list.length} of ${getDb().recipes.length}`)
+            browseCollection ? (collectionById(browseCollection)?.blurb || '')
+              : browseOccasion ? (occasionById(browseOccasion)?.blurb || '')
+                : `${list.length} of ${getDb().recipes.length} recipes`)
         )
       ),
+      collectionShelf(draw),
       h('div.occasion-strip',
         h('button', {
           type: 'button',
-          class: `occasion ${browseOccasion ? '' : 'is-on'}`,
-          onclick: () => { browseOccasion = null; play('tap'); draw(); }
+          class: `occasion ${browseOccasion || browseCollection ? '' : 'is-on'}`,
+          onclick: () => { browseOccasion = null; browseCollection = null; browseGroup = null; play('tap'); draw(); }
         }, h('span.occasion__icon', '🍽'), 'Everything'),
         ...allOccasions().map(o => h('button', {
           type: 'button',
@@ -451,7 +523,7 @@ export function renderBrowse(root, { navigate }) {
           oninput: debounce((e) => { browseQuery = e.target.value; draw(); }, 200)
         }),
         h('div.chip-row.chip-row--tight',
-          ...['all', 'dinner', 'lunch', 'breakfast', 'snack', 'side', 'component'].map(c =>
+          ...['all', 'dinner', 'lunch', 'breakfast', 'snack', 'dessert', 'side', 'component'].map(c =>
             chip(c === 'all' ? 'All' : titleCase(c), { on: browseCourse === c, onclick: () => { browseCourse = c; draw(); } }))
         ),
         h('div.chip-row.chip-row--tight',
@@ -479,6 +551,11 @@ export function renderBrowse(root, { navigate }) {
           const heart = heartFor(r);
           const cov = pantryCoverage(r, state.pantry);
           return h('article.card.recipe-card',
+            h('button.recipe-card__art', {
+              type: 'button',
+              'aria-label': `Open ${r.title}`,
+              onclick: () => navigate(`#/recipe/${r.id}`)
+            }, iconCollage(r, getDb().ingIndex, { size: 52 })),
             h('div.recipe-card__head',
               h('div',
                 h('h3.recipe-card__title', { role: 'button', tabindex: '0', onclick: () => navigate(`#/recipe/${r.id}`) }, r.title),
@@ -489,6 +566,7 @@ export function renderBrowse(root, { navigate }) {
             h('div.pill-row',
               pill(`${minutes(r.activeMin)} active`),
               pill(titleCase(r.course)),
+              r.cuisine && r.cuisine !== 'any' ? pill(titleCase(String(r.cuisine).replace(/-/g, ' '))) : null,
               r.omnivore ? pill('+ omnivore', 'meat') : null,
               cov.total ? pill(`${cov.have}/${cov.total} in pantry`, cov.ratio > 0.5 ? 'green' : '') : null
             ),

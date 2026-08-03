@@ -14,27 +14,33 @@ const FILES = {
   aisles: 'data/aisles.json',
   garden: 'data/garden.json',
   graph: 'data/graph.json',
-  dinners: 'data/recipes.dinners.json',
-  occasions: 'data/recipes.occasions.json',
-  daily: 'data/recipes.daily.json'
+  collections: 'data/collections.json',
+  // The recipe part files are not listed here. data/recipes.index.json is the
+  // one place that says which exist, so a new part file is a one-line change
+  // rather than an edit to the app, the build scripts and three tests.
+  recipeIndex: 'data/recipes.index.json'
 };
 
 let db = null;
 
+const getJson = async (path) => {
+  const res = await fetch(path, { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`Could not load ${path} (${res.status})`);
+  return res.json();
+};
+
 export async function loadAll() {
   if (db) return db;
 
-  const [ingredients, aisles, garden, graph, dinners, occasions, daily] = await Promise.all(
-    Object.values(FILES).map(async (path) => {
-      const res = await fetch(path, { cache: 'no-cache' });
-      if (!res.ok) throw new Error(`Could not load ${path} (${res.status})`);
-      return res.json();
-    })
+  const [ingredients, aisles, garden, graph, collections, index] = await Promise.all(
+    Object.values(FILES).map(getJson)
   );
+
+  const parts = await Promise.all(index.parts.map(p => getJson(p.file)));
 
   const items = ingredients.items;
   const ingIndex = new Map(items.map(i => [i.id, i]));
-  const recipes = [...dinners.recipes, ...occasions.recipes, ...daily.recipes];
+  const recipes = parts.flatMap(p => p.recipes);
   const recipeIndex = new Map(recipes.map(r => [r.id, r]));
   const graphNodes = new Map(graph.nodes.map(n => [n.id, n]));
 
@@ -53,6 +59,9 @@ export async function loadAll() {
     graph,
     graphNodes,
     recipesByIngredient,
+    collections: collections.collections,
+    collectionGroups: collections.groups,
+    recipeParts: index.parts,
     nutrientNote: ingredients.per100gNote
   };
   return db;
