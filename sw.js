@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v2.0.0';
+const VERSION = 'v2.1.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -25,6 +25,7 @@ const PRECACHE = [
   './js/roll.js',
   './js/shopping.js',
   './js/nutrition.js',
+  './js/views/member-card.js',
   './js/views/onboarding.js',
   './js/views/roll.js',
   './js/views/plan.js',
