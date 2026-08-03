@@ -350,9 +350,9 @@
     "cy": 34.9375
   },
   "chickpeas-dried": {
-    "scale": 1.28571,
+    "scale": 1.07143,
     "cx": 32,
-    "cy": 34
+    "cy": 37.5
   },
   "chile-ancho": {
     "scale": 0.98873,
@@ -1160,9 +1160,9 @@
     "cy": 36.25
   },
   "popcorn-kernels": {
-    "scale": 1.28571,
+    "scale": 1.07143,
     "cx": 32,
-    "cy": 34
+    "cy": 37.5
   },
   "pork-shoulder": {
     "scale": 0.97826,

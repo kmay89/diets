@@ -40,7 +40,7 @@ const OUT = join(root, 'icons/food');
 
 export const slugFor = (id) => String(id).replace(/^ing\./, '').replace(/\./g, '-');
 
-/** The marker that says "a script drew this", so the art manifest can find them. */
+/** The marker for an aisle-fallback drawing that still needs an art pass. */
 export const GENERATED_MARK = 'data-drawn="generated"';
 
 const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -389,6 +389,8 @@ const SPEC = {
   grits: ['bowl', 'yellow', 'cream'],
   'barley-pearl': ['grain', 'cream', 'brown'],
   bulgur: ['grain', 'brown', 'gold'],
+  'chickpeas-dried': ['grain', 'gold', 'cream'],
+  'popcorn-kernels': ['grain', 'yellow', 'cream'],
   'flour-bread': ['bag', 'cream', 'brown'],
   semolina: ['bag', 'yellow', 'brown'],
   masa: ['bag', 'yellow', 'brown'],
@@ -402,6 +404,7 @@ const SPEC = {
   'milk-condensed': ['can', 'cream', 'gold'],
   'chile-ancho': ['chile', 'brown', 'clay'],
   'artichoke-canned': ['can', 'lime', 'cream'],
+  bamboo: ['can', 'cream', 'lime'],
   'frozen-mango': ['bag', 'orange', 'white'],
   'frozen-cherries': ['bag', 'wine', 'white'],
   'frozen-pineapple': ['bag', 'gold', 'white'],
@@ -472,6 +475,7 @@ export function shapeFor(item) {
 
 export function drawIcon(item) {
   const slug = slugFor(item.id);
+  const commissioned = Object.hasOwn(SPEC, slug);
   const [shape, primary, secondary] = SPEC[slug] || AISLE_DEFAULT[item.aisle] || AISLE_DEFAULT.other;
   const body = SHAPES[shape] || SHAPES.bowl;
   const { scale, cx, cy } = alignmentFor(shape);
@@ -480,7 +484,7 @@ export function drawIcon(item) {
   const gradB = `${slug}-b`;
   const depth = `${slug}-depth`;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t" ${GENERATED_MARK}>
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t"${commissioned ? '' : ` ${GENERATED_MARK}`}>
   <title id="t">${xml(item.name)}</title>
   <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
   <defs>
