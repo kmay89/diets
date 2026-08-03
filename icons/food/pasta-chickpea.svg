@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Chickpea pasta (dry)</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="pasta-chickpea-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="pasta-chickpea-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="pasta-chickpea-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pasta-chickpea-depth)">
+  <path d="M17 13H47L45 55H19Z" fill="url(#pasta-chickpea-cream)" data-tone="cream"/>
+  <path d="M18 19L46 19" fill="none" class="ink-s"/>
+  <path d="M20 25H44L42 50H22Z" fill="url(#pasta-chickpea-gold)" data-tone="gold" stroke="none"/>
+  <g transform="translate(0 3) scale(.62) translate(19 19)"><path d="M21 34Q26 28 31 34T41 34M23 42Q29 36 35 42T45 42" fill="none" class="paper-s" stroke-width="4"/></g></g>
+</svg>

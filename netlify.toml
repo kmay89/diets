@@ -80,6 +80,16 @@
     Cache-Control = "public, max-age=31536000, immutable"
     Content-Type = "image/jpeg"
 
+# The food icons. Artwork gets revised in a way app icons do not, and a year of
+# immutable would mean a redrawn icon never reaches anyone who already visited.
+# The service worker holds the offline copy and refreshes it on a version bump,
+# so the network copy only needs to revalidate.
+[[headers]]
+  for = "/icons/food/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+    Content-Type = "image/svg+xml; charset=utf-8"
+
 # Shared recipe pages: revalidate, so an edited recipe updates the card and the
 # preview text the next time a crawler looks.
 [[headers]]

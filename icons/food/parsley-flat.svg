@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Flat-leaf parsley</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="parsley-flat-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="parsley-flat-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+    <radialGradient id="parsley-flat-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#parsley-flat-depth)"><path d="M24 52L39 18" fill="none" stroke="#244C3F" stroke-width="3"/><path d="M18 38Q23 33.730000000000004 28 38Q23 42.269999999999996 18 38Z" fill="url(#parsley-flat-green2)" data-tone="green2" transform="rotate(-40 23 38)" /><path d="M22 29Q27 24.73 32 29Q27 33.269999999999996 22 29Z" fill="url(#parsley-flat-green)" data-tone="green" transform="rotate(-25 27 29)" /><path d="M29 24Q34 19.73 39 24Q34 28.27 29 24Z" fill="url(#parsley-flat-green2)" data-tone="green2" transform="rotate(0 34 24)" /><path d="M35 30Q40 25.73 45 30Q40 34.269999999999996 35 30Z" fill="url(#parsley-flat-green)" data-tone="green" transform="rotate(28 40 30)" /><path d="M35 40Q40 35.730000000000004 45 40Q40 44.269999999999996 35 40Z" fill="url(#parsley-flat-green2)" data-tone="green2" transform="rotate(40 40 40)" /></g>
+</svg>

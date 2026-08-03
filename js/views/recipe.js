@@ -14,6 +14,7 @@ import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributor
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
+import { foodIcon } from '../food-icon.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -163,6 +164,7 @@ function ingredientList(recipe, state, scale, draw) {
               onchange: (e) => { togglePantry(line.ing); play(e.target.checked ? 'check' : 'uncheck'); draw(); },
               'aria-label': `I have ${item.name}`
             }),
+            foodIcon(item, { size: 24 }),
             h('span.ing__qty', formatQty(line.qty * scale, line.unit)),
             h('span.ing__name', item.name),
             line.prep ? h('span.ing__prep', `, ${line.prep}`) : null,

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Red pepper flakes</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="spice-pepperflakes-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="spice-pepperflakes-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+    <radialGradient id="spice-pepperflakes-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="spice-pepperflakes-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#spice-pepperflakes-depth)">
+  <rect x="18" y="13" width="28" height="6" rx="2" fill="url(#spice-pepperflakes-charcoal)" data-tone="charcoal" />
+  <path d="M20 19H44L46 25V53H18V25Z" fill="url(#spice-pepperflakes-cream)" data-tone="cream"/>
+  <rect x="20" y="29" width="24" height="17" rx="3" fill="url(#spice-pepperflakes-red)" data-tone="red" stroke="none"/>
+  <g transform="translate(0 6) scale(.54) translate(27 21)"><path d="M23.8 33.4Q24.8 29.6 28.3 30.9Q27.6 34.1 23.8 33.4Z" fill="url(#spice-pepperflakes-cream)" data-tone="cream" transform="rotate(-20 26 32)"/><path d="M32.8 31.4Q33.8 27.6 37.3 28.9Q36.6 32.1 32.8 31.4Z" fill="url(#spice-pepperflakes-cream)" data-tone="cream" transform="rotate(20 35 30)"/><path d="M36.8 41.4Q37.8 37.6 41.3 38.9Q40.6 42.1 36.8 41.4Z" fill="url(#spice-pepperflakes-cream)" data-tone="cream" transform="rotate(-30 39 40)"/></g>
+  <path d="M22 24L42 24" fill="none" stroke="#D8C9A7"/></g>
+</svg>

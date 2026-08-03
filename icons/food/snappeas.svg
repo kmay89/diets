@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Sugar snap peas</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="snappeas-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="snappeas-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+    <radialGradient id="snappeas-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="snappeas-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#snappeas-depth)"><g transform="translate(-3 -7) rotate(-10 32 36)"><path d="M15 38Q31 18 49 31Q37 48 15 38Z" fill="url(#snappeas-green2)" data-tone="green2"/><circle cx="24" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="31" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="38" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="44" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /></g><g transform="translate(0 1) rotate(0 32 36)"><path d="M15 38Q31 18 49 31Q37 48 15 38Z" fill="url(#snappeas-green)" data-tone="green"/><circle cx="24" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="31" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="38" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="44" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /></g><g transform="translate(3 9) rotate(10 32 36)"><path d="M15 38Q31 18 49 31Q37 48 15 38Z" fill="url(#snappeas-green2)" data-tone="green2"/><circle cx="24" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="31" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="38" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /><circle cx="44" cy="34" r="2.3" fill="url(#snappeas-cream)" data-tone="cream" /></g></g>
+</svg>

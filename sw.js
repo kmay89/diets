@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v2.2.0';
+const VERSION = 'v2.3.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -25,6 +25,7 @@ const PRECACHE = [
   './js/roll.js',
   './js/shopping.js',
   './js/nutrition.js',
+  './js/food-icon.js',
   './js/views/member-card.js',
   './js/views/onboarding.js',
   './js/views/roll.js',
@@ -59,12 +60,34 @@ const PRECACHE = [
   './404.html'
 ];
 
+/**
+ * The food icons are not listed above. There are 227 of them and the list
+ * would have to be edited every time an ingredient is added — exactly the kind
+ * of hand-kept list that silently goes stale. They are derived from
+ * ingredients.json instead, using the same id-to-slug rule the app uses, so
+ * the set can never drift from the data.
+ *
+ * A missing icon is not an error: the app falls back to an aisle emoji.
+ */
+async function foodIconUrls() {
+  try {
+    const res = await fetch('./data/ingredients.json', { cache: 'reload' });
+    if (!res.ok) return [];
+    const { items } = await res.json();
+    return items.map(i => `./icons/food/${i.id.replace(/^ing\./, '').replace(/\./g, '-')}.svg`);
+  } catch (err) {
+    console.warn('[sw] could not derive the food icon list', err);
+    return [];
+  }
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
+    const urls = [...PRECACHE, ...await foodIconUrls()];
     // addAll fails the whole install if any single file 404s, so add
     // individually and let one missing optional asset go by.
-    await Promise.all(PRECACHE.map(async (url) => {
+    await Promise.all(urls.map(async (url) => {
       try {
         const res = await fetch(url, { cache: 'reload' });
         if (res.ok) await cache.put(url, res);

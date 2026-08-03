@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Whole grain bread</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="bread-wholegrain-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="bread-wholegrain-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+    <radialGradient id="bread-wholegrain-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+    <radialGradient id="bread-wholegrain-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bread-wholegrain-depth)"><path d="M16 32Q14 22 24 18Q32 12 40 18Q51 20 48 33V52H16Z" fill="url(#bread-wholegrain-cream2)" data-tone="cream2"/><path d="M25 25L29 30" fill="none" class="paper-s" stroke-width="2"/><path d="M35 23L39 28" fill="none" class="paper-s" stroke-width="2"/><path d="M23.24 43.12Q24.04 40.08 26.84 41.12Q26.28 43.68 23.24 43.12Z" fill="url(#bread-wholegrain-green)" data-tone="green" transform="rotate(-15 25 42)"/><path d="M33.24 46.12Q34.04 43.08 36.84 44.12Q36.28 46.68 33.24 46.12Z" fill="url(#bread-wholegrain-clay)" data-tone="clay" transform="rotate(20 35 45)"/><path d="M40.24 40.12Q41.04 37.08 43.84 38.12Q43.28 40.68 40.24 40.12Z" fill="url(#bread-wholegrain-green)" data-tone="green" transform="rotate(-20 42 39)"/></g>
+</svg>

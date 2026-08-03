@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Crushed tomatoes, no salt added</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="tomato-canned-crushed-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="tomato-canned-crushed-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="tomato-canned-crushed-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#tomato-canned-crushed-depth)">
+  <path d="M17 18Q32 14 47 18V51Q32 56 17 51Z" fill="url(#tomato-canned-crushed-cream)" data-tone="cream"/>
+  <path d="M17 18Q32 22 47 18M17 51Q32 47 47 51" fill="none"/>
+  <rect x="18" y="27" width="28" height="18" rx="2" fill="url(#tomato-canned-crushed-clay)" data-tone="clay" stroke="none"/>
+  <g transform="translate(0 4) scale(.58) translate(23 23)"><path d="M23 43Q27 28 42 30Q43 43 31 45Z" fill="url(#tomato-canned-crushed-cream)" data-tone="cream"/></g></g>
+</svg>

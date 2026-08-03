@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Whole wheat couscous (dry)</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="couscous-wholewheat-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="couscous-wholewheat-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="couscous-wholewheat-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+    <radialGradient id="couscous-wholewheat-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#couscous-wholewheat-depth)">
+  <path d="M17 13H47L45 55H19Z" fill="url(#couscous-wholewheat-cream)" data-tone="cream"/>
+  <path d="M18 19L46 19" fill="none" class="ink-s"/>
+  <path d="M20 25H44L42 50H22Z" fill="url(#couscous-wholewheat-cream2)" data-tone="cream2" stroke="none"/>
+  <g transform="translate(0 3) scale(.62) translate(19 19)"><circle cx="24" cy="31" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/><circle cx="31" cy="29" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/><circle cx="38" cy="32" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/><circle cx="27" cy="39" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/><circle cx="35" cy="40" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/><circle cx="41" cy="43" r="2" fill="url(#couscous-wholewheat-clay)" data-tone="clay" stroke="none"/></g></g>
+</svg>

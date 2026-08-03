@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Avocado</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="avocado-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="avocado-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+    <radialGradient id="avocado-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+    <radialGradient id="avocado-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#avocado-depth)"><path d="M33 13C29 21 17 33 18 43C19 54 29 57 38 54C48 50 49 40 44 31C40 24 36 17 33 13Z" fill="url(#avocado-green)" data-tone="green"/><ellipse cx="32" cy="40" rx="9" ry="10" fill="url(#avocado-gold)" data-tone="gold" /><circle cx="32" cy="41" r="5.5" fill="url(#avocado-clay)" data-tone="clay" /></g>
+</svg>

@@ -78,6 +78,12 @@ file with their citations attached, rendered with numbered markers you can open.
 what kind of evidence it is — randomised trial, meta-analysis, model, guideline — and what it *does
 not* show. A claim that cannot be sourced cannot be displayed.
 
+**🥑 Every ingredient has a face.** 227 hand-drawn SVG icons, one per ingredient, on the
+shopping list, in the pantry and beside every line of a recipe. They are named for the ingredient id,
+so adding an ingredient and dropping `icons/food/<slug>.svg` next to it is the whole integration —
+there is no manifest to regenerate. Anything without an icon falls back to its aisle, so a partial
+set looks deliberate rather than broken.
+
 **🔊 It feels like something.** Quiet synthesised tones on the actions that deserve them, staggered
 card entrances, a dice that tumbles. All of it obeys `prefers-reduced-motion`, none of it plays
 before you touch the screen, and one switch turns it off.
@@ -126,9 +132,13 @@ data/
   aisles.json           department order + store layouts
   garden.json           zone 6a planting calendar (editable for any region)
   graph.json            generated — the food graph
+icons/
+  food/                 227 ingredient icons, named <slug>.svg
+  cards/                per-recipe link-preview images
 tools/
   build-graph.mjs       compiles the graph from the source data
   verify-data.mjs       integrity + plausibility checks
+  split-food-icons.mjs  cuts the icon contact sheet into per-ingredient SVGs
   make-icons.py         renders the PNG icons with no image library
   build-share-pages.mjs generates /r/<slug>/ pages and the sitemap
   social-card.html      the site-wide link-preview card design

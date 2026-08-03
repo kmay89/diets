@@ -11,6 +11,7 @@ import { h, mount, chip, toast, debounce, confirmSheet } from '../ui.js';
 import { getDb, recipesUsing } from '../data.js';
 import { play } from '../feedback.js';
 import { getState, togglePantry, clearPantry } from '../store.js';
+import { foodIcon } from '../food-icon.js';
 
 let query = '';
 let showOnlyHave = false;
@@ -71,6 +72,7 @@ function view(draw, navigate) {
           const uses = recipesUsing(item.id).length;
           return h('label', { class: `pantry-item ${have ? 'is-have' : ''}` },
             h('input', { type: 'checkbox', checked: have, onchange: (e) => { togglePantry(item.id); play(e.target.checked ? 'check' : 'uncheck'); draw(); } }),
+            foodIcon(item, { size: 22 }),
             h('span.pantry-item__name', item.name),
             uses ? h('span.pantry-item__uses', `${uses}`) : null
           );

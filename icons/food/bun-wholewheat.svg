@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Whole wheat burger buns</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="bun-wholewheat-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="bun-wholewheat-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+    <radialGradient id="bun-wholewheat-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+    <radialGradient id="bun-wholewheat-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bun-wholewheat-depth)"><ellipse cx="32" cy="44" rx="19" ry="8" fill="url(#bun-wholewheat-cream2)" data-tone="cream2" /><path d="M14 38Q16 19 32 18Q48 19 50 38Z" fill="url(#bun-wholewheat-gold)" data-tone="gold"/><path d="M21.57 28.91Q22.22 26.44 24.495 27.285Q24.04 29.365000000000002 21.57 28.91Z" fill="url(#bun-wholewheat-cream)" data-tone="cream" transform="rotate(0 23 28)"/><path d="M28.57 32.91Q29.22 30.44 31.495 31.285Q31.04 33.365 28.57 32.91Z" fill="url(#bun-wholewheat-cream)" data-tone="cream" transform="rotate(30 30 32)"/><path d="M35.57 28.91Q36.22 26.44 38.495 27.285Q38.04 29.365000000000002 35.57 28.91Z" fill="url(#bun-wholewheat-cream)" data-tone="cream" transform="rotate(60 37 28)"/><path d="M41.57 32.91Q42.22 30.44 44.495 31.285Q44.04 33.365 41.57 32.91Z" fill="url(#bun-wholewheat-cream)" data-tone="cream" transform="rotate(90 43 32)"/></g>
+</svg>

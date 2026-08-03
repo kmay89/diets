@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Whole wheat pita</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="pita-wholewheat-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="pita-wholewheat-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+    <radialGradient id="pita-wholewheat-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pita-wholewheat-depth)"><path d="M15 43Q17 19 32 16Q48 20 49 43Q32 55 15 43Z" fill="url(#pita-wholewheat-cream2)" data-tone="cream2"/><path d="M20 39L44 36" fill="none" stroke="#C66B3D" stroke-width="1.5"/><path d="M25.57 29.91Q26.22 27.44 28.495 28.285Q28.04 30.365000000000002 25.57 29.91Z" fill="url(#pita-wholewheat-green)" data-tone="green" transform="rotate(-20 27 29)"/><path d="M34.57 26.91Q35.22 24.44 37.495 25.285Q37.04 27.365000000000002 34.57 26.91Z" fill="url(#pita-wholewheat-green)" data-tone="green" transform="rotate(30 36 26)"/></g>
+</svg>
