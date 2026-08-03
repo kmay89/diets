@@ -16,7 +16,7 @@
  *     sheet's label, so the accessible name and the visible name never drift
  *   - a dark-mode rule. The artwork is drawn in charcoal outlines with cream
  *     interior marks, which is right on a light background and wrong on a dark
- *     one — the outline disappears and the marks glare. Those two colours are
+ *     one — the outline disappears and the marks glare. Those two colors are
  *     lifted into classes and swapped under prefers-color-scheme: dark.
  *
  * The file is rendered through <img>, so it is its own document: no script in
@@ -86,12 +86,12 @@ const CHARCOAL = '#303532';
 const CREAM = '#F3E8CF';
 
 /**
- * Swap the two structural colours for classes the stylesheet can flip.
+ * Swap the two structural colors for classes the stylesheet can flip.
  * Presentation attributes cannot take a custom property, so classes it is.
  */
 function themeable(markup) {
-  return markup.replace(/(fill|stroke)="(#303532|#F3E8CF)"/gi, (_, prop, colour) => {
-    const tone = colour.toUpperCase() === CHARCOAL.toUpperCase() ? 'ink' : 'paper';
+  return markup.replace(/(fill|stroke)="(#303532|#F3E8CF)"/gi, (_, prop, color) => {
+    const tone = color.toUpperCase() === CHARCOAL.toUpperCase() ? 'ink' : 'paper';
     return `class="${tone}-${prop[0]}"`;
   });
 }

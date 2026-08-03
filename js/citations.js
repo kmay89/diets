@@ -67,10 +67,10 @@ export function citationNumber(id) {
 }
 
 const STRENGTH_LABEL = {
-  rct: 'Randomised trial',
+  rct: 'Randomized trial',
   'meta-analysis': 'Meta-analysis',
   cohort: 'Cohort study',
-  modelling: 'Modelling study',
+  modeling: 'Modeling study',
   guideline: 'Clinical guideline',
   regulatory: 'Regulatory standard',
   dataset: 'Official statistics',

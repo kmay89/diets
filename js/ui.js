@@ -155,6 +155,61 @@ export function meter(value, target, { label = '', unit = '', invert = false } =
   );
 }
 
+/**
+ * A slider that actually slides.
+ *
+ * The first version re-rendered the whole view on every `input` event to keep
+ * its label in sync, which threw away the element being dragged — so a drag
+ * moved exactly one step and then died under the pointer. Nothing here
+ * re-renders: the value pill, the fill and the ticks are patched in place, and
+ * `onchange` hears about it without anybody redrawing anything.
+ *
+ * @param label   text to the left of the value
+ * @param format  (value) => string, for the pill and the accessible name
+ * @param onInput fired on every movement, including mid-drag
+ */
+export function rangeField(label, {
+  min, max, step = 1, value, format = (v) => String(v), onInput = null, legend = true
+} = {}) {
+  const stops = Math.round((max - min) / step);
+  const pct = (v) => ((v - min) / (max - min)) * 100;
+
+  const readout = h('span.range__value', format(value));
+  const input = h('input.range__input', {
+    type: 'range', min, max, step, value,
+    'aria-label': label,
+    'aria-valuetext': format(value)
+  });
+
+  const ticks = stops > 1 && stops <= 24
+    ? h('div.range__ticks', ...Array.from({ length: stops + 1 }, (_, i) =>
+        h('span.range__tick', { style: { left: `${(i / stops) * 100}%` } })))
+    : null;
+
+  const paint = (v) => {
+    input.style.setProperty('--fill', `${pct(v)}%`);
+    readout.textContent = format(v);
+    input.setAttribute('aria-valuetext', format(v));
+    if (ticks) {
+      [...ticks.children].forEach((t, i) =>
+        t.classList.toggle('is-passed', min + i * step <= v));
+    }
+  };
+
+  input.addEventListener('input', () => {
+    const v = Number(input.value);
+    paint(v);
+    onInput?.(v);
+  });
+  paint(value);
+
+  return h('div.range',
+    h('div.range__head', h('span.range__label', label), readout),
+    h('div.range__track', input, ticks),
+    legend ? h('div.range__legend', h('span', format(min)), h('span', format(max))) : null
+  );
+}
+
 export function chip(text, { on = false, onclick = null, kind = '' } = {}) {
   return h('button', {
     type: 'button',

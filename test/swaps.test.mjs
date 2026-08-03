@@ -111,7 +111,7 @@ test('a pound of ground turkey converts to about a cup of dry lentils', () => {
 test('a meat-free ingredient never offers a substitute that contains meat', () => {
   // This app's whole premise is one dinner everybody at the table can eat, so a
   // swap that quietly puts chicken stock in a vegetarian pot is a real defect
-  // rather than a labelling nit. "vegetarian-check" counts as meat-free: those
+  // rather than a labeling nit. "vegetarian-check" counts as meat-free: those
   // are the cheeses that may be set with animal rennet, which is a question for
   // the label, not a reason to treat cheddar as meat.
   const meatFree = (item) => !(item.diet || []).some(d => d === 'omnivore' || d === 'pescatarian');

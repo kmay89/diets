@@ -1,11 +1,11 @@
 {
   "schema": "vegnourish.citations/1",
-  "note": "Every factual claim the app makes about health, cost, climate or animals points at one of these. Each entry records what kind of evidence it is, because a randomised trial and a modelling study do not deserve the same confidence, and an app that flattens that difference is misleading people politely. 'checked' is the date a human or agent last confirmed the bibliographic details against the source or its publisher listing.",
+  "note": "Every factual claim the app makes about health, cost, climate or animals points at one of these. Each entry records what kind of evidence it is, because a randomized trial and a modeling study do not deserve the same confidence, and an app that flattens that difference is misleading people politely. 'checked' is the date a human or agent last confirmed the bibliographic details against the source or its publisher listing.",
   "evidenceLevels": {
-    "rct": "Randomised controlled trial — the strongest single-study design for cause and effect.",
+    "rct": "Randomized controlled trial — the strongest single-study design for cause and effect.",
     "meta-analysis": "Systematic review pooling many studies. Strength depends on what was pooled.",
     "cohort": "Observational follow-up of a population. Shows association; cannot prove cause on its own.",
-    "modelling": "A model built on other data. Useful for scale and direction, not precision.",
+    "modeling": "A model built on other data. Useful for scale and direction, not precision.",
     "guideline": "Consensus guidance from a professional body, weighing the whole evidence base.",
     "regulatory": "An official standard or authorised claim.",
     "dataset": "Compiled statistics from an official or well-documented source."
@@ -27,7 +27,7 @@
     },
     {
       "id": "crippa2021",
-      "type": "modelling",
+      "type": "modeling",
       "authors": "Crippa, M., Solazzo, E., Guizzardi, D., Monforti-Ferrario, F., Tubiello, F. N. & Leip, A.",
       "year": 2021,
       "title": "Food systems are responsible for a third of global anthropogenic GHG emissions",
@@ -41,7 +41,7 @@
     },
     {
       "id": "springmann2021",
-      "type": "modelling",
+      "type": "modeling",
       "authors": "Springmann, M., Clark, M. A., Rayner, M., Scarborough, P. & Webb, P.",
       "year": 2021,
       "title": "The global and regional costs of healthy and sustainable dietary patterns: a modelling study",
@@ -51,7 +51,7 @@
       "url": "https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(21)00251-5/fulltext",
       "checked": "2026-08-03",
       "summary": "Compared the cost of seven sustainable dietary patterns with current diets in 150 countries, using World Bank International Comparison Program food prices. In high-income countries vegan diets cost 21–34% less, vegetarian 27–31% less, and low-meat flexitarian about 14% less than the current typical diet.",
-      "caveat": "Models retail food costs only. It does not price time, cooking skill, kitchen equipment, or the reality that the cheapest option is not available in every neighbourhood."
+      "caveat": "Models retail food costs only. It does not price time, cooking skill, kitchen equipment, or the reality that the cheapest option is not available in every neighborhood."
     },
     {
       "id": "estruch2018",
@@ -64,8 +64,8 @@
       "doi": "10.1056/NEJMoa1800389",
       "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1800389",
       "checked": "2026-08-03",
-      "summary": "7,447 adults at high cardiovascular risk, randomised to a Mediterranean diet with extra-virgin olive oil, the same diet with nuts, or a low-fat control. Roughly a 30% lower rate of heart attack, stroke or cardiovascular death over a median 4.8 years.",
-      "caveat": "The 2013 publication was retracted and republished in 2018 after irregularities in randomisation at some sites; the reanalysis, which is the version cited here, reached materially the same conclusions. Participants were older Spanish adults already at high risk, so the size of the effect may not transfer to everyone."
+      "summary": "7,447 adults at high cardiovascular risk, randomized to a Mediterranean diet with extra-virgin olive oil, the same diet with nuts, or a low-fat control. Roughly a 30% lower rate of heart attack, stroke or cardiovascular death over a median 4.8 years.",
+      "caveat": "The 2013 publication was retracted and republished in 2018 after irregularities in randomization at some sites; the reanalysis, which is the version cited here, reached materially the same conclusions. Participants were older Spanish adults already at high risk, so the size of the effect may not transfer to everyone."
     },
     {
       "id": "sacks2017",
@@ -78,7 +78,7 @@
       "doi": "10.1161/CIR.0000000000000510",
       "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000510",
       "checked": "2026-08-03",
-      "summary": "Randomised trials that lowered saturated fat and replaced it with polyunsaturated vegetable oil reduced cardiovascular disease by about 30% — an effect the advisory notes is similar in size to statin treatment.",
+      "summary": "Randomized trials that lowered saturated fat and replaced it with polyunsaturated vegetable oil reduced cardiovascular disease by about 30% — an effect the advisory notes is similar in size to statin treatment.",
       "caveat": "The benefit comes from the replacement. Cutting saturated fat and replacing it with refined starch or sugar does not show the same effect."
     },
     {
@@ -92,8 +92,8 @@
       "doi": "10.1016/S0140-6736(18)31809-9",
       "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31809-9/fulltext",
       "checked": "2026-08-03",
-      "summary": "185 prospective studies and 58 clinical trials. People eating the most dietary fibre had 15–30% lower all-cause and cardiovascular mortality than those eating the least, with the clearest benefit between 25 g and 30 g a day.",
-      "caveat": "The mortality findings are observational — people who eat more fibre differ in other ways. The trial data within the review support the blood-pressure and cholesterol effects more directly."
+      "summary": "185 prospective studies and 58 clinical trials. People eating the most dietary fiber had 15–30% lower all-cause and cardiovascular mortality than those eating the least, with the clearest benefit between 25 g and 30 g a day.",
+      "caveat": "The mortality findings are observational — people who eat more fiber differ in other ways. The trial data within the review support the blood-pressure and cholesterol effects more directly."
     },
     {
       "id": "neal2021",
@@ -106,7 +106,7 @@
       "doi": "10.1056/NEJMoa2105675",
       "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2105675",
       "checked": "2026-08-03",
-      "summary": "20,995 people in 600 Chinese villages, randomised to a 75% sodium chloride / 25% potassium chloride salt substitute or regular salt. Stroke fell about 14%, major cardiovascular events about 13%, and death from any cause about 12% over roughly five years.",
+      "summary": "20,995 people in 600 Chinese villages, randomized to a 75% sodium chloride / 25% potassium chloride salt substitute or regular salt. Stroke fell about 14%, major cardiovascular events about 13%, and death from any cause about 12% over roughly five years.",
       "caveat": "Participants had had a stroke or were over 60 with high blood pressure, in a setting where most salt is added during home cooking. Potassium-based substitutes are not safe for everyone — people with kidney disease or on certain blood-pressure drugs should ask a clinician first."
     },
     {
@@ -146,7 +146,7 @@
       "detail": "Authorised health claim",
       "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-E/section-101.81",
       "checked": "2026-08-03",
-      "summary": "The FDA permits foods to claim a coronary-heart-disease benefit for beta-glucan soluble fibre from oats and barley at a daily intake of 3 g, alongside a diet low in saturated fat and cholesterol.",
+      "summary": "The FDA permits foods to claim a coronary-heart-disease benefit for beta-glucan soluble fiber from oats and barley at a daily intake of 3 g, alongside a diet low in saturated fat and cholesterol.",
       "caveat": "An authorised claim about a food component, not a promise about any one person's outcome."
     },
     {

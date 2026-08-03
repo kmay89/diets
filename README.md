@@ -67,7 +67,7 @@ sales, picnics, brunch, feeding a family with a new baby — and fifteen-minute 
 when none of that applies.
 
 **🍯 And a list that is just about being delicious.** Nineteen of those recipes are tagged *crave* —
-brown butter and crisped gnocchi, forty-five minutes of caramelised onions under melted Gruyère,
+brown butter and crisped gnocchi, forty-five minutes of caramelized onions under melted Gruyère,
 cacio e pepe, birria tacos with a cup of consommé to dunk them in. They are filed under **Lick the
 plate** in Recipes, and **Treat night** on the roll screen stops the heart score from steering the
 dice for an evening. It never hides the score: a dish that grades an F still shows an F, and says in
@@ -86,7 +86,7 @@ ingredients get pulled toward the top of every roll; anything marked never leave
 
 **📚 Every claim is sourced.** The health, cost and climate statements in this app live in a data
 file with their citations attached, rendered with numbered markers you can open. Each source shows
-what kind of evidence it is — randomised trial, meta-analysis, model, guideline — and what it *does
+what kind of evidence it is — randomized trial, meta-analysis, model, guideline — and what it *does
 not* show. A claim that cannot be sourced cannot be displayed.
 
 **🥑 Every ingredient has a face.** 227 hand-drawn SVG icons, one per ingredient, on the
@@ -208,7 +208,7 @@ servings to 6, or adding the chicken, updates every number honestly.
 
 **Add a recipe.** Append to `data/recipes.dinners.json` or `data/recipes.daily.json`, then run
 `npm run verify && npm run build:graph`. The verifier checks every ingredient reference, every unit,
-diet labelling (a "vegetarian" recipe containing chicken is an error), time sanity, and flags
+diet labeling (a "vegetarian" recipe containing chicken is an error), time sanity, and flags
 implausible nutrition.
 
 **Add an ingredient.** Append to `data/ingredients.json` with per-100 g values in the documented
@@ -291,12 +291,12 @@ works online.
 The rules the citation engine enforces, and that `npm test` checks:
 
 1. **Claims are data.** Every factual sentence outside a recipe lives in `data/claims.json` with its
-   sources attached. A claim with no source can only be displayed if it is explicitly labelled as
+   sources attached. A claim with no source can only be displayed if it is explicitly labeled as
    editorial — our view, not a research finding.
 2. **Every source carries its caveat.** `data/citations.json` requires a `caveat` field, and the UI
    always shows it. A citation that presents only the flattering half of a study borrows the
    authority of research while discarding what makes research trustworthy.
-3. **Evidence types are labelled and not equal.** A randomised trial and a modelling study are
+3. **Evidence types are labeled and not equal.** A randomized trial and a modeling study are
    marked differently, because treating them the same is misleading people politely.
 4. **Ranges, not the most dramatic number in them.** Where credible estimates disagree — food's
    share of global emissions is 21–37% depending on the boundary — the app says so.

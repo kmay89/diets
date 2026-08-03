@@ -7,7 +7,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, pill, toast, minutes, scoreBadge, meter, titleCase, debounce, sheet, plural } from '../ui.js';
+import { h, mount, chip, pill, toast, minutes, scoreBadge, titleCase, debounce, sheet, plural } from '../ui.js';
 import { getDb, nutritionFor, heartFor, searchRecipes, pantryCoverage } from '../data.js';
 import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
@@ -17,6 +17,7 @@ import { allOccasions, occasionById } from '../occasions.js';
 import { foodIcon } from '../food-icon.js';
 import { withSwaps, swapCount, substitutionsFor, swappedLine } from '../swaps.js';
 import { printRecipe } from '../print.js';
+import { glancePanel } from './nutrition-panel.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -123,8 +124,8 @@ export function render(root, { navigate, params }) {
         }, '✓ Cooked it'),
         h('button.btn', {
           type: 'button',
-          onclick: () => { setRecipeLike(recipe.id, st.recipeLikes[recipe.id] === 1 ? 0 : 1); toast('Favourited'); draw(); }
-        }, st.recipeLikes[recipe.id] === 1 ? '★ Favourite' : '☆ Favourite'),
+          onclick: () => { setRecipeLike(recipe.id, st.recipeLikes[recipe.id] === 1 ? 0 : 1); toast('Favorited'); draw(); }
+        }, st.recipeLikes[recipe.id] === 1 ? '★ Favorite' : '☆ Favorite'),
         h('button.btn', {
           type: 'button',
           onclick: async () => {
@@ -261,7 +262,7 @@ function ingredientList(recipe, state, scale, draw) {
             item.heartNote ? h('button.tag-btn', { type: 'button', title: item.heartNote, onclick: () => sheet(item.name, h('p', item.heartNote)) }, '❤ note') : null,
             item.tips ? h('button.tag-btn', { type: 'button', onclick: () => sheet(item.name, h('p', item.tips)) }, '💡 tip') : null,
             // Almost every ingredient has a substitute, so the unswapped state is
-            // a quiet icon rather than a labelled pill — seventeen copies of
+            // a quiet icon rather than a labeled pill — seventeen copies of
             // "use something else" is a wall. Swapped, it says so in words.
             canSwap ? h('button', {
               type: 'button',
@@ -347,26 +348,24 @@ function nutritionBlock(recipe, nut, nutOmni, heart, state) {
   const satTop = topContributors(recipe.ingredients, ingIndex, 'satfat_g');
 
   return block('Per serving',
-    h('div.nutri-grid',
-      ...['kcal', 'protein_g', 'fiber_g', 'satfat_g', 'sodium_mg', 'potassium_mg'].map(k =>
-        h('div.nutri',
-          h('span.nutri__value', Math.round(per[k]), h('span.nutri__unit', NUTRIENT_UNITS[k])),
-          h('span.nutri__label', NUTRIENT_LABELS[k])
-        ))
-    ),
+    glancePanel(per, reference, { eaterName: eaters[0]?.name, course: recipe.course }),
+
     nutOmni
       ? h('p.muted.small', `With the omnivore add-on: ${Math.round(nutOmni.perServing.kcal)} kcal, ${Math.round(nutOmni.perServing.protein_g)} g protein, ${Math.round(nutOmni.perServing.sodium_mg)} mg sodium.`)
       : null,
 
     flags.length ? h('div.flag-row', ...flags.map(f => pill(f.text, f.kind === 'good' ? 'green' : 'warn'))) : null,
 
-    reference
-      ? h('div.meters',
-          meter(Math.round(per.sodium_mg), reference.sodium_mg, { label: `Sodium vs ${eaters[0].name || 'day'} target`, unit: ' mg' }),
-          meter(Math.round(per.satfat_g), reference.satfat_g, { label: 'Saturated fat vs day target', unit: ' g' }),
-          meter(Math.round(per.fiber_g), reference.fiber_g, { label: 'Fiber vs day target', unit: ' g' })
-        )
-      : null,
+    h('details.explain',
+      h('summary', 'Every number, per serving'),
+      h('div.nutri-grid',
+        ...['kcal', 'protein_g', 'carb_g', 'fiber_g', 'sugar_g', 'fat_g', 'satfat_g', 'sodium_mg', 'potassium_mg', 'cholesterol_mg', 'calcium_mg', 'iron_mg'].map(k =>
+          h('div.nutri',
+            h('span.nutri__value', Math.round(per[k]), h('span.nutri__unit', NUTRIENT_UNITS[k])),
+            h('span.nutri__label', NUTRIENT_LABELS[k])
+          ))
+      )
+    ),
 
     heart.score != null
       ? h('details.explain',

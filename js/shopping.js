@@ -330,7 +330,7 @@ export async function shareRecipe(recipe, { origin } = {}) {
       return 'shared';
     } catch (err) {
       // A user closing the share sheet throws AbortError; that is not a failure.
-      if (err?.name === 'AbortError') return 'cancelled';
+      if (err?.name === 'AbortError') return 'canceled';
       throw err;
     }
   }

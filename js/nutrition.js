@@ -151,6 +151,111 @@ export function heartFlags(perServing) {
   return flags;
 }
 
+/* ------------------------------------------------------------------ *
+ * Reading a plate at a glance
+ *
+ * Two published systems do the work here, and neither is invented:
+ *
+ * 1. The FDA's %DV guidance on the Nutrition Facts label — "5% DV or less is
+ *    low, 20% DV or more is high" — which is the rule Americans are already
+ *    taught to read a label with.
+ * 2. The FDA's nutrient content claims (21 CFR 101.54): 10-19% DV is a "good
+ *    source", 20% or more an "excellent source".
+ *
+ * The direction is the part a bare percentage gets wrong. 25% of the day's
+ * sodium in one meal is a reason to look; 25% of the day's fiber is the whole
+ * point. So every nutrient declares which way is up, and the same percentage
+ * reads green on one row and amber on another.
+ *
+ * Percentages are against *this household member's* targets, not a generic
+ * 2,000 kcal day, because the app already knows who is eating.
+ * ------------------------------------------------------------------ */
+
+/** Which direction is good. Everything else is context, not a verdict. */
+export const NUTRIENT_DIRECTION = {
+  sodium_mg: 'limit',
+  satfat_g: 'limit',
+  cholesterol_mg: 'limit',
+  sugar_g: 'limit',
+  fiber_g: 'encourage',
+  protein_g: 'encourage',
+  potassium_mg: 'encourage',
+  calcium_mg: 'encourage',
+  iron_mg: 'encourage'
+};
+
+/**
+ * Where one nutrient in one serving lands against a day's target.
+ *
+ * The two directions are judged differently, and deliberately.
+ *
+ * For nutrients worth getting, the FDA's own claim thresholds apply as
+ * published: 10-19% of a day is a good source, 20% or more an excellent one.
+ * Those are absolute, and absolute is right — 20% of a day's fiber is a good
+ * showing whether it arrived in a snack or a feast.
+ *
+ * For nutrients worth limiting, an absolute threshold is the wrong tool. A
+ * dinner is about a third of a day; a third of the day's sodium in it is not a
+ * problem, it is arithmetic. Judging 26% of the sodium as "high" while the
+ * plate is 28% of the calories would be flagging a meal for existing. So these
+ * are read against `pace` — the share of the day this plate actually is — and
+ * what gets flagged is a nutrient running ahead of its own plate.
+ *
+ * Without a `pace` there is nothing to compare against, so the FDA 5/20 reading
+ * stands in.
+ *
+ * @param pace  this serving's share of the day, as a percentage of calories
+ * @returns { pct, band, tone, note } — `note` is the phrase printed beside the
+ * color, so the meaning never depends on seeing the color.
+ */
+export function dailyValue(key, value, target, { pace = null } = {}) {
+  const direction = NUTRIENT_DIRECTION[key] || null;
+  const pct = target > 0 ? Math.round((value / target) * 100) : null;
+  if (pct == null || !direction) return { pct, band: null, tone: 'neutral', note: '', direction, pace };
+
+  if (direction === 'limit') {
+    if (!(pace > 0)) {
+      if (pct <= 5) return { pct, band: 'low', tone: 'good', note: 'low', direction, pace };
+      if (pct < 20) return { pct, band: 'moderate', tone: 'ok', note: 'moderate', direction, pace };
+      return { pct, band: 'high', tone: 'watch', note: 'high', direction, pace };
+    }
+    // Eat at this rate all day and you land on the target: that is the whole
+    // job, so it is green. The targets being measured against are already the
+    // strict AHA ones in heart mode — clearing them is success, not a near miss.
+    const ratio = pct / pace;
+    if (ratio <= 1) return { pct, band: 'low', tone: 'good', note: 'on pace for the day', direction, pace };
+    if (ratio <= 1.4) return { pct, band: 'moderate', tone: 'ok', note: 'a little heavy here', direction, pace };
+    return { pct, band: 'high', tone: 'watch', note: 'heavy for this plate', direction, pace };
+  }
+
+  if (pct >= 20) return { pct, band: 'high', tone: 'good', note: 'excellent source', direction, pace };
+  if (pct >= 10) return { pct, band: 'moderate', tone: 'ok', note: 'good source', direction, pace };
+  return { pct, band: 'low', tone: 'neutral', note: 'a little', direction, pace };
+}
+
+/**
+ * How much of this person's day one serving of this course accounts for, and
+ * how that compares with the share the course usually carries.
+ *
+ * A dinner at 20% of the day is not "good" or "bad" — it is a light dinner,
+ * and saying so is more use than a color.
+ */
+export function dayShare(kcal, target, course = 'dinner') {
+  if (!(target > 0)) return null;
+  const share = kcal / target;
+  const typical = MEAL_SHARE[course] ?? MEAL_SHARE.dinner;
+  const ratio = share / typical;
+  const verdict = ratio < 0.7 ? 'lighter than usual'
+    : ratio > 1.3 ? 'bigger than usual'
+      : 'about right';
+  return {
+    pct: Math.round(share * 100),
+    typicalPct: Math.round(typical * 100),
+    verdict,
+    course
+  };
+}
+
 /**
  * Which ingredients are driving a nutrient — so a low score is actionable
  * ("the sodium is the bread and the feta") rather than a mystery.

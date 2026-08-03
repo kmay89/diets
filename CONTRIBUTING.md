@@ -58,7 +58,7 @@ npm run verify && npm run build:graph
 Rules the verifier enforces:
 
 - Every `ing` must exist, and its `unit` must have a gram weight in that ingredient's `units` map.
-- A recipe labelled `vegetarian` may not contain meat or fish in its base; `vegan` may not contain
+- A recipe labeled `vegetarian` may not contain meat or fish in its base; `vegan` may not contain
   any animal product. Honey is vegetarian, not vegan — this has caught real mistakes.
 - `totalMin` ≥ `activeMin`, `servings` ≥ 1, method steps present and substantive.
 - A non-vegetarian dinner without a `vegetarianSwap` gets a warning, because the cook this app is
@@ -71,7 +71,7 @@ House style for recipe text:
 - **The restaurant touch is one specific technique**, not a garnish suggestion.
 - **The kid tweak assumes the kid wins sometimes.** Deconstructing a bowl is a legitimate answer.
 - **Finish with acid.** If a recipe has no lemon or vinegar at the end, ask why.
-- Salt lightly and let flavour come from spice, browning, umami and acid. That is the whole point of
+- Salt lightly and let flavor come from spice, browning, umami and acid. That is the whole point of
   the collection.
 
 Only add a recipe you have actually cooked.

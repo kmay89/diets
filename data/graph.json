@@ -13601,7 +13601,7 @@
    "id": "rec.chile-crisp-noodles",
    "type": "recipe",
    "label": "Chile Crisp Noodles with Jammy Eggs",
-   "blurb": "Fifteen minutes, one pot, and a bowl of noodles slick with chili crisp and soy that tastes like something you would order out. The jammy egg on top is not optional in the way that things labelled optional usually are.",
+   "blurb": "Fifteen minutes, one pot, and a bowl of noodles slick with chili crisp and soy that tastes like something you would order out. The jammy egg on top is not optional in the way that things labeled optional usually are.",
    "course": "dinner",
    "cuisine": "asian-american",
    "servings": 4,
@@ -15373,7 +15373,7 @@
    "id": "rec.harvest-stuffed-squash",
    "type": "recipe",
    "label": "Harvest Stuffed Acorn Squash",
-   "blurb": "A centerpiece that doesn't apologise for not being a turkey. Roasted squash halves filled with wild rice, mushrooms, apples and pecans, glossed with cider.",
+   "blurb": "A centerpiece that doesn't apologize for not being a turkey. Roasted squash halves filled with wild rice, mushrooms, apples and pecans, glossed with cider.",
    "course": "dinner",
    "cuisine": "american",
    "servings": 6,
@@ -15651,7 +15651,7 @@
    "id": "rec.mushroom-wellington",
    "type": "recipe",
    "label": "Mushroom and Lentil Wellington",
-   "blurb": "The showstopper. A deeply savoury mushroom-lentil filling wrapped in pastry, sliced at the table to an actual audible reaction.",
+   "blurb": "The showstopper. A deeply savory mushroom-lentil filling wrapped in pastry, sliced at the table to an actual audible reaction.",
    "course": "dinner",
    "cuisine": "british",
    "servings": 8,
@@ -16380,7 +16380,7 @@
    "id": "rec.oatmeal-cookies",
    "type": "recipe",
    "label": "Chewy Oatmeal Cookies",
-   "blurb": "Crisp edge, chewy middle, actual oat flavour. They travel well and they sell out first.",
+   "blurb": "Crisp edge, chewy middle, actual oat flavor. They travel well and they sell out first.",
    "course": "dessert",
    "cuisine": "american",
    "servings": 24,
@@ -16642,7 +16642,7 @@
    "id": "rec.white-bean-tuna-melt",
    "type": "recipe",
    "label": "White Bean Melt",
-   "blurb": "Twelve minutes, mostly under the broiler. Crunchy, savoury, melty, and built entirely from things already in the cupboard.",
+   "blurb": "Twelve minutes, mostly under the broiler. Crunchy, savory, melty, and built entirely from things already in the cupboard.",
    "course": "lunch",
    "cuisine": "american",
    "servings": 4,
@@ -16902,7 +16902,7 @@
    "id": "rec.tahini-chocolate-chip-cookies",
    "type": "recipe",
    "label": "Salted Tahini Chocolate Chip Cookies",
-   "blurb": "Tahini gives these the savoury, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
+   "blurb": "Tahini gives these the savory, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
    "course": "dessert",
    "cuisine": "american",
    "servings": 20,
@@ -17525,7 +17525,7 @@
    "p": "SUBSTITUTES_WITH",
    "o": "ing.spice.pepperflakes",
    "ratio": 0.03,
-   "note": "Flakes bring heat but none of the green, vegetal flavour of a fresh chile."
+   "note": "Flakes bring heat but none of the green, vegetal flavor of a fresh chile."
   },
   {
    "s": "crop.ing.pepper.jalapeno",
@@ -19969,7 +19969,7 @@
    "p": "SUBSTITUTES_WITH",
    "o": "ing.nutritionalyeast",
    "ratio": 0.6,
-   "note": "Savoury and cheesy, but it will not melt or brown. Use it as a finish, not inside a bake."
+   "note": "Savory and cheesy, but it will not melt or brown. Use it as a finish, not inside a bake."
   },
   {
    "s": "ing.cheese.parmesan",
@@ -21058,7 +21058,7 @@
    "p": "SUBSTITUTES_WITH",
    "o": "ing.lentil.brown",
    "ratio": 0.42,
-   "note": "Add about two cups of extra liquid and 25 minutes. Brown the aromatics harder to make up the savour."
+   "note": "Add about two cups of extra liquid and 25 minutes. Brown the aromatics harder to make up the savor."
   },
   {
    "s": "ing.salmon",
@@ -24446,7 +24446,7 @@
    "p": "SUBSTITUTES_WITH",
    "o": "ing.basil",
    "ratio": 2,
-   "note": "Fresh basil goes in off the heat. Cooked, it turns grey and loses most of what you wanted from it."
+   "note": "Fresh basil goes in off the heat. Cooked, it turns gray and loses most of what you wanted from it."
   },
   {
    "s": "ing.spice.thyme.dried",
@@ -25119,7 +25119,7 @@
    "p": "SUBSTITUTES_WITH",
    "o": "ing.spice.thyme.dried",
    "ratio": 0.5,
-   "note": "A real change of flavour, not just of form. Sage is what makes brown butter taste like brown butter."
+   "note": "A real change of flavor, not just of form. Sage is what makes brown butter taste like brown butter."
   },
   {
    "s": "crop.ing.sage.fresh",
