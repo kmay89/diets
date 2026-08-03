@@ -90,7 +90,13 @@ function migrate(saved) {
     ...saved,
     schema: SCHEMA,
     household: { ...base.household, ...(saved.household || {}) },
-    prefs: { ...base.prefs, ...(saved.prefs || {}) }
+    prefs: { ...base.prefs, ...(saved.prefs || {}) },
+    // History used to be a bare list of recipe ids. Those entries are real —
+    // they just have no date, so they count as "cooked at some point" and stay
+    // out of anything that measures a window of time.
+    history: (saved.history || []).map(e =>
+      typeof e === 'string' ? { id: e, at: null } : e
+    ).filter(e => e && e.id)
   };
 }
 
@@ -253,10 +259,25 @@ export function isPlanned(recipeId) {
   return state.plan.some(e => e.recipeId === recipeId);
 }
 
-export function markCooked(recipeId) {
+/**
+ * Record that a meal actually got cooked.
+ *
+ * Entries carry the date because "what have we been eating lately" is a
+ * different question from "have we ever cooked this", and only the first one
+ * is worth anything on the progress screen. The same recipe cooked twice in a
+ * fortnight is two entries, not one moved to the top — otherwise the record
+ * quietly rewrites itself every time you repeat a favorite.
+ */
+export function markCooked(recipeId, at = new Date()) {
   update(s => {
-    s.history = [recipeId, ...s.history.filter(r => r !== recipeId)].slice(0, 60);
+    s.history = [{ id: recipeId, at: new Date(at).toISOString() }, ...s.history].slice(0, 120);
   });
+}
+
+/** Cooked entries within the last `days`, newest first. */
+export function cookedSince(days = 7, now = new Date()) {
+  const cutoff = now.getTime() - days * 86400000;
+  return state.history.filter(e => e.at && Date.parse(e.at) >= cutoff);
 }
 
 /* ------------------------------------------------------------------ *

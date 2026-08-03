@@ -112,7 +112,13 @@ function planRow(entry, recipe, state, draw, navigate) {
     ),
 
     h('div.recipe-card__actions',
+      recipe.steps?.length
+        ? h('button.btn', { type: 'button', onclick: () => navigate(`#/cook/${recipe.id}`) }, '🔥 Cook')
+        : null,
       h('button.btn', { type: 'button', onclick: () => { markCooked(recipe.id); removeFromPlan(entry.id); play('cooked'); toast('Nice. Marked as cooked.'); draw(); } }, '✓ Cooked'),
+      entry.day
+        ? h('button.btn.btn--ghost', { type: 'button', onclick: () => navigate(`#/day/${entry.day}`) }, `${entry.day} ›`)
+        : null,
       h('button.btn.btn--ghost', { type: 'button', onclick: () => { removeFromPlan(entry.id); draw(); } }, 'Remove')
     )
   );

@@ -10,8 +10,14 @@
 
 export const ROUTE_PATTERNS = [
   { id: 'onboarding', pattern: /^#\/onboarding$/ },
+  { id: 'today', pattern: /^#\/today$/ },
+  { id: 'create', pattern: /^#\/create$/ },
+  { id: 'plate', pattern: /^#\/plate$/ },
+  { id: 'cook', pattern: /^#\/cook\/(.+)$/ },
+  { id: 'progress', pattern: /^#\/progress$/ },
   { id: 'roll', pattern: /^#\/roll$/ },
   { id: 'plan', pattern: /^#\/plan$/ },
+  { id: 'day', pattern: /^#\/day\/([a-zA-Z]+)$/ },
   { id: 'browse', pattern: /^#\/browse$/ },
   { id: 'recipe', pattern: /^#\/recipe\/(.+)$/ },
   { id: 'pantry', pattern: /^#\/pantry$/ },

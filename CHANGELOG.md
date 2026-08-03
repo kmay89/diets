@@ -61,7 +61,19 @@ All notable changes to this project are documented here. Format follows
 - `js/routes.js`, so the router can be checked without a browser, plus a test that every link the
   app builds resolves to a screen.
 
+### Changed
+- **The palette and the type.** Warm paper rather than white, deep green, clay and cream, with
+  Newsreader carrying the voice and Karla the interface. Same tokens and the same class names, so
+  every existing screen inherits it; light, dark and print all still work.
+- **The tab bar** is now Today · Plan · Create · List · More. Roll and Recipes moved into Create and
+  the More sheet — the dice is the first thing on the Create screen, not a demotion.
+- Cooked meals are recorded with the date they were cooked, and repeats are kept as separate
+  entries. Existing dateless history is preserved and simply sits outside any window of time.
+
 ### Fixed
+- `h()` silently dropped CSS custom properties passed in a `style` object — `Object.assign` on a
+  `CSSStyleDeclaration` cannot set them — so any element styled through a variable rendered as
+  though the value were absent.
 - **The occasion card on the roll screen went nowhere.** It linked to `#/browse?occasion=picnic`
   while the route table matched `#/browse` exactly, so the one place advertising fifteen picnic
   recipes led to "That page does not exist." The router now matches on the path and leaves the query
@@ -71,6 +83,26 @@ All notable changes to this project are documented here. Format follows
 - **The install banner could not be dismissed.** `[hidden]` loses to any class that sets `display`,
   so the ✕ set the attribute and the banner stayed put. Hiding now wins everywhere, dismissing takes
   the toolbar button with it, and the decision is remembered — with the way back in Settings.
+- **Cook mode** (`#/cook/<recipe>`). One step at a time, full screen, deep green so it does not
+  glare in a dim kitchen. The ingredients a step names are matched from its own text and drawn
+  beside it; durations written into the step become a timer, taking the upper bound of a range.
+  Reachable from the recipe page, the plan and tonight's card.
+- **Today** (`#/today`) — tonight's dinner, what is left to buy, and the week's trend. It is now the
+  screen the app opens on.
+- **Create** (`#/create`) — the four honest ways into a meal (the dice, a plate, the pantry, the
+  collection) gathered in one place instead of scattered across the tab bar and the More sheet.
+- **The plate builder** (`#/plate`) — compose a dinner in four quarters and watch the heart-forward
+  score, fiber, sodium and saturated fat move. Flags anyone at the table the plate does not suit,
+  and finds the recipes that already cook the combination rather than inventing one.
+- **A day view** (`#/day/<day>`) — every meal on one day, in the order it gets eaten, with the day's
+  numbers against a whole-day target.
+- **Progress** (`#/progress`) — sodium, fiber, saturated fat and plant variety across the last seven
+  days, from meals marked cooked. No streaks and no points, in keeping with the rest of the app.
+- **Newsreader and Karla**, self-hosted and precached. Three variable `.woff2` files, latin subset,
+  about 310 KB, under the SIL Open Font License — see `fonts/README.md`.
+- One source (McDonald 2018, American Gut) and the plant-variety claim it supports, so the figure
+  quoted on the progress screen carries its evidence and its caveat like every other claim.
+- 10 tests for the timer parser and the step-icon matcher, the two places cook mode guesses.
 
 ## [2.0.0] — 2026-08-03
 

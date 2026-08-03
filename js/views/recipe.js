@@ -108,6 +108,14 @@ export function render(root, { navigate, params }) {
       nutritionBlock(recipe, nut, nutOmni, heart, st),
 
       h('div.recipe__actions',
+        // Cook mode is the one action taken with your hands already dirty, so
+        // it leads — reading the page again is what the rest of it is for.
+        recipe.steps?.length
+          ? h('button.btn.btn--primary', {
+              type: 'button',
+              onclick: () => navigate(`#/cook/${recipe.id}`)
+            }, '🔥 Start cooking')
+          : null,
         h('button', {
           class: isPlanned(recipe.id) ? 'btn' : 'btn btn--primary',
           type: 'button',

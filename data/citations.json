@@ -201,6 +201,20 @@
       "checked": "2026-08-03",
       "summary": "The equation this app uses to estimate adult daily energy needs.",
       "caveat": "A prediction from height, weight, age and sex. For an individual it is typically within about 10% — useful for sizing a pot of food, not for anything medical."
+    },
+    {
+      "id": "mcdonald2018",
+      "type": "cohort",
+      "authors": "McDonald, D. et al.",
+      "year": 2018,
+      "title": "American Gut: an Open Platform for Citizen Science Microbiome Research",
+      "publication": "mSystems",
+      "detail": "3(3), e00031-18",
+      "doi": "10.1128/mSystems.00031-18",
+      "url": "https://journals.asm.org/doi/10.1128/mSystems.00031-18",
+      "checked": "2026-08-03",
+      "summary": "Self-reported diet and gut microbiome sequencing from more than 10,000 volunteers. People reporting more than 30 different plant foods a week carried more diverse gut bacterial communities than those reporting 10 or fewer.",
+      "caveat": "An observational study of a self-selected, largely Western and health-interested volunteer cohort, with diet recorded by self-report. It shows an association between plant variety and microbiome diversity; it does not show that reaching a count of thirty causes better health, and greater microbiome diversity is not itself a clinical outcome."
     }
   ]
 }

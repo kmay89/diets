@@ -15,6 +15,12 @@ import { initTheme, refreshThemeToggles } from './theme.js';
 import { getState, subscribe } from './store.js';
 
 import * as onboarding from './views/onboarding.js';
+import * as todayView from './views/today.js';
+import * as createView from './views/create.js';
+import * as plateView from './views/plate.js';
+import * as cookView from './views/cook.js';
+import * as dayView from './views/day.js';
+import * as progressView from './views/progress.js';
 import * as rollView from './views/roll.js';
 import * as planView from './views/plan.js';
 import * as recipeView from './views/recipe.js';
@@ -27,8 +33,14 @@ import * as whyView from './views/why.js';
 /** Route id → the view it draws. The patterns themselves live in routes.js. */
 const VIEWS = {
   onboarding: () => ({ render: onboarding.render, params: {} }),
+  today: () => ({ render: todayView.render, params: {} }),
+  create: () => ({ render: createView.render, params: {} }),
+  plate: () => ({ render: plateView.render, params: {} }),
+  cook: (m) => ({ render: cookView.render, params: { id: m[1] } }),
+  progress: () => ({ render: progressView.render, params: {} }),
   roll: () => ({ render: rollView.render, params: {} }),
   plan: () => ({ render: planView.render, params: {} }),
+  day: (m) => ({ render: dayView.render, params: { day: m[1] } }),
   browse: () => ({ render: recipeView.renderBrowse, params: {} }),
   recipe: (m) => ({ render: recipeView.render, params: { id: m[1] } }),
   pantry: () => ({ render: pantryView.render, params: {} }),
@@ -40,15 +52,22 @@ const VIEWS = {
 
 // Five tabs, because a row of eight is a wall of icons nobody reads. The rest
 // live one tap away behind More, which is where people look for them anyway.
+//
+// Create is a hub rather than a screen of its own: the app has four honest ways
+// to start a meal — the dice, a plate, the pantry, the collection — and burning
+// four tabs on them would leave no room for the week or the list.
 const NAV = [
-  { href: '#/roll', label: 'Roll', icon: '🎲' },
+  { href: '#/today', label: 'Today', icon: '🌅' },
   { href: '#/plan', label: 'Plan', icon: '📋' },
-  { href: '#/list', label: 'List', icon: '🛒' },
-  { href: '#/browse', label: 'Recipes', icon: '📖' }
+  { href: '#/create', label: 'Create', icon: '✚' },
+  { href: '#/list', label: 'List', icon: '🛒' }
 ];
 
 const MORE = [
+  { href: '#/browse', label: 'Recipes', icon: '📖', blurb: 'The whole collection' },
+  { href: '#/roll', label: 'Roll', icon: '🎲', blurb: 'Let the dice pick the week' },
   { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
+  { href: '#/progress', label: 'Progress', icon: '🌱', blurb: 'What you have been eating' },
   { href: '#/garden', label: 'Garden', icon: '🌿', blurb: 'What to plant, and when' },
   { href: '#/why', label: 'Why this works', icon: '💡', blurb: 'The research, with every source' },
   { href: '#/settings', label: 'Settings', icon: '⚙️', blurb: 'Household, preferences, your data' }
@@ -62,7 +81,7 @@ function navigate(hash) {
 let currentRoot = null;
 
 function route() {
-  const hash = location.hash || (getState().onboarded ? '#/roll' : '#/onboarding');
+  const hash = location.hash || (getState().onboarded ? '#/today' : '#/onboarding');
   if (!location.hash) { location.replace(hash); return; }
 
   // A link can carry a query — #/browse?occasion=picnic comes off the roll
@@ -73,7 +92,7 @@ function route() {
 
   if (!match) {
     mount(main, h('section.view', h('p.empty', 'That page does not exist.'),
-      h('button.btn.btn--primary', { onclick: () => navigate('#/roll') }, 'Back to the dice')));
+      h('button.btn.btn--primary', { onclick: () => navigate('#/today') }, 'Back to today')));
     return;
   }
 

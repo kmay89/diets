@@ -42,6 +42,25 @@ finishers rather than filler, and acid doing the work salt usually does. Every s
 0–100 on sodium, saturated fat, fiber, potassium-to-sodium ratio and cholesterol, and the score
 shows its work — including which ingredients are driving it.
 
+**🔥 Cook mode.** One step at a time, full screen, on a dark field that does not glare in a dim
+kitchen — at a size you can read from a step back with your hands full. It reads the instruction to
+work out which ingredients that step is about and draws them, and offers a timer for any duration
+written into the step, taking the top of a range because a timer that goes off early is a timer you
+learn to ignore.
+
+**🍽 Build a plate.** Start from the shape of a dinner rather than from a recipe: a whole grain, a
+vegetable, a protein and something to finish. The heart-forward score and the fiber, sodium and
+saturated fat move as you fill the quarters, and it says plainly when the plate does not work for
+someone at your table. It never invents a recipe — once there is enough on the plate it finds the
+dinners that already cook that combination.
+
+**🌅 Today.** What is for dinner tonight, what is left on the shopping list, and how the week has
+gone. The one screen worth opening at five o'clock.
+
+**🌱 Progress without a scoreboard.** Sodium, fiber, saturated fat and plant variety over the last
+seven days, counted from meals actually marked cooked. No streaks, no points, no red numbers — a
+quiet week is allowed to look like a quiet week.
+
 **🏠 It knows your kitchen.** Tick what you have; it drops off the shopping list and pulls matching
 meals up the roll. Ingredient checkboxes on the recipe screen double as the pantry, so ticking
 things off while you cook keeps everything in sync.
@@ -109,6 +128,11 @@ uploaded. Back it up to a JSON file whenever you like.
 No framework, no build step, no dependencies. Plain ES modules, one stylesheet, a service worker,
 and JSON data files. It is a static site — put the folder on any web host and it works.
 
+The typefaces — Newsreader for anything with a voice, Karla for the interface — are self-hosted
+variable fonts, subset to latin, about 310 KB in total and precached with everything else. Nothing
+is fetched from another origin at runtime, which is what lets the `Content-Security-Policy` stay
+`default-src 'self'` with no exceptions.
+
 ```
 index.html              app shell
 404.html                a friendly dead end that points back into the app
@@ -120,6 +144,7 @@ r/<slug>/index.html     generated — one shareable page per recipe
 icons/cards/<slug>.jpg  generated — one link-preview image per recipe
 sw.js                   service worker — precaches everything, offline-first
 css/app.css             one stylesheet, light + dark + print
+fonts/                  Newsreader and Karla, self-hosted (see fonts/README.md)
 js/
   app.js                bootstrap, hash router, install prompt
   store.js              all state, persisted to localStorage
@@ -134,7 +159,9 @@ js/
   feedback.js           synthesised sound and micro-animations
   swaps.js              substitutions, converted through grams
   ui.js                 ~200 lines of DOM helpers
-  views/                one module per screen
+  food-icon.js          the icon per ingredient, and which ones illustrate a step
+  views/                one module per screen — today, create, plate, cook, plan,
+                        day, recipe, pantry, list, progress, garden, settings, why
 data/
   ingredients.json      353 ingredients: nutrition, units, aisle, subs, garden info
   recipes.index.json    the table of contents — the one list of recipe part files

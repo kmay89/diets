@@ -1,7 +1,6 @@
 {
   "schema": "vegnourish.claims/1",
   "note": "Every factual statement the app makes outside a recipe lives here, attached to the sources in citations.json. If a claim cannot be sourced, it does not belong in this file — and it does not belong on the screen.",
-
   "topics": [
     {
       "id": "nourishment",
@@ -24,10 +23,18 @@
           "text": "Eating more fiber-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
           "cites": ["reynolds2019"],
           "strength": "meta-analysis"
+        },
+        {
+          "id": "nourish.plants",
+          "text": "People who eat more than 30 different plant foods in a week carry a more diverse set of gut bacteria than people who eat 10 or fewer.",
+          "cites": [
+            "mcdonald2018"
+          ],
+          "strength": "cohort",
+          "detail": "Thirty is a useful nudge toward variety rather than a threshold with a health outcome attached. Herbs, spices, nuts, seeds, grains and pulses all count toward it."
         }
       ]
     },
-
     {
       "id": "heart",
       "title": "What food does to a heart — and what it doesn't",
@@ -89,13 +96,17 @@
             {
               "id": "heart.fh",
               "text": "In inherited high cholesterol, lifestyle change is an adjunct to medication and is unlikely to reach treatment targets on its own.",
-              "cites": ["nla-fh"],
+              "cites": [
+                "nla-fh"
+              ],
               "strength": "guideline"
             },
             {
               "id": "heart.guideline",
               "text": "Major cholesterol guidelines treat a heart-healthy dietary pattern as the foundation for everyone, and drug therapy as necessary on top of it for defined risk groups — not as an either/or.",
-              "cites": ["grundy2019"],
+              "cites": [
+                "grundy2019"
+              ],
               "strength": "guideline"
             },
             {
@@ -108,7 +119,6 @@
         }
       ]
     },
-
     {
       "id": "planet",
       "title": "What it means for the planet",
@@ -125,7 +135,9 @@
         {
           "id": "planet.land",
           "text": "Animal products use around 83% of the world's farmland while providing about 18% of its calories and 37% of its protein.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "meta-analysis"
         },
         {
@@ -138,13 +150,14 @@
         {
           "id": "planet.variation",
           "text": "Impact varies enormously between producers of the same food — so where something was grown can matter as much as what it is.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "meta-analysis",
           "detail": "This cuts against tidy rules. It is also why this app does not put a carbon score on every recipe: the honest error bars would be wider than the differences we would be claiming to show."
         }
       ]
     },
-
     {
       "id": "wallet",
       "title": "What it means for the grocery bill",
@@ -161,13 +174,14 @@
         {
           "id": "wallet.practical",
           "text": "The savings come from the substitutions, not from buying speciality products. Meat substitutes and packaged plant foods are frequently more expensive than the meat they replace.",
-          "cites": ["springmann2021"],
+          "cites": [
+            "springmann2021"
+          ],
           "strength": "editorial",
           "detail": "Which is why almost nothing in this collection calls for a meat substitute. Beans, lentils, eggs, tofu, grains and whatever is in season do the work."
         }
       ]
     },
-
     {
       "id": "animals",
       "title": "What it means for animals",
@@ -177,7 +191,9 @@
         {
           "id": "animals.count",
           "text": "More than 80 billion land animals were slaughtered for meat worldwide in 2022, the great majority of them chickens.",
-          "cites": ["owid-animals"],
+          "cites": [
+            "owid-animals"
+          ],
           "strength": "dataset",
           "detail": "That count excludes fish and other aquatic animals, which are reported by weight rather than by individual, and excludes animals that die in egg and dairy production."
         },
