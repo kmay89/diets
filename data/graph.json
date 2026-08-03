@@ -11,7 +11,7 @@
  },
  "counts": {
   "nodes": 604,
-  "edges": 3645,
+  "edges": 3641,
   "ingredients": 227,
   "recipes": 89
  },
@@ -10772,7 +10772,7 @@
     "finishing"
    ],
    "diet": [
-    "vegetarian",
+    "vegetarian-check",
     "gluten-free"
    ],
    "allergens": [],
@@ -17042,17 +17042,23 @@
   {
    "s": "ing.onion.yellow",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.red"
+   "o": "ing.onion.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.onion.yellow",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.shallot"
+   "o": "ing.shallot",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.onion.yellow",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.leek"
+   "o": "ing.leek",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.onion.yellow",
@@ -17092,12 +17098,16 @@
   {
    "s": "ing.onion.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.yellow"
+   "o": "ing.onion.yellow",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.onion.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.shallot"
+   "o": "ing.shallot",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.onion.red",
@@ -17137,12 +17147,16 @@
   {
    "s": "ing.shallot",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.red"
+   "o": "ing.onion.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.shallot",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.yellow"
+   "o": "ing.onion.yellow",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.shallot",
@@ -17187,7 +17201,9 @@
   {
    "s": "ing.garlic",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.garlicpowder"
+   "o": "ing.spice.garlicpowder",
+   "ratio": 0.13,
+   "note": "One clove is about an eighth of a teaspoon of powder. Powder has no bite and cannot be browned, so it suits rubs and dry mixes rather than a pan."
   },
   {
    "s": "crop.ing.garlic",
@@ -17227,12 +17243,16 @@
   {
    "s": "ing.leek",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.yellow"
+   "o": "ing.onion.yellow",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.leek",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.scallion"
+   "o": "ing.scallion",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.leek",
@@ -17272,12 +17292,16 @@
   {
    "s": "ing.scallion",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.red"
+   "o": "ing.onion.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.scallion",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.leek"
+   "o": "ing.leek",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.scallion",
@@ -17327,12 +17351,16 @@
   {
    "s": "ing.carrot",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.celery"
+   "o": "ing.celery",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.carrot",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beet"
+   "o": "ing.beet",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.carrot",
@@ -17372,7 +17400,9 @@
   {
    "s": "ing.celery",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.fennel"
+   "o": "ing.fennel",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pepper.bell.red",
@@ -17412,12 +17442,16 @@
   {
    "s": "ing.pepper.bell.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pepper.bell.green"
+   "o": "ing.pepper.bell.green",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pepper.bell.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pepper.roasted"
+   "o": "ing.pepper.roasted",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.pepper.bell.red",
@@ -17452,7 +17486,9 @@
   {
    "s": "ing.pepper.bell.green",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pepper.bell.red"
+   "o": "ing.pepper.bell.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.pepper.bell.green",
@@ -17487,7 +17523,9 @@
   {
    "s": "ing.pepper.jalapeno",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.pepperflakes"
+   "o": "ing.spice.pepperflakes",
+   "ratio": 0.03,
+   "note": "Flakes bring heat but none of the green, vegetal flavour of a fresh chile."
   },
   {
    "s": "crop.ing.pepper.jalapeno",
@@ -17537,12 +17575,16 @@
   {
    "s": "ing.broccoli",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cauliflower"
+   "o": "ing.cauliflower",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.broccoli",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.greenbeans"
+   "o": "ing.greenbeans",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.broccoli",
@@ -17587,7 +17629,9 @@
   {
    "s": "ing.cauliflower",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broccoli"
+   "o": "ing.broccoli",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.cauliflower",
@@ -17632,12 +17676,16 @@
   {
    "s": "ing.zucchini",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.eggplant"
+   "o": "ing.eggplant",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.zucchini",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cucumber"
+   "o": "ing.cucumber",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.zucchini",
@@ -17687,7 +17735,9 @@
   {
    "s": "ing.squash.butternut",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sweetpotato"
+   "o": "ing.sweetpotato",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.squash.butternut",
@@ -17737,12 +17787,16 @@
   {
    "s": "ing.sweetpotato",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.squash.butternut"
+   "o": "ing.squash.butternut",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sweetpotato",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.potato.yukon"
+   "o": "ing.potato.yukon",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.sweetpotato",
@@ -17792,7 +17846,9 @@
   {
    "s": "ing.potato.yukon",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sweetpotato"
+   "o": "ing.sweetpotato",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.potato.yukon",
@@ -17832,12 +17888,16 @@
   {
    "s": "ing.tomato.roma",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.cherry"
+   "o": "ing.tomato.cherry",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tomato.roma",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.canned.diced"
+   "o": "ing.tomato.canned.diced",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.tomato.roma",
@@ -17887,7 +17947,9 @@
   {
    "s": "ing.tomato.cherry",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.roma"
+   "o": "ing.tomato.roma",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.tomato.cherry",
@@ -17932,7 +17994,9 @@
   {
    "s": "ing.cucumber",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.zucchini"
+   "o": "ing.zucchini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.cucumber",
@@ -17982,12 +18046,16 @@
   {
    "s": "ing.spinach.baby",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.kale.lacinato"
+   "o": "ing.kale.lacinato",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spinach.baby",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.arugula"
+   "o": "ing.arugula",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.spinach.baby",
@@ -18037,12 +18105,16 @@
   {
    "s": "ing.kale.lacinato",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spinach.baby"
+   "o": "ing.spinach.baby",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.kale.lacinato",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chard"
+   "o": "ing.chard",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.kale.lacinato",
@@ -18082,12 +18154,16 @@
   {
    "s": "ing.chard",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.kale.lacinato"
+   "o": "ing.kale.lacinato",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chard",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spinach.baby"
+   "o": "ing.spinach.baby",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.chard",
@@ -18132,7 +18208,9 @@
   {
    "s": "ing.arugula",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spinach.baby"
+   "o": "ing.spinach.baby",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.arugula",
@@ -18172,12 +18250,9 @@
   {
    "s": "ing.romaine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.romaine"
-  },
-  {
-   "s": "ing.romaine",
-   "p": "SUBSTITUTES_WITH",
-   "o": "ing.arugula"
+   "o": "ing.arugula",
+   "ratio": 1,
+   "note": "Peppery rather than neutral, and it wilts — dress it at the table."
   },
   {
    "s": "crop.ing.romaine",
@@ -18227,7 +18302,9 @@
   {
    "s": "ing.mushroom.cremini",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.shiitake"
+   "o": "ing.mushroom.shiitake",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mushroom.shiitake",
@@ -18262,7 +18339,9 @@
   {
    "s": "ing.mushroom.shiitake",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.cremini"
+   "o": "ing.mushroom.cremini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.greenbeans",
@@ -18297,12 +18376,16 @@
   {
    "s": "ing.greenbeans",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.asparagus"
+   "o": "ing.asparagus",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.greenbeans",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broccoli"
+   "o": "ing.broccoli",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.greenbeans",
@@ -18347,12 +18430,16 @@
   {
    "s": "ing.asparagus",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.greenbeans"
+   "o": "ing.greenbeans",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.asparagus",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broccoli"
+   "o": "ing.broccoli",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.asparagus",
@@ -18402,12 +18489,16 @@
   {
    "s": "ing.brusselsprouts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broccoli"
+   "o": "ing.broccoli",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.brusselsprouts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cabbage.green"
+   "o": "ing.cabbage.green",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.brusselsprouts",
@@ -18452,12 +18543,16 @@
   {
    "s": "ing.cabbage.green",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.brusselsprouts"
+   "o": "ing.brusselsprouts",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cabbage.green",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.bokchoy"
+   "o": "ing.bokchoy",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.cabbage.green",
@@ -18502,12 +18597,16 @@
   {
    "s": "ing.bokchoy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cabbage.green"
+   "o": "ing.cabbage.green",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.bokchoy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spinach.baby"
+   "o": "ing.spinach.baby",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.bokchoy",
@@ -18552,7 +18651,9 @@
   {
    "s": "ing.snappeas",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.greenbeans"
+   "o": "ing.greenbeans",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.snappeas",
@@ -18597,12 +18698,16 @@
   {
    "s": "ing.eggplant",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.zucchini"
+   "o": "ing.zucchini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.eggplant",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.cremini"
+   "o": "ing.mushroom.cremini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.eggplant",
@@ -18642,12 +18747,16 @@
   {
    "s": "ing.fennel",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.celery"
+   "o": "ing.celery",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.fennel",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.yellow"
+   "o": "ing.onion.yellow",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.fennel",
@@ -18697,7 +18806,9 @@
   {
    "s": "ing.beet",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.carrot"
+   "o": "ing.carrot",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.beet",
@@ -18742,7 +18853,9 @@
   {
    "s": "ing.corn.kernels",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.frozen.corn"
+   "o": "ing.frozen.corn",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.avocado",
@@ -18783,11 +18896,6 @@
    "s": "ing.avocado",
    "p": "HAS_TAG",
    "o": "tag.creamy"
-  },
-  {
-   "s": "ing.avocado",
-   "p": "SUBSTITUTES_WITH",
-   "o": "ing.tahini"
   },
   {
    "s": "ing.lemon",
@@ -18832,12 +18940,16 @@
   {
    "s": "ing.lemon",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lime"
+   "o": "ing.lime",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.lemon",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.vinegar.white_wine"
+   "o": "ing.vinegar.white_wine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.lime",
@@ -18872,7 +18984,9 @@
   {
    "s": "ing.lime",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lemon"
+   "o": "ing.lemon",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.orange",
@@ -18912,7 +19026,9 @@
   {
    "s": "ing.orange",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.clementine"
+   "o": "ing.clementine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.clementine",
@@ -18952,7 +19068,9 @@
   {
    "s": "ing.clementine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.orange"
+   "o": "ing.orange",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.apple",
@@ -18997,7 +19115,9 @@
   {
    "s": "ing.apple",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pear"
+   "o": "ing.pear",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.apple",
@@ -19037,7 +19157,9 @@
   {
    "s": "ing.pear",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.apple"
+   "o": "ing.apple",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.banana",
@@ -19117,12 +19239,16 @@
   {
    "s": "ing.blueberries",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.frozen.berries"
+   "o": "ing.frozen.berries",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.blueberries",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.strawberries"
+   "o": "ing.strawberries",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.blueberries",
@@ -19162,7 +19288,9 @@
   {
    "s": "ing.strawberries",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.blueberries"
+   "o": "ing.blueberries",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.strawberries",
@@ -19232,7 +19360,9 @@
   {
    "s": "ing.ginger",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.ginger.ground"
+   "o": "ing.spice.ginger.ground",
+   "ratio": 0.22,
+   "note": "Ground ginger is warmer and less bright. It works in a braise or a bake, not in a dressing."
   },
   {
    "s": "ing.cilantro",
@@ -19267,7 +19397,9 @@
   {
    "s": "ing.cilantro",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.parsley.flat"
+   "o": "ing.parsley.flat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.cilantro",
@@ -19312,7 +19444,9 @@
   {
    "s": "ing.parsley.flat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cilantro"
+   "o": "ing.cilantro",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.parsley.flat",
@@ -19357,12 +19491,16 @@
   {
    "s": "ing.basil",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.parsley.flat"
+   "o": "ing.parsley.flat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.basil",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.basil.dried"
+   "o": "ing.spice.basil.dried",
+   "ratio": 0.5,
+   "note": "Dried basil is for cooking into a sauce, not for finishing — add it early and it has time to open up."
   },
   {
    "s": "crop.ing.basil",
@@ -19402,7 +19540,9 @@
   {
    "s": "ing.mint",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.basil"
+   "o": "ing.basil",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.mint",
@@ -19442,7 +19582,9 @@
   {
    "s": "ing.dill",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.parsley.flat"
+   "o": "ing.parsley.flat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.dill",
@@ -19482,7 +19624,9 @@
   {
    "s": "ing.rosemary",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.thyme.dried"
+   "o": "ing.spice.thyme.dried",
+   "ratio": 0.5,
+   "note": "Thyme is milder and less resinous than rosemary — a fair swap in a braise, less so where rosemary is the point."
   },
   {
    "s": "crop.ing.rosemary",
@@ -19522,7 +19666,9 @@
   {
    "s": "ing.thyme.fresh",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.thyme.dried"
+   "o": "ing.spice.thyme.dried",
+   "ratio": 0.42,
+   "note": "Dried thyme is more concentrated than fresh, so this is about a third of the volume. Add it early rather than at the end."
   },
   {
    "s": "crop.ing.thyme.fresh",
@@ -19567,7 +19713,9 @@
   {
    "s": "ing.egg",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tofu.firm"
+   "o": "ing.tofu.firm",
+   "ratio": 1.25,
+   "note": "Crumble it and press out the water first. It scrambles, but it will not set or bind."
   },
   {
    "s": "ing.eggwhite",
@@ -19602,7 +19750,9 @@
   {
    "s": "ing.eggwhite",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.egg"
+   "o": "ing.egg",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.yogurt.greek.nonfat",
@@ -19647,12 +19797,16 @@
   {
    "s": "ing.yogurt.greek.nonfat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.yogurt.greek.2"
+   "o": "ing.yogurt.greek.2",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.yogurt.greek.nonfat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cottagecheese"
+   "o": "ing.cottagecheese",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.yogurt.greek.2",
@@ -19687,7 +19841,9 @@
   {
    "s": "ing.yogurt.greek.2",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.yogurt.greek.nonfat"
+   "o": "ing.yogurt.greek.nonfat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.milk.1pct",
@@ -19722,7 +19878,9 @@
   {
    "s": "ing.milk.1pct",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.milk.soy"
+   "o": "ing.milk.soy",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.milk.soy",
@@ -19767,7 +19925,9 @@
   {
    "s": "ing.milk.soy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.milk.1pct"
+   "o": "ing.milk.1pct",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.parmesan",
@@ -19807,12 +19967,16 @@
   {
    "s": "ing.cheese.parmesan",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.nutritionalyeast"
+   "o": "ing.nutritionalyeast",
+   "ratio": 0.6,
+   "note": "Savoury and cheesy, but it will not melt or brown. Use it as a finish, not inside a bake."
   },
   {
    "s": "ing.cheese.parmesan",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.pecorino"
+   "o": "ing.cheese.pecorino",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.pecorino",
@@ -19852,7 +20016,9 @@
   {
    "s": "ing.cheese.pecorino",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.parmesan"
+   "o": "ing.cheese.parmesan",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.feta",
@@ -19892,7 +20058,9 @@
   {
    "s": "ing.cheese.feta",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.goat"
+   "o": "ing.cheese.goat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.goat",
@@ -19927,7 +20095,9 @@
   {
    "s": "ing.cheese.goat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.feta"
+   "o": "ing.cheese.feta",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.mozzarella",
@@ -19962,7 +20132,9 @@
   {
    "s": "ing.cheese.mozzarella",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.cheddar"
+   "o": "ing.cheese.cheddar",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.cheddar",
@@ -20002,7 +20174,9 @@
   {
    "s": "ing.cheese.cheddar",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.mozzarella"
+   "o": "ing.cheese.mozzarella",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.ricotta.partskim",
@@ -20037,7 +20211,9 @@
   {
    "s": "ing.ricotta.partskim",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cottagecheese"
+   "o": "ing.cottagecheese",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cottagecheese",
@@ -20072,12 +20248,16 @@
   {
    "s": "ing.cottagecheese",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.ricotta.partskim"
+   "o": "ing.ricotta.partskim",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cottagecheese",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.yogurt.greek.nonfat"
+   "o": "ing.yogurt.greek.nonfat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.butter.unsalted",
@@ -20117,7 +20297,9 @@
   {
    "s": "ing.butter.unsalted",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.oil.olive"
+   "o": "ing.oil.olive",
+   "ratio": 0.71,
+   "note": "Fine in a batter or a pan. Not in anything that needs butter to be solid — pastry, creaming, or browning."
   },
   {
    "s": "ing.tofu.firm",
@@ -20167,12 +20349,16 @@
   {
    "s": "ing.tofu.firm",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tempeh"
+   "o": "ing.tempeh",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tofu.firm",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tempeh",
@@ -20212,7 +20398,9 @@
   {
    "s": "ing.tempeh",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tofu.firm"
+   "o": "ing.tofu.firm",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chickpeas.canned",
@@ -20262,12 +20450,16 @@
   {
    "s": "ing.chickpeas.canned",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beans.cannellini"
+   "o": "ing.beans.cannellini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chickpeas.canned",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lentil.brown"
+   "o": "ing.lentil.brown",
+   "ratio": 0.48,
+   "note": "Dry lentils need about 25 minutes of simmering and enough extra liquid to cover them."
   },
   {
    "s": "ing.beans.black",
@@ -20322,12 +20514,16 @@
   {
    "s": "ing.beans.black",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beans.pinto"
+   "o": "ing.beans.pinto",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beans.black",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beans.cannellini",
@@ -20372,7 +20568,9 @@
   {
    "s": "ing.beans.cannellini",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beans.pinto",
@@ -20412,7 +20610,9 @@
   {
    "s": "ing.beans.pinto",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beans.black"
+   "o": "ing.beans.black",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.lentil.brown",
@@ -20467,12 +20667,16 @@
   {
    "s": "ing.lentil.brown",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lentil.red"
+   "o": "ing.lentil.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.lentil.brown",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beans.black"
+   "o": "ing.beans.black",
+   "ratio": 2.1,
+   "note": "Canned beans are already cooked, so add them near the end rather than at the start."
   },
   {
    "s": "ing.lentil.red",
@@ -20517,7 +20721,9 @@
   {
    "s": "ing.lentil.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lentil.brown"
+   "o": "ing.lentil.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.edamame.frozen",
@@ -20567,7 +20773,9 @@
   {
    "s": "ing.edamame.frozen",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.peas.frozen"
+   "o": "ing.peas.frozen",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.peas.frozen",
@@ -20612,7 +20820,9 @@
   {
    "s": "ing.peas.frozen",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.edamame.frozen"
+   "o": "ing.edamame.frozen",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.frozen.corn",
@@ -20652,7 +20862,9 @@
   {
    "s": "ing.frozen.corn",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.corn.kernels"
+   "o": "ing.corn.kernels",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.frozen.berries",
@@ -20692,7 +20904,9 @@
   {
    "s": "ing.frozen.berries",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.blueberries"
+   "o": "ing.blueberries",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.frozen.spinach",
@@ -20732,7 +20946,9 @@
   {
    "s": "ing.frozen.spinach",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spinach.baby"
+   "o": "ing.spinach.baby",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chicken.breast",
@@ -20762,12 +20978,16 @@
   {
    "s": "ing.chicken.breast",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chicken.thigh"
+   "o": "ing.chicken.thigh",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chicken.breast",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tofu.firm"
+   "o": "ing.tofu.firm",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chicken.thigh",
@@ -20797,7 +21017,9 @@
   {
    "s": "ing.chicken.thigh",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chicken.breast"
+   "o": "ing.chicken.breast",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.turkey.ground93",
@@ -20827,12 +21049,16 @@
   {
    "s": "ing.turkey.ground93",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chicken.thigh"
+   "o": "ing.chicken.thigh",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.turkey.ground93",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lentil.brown"
+   "o": "ing.lentil.brown",
+   "ratio": 0.42,
+   "note": "Add about two cups of extra liquid and 25 minutes. Brown the aromatics harder to make up the savour."
   },
   {
    "s": "ing.salmon",
@@ -20882,12 +21108,16 @@
   {
    "s": "ing.salmon",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cod"
+   "o": "ing.cod",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.salmon",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tofu.firm"
+   "o": "ing.tofu.firm",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cod",
@@ -20932,7 +21162,9 @@
   {
    "s": "ing.cod",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.salmon"
+   "o": "ing.salmon",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.shrimp",
@@ -20977,7 +21209,9 @@
   {
    "s": "ing.shrimp",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cod"
+   "o": "ing.cod",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tuna.canned",
@@ -21022,7 +21256,9 @@
   {
    "s": "ing.tuna.canned",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beef.sirloin",
@@ -21052,7 +21288,9 @@
   {
    "s": "ing.beef.sirloin",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chicken.thigh"
+   "o": "ing.chicken.thigh",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pork.tenderloin",
@@ -21082,7 +21320,9 @@
   {
    "s": "ing.pork.tenderloin",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chicken.breast"
+   "o": "ing.chicken.breast",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sausage.chicken.italian",
@@ -21112,7 +21352,9 @@
   {
    "s": "ing.sausage.chicken.italian",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.turkey.ground93"
+   "o": "ing.turkey.ground93",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.rice.brown",
@@ -21152,12 +21394,16 @@
   {
    "s": "ing.rice.brown",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.rice.jasmine"
+   "o": "ing.rice.jasmine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.rice.brown",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.quinoa"
+   "o": "ing.quinoa",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.rice.jasmine",
@@ -21192,7 +21438,9 @@
   {
    "s": "ing.rice.jasmine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.rice.brown"
+   "o": "ing.rice.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.quinoa",
@@ -21237,12 +21485,16 @@
   {
    "s": "ing.quinoa",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.farro"
+   "o": "ing.farro",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.quinoa",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.rice.brown"
+   "o": "ing.rice.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.farro",
@@ -21287,12 +21539,16 @@
   {
    "s": "ing.farro",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.quinoa"
+   "o": "ing.quinoa",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.farro",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.rice.brown"
+   "o": "ing.rice.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.oats.rolled",
@@ -21332,7 +21588,9 @@
   {
    "s": "ing.oats.rolled",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.oats.steelcut"
+   "o": "ing.oats.steelcut",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.oats.steelcut",
@@ -21367,7 +21625,9 @@
   {
    "s": "ing.oats.steelcut",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.oats.rolled"
+   "o": "ing.oats.rolled",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pasta.wholewheat",
@@ -21412,12 +21672,16 @@
   {
    "s": "ing.pasta.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.chickpea"
+   "o": "ing.pasta.chickpea",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pasta.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.regular"
+   "o": "ing.pasta.regular",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pasta.regular",
@@ -21452,7 +21716,9 @@
   {
    "s": "ing.pasta.regular",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.wholewheat"
+   "o": "ing.pasta.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pasta.chickpea",
@@ -21492,7 +21758,9 @@
   {
    "s": "ing.pasta.chickpea",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.wholewheat"
+   "o": "ing.pasta.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.noodle.rice",
@@ -21527,7 +21795,9 @@
   {
    "s": "ing.noodle.rice",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.regular"
+   "o": "ing.pasta.regular",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tortilla.corn",
@@ -21567,7 +21837,9 @@
   {
    "s": "ing.tortilla.corn",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tortilla.wholewheat"
+   "o": "ing.tortilla.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tortilla.wholewheat",
@@ -21602,7 +21874,9 @@
   {
    "s": "ing.tortilla.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tortilla.corn"
+   "o": "ing.tortilla.corn",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.bread.wholegrain",
@@ -21642,7 +21916,9 @@
   {
    "s": "ing.bread.wholegrain",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pita.wholewheat"
+   "o": "ing.pita.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pita.wholewheat",
@@ -21677,7 +21953,9 @@
   {
    "s": "ing.pita.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.bread.wholegrain"
+   "o": "ing.bread.wholegrain",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pizzadough.wholewheat",
@@ -21802,7 +22080,9 @@
   {
    "s": "ing.couscous.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.quinoa"
+   "o": "ing.quinoa",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.flour.ap",
@@ -21832,7 +22112,9 @@
   {
    "s": "ing.flour.ap",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.flour.wholewheat"
+   "o": "ing.flour.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.flour.wholewheat",
@@ -21862,7 +22144,9 @@
   {
    "s": "ing.flour.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.flour.ap"
+   "o": "ing.flour.ap",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cornstarch",
@@ -22012,7 +22296,9 @@
   {
    "s": "ing.chocolate.dark70",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cocoa"
+   "o": "ing.cocoa",
+   "ratio": 0.57,
+   "note": "Cocoa is chocolate with the fat taken out — add about a tablespoon of butter or oil per ounce of chocolate replaced."
   },
   {
    "s": "ing.sugar.brown",
@@ -22042,7 +22328,9 @@
   {
    "s": "ing.sugar.brown",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.maple"
+   "o": "ing.maple",
+   "ratio": 1.1,
+   "note": "A liquid sweetener where a dry one was: take about three tablespoons of other liquid out per cup, and expect a softer bake."
   },
   {
    "s": "ing.vanilla",
@@ -22107,7 +22395,9 @@
   {
    "s": "ing.tomato.canned.crushed",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.canned.diced"
+   "o": "ing.tomato.canned.diced",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tomato.canned.diced",
@@ -22142,7 +22432,9 @@
   {
    "s": "ing.tomato.canned.diced",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.canned.crushed"
+   "o": "ing.tomato.canned.crushed",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tomatopaste",
@@ -22217,7 +22509,9 @@
   {
    "s": "ing.coconutmilk.light",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.milk.soy"
+   "o": "ing.milk.soy",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.broth.veg",
@@ -22250,11 +22544,6 @@
    "o": "tag.base"
   },
   {
-   "s": "ing.broth.veg",
-   "p": "SUBSTITUTES_WITH",
-   "o": "ing.broth.chicken"
-  },
-  {
    "s": "ing.broth.chicken",
    "p": "IN_AISLE",
    "o": "aisle.canned-jarred"
@@ -22282,7 +22571,9 @@
   {
    "s": "ing.broth.chicken",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broth.veg"
+   "o": "ing.broth.veg",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.olives.kalamata",
@@ -22327,7 +22618,9 @@
   {
    "s": "ing.olives.kalamata",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.capers"
+   "o": "ing.capers",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.capers",
@@ -22367,7 +22660,9 @@
   {
    "s": "ing.capers",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.olives.kalamata"
+   "o": "ing.olives.kalamata",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pepper.roasted",
@@ -22407,7 +22702,9 @@
   {
    "s": "ing.pepper.roasted",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pepper.bell.red"
+   "o": "ing.pepper.bell.red",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sundriedtomato",
@@ -22447,7 +22744,9 @@
   {
    "s": "ing.sundriedtomato",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomatopaste"
+   "o": "ing.tomatopaste",
+   "ratio": 1,
+   "note": "Paste brings the same concentrated tomato but none of the chew."
   },
   {
    "s": "ing.marinara.lowsodium",
@@ -22482,7 +22781,9 @@
   {
    "s": "ing.marinara.lowsodium",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tomato.canned.crushed"
+   "o": "ing.tomato.canned.crushed",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.salsa",
@@ -22552,7 +22853,9 @@
   {
    "s": "ing.oil.olive",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.oil.canola"
+   "o": "ing.oil.canola",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.oil.canola",
@@ -22587,7 +22890,9 @@
   {
    "s": "ing.oil.canola",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.oil.olive"
+   "o": "ing.oil.olive",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.oil.sesame",
@@ -22662,7 +22967,9 @@
   {
    "s": "ing.vinegar.balsamic",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.vinegar.redwine"
+   "o": "ing.vinegar.redwine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.vinegar.redwine",
@@ -22697,12 +23004,16 @@
   {
    "s": "ing.vinegar.redwine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.vinegar.white_wine"
+   "o": "ing.vinegar.white_wine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.vinegar.redwine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.lemon"
+   "o": "ing.lemon",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.vinegar.white_wine",
@@ -22732,7 +23043,9 @@
   {
    "s": "ing.vinegar.white_wine",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.vinegar.redwine"
+   "o": "ing.vinegar.redwine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.vinegar.rice",
@@ -22767,7 +23080,9 @@
   {
    "s": "ing.vinegar.rice",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.vinegar.white_wine"
+   "o": "ing.vinegar.white_wine",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mustard.dijon",
@@ -22847,12 +23162,16 @@
   {
    "s": "ing.soysauce.lowsodium",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tamari"
+   "o": "ing.tamari",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.soysauce.lowsodium",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.miso.white"
+   "o": "ing.miso.white",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.tamari",
@@ -22892,7 +23211,9 @@
   {
    "s": "ing.tamari",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.soysauce.lowsodium"
+   "o": "ing.soysauce.lowsodium",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.miso.white",
@@ -22937,7 +23258,9 @@
   {
    "s": "ing.miso.white",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.soysauce.lowsodium"
+   "o": "ing.soysauce.lowsodium",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sriracha",
@@ -22972,7 +23295,9 @@
   {
    "s": "ing.sriracha",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.pepperflakes"
+   "o": "ing.spice.pepperflakes",
+   "ratio": 0.05,
+   "note": "You lose the sweetness and the vinegar. A pinch of sugar and a splash of vinegar gets most of it back."
   },
   {
    "s": "ing.gochujang",
@@ -23017,7 +23342,9 @@
   {
    "s": "ing.gochujang",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sriracha"
+   "o": "ing.sriracha",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.currypaste.red",
@@ -23057,7 +23384,9 @@
   {
    "s": "ing.currypaste.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.curry"
+   "o": "ing.spice.curry",
+   "ratio": 0.4,
+   "note": "Powder needs frying in oil for a minute to wake up; paste does not."
   },
   {
    "s": "ing.tahini",
@@ -23107,7 +23436,9 @@
   {
    "s": "ing.tahini",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.peanutbutter"
+   "o": "ing.peanutbutter",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.peanutbutter",
@@ -23152,7 +23483,9 @@
   {
    "s": "ing.peanutbutter",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almondbutter"
+   "o": "ing.almondbutter",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.almondbutter",
@@ -23192,7 +23525,9 @@
   {
    "s": "ing.almondbutter",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.peanutbutter"
+   "o": "ing.peanutbutter",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.honey",
@@ -23222,7 +23557,9 @@
   {
    "s": "ing.honey",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.maple"
+   "o": "ing.maple",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.maple",
@@ -23257,7 +23594,9 @@
   {
    "s": "ing.maple",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.honey"
+   "o": "ing.honey",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.nutritionalyeast",
@@ -23302,7 +23641,9 @@
   {
    "s": "ing.nutritionalyeast",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.parmesan"
+   "o": "ing.cheese.parmesan",
+   "ratio": 1.67,
+   "note": null
   },
   {
    "s": "ing.almonds",
@@ -23352,7 +23693,9 @@
   {
    "s": "ing.almonds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.walnuts"
+   "o": "ing.walnuts",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.walnuts",
@@ -23397,12 +23740,16 @@
   {
    "s": "ing.walnuts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pecans"
+   "o": "ing.pecans",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.walnuts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almonds"
+   "o": "ing.almonds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pecans",
@@ -23442,7 +23789,9 @@
   {
    "s": "ing.pecans",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.walnuts"
+   "o": "ing.walnuts",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cashews",
@@ -23482,7 +23831,9 @@
   {
    "s": "ing.cashews",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almonds"
+   "o": "ing.almonds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pumpkinseeds",
@@ -23527,7 +23878,9 @@
   {
    "s": "ing.pumpkinseeds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sunflowerseeds"
+   "o": "ing.sunflowerseeds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sunflowerseeds",
@@ -23567,7 +23920,9 @@
   {
    "s": "ing.sunflowerseeds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pumpkinseeds"
+   "o": "ing.pumpkinseeds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chia",
@@ -23612,7 +23967,9 @@
   {
    "s": "ing.chia",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.flax.ground"
+   "o": "ing.flax.ground",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.flax.ground",
@@ -23652,7 +24009,9 @@
   {
    "s": "ing.flax.ground",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chia"
+   "o": "ing.chia",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.hemphearts",
@@ -23692,7 +24051,9 @@
   {
    "s": "ing.hemphearts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pumpkinseeds"
+   "o": "ing.pumpkinseeds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.dates.medjool",
@@ -23732,7 +24093,9 @@
   {
    "s": "ing.dates.medjool",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.raisins"
+   "o": "ing.raisins",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.raisins",
@@ -23767,7 +24130,9 @@
   {
    "s": "ing.raisins",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cranberries.dried"
+   "o": "ing.cranberries.dried",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cranberries.dried",
@@ -23802,7 +24167,9 @@
   {
    "s": "ing.cranberries.dried",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.raisins"
+   "o": "ing.raisins",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.salt.kosher",
@@ -23887,7 +24254,9 @@
   {
    "s": "ing.spice.cumin",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.chili"
+   "o": "ing.spice.chili",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.smokedpaprika",
@@ -23927,7 +24296,9 @@
   {
    "s": "ing.spice.smokedpaprika",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.chili"
+   "o": "ing.spice.chili",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.chili",
@@ -23962,7 +24333,9 @@
   {
    "s": "ing.spice.chili",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.cumin"
+   "o": "ing.spice.cumin",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.oregano",
@@ -23997,7 +24370,9 @@
   {
    "s": "ing.spice.oregano",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.italian"
+   "o": "ing.spice.italian",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.spice.oregano",
@@ -24037,7 +24412,9 @@
   {
    "s": "ing.spice.italian",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.oregano"
+   "o": "ing.spice.oregano",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.basil.dried",
@@ -24067,7 +24444,9 @@
   {
    "s": "ing.spice.basil.dried",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.basil"
+   "o": "ing.basil",
+   "ratio": 2,
+   "note": "Fresh basil goes in off the heat. Cooked, it turns grey and loses most of what you wanted from it."
   },
   {
    "s": "ing.spice.thyme.dried",
@@ -24097,7 +24476,9 @@
   {
    "s": "ing.spice.thyme.dried",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.thyme.fresh"
+   "o": "ing.thyme.fresh",
+   "ratio": 2.4,
+   "note": "Add the sprigs whole and fish them out at the end."
   },
   {
    "s": "ing.spice.cinnamon",
@@ -24187,7 +24568,9 @@
   {
    "s": "ing.spice.coriander",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.cumin"
+   "o": "ing.spice.cumin",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.pepperflakes",
@@ -24222,7 +24605,9 @@
   {
    "s": "ing.spice.pepperflakes",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sriracha"
+   "o": "ing.sriracha",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.garlicpowder",
@@ -24257,7 +24642,9 @@
   {
    "s": "ing.spice.garlicpowder",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.garlic"
+   "o": "ing.garlic",
+   "ratio": 7.7,
+   "note": "Fresh garlic is far milder by weight than powder — about two cloves per teaspoon. Cook it in fat for a minute or it stays raw and harsh."
   },
   {
    "s": "ing.spice.onionpowder",
@@ -24287,7 +24674,9 @@
   {
    "s": "ing.spice.onionpowder",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.onion.yellow"
+   "o": "ing.onion.yellow",
+   "ratio": 15.7,
+   "note": "Fresh onion brings water with it — give it a few minutes in the pan before the rest of the recipe carries on."
   },
   {
    "s": "ing.spice.curry",
@@ -24322,7 +24711,9 @@
   {
    "s": "ing.spice.curry",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.garam"
+   "o": "ing.spice.garam",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.garam",
@@ -24357,7 +24748,9 @@
   {
    "s": "ing.spice.garam",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.curry"
+   "o": "ing.spice.curry",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.zaatar",
@@ -24402,7 +24795,9 @@
   {
    "s": "ing.spice.zaatar",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.oregano"
+   "o": "ing.spice.oregano",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.spice.bayleaf",
@@ -24522,7 +24917,9 @@
   {
    "s": "ing.spice.ginger.ground",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.ginger"
+   "o": "ing.ginger",
+   "ratio": 4.5,
+   "note": "Fresh ginger is mostly water, so it takes several times the weight of the ground. Grate it rather than chopping."
   },
   {
    "s": "ing.wine.white",
@@ -24557,7 +24954,9 @@
   {
    "s": "ing.wine.white",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broth.veg"
+   "o": "ing.broth.veg",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sugar.granulated",
@@ -24592,7 +24991,9 @@
   {
    "s": "ing.sugar.granulated",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sugar.brown"
+   "o": "ing.sugar.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.powdered.sugar",
@@ -24627,7 +25028,9 @@
   {
    "s": "ing.powdered.sugar",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sugar.granulated"
+   "o": "ing.sugar.granulated",
+   "ratio": 0.83,
+   "note": "Powdered sugar has cornstarch in it and dissolves cold. Granulated will stay gritty in an icing."
   },
   {
    "s": "ing.cranberries.fresh",
@@ -24672,7 +25075,9 @@
   {
    "s": "ing.cranberries.fresh",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cranberries.dried"
+   "o": "ing.cranberries.dried",
+   "ratio": 0.5,
+   "note": "Dried cranberries are sweetened, so cut the sugar in the recipe by about half."
   },
   {
    "s": "ing.sage.fresh",
@@ -24712,7 +25117,9 @@
   {
    "s": "ing.sage.fresh",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.thyme.dried"
+   "o": "ing.spice.thyme.dried",
+   "ratio": 0.5,
+   "note": "A real change of flavour, not just of form. Sage is what makes brown butter taste like brown butter."
   },
   {
    "s": "crop.ing.sage.fresh",
@@ -24762,12 +25169,16 @@
   {
    "s": "ing.rice.wild",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.farro"
+   "o": "ing.farro",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.rice.wild",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.rice.brown"
+   "o": "ing.rice.brown",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.orzo",
@@ -24807,12 +25218,16 @@
   {
    "s": "ing.orzo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.couscous.wholewheat"
+   "o": "ing.couscous.wholewheat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.orzo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.regular"
+   "o": "ing.pasta.regular",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beans.blackeyed",
@@ -24862,12 +25277,16 @@
   {
    "s": "ing.beans.blackeyed",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.beans.pinto"
+   "o": "ing.beans.pinto",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.beans.blackeyed",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.watermelon",
@@ -24947,7 +25366,9 @@
   {
    "s": "ing.bun.wholewheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.bread.wholegrain"
+   "o": "ing.bread.wholegrain",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pickles.dill",
@@ -25022,12 +25443,16 @@
   {
    "s": "ing.chipotle.adobo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.smokedpaprika"
+   "o": "ing.spice.smokedpaprika",
+   "ratio": 0.13,
+   "note": "Smoked paprika carries the smoke but almost no heat."
   },
   {
    "s": "ing.chipotle.adobo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sriracha"
+   "o": "ing.sriracha",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pomegranate.seeds",
@@ -25072,7 +25497,9 @@
   {
    "s": "ing.pomegranate.seeds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cranberries.dried"
+   "o": "ing.cranberries.dried",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.grapefruit",
@@ -25112,7 +25539,9 @@
   {
    "s": "ing.grapefruit",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.orange"
+   "o": "ing.orange",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chocolate.chips",
@@ -25147,7 +25576,9 @@
   {
    "s": "ing.chocolate.chips",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chocolate.dark70"
+   "o": "ing.chocolate.dark70",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cider.apple",
@@ -25187,7 +25618,9 @@
   {
    "s": "ing.cider.apple",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broth.veg"
+   "o": "ing.broth.veg",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.coconut.shredded",
@@ -25227,7 +25660,9 @@
   {
    "s": "ing.coconut.shredded",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almonds"
+   "o": "ing.almonds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mushroom.portobello",
@@ -25272,12 +25707,16 @@
   {
    "s": "ing.mushroom.portobello",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.cremini"
+   "o": "ing.mushroom.cremini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mushroom.portobello",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.eggplant"
+   "o": "ing.eggplant",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.squash.acorn",
@@ -25322,7 +25761,9 @@
   {
    "s": "ing.squash.acorn",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.squash.butternut"
+   "o": "ing.squash.butternut",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.squash.acorn",
@@ -25367,12 +25808,16 @@
   {
    "s": "ing.cheese.creamcheese",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.yogurt.greek.2"
+   "o": "ing.yogurt.greek.2",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.creamcheese",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.goat"
+   "o": "ing.cheese.goat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.applesauce",
@@ -25437,7 +25882,9 @@
   {
    "s": "ing.gnocchi",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.regular"
+   "o": "ing.pasta.regular",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.gruyere",
@@ -25447,7 +25894,7 @@
   {
    "s": "ing.cheese.gruyere",
    "p": "SUITS_DIET",
-   "o": "diet.vegetarian"
+   "o": "diet.vegetarian-check"
   },
   {
    "s": "ing.cheese.gruyere",
@@ -25472,12 +25919,16 @@
   {
    "s": "ing.cheese.gruyere",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.parmesan"
+   "o": "ing.cheese.parmesan",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cheese.gruyere",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.mozzarella"
+   "o": "ing.cheese.mozzarella",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.paneer",
@@ -25507,12 +25958,16 @@
   {
    "s": "ing.paneer",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tofu.firm"
+   "o": "ing.tofu.firm",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.paneer",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cheese.feta"
+   "o": "ing.cheese.feta",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chilicrisp",
@@ -25552,12 +26007,16 @@
   {
    "s": "ing.chilicrisp",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sriracha"
+   "o": "ing.sriracha",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chilicrisp",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.pepperflakes"
+   "o": "ing.spice.pepperflakes",
+   "ratio": 0.12,
+   "note": "The crunch is the point of chili crisp and flakes have none of it. Fry them in a spoonful of oil with a sliced garlic clove."
   },
   {
    "s": "ing.sesame.seeds",
@@ -25597,12 +26056,16 @@
   {
    "s": "ing.sesame.seeds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.everything"
+   "o": "ing.spice.everything",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.sesame.seeds",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.sunflowerseeds"
+   "o": "ing.sunflowerseeds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.peanuts",
@@ -25647,12 +26110,16 @@
   {
    "s": "ing.peanuts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cashews"
+   "o": "ing.cashews",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.peanuts",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almonds"
+   "o": "ing.almonds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mushroom.porcini.dried",
@@ -25692,7 +26159,9 @@
   {
    "s": "ing.mushroom.porcini.dried",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.shiitake"
+   "o": "ing.mushroom.shiitake",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.wine.red",
@@ -25727,12 +26196,16 @@
   {
    "s": "ing.wine.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.broth.veg"
+   "o": "ing.broth.veg",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.wine.red",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.wine.white"
+   "o": "ing.wine.white",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chile.guajillo",
@@ -25772,12 +26245,16 @@
   {
    "s": "ing.chile.guajillo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chipotle.adobo"
+   "o": "ing.chipotle.adobo",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chile.guajillo",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.chili"
+   "o": "ing.spice.chili",
+   "ratio": 0.33,
+   "note": "Chili powder is a blend with cumin and oregano already in it, so go easy on those elsewhere in the recipe."
   },
   {
    "s": "ing.cream.heavy",
@@ -25807,17 +26284,23 @@
   {
    "s": "ing.cream.heavy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.milk.1pct"
+   "o": "ing.milk.1pct",
+   "ratio": 1,
+   "note": "Same volume, but it will not thicken and it can split if you boil it. Take the pan off the heat before it goes in."
   },
   {
    "s": "ing.cream.heavy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.coconutmilk.light"
+   "o": "ing.coconutmilk.light",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.cream.heavy",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cashews"
+   "o": "ing.cashews",
+   "ratio": 0.35,
+   "note": "Soak them in boiling water for 15 minutes and blend with an equal volume of water until completely smooth."
   },
   {
    "s": "ing.kimchi",
@@ -25857,12 +26340,9 @@
   {
    "s": "ing.kimchi",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.cabbage.green"
-  },
-  {
-   "s": "ing.kimchi",
-   "p": "SUBSTITUTES_WITH",
-   "o": "ing.sriracha"
+   "o": "ing.cabbage.green",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.noodle.wheat",
@@ -25897,12 +26377,16 @@
   {
    "s": "ing.noodle.wheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pasta.regular"
+   "o": "ing.pasta.regular",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.noodle.wheat",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.noodle.rice"
+   "o": "ing.noodle.rice",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.baguette",
@@ -25932,7 +26416,9 @@
   {
    "s": "ing.baguette",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.bread.wholegrain"
+   "o": "ing.bread.wholegrain",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mayo.olive",
@@ -25962,12 +26448,16 @@
   {
    "s": "ing.mayo.olive",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.yogurt.greek.2"
+   "o": "ing.yogurt.greek.2",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.mayo.olive",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.tahini"
+   "o": "ing.tahini",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.harissa",
@@ -26007,12 +26497,16 @@
   {
    "s": "ing.harissa",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chipotle.adobo"
+   "o": "ing.chipotle.adobo",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.harissa",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.spice.smokedpaprika"
+   "o": "ing.spice.smokedpaprika",
+   "ratio": 0.14,
+   "note": "You lose the heat and the acidity — add a squeeze of lemon."
   },
   {
    "s": "ing.peach",
@@ -26052,12 +26546,16 @@
   {
    "s": "ing.peach",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.pear"
+   "o": "ing.pear",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.peach",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.apple"
+   "o": "ing.apple",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pistachios",
@@ -26097,12 +26595,16 @@
   {
    "s": "ing.pistachios",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.almonds"
+   "o": "ing.almonds",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.pistachios",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.walnuts"
+   "o": "ing.walnuts",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.jackfruit.canned",
@@ -26142,12 +26644,16 @@
   {
    "s": "ing.jackfruit.canned",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.mushroom.portobello"
+   "o": "ing.mushroom.portobello",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.jackfruit.canned",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.chickpeas.canned"
+   "o": "ing.chickpeas.canned",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chives",
@@ -26187,12 +26693,16 @@
   {
    "s": "ing.chives",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.scallion"
+   "o": "ing.scallion",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "ing.chives",
    "p": "SUBSTITUTES_WITH",
-   "o": "ing.parsley.flat"
+   "o": "ing.parsley.flat",
+   "ratio": 1,
+   "note": null
   },
   {
    "s": "crop.ing.chives",

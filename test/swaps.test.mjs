@@ -127,3 +127,31 @@ test('a note is a sentence, not a fragment', () => {
     .map(p => `${p.from.id} -> ${p.to.id}`);
   assert.deepEqual(thin, [], `note is too short or unpunctuated: ${thin.join(', ')}`);
 });
+
+test('the graph carries the same substitutions the data does', () => {
+  // The graph builder read only the string form of a substitution, so adding
+  // the object form silently dropped 188 edges — a rebuild that "succeeded"
+  // and lost a third of the relationships. Only CI noticed. Now this does.
+  const graph = JSON.parse(readFileSync(join(root, 'data/graph.json'), 'utf8'));
+  const inGraph = new Set(graph.edges
+    .filter(e => e.p === 'SUBSTITUTES_WITH')
+    .map(e => `${e.s} -> ${e.o}`));
+  const inData = pairs.filter(p => p.to).map(p => `${p.from.id} -> ${p.to.id}`);
+
+  const missing = inData.filter(k => !inGraph.has(k));
+  const extra = [...inGraph].filter(k => !inData.includes(k));
+  assert.deepEqual(missing, [], `in the data but not the graph — rebuild it: ${missing.slice(0, 5).join(', ')}${missing.length > 5 ? ` (+${missing.length - 5})` : ''}`);
+  assert.deepEqual(extra, [], `in the graph but not the data — rebuild it: ${extra.slice(0, 5).join(', ')}`);
+});
+
+test('the graph carries the ratios too, not just the pairs', () => {
+  const graph = JSON.parse(readFileSync(join(root, 'data/graph.json'), 'utf8'));
+  const byKey = new Map(graph.edges
+    .filter(e => e.p === 'SUBSTITUTES_WITH')
+    .map(e => [`${e.s} -> ${e.o}`, e]));
+  const wrong = pairs.filter(p => p.to).filter(p => {
+    const e = byKey.get(`${p.from.id} -> ${p.to.id}`);
+    return e && (e.ratio || 1) !== p.ratio;
+  }).map(p => `${p.from.id} -> ${p.to.id}`);
+  assert.deepEqual(wrong, [], `ratio differs between data and graph: ${wrong.join(', ')}`);
+});
