@@ -11,8 +11,9 @@ import { foodIcon } from '../food-icon.js';
 import { printShoppingList } from '../print.js';
 import {
   getState, setPref, addCustomItem, removeCustomItem, toggleChecked,
-  suppressItem, clearChecked, togglePantry
+  suppressItem, clearChecked, togglePantry, toggleBulkPick, setBulkPicks, clearBulkPicks
 } from '../store.js';
+import { clubAdvice, suggestForClub, isWarehouse, KEEPS, FREEZES, PERISHES } from '../bulk.js';
 import {
   buildList, formatList, EXPORT_FORMATS, STORE_LINKS, shareList, copyText,
   downloadFile, mailtoLink, smsLink, parsePastedList, guessAisle
@@ -65,6 +66,31 @@ function view(draw, navigate) {
         )
       ),
       list.meta.storeNote ? h('p.muted.small', list.meta.storeNote) : null,
+
+      // The club is a second stop, so it is a second control rather than
+      // another entry in the list above — picking Costco should never mean
+      // "do the whole week's shopping at Costco".
+      h('label.field.field--inline',
+        h('span.field__label', 'Bulk run'),
+        h('select.input', {
+          onchange: (e) => { setPref('bulkStore', e.target.value || null); draw(); }
+        },
+          h('option', { value: '', selected: !state.prefs.bulkStore }, 'No second stop'),
+          ...Object.entries(storeLayouts)
+            // A club can be somebody's main shop, but it cannot be both stops.
+            .filter(([id, l]) => isWarehouse(l) && id !== state.prefs.store)
+            .map(([id, l]) => h('option', { value: id, selected: state.prefs.bulkStore === id }, l.name))
+        )
+      ),
+      state.prefs.bulkStore
+        ? h('div.chip-row.chip-row--tight',
+            chip(`🧊 What to get at ${list.meta.bulkStore}`, { onclick: () => openBulkPicker(list, draw) }),
+            list.meta.bulkCount
+              ? chip('Clear the bulk run', { onclick: () => { clearBulkPicks(); draw(); } })
+              : null
+          )
+        : null,
+
       h('div.chip-row.chip-row--tight',
         chip(hideChecked ? 'Showing unchecked' : 'Hide what is in the cart', { on: hideChecked, onclick: () => { hideChecked = !hideChecked; draw(); } }),
         chip('+ Add item', { onclick: () => openAddItem(draw) }),
@@ -92,7 +118,7 @@ function view(draw, navigate) {
       }, '🖨 Print')
     ),
 
-    ...list.groups.map(g => aisleBlock(g, state, draw)),
+    ...list.runs.flatMap(run => runSection(run, list.runs.length > 1, state, draw)),
 
     h('p.fine-print',
       'Quantities are rounded up to how things are actually sold — a recipe needing 300 g of chickpeas asks for one can. ',
@@ -100,7 +126,54 @@ function view(draw, navigate) {
   );
 }
 
-function aisleBlock(group, state, draw) {
+/**
+ * One store's worth of the list.
+ *
+ * With no bulk run there is one of these and it carries no heading, which is
+ * exactly the list as it was before. With a club selected there are two, and
+ * the club comes first — it is the stop with the frozen things in it, so it is
+ * the one you want to do on the way home rather than at the start.
+ */
+function runSection(run, split, state, draw) {
+  if (!run.groups.length) return [];
+  const head = split
+    ? h('div.run-head',
+        h('h2.run-head__name', run.store.name),
+        h('span.run-head__count', `${run.items.length} items`),
+        run.store.note ? h('p.run-head__note.muted.small', run.store.note) : null
+      )
+    : null;
+  return [head, ...run.groups.map(g => aisleBlock(g, state, draw, run))].filter(Boolean);
+}
+
+/**
+ * The button that moves one ingredient between the two stops.
+ *
+ * Only shown once a club is chosen — otherwise there is nowhere to move it to
+ * and the row would carry a control that does nothing.
+ */
+function storeSwapButton(item, state, draw) {
+  if (!state.prefs.bulkStore || item.kind !== 'ingredient') return null;
+  const onBulk = !!state.bulkPicks?.[item.ingredientId];
+  const advice = item.item ? clubAdvice(item.item, item.grams || 0) : null;
+
+  return h('button', {
+    class: `tag-btn ${onBulk ? 'is-on' : 'tag-btn--icon'}`,
+    type: 'button',
+    title: onBulk
+      ? 'Move back to the regular store'
+      : advice
+        ? `${advice.headline} — ${advice.note}`
+        : 'Buy this on the bulk run',
+    onclick: () => {
+      toggleBulkPick(item.ingredientId);
+      play(onBulk ? 'uncheck' : 'check');
+      draw();
+    }
+  }, onBulk ? '🧊 bulk' : '🧊');
+}
+
+function aisleBlock(group, state, draw, run = null) {
   const items = hideChecked ? group.items.filter(i => !i.checked) : group.items;
   if (!items.length) return null;
 
@@ -117,9 +190,14 @@ function aisleBlock(group, state, draw) {
           }),
           foodIcon(getDb().ingIndex.get(item.ingredientId), { size: 24 }),
           h('span.list-item__qty', item.buy || ''),
-          h('span.list-item__name', { role: 'button', tabindex: '0', onclick: (e) => { e.preventDefault(); openItem(item, draw); } }, item.name)
+          h('span.list-item__name', { role: 'button', tabindex: '0', onclick: (e) => { e.preventDefault(); openItem(item, draw); } }, item.name),
+          // Only on the club run, and only when the answer is "this one rots".
+          run && isWarehouse(run.store) && item.item && clubAdvice(item.item, item.grams || 0).verdict === PERISHES
+            ? h('span.bulk-warn', { title: clubAdvice(item.item, item.grams || 0).note }, 'will not keep')
+            : null
         ),
         h('div.list-item__actions',
+          storeSwapButton(item, state, draw),
           item.kind === 'ingredient'
             ? h('button.tag-btn', {
                 type: 'button', title: 'I already have this — move it to the pantry',
@@ -141,6 +219,88 @@ function aisleBlock(group, state, draw) {
 }
 
 /* ---------- sheets ---------- */
+
+/**
+ * "What should I get at Costco?"
+ *
+ * The list is already sorted by the answer — things that keep at the top,
+ * things that rot at the bottom — so the sensible picks are the ones under
+ * your thumb, and the ones you should not buy in bulk are visibly last with
+ * the reason attached. "Take the sensible ones" ticks the first two groups,
+ * which is the whole decision for most people.
+ */
+function openBulkPicker(list, draw) {
+  const state = getState();
+  const storeName = list.meta.bulkStore || 'the club';
+  const rows = suggestForClub(list.items);
+
+  const SECTIONS = [
+    { verdict: KEEPS, title: 'Worth the big pack', blurb: 'Shelf-stable or frozen already. Nothing here is a race against the fridge.' },
+    { verdict: FREEZES, title: 'Worth it if you freeze it', blurb: 'Portion into meal-size bags the day you get home — this is where the saving actually happens, or does not.' },
+    { verdict: PERISHES, title: 'Buy these at the regular store', blurb: 'A club pack is more than one household finishes before it turns.' }
+  ];
+
+  const body = h('div');
+  const paint = () => {
+    const picks = getState().bulkPicks || {};
+    body.replaceChildren(
+      h('p.muted.small',
+        `Ticked items move to the ${storeName} run and stay there for future lists. `,
+        'Pack sizes are a rule of thumb — roughly two to four times a supermarket unit — not a product catalog.'),
+
+      h('div.row-actions',
+        h('button.btn.btn--small', {
+          type: 'button',
+          onclick: () => {
+            setBulkPicks(rows.filter(r => r.advice.verdict !== PERISHES).map(r => r.ingredientId));
+            play('check');
+            paint();
+          }
+        }, 'Take the sensible ones'),
+        h('button.btn.btn--small', {
+          type: 'button',
+          onclick: () => { clearBulkPicks(); play('uncheck'); paint(); }
+        }, 'None of them')
+      ),
+
+      ...SECTIONS.flatMap(sec => {
+        const inSection = rows.filter(r => r.advice.verdict === sec.verdict);
+        if (!inSection.length) return [];
+        return [
+          h('h3.step__sub', sec.title),
+          h('p.fine-print', sec.blurb),
+          h('ul.bulk-picks',
+            ...inSection.map(r => h('li', { class: `bulk-pick bulk-pick--${r.advice.verdict}` },
+              h('label.bulk-pick__main',
+                h('input', {
+                  type: 'checkbox',
+                  checked: !!picks[r.ingredientId],
+                  onchange: () => { toggleBulkPick(r.ingredientId); paint(); }
+                }),
+                h('span.bulk-pick__name', r.name),
+                r.buy ? h('span.bulk-pick__qty.muted', r.buy) : null
+              ),
+              // The share of a pack only matters where the leftover is the
+              // problem. "0% of a pack of bay leaves" is noise on a shelf-
+              // stable item that was never going to spoil.
+              h('p.bulk-pick__note.fine-print',
+                r.advice.verdict !== KEEPS && r.advice.usedPct != null
+                  ? `${r.advice.headline} · this plan uses about ${r.advice.usedPct}% of a pack. ${r.advice.note}`
+                  : `${r.advice.headline}. ${r.advice.note}`)
+            ))
+          )
+        ];
+      })
+    );
+  };
+  paint();
+
+  const dlg = sheet(`What to get at ${storeName}`, body, {
+    wide: true,
+    actions: [h('button.btn.btn--primary', { type: 'button', onclick: () => { dlg.close(); draw(); } }, 'Done')]
+  });
+}
+
 
 function openItem(item, draw) {
   const links = h('div.chip-row',

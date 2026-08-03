@@ -40,6 +40,9 @@ function defaultState() {
       preferPantry: true,
       avoidAllergens: [],
       store: 'default',
+      /** A warehouse club as a *second* stop, or null for one-store shopping.
+       *  Not a replacement for `store`: nobody does the whole week at Costco. */
+      bulkStore: null,
       rollSize: 4,
       theme: 'system'
     },
@@ -59,6 +62,10 @@ function defaultState() {
     checked: {},
     /** ingredientIds the user removed from this week's list by hand */
     suppressed: {},
+    /** ingredientId -> true when this one is bought at the warehouse club
+     *  instead of the regular store. Survives the plan changing, so "we always
+     *  get the chicken at Costco" only has to be said once. */
+    bulkPicks: {},
     /** recipeIds recently cooked, newest first */
     history: [],
     createdAt: new Date().toISOString(),
@@ -351,6 +358,31 @@ export function resetAll() {
   persist();
   emit();
   return state;
+}
+
+/**
+ * Move one item between the regular store and the warehouse club.
+ *
+ * Keyed by ingredient rather than by list entry, so the choice outlives this
+ * week's plan — the whole point is that it is a standing preference.
+ */
+export function toggleBulkPick(ingredientId, force) {
+  update(s => {
+    const next = force ?? !s.bulkPicks[ingredientId];
+    if (next) s.bulkPicks[ingredientId] = true;
+    else delete s.bulkPicks[ingredientId];
+  });
+}
+
+export function setBulkPicks(ingredientIds) {
+  update(s => {
+    s.bulkPicks = {};
+    for (const id of ingredientIds) s.bulkPicks[id] = true;
+  });
+}
+
+export function clearBulkPicks() {
+  update(s => { s.bulkPicks = {}; });
 }
 
 export function setPref(key, value) {

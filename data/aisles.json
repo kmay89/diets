@@ -291,6 +291,54 @@
         "meat-seafood",
         "other"
       ]
+    },
+    "costco": {
+      "name": "Costco",
+      "kind": "warehouse",
+      "note": "A warehouse club, so this is a second stop rather than the weekly shop. You enter through the non-food side, the middle is pallets of dry goods, and the cold wall — produce cooler, dairy, meat — is at the far end. Everything comes in a pack several times the supermarket size, so buy what keeps and skip what does not.",
+      "order": [
+        "household",
+        "dry-goods",
+        "canned-jarred",
+        "nuts-seeds",
+        "baking",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "beverages",
+        "international",
+        "bakery",
+        "produce",
+        "dairy-eggs",
+        "meat-seafood",
+        "deli",
+        "frozen",
+        "other"
+      ]
+    },
+    "sams-club": {
+      "name": "Sam's Club",
+      "kind": "warehouse",
+      "note": "Same shape of trip as Costco: a second stop for the things that keep. Fresh and frozen sit together along the back wall, so do the cold end last and get home before it warms up.",
+      "order": [
+        "household",
+        "dry-goods",
+        "canned-jarred",
+        "baking",
+        "nuts-seeds",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "beverages",
+        "international",
+        "bakery",
+        "produce",
+        "dairy-eggs",
+        "deli",
+        "meat-seafood",
+        "frozen",
+        "other"
+      ]
     }
   }
 }
