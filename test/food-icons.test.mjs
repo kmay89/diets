@@ -84,7 +84,7 @@ test('an icon title matches the ingredient name the app shows', () => {
 
 test('every icon carries the dark-mode swap', () => {
   // Charcoal outlines vanish and cream marks glare on a dark background. Any
-  // icon using either colour has to be able to flip it.
+  // icon using either color has to be able to flip it.
   const bad = files.filter(f => {
     const svg = read(f);
     const usesTone = /ink-[sf]|paper-[sf]/.test(svg);

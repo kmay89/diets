@@ -6,7 +6,7 @@
     {
       "id": "rec.harvest-stuffed-squash",
       "title": "Harvest Stuffed Acorn Squash",
-      "blurb": "A centerpiece that doesn't apologise for not being a turkey. Roasted squash halves filled with wild rice, mushrooms, apples and pecans, glossed with cider.",
+      "blurb": "A centerpiece that doesn't apologize for not being a turkey. Roasted squash halves filled with wild rice, mushrooms, apples and pecans, glossed with cider.",
       "cuisine": "american", "course": "dinner", "servings": 6, "activeMin": 30, "totalMin": 80,
       "difficulty": "moderate", "diet": ["vegetarian", "vegan"], "kidFriendly": true,
       "occasions": ["thanksgiving", "winter-holidays", "potluck"],
@@ -32,7 +32,7 @@
         {"ing": "ing.parsley.flat", "qty": 0.25, "unit": "cup", "prep": "chopped"}
       ],
       "steps": [
-        "Heat oven to 400°F. Rub the cut faces of the squash with 2 tbsp oil and salt, lay them cut-side down on a sheet pan, and roast 35-40 minutes until a knife slides into the flesh with no resistance. Cut-side down is what caramelises the rims.",
+        "Heat oven to 400°F. Rub the cut faces of the squash with 2 tbsp oil and salt, lay them cut-side down on a sheet pan, and roast 35-40 minutes until a knife slides into the flesh with no resistance. Cut-side down is what caramelizes the rims.",
         "Meanwhile simmer the wild rice in the broth, covered, 45 minutes until the grains split open. Drain any excess.",
         "Brown the mushrooms in 2 tbsp oil over medium-high, undisturbed for 4 minutes, then tossing. Add onion and celery; cook 8 minutes. Add apple, garlic, sage and thyme for 2 minutes more.",
         "Pour in the cider and let it cook away almost completely, scraping the pan. Fold in the rice, pecans, cranberries, salt and pepper.",
@@ -198,7 +198,7 @@
     {
       "id": "rec.mushroom-wellington",
       "title": "Mushroom and Lentil Wellington",
-      "blurb": "The showstopper. A deeply savoury mushroom-lentil filling wrapped in pastry, sliced at the table to an actual audible reaction.",
+      "blurb": "The showstopper. A deeply savory mushroom-lentil filling wrapped in pastry, sliced at the table to an actual audible reaction.",
       "cuisine": "british", "course": "dinner", "servings": 8, "activeMin": 45, "totalMin": 105,
       "difficulty": "hard", "diet": ["vegetarian"], "kidFriendly": false,
       "occasions": ["winter-holidays", "thanksgiving", "birthday"],
@@ -353,7 +353,7 @@
         "Spread the rinsed beans on a sheet pan and roast at 350°F for 15 minutes until the skins split and they look dry. This is the step everyone skips and it is why their burgers are mush.",
         "Meanwhile cook the mushrooms and onion in 2 tbsp oil over medium-high, 10 minutes, until browned and dry. Add garlic, cumin, smoked paprika and chipotle for 1 minute.",
         "Pulse two thirds of the beans in a processor to a coarse paste — not smooth. Mix with the whole beans, the mushroom mixture, panko, egg and salt.",
-        "Form 6 patties, pressing a shallow dimple into the centre of each so they cook flat. Chill at least 30 minutes; this is not optional.",
+        "Form 6 patties, pressing a shallow dimple into the center of each so they cook flat. Chill at least 30 minutes; this is not optional.",
         "Grill over medium-hot, oiled grates 4-5 minutes a side without moving them, or sear in a skillet in the last tablespoon of oil.",
         "Build on toasted buns with yogurt thinned with lime, avocado, tomato, red onion, lettuce and pickles."
       ],
@@ -476,12 +476,12 @@
       ],
       "steps": [
         "Heat the grill hot. Rub the corn with oil.",
-        "Grill 8-10 minutes, turning every couple of minutes, until charred in patches on every side. You want actual black, not golden — that char is the flavour.",
+        "Grill 8-10 minutes, turning every couple of minutes, until charred in patches on every side. You want actual black, not golden — that char is the flavor.",
         "Stir the yogurt with the juice of one lime and a pinch of salt.",
         "Brush the hot corn with the lime yogurt, then roll it in the feta mixed with chili powder and smoked paprika.",
         "Cilantro over the top, remaining lime cut into wedges. Serve immediately and provide napkins."
       ],
-      "kidTweak": "Grill a few ears plain and serve with nothing but a little butter and salt. Corn on the cob does not need help to be a kid's favourite.",
+      "kidTweak": "Grill a few ears plain and serve with nothing but a little butter and salt. Corn on the cob does not need help to be a kid's favorite.",
       "restaurantTouch": "Char it more than feels right. Timid corn is boiled corn with grill marks.",
       "garden": "Ohio sweet corn from a roadside stand in August is genuinely a different vegetable from what a supermarket sells in March.",
       "leftovers": "Cut the kernels off and fold them into salad, eggs or the corn-and-zucchini skillet.",
@@ -719,7 +719,7 @@
         "Mash the bananas in a big bowl, then whisk in oil, applesauce, brown sugar, eggs and vanilla.",
         "Add both flours, baking soda, baking powder, cinnamon and salt on top. Fold until barely combined — lumps are fine, overmixing makes it tough.",
         "Fold in walnuts and chocolate chips if using. Scrape into the pan.",
-        "Bake 55-65 minutes until a skewer in the centre comes out with a few damp crumbs. Tent with foil at 40 minutes if it is browning fast.",
+        "Bake 55-65 minutes until a skewer in the center comes out with a few damp crumbs. Tent with foil at 40 minutes if it is browning fast.",
         "Cool in the pan 15 minutes, then completely on a rack before slicing. It slices cleanly cold and messily warm."
       ],
       "kidTweak": "This is the recipe to hand over entirely. Mashing bananas is the best job in the kitchen and there is nothing sharp or hot until the pan goes in.",
@@ -732,7 +732,7 @@
     {
       "id": "rec.oatmeal-cookies",
       "title": "Chewy Oatmeal Cookies",
-      "blurb": "Crisp edge, chewy middle, actual oat flavour. They travel well and they sell out first.",
+      "blurb": "Crisp edge, chewy middle, actual oat flavor. They travel well and they sell out first.",
       "cuisine": "american", "course": "dessert", "servings": 24, "activeMin": 20, "totalMin": 45,
       "difficulty": "easy", "diet": ["vegetarian"], "kidFriendly": true,
       "occasions": ["bake-sale", "potluck", "picnic"],
@@ -758,7 +758,7 @@
         "Beat in the egg and vanilla.",
         "Fold in flour, baking soda, cinnamon and salt, then the oats, raisins and pecans. The dough will look barely held together — correct.",
         "Chill the dough 30 minutes. Cold dough spreads less and browns better.",
-        "Scoop golf-ball portions onto lined pans, well apart, and bake at 350°F for 10-12 minutes. Pull them when the centres still look underdone; they set on the pan.",
+        "Scoop golf-ball portions onto lined pans, well apart, and bake at 350°F for 10-12 minutes. Pull them when the centers still look underdone; they set on the pan.",
         "Cool on the pan 5 minutes before moving. The chew depends on this."
       ],
       "kidTweak": "Scooping and eating a little raw dough is most of the appeal. Use pasteurised eggs if that matters to you.",
@@ -793,7 +793,7 @@
         "Whisk the oil, both sugars and cocoa together first and let it sit 5 minutes. Blooming the cocoa in fat is what makes the chocolate taste deep instead of dusty.",
         "Whisk in the eggs one at a time, then the vanilla, and beat hard for a full minute — that vigorous whisking is what gives brownies their papery, glossy top.",
         "Fold in flour and salt until just combined, then the chocolate chips and walnuts.",
-        "Bake 25-28 minutes. The centre should still wobble slightly; a clean skewer means you have gone too far.",
+        "Bake 25-28 minutes. The center should still wobble slightly; a clean skewer means you have gone too far.",
         "Cool completely in the pan before lifting out and cutting. Warm brownies cut into rubble."
       ],
       "kidTweak": "Nothing needed. This is the recipe children request by name.",
@@ -863,7 +863,7 @@
         {"ing": "ing.salt.kosher", "qty": 0.5, "unit": "tsp"}
       ],
       "steps": [
-        "Start the garlic in cold oil over medium with the pepper flakes. By the time it sizzles and turns pale gold, about 3 minutes, the flavour is in the oil.",
+        "Start the garlic in cold oil over medium with the pepper flakes. By the time it sizzles and turns pale gold, about 3 minutes, the flavor is in the oil.",
         "Add cumin, smoked paprika and tomato paste; fry 60 seconds until it darkens.",
         "Add chickpeas and tomatoes with the salt. Simmer hard for 6 minutes, smashing about a third of the chickpeas against the pan so the sauce thickens.",
         "Stir in the spinach until it wilts, 1 minute. Finish with lemon juice.",
@@ -911,7 +911,7 @@
         "add": [{"ing": "ing.chicken.breast", "qty": 8, "unit": "oz", "prep": "cooked and diced"}],
         "steps": ["Add with the peas and toss until heated through."]
       },
-      "kidTweak": "This is already most kids' favourite thing. Serve theirs before the pepper.",
+      "kidTweak": "This is already most kids' favorite thing. Serve theirs before the pepper.",
       "restaurantTouch": "Get the pan hotter than feels sensible and let the rice sit still. Restaurant fried rice tastes different because of heat and patience, not ingredients.",
       "garden": "Scallions and carrots.",
       "leftovers": "Eat it now. Twice-fried rice is not a thing.",
@@ -920,7 +920,7 @@
     {
       "id": "rec.white-bean-tuna-melt",
       "title": "White Bean Melt",
-      "blurb": "Twelve minutes, mostly under the broiler. Crunchy, savoury, melty, and built entirely from things already in the cupboard.",
+      "blurb": "Twelve minutes, mostly under the broiler. Crunchy, savory, melty, and built entirely from things already in the cupboard.",
       "cuisine": "american", "course": "lunch", "servings": 4, "activeMin": 12, "totalMin": 12,
       "difficulty": "easy", "diet": ["vegetarian"], "kidFriendly": true,
       "occasions": ["weeknight-rush"],
@@ -1250,7 +1250,7 @@
     {
       "id": "rec.tahini-chocolate-chip-cookies",
       "title": "Salted Tahini Chocolate Chip Cookies",
-      "blurb": "Tahini gives these the savoury, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
+      "blurb": "Tahini gives these the savory, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
       "cuisine": "american",
       "course": "dessert",
       "servings": 20,
@@ -1354,13 +1354,13 @@
         "Beat in the egg and vanilla until smooth.",
         "Whisk both flours, baking soda and salt in a separate bowl, then fold them in until just combined. Stop the moment the flour disappears.",
         "Fold in the chopped chocolate. Chopping a bar rather than using chips gives you shards and puddles instead of uniform dots, which is most of the difference between a homemade cookie and a store one.",
-        "Chill the dough at least 45 minutes, or overnight. Cold dough spreads less and browns better, and the flavour deepens noticeably by the next day.",
+        "Chill the dough at least 45 minutes, or overnight. Cold dough spreads less and browns better, and the flavor deepens noticeably by the next day.",
         "Heat the oven to 350°F. Scoop rounded tablespoons onto lined sheets, well apart. Press a few sesame seeds and a pinch of flaky salt onto each top.",
-        "Bake 10-12 minutes, until the edges are set and the middles still look slightly underdone. They finish on the hot pan. A cookie baked until the centre looks done is a cookie that will be hard by evening.",
+        "Bake 10-12 minutes, until the edges are set and the middles still look slightly underdone. They finish on the hot pan. A cookie baked until the center looks done is a cookie that will be hard by evening.",
         "Cool on the pan 5 minutes before moving them."
       ],
       "kidTweak": "Tahini tastes faintly of sesame and nothing else — most kids never identify it. Skip the flaky salt on a few if that is a sticking point.",
-      "restaurantTouch": "Bang the sheet pan on the counter once at the 8-minute mark. It collapses the rising centre and gives you those concentric ripple rings bakeries charge extra for.",
+      "restaurantTouch": "Bang the sheet pan on the counter once at the 8-minute mark. It collapses the rising center and gives you those concentric ripple rings bakeries charge extra for.",
       "garden": "Nothing here grows in a garden, which is the honest answer. This is a pantry recipe and it is the one to make in February when there is nothing to harvest.",
       "leftovers": "Keeps 5 days in a tin with a slice of bread to hold the moisture. Scooped dough balls freeze 3 months and bake from frozen with 2 extra minutes.",
       "prepAhead": "Make the dough up to 3 days ahead. It genuinely improves on day two.",
@@ -1479,7 +1479,7 @@
         }
       ],
       "steps": [
-        "Heat the oven to 375°F. Toss the peaches and blueberries in the skillet with the brown sugar, cornstarch, lemon juice, cinnamon and vanilla. Leave the skins on the peaches — they hold the slices together and they turn a good colour.",
+        "Heat the oven to 375°F. Toss the peaches and blueberries in the skillet with the brown sugar, cornstarch, lemon juice, cinnamon and vanilla. Leave the skins on the peaches — they hold the slices together and they turn a good color.",
         "Let the fruit sit 10 minutes. It will draw out juice, which the cornstarch then thickens into a sauce rather than a puddle.",
         "Rub the oats, whole wheat flour, almonds, salt and cold butter together with your fingers until it clumps in pieces the size of peas and hazelnuts. Uneven is right — uniform crumble bakes into a lid.",
         "Drizzle the maple over the crumble mixture and toss once with a fork. That is what makes the clusters crisp rather than sandy.",

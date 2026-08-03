@@ -5,7 +5,7 @@
 Be decent. This is a project about feeding families, and people bring their own health, budget,
 culture and constraints to it. Assume they have reasons.
 
-## Expected behaviour
+## Expected behavior
 
 - Be respectful and direct. Critique the recipe or the code, not the person.
 - Assume good faith. A wrong sodium figure is a mistake, not a moral failing.
@@ -14,7 +14,7 @@ culture and constraints to it. Assume they have reasons.
 - Keep health discussion factual and sourced, and keep it away from diagnosing or advising
   individuals. We are not anyone's clinician.
 
-## Unacceptable behaviour
+## Unacceptable behavior
 
 - Harassment, slurs, or personal attacks of any kind.
 - Moralising about how other people eat, or shaming anyone about weight, body size or food choices.
@@ -31,7 +31,7 @@ representing the project elsewhere.
 
 Report a problem by opening an issue, or privately through GitHub's report tools if that is not
 appropriate. Maintainers will respond as promptly as they can, keep reports confidential, and may
-edit, remove, or reject contributions, or ban a participant for behaviour they consider
+edit, remove, or reject contributions, or ban a participant for behavior they consider
 inappropriate. Enforcement decisions are explained where it is possible to do so without exposing
 the reporter.
 

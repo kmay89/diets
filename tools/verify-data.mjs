@@ -121,15 +121,15 @@ for (const r of recipes) {
     if (!(line.qty > 0)) err(`${r.id}: ${line.ing} has quantity ${line.qty}`);
   }
 
-  // A vegetarian-labelled recipe must not contain meat or fish in its base.
+  // A vegetarian-labeled recipe must not contain meat or fish in its base.
   if ((r.diet || []).includes('vegetarian') || (r.diet || []).includes('vegan')) {
     for (const line of r.ingredients || []) {
       const d = index.get(line.ing)?.diet || [];
       if (d.includes('omnivore') || d.includes('pescatarian')) {
-        err(`${r.id}: labelled vegetarian but the base contains ${line.ing}`);
+        err(`${r.id}: labeled vegetarian but the base contains ${line.ing}`);
       }
       if ((r.diet || []).includes('vegan') && !d.includes('vegan') && !line.optional) {
-        err(`${r.id}: labelled vegan but contains non-vegan ${line.ing}`);
+        err(`${r.id}: labeled vegan but contains non-vegan ${line.ing}`);
       }
     }
   }

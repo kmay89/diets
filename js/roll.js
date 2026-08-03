@@ -110,8 +110,8 @@ export function scoreRecipe(recipe, state, ctx = {}) {
   for (const line of recipe.ingredients) if (likes[line.ing] === 1) loved++;
   parts.loved = Math.min(loved, 5) * 5;
 
-  // Explicit recipe favourite.
-  parts.favourite = recipeLikes[recipe.id] === 1 ? 25 : 0;
+  // Explicit recipe favorite.
+  parts.favorite = recipeLikes[recipe.id] === 1 ? 25 : 0;
 
   // Time budget: a soft cliff, not a hard filter — 5 minutes over is not a no.
   const over = recipe.activeMin - (prefs.maxActiveMin || 30);
@@ -235,12 +235,12 @@ export function explainPick(recipe, state, chosen = []) {
   const { parts, heart } = scoreRecipe(recipe, state, { chosen });
   const reasons = [];
   if (parts.pantry > 8) reasons.push('uses a lot of what you already have');
-  if (parts.loved > 0) reasons.push('has ingredients you marked as favourites');
+  if (parts.loved > 0) reasons.push('has ingredients you marked as favorites');
   if (parts.season > 0) reasons.push(`in season right now`);
   if (heart.score != null && heart.score >= 80) reasons.push('scores well on the heart-forward measures');
   if (parts.time > 0) reasons.push(`under your ${state.prefs.maxActiveMin} minute active-time budget`);
   if (parts.shopping > 4) reasons.push('shares ingredients with the rest of this week');
   if (parts.kids > 0) reasons.push('one the kids will eat');
-  if (parts.favourite > 0) reasons.push('you starred it');
+  if (parts.favorite > 0) reasons.push('you starred it');
   return reasons;
 }

@@ -1,7 +1,7 @@
 # Where the numbers come from
 
 Every nutrition figure in this app is traceable to a public source. Nothing is invented, and where
-a value is an estimate it is labelled as one.
+a value is an estimate it is labeled as one.
 
 ## Nutrient values
 
@@ -28,7 +28,7 @@ the ingredient name says otherwise ("Brown lentils (dry)", "Chickpeas, canned no
   the label on the jar in your hand; that is the number that matters.
 - **"No salt added" canned goods** are entered at their no-salt-added sodium. If you buy the regular
   version instead, add roughly 200–250 mg of sodium per half cup, less about 40% if you rinse them.
-- **Cooking losses and gains** are not modelled. Dry grains and legumes are entered dry, at their
+- **Cooking losses and gains** are not modeled. Dry grains and legumes are entered dry, at their
   dry weight and dry nutrient density, which is how the recipes measure them. Water absorbed in
   cooking changes weight but not the nutrients delivered.
 - **Salt added to pasta water** is not counted. Most of it goes down the drain; how much stays is
@@ -129,12 +129,12 @@ value you believe is correct, and the FoodData Central FDC ID or other public so
 Since v2.0.0 every factual statement the app makes outside a recipe lives in `data/claims.json`,
 attached to a source in `data/citations.json`. `npm test` enforces four rules:
 
-1. A claim with no source may only be shown if it is explicitly labelled `editorial` — our view,
+1. A claim with no source may only be shown if it is explicitly labeled `editorial` — our view,
    not a research finding.
 2. Every source must carry a `caveat` of real substance. A citation showing only the flattering half
    of a study borrows the authority of research while discarding what makes research trustworthy.
-3. Every source declares an evidence type from a fixed list — randomised trial, meta-analysis,
-   cohort, modelling study, guideline, regulatory standard, official statistics — and the UI shows
+3. Every source declares an evidence type from a fixed list — randomized trial, meta-analysis,
+   cohort, modeling study, guideline, regulatory standard, official statistics — and the UI shows
    it, because these do not deserve equal confidence.
 4. Every source records the date its bibliographic details were last checked against the publisher.
 
@@ -143,12 +143,12 @@ attached to a source in `data/citations.json`. `npm test` enforces four rules:
 | Source | Used for | Type |
 |---|---|---|
 | Poore & Nemecek 2018, *Science* | Food's share of emissions; farmland vs calories; the effect of a dietary shift | Meta-analysis of LCAs |
-| Crippa et al. 2021, *Nature Food* | The higher end of the food-emissions range | Modelling |
-| Springmann et al. 2021, *Lancet Planetary Health* | Cost of vegetarian and vegan patterns vs current diets | Modelling |
-| Estruch et al. 2018, *NEJM* (PREDIMED) | Mediterranean pattern and cardiovascular events | Randomised trial |
+| Crippa et al. 2021, *Nature Food* | The higher end of the food-emissions range | Modeling |
+| Springmann et al. 2021, *Lancet Planetary Health* | Cost of vegetarian and vegan patterns vs current diets | Modeling |
+| Estruch et al. 2018, *NEJM* (PREDIMED) | Mediterranean pattern and cardiovascular events | Randomized trial |
 | Sacks et al. 2017, *Circulation* (AHA advisory) | Replacing saturated fat with polyunsaturated fat | Guideline |
-| Reynolds et al. 2019, *The Lancet* | Fibre and mortality; the 25–30 g range | Meta-analysis |
-| Neal et al. 2021, *NEJM* (SSaSS) | Salt substitution and stroke | Randomised trial |
+| Reynolds et al. 2019, *The Lancet* | Fiber and mortality; the 25–30 g range | Meta-analysis |
+| Neal et al. 2021, *NEJM* (SSaSS) | Salt substitution and stroke | Randomized trial |
 | Grundy et al. 2019, *Circulation* | Diet as foundation, drugs on top | Guideline |
 | National Lipid Association | Limits of diet in inherited high cholesterol | Guideline |
 | FDA 21 CFR 101.81 | Oat beta-glucan and heart disease | Regulatory |

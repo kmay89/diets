@@ -23,7 +23,7 @@ All notable changes to this project are documented here. Format follows
   recipes led to "That page does not exist." The router now matches on the path and leaves the query
   to the view.
 - **The occasion card's title was invisible.** As a `<button>` it inherited the platform button
-  colour, which on a device set to dark with the app forced light is white on a pale green card.
+  color, which on a device set to dark with the app forced light is white on a pale green card.
 - **The install banner could not be dismissed.** `[hidden]` loses to any class that sets `display`,
   so the ✕ set the attribute and the banner stayed put. Hiding now wins everywhere, dismissing takes
   the toolbar button with it, and the decision is remembered — with the way back in Settings.
@@ -52,7 +52,7 @@ Opened up: written for anyone's table, sourced throughout, and stocked for the w
 ### Changed
 - **The app speaks to everyone now.** The copy, the household templates, the garden calendar and the
   store layouts no longer assume one particular cook in one particular town. The garden data is
-  labelled as zone 6a and documented as editable for any region.
+  labeled as zone 6a and documented as editable for any region.
 - **The intro leads with nourishment**, not restriction: no streaks, no points, no red numbers.
 - **Calmer interface.** One spacing scale, lighter elevation, quieter pills, more air. The tab bar
   went from eight items to five with the rest behind More — a row of eight icons is a wall nobody

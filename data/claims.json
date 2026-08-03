@@ -9,19 +9,19 @@
       "icon": "🌾",
       "lede": "Most eating advice starts from restriction — what to cut, avoid, and feel guilty about. That framing is exhausting and it does not last. This app starts somewhere else: food is how you take care of the people at your table, and the meal that gets cooked again next month is worth more than the perfect meal that gets cooked once.",
       "body": [
-        "Nothing here asks you to eat less. It asks a different question — what could go *on* the plate that makes it better. More plants, more fibre, more colour, more flavour built from technique instead of salt. The things that get crowded out get crowded out quietly.",
+        "Nothing here asks you to eat less. It asks a different question — what could go *on* the plate that makes it better. More plants, more fiber, more color, more flavor built from technique instead of salt. The things that get crowded out get crowded out quietly.",
         "There is no streak to break, no points, no red numbers. A week where you cook twice is a good week. The tool is here to make the cooking easier, not to keep score."
       ],
       "claims": [
         {
-          "id": "nourish.fibre",
-          "text": "Most people eat around half the fibre associated with the lowest risk of early death — the sweet spot in the evidence sits between 25 g and 30 g a day.",
+          "id": "nourish.fiber",
+          "text": "Most people eat around half the fiber associated with the lowest risk of early death — the sweet spot in the evidence sits between 25 g and 30 g a day.",
           "cites": ["reynolds2019"],
           "strength": "meta-analysis"
         },
         {
           "id": "nourish.addition",
-          "text": "Eating more fibre-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
+          "text": "Eating more fiber-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
           "cites": ["reynolds2019"],
           "strength": "meta-analysis"
         }
@@ -38,40 +38,40 @@
           "id": "heart.how",
           "title": "How diet actually reaches the heart",
           "body": [
-            "Arteries narrow over decades as cholesterol-carrying particles lodge in the artery wall and inflame it. Blood pressure decides how hard the heart has to push against those vessels every minute of every day. Diet acts on both — mostly through which fats you eat, how much sodium and potassium you get, and how much fibre passes through you.",
+            "Arteries narrow over decades as cholesterol-carrying particles lodge in the artery wall and inflame it. Blood pressure decides how hard the heart has to push against those vessels every minute of every day. Diet acts on both — mostly through which fats you eat, how much sodium and potassium you get, and how much fiber passes through you.",
             "None of this is fast, and none of it is visible. It is a slow change in the conditions inside your blood vessels, which is exactly why it is easy to disbelieve and easy to abandon."
           ],
           "claims": [
             {
               "id": "heart.fats",
-              "text": "Replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular disease by about 30% in randomised trials — an effect the American Heart Association notes is similar in size to statin treatment.",
+              "text": "Replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular disease by about 30% in randomized trials — an effect the American Heart Association notes is similar in size to statin treatment.",
               "cites": ["sacks2017"],
               "strength": "guideline",
               "detail": "The benefit is in the swap. Cutting saturated fat and replacing it with refined starch or sugar does not produce the same result, which is why this app cooks with olive oil rather than simply cooking with less."
             },
             {
               "id": "heart.pattern",
-              "text": "A Mediterranean-style pattern with extra-virgin olive oil or nuts cut heart attacks, strokes and cardiovascular death by roughly 30% over five years in a randomised trial of nearly 7,500 people at high risk.",
+              "text": "A Mediterranean-style pattern with extra-virgin olive oil or nuts cut heart attacks, strokes and cardiovascular death by roughly 30% over five years in a randomized trial of nearly 7,500 people at high risk.",
               "cites": ["estruch2018"],
               "strength": "rct",
-              "detail": "This trial was retracted and republished in 2018 after randomisation problems at some sites. The reanalysis reached the same conclusions. We cite the corrected version, and we mention the retraction because a citation engine that hides inconvenient history is decoration."
+              "detail": "This trial was retracted and republished in 2018 after randomization problems at some sites. The reanalysis reached the same conclusions. We cite the corrected version, and we mention the retraction because a citation engine that hides inconvenient history is decoration."
             },
             {
               "id": "heart.sodium",
-              "text": "Swapping ordinary salt for a potassium-based salt substitute reduced stroke by about 14% and death by about 12% in a five-year randomised trial of nearly 21,000 people.",
+              "text": "Swapping ordinary salt for a potassium-based salt substitute reduced stroke by about 14% and death by about 12% in a five-year randomized trial of nearly 21,000 people.",
               "cites": ["neal2021"],
               "strength": "rct",
               "detail": "Potassium-based substitutes are not safe for everyone — kidney disease and some blood-pressure medications make them risky. Ask a clinician before switching. The broader point stands on its own: sodium is worth taking seriously, and most of it arrives from packaged food and restaurant food rather than the salt shaker."
             },
             {
-              "id": "heart.fibre",
-              "text": "People eating the most dietary fibre had 15–30% lower cardiovascular and all-cause mortality than those eating the least.",
+              "id": "heart.fiber",
+              "text": "People eating the most dietary fiber had 15–30% lower cardiovascular and all-cause mortality than those eating the least.",
               "cites": ["reynolds2019"],
               "strength": "meta-analysis"
             },
             {
               "id": "heart.oats",
-              "text": "Oats and barley carry an FDA-authorised heart-disease health claim at 3 g of beta-glucan soluble fibre a day.",
+              "text": "Oats and barley carry an FDA-authorised heart-disease health claim at 3 g of beta-glucan soluble fiber a day.",
               "cites": ["fda-betaglucan"],
               "strength": "regulatory"
             }
@@ -119,7 +119,7 @@
           "id": "planet.share",
           "text": "Food systems account for roughly a quarter to a third of global greenhouse gas emissions — 26% by one widely cited estimate, 34% by another using a broader boundary.",
           "cites": ["poore2018", "crippa2021"],
-          "strength": "modelling",
+          "strength": "modeling",
           "detail": "The two estimates differ because they draw the system boundary differently, not because one is wrong. The IPCC's own range is 21–37%. We quote the range rather than the most dramatic number in it."
         },
         {
@@ -132,7 +132,7 @@
           "id": "planet.shift",
           "text": "A global shift away from animal products would cut farmland use by around 76% and food's greenhouse gas emissions by roughly half.",
           "cites": ["poore2018"],
-          "strength": "modelling",
+          "strength": "modeling",
           "detail": "That is a global thought experiment, not a prediction and not a demand. The practical read is directional: moving some meals toward plants moves the number, and the size of the shift scales with how much you actually change."
         },
         {
@@ -153,9 +153,9 @@
       "claims": [
         {
           "id": "wallet.cost",
-          "text": "Modelled across 150 countries, vegetarian and vegan patterns cost 21–34% less than the current typical diet in high-income countries; a low-meat flexitarian pattern about 14% less.",
+          "text": "Modeled across 150 countries, vegetarian and vegan patterns cost 21–34% less than the current typical diet in high-income countries; a low-meat flexitarian pattern about 14% less.",
           "cites": ["springmann2021"],
-          "strength": "modelling",
+          "strength": "modeling",
           "detail": "This models retail food prices only. It does not count your time, your kitchen, or whether the cheap options are stocked where you shop — all of which are real costs, and none of which show up in a price index."
         },
         {

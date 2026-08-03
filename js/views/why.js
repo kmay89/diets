@@ -39,7 +39,7 @@ export function render(root, { navigate }) {
       h('ul.tight',
         h('li', h('strong', 'Claims are data, not prose. '), 'Every factual sentence on this screen lives in a file with its sources attached. A claim without a source cannot be displayed.'),
         h('li', h('strong', 'Every source carries its caveat. '), 'A citation showing only the flattering half of a study borrows the authority of research while discarding what makes research trustworthy.'),
-        h('li', h('strong', 'Study types are labelled. '), 'A randomised trial and a modelling study do not deserve equal confidence, and an app that flattens the difference is misleading you politely.'),
+        h('li', h('strong', 'Study types are labeled. '), 'A randomized trial and a modeling study do not deserve equal confidence, and an app that flattens the difference is misleading you politely.'),
         h('li', h('strong', 'We quote ranges, not the most dramatic number in them. '), 'Where two credible estimates disagree, you get both.'),
         h('li', h('strong', 'Nothing here is medical advice. '), 'It is a cooking tool that takes the research seriously.')
       ),

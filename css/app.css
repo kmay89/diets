@@ -323,8 +323,97 @@ a { color: var(--green-600); }
 .input:focus-visible { outline: 2px solid var(--green-600); outline-offset: 1px; }
 .textarea { resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; }
 .input--name { font-weight: 600; }
-.range { width: 100%; accent-color: var(--green-700); }
-.range-legend { display: flex; justify-content: space-between; font-size: .75rem; color: var(--ink-faint); }
+/* ---------- slider ---------- */
+
+.range { display: flex; flex-direction: column; gap: 2px; }
+.range__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.range__label { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); }
+.range__value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  font-size: 1.02rem;
+  color: var(--green-600);
+}
+
+/* The track is drawn by the input itself so the fill lines up with the thumb
+   at every position. --fill is patched on input; nothing re-renders. */
+.range__track { position: relative; padding: 6px 0 2px; }
+
+.range__input {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;          /* a comfortable touch target around a thin track */
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  --fill: 0%;
+}
+.range__input:focus { outline: none; }
+
+/* Track — WebKit and Firefox name the same thing differently, and neither
+   accepts the other's selector in the same rule. */
+.range__input::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background:
+    linear-gradient(to right, var(--green-700) var(--fill), transparent var(--fill)),
+    var(--surface-2);
+  border: 1px solid var(--line);
+}
+.range__input::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.range__input::-moz-range-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--green-700);
+}
+
+.range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px; height: 24px;
+  margin-top: -9px;      /* centers the thumb on an 8px track */
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--green-700);
+  box-shadow: var(--shadow-lift);
+  transition: transform .12s var(--ease), box-shadow .12s var(--ease);
+}
+.range__input::-moz-range-thumb {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--green-700);
+  box-shadow: var(--shadow-lift);
+  transition: transform .12s var(--ease);
+}
+.range__input:active::-webkit-slider-thumb { transform: scale(1.14); }
+.range__input:active::-moz-range-thumb { transform: scale(1.14); }
+.range__input:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px var(--green-050), var(--shadow-lift); }
+.range__input:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px var(--green-050); }
+
+/* Ticks sit under the track and say, without a word, that this snaps. */
+.range__ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; pointer-events: none; }
+.range__tick {
+  position: absolute; top: 0;
+  width: 2px; height: 4px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: var(--line);
+  transition: background .18s var(--ease);
+}
+.range__tick.is-passed { background: var(--green-300); }
+/* The end ticks would otherwise hang half off each end of the track. */
+.range__tick:first-child { margin-left: 0; }
+.range__tick:last-child { margin-left: -2px; }
+
+.range__legend { display: flex; justify-content: space-between; font-size: .75rem; color: var(--ink-faint); }
 
 .field { display: flex; flex-direction: column; gap: 4px; }
 .field--inline { flex-direction: row; align-items: center; gap: 8px; }
@@ -466,6 +555,82 @@ a { color: var(--green-600); }
 .notes { margin: 0; }
 .notes dt { font-weight: 650; margin-top: 10px; font-size: .9rem; }
 .notes dd { margin: 2px 0 0; color: var(--ink-soft); font-size: .9rem; }
+
+/* ---------- the glance panel ----------
+ *
+ * One tone scale, used for every verdict on this page: green means the number
+ * is where you want it, amber means look, clay means look harder. The word is
+ * always printed next to the color — see nutrition-panel.js.
+ */
+.glance { display: grid; gap: var(--sp-4); margin-bottom: var(--sp-3); }
+@media (min-width: 640px) {
+  .glance { grid-template-columns: 190px 1fr; align-items: start; }
+  .glance__key { grid-column: 1 / -1; }
+}
+
+/* The dial */
+.dial { position: relative; display: grid; justify-items: center; }
+.dial__svg { width: 150px; height: 150px; transform: rotate(0deg); }
+.dial__track { stroke: var(--surface-2); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dial__track { stroke: #22302a; } }
+:root[data-theme="dark"] .dial__track { stroke: #22302a; }
+.dial__fill { stroke: var(--green-600); transition: stroke-dasharray .4s var(--ease); }
+.dial__fill--lighter { stroke: var(--green-300); }
+.dial__fill--bigger { stroke: var(--amber-500); }
+/* Where a meal of this kind usually lands — a notch to read against, not a
+   target to hit, so it reads as a scale marking rather than a goal. */
+.dial__mark { stroke: var(--ink); opacity: .38; }
+
+/* Centered over the ring, so the number reads as the ring's value. */
+.dial__center {
+  position: absolute; top: 75px; left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid; justify-items: center; pointer-events: none;
+}
+.dial__pct { font-size: 1.5rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.dial__of { font-size: .68rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .07em; }
+.dial__caption { display: grid; justify-items: center; text-align: center; gap: 1px; margin-top: 2px; }
+
+/* The traffic-light rows */
+.glance__rows { display: grid; gap: 9px; align-content: start; }
+.glance__heading {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .09em;
+  color: var(--ink-faint); margin: 4px 0 0;
+}
+.glance__heading:first-child { margin-top: 0; }
+
+.nut-row { display: grid; gap: 2px; }
+.nut-row__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.nut-row__name { font-size: .88rem; font-weight: 550; }
+.nut-row__amount { font-variant-numeric: tabular-nums; font-weight: 650; font-size: .95rem; }
+.nut-row__unit { font-size: .7rem; font-weight: 500; color: var(--ink-faint); margin-left: 1px; }
+
+.nut-row__bar { position: relative; height: 7px; }
+.nut-row__track {
+  height: 100%; border-radius: 999px; overflow: hidden;
+  background: var(--surface-2); border: 1px solid var(--line);
+}
+/* Where the plate itself sits. Stopping short of it means eating this way all
+   day still lands inside the target. Drawn outside the clipped track and
+   ringed in the surface color, so it reads over a fill or over the gap. */
+.nut-row__pace {
+  position: absolute; top: -3px; bottom: -3px;
+  width: 2px; margin-left: -1px;
+  background: var(--ink);
+  box-shadow: 0 0 0 1.5px var(--surface);
+  border-radius: 1px;
+}
+.nut-row__fill { height: 100%; border-radius: 999px; background: var(--ink-faint); transition: width .35s var(--ease); }
+.nut-row__foot { display: flex; justify-content: space-between; gap: 8px; font-size: .74rem; color: var(--ink-faint); }
+.nut-row__band { font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+
+.nut-row--good .nut-row__fill { background: var(--green-600); }
+.nut-row--good .nut-row__band { color: var(--green-600); }
+.nut-row--ok .nut-row__fill { background: var(--amber-500); }
+.nut-row--ok .nut-row__band { color: var(--amber-500); }
+.nut-row--watch .nut-row__fill { background: var(--clay-600); }
+.nut-row--watch .nut-row__band { color: var(--clay-600); }
+.nut-row--neutral .nut-row__band { color: var(--ink-faint); }
 
 .nutri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
 @media (min-width: 620px) { .nutri-grid { grid-template-columns: repeat(6, 1fr); } }
@@ -751,7 +916,7 @@ a { color: var(--green-600); }
 .evidence--meta-analysis { border-color: var(--green-300); color: var(--green-700); }
 .evidence--guideline,
 .evidence--regulatory { border-color: var(--ink-faint); color: var(--ink-soft); }
-.evidence--modelling,
+.evidence--modeling,
 .evidence--dataset { border-color: var(--amber-500); color: var(--amber-500); }
 .evidence--editorial { border-style: dashed; }
 
@@ -798,7 +963,7 @@ a { color: var(--green-600); }
 
 /* A card that happens to be a button. Without the reset it inherits the
  * platform button font and — with the app forced light on a device set to
- * dark — the platform button colour, which is white on white. */
+ * dark — the platform button color, which is white on white. */
 .upcoming {
   display: flex; align-items: center; gap: var(--sp-3);
   width: 100%;
@@ -956,7 +1121,7 @@ a { color: var(--green-600); }
   opacity: .7;
 }
 /* A recipe's ingredient rows align on the text baseline, which drops an image
-   below the line. Centre it against the row instead, like the checkbox. */
+   below the line. Center it against the row instead, like the checkbox. */
 .ing__main .food-icon { align-self: center; }
 
 /* Ticked off, already in the pantry, already have it: the row recedes and
