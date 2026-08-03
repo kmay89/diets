@@ -1,8 +1,8 @@
 {
-  "name": "Diets — ERRERLabs",
-  "short_name": "Diets",
+  "name": "Veg-Nourish — ERRERLabs",
+  "short_name": "Veg-Nourish",
   "description": "Roll dinner ideas, size portions to your household, tick off what is already in the pantry, and walk out with a shopping list in aisle order. Vegetarian base, omnivore fork in the road, heart-forward by default, works offline.",
-  "id": "/errerlabs-diets",
+  "id": "/veg-nourish",
   "start_url": "./index.html#/roll",
   "scope": "./",
   "display": "standalone",

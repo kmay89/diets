@@ -289,6 +289,52 @@ export async function shareList(list, { title = 'Shopping list' } = {}) {
   return 'copied';
 }
 
+/* ------------------------------------------------------------------ *
+ * Sharing a single recipe
+ * ------------------------------------------------------------------ */
+
+/**
+ * The public URL for a recipe.
+ *
+ * Built from the current origin rather than a hardcoded domain, so a share
+ * always points at the host the person is actually using — the live site, a
+ * Netlify deploy preview, or a laptop on the sofa. The /r/<slug>/ page carries
+ * the recipe's own preview card and metadata, which is what makes an iMessage
+ * or Slack link expand into something worth tapping. The app's own hash route
+ * cannot do that: a fragment never reaches the server, so every shared link
+ * would preview identically.
+ */
+export function recipeShareUrl(recipeId, { origin = location.origin } = {}) {
+  const slug = String(recipeId).replace(/^rec\./, '');
+  return `${origin.replace(/\/$/, '')}/r/${slug}/`;
+}
+
+/**
+ * Hand a recipe to the system share sheet — iMessage, Mail, Messages, whatever
+ * the device offers. Falls back to the clipboard where Web Share is missing
+ * (desktop Firefox, most desktop Chrome).
+ */
+export async function shareRecipe(recipe, { origin } = {}) {
+  const url = recipeShareUrl(recipe.id, origin ? { origin } : {});
+  const text = `${recipe.title} — ${recipe.blurb}`;
+
+  if (navigator.share) {
+    try {
+      // iOS builds its rich link preview from the URL, so keep the URL a
+      // separate field rather than pasting it into the text.
+      await navigator.share({ title: recipe.title, text, url });
+      return 'shared';
+    } catch (err) {
+      // A user closing the share sheet throws AbortError; that is not a failure.
+      if (err?.name === 'AbortError') return 'cancelled';
+      throw err;
+    }
+  }
+
+  await copyText(url);
+  return 'copied';
+}
+
 export async function copyText(text) {
   if (navigator.clipboard?.writeText) {
     await navigator.clipboard.writeText(text);

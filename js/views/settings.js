@@ -87,7 +87,7 @@ function view(draw, navigate) {
         h('button.btn', {
           type: 'button',
           onclick: () => {
-            downloadFile(exportData(), `diets-backup-${new Date().toISOString().slice(0, 10)}.json`, 'application/json');
+            downloadFile(exportData(), `veg-nourish-backup-${new Date().toISOString().slice(0, 10)}.json`, 'application/json');
             toast('Backup downloaded');
           }
         }, '⬇ Download a backup'),
@@ -126,7 +126,7 @@ function view(draw, navigate) {
 
     h('section.card.block',
       h('h2.block__title', 'About'),
-      h('p', 'Diets by ERRERLabs — a private, offline-first meal planner built around one idea: cook one dinner everybody can eat, and make the healthy version the one people actually want.'),
+      h('p', 'Veg-Nourish by ERRERLabs — a private, offline-first meal planner built around one idea: cook one dinner everybody can eat, and make the healthy version the one people actually want.'),
       h('p.muted.small', `Data: ${db.ingredients.length} ingredients, ${db.recipes.length} recipes, ${db.graph.counts.nodes} graph nodes, ${db.graph.counts.edges} edges.`),
       h('p.muted.small', db.nutrientNote),
       h('div.row-actions',

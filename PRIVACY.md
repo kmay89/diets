@@ -3,7 +3,7 @@
 **Short version: everything stays on your device. There is no account, no server, and no analytics.
 We cannot see your data because it never leaves your browser.**
 
-Last updated: 2026-08-03 · Applies to: Diets v1.1.0 (ERRERLabs)
+Last updated: 2026-08-03 · Applies to: Veg-Nourish v1.2.0 (ERRERLabs)
 
 ---
 
@@ -20,6 +20,7 @@ All of it lives in your browser's `localStorage` under a single key, `errerlabs.
 | Meal plan — recipes, servings, which night | The plan and shopping list screens |
 | Shopping list — hand-added items, what is ticked off | The list screen |
 | Cooking history — recipe ids you marked as cooked | Not repeating meals too soon |
+| A flag if you dismissed the install banner | Not asking again |
 
 That is the complete list. Health and household details are the most sensitive things here, which
 is exactly why they are stored the way they are: locally, in one place, under your control.
@@ -44,8 +45,12 @@ is exactly why they are stored the way they are: locally, in one place, under yo
    included, and nothing is sent unless you tap. Once you are on their site, their privacy policy
    applies, not this one.
 4. **Only if you use them:** *Email* and *Text* hand the list to your own mail or messaging app;
-   *Send to my list app* uses your device's share sheet. In every case the data goes where you send
-   it, chosen by you at that moment.
+   *Send to my list app* and *Share* on a recipe use your device's share sheet. In every case the
+   data goes where you send it, chosen by you at that moment.
+5. **Sharing a recipe** sends nothing but a link. The messaging app you send it to — iMessage,
+   Slack, WhatsApp — will fetch that page itself to build its preview card, the same as any link.
+   The page it fetches is a public recipe page; it contains no information about you, your
+   household or your plan.
 
 ## Who else can see it
 
@@ -65,7 +70,7 @@ Settings → *Download a backup* first, which writes a JSON file to your device 
 ## Data your browser stores on its own
 
 The service worker keeps a cache of the app files and recipe data (a Cache Storage entry named
-`errerlabs-diets-v1.1.0`). It contains only the app itself — no personal data — and is cleared with
+`errerlabs-diets-v1.2.0`). It contains only the app itself — no personal data — and is cleared with
 your site data.
 
 ## Children
@@ -76,7 +81,7 @@ terms as everything else.
 
 ## Hosting
 
-The public copy at **vegeat.netlify.app** is served by Netlify as static files. Like any web host,
+The public copy at **veg-nourish.com** is served by Netlify as static files. Like any web host,
 Netlify can see ordinary server request logs — IP address, time, and which files were requested —
 for the initial download of the app. It never sees your household, your plan or your list, because
 those are never sent anywhere. After the first visit the service worker serves the app from your

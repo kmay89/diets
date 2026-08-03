@@ -1,12 +1,12 @@
-# Netlify configuration — vegeat.netlify.app
+# Netlify configuration — veg-nourish.com
 #
-# Diets is a static site: no bundler, no framework, no server. The "build" step
+# Veg-Nourish is a static site: no bundler, no framework, no server. The "build" step
 # only regenerates the food graph and validates the data, so a broken recipe or
 # a bad nutrition figure fails the deploy instead of going live.
 
 [build]
   publish = "."
-  command = "npm run build:graph && npm run verify"
+  command = "npm run build:graph && npm run build:share && npm run verify"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -15,10 +15,10 @@
 
 # Deploy previews and branch builds get the same checks as production.
 [context.deploy-preview]
-  command = "npm run build:graph && npm run verify"
+  command = "npm run build:graph && npm run build:share && npm run verify"
 
 [context.branch-deploy]
-  command = "npm run build:graph && npm run verify"
+  command = "npm run build:graph && npm run build:share && npm run verify"
 
 # ---------------------------------------------------------------------------
 # Headers
@@ -70,6 +70,22 @@
   for = "/icons/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# The per-recipe preview images. Link previews are cached hard by iMessage,
+# Slack and friends, so these are treated as immutable and a changed card gets
+# a changed filename via its slug.
+[[headers]]
+  for = "/icons/cards/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/jpeg"
+
+# Shared recipe pages: revalidate, so an edited recipe updates the card and the
+# preview text the next time a crawler looks.
+[[headers]]
+  for = "/r/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # ---------------------------------------------------------------------------
 # Redirects

@@ -11,7 +11,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { recipeNutrition, heartScore, gramsFor, NUTRIENT_KEYS } from '../js/nutrition.js';
@@ -171,6 +171,50 @@ for (const [id, layout] of Object.entries(aislesFile.storeLayouts)) {
 const used = new Set(recipes.flatMap(r => [...r.ingredients, ...(r.omnivore?.add || []), ...(r.vegetarianSwap?.add || [])]).map(l => l.ing));
 const unused = ingredients.filter(i => !used.has(i.id));
 if (unused.length) warn(`${unused.length} ingredients are in the database but no recipe uses them (fine — they are there for the pantry and substitutions)`);
+
+/* ---------- the public identity stays consistent ---------- */
+
+const site = read('site.config.json');
+const origin = site.url.replace(/\/$/, '');
+
+if (!/^https:\/\/[a-z0-9.-]+$/i.test(origin)) {
+  err(`site.config.json url should be an https origin with no trailing slash, got "${site.url}"`);
+}
+
+const indexHtml = readFileSync(join(root, 'index.html'), 'utf8');
+const robots = readFileSync(join(root, 'robots.txt'), 'utf8');
+const sitemapXml = readFileSync(join(root, 'sitemap.xml'), 'utf8');
+
+// A canonical or og:url pointing at a host that is not the live one is how a
+// rebrand ships with broken link previews, so it is worth an actual check.
+for (const [label, pattern] of [
+  ['canonical', /<link rel="canonical" href="([^"]+)"/],
+  ['og:url', /<meta property="og:url" content="([^"]+)"/],
+  ['og:image', /<meta property="og:image" content="([^"]+)"/]
+]) {
+  const found = indexHtml.match(pattern)?.[1];
+  if (!found) err(`index.html has no ${label}`);
+  else if (!found.startsWith(origin)) err(`index.html ${label} is "${found}", but site.config.json says ${origin}`);
+}
+
+if (!robots.includes(`${origin}/sitemap.xml`)) err(`robots.txt does not point at ${origin}/sitemap.xml`);
+if (!sitemapXml.includes(`<loc>${origin}/</loc>`)) err(`sitemap.xml does not list ${origin}/`);
+
+// Every recipe needs a share page and a preview card, or a shared link 404s
+// and the iMessage preview falls back to a bare URL.
+for (const r of recipes) {
+  const slug = r.id.replace(/^rec\./, '');
+  const page = join(root, 'r', slug, 'index.html');
+  const card = join(root, 'icons/cards', `${slug}.jpg`);
+  if (!existsSync(page)) err(`missing share page for ${r.id} — run npm run build:share`);
+  else {
+    const html = readFileSync(page, 'utf8');
+    if (!html.includes(`${origin}/r/${slug}/`)) err(`share page for ${r.id} does not carry the canonical origin`);
+    if (!html.includes('og:image')) err(`share page for ${r.id} has no og:image`);
+  }
+  if (!existsSync(card)) warn(`no preview card for ${r.id} — run npm run build:cards (needs a headless browser)`);
+  if (!sitemapXml.includes(`${origin}/r/${slug}/`)) err(`sitemap.xml is missing ${r.id} — run npm run build:share`);
+}
 
 /* ---------- report ---------- */
 

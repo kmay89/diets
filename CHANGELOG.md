@@ -4,9 +4,48 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] — 2026-08-03
+
+Renamed to **Veg-Nourish** and moved to [veg-nourish.com](https://veg-nourish.com).
+
+### Added
+- **A shareable page per recipe.** `/r/<slug>/` carries that recipe's own Open Graph and Twitter
+  metadata, its own 1200x630 preview image, and schema.org `Recipe` structured data — so a link
+  dropped into iMessage, Slack or WhatsApp expands into a card with the recipe's title, timing and
+  numbers instead of a bare URL. Hash routes could never do this: a fragment is not sent to the
+  server, so every shared link previewed identically.
+- The whole recipe is rendered into that page's HTML, so it is readable with no JavaScript at all.
+  Visitors who already use the app are forwarded straight to it (`#/recipe/<id>`); everyone else
+  gets the page and an invitation.
+- **Share** button on the recipe screen, using the Web Share API where it exists and the clipboard
+  where it does not. Share links are built from the current origin, so they work from the live site,
+  a deploy preview or a laptop.
+- 44 per-recipe preview cards (`npm run build:cards`) and generated pages plus sitemap
+  (`npm run build:share`).
+- `site.config.json` — the one place the public identity lives. Change the URL there, run
+  `npm run build`, and every page, card, sitemap entry and canonical follows; `npm run verify` fails
+  if the hand-maintained files disagree.
+- Service worker now handles a shared recipe link opened offline by bouncing into the app's route
+  for that recipe, rather than dropping the visitor on the home screen.
+- CI checks that the generated pages are committed and current, that every recipe has a card, and
+  that the share pages stay CSP-clean.
+
+### Changed
+- App name, manifest, documentation and social card now read Veg-Nourish; the canonical origin is
+  `https://veg-nourish.com`.
+- The heart-score badge appears on a share card only when it is an A or a B. The score is an
+  internal sorting heuristic with a page of caveats attached, and a letter on a public card would
+  read as a verdict to someone who never sees that page.
+- Netlify build now runs `build:share` too, so an edited recipe cannot ship with a stale share page.
+- Service worker cache bumped to `v1.2.0`.
+
+### Unchanged on purpose
+- The `localStorage` key stays `errerlabs.diets.v1`. Renaming it would silently wipe every existing
+  household's plan, pantry and preferences.
+
 ## [1.1.0] — 2026-08-03
 
-Went live at [vegeat.netlify.app](https://vegeat.netlify.app).
+Went live at [veg-nourish.com](https://veg-nourish.com).
 
 ### Added
 - `netlify.toml`: build runs `build:graph` + `verify`, so invalid data fails the deploy rather than
@@ -59,5 +98,6 @@ First release.
 - **Privacy** — all state local to the device; JSON backup and restore; one-tap erase.
 - Data verification (`npm run verify`) and unit tests (`npm test`).
 
+[1.2.0]: https://github.com/kmay89/diets/releases/tag/v1.2.0
 [1.1.0]: https://github.com/kmay89/diets/releases/tag/v1.1.0
 [1.0.0]: https://github.com/kmay89/diets/releases/tag/v1.0.0

@@ -1,4 +1,4 @@
-# Diets
+# Veg-Nourish
 
 **Roll dinner. Cook once. Feed everyone.**
 
@@ -7,7 +7,7 @@ else is not, someone in the family is managing heart disease, and nobody has nin
 Tuesday. Every dinner has a vegetarian base the whole table eats and a **fork in the road** — one
 extra pan for the omnivores — so nothing gets cooked twice.
 
-**Live: [vegeat.netlify.app](https://vegeat.netlify.app)** — open it on your phone and use
+**Live: [veg-nourish.com](https://veg-nourish.com)** — open it on your phone and use
 **Add to Home Screen**. After the first load it runs entirely offline.
 
 Built by [ERRERLabs](https://github.com/kmay89). MIT licensed. No account, no server, no analytics.
@@ -51,6 +51,12 @@ push it straight into AnyList, Reminders, Keep or a text message via the system 
 **🌿 Grown here.** A zone 6a planting calendar for Northeast Ohio: what to sow this month, what is
 coming out of the ground, and which recipe to cook with it.
 
+**📤 Share a recipe and it looks like something.** Every recipe has a real page at
+`/r/<slug>/` with its own preview card, its own description and schema.org Recipe data — so a link
+dropped into iMessage, Messages, Slack or WhatsApp expands into a card with that recipe's title,
+timing and numbers, not a bare URL. Tapping it opens a readable page that needs no app and no
+JavaScript; if you already use the app, it deep-links you straight to that recipe instead.
+
 **📴 Yours.** Everything is in your browser's local storage. There is no account and nothing is
 uploaded. Back it up to a JSON file whenever you like.
 
@@ -66,7 +72,10 @@ index.html              app shell
 404.html                a friendly dead end that points back into the app
 manifest.webmanifest    PWA manifest (install, shortcuts, icons)
 netlify.toml            hosting: build checks, headers, CSP, caching, redirects
-robots.txt sitemap.xml  crawler basics
+robots.txt sitemap.xml  crawler basics (sitemap is generated)
+site.config.json        name, tagline and canonical URL — the one place identity lives
+r/<slug>/index.html     generated — one shareable page per recipe
+icons/cards/<slug>.jpg  generated — one link-preview image per recipe
 sw.js                   service worker — precaches everything, offline-first
 css/app.css             one stylesheet, light + dark + print
 js/
@@ -89,8 +98,10 @@ tools/
   build-graph.mjs       compiles the graph from the source data
   verify-data.mjs       integrity + plausibility checks
   make-icons.py         renders the PNG icons with no image library
-  social-card.html      the link-preview card design
+  build-share-pages.mjs generates /r/<slug>/ pages and the sitemap
+  social-card.html      the site-wide link-preview card design
   make-social-card.mjs  renders that card to a PNG (needs a headless browser)
+  make-recipe-cards.mjs renders the 44 per-recipe cards (needs a headless browser)
 test/                   unit tests for the math
 ```
 
@@ -161,13 +172,14 @@ sources. The rest of the app has no geography baked in.
 ## Deploying
 
 The site is static — every file in the repo root is the site. It is hosted on Netlify at
-[vegeat.netlify.app](https://vegeat.netlify.app), deploying from `main`.
+[veg-nourish.com](https://veg-nourish.com), deploying from `main`.
 
 `netlify.toml` carries the whole configuration:
 
-- **Build**: `npm run build:graph && npm run verify`. There is no bundler; the "build" regenerates
-  the food graph and validates the data, so a bad recipe or an impossible nutrition figure fails the
-  deploy instead of going live. Deploy previews and branch builds run the same checks.
+- **Build**: `npm run build:graph && npm run build:share && npm run verify`. There is no bundler;
+  the "build" regenerates the food graph and the per-recipe share pages, then validates everything,
+  so a bad recipe or an impossible nutrition figure fails the deploy instead of going live. Deploy
+  previews and branch builds run the same checks.
 - **Headers**: a strict `Content-Security-Policy` (`default-src 'self'`, no `unsafe-inline`
   anywhere), `nosniff`, `frame-ancestors 'none'`, HSTS, and a `Permissions-Policy` that turns off
   every sensor. The app loads nothing from any other origin, so the policy can be this tight and
@@ -181,11 +193,26 @@ To host it somewhere else, serve the repo root as a static directory over HTTPS 
 require a secure context, and nothing else is needed. `SECURITY.md` has an equivalent CSP for other
 servers.
 
-The link-preview card is a committed PNG. Regenerate it after editing `tools/social-card.html`:
+### Link previews
+
+Hash routes never reach the server, so `/#/recipe/...` cannot carry per-recipe metadata — every
+shared link would preview identically. Instead `npm run build:share` writes a real page per recipe
+at `/r/<slug>/`, each with its own Open Graph tags, its own preview image and schema.org Recipe
+data, and the whole recipe rendered into the HTML so it reads fine with no JavaScript.
+
+The images are committed JPEGs (about 54 KB each). Regenerate them, and the site-wide card, after
+changing a recipe or the card design:
 
 ```
-npm i -D playwright && npm run build:social
+npm i -D playwright
+npm run build:cards      # the 44 per-recipe cards
+npm run build:social     # the site-wide card, from tools/social-card.html
 ```
+
+**Changing the domain** is one edit: `site.config.json`, then `npm run build` — every generated
+page, card, sitemap entry and canonical URL follows, and `npm run verify` fails if the
+hand-maintained files disagree. Whatever host it names must actually be serving the site, because
+a link preview fetches `og:image` from that origin.
 
 ## Browser support
 

@@ -31,6 +31,30 @@ jobs:
             exit 1
           fi
 
+      - name: Rebuild the share pages and check they are committed
+        run: |
+          node tools/build-share-pages.mjs
+          if ! git diff --quiet -- r sitemap.xml; then
+            echo "::error::Share pages or the sitemap are stale. Run 'npm run build:share' and commit the result."
+            git diff --stat -- r sitemap.xml
+            exit 1
+          fi
+
+      - name: Every recipe has a preview card
+        run: |
+          missing=0
+          for id in $(node -e "
+            const fs=require('fs');
+            const r=[...JSON.parse(fs.readFileSync('data/recipes.dinners.json')).recipes,
+                     ...JSON.parse(fs.readFileSync('data/recipes.daily.json')).recipes];
+            console.log(r.map(x=>x.id.replace(/^rec\./,'')).join(' '));
+          "); do
+            if [ ! -f "icons/cards/$id.jpg" ]; then
+              echo "::error::no preview card for $id — run 'npm run build:cards'"; missing=1
+            fi
+          done
+          exit $missing
+
       - name: Check every precached file exists
         run: |
           missing=0
@@ -45,9 +69,12 @@ jobs:
           # The production Content-Security-Policy has no 'unsafe-inline'. An
           # inline handler or a <style> block would break the live site while
           # working perfectly on a local server, so catch it here instead.
+          # A <script type="application/ld+json"> block is data, not code: it is
+          # never executed, so script-src does not apply to it. Everything else
+          # inline is a real violation.
           bad=0
-          for f in index.html 404.html; do
-            if grep -nE '<(script|style)(>|[^>]*>[^<])' "$f" | grep -v 'src='; then
+          for f in index.html 404.html r/lentil-bolognese/index.html; do
+            if grep -nE '<(script|style)(>|[^>]*>[^<])' "$f" | grep -v 'src=' | grep -v 'application/ld+json'; then
               echo "::error::$f has an inline <script> or <style> block; the CSP forbids it"; bad=1
             fi
             if grep -nE '\son[a-z]+="' "$f"; then
