@@ -8,13 +8,14 @@
  */
 
 import { h, mount, chip, pill, toast, minutes, scoreBadge, meter, titleCase, debounce, sheet, plural } from '../ui.js';
-import { getDb, nutritionFor, heartFor, substitutesFor, searchRecipes, pantryCoverage } from '../data.js';
-import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked } from '../store.js';
+import { getDb, nutritionFor, heartFor, searchRecipes, pantryCoverage } from '../data.js';
+import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
 import { foodIcon } from '../food-icon.js';
+import { withSwaps, swapCount, substitutionsFor, swappedLine } from '../swaps.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -22,22 +23,27 @@ import { foodIcon } from '../food-icon.js';
 
 export function render(root, { navigate, params }) {
   const { recipeIndex } = getDb();
-  const recipe = recipeIndex.get(params.id);
-  if (!recipe) {
+  const base = recipeIndex.get(params.id);
+  if (!base) {
     mount(root, h('section.view', h('p.empty', 'That recipe is not in the collection.'),
       h('button.btn', { onclick: () => navigate('#/browse') }, 'Browse everything')));
     return;
   }
 
   const state = getState();
-  const equiv = servingEquivalents(state.household.members, recipe.course);
+  const equiv = servingEquivalents(state.household.members, base.course);
   let servings = Math.max(1, Math.ceil(equiv.total));
-  let withOmnivore = !!recipe.omnivore;
-  let withVegSwap = !!recipe.vegetarianSwap;
+  let withOmnivore = !!base.omnivore;
+  let withVegSwap = !!base.vegetarianSwap;
 
   const draw = () => mount(root, view());
   const view = () => {
     const st = getState();
+    // Every number on this page — the ingredient amounts, the nutrition panel,
+    // the heart score, the pantry count — reads the swapped recipe, so a swap
+    // is a real change to the dish rather than a note beside it.
+    const recipe = withSwaps(base, st.swaps);
+    const swapped = swapCount(base, st.swaps);
     const scale = servings / recipe.servings;
     const nut = nutritionFor(recipe, { withOmnivore: false, servings: recipe.servings });
     const nutOmni = recipe.omnivore ? nutritionFor(recipe, { withOmnivore: true, servings: recipe.servings }) : null;
@@ -69,6 +75,18 @@ export function render(root, { navigate, params }) {
 
       cov.total
         ? h('p.muted.small', `You already have ${cov.have} of ${cov.total} ingredients.`)
+        : null,
+
+      // Swaps change the numbers on this page, so the page says so rather than
+      // letting a nutrition panel quietly describe a dish nobody is cooking.
+      swapped
+        ? h('div.swap-banner',
+            h('span', `${plural(swapped, 'ingredient')} swapped. Everything below — amounts, nutrition, the shopping list — follows your version.`),
+            h('button.btn.btn--small', {
+              type: 'button',
+              onclick: () => { clearSwaps(base.id); play('uncheck'); toast('Back to the recipe as written'); draw(); }
+            }, 'Put them back')
+          )
         : null,
 
       ingredientList(recipe, st, scale, draw),
@@ -146,6 +164,68 @@ function servingControl(recipe, servings, equiv, onchange) {
   );
 }
 
+/**
+ * The sheet behind the swap button.
+ *
+ * The old version listed substitute names and did nothing, which made "swap" a
+ * label for a fact rather than a verb. Every option now shows the amount you
+ * would actually use, and choosing one rewrites the line — and the nutrition,
+ * and the shopping list — until you put it back.
+ */
+function openSwapSheet(recipeId, line, scale, draw) {
+  const { ingIndex, recipeIndex } = getDb();
+  const originalId = line.swappedFrom || line.ing;
+  const original = ingIndex.get(originalId);
+  const source = originalLine(recipeId, originalId);
+  if (!original || !source) return;
+
+  const current = line.swappedFrom ? line.ing : null;
+  const options = substitutionsFor(originalId, { diet: recipeIndex.get(recipeId)?.diet || [] });
+
+  const amountFor = (subId) => {
+    const next = swappedLine(source, subId);
+    return next ? formatQty(next.qty * scale, next.unit) : null;
+  };
+
+  const choose = (subId) => {
+    setSwap(recipeId, originalId, subId);
+    play(subId ? 'check' : 'uncheck');
+    dlg.close();
+    draw();
+    toast(subId ? `Using ${ingIndex.get(subId).name} instead` : `Back to ${original.name}`);
+  };
+
+  const row = (label, amount, note, { on, onclick }) =>
+    h('button', { type: 'button', class: `swap-option ${on ? 'is-on' : ''}`, onclick },
+      h('span.swap-option__head',
+        h('span.swap-option__name', label),
+        amount ? h('span.swap-option__qty', amount) : null,
+        on ? h('span.pill.pill--green', 'in use') : null
+      ),
+      note ? h('span.swap-option__note', note) : null
+    );
+
+  const dlg = sheet(`Instead of ${original.name}`,
+    h('div',
+      h('p.muted.small',
+        'Amounts are converted, not copied — a few of these are nowhere near one for one. ',
+        'Choosing one changes this recipe, its nutrition and your shopping list.'),
+      h('div.swap-options',
+        row(original.name, formatQty(source.qty * scale, source.unit), 'The recipe as written.',
+          { on: !current, onclick: () => choose(null) }),
+        ...options.map(o => row(o.item.name, amountFor(o.item.id), o.note,
+          { on: current === o.item.id, onclick: () => choose(o.item.id) }))
+      )
+    )
+  );
+}
+
+/** The recipe's own line for an ingredient, before any swap was applied. */
+function originalLine(recipeId, ingredientId) {
+  const { recipeIndex } = getDb();
+  return recipeIndex.get(recipeId)?.ingredients.find(l => l.ing === ingredientId) || null;
+}
+
 function ingredientList(recipe, state, scale, draw) {
   const { ingIndex } = getDb();
   return block('Ingredients',
@@ -155,9 +235,10 @@ function ingredientList(recipe, state, scale, draw) {
         if (!item) return null;
         const have = !!state.pantry[line.ing];
         const disliked = state.likes[line.ing] === -1;
-        const subs = substitutesFor(line.ing);
+        const swapFrom = line.swappedFrom ? ingIndex.get(line.swappedFrom) : null;
+        const canSwap = substitutionsFor(line.swappedFrom || line.ing, { diet: recipe.diet || [] }).length > 0;
 
-        return h('li', { class: `ing ${have ? 'is-have' : ''}` },
+        return h('li', { class: `ing ${have ? 'is-have' : ''} ${swapFrom ? 'is-swapped' : ''}` },
           h('label.ing__main',
             h('input', {
               type: 'checkbox', checked: have,
@@ -168,16 +249,22 @@ function ingredientList(recipe, state, scale, draw) {
             h('span.ing__qty', formatQty(line.qty * scale, line.unit)),
             h('span.ing__name', item.name),
             line.prep ? h('span.ing__prep', `, ${line.prep}`) : null,
-            line.optional ? h('span.ing__opt', ' (optional)') : null
+            line.optional ? h('span.ing__opt', ' (optional)') : null,
+            swapFrom ? h('span.ing__swapped', ` — instead of ${swapFrom.name}`) : null
           ),
           h('div.ing__meta',
             item.heartNote ? h('button.tag-btn', { type: 'button', title: item.heartNote, onclick: () => sheet(item.name, h('p', item.heartNote)) }, '❤ note') : null,
             item.tips ? h('button.tag-btn', { type: 'button', onclick: () => sheet(item.name, h('p', item.tips)) }, '💡 tip') : null,
-            subs.length ? h('button.tag-btn', {
+            // Almost every ingredient has a substitute, so the unswapped state is
+            // a quiet icon rather than a labelled pill — seventeen copies of
+            // "use something else" is a wall. Swapped, it says so in words.
+            canSwap ? h('button', {
               type: 'button',
-              onclick: () => sheet(`Instead of ${item.name}`,
-                h('ul.tight', ...subs.map(s => h('li', s.name))))
-            }, '↔ swap') : null,
+              class: `tag-btn ${swapFrom ? 'is-on' : 'tag-btn--icon'}`,
+              title: swapFrom ? `Using ${item.name} instead of ${swapFrom.name}` : `Use something else instead of ${item.name}`,
+              'aria-label': swapFrom ? `Change what replaces ${swapFrom.name}` : `Use something else instead of ${item.name}`,
+              onclick: () => openSwapSheet(recipe.id, line, scale, draw)
+            }, swapFrom ? '↔ swapped' : '↔') : null,
             disliked ? h('span.pill.pill--warn', 'you marked this never') : null
           )
         );

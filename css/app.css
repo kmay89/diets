@@ -869,3 +869,75 @@ a { color: var(--green-600); }
 .pantry-item.is-have .food-icon { opacity: .45; }
 
 @media print { .food-icon { display: none; } }
+
+/* ---------- ingredient swaps ---------- */
+
+.swap-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border: 1px solid var(--green-300);
+  border-radius: var(--radius-sm);
+  background: var(--green-050);
+  font-size: .86rem;
+}
+.swap-banner span { flex: 1; min-width: 180px; }
+
+.ing.is-swapped .ing__name { font-weight: 600; }
+.ing__swapped { color: var(--ink-faint); font-size: .84rem; }
+.tag-btn.is-on { border-color: var(--green-600); color: var(--green-700); font-weight: 600; }
+
+.swap-options { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.swap-option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .16s var(--ease), background .16s var(--ease);
+}
+.swap-option:hover { border-color: var(--green-300); }
+.swap-option.is-on { border-color: var(--green-600); background: var(--green-050); }
+.swap-option__head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.swap-option__name { font-weight: 600; }
+.swap-option__qty { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.swap-option__note { color: var(--ink-soft); font-size: .84rem; line-height: 1.45; }
+
+/* ---------- the taste editor ---------- */
+
+.taste__clear { margin-left: 10px; }
+.taste-aisles { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.taste-aisle { border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+.taste-aisle__head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 11px 13px;
+  border: none;
+  background: var(--surface-2);
+  color: var(--ink);
+  font: inherit;
+  font-size: .92rem;
+  text-align: left;
+  cursor: pointer;
+  min-height: 46px;
+}
+.taste-aisle__head:hover { background: var(--green-050); }
+.taste-aisle__icon { font-size: 1.05rem; line-height: 1; }
+.taste-aisle__name { font-weight: 600; flex: 1; min-width: 0; }
+.taste-aisle__count { color: var(--ink-faint); font-size: .82rem; font-variant-numeric: tabular-nums; }
+.taste-aisle__chev { color: var(--ink-faint); font-size: .8rem; }
+.taste-aisle .chip-row { padding: 12px 13px 14px; }
+.chip--taste { display: inline-flex; align-items: center; gap: 6px; }
+.tag-btn--icon { padding-inline: 9px; color: var(--ink-faint); }
+.tag-btn--icon:hover { color: var(--green-700); }
