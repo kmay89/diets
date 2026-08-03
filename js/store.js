@@ -31,6 +31,9 @@ function defaultState() {
     },
     prefs: {
       heartMode: true,
+      /** Roll for the crave list instead of the heart list. Off by default,
+       *  and never sticky across sessions in spirit — it is a Friday switch. */
+      treatNight: false,
       maxActiveMin: 30,
       kidFriendlyOnly: false,
       seasonAware: true,

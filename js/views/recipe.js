@@ -310,6 +310,7 @@ let browseQuery = '';
 let browseCourse = 'all';
 let browseSort = 'heart';
 let browseOccasion = null;
+let browseCrave = false;
 
 export function renderBrowse(root, { navigate }) {
   // A link like #/browse?occasion=thanksgiving arrives from the roll screen.
@@ -325,6 +326,7 @@ export function renderBrowse(root, { navigate }) {
     let list = searchRecipes(browseQuery);
     if (browseCourse !== 'all') list = list.filter(r => r.course === browseCourse);
     if (browseOccasion) list = list.filter(r => (r.occasions || []).includes(browseOccasion));
+    if (browseCrave) list = list.filter(r => (r.tags || []).includes('crave'));
 
     list = [...list].sort((a, b) => {
       if (browseSort === 'time') return a.activeMin - b.activeMin;
@@ -367,8 +369,23 @@ export function renderBrowse(root, { navigate }) {
         ),
         h('div.chip-row.chip-row--tight',
           ...[['heart', 'Heart score'], ['time', 'Fastest'], ['name', 'A-Z']].map(([k, label]) =>
-            chip(label, { on: browseSort === k, onclick: () => { browseSort = k; draw(); } }))
-        )
+            chip(label, { on: browseSort === k, onclick: () => { browseSort = k; draw(); } })),
+          // The crave list sorted by heart score would bury itself, so this
+          // flips the sort to A-Z on the way in unless you have chosen one.
+          chip('🍯 Lick the plate', {
+            on: browseCrave,
+            onclick: () => {
+              browseCrave = !browseCrave;
+              if (browseCrave && browseSort === 'heart') browseSort = 'name';
+              draw();
+            }
+          })
+        ),
+        browseCrave
+          ? h('p.fine-print.filters__note',
+              'The most delicious things here, chosen for that and nothing else. ',
+              'Every one still shows its heart score, and the ones that score badly say why on the recipe.')
+          : null
       ),
       h('div.card-grid',
         ...list.map(r => {

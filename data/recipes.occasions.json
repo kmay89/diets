@@ -1032,6 +1032,466 @@
       "garden": "Asparagus in late April and peas in June are the two crops that announce spring here.",
       "leftovers": "2 days. Re-crisp in the oven; do not microwave a tart.",
       "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.whipped-feta-hot-honey",
+      "title": "Whipped Feta with Hot Honey and Pistachios",
+      "blurb": "Feta and yogurt beaten until it turns into something closer to a cloud, then flooded with warm chile honey. It takes eight minutes and it is always the first bowl to empty.",
+      "cuisine": "greek",
+      "course": "snack",
+      "servings": 8,
+      "activeMin": 10,
+      "totalMin": 10,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "game-day",
+        "potluck",
+        "picnic",
+        "new-year",
+        "birthday",
+        "cookout"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "make-ahead",
+        "crowd-pleaser",
+        "no-cook"
+      ],
+      "equipment": [
+        "food processor"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 8,
+          "unit": "oz",
+          "prep": "crumbled"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.honey",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.pistachios",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.mint",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.pita.wholewheat",
+          "qty": 6,
+          "unit": "each",
+          "prep": "cut in wedges and toasted"
+        }
+      ],
+      "steps": [
+        "Put the feta, yogurt, olive oil, lemon juice and zest, garlic clove and pepper in a food processor and run it for a full 2 minutes, scraping down twice.",
+        "Two minutes is longer than feels necessary and it is the whole recipe. Under-processed it is a dip; properly whipped it is aerated and holds a swoosh.",
+        "Warm the honey with the pepper flakes in a small pan or 20 seconds in the microwave, just enough to loosen it and let the chile bloom.",
+        "Spread the whipped feta across a shallow plate with the back of a spoon, leaving ridges. Ridges catch honey; a flat surface lets it run to the edge.",
+        "Pour the hot honey over the middle, scatter the pistachios and mint, and serve with warm pita."
+      ],
+      "kidTweak": "Leave the pepper flakes out of half the honey. Plain honey over whipped feta with pita is a genuinely good kid snack — it reads as cream cheese.",
+      "restaurantTouch": "Chill the plate first. The honey sets slightly where it hits the cold feta and stays in a pool instead of sliding off.",
+      "garden": "Mint is unstoppable here — grow it in a sunken pot so it cannot run. One plant covers a summer of this.",
+      "leftovers": "The whipped feta keeps 5 days and firms up in the fridge; let it sit out 20 minutes and stir before serving. Add honey fresh each time.",
+      "prepAhead": "Whip it up to two days ahead. Assembly at the party is 60 seconds.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.skillet-garlic-bread",
+      "title": "Skillet Garlic Bread with a Parmesan Crust",
+      "blurb": "Garlic butter worked into a split baguette, then the cut face pressed into parmesan and crisped in a skillet until it forms a lacy golden crust. It is not the garlic bread from the freezer aisle.",
+      "cuisine": "italian-american",
+      "course": "side",
+      "servings": 8,
+      "activeMin": 12,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "potluck",
+        "game-day",
+        "winter-holidays",
+        "birthday"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "crowd-pleaser",
+        "budget"
+      ],
+      "equipment": [
+        "large skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.baguette",
+          "qty": 1,
+          "unit": "each",
+          "prep": "split lengthwise"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 5,
+          "unit": "tbsp",
+          "prep": "softened"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "finely chopped"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "finely grated"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "tsp_zest",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Mash the softened butter with the grated garlic, parsley, pepper flakes, salt and lemon zest. Use raw grated garlic, not powder — the point of this is that it is sharp.",
+        "Spread it thickly over both cut faces of the baguette, right to the edges.",
+        "Scatter the parmesan over a plate and press each buttered face down into it so the cheese sticks in a solid layer.",
+        "Heat the olive oil in a large skillet over medium. Lay the halves cheese side down and press them flat with a spatula or a second pan.",
+        "Cook 4-6 minutes without moving them. You are waiting for the parmesan to melt, then fry, then set into a crust. Lift a corner at 4 minutes to check — it should be lace-patterned and deep gold.",
+        "Flip and warm the crust side 2 minutes. Cut into thick pieces with a serrated knife and serve immediately, cheese side up."
+      ],
+      "kidTweak": "Skip the pepper flakes and cut it into short fingers. This disappears faster than anything else at a table with kids at it.",
+      "restaurantTouch": "Finish with a scatter of parmesan and parsley over the hot crust the moment it comes out of the pan, so a little melts and the rest stays raw and green.",
+      "garden": "Flat-leaf parsley is a biennial that overwinters here under mulch and gives you an early spring crop before anything else is up.",
+      "leftovers": "Best within the hour. Leftovers make excellent croutons — cube them and toast at 375°F for 8 minutes.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tahini-chocolate-chip-cookies",
+      "title": "Salted Tahini Chocolate Chip Cookies",
+      "blurb": "Tahini gives these the savoury, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
+      "cuisine": "american",
+      "course": "dessert",
+      "servings": 20,
+      "activeMin": 20,
+      "totalMin": 70,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "bake-sale",
+        "potluck",
+        "birthday",
+        "new-baby",
+        "winter-holidays"
+      ],
+      "tags": [
+        "crave",
+        "baking",
+        "make-ahead",
+        "crowd",
+        "freezer"
+      ],
+      "equipment": [
+        "bowl",
+        "sheet pans"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "softened"
+        },
+        {
+          "ing": "ing.tahini",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "well stirred"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 1.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flour.wholewheat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingsoda",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "chopped into rough shards"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "toasted"
+        }
+      ],
+      "steps": [
+        "Beat the butter, tahini and both sugars together for a full 3 minutes until pale and fluffy. Stir the tahini in its jar first — the separated oil on top is not optional to mix back in.",
+        "Beat in the egg and vanilla until smooth.",
+        "Whisk both flours, baking soda and salt in a separate bowl, then fold them in until just combined. Stop the moment the flour disappears.",
+        "Fold in the chopped chocolate. Chopping a bar rather than using chips gives you shards and puddles instead of uniform dots, which is most of the difference between a homemade cookie and a store one.",
+        "Chill the dough at least 45 minutes, or overnight. Cold dough spreads less and browns better, and the flavour deepens noticeably by the next day.",
+        "Heat the oven to 350°F. Scoop rounded tablespoons onto lined sheets, well apart. Press a few sesame seeds and a pinch of flaky salt onto each top.",
+        "Bake 10-12 minutes, until the edges are set and the middles still look slightly underdone. They finish on the hot pan. A cookie baked until the centre looks done is a cookie that will be hard by evening.",
+        "Cool on the pan 5 minutes before moving them."
+      ],
+      "kidTweak": "Tahini tastes faintly of sesame and nothing else — most kids never identify it. Skip the flaky salt on a few if that is a sticking point.",
+      "restaurantTouch": "Bang the sheet pan on the counter once at the 8-minute mark. It collapses the rising centre and gives you those concentric ripple rings bakeries charge extra for.",
+      "garden": "Nothing here grows in a garden, which is the honest answer. This is a pantry recipe and it is the one to make in February when there is nothing to harvest.",
+      "leftovers": "Keeps 5 days in a tin with a slice of bread to hold the moisture. Scooped dough balls freeze 3 months and bake from frozen with 2 extra minutes.",
+      "prepAhead": "Make the dough up to 3 days ahead. It genuinely improves on day two.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.skillet-peach-crumble",
+      "title": "Skillet Peach and Blueberry Crumble",
+      "blurb": "August peaches cooked down in the same pan they are baked in, under a buttery oat topping that stays crunchy. It goes in the oven while you eat and comes out at exactly the right moment.",
+      "cuisine": "american",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 20,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "cookout",
+        "labor-day",
+        "potluck",
+        "picnic",
+        "birthday"
+      ],
+      "tags": [
+        "crave",
+        "one-pan",
+        "seasonal",
+        "crowd-pleaser",
+        "summer"
+      ],
+      "equipment": [
+        "10-inch cast-iron or oven-safe skillet"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.peach",
+          "qty": 6,
+          "unit": "each",
+          "prep": "sliced thick, skin on"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flour.wholewheat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 6,
+          "unit": "tbsp",
+          "prep": "cold and cubed"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 1,
+          "unit": "cup",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Heat the oven to 375°F. Toss the peaches and blueberries in the skillet with the brown sugar, cornstarch, lemon juice, cinnamon and vanilla. Leave the skins on the peaches — they hold the slices together and they turn a good colour.",
+        "Let the fruit sit 10 minutes. It will draw out juice, which the cornstarch then thickens into a sauce rather than a puddle.",
+        "Rub the oats, whole wheat flour, almonds, salt and cold butter together with your fingers until it clumps in pieces the size of peas and hazelnuts. Uneven is right — uniform crumble bakes into a lid.",
+        "Drizzle the maple over the crumble mixture and toss once with a fork. That is what makes the clusters crisp rather than sandy.",
+        "Scatter it over the fruit, leaving gaps so the juices can bubble up through.",
+        "Bake 35-40 minutes, until the topping is deep golden and the fruit is bubbling thickly at the edges — not just steaming. Thin bubbles mean the starch has not set yet.",
+        "Rest 15 minutes before serving. Straight out of the oven it will run everywhere. With cold yogurt or ice cream."
+      ],
+      "kidTweak": "Peel the peaches for a texture-sensitive kid and leave out the almonds — the crumble works fine without them.",
+      "restaurantTouch": "Serve it in the skillet at the table with a spoon stuck in it. Nobody has ever been disappointed by a cast-iron pan arriving still bubbling.",
+      "garden": "Ohio peaches from an orchard in August are worth planning around. Blueberries do well in containers here with acidic potting mix — two bushes will cover this and breakfast.",
+      "leftovers": "Keeps 3 days covered. The topping softens; 10 minutes in a 350°F oven brings it back. Excellent cold for breakfast with yogurt, which is not a joke.",
+      "source": "ERRERLabs original"
     }
   ]
 }

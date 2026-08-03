@@ -1897,6 +1897,341 @@
       "occasions": [
         "picnic"
       ]
+    },
+    {
+      "id": "rec.miso-butter-mushroom-toast",
+      "title": "Miso Butter Mushrooms on Toast",
+      "blurb": "Mushrooms cooked past the point where they give up their water and start to brown, in butter cut with white miso. On thick toast this is lunch; on a small plate it is the thing people ask you to make again.",
+      "cuisine": "japanese-inspired",
+      "course": "lunch",
+      "servings": 2,
+      "activeMin": 18,
+      "totalMin": 18,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "brunch",
+        "weeknight-rush"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "one-pan",
+        "budget"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 5,
+          "unit": "cup",
+          "prep": "sliced thick"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.miso.white",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 4,
+          "unit": "sprig",
+          "prep": "leaves stripped"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 4,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "grated",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Heat the olive oil in a skillet over high until it shimmers. Add the mushrooms and do not salt them yet — salt draws out water and water is the enemy of browning.",
+        "Cook 6-8 minutes, stirring rarely. They will release liquid, the pan will look wrong, and then the liquid will cook off and they will start to sizzle and brown. Wait for that second stage. Most mushroom disappointment is a pan turned off during stage one.",
+        "Lower to medium. Add the butter, garlic and thyme, and cook 2 minutes.",
+        "Stir the miso and soy sauce together with a tablespoon of water and pour it in. It will coat everything and reduce to a glaze in about a minute.",
+        "Off the heat, add the lemon juice and pepper. Toast the bread properly — dark, so it stays crisp under the mushrooms — and pile them on. Parsley and parmesan on top."
+      ],
+      "kidTweak": "Miso is savoury in a way some kids read as strange. Cook their share of the mushrooms in butter and a pinch of salt only, and put them on buttered toast cut into strips.",
+      "restaurantTouch": "Rub the hot toast with a cut clove of raw garlic before the mushrooms go on. It takes four seconds and it is the difference between mushrooms on bread and a dish.",
+      "garden": "Thyme and parsley grow in a windowbox. Mushrooms are the one thing here you buy — though a shiitake log in a shady corner is a genuinely rewarding project.",
+      "leftovers": "The mushrooms keep 3 days and are excellent stirred into eggs or pasta. Toast fresh bread every time.",
+      "source": "ERRERLabs original",
+      "heartNote": "Miso is a fermented salt paste — a tablespoon is around 630 mg of sodium on its own, which is most of the 903 mg here. Halve the miso and add a squeeze more lemon and it lands near 600 mg with almost no loss of savour."
+    },
+    {
+      "id": "rec.crispy-smashed-potatoes",
+      "title": "Crispy Smashed Potatoes with Garlic Aioli",
+      "blurb": "Boiled until soft, squashed flat, then roasted hard so every ragged edge turns to glass. There is no better potato, and the five-minute lemon-garlic aioli is why the pan comes back empty.",
+      "cuisine": "american",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "cookout",
+        "potluck",
+        "brunch",
+        "game-day"
+      ],
+      "tags": [
+        "crave",
+        "crowd-pleaser",
+        "budget",
+        "make-ahead"
+      ],
+      "equipment": [
+        "pot",
+        "sheet pan"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 2.5,
+          "unit": "lb",
+          "prep": "small ones, halved if large"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.rosemary",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chives",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "sliced",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Boil the potatoes in heavily salted water 18-22 minutes, until a knife goes through with no resistance at all. Undercooked potatoes will not smash; they will crumble.",
+        "Drain and let them steam dry on the pan for 5 minutes. Surface moisture is what stops them crisping.",
+        "Heat the oven to 450°F. Spread the potatoes on an oiled sheet pan and press each one flat with the bottom of a glass or a measuring cup — about half an inch thick, with ragged edges. The edges are the best part, so do not aim for neat discs.",
+        "Drizzle over the olive oil, making sure it gets into the cracks, and season with pepper and rosemary.",
+        "Roast 30-35 minutes without turning, until the undersides are deeply browned and the edges have gone glassy. Resist flipping — one committed side beats two half-hearted ones.",
+        "Whisk the mayo, yogurt, grated garlic, lemon juice and mustard. Let it sit at least 5 minutes so the raw garlic mellows.",
+        "Serve hot, with the aioli on the side and chives over the top."
+      ],
+      "kidTweak": "These are the crispest thing on the table and usually need no help at all. Give them plain aioli without the garlic if raw garlic is too sharp — mayo, yogurt, lemon and mustard alone is still very good.",
+      "restaurantTouch": "Salt them one final time the second they come out of the oven, while the surface is still hot enough to take it. Salt on a cooled potato just sits there.",
+      "garden": "Potatoes are one of the most satisfying things to grow in Northeast Ohio — plant seed potatoes around St. Patrick's Day and dig small waxy ones in July, which is exactly the size this wants.",
+      "leftovers": "Keeps 3 days. Re-crisp in a 425°F oven for 8 minutes; the microwave turns them to steam.",
+      "prepAhead": "Boil and smash them a day ahead and keep them on the pan in the fridge. Roasting is then hands-off.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.dutch-baby",
+      "title": "Lemon Dutch Baby",
+      "blurb": "Batter poured into a screaming hot buttered skillet, and twenty minutes later a pancake the size of the pan climbs up the sides and comes out looking like something that should not be possible at home.",
+      "cuisine": "american",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "brunch",
+        "winter-holidays",
+        "birthday"
+      ],
+      "tags": [
+        "crave",
+        "showstopper",
+        "quick",
+        "one-pan"
+      ],
+      "equipment": [
+        "10-inch cast-iron or oven-safe skillet",
+        "blender or whisk"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each",
+          "prep": "room temperature"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "warmed"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.powdered.sugar",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 0.5,
+          "unit": "cup",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Put the skillet in the oven and heat both to 425°F. The pan has to be genuinely hot before the batter touches it — that initial blast of steam is the entire lift mechanism.",
+        "Blend the eggs, warm milk, flour, sugar, vanilla, salt and lemon zest for 30 seconds until completely smooth and a little frothy. Cold eggs and cold milk give you a flat one; room temperature matters here more than it usually does.",
+        "Let the batter rest 10 minutes while the oven comes up.",
+        "Pull the hot pan out, drop in the butter and swirl until it is foaming and coats the sides, then pour the batter straight into the middle. Return it to the oven immediately.",
+        "Bake 18-22 minutes. Do not open the oven before 18 — it will deflate and it will not come back. It is ready when the sides have climbed the pan and gone deep brown and the centre is set.",
+        "It will sink within a minute of coming out. That is what it does, and it is meant to. Hit it with lemon juice and powdered sugar and scatter the blueberries over the crater. Serve straight from the pan with yogurt."
+      ],
+      "kidTweak": "Watching it rise through the oven door is most of the appeal for a kid — turn the light on and let them. Serve with maple instead of lemon if they prefer.",
+      "restaurantTouch": "Dust the powdered sugar through a small sieve from a foot above the pan. Fine and even, not clumped, and it lands like snow.",
+      "garden": "Blueberries need acidic soil, which Northeast Ohio does not naturally have — but they do well in a large container with peat-based mix, and two bushes will feed a family's breakfasts through July.",
+      "leftovers": "Eat it within ten minutes. A Dutch baby is a moment rather than a dish, and reheating it produces a rubbery pancake.",
+      "source": "ERRERLabs original",
+      "heartNote": "Four eggs across four servings is 214 mg of cholesterol each, which is the whole reason for the score. Dietary cholesterol turns out to have far less effect on blood cholesterol than saturated fat does for most people, which is why the 2015 US guidelines dropped the 300 mg-a-day cap. If a clinician has told you to watch eggs specifically, this is one to share four ways rather than two."
     }
   ]
 }

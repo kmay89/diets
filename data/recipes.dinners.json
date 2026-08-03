@@ -3605,6 +3605,1688 @@
         "new-baby",
         "potluck"
       ]
+    },
+    {
+      "id": "rec.crispy-gnocchi-brown-butter",
+      "title": "Crispy Gnocchi with Brown Butter, Sage and White Beans",
+      "blurb": "Skip the boiling water. Shelf-stable gnocchi dropped straight into a hot pan turns into little crisp-shelled pillows, and brown butter with fried sage is the sauce that ruins you for other sauces.",
+      "cuisine": "italian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "weeknight-rush",
+        "new-baby"
+      ],
+      "tags": [
+        "crave",
+        "one-pan",
+        "quick",
+        "pantry",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "large skillet"
+      ],
+      "season": [
+        "fall",
+        "winter",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.gnocchi",
+          "qty": 1,
+          "unit": "package"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sage.fresh",
+          "qty": 12,
+          "unit": "leaf"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.beans.cannellini",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.walnuts",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "toasted and chopped"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 4,
+          "unit": "tbsp",
+          "prep": "grated",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Heat the olive oil in a large skillet over medium-high. Add the gnocchi straight from the package — do not boil them — in one layer. Leave them alone for 4 minutes. Do not stir, do not check. That undisturbed contact is the entire recipe.",
+        "Toss once and cook 3-4 minutes more until most sides are golden and the insides have gone tender. Tip them onto a plate.",
+        "Turn the heat to medium and add the butter. It will foam, then quiet, then the milk solids at the bottom will turn the colour of a hazelnut and it will smell like toffee — about 3 minutes. Watch it. Brown butter goes from perfect to burnt in fifteen seconds.",
+        "Drop in the sage leaves; they will crackle and crisp in about 30 seconds. Add the sliced garlic and cook 30 seconds more, no longer, or it turns bitter.",
+        "Add the beans and spinach with the salt and pepper. Toss until the spinach collapses, 1-2 minutes.",
+        "Return the gnocchi, add the lemon zest and juice, and toss once. The acid is what keeps all that butter from sitting heavy. Finish with walnuts and parmesan."
+      ],
+      "omnivore": {
+        "label": "Add crumbled Italian chicken sausage",
+        "note": "Brown it first in the same skillet, lift it out, then start the gnocchi in the fat it leaves behind. Two minutes of extra work, and the vegetarian version is still the one everyone reaches for.",
+        "add": [
+          {
+            "ing": "ing.sausage.chicken.italian",
+            "qty": 8,
+            "unit": "oz",
+            "prep": "casings removed"
+          }
+        ],
+        "steps": [
+          "Brown the sausage over medium-high, breaking it up, 5-6 minutes. Lift it out with a slotted spoon and set it aside.",
+          "Crisp the gnocchi in the rendered fat, and scatter the sausage over the omnivores' bowls at the end."
+        ]
+      },
+      "kidTweak": "Serve their portion before the lemon goes in — some kids read acid as 'sour' rather than 'bright'. The crisp gnocchi and fried sage leaves usually do the convincing on their own.",
+      "restaurantTouch": "Fry a few extra sage leaves and lay them whole across the top. They shatter like a chip and they are the first thing anyone photographs.",
+      "garden": "Sage is a perennial in zone 6a and one of the easiest herbs you will ever grow — one plant by the back door survives Ohio winters and gives you leaves for this from April to November.",
+      "leftovers": "Eat it the night you make it. Crisp gnocchi go soft in the fridge and no amount of reheating brings the shell back.",
+      "source": "ERRERLabs original",
+      "heartNote": "Scores low mostly on sodium — shelf-stable gnocchi carries about 430 mg per 100 g before you add anything, and that is roughly two-thirds of the 808 mg in a serving. The rest of the plate is doing real work: 10.6 g of fibre from the beans, spinach and walnuts is more than most dinners here. Salt the pan lightly and the score moves."
+    },
+    {
+      "id": "rec.french-onion-soup",
+      "title": "Real French Onion Soup",
+      "blurb": "Five pounds of onions cooked down for the better part of an hour into something jammy and almost sweet, under a raft of bread and melted Gruyère. There is no shortcut and there does not need to be — the stove does the work while you do something else.",
+      "cuisine": "french",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 25,
+      "totalMin": 90,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "winter-holidays",
+        "new-year",
+        "new-baby"
+      ],
+      "tags": [
+        "crave",
+        "make-ahead",
+        "showstopper",
+        "budget",
+        "one-pot"
+      ],
+      "equipment": [
+        "dutch oven",
+        "oven-safe bowls or a sheet pan"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 6,
+          "unit": "each",
+          "prep": "halved and sliced thin"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.wine.white",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 6,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 6,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.vinegar.balsamic",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.baguette",
+          "qty": 12,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.cheese.gruyere",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "grated"
+        }
+      ],
+      "steps": [
+        "Melt the butter with the oil in a dutch oven over medium. Add all the onions with the salt and sugar. They will look like far too many. They will cook down to a quarter of that.",
+        "Cook 45-55 minutes, stirring every 5-8 minutes and scraping the brown film off the bottom each time. That film is the flavour. If the pan looks dry and dark, add a splash of water and scrape. Do not raise the heat to hurry it — you get burnt edges and raw centres.",
+        "When the onions are deep amber and jammy, add the garlic and cook 1 minute. Stir in the flour and cook 2 minutes to lose the raw taste.",
+        "Pour in the wine and scrape the bottom clean. Simmer until it is nearly gone, about 4 minutes.",
+        "Add the broth, soy sauce, thyme sprigs and bay leaves. The soy is not a flavour you will taste — it is doing the savoury work beef broth normally does. Simmer 20 minutes.",
+        "Fish out the thyme stems and bay. Stir in the balsamic and pepper, then taste. It should make you want another spoonful immediately; if it does not, it needs salt or another splash of vinegar.",
+        "Toast the baguette slices. Ladle soup into oven-safe bowls, float two slices on each, pile on the Gruyère, and broil 2-3 minutes until the cheese is bubbling and blistered in spots. Let them sit 2 minutes — molten cheese is a real burn risk."
+      ],
+      "kidTweak": "Serve theirs in a regular bowl with the cheese toast on the side, unbroiled. The bowl-under-a-broiler part is the fun of it, but it comes out at 400°F.",
+      "restaurantTouch": "Grate the Gruyère yourself and let a little fall down the outside of the bowl. It bakes onto the rim and you get a crisp cheese edge, which is the best bite in the whole dish.",
+      "garden": "Onions and thyme both come out of a small bed easily. Six storage onions from an August harvest is a single row — and this soup is what storage onions are for in February.",
+      "leftovers": "The soup base keeps 5 days refrigerated and 3 months frozen, and genuinely improves overnight. Toast and broil fresh bread each time; a soggy raft reheated is a sad thing.",
+      "prepAhead": "Caramelise the onions on a Sunday and refrigerate them. Soup on a Wednesday is then 25 minutes.",
+      "source": "ERRERLabs original",
+      "heartNote": "This is the lowest-scoring recipe in the collection and it is not a mistake. A serving carries about 853 mg of sodium and 9.5 g of saturated fat, almost all of it from broth, baguette and an ounce of Gruyère. Low-sodium broth cuts roughly 300 mg. It is a February Sunday dish, not a Tuesday one, and the app is not going to pretend otherwise."
+    },
+    {
+      "id": "rec.chile-crisp-noodles",
+      "title": "Chile Crisp Noodles with Jammy Eggs",
+      "blurb": "Fifteen minutes, one pot, and a bowl of noodles slick with chili crisp and soy that tastes like something you would order out. The jammy egg on top is not optional in the way that things labelled optional usually are.",
+      "cuisine": "asian-american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "weeknight-rush"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "pantry",
+        "one-pot",
+        "spicy"
+      ],
+      "equipment": [
+        "large pot",
+        "bowl"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.noodle.wheat",
+          "qty": 12,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.bokchoy",
+          "qty": 3,
+          "unit": "each",
+          "prep": "halved lengthwise"
+        },
+        {
+          "ing": "ing.chilicrisp",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.peanuts",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        }
+      ],
+      "steps": [
+        "Bring a large pot of water to a boil. Lower the eggs in on a spoon and set a timer for 7 minutes exactly — that is the window for a set white and a centre that is still liquid gold. Lift them into cold water when the timer goes.",
+        "In the same water, cook the noodles to just under the package time. Add the bok choy for the last 90 seconds. Save half a cup of the cooking water, then drain.",
+        "While that happens, whisk the chili crisp, soy, vinegar, sesame oil, maple and grated garlic in the bottom of a big bowl. Spoon the chili crisp from the bottom of the jar, not the oil off the top — the crunchy sediment is what you are paying for.",
+        "Tip the hot noodles and bok choy straight into the bowl and toss hard, adding splashes of the reserved water until the sauce coats every strand rather than pooling at the bottom.",
+        "Peel the eggs and halve them. Pile noodles into bowls, set the egg halves on top cut side up, and finish with scallions, peanuts and sesame seeds."
+      ],
+      "omnivore": {
+        "label": "Add poached shrimp",
+        "note": "They cook in the same pot in the same three minutes, so this genuinely costs nothing extra in time or dishes.",
+        "add": [
+          {
+            "ing": "ing.shrimp",
+            "qty": 12,
+            "unit": "oz",
+            "prep": "peeled"
+          }
+        ],
+        "steps": [
+          "After lifting out the eggs, drop the shrimp into the same water for 2-3 minutes until they curl and turn opaque. Lift them out before the noodles go in."
+        ]
+      },
+      "kidTweak": "Pull out a portion of plain noodles with a little sesame oil and soy before the chili crisp goes anywhere near the bowl. Add a jammy egg and they have the same dinner, minus the heat.",
+      "restaurantTouch": "Warm the chili crisp and soy mixture for 20 seconds in the microwave before tossing. Warm sauce clings; cold sauce slides off and puddles.",
+      "garden": "Scallions regrow from the root ends in a jar of water on the windowsill, indefinitely, for free. Bok choy is a fast spring and fall crop — 45 days from seed.",
+      "leftovers": "Noodles keep 3 days but the peanuts go soft. Store the crunchy toppings separately and re-crisp the noodles in a hot dry skillet rather than a microwave.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.mushroom-bourguignon",
+      "title": "Mushroom Bourguignon",
+      "blurb": "The braise that makes people go quiet at the table. Mushrooms browned hard, red wine reduced properly, and dried porcini doing the job that beef normally does. It tastes like it took all day and takes about an hour.",
+      "cuisine": "french",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 30,
+      "totalMin": 70,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "winter-holidays",
+        "new-year",
+        "birthday"
+      ],
+      "tags": [
+        "crave",
+        "showstopper",
+        "make-ahead",
+        "one-pot",
+        "date-night"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.mushroom.porcini.dried",
+          "qty": 0.5,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "hot"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 8,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 2,
+          "unit": "each",
+          "prep": "cut in 1-inch pieces"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 3,
+          "unit": "each",
+          "prep": "cut in coins"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.wine.red",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 6,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 2,
+          "unit": "lb",
+          "prep": "for mashing"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "warm"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "chopped"
+        }
+      ],
+      "steps": [
+        "Cover the dried porcini with the hot broth and leave them to soak. This is your stock, and it is the reason this tastes like a braise rather than a mushroom stew.",
+        "Heat the oil in a dutch oven over high until it shimmers. Add half the fresh mushrooms in one layer, salt them lightly, and leave them for 4 minutes without touching. Toss, cook 3 more, and remove. Repeat with the rest. Crowding the pan steams them and you lose the whole dish here.",
+        "Lower to medium and melt the butter. Add onion and carrot with a pinch of salt, cook 8 minutes until softening and browning at the edges.",
+        "Add the garlic and tomato paste and cook 2 minutes, stirring, until the paste darkens from red to brick. Sprinkle over the flour and cook another minute.",
+        "Pour in the wine and scrape every brown patch off the bottom. Simmer hard 5 minutes until it has reduced by about a third and no longer smells sharp.",
+        "Lift the porcini out of the broth, chop them, and add them to the pot. Pour in the soaking broth, leaving the last tablespoon of grit behind in the bowl. Add thyme, bay, soy sauce, the browned mushrooms, salt and pepper.",
+        "Simmer uncovered 25-30 minutes until the sauce coats a spoon. Meanwhile boil the potatoes in salted water until a knife slides in, then mash with the warm milk and a good pinch of salt.",
+        "Pull the thyme stems and bay. Taste for salt — a braise this dark usually wants a little more than you expect. Spoon over the mash and shower with parsley."
+      ],
+      "omnivore": {
+        "label": "Add seared sirloin",
+        "note": "Sear it in the pot first and it leaves a fond the mushrooms then build on, which improves the vegetarian version too. Add the meat back only to the omnivores' plates.",
+        "add": [
+          {
+            "ing": "ing.beef.sirloin",
+            "qty": 12,
+            "unit": "oz",
+            "prep": "cut in 1-inch cubes"
+          }
+        ],
+        "steps": [
+          "Pat the beef dry, salt it, and sear in the hot oil 4-5 minutes until well browned on two sides. Remove and set aside.",
+          "Return it to the pot for the last 10 minutes of simmering, or warm it separately and spoon it over individual plates."
+        ]
+      },
+      "kidTweak": "Mushrooms cut small disappear into the sauce; cut large they are a texture some kids will not accept. Chop a portion of the mushrooms finely before browning and serve that side of the pot to them, over plenty of mash.",
+      "restaurantTouch": "Take the pot off the heat and swirl in one final tablespoon of cold butter until it disappears. That is a French finish called monter au beurre and it is the difference between a good sauce and a glossy one.",
+      "garden": "Carrots, thyme and parsley all come out of a few square feet. Thyme in particular is a plant-once perennial that survives Ohio winters under a little mulch.",
+      "leftovers": "Better on day two, genuinely. Keeps 4 days refrigerated and 3 months frozen. Freeze the braise alone; mashed potatoes turn grainy after thawing.",
+      "prepAhead": "Make the braise a day ahead and reheat gently. Mash the potatoes fresh — it is 20 minutes and it matters.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.baked-feta-pasta",
+      "title": "Baked Feta Pasta with Blistered Tomatoes",
+      "blurb": "A block of feta in a dish of cherry tomatoes and olive oil, roasted until the tomatoes burst and the cheese slumps, then stirred into a sauce. It went round the world for a reason, and it is genuinely good.",
+      "cuisine": "greek",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 10,
+      "totalMin": 45,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "weeknight-rush",
+        "potluck",
+        "new-baby"
+      ],
+      "tags": [
+        "crave",
+        "hands-off",
+        "one-pan",
+        "crowd-pleaser",
+        "summer"
+      ],
+      "equipment": [
+        "baking dish",
+        "pot"
+      ],
+      "season": [
+        "summer",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 2,
+          "unit": "pint"
+        },
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 8,
+          "unit": "oz",
+          "prep": "in one block"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove",
+          "prep": "peeled and left whole"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.pasta.regular",
+          "qty": 12,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 400°F. Tip the tomatoes and whole garlic cloves into a baking dish, pour over 3 tablespoons of the oil, and toss with the pepper flakes, oregano, salt and pepper.",
+        "Clear a well in the middle, set the block of feta in it, and pour the last tablespoon of oil over the cheese.",
+        "Roast 35 minutes, until the tomatoes have collapsed and split and the feta is soft and browning at the corners. If the top is still pale, give it 3 minutes under the broiler — those browned edges are most of the flavour.",
+        "Boil the pasta in well-salted water to just under package time. Save a cup of the water before draining.",
+        "Mash everything in the baking dish together with a fork. The garlic cloves will have gone sweet and will smash to nothing. Stir in the spinach while the dish is still hot so it wilts.",
+        "Add the pasta and enough cooking water to loosen it into a sauce that clings. Finish with lemon juice and torn basil off the heat."
+      ],
+      "omnivore": {
+        "label": "Add roasted shrimp",
+        "note": "They go into the same dish for the last 6 minutes, so there is no second pan.",
+        "add": [
+          {
+            "ing": "ing.shrimp",
+            "qty": 12,
+            "unit": "oz",
+            "prep": "peeled"
+          }
+        ],
+        "steps": [
+          "Scatter the shrimp around the edges of the baking dish for the final 6 minutes of roasting, until pink and opaque. Lift them out before mashing if you want to keep the base vegetarian, and add them to individual bowls."
+        ]
+      },
+      "kidTweak": "This is one of the easier sells in the whole book — it reads as cheesy pasta. Leave out the pepper flakes and stir a spoonful of the sauce through their portion before adding the spinach.",
+      "restaurantTouch": "Reserve a handful of the roasted tomatoes before mashing and spoon them whole over the top. Whole blistered tomatoes still burst in the mouth; mashed ones do not.",
+      "garden": "This is the August recipe for a cherry tomato plant that has gotten away from you. Sungold and Black Cherry both roast beautifully and one plant will supply this all summer.",
+      "leftovers": "Keeps 3 days. It tightens up in the fridge — reheat with a splash of water in a skillet rather than dry in the microwave.",
+      "source": "ERRERLabs original",
+      "heartNote": "The 8 oz of feta is the whole score: 8.4 g saturated fat and most of the 549 mg sodium per serving. It is still under the 700 mg the AHA flags for a single meal, and dropping to 6 oz of feta with an extra pint of tomatoes changes the dish very little."
+    },
+    {
+      "id": "rec.crispy-rice-kimchi-bowl",
+      "title": "Crispy Rice Bowl with Kimchi and a Fried Egg",
+      "blurb": "Cold leftover rice pressed into a hot pan and left there until the bottom forms a golden crust you have to break with a spoon. Kimchi, a runny egg, and that crust — it is the best thing you can do with yesterday's rice.",
+      "cuisine": "korean-inspired",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "weeknight-rush"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "leftovers",
+        "one-pan",
+        "budget"
+      ],
+      "equipment": [
+        "large nonstick or cast-iron skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.jasmine",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "cooked and chilled, ideally day-old"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.kimchi",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "roughly chopped, juice reserved"
+        },
+        {
+          "ing": "ing.gochujang",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced thin"
+        }
+      ],
+      "steps": [
+        "Use cold rice. Freshly cooked rice is too wet and will steam into mush instead of crisping — this is the one non-negotiable in the recipe.",
+        "Whisk the gochujang, soy, maple and 2 tablespoons of the kimchi juice together and set it aside.",
+        "Heat 1 tablespoon of the canola oil in a large skillet over medium-high. Add the kimchi and garlic and fry 3 minutes until the edges darken and it smells sweet rather than sharp. Push it to one side, add the spinach, and toss until it wilts. Scrape it all onto a plate.",
+        "Add the remaining oil and the sesame oil. Add the rice and press it into a flat, even layer with the back of a spatula. Now leave it for 5-6 minutes. No stirring. You will hear it crackle and you should let it keep crackling.",
+        "Lift an edge with the spatula. When the underside is deep golden and lifts in a sheet, break it into rough pieces and toss with the sauce and the kimchi mixture.",
+        "Fry the eggs in a separate pan in a film of oil over medium-high, spooning hot oil over the whites until the edges are lacy and brown but the yolk is still liquid, about 2 minutes.",
+        "Pile the rice into bowls, set an egg on each, and top with scallions, sesame seeds and cold cucumber slices. Break the yolk into the rice at the table."
+      ],
+      "omnivore": {
+        "label": "Add sliced pork tenderloin",
+        "note": "Sear it first and rest it while the rice crisps; slice it thin across the grain over the omnivores' bowls.",
+        "add": [
+          {
+            "ing": "ing.pork.tenderloin",
+            "qty": 12,
+            "unit": "oz"
+          }
+        ],
+        "steps": [
+          "Season the tenderloin with salt and sear in the skillet over medium-high, turning, 12-14 minutes until 145°F at the centre. Rest 5 minutes before slicing thin."
+        ]
+      },
+      "kidTweak": "Kimchi is a hard sell for a lot of kids. Crisp their rice plain with a little sesame oil and soy, top with a fried egg, and give them the cucumbers on the side — the crust is the part they will actually care about.",
+      "restaurantTouch": "Serve it in a shallow bowl and lay the egg slightly off-centre so the yolk runs toward one side. Add one extra spoonful of kimchi juice around the edge; it pools and looks like a sauce because it is one.",
+      "garden": "Napa cabbage for homemade kimchi is a straightforward fall crop in Ohio, sown in August and harvested after the first light frosts, which sweeten it.",
+      "leftovers": "The crisp does not survive storage. Make only what you will eat, and use tomorrow's rice for tomorrow's version.",
+      "source": "ERRERLabs original",
+      "heartNote": "A whole egg per person puts this at 186 mg of cholesterol a serving. Saturated fat is genuinely low at 2.8 g, and kimchi contributes fermented fibre. Use two eggs across four bowls, split, and the score jumps."
+    },
+    {
+      "id": "rec.mushroom-birria-tacos",
+      "title": "Mushroom Birria Tacos with Consommé",
+      "blurb": "Tortillas dipped in a deep red chile broth, griddled until the edges go crisp, and served with a cup of that same broth for dunking. It is a whole event, and the broth is what people remember.",
+      "cuisine": "mexican",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 35,
+      "totalMin": 75,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "game-day",
+        "birthday",
+        "potluck"
+      ],
+      "tags": [
+        "crave",
+        "showstopper",
+        "make-ahead",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "blender",
+        "dutch oven",
+        "griddle or large skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.chile.guajillo",
+          "qty": 6,
+          "unit": "each",
+          "prep": "stemmed and seeded"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 3,
+          "unit": "each",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "quartered"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.chipotle.adobo",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 4,
+          "unit": "each",
+          "prep": "cut in thick strips"
+        },
+        {
+          "ing": "ing.jackfruit.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and shredded"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tortilla.corn",
+          "qty": 12,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "finely diced"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each",
+          "prep": "in wedges"
+        }
+      ],
+      "steps": [
+        "Toast the dried chiles in a dry skillet over medium, 30-40 seconds a side, until they smell sweet and smoky. Do not let them blacken — burnt chile turns the whole pot bitter and there is no fixing it.",
+        "Cover the chiles with 2 cups of the broth and simmer 10 minutes until soft.",
+        "Blend the softened chiles and their liquid with the tomatoes, quartered onion, garlic, chipotles, cumin, oregano, cinnamon and vinegar until completely smooth. Push it through a sieve if you want a glossy consommé; skip that and it is rustic.",
+        "Heat the oil in a dutch oven over medium-high. Brown the portobello strips hard, 6-8 minutes, in two batches — this is where the meaty texture comes from. Add the shredded jackfruit and cook 3 minutes more.",
+        "Pour in the blended chile sauce and the remaining 3 cups of broth. Add the salt and simmer 30 minutes until the broth is deep red and tastes round rather than sharp.",
+        "Lift the solids out with a slotted spoon into a bowl. Keep the broth at a bare simmer — that is your consommé.",
+        "Dip a tortilla into the red broth so both sides are stained, lay it on a hot griddle, scatter cheese on half, add the filling, and fold. Griddle 2 minutes a side until the cheese has melted and the edges are crisp and lacquered.",
+        "Serve with small bowls of the hot consommé, plus red onion, cilantro and lime."
+      ],
+      "omnivore": {
+        "label": "Add braised chicken thighs",
+        "note": "They braise in the same pot in the same chile broth, so the two versions taste like the same dish rather than two different dinners.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1,
+            "unit": "lb"
+          }
+        ],
+        "steps": [
+          "Brown the thighs before the mushrooms and set them aside. Return them to the pot with the chile sauce and simmer 30 minutes, then shred with two forks and keep them in a separate bowl from the mushroom filling."
+        ]
+      },
+      "kidTweak": "Guajillos are mild — the heat here is mostly the chipotles. Leave those out entirely and the broth is sweet and smoky rather than spicy. Most kids treat these as red quesadillas, which is fine.",
+      "restaurantTouch": "Skim the red-orange fat off the top of the broth and brush it onto the tortillas before griddling. That lacquered shine is the whole visual identity of this dish.",
+      "garden": "Roma tomatoes, cilantro and onions all grow well here. Cilantro bolts in July heat — sow it in April and again in late August rather than fighting the middle of summer.",
+      "leftovers": "Filling and consommé both keep 4 days and freeze 3 months. Assemble and griddle fresh; a pre-made taco reheated goes soft.",
+      "prepAhead": "Make the filling and broth a day ahead. Assembly is then 15 minutes, which makes this genuinely workable for a crowd.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.paneer-tikka-masala",
+      "title": "Skillet Paneer Tikka Masala",
+      "blurb": "Cubes of paneer browned in butter and folded into a tomato sauce built on bloomed garam masala. Restaurant tikka masala usually runs on a cup of cream; this one uses three tablespoons and gets the rest of its body from blended onion.",
+      "cuisine": "indian",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 25,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "weeknight-rush",
+        "new-baby",
+        "birthday"
+      ],
+      "tags": [
+        "crave",
+        "one-pan",
+        "crowd-pleaser",
+        "make-ahead"
+      ],
+      "equipment": [
+        "large skillet",
+        "blender or immersion blender"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.paneer",
+          "qty": 1,
+          "unit": "package",
+          "prep": "cut in 3/4-inch cubes"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.spice.garam",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cream.heavy",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.peas.frozen",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "uncooked"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        }
+      ],
+      "steps": [
+        "Start the rice. Pat the paneer cubes dry — wet paneer will not brown, it will squeak.",
+        "Melt 1 tablespoon of the butter with the oil in a large skillet over medium-high. Brown the paneer on two or three sides, about 5 minutes total, and lift it out. It should be golden and slightly crisp; it will soften again in the sauce.",
+        "Add the onion to the same pan and cook 8 minutes until soft and browning. Add the garlic and ginger and cook 1 minute.",
+        "Add the remaining butter, then all the ground spices, and stir constantly for 60 seconds. Blooming them in fat rather than dumping them into liquid is the single biggest difference between this and a flat curry.",
+        "Stir in the tomato paste and cook 2 minutes until it darkens. Add the crushed tomatoes and broth, scrape the bottom, and simmer 12 minutes.",
+        "Blend the sauce smooth — an immersion blender in the pan is easiest. This is what gives it the silky body that would otherwise take a cup of cream.",
+        "Stir in the cream, salt and peas, return the paneer, and simmer 4 minutes more. Finish with lemon juice off the heat and a heap of cilantro. Serve over the rice."
+      ],
+      "omnivore": {
+        "label": "Add chicken thigh",
+        "note": "Brown it in the same pan before the paneer and add it back with the peas. The sauce was designed to take either.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "cut in 1-inch pieces"
+          }
+        ],
+        "steps": [
+          "Season and brown the chicken over medium-high, 6-7 minutes. Set aside and return it to the sauce for the final 8 minutes of simmering, until cooked through."
+        ]
+      },
+      "kidTweak": "Leave the pepper flakes out and this is mild — garam masala is aromatic, not hot. Paneer holds its shape and does not string, which makes it an easier cheese for a suspicious kid than melted mozzarella.",
+      "restaurantTouch": "Swirl the last spoonful of cream over the top in a spiral rather than stirring it in, and drop the cilantro on at the very last second. Both things happen at the pass in a restaurant for exactly this reason.",
+      "garden": "Cilantro and hot peppers both do well here. Ginger will grow in a pot on a sunny porch through an Ohio summer and gives you tender young rhizomes in October.",
+      "leftovers": "Keeps 4 days and freezes 2 months, though the paneer firms up after freezing. Reheat gently — a hard boil makes the cream break.",
+      "prepAhead": "The sauce keeps 4 days on its own. Brown fresh paneer and fold it in and dinner is 10 minutes.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.gochujang-tofu",
+      "title": "Sticky Gochujang Tofu",
+      "blurb": "Tofu cornstarched and fried until the outside shatters, then tossed in a glaze that reduces to a lacquer in the pan. Cold cucumber salad on the side because something has to cut through it.",
+      "cuisine": "korean-inspired",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 35,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "weeknight-rush"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "one-pan",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "large nonstick skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tofu.firm",
+          "qty": 2,
+          "unit": "block",
+          "prep": "pressed and cut in cubes"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.gochujang",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 2,
+          "unit": "tsp",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.rice.jasmine",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "uncooked"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Start the rice. Press the tofu between paper towels under something heavy for 15 minutes — every minute of pressing is a degree of crispness later.",
+        "Toss the cucumber slices with the salt and 1 tablespoon of the rice vinegar and leave them in a bowl. They will weep and turn snappy while you cook.",
+        "Toss the tofu cubes in the cornstarch until every face is dusted and dry-looking.",
+        "Heat the canola oil in a large nonstick skillet over medium-high. Add the tofu in one layer and fry 3-4 minutes a side, turning twice, until deep golden and audibly crisp. Move it to a plate.",
+        "Whisk the gochujang, soy, maple, remaining vinegar, sesame oil, garlic and ginger. Pour it into the hot pan and let it bubble 60-90 seconds — it will thicken and go glossy.",
+        "Kill the heat, return the tofu, and toss fast. Sauce added to a hot pan glazes; sauce added to a cool pan just soaks in and the crisp is gone.",
+        "Serve over rice with the drained cucumbers, scallions and sesame seeds."
+      ],
+      "omnivore": {
+        "label": "Glaze chicken thighs the same way",
+        "note": "The glaze works identically on chicken. Cook them in a second skillet and both halves of the table eat the same dinner.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1,
+            "unit": "lb"
+          }
+        ],
+        "steps": [
+          "Sear the thighs 6-7 minutes a side over medium until 165°F, then toss with half the glaze in the pan off the heat."
+        ]
+      },
+      "kidTweak": "Gochujang is sweet-savoury more than hot, but it does carry heat. Pull out a few tofu cubes after frying and toss them in soy sauce and maple alone — same crunch, no chile.",
+      "restaurantTouch": "Save one tablespoon of the glaze and brush it over the plated tofu with the back of a spoon. It sets into a shine that tossing alone will not give you.",
+      "garden": "Cucumbers are among the easiest and highest-yielding things in an Ohio garden — one hill of a pickling variety supplies this all July.",
+      "leftovers": "The tofu softens overnight. Reheat in a dry skillet over medium-high for 3 minutes and most of the crust comes back; the microwave will not do it.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.harissa-chickpeas-yogurt",
+      "title": "Harissa Butter Chickpeas over Garlic Yogurt",
+      "blurb": "Chickpeas crisped in harissa butter, spooned over a pool of cold garlicky yogurt so it streaks pink where the two meet. Twenty minutes, mostly pantry, and it looks like something you would pay for.",
+      "cuisine": "middle-eastern",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "weeknight-rush",
+        "potluck"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "pantry",
+        "one-pan",
+        "budget"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained, rinsed and dried well"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.harissa",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "3 sliced, 1 grated"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 5,
+          "unit": "cup",
+          "prep": "packed"
+        },
+        {
+          "ing": "ing.mint",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.pita.wholewheat",
+          "qty": 4,
+          "unit": "each",
+          "prep": "warmed"
+        },
+        {
+          "ing": "ing.pistachios",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "chopped"
+        }
+      ],
+      "steps": [
+        "Stir the yogurt with the grated garlic clove, half the lemon juice, the zest and a quarter teaspoon of the salt. Spread it across the bottom of a wide shallow bowl or four plates and put it in the fridge. Cold yogurt under hot chickpeas is the whole trick.",
+        "Dry the chickpeas properly on a towel. Wet chickpeas steam and stay soft; dry ones blister.",
+        "Heat the olive oil in a skillet over medium-high and add the chickpeas in one layer. Cook 6-8 minutes, shaking occasionally, until they are browned in patches and some have split.",
+        "Lower the heat to medium. Add the butter, sliced garlic, harissa, cumin and paprika. Stir for 2 minutes as the butter foams and the spices bloom into it — the whole pan should go rust-coloured.",
+        "Add the spinach and the remaining salt and toss until it wilts, about a minute.",
+        "Spoon the hot chickpeas straight onto the cold yogurt without stirring. Finish with the rest of the lemon juice, the mint and pistachios. Serve with warm pita to drag through it."
+      ],
+      "kidTweak": "Harissa is properly hot. Set aside a portion of chickpeas after they crisp and before the harissa goes in, toss those with butter and a shake of paprika, and give them the yogurt on the side rather than underneath.",
+      "restaurantTouch": "Spread the yogurt with the back of a spoon in one sweeping curve so it has a lip at the edge. Everything after that lands in a pool, and the plate looks composed rather than dumped.",
+      "garden": "Mint will take over a bed if you let it — grow it in a buried pot. Spinach is a cool-season crop here, sown in early April and again in September.",
+      "leftovers": "Store the chickpeas and yogurt separately, 3 days. Re-crisp the chickpeas in a dry skillet; do not microwave them into the yogurt.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.cacio-e-pepe-peas",
+      "title": "Cacio e Pepe with Sweet Peas",
+      "blurb": "Four ingredients and a technique. Pecorino, black pepper toasted in a dry pan, and starchy pasta water whisked into a sauce that clings like cream without any cream in it. Peas make it dinner rather than a side.",
+      "cuisine": "italian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 20,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "occasions": [
+        "weeknight-rush",
+        "spring-holiday"
+      ],
+      "tags": [
+        "crave",
+        "quick",
+        "pantry",
+        "budget",
+        "date-night"
+      ],
+      "equipment": [
+        "large skillet",
+        "pot"
+      ],
+      "season": [
+        "spring",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pasta.regular",
+          "qty": 12,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 2,
+          "unit": "tsp",
+          "prep": "coarsely cracked"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.cheese.pecorino",
+          "qty": 1.25,
+          "unit": "cup",
+          "prep": "finely grated"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "finely grated"
+        },
+        {
+          "ing": "ing.peas.frozen",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Boil the pasta in less water than usual, salted, so the water gets genuinely starchy. That water is an ingredient, not waste.",
+        "Grate the cheese on the finest holes you have while the water heats. Pre-grated cheese is coated in anti-caking starch and will go grainy on you — this is the most common way this dish fails.",
+        "Toast the cracked pepper in a dry skillet over medium for 60 seconds, until it smells sharp and floral. Add the butter and let it melt.",
+        "Add the peas and a ladle of pasta water to the skillet and simmer 2 minutes.",
+        "Drain the pasta about 2 minutes shy of package time, reserving 1.5 cups of water. Add the pasta to the skillet with another ladle of water and toss over low heat for a minute.",
+        "Take the pan off the heat and wait 30 seconds. Now add the cheese in three handfuls, tossing hard between each, adding splashes of water as you go. Off the heat is essential — direct heat is what makes the cheese seize into strings.",
+        "Keep tossing until it turns glossy and coats the pasta. Serve immediately with lemon zest if you want it, in warmed bowls. This dish waits for nobody."
+      ],
+      "kidTweak": "Halve the pepper. This is macaroni and cheese with a better pedigree and it usually lands well, though the peas may get picked out — put them in anyway.",
+      "restaurantTouch": "Warm the bowls under hot tap water and dry them. Cacio e pepe on a cold plate tightens within a minute; on a warm one it stays silky to the last bite.",
+      "garden": "Sugar snap and shelling peas go in the ground here in late March, as early as you can work the soil, and are done by late June. Fresh shelled peas in this in May are worth the row.",
+      "leftovers": "Almost none, in practice. What survives will not reheat well — the emulsion breaks. Make what you will eat.",
+      "source": "ERRERLabs original",
+      "heartNote": "Pecorino is one of the saltiest cheeses there is — the 977 mg of sodium and 11.8 g of saturated fat here are essentially all cheese. That is what the dish is. Swapping a third of the pecorino for parmesan drops the sodium by about a quarter without losing the emulsion. Treat it as a small plate rather than a weekly dinner if sodium is something you are watching."
+    },
+    {
+      "id": "rec.charred-cabbage-miso-butter",
+      "title": "Charred Cabbage Steaks with Miso Butter",
+      "blurb": "A three-dollar head of cabbage roasted hard until the outer leaves blacken and the inside goes sweet and silky, then brushed with miso butter. It is the cheapest thing in this collection and one of the best.",
+      "cuisine": "japanese-inspired",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 45,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "occasions": [
+        "weeknight-rush",
+        "potluck"
+      ],
+      "tags": [
+        "crave",
+        "budget",
+        "hands-off",
+        "one-pan",
+        "winter"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cabbage.green",
+          "qty": 1,
+          "unit": "head",
+          "prep": "cut in 1.5-inch wedges through the core"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 4,
+          "unit": "tbsp",
+          "prep": "softened"
+        },
+        {
+          "ing": "ing.miso.white",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "uncooked"
+        },
+        {
+          "ing": "ing.edamame.frozen",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "shelled"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 450°F with a sheet pan already inside. A screaming hot pan is what gives you a charred face rather than a steamed one.",
+        "Cut the cabbage into wedges through the core so each one holds together. Brush both cut faces with the canola oil and salt them.",
+        "Lay the wedges on the hot pan — they should hiss — and roast 20 minutes without turning.",
+        "Meanwhile mash the butter with the miso, maple, rice vinegar and grated garlic until smooth.",
+        "Flip the wedges and roast 12-15 minutes more, until the edges are properly blackened in places. Do not rescue them early; charred is the point and the blackened leaves taste of caramel, not ash.",
+        "Cook the rice, and boil the edamame 4 minutes, then toss it with the sesame oil.",
+        "Brush the hot cabbage generously with the miso butter so it melts into the layers. Top with scallions and sesame seeds and serve over rice with the edamame."
+      ],
+      "omnivore": {
+        "label": "Add roasted salmon",
+        "note": "It roasts on the same pan for the last 12 minutes, and the miso butter is just as good on fish as it is on cabbage.",
+        "add": [
+          {
+            "ing": "ing.salmon",
+            "qty": 4,
+            "unit": "fillet",
+            "prep": "skin on"
+          }
+        ],
+        "steps": [
+          "Add the salmon to the pan when you flip the cabbage. Roast 12-14 minutes until it flakes, and brush it with the miso butter too."
+        ]
+      },
+      "kidTweak": "Charred cabbage is a hard first sell. Pull two wedges before they blacken, at the 20-minute mark, and brush them with butter and maple only — sweeter, softer, no miso funk.",
+      "restaurantTouch": "Spoon the extra miso butter into a small dish at the table and let people add more. Compound butter melting on the plate in front of someone does something no pre-sauced version can.",
+      "garden": "Cabbage is one of the great value crops for a Northeast Ohio garden — a fall planting stands through frost, which makes it sweeter, and it stores for weeks.",
+      "leftovers": "Keeps 3 days. Chop the leftovers and fry them hard in a skillet with the rice for a very good second dinner.",
+      "source": "ERRERLabs original"
     }
   ]
 }

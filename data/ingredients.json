@@ -9646,6 +9646,834 @@
     "grow": false
    },
    "tips": "Swapping applesauce for half the oil in a quick bread keeps it moist and cuts the fat without anyone noticing."
+  },
+  {
+   "id": "ing.gnocchi",
+   "name": "Potato gnocchi (shelf-stable)",
+   "aisle": "dry-goods",
+   "units": {
+    "package": 500,
+    "cup": 180,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (16 oz) potato gnocchi",
+    "grams": 500
+   },
+   "per100g": [
+    160,
+    4.0,
+    1.0,
+    0.2,
+    33.0,
+    2.0,
+    1.0,
+    430,
+    120,
+    0,
+    15,
+    1.1
+   ],
+   "diet": [
+    "vegetarian"
+   ],
+   "tags": [
+    "pantry",
+    "quick",
+    "storage"
+   ],
+   "subs": [
+    "ing.pasta.regular"
+   ]
+  },
+  {
+   "id": "ing.cheese.gruyere",
+   "name": "Gruyère",
+   "aisle": "dairy-eggs",
+   "units": {
+    "cup": 108,
+    "oz": 28.35,
+    "tbsp": 7,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz Gruyère",
+    "grams": 28.35
+   },
+   "per100g": [
+    413,
+    29.8,
+    32.3,
+    18.9,
+    0.4,
+    0,
+    0.4,
+    336,
+    81,
+    110,
+    1011,
+    0.17
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "cheese",
+    "rich",
+    "finishing"
+   ],
+   "subs": [
+    "ing.cheese.parmesan",
+    "ing.cheese.mozzarella"
+   ]
+  },
+  {
+   "id": "ing.paneer",
+   "name": "Paneer",
+   "aisle": "dairy-eggs",
+   "units": {
+    "package": 340,
+    "cup": 150,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (12 oz) paneer",
+    "grams": 340
+   },
+   "per100g": [
+    296,
+    18.3,
+    22.8,
+    14.5,
+    3.6,
+    0,
+    2.6,
+    18,
+    100,
+    70,
+    480,
+    0.2
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "protein",
+    "cheese"
+   ],
+   "subs": [
+    "ing.tofu.firm",
+    "ing.cheese.feta"
+   ]
+  },
+  {
+   "id": "ing.chilicrisp",
+   "name": "Chili crisp",
+   "aisle": "international",
+   "units": {
+    "tbsp": 15,
+    "tsp": 5,
+    "jar": 200,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (7 oz) chili crisp",
+    "grams": 200
+   },
+   "per100g": [
+    480,
+    4.0,
+    48.0,
+    7.0,
+    8.0,
+    3.0,
+    1.0,
+    1400,
+    200,
+    0,
+    40,
+    2.0
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "tags": [
+    "condiment",
+    "heat",
+    "finishing",
+    "storage"
+   ],
+   "subs": [
+    "ing.sriracha",
+    "ing.spice.pepperflakes"
+   ]
+  },
+  {
+   "id": "ing.sesame.seeds",
+   "name": "Sesame seeds",
+   "aisle": "nuts-seeds",
+   "units": {
+    "tbsp": 9,
+    "tsp": 3,
+    "cup": 144,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz sesame seeds",
+    "grams": 28.35
+   },
+   "per100g": [
+    573,
+    17.7,
+    49.7,
+    7.0,
+    23.4,
+    11.8,
+    0.3,
+    11,
+    468,
+    0,
+    975,
+    14.6
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "finishing",
+    "crunch",
+    "storage"
+   ],
+   "subs": [
+    "ing.spice.everything",
+    "ing.sunflowerseeds"
+   ]
+  },
+  {
+   "id": "ing.peanuts",
+   "name": "Roasted peanuts",
+   "aisle": "nuts-seeds",
+   "units": {
+    "cup": 146,
+    "tbsp": 9,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz roasted unsalted peanuts",
+    "grams": 28.35
+   },
+   "per100g": [
+    587,
+    24.4,
+    49.7,
+    6.9,
+    21.5,
+    8.0,
+    4.2,
+    6,
+    634,
+    0,
+    54,
+    2.3
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "crunch",
+    "finishing",
+    "cheap",
+    "storage"
+   ],
+   "subs": [
+    "ing.cashews",
+    "ing.almonds"
+   ]
+  },
+  {
+   "id": "ing.mushroom.porcini.dried",
+   "name": "Dried porcini mushrooms",
+   "aisle": "dry-goods",
+   "units": {
+    "oz": 28.35,
+    "cup": 20,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz dried porcini",
+    "grams": 28.35
+   },
+   "per100g": [
+    296,
+    30.0,
+    3.0,
+    0.5,
+    60.0,
+    25.0,
+    3.0,
+    30,
+    2000,
+    0,
+    60,
+    5.0
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "umami",
+    "pantry",
+    "storage"
+   ],
+   "subs": [
+    "ing.mushroom.shiitake"
+   ]
+  },
+  {
+   "id": "ing.wine.red",
+   "name": "Dry red wine",
+   "aisle": "beverages",
+   "units": {
+    "cup": 235,
+    "tbsp": 15,
+    "bottle": 750,
+    "g": 1
+   },
+   "shop": {
+    "unit": "bottle",
+    "label": "bottles dry red wine",
+    "grams": 750
+   },
+   "per100g": [
+    85,
+    0.07,
+    0,
+    0,
+    2.6,
+    0,
+    0.6,
+    4,
+    127,
+    0,
+    8,
+    0.46
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "braising",
+    "deglaze"
+   ],
+   "subs": [
+    "ing.broth.veg",
+    "ing.wine.white"
+   ]
+  },
+  {
+   "id": "ing.chile.guajillo",
+   "name": "Dried guajillo chiles",
+   "aisle": "international",
+   "units": {
+    "each": 8,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz dried guajillo chiles",
+    "grams": 28.35
+   },
+   "per100g": [
+    320,
+    12.0,
+    8.0,
+    1.2,
+    60.0,
+    28.0,
+    10.0,
+    90,
+    2000,
+    0,
+    150,
+    7.0
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "chile",
+    "pantry",
+    "storage"
+   ],
+   "subs": [
+    "ing.chipotle.adobo",
+    "ing.spice.chili"
+   ]
+  },
+  {
+   "id": "ing.cream.heavy",
+   "name": "Heavy cream",
+   "aisle": "dairy-eggs",
+   "units": {
+    "cup": 238,
+    "tbsp": 15,
+    "g": 1
+   },
+   "shop": {
+    "unit": "cup",
+    "label": "half-pints heavy cream",
+    "grams": 238
+   },
+   "per100g": [
+    340,
+    2.8,
+    36.1,
+    23.0,
+    2.9,
+    0,
+    2.9,
+    27,
+    95,
+    113,
+    65,
+    0.03
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "rich",
+    "finishing"
+   ],
+   "subs": [
+    "ing.milk.1pct",
+    "ing.coconutmilk.light",
+    "ing.cashews"
+   ]
+  },
+  {
+   "id": "ing.kimchi",
+   "name": "Kimchi",
+   "aisle": "international",
+   "units": {
+    "cup": 150,
+    "tbsp": 15,
+    "jar": 450,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (16 oz) kimchi",
+    "grams": 450
+   },
+   "per100g": [
+    15,
+    1.1,
+    0.5,
+    0.1,
+    2.4,
+    1.6,
+    1.1,
+    498,
+    151,
+    0,
+    33,
+    0.6
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "fermented",
+    "acid",
+    "storage"
+   ],
+   "subs": [
+    "ing.cabbage.green",
+    "ing.sriracha"
+   ]
+  },
+  {
+   "id": "ing.noodle.wheat",
+   "name": "Wheat noodles (lo mein or ramen)",
+   "aisle": "international",
+   "units": {
+    "oz": 28.35,
+    "package": 400,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (14 oz) wheat noodles",
+    "grams": 400
+   },
+   "per100g": [
+    360,
+    12.0,
+    1.5,
+    0.3,
+    73.0,
+    3.0,
+    2.0,
+    10,
+    160,
+    0,
+    20,
+    3.0
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "tags": [
+    "pantry",
+    "quick",
+    "storage"
+   ],
+   "subs": [
+    "ing.pasta.regular",
+    "ing.noodle.rice"
+   ]
+  },
+  {
+   "id": "ing.baguette",
+   "name": "Baguette",
+   "aisle": "bakery",
+   "units": {
+    "each": 250,
+    "slice": 25,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "each",
+    "label": "baguettes",
+    "grams": 250
+   },
+   "per100g": [
+    274,
+    9.0,
+    2.5,
+    0.5,
+    52.0,
+    2.3,
+    2.5,
+    580,
+    110,
+    0,
+    60,
+    3.2
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "tags": [
+    "bread",
+    "crouton"
+   ],
+   "subs": [
+    "ing.bread.wholegrain"
+   ]
+  },
+  {
+   "id": "ing.mayo.olive",
+   "name": "Olive oil mayonnaise",
+   "aisle": "condiments",
+   "units": {
+    "tbsp": 14,
+    "cup": 224,
+    "tsp": 4.7,
+    "g": 1
+   },
+   "shop": {
+    "unit": "cup",
+    "label": "jars olive oil mayonnaise",
+    "grams": 224
+   },
+   "per100g": [
+    360,
+    0.5,
+    40.0,
+    5.0,
+    1.0,
+    0,
+    1.0,
+    620,
+    5,
+    25,
+    5,
+    0.1
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "condiment",
+    "rich"
+   ],
+   "subs": [
+    "ing.yogurt.greek.2",
+    "ing.tahini"
+   ]
+  },
+  {
+   "id": "ing.harissa",
+   "name": "Harissa paste",
+   "aisle": "international",
+   "units": {
+    "tbsp": 16,
+    "tsp": 5,
+    "jar": 190,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (6.7 oz) harissa",
+    "grams": 190
+   },
+   "per100g": [
+    100,
+    3.0,
+    6.0,
+    0.8,
+    10.0,
+    4.0,
+    4.0,
+    900,
+    300,
+    0,
+    40,
+    2.0
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "condiment",
+    "heat",
+    "storage"
+   ],
+   "subs": [
+    "ing.chipotle.adobo",
+    "ing.spice.smokedpaprika"
+   ]
+  },
+  {
+   "id": "ing.peach",
+   "name": "Peach",
+   "aisle": "produce",
+   "units": {
+    "each": 150,
+    "cup": 154,
+    "g": 1
+   },
+   "shop": {
+    "unit": "each",
+    "label": "peaches",
+    "grams": 150
+   },
+   "per100g": [
+    39,
+    0.9,
+    0.25,
+    0.02,
+    9.5,
+    1.5,
+    8.4,
+    0,
+    190,
+    0,
+    6,
+    0.25
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "fruit",
+    "summer",
+    "seasonal"
+   ],
+   "subs": [
+    "ing.pear",
+    "ing.apple"
+   ],
+   "garden": {
+    "grow": false,
+    "difficulty": "hard",
+    "note": "Peaches are marginal in zone 6a — a late frost takes the buds most years. Buy them from an orchard in August instead; that is when Ohio peaches are worth eating."
+   }
+  },
+  {
+   "id": "ing.pistachios",
+   "name": "Pistachios",
+   "aisle": "nuts-seeds",
+   "units": {
+    "cup": 123,
+    "tbsp": 8,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz shelled pistachios",
+    "grams": 28.35
+   },
+   "per100g": [
+    560,
+    20.2,
+    45.3,
+    5.6,
+    27.2,
+    10.6,
+    7.7,
+    1,
+    1025,
+    0,
+    105,
+    3.9
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "finishing",
+    "crunch",
+    "storage"
+   ],
+   "subs": [
+    "ing.almonds",
+    "ing.walnuts"
+   ]
+  },
+  {
+   "id": "ing.jackfruit.canned",
+   "name": "Young green jackfruit (canned)",
+   "aisle": "canned-jarred",
+   "units": {
+    "can": 400,
+    "cup": 150,
+    "g": 1
+   },
+   "shop": {
+    "unit": "can",
+    "label": "cans (14 oz) young green jackfruit in brine",
+    "grams": 400
+   },
+   "per100g": [
+    30,
+    1.0,
+    0.2,
+    0.05,
+    7.0,
+    4.0,
+    1.0,
+    250,
+    120,
+    0,
+    20,
+    0.5
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "texture",
+    "pantry",
+    "storage"
+   ],
+   "subs": [
+    "ing.mushroom.portobello",
+    "ing.chickpeas.canned"
+   ]
+  },
+  {
+   "id": "ing.chives",
+   "name": "Chives",
+   "aisle": "produce",
+   "units": {
+    "tbsp": 3,
+    "cup": 48,
+    "bunch": 30,
+    "g": 1
+   },
+   "shop": {
+    "unit": "bunch",
+    "label": "bunches chives",
+    "grams": 30
+   },
+   "per100g": [
+    30,
+    3.27,
+    0.73,
+    0.15,
+    4.35,
+    2.5,
+    1.85,
+    3,
+    296,
+    0,
+    92,
+    1.6
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "tags": [
+    "herb",
+    "finishing",
+    "fresh"
+   ],
+   "subs": [
+    "ing.scallion",
+    "ing.parsley.flat"
+   ],
+   "garden": {
+    "grow": true,
+    "difficulty": "easy",
+    "sow": "Seed or divide a clump in April",
+    "harvest": "April through hard frost",
+    "note": "A perennial that comes back a little bigger every year and is the first green thing out of the ground in an Ohio spring. Cut it hard; it likes it."
+   }
   }
  ]
 }
