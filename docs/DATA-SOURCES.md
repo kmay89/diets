@@ -121,3 +121,49 @@ are generally arranged in Northeast Ohio, not official floor plans. Reorder them
 
 If a number here is wrong, that is a bug worth reporting. Open an issue with the ingredient id, the
 value you believe is correct, and the FoodData Central FDC ID or other public source.
+
+---
+
+## The citation engine
+
+Since v2.0.0 every factual statement the app makes outside a recipe lives in `data/claims.json`,
+attached to a source in `data/citations.json`. `npm test` enforces four rules:
+
+1. A claim with no source may only be shown if it is explicitly labelled `editorial` — our view,
+   not a research finding.
+2. Every source must carry a `caveat` of real substance. A citation showing only the flattering half
+   of a study borrows the authority of research while discarding what makes research trustworthy.
+3. Every source declares an evidence type from a fixed list — randomised trial, meta-analysis,
+   cohort, modelling study, guideline, regulatory standard, official statistics — and the UI shows
+   it, because these do not deserve equal confidence.
+4. Every source records the date its bibliographic details were last checked against the publisher.
+
+### The sources, and what each one is for
+
+| Source | Used for | Type |
+|---|---|---|
+| Poore & Nemecek 2018, *Science* | Food's share of emissions; farmland vs calories; the effect of a dietary shift | Meta-analysis of LCAs |
+| Crippa et al. 2021, *Nature Food* | The higher end of the food-emissions range | Modelling |
+| Springmann et al. 2021, *Lancet Planetary Health* | Cost of vegetarian and vegan patterns vs current diets | Modelling |
+| Estruch et al. 2018, *NEJM* (PREDIMED) | Mediterranean pattern and cardiovascular events | Randomised trial |
+| Sacks et al. 2017, *Circulation* (AHA advisory) | Replacing saturated fat with polyunsaturated fat | Guideline |
+| Reynolds et al. 2019, *The Lancet* | Fibre and mortality; the 25–30 g range | Meta-analysis |
+| Neal et al. 2021, *NEJM* (SSaSS) | Salt substitution and stroke | Randomised trial |
+| Grundy et al. 2019, *Circulation* | Diet as foundation, drugs on top | Guideline |
+| National Lipid Association | Limits of diet in inherited high cholesterol | Guideline |
+| FDA 21 CFR 101.81 | Oat beta-glucan and heart disease | Regulatory |
+| Our World in Data / FAOSTAT | Land animals slaughtered per year | Official statistics |
+| Dietary Guidelines for Americans 2020–2025 | Children's calorie needs; sodium by age | Guideline |
+| USDA FoodData Central | Every ingredient nutrient value | Dataset |
+| Mifflin-St Jeor 1990, *AJCN* | Adult energy estimates | Trial-derived equation |
+
+### Two deliberate omissions
+
+**No per-recipe carbon score.** Poore & Nemecek show that impact varies enormously between producers
+of the same food — often more than between different foods. An honest per-recipe number would carry
+error bars wider than the differences it claimed to show, so the app talks about the pattern instead
+of decorating each recipe with a false precision.
+
+**No letter grade on a public share card unless it is an A or a B.** The heart score is an internal
+sorting heuristic with a page of caveats attached. A letter on a card someone's friend sees in a
+message would read as a nutritional verdict from an authority that does not exist.

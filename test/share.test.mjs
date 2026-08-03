@@ -18,7 +18,8 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const site = read('site.config.json');
 const recipes = [
   ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes
+  ...read('data/recipes.daily.json').recipes,
+  ...read('data/recipes.occasions.json').recipes
 ];
 const origin = site.url.replace(/\/$/, '');
 const slugOf = (id) => id.replace(/^rec\./, '');

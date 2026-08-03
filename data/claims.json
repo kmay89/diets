@@ -1,0 +1,194 @@
+{
+  "schema": "vegnourish.claims/1",
+  "note": "Every factual statement the app makes outside a recipe lives here, attached to the sources in citations.json. If a claim cannot be sourced, it does not belong in this file — and it does not belong on the screen.",
+
+  "topics": [
+    {
+      "id": "nourishment",
+      "title": "Food is nourishment first",
+      "icon": "🌾",
+      "lede": "Most eating advice starts from restriction — what to cut, avoid, and feel guilty about. That framing is exhausting and it does not last. This app starts somewhere else: food is how you take care of the people at your table, and the meal that gets cooked again next month is worth more than the perfect meal that gets cooked once.",
+      "body": [
+        "Nothing here asks you to eat less. It asks a different question — what could go *on* the plate that makes it better. More plants, more fibre, more colour, more flavour built from technique instead of salt. The things that get crowded out get crowded out quietly.",
+        "There is no streak to break, no points, no red numbers. A week where you cook twice is a good week. The tool is here to make the cooking easier, not to keep score."
+      ],
+      "claims": [
+        {
+          "id": "nourish.fibre",
+          "text": "Most people eat around half the fibre associated with the lowest risk of early death — the sweet spot in the evidence sits between 25 g and 30 g a day.",
+          "cites": ["reynolds2019"],
+          "strength": "meta-analysis"
+        },
+        {
+          "id": "nourish.addition",
+          "text": "Eating more fibre-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
+          "cites": ["reynolds2019"],
+          "strength": "meta-analysis"
+        }
+      ]
+    },
+
+    {
+      "id": "heart",
+      "title": "What food does to a heart — and what it doesn't",
+      "icon": "❤️",
+      "lede": "If someone in your family has heart disease, you have probably been handed a list of things to stop. Here is the more useful version: what the evidence actually shows food can do, how it works, and — just as importantly — where its power ends.",
+      "sections": [
+        {
+          "id": "heart.how",
+          "title": "How diet actually reaches the heart",
+          "body": [
+            "Arteries narrow over decades as cholesterol-carrying particles lodge in the artery wall and inflame it. Blood pressure decides how hard the heart has to push against those vessels every minute of every day. Diet acts on both — mostly through which fats you eat, how much sodium and potassium you get, and how much fibre passes through you.",
+            "None of this is fast, and none of it is visible. It is a slow change in the conditions inside your blood vessels, which is exactly why it is easy to disbelieve and easy to abandon."
+          ],
+          "claims": [
+            {
+              "id": "heart.fats",
+              "text": "Replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular disease by about 30% in randomised trials — an effect the American Heart Association notes is similar in size to statin treatment.",
+              "cites": ["sacks2017"],
+              "strength": "guideline",
+              "detail": "The benefit is in the swap. Cutting saturated fat and replacing it with refined starch or sugar does not produce the same result, which is why this app cooks with olive oil rather than simply cooking with less."
+            },
+            {
+              "id": "heart.pattern",
+              "text": "A Mediterranean-style pattern with extra-virgin olive oil or nuts cut heart attacks, strokes and cardiovascular death by roughly 30% over five years in a randomised trial of nearly 7,500 people at high risk.",
+              "cites": ["estruch2018"],
+              "strength": "rct",
+              "detail": "This trial was retracted and republished in 2018 after randomisation problems at some sites. The reanalysis reached the same conclusions. We cite the corrected version, and we mention the retraction because a citation engine that hides inconvenient history is decoration."
+            },
+            {
+              "id": "heart.sodium",
+              "text": "Swapping ordinary salt for a potassium-based salt substitute reduced stroke by about 14% and death by about 12% in a five-year randomised trial of nearly 21,000 people.",
+              "cites": ["neal2021"],
+              "strength": "rct",
+              "detail": "Potassium-based substitutes are not safe for everyone — kidney disease and some blood-pressure medications make them risky. Ask a clinician before switching. The broader point stands on its own: sodium is worth taking seriously, and most of it arrives from packaged food and restaurant food rather than the salt shaker."
+            },
+            {
+              "id": "heart.fibre",
+              "text": "People eating the most dietary fibre had 15–30% lower cardiovascular and all-cause mortality than those eating the least.",
+              "cites": ["reynolds2019"],
+              "strength": "meta-analysis"
+            },
+            {
+              "id": "heart.oats",
+              "text": "Oats and barley carry an FDA-authorised heart-disease health claim at 3 g of beta-glucan soluble fibre a day.",
+              "cites": ["fda-betaglucan"],
+              "strength": "regulatory"
+            }
+          ]
+        },
+        {
+          "id": "heart.limits",
+          "title": "Where food's power ends",
+          "body": [
+            "This is the part most food apps leave out, and leaving it out does real harm — it sets people up to feel that a heart attack was a personal failure of willpower.",
+            "Diet is one input among several. Genetics, age, blood pressure, smoking, diabetes, sleep, stress and access to care all matter, and some of them matter more than what is for dinner. Roughly 1 in 250 people inherits a condition that keeps LDL cholesterol high no matter how carefully they eat.",
+            "Food does not clear an existing blockage, does not replace a prescription, and does not make anyone immortal. What it reliably does is shift the odds and improve how you feel while doing it. That is worth a great deal, and it is not the same as control."
+          ],
+          "claims": [
+            {
+              "id": "heart.fh",
+              "text": "In inherited high cholesterol, lifestyle change is an adjunct to medication and is unlikely to reach treatment targets on its own.",
+              "cites": ["nla-fh"],
+              "strength": "guideline"
+            },
+            {
+              "id": "heart.guideline",
+              "text": "Major cholesterol guidelines treat a heart-healthy dietary pattern as the foundation for everyone, and drug therapy as necessary on top of it for defined risk groups — not as an either/or.",
+              "cites": ["grundy2019"],
+              "strength": "guideline"
+            },
+            {
+              "id": "heart.notadvice",
+              "text": "Nothing in this app is medical advice, and no score here is a diagnosis. If someone you cook for has heart disease, their clinician sets the targets; this app just helps you hit them at dinner.",
+              "cites": [],
+              "strength": "editorial"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "planet",
+      "title": "What it means for the planet",
+      "icon": "🌍",
+      "lede": "Food is one of the largest levers an ordinary household actually controls. Not the only one, and not a substitute for the decisions made by governments and energy companies — but a real one, exercised three times a day.",
+      "claims": [
+        {
+          "id": "planet.share",
+          "text": "Food systems account for roughly a quarter to a third of global greenhouse gas emissions — 26% by one widely cited estimate, 34% by another using a broader boundary.",
+          "cites": ["poore2018", "crippa2021"],
+          "strength": "modelling",
+          "detail": "The two estimates differ because they draw the system boundary differently, not because one is wrong. The IPCC's own range is 21–37%. We quote the range rather than the most dramatic number in it."
+        },
+        {
+          "id": "planet.land",
+          "text": "Animal products use around 83% of the world's farmland while providing about 18% of its calories and 37% of its protein.",
+          "cites": ["poore2018"],
+          "strength": "meta-analysis"
+        },
+        {
+          "id": "planet.shift",
+          "text": "A global shift away from animal products would cut farmland use by around 76% and food's greenhouse gas emissions by roughly half.",
+          "cites": ["poore2018"],
+          "strength": "modelling",
+          "detail": "That is a global thought experiment, not a prediction and not a demand. The practical read is directional: moving some meals toward plants moves the number, and the size of the shift scales with how much you actually change."
+        },
+        {
+          "id": "planet.variation",
+          "text": "Impact varies enormously between producers of the same food — so where something was grown can matter as much as what it is.",
+          "cites": ["poore2018"],
+          "strength": "meta-analysis",
+          "detail": "This cuts against tidy rules. It is also why this app does not put a carbon score on every recipe: the honest error bars would be wider than the differences we would be claiming to show."
+        }
+      ]
+    },
+
+    {
+      "id": "wallet",
+      "title": "What it means for the grocery bill",
+      "icon": "💵",
+      "lede": "The idea that eating well is expensive is half true — it depends entirely on what you buy. Dried lentils, oats, cabbage, frozen vegetables and canned beans are among the cheapest calories in any store, and they are also among the most nutritious.",
+      "claims": [
+        {
+          "id": "wallet.cost",
+          "text": "Modelled across 150 countries, vegetarian and vegan patterns cost 21–34% less than the current typical diet in high-income countries; a low-meat flexitarian pattern about 14% less.",
+          "cites": ["springmann2021"],
+          "strength": "modelling",
+          "detail": "This models retail food prices only. It does not count your time, your kitchen, or whether the cheap options are stocked where you shop — all of which are real costs, and none of which show up in a price index."
+        },
+        {
+          "id": "wallet.practical",
+          "text": "The savings come from the substitutions, not from buying speciality products. Meat substitutes and packaged plant foods are frequently more expensive than the meat they replace.",
+          "cites": ["springmann2021"],
+          "strength": "editorial",
+          "detail": "Which is why almost nothing in this collection calls for a meat substitute. Beans, lentils, eggs, tofu, grains and whatever is in season do the work."
+        }
+      ]
+    },
+
+    {
+      "id": "animals",
+      "title": "What it means for animals",
+      "icon": "🐾",
+      "lede": "This app does not tell you what to believe about eating animals. It does think you are entitled to the number, stated plainly and without a photograph attached.",
+      "claims": [
+        {
+          "id": "animals.count",
+          "text": "More than 80 billion land animals were slaughtered for meat worldwide in 2022, the great majority of them chickens.",
+          "cites": ["owid-animals"],
+          "strength": "dataset",
+          "detail": "That count excludes fish and other aquatic animals, which are reported by weight rather than by individual, and excludes animals that die in egg and dairy production."
+        },
+        {
+          "id": "animals.stance",
+          "text": "Every dinner here is built to be complete without meat, with meat available as an addition. That is a design choice about flexibility, not a verdict on anyone's eating.",
+          "cites": [],
+          "strength": "editorial",
+          "detail": "One table often holds a vegetarian, an omnivore, a teenager who has just announced something, and someone under doctor's orders. Cooking one base everybody can eat is simply the practical answer to that, and it happens to move all three of the numbers above."
+        }
+      ]
+    }
+  ]
+}

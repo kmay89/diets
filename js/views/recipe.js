@@ -7,11 +7,13 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, pill, toast, minutes, scoreBadge, meter, titleCase, debounce, sheet } from '../ui.js';
+import { h, mount, chip, pill, toast, minutes, scoreBadge, meter, titleCase, debounce, sheet, plural } from '../ui.js';
 import { getDb, nutritionFor, heartFor, substitutesFor, searchRecipes, pantryCoverage } from '../data.js';
 import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
+import { play, stagger, pulse } from '../feedback.js';
+import { allOccasions, occasionById } from '../occasions.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -90,13 +92,14 @@ export function render(root, { navigate, params }) {
           disabled: isPlanned(recipe.id),
           onclick: () => {
             addToPlan(recipe.id, { course: recipe.course, servings, withOmnivore, withVegSwap });
+            play('add');
             toast('Added to the plan');
             draw();
           }
-        }, isPlanned(recipe.id) ? 'In the plan' : `Add ${servings} servings to the plan`),
+        }, isPlanned(recipe.id) ? 'In the plan' : `Add ${plural(servings, 'serving')} to the plan`),
         h('button.btn', {
           type: 'button',
-          onclick: () => { markCooked(recipe.id); toast('Marked as cooked — it will not come up again for a while'); }
+          onclick: () => { markCooked(recipe.id); play('cooked'); toast('Nice. Marked as cooked.'); }
         }, '✓ Cooked it'),
         h('button.btn', {
           type: 'button',
@@ -128,9 +131,9 @@ function servingControl(recipe, servings, equiv, onchange) {
     h('div.servings__row',
       h('span.field__label', 'Cook this many servings'),
       h('div.stepper',
-        h('button.icon-btn', { type: 'button', onclick: () => onchange(Math.max(1, servings - 1)), 'aria-label': 'Fewer servings' }, '−'),
+        h('button.icon-btn', { type: 'button', onclick: () => { play('tap'); onchange(Math.max(1, servings - 1)); }, 'aria-label': 'Fewer servings' }, '−'),
         h('span.stepper__value', servings),
-        h('button.icon-btn', { type: 'button', onclick: () => onchange(servings + 1), 'aria-label': 'More servings' }, '+')
+        h('button.icon-btn', { type: 'button', onclick: () => { play('tap'); onchange(servings + 1); }, 'aria-label': 'More servings' }, '+')
       )
     ),
     per.length
@@ -157,7 +160,7 @@ function ingredientList(recipe, state, scale, draw) {
           h('label.ing__main',
             h('input', {
               type: 'checkbox', checked: have,
-              onchange: () => { togglePantry(line.ing); draw(); },
+              onchange: (e) => { togglePantry(line.ing); play(e.target.checked ? 'check' : 'uncheck'); draw(); },
               'aria-label': `I have ${item.name}`
             }),
             h('span.ing__qty', formatQty(line.qty * scale, line.unit)),
@@ -306,13 +309,22 @@ function printRecipe(recipe, servings) {
 let browseQuery = '';
 let browseCourse = 'all';
 let browseSort = 'heart';
+let browseOccasion = null;
 
 export function renderBrowse(root, { navigate }) {
-  const draw = () => mount(root, view());
+  // A link like #/browse?occasion=thanksgiving arrives from the roll screen.
+  const fromLink = location.hash.match(/[?&]occasion=([\w-]+)/)?.[1];
+  if (fromLink) browseOccasion = fromLink;
+
+  const draw = () => {
+    mount(root, view());
+    requestAnimationFrame(() => stagger(root.querySelector('.card-grid'), { step: 28 }));
+  };
   const view = () => {
     const state = getState();
     let list = searchRecipes(browseQuery);
     if (browseCourse !== 'all') list = list.filter(r => r.course === browseCourse);
+    if (browseOccasion) list = list.filter(r => (r.occasions || []).includes(browseOccasion));
 
     list = [...list].sort((a, b) => {
       if (browseSort === 'time') return a.activeMin - b.activeMin;
@@ -323,7 +335,27 @@ export function renderBrowse(root, { navigate }) {
     });
 
     return h('section.view',
-      h('div.view__head', h('h1.view__title', 'Every recipe'), h('p.view__sub', `${list.length} of ${getDb().recipes.length}`)),
+      h('div.view__head',
+        h('div',
+          h('h1.view__title', browseOccasion ? (occasionById(browseOccasion)?.name || 'Recipes') : 'Every recipe'),
+          h('p.view__sub',
+            browseOccasion
+              ? occasionById(browseOccasion)?.blurb || ''
+              : `${list.length} of ${getDb().recipes.length}`)
+        )
+      ),
+      h('div.occasion-strip',
+        h('button', {
+          type: 'button',
+          class: `occasion ${browseOccasion ? '' : 'is-on'}`,
+          onclick: () => { browseOccasion = null; play('tap'); draw(); }
+        }, h('span.occasion__icon', '🍽'), 'Everything'),
+        ...allOccasions().map(o => h('button', {
+          type: 'button',
+          class: `occasion ${browseOccasion === o.id ? 'is-on' : ''}`,
+          onclick: () => { browseOccasion = browseOccasion === o.id ? null : o.id; play('tap'); draw(); }
+        }, h('span.occasion__icon', o.icon), o.name))
+      ),
       h('div.card.filters',
         h('input.input', {
           type: 'search', placeholder: 'Search recipes and ingredients…', value: browseQuery,
@@ -360,7 +392,7 @@ export function renderBrowse(root, { navigate }) {
               h('button.btn', {
                 type: 'button',
                 disabled: isPlanned(r.id),
-                onclick: () => { addToPlan(r.id, { course: r.course }); toast('Added to the plan'); draw(); }
+                onclick: () => { addToPlan(r.id, { course: r.course }); play('add'); toast('Added to the plan'); draw(); }
               }, isPlanned(r.id) ? 'In the plan' : 'Add to plan'),
               h('button.btn.btn--ghost', { type: 'button', onclick: () => navigate(`#/recipe/${r.id}`) }, 'Open →')
             )

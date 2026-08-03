@@ -3,7 +3,7 @@
 **Short version: everything stays on your device. There is no account, no server, and no analytics.
 We cannot see your data because it never leaves your browser.**
 
-Last updated: 2026-08-03 · Applies to: Veg-Nourish v1.2.0 (ERRERLabs)
+Last updated: 2026-08-03 · Applies to: Veg-Nourish v2.0.0 (ERRERLabs)
 
 ---
 
@@ -21,6 +21,7 @@ All of it lives in your browser's `localStorage` under a single key, `errerlabs.
 | Shopping list — hand-added items, what is ticked off | The list screen |
 | Cooking history — recipe ids you marked as cooked | Not repeating meals too soon |
 | A flag if you dismissed the install banner | Not asking again |
+| Whether sound is switched on | Remembering your choice |
 
 That is the complete list. Health and household details are the most sensitive things here, which
 is exactly why they are stored the way they are: locally, in one place, under your control.
@@ -70,7 +71,7 @@ Settings → *Download a backup* first, which writes a JSON file to your device 
 ## Data your browser stores on its own
 
 The service worker keeps a cache of the app files and recipe data (a Cache Storage entry named
-`errerlabs-diets-v1.2.0`). It contains only the app itself — no personal data — and is cleared with
+`errerlabs-diets-v2.0.0`). It contains only the app itself — no personal data — and is cleared with
 your site data.
 
 ## Children

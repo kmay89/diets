@@ -6,6 +6,7 @@
 
 import { h, mount, pill, toast, minutes, scoreBadge, meter, titleCase, confirmSheet } from '../ui.js';
 import { getDb, nutritionFor, heartFor, sharesShoppingWith } from '../data.js';
+import { play } from '../feedback.js';
 import { getState, updatePlanEntry, removeFromPlan, clearPlan, addToPlan, markCooked, DAYS } from '../store.js';
 import { servingEquivalents, householdTargets, NUTRIENT_LABELS } from '../nutrition.js';
 
@@ -111,7 +112,7 @@ function planRow(entry, recipe, state, draw, navigate) {
     ),
 
     h('div.recipe-card__actions',
-      h('button.btn', { type: 'button', onclick: () => { markCooked(recipe.id); removeFromPlan(entry.id); toast('Nice. Marked as cooked.'); draw(); } }, '✓ Cooked'),
+      h('button.btn', { type: 'button', onclick: () => { markCooked(recipe.id); removeFromPlan(entry.id); play('cooked'); toast('Nice. Marked as cooked.'); draw(); } }, '✓ Cooked'),
       h('button.btn.btn--ghost', { type: 'button', onclick: () => { removeFromPlan(entry.id); draw(); } }, 'Remove')
     )
   );

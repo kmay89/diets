@@ -125,32 +125,126 @@
   "storeLayouts": {
     "default": {
       "name": "Standard supermarket",
-      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "frozen", "canned-jarred", "dry-goods", "nuts-seeds", "baking", "condiments", "oils-vinegars", "spices", "international", "beverages", "household", "other"]
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "frozen",
+        "canned-jarred",
+        "dry-goods",
+        "nuts-seeds",
+        "baking",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "beverages",
+        "household",
+        "other"
+      ]
     },
     "heinens-hudson": {
-      "name": "Heinen's (Hudson, OH)",
-      "note": "Produce and the cheese counter are at the front-left; the butcher and seafood counter run the back wall. Their bulk grains and nuts are worth using for lentils and farro.",
-      "order": ["produce", "deli", "bakery", "meat-seafood", "dairy-eggs", "dry-goods", "canned-jarred", "nuts-seeds", "condiments", "oils-vinegars", "spices", "international", "baking", "frozen", "beverages", "household", "other"]
+      "name": "Heinen's",
+      "note": "Produce and the cheese counter at the front, butcher and seafood along the back wall. Bulk grains and nuts are worth using for lentils and farro.",
+      "order": [
+        "produce",
+        "deli",
+        "bakery",
+        "meat-seafood",
+        "dairy-eggs",
+        "dry-goods",
+        "canned-jarred",
+        "nuts-seeds",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "baking",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
     },
     "giant-eagle": {
       "name": "Giant Eagle",
       "note": "Larger center store; bring the list grouped by aisle or you will walk the whole thing twice.",
-      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "canned-jarred", "dry-goods", "condiments", "oils-vinegars", "spices", "baking", "nuts-seeds", "international", "frozen", "beverages", "household", "other"]
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "canned-jarred",
+        "dry-goods",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "baking",
+        "nuts-seeds",
+        "international",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
     },
     "aldi": {
       "name": "Aldi",
       "note": "Single-loop store, so the aisle order barely matters. Great on frozen vegetables, olive oil, nuts, and canned beans; thinner on fresh herbs and specialty pantry items.",
-      "order": ["produce", "dairy-eggs", "meat-seafood", "bakery", "canned-jarred", "dry-goods", "condiments", "oils-vinegars", "spices", "nuts-seeds", "baking", "frozen", "beverages", "household", "other"]
+      "order": [
+        "produce",
+        "dairy-eggs",
+        "meat-seafood",
+        "bakery",
+        "canned-jarred",
+        "dry-goods",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "nuts-seeds",
+        "baking",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
     },
     "acme-fresh": {
       "name": "Acme Fresh Market",
       "note": "Strong local produce program in summer — Ohio sweet corn, tomatoes, and peaches in season.",
-      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "canned-jarred", "dry-goods", "nuts-seeds", "condiments", "oils-vinegars", "spices", "baking", "international", "frozen", "beverages", "household", "other"]
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "canned-jarred",
+        "dry-goods",
+        "nuts-seeds",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "baking",
+        "international",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
     },
     "farmers-market": {
-      "name": "Hudson Farmers Market (seasonal)",
-      "note": "Saturday mornings on the Green, roughly June through October. Buy the produce and herbs here first, then fill the gaps at the store.",
-      "order": ["produce", "bakery", "dairy-eggs", "meat-seafood", "other"]
+      "name": "Farmers market run",
+      "note": "Seasonal, roughly late spring to autumn in most of the country. Buy produce, herbs and eggs here first, then fill the gaps at the store.",
+      "order": [
+        "produce",
+        "bakery",
+        "dairy-eggs",
+        "meat-seafood",
+        "other"
+      ]
     }
   }
 }

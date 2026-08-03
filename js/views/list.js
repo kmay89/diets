@@ -6,6 +6,7 @@
 
 import { h, mount, chip, toast, sheet, titleCase } from '../ui.js';
 import { getDb } from '../data.js';
+import { play, stagger } from '../feedback.js';
 import {
   getState, setPref, addCustomItem, removeCustomItem, toggleChecked,
   suppressItem, clearChecked, togglePantry
@@ -74,6 +75,7 @@ function view(draw, navigate) {
       h('button.btn.btn--primary', {
         type: 'button',
         onclick: async () => {
+          play('tap');
           const how = await shareList(list, { title: 'Shopping list' });
           toast(how === 'shared' ? 'Shared' : 'Copied to the clipboard');
         }
@@ -104,7 +106,7 @@ function aisleBlock(group, state, draw) {
         h('label.list-item__main',
           h('input', {
             type: 'checkbox', checked: item.checked,
-            onchange: () => { toggleChecked(item.key); draw(); },
+            onchange: (e) => { toggleChecked(item.key); play(e.target.checked ? 'check' : 'uncheck'); draw(); },
             'aria-label': `Got ${item.name}`
           }),
           h('span.list-item__qty', item.buy || ''),

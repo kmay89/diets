@@ -4,6 +4,43 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] — 2026-08-03
+
+Opened up: written for anyone's table, sourced throughout, and stocked for the whole year.
+
+### Added
+- **A citation engine.** `data/citations.json` and `data/claims.json` hold every factual statement
+  the app makes about health, cost, climate or animals, with the source attached. Claims render with
+  numbered markers that open the full record — authors, journal, DOI, the kind of evidence it is,
+  and what it does not show. 14 sources, all verified against their publishers.
+- **A "Why" screen** covering nourishment, what food does to a heart *and where its power ends*, the
+  planet, the grocery bill, and animals. Every number carries its source and its caveat.
+- **26 occasion recipes** — Thanksgiving, the winter holidays, New Year, cookouts and Labor Day,
+  potlucks, game days, bake sales, picnics, brunch, and fifteen-minute dinners. 70 recipes total.
+- **An occasion taxonomy** with an upcoming-occasion card on the roll screen and a filter strip in
+  the recipe browser.
+- **Sound and motion.** Synthesised tones (no audio files) on rolling, ticking off, adding and
+  finishing; staggered card entrances; a tumbling dice. Obeys `prefers-reduced-motion`, never plays
+  before a user gesture, and has one switch in Settings.
+- 20 more ingredients for the holiday and cookout recipes; 9 new tests for the citation engine and
+  the occasion taxonomy.
+
+### Changed
+- **The app speaks to everyone now.** The copy, the household templates, the garden calendar and the
+  store layouts no longer assume one particular cook in one particular town. The garden data is
+  labelled as zone 6a and documented as editable for any region.
+- **The intro leads with nourishment**, not restriction: no streaks, no points, no red numbers.
+- **Calmer interface.** One spacing scale, lighter elevation, quieter pills, more air. The tab bar
+  went from eight items to five with the rest behind More — a row of eight icons is a wall nobody
+  reads.
+- Filter chips use a tinted "on" state rather than solid fill, so the primary action is the only
+  solid green thing on the screen.
+
+### Fixed
+- `h()` silently dropped an id written as `tag.class#id`, which is how the More tab shipped without
+  one during development. The helper now accepts both forms.
+- "1 servings" — counts are pluralised through a helper.
+
 ## [1.2.0] — 2026-08-03
 
 Renamed to **Veg-Nourish** and moved to [veg-nourish.com](https://veg-nourish.com).
@@ -98,6 +135,7 @@ First release.
 - **Privacy** — all state local to the device; JSON backup and restore; one-tap erase.
 - Data verification (`npm run verify`) and unit tests (`npm test`).
 
+[2.0.0]: https://github.com/kmay89/diets/releases/tag/v2.0.0
 [1.2.0]: https://github.com/kmay89/diets/releases/tag/v1.2.0
 [1.1.0]: https://github.com/kmay89/diets/releases/tag/v1.1.0
 [1.0.0]: https://github.com/kmay89/diets/releases/tag/v1.0.0

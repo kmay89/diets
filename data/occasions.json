@@ -1,0 +1,20 @@
+{
+  "schema": "vegnourish.occasions/1",
+  "note": "The days that shape what gets cooked. Used to filter the collection and to surface the right recipes as each one comes around.",
+  "occasions": [
+    {"id": "weeknight-rush", "name": "No time tonight", "icon": "⚡", "blurb": "Fifteen minutes or less, mostly from the cupboard.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]},
+    {"id": "thanksgiving", "name": "Thanksgiving", "icon": "🦃", "blurb": "A centerpiece worth gathering around, and the sides that carry the table.", "months": [11], "peak": "11-27"},
+    {"id": "winter-holidays", "name": "Winter holidays", "icon": "🎄", "blurb": "Christmas, Hanukkah, a long dark week of people in the house.", "months": [12, 1]},
+    {"id": "new-year", "name": "New Year", "icon": "🎉", "blurb": "Black-eyed peas for luck, and something bright after a fortnight of rich food.", "months": [12, 1]},
+    {"id": "spring-holiday", "name": "Spring table", "icon": "🌷", "blurb": "Easter, Passover, the first warm Sunday — green, light and pretty.", "months": [3, 4, 5]},
+    {"id": "cookout", "name": "Cookout", "icon": "🔥", "blurb": "Grill food that isn't an afterthought for the people not eating burgers.", "months": [5,6,7,8,9]},
+    {"id": "labor-day", "name": "Labor Day", "icon": "🇺🇸", "blurb": "The last big cookout of the summer, when the garden is at full tilt.", "months": [9], "peak": "09-01"},
+    {"id": "picnic", "name": "Picnic", "icon": "🧺", "blurb": "Travels in a cooler, survives three hours on a table, no mayonnaise anxiety.", "months": [5,6,7,8,9]},
+    {"id": "potluck", "name": "Potluck", "icon": "🍲", "blurb": "Feeds a crowd, travels in the dish you baked it in, good at room temperature.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]},
+    {"id": "game-day", "name": "Game day", "icon": "🏈", "blurb": "Food people eat standing up, over a long afternoon.", "months": [9,10,11,12,1,2]},
+    {"id": "bake-sale", "name": "Bake sale", "icon": "🧁", "blurb": "Travels well, slices cleanly, sells out first.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]},
+    {"id": "brunch", "name": "Brunch", "icon": "🍳", "blurb": "Assembled the night before so the morning is calm.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]},
+    {"id": "new-baby", "name": "Feeding someone else", "icon": "🤍", "blurb": "New baby, illness, a hard week — food that arrives ready to reheat and freeze.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]},
+    {"id": "birthday", "name": "Celebration", "icon": "🎂", "blurb": "The nights worth cooking something ambitious.", "months": [1,2,3,4,5,6,7,8,9,10,11,12]}
+  ]
+}

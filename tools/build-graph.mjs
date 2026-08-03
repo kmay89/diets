@@ -28,7 +28,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const ingredientsFile = read('data/ingredients.json');
 const aislesFile = read('data/aisles.json');
 const gardenFile = read('data/garden.json');
-const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json'].map(read);
+const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json', 'data/recipes.occasions.json'].map(read);
 
 const ingredients = ingredientsFile.items;
 const recipes = recipeFiles.flatMap(f => f.recipes);

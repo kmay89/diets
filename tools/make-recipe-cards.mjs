@@ -29,7 +29,8 @@ const ingredients = read('data/ingredients.json').items;
 const index = new Map(ingredients.map(i => [i.id, i]));
 const recipes = [
   ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes
+  ...read('data/recipes.daily.json').recipes,
+  ...read('data/recipes.occasions.json').recipes
 ];
 
 const OUT = join(root, 'icons/cards');

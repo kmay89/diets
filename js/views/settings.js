@@ -12,6 +12,7 @@ import {
 } from '../store.js';
 import { ACTIVITY, energyNeeds, dailyTargets } from '../nutrition.js';
 import { downloadFile } from '../shopping.js';
+import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -57,6 +58,24 @@ function view(draw, navigate) {
           onchange: (e) => { setPref('theme', e.target.value); applyTheme(e.target.value); draw(); }
         }, ...['system', 'light', 'dark'].map(t => h('option', { value: t, selected: state.prefs.theme === t }, titleCase(t))))
       )
+    ),
+
+    h('section.card.block',
+      h('h2.block__title', 'Feel'),
+      h('label.switch-row',
+        h('input', {
+          type: 'checkbox', checked: soundEnabled(),
+          onchange: (e) => { setSoundEnabled(e.target.checked); draw(); }
+        }),
+        h('div',
+          h('strong', 'Sound'),
+          h('p.muted', 'Quiet tones when you roll, tick something off, or finish a meal. Never plays on load, never plays without you touching something first.')
+        )
+      ),
+      h('p.fine-print',
+        prefersReducedMotion()
+          ? 'Your device asks for reduced motion, so animations are already switched off throughout the app.'
+          : 'Animations follow your device\u2019s reduced-motion setting automatically.')
     ),
 
     h('section.card.block',

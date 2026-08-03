@@ -2,10 +2,14 @@
 
 **Roll dinner. Cook once. Feed everyone.**
 
-A private, offline-first meal planner for a household where one person is vegetarian, everyone
-else is not, someone in the family is managing heart disease, and nobody has ninety minutes on a
-Tuesday. Every dinner has a vegetarian base the whole table eats and a **fork in the road** — one
-extra pan for the omnivores — so nothing gets cooked twice.
+A private, offline-first meal planner for tables where people eat differently. Every dinner has a
+base the whole table can eat and a **fork in the road** — one extra pan for anyone who wants meat —
+so nobody cooks twice and nobody eats a compromise.
+
+It starts from nourishment rather than restriction. Nothing here asks you to eat less; it asks what
+could go *on* the plate to make it better. There are no streaks, no points and no red numbers,
+because the meal you will happily cook again next month is worth more than the perfect meal you
+cook once.
 
 **Live: [veg-nourish.com](https://veg-nourish.com)** — open it on your phone and use
 **Add to Home Screen**. After the first load it runs entirely offline.
@@ -57,6 +61,20 @@ dropped into iMessage, Messages, Slack or WhatsApp expands into a card with that
 timing and numbers, not a bare URL. Tapping it opens a readable page that needs no app and no
 JavaScript; if you already use the app, it deep-links you straight to that recipe instead.
 
+**📅 Built for the whole year.** 70 recipes across the days that actually shape cooking:
+Thanksgiving and the winter holidays, New Year, cookouts and Labor Day, potlucks, game days, bake
+sales, picnics, brunch, feeding a family with a new baby — and fifteen-minute dinners for the nights
+when none of that applies.
+
+**📚 Every claim is sourced.** The health, cost and climate statements in this app live in a data
+file with their citations attached, rendered with numbered markers you can open. Each source shows
+what kind of evidence it is — randomised trial, meta-analysis, model, guideline — and what it *does
+not* show. A claim that cannot be sourced cannot be displayed.
+
+**🔊 It feels like something.** Quiet synthesised tones on the actions that deserve them, staggered
+card entrances, a dice that tumbles. All of it obeys `prefers-reduced-motion`, none of it plays
+before you touch the screen, and one switch turns it off.
+
 **📴 Yours.** Everything is in your browser's local storage. There is no account and nothing is
 uploaded. Back it up to a JSON file whenever you like.
 
@@ -85,14 +103,21 @@ js/
   nutrition.js          portion math, nutrient roll-up, heart score  ← shared with tools/
   roll.js               the dice: scoring, constraints, seeded sampling
   shopping.js           list building, purchase units, exports, import
+  citations.js          the citation engine: markers, sources, references
+  occasions.js          what is coming up, and what to cook for it
+  feedback.js           synthesised sound and micro-animations
   ui.js                 ~200 lines of DOM helpers
   views/                one module per screen
 data/
-  ingredients.json      188 ingredients: nutrition, units, aisle, subs, garden info
-  recipes.dinners.json  25 dinners
+  ingredients.json      208 ingredients: nutrition, units, aisle, subs, garden info
+  recipes.dinners.json  25 weeknight dinners
   recipes.daily.json    19 breakfasts, lunches, sides, sauces and snacks
+  recipes.occasions.json 26 holiday, cookout, potluck, bake-sale and 15-minute recipes
+  occasions.json        the occasion taxonomy
+  citations.json        every source, with its evidence type and its caveat
+  claims.json           every factual statement, attached to those sources
   aisles.json           department order + store layouts
-  garden.json           zone 6a calendar for Hudson, Ohio
+  garden.json           zone 6a planting calendar (editable for any region)
   graph.json            generated — the food graph
 tools/
   build-graph.mjs       compiles the graph from the source data
@@ -232,5 +257,24 @@ works online.
 
 ---
 
-Made in Hudson, Ohio, for a kitchen where the cook is vegetarian, the rest of the table is not, and
-dinner still needs to be on it by six.
+### How claims are handled
+
+The rules the citation engine enforces, and that `npm test` checks:
+
+1. **Claims are data.** Every factual sentence outside a recipe lives in `data/claims.json` with its
+   sources attached. A claim with no source can only be displayed if it is explicitly labelled as
+   editorial — our view, not a research finding.
+2. **Every source carries its caveat.** `data/citations.json` requires a `caveat` field, and the UI
+   always shows it. A citation that presents only the flattering half of a study borrows the
+   authority of research while discarding what makes research trustworthy.
+3. **Evidence types are labelled and not equal.** A randomised trial and a modelling study are
+   marked differently, because treating them the same is misleading people politely.
+4. **Ranges, not the most dramatic number in them.** Where credible estimates disagree — food's
+   share of global emissions is 21–37% depending on the boundary — the app says so.
+5. **The limits are stated.** The heart section explains what diet cannot do: it does not clear a
+   blockage, does not replace a prescription, and cannot overcome inherited high cholesterol on its
+   own. Leaving that out sets people up to feel that illness was a failure of willpower.
+
+---
+
+Built for tables where people eat differently, and dinner still needs to be on it by six.

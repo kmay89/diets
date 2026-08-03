@@ -13,22 +13,77 @@
       "activeMin": 8,
       "totalMin": 8,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["make-ahead", "no-cook", "meal-prep", "heart-star", "fiber"],
-      "equipment": ["4 jars or containers"],
-      "season": ["all"],
+      "tags": [
+        "make-ahead",
+        "no-cook",
+        "meal-prep",
+        "heart-star",
+        "fiber"
+      ],
+      "equipment": [
+        "4 jars or containers"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.oats.rolled", "qty": 2, "unit": "cup"},
-        {"ing": "ing.chia", "qty": 3, "unit": "tbsp"},
-        {"ing": "ing.milk.soy", "qty": 2, "unit": "cup"},
-        {"ing": "ing.yogurt.greek.nonfat", "qty": 0.75, "unit": "cup"},
-        {"ing": "ing.maple", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.spice.cinnamon", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.vanilla", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.blueberries", "qty": 1, "unit": "cup"},
-        {"ing": "ing.walnuts", "qty": 0.5, "unit": "cup", "prep": "chopped"},
-        {"ing": "ing.banana", "qty": 1, "unit": "each", "prep": "sliced", "optional": true}
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.chia",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.milk.soy",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.walnuts",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.banana",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced",
+          "optional": true
+        }
       ],
       "steps": [
         "Stir oats, chia, soy milk, yogurt, maple, cinnamon and vanilla together in a bowl until there are no dry pockets.",
@@ -46,7 +101,10 @@
       "garden": "Summer berries straight into the jar.",
       "leftovers": "Keeps 5 days. Make a double batch Sunday and Wednesday.",
       "heartNote": "About 3 g of oat beta-glucan a day is the amount tied to measurable LDL reduction. One of these jars gets you most of the way there.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch"
+      ]
     },
     {
       "id": "rec.green-smoothie",
@@ -58,20 +116,65 @@
       "activeMin": 5,
       "totalMin": 5,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["fast", "no-cook", "kid-approved", "heart-star", "on-the-go"],
-      "equipment": ["blender"],
-      "season": ["all"],
+      "tags": [
+        "fast",
+        "no-cook",
+        "kid-approved",
+        "heart-star",
+        "on-the-go"
+      ],
+      "equipment": [
+        "blender"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.banana", "qty": 2, "unit": "each", "prep": "frozen"},
-        {"ing": "ing.spinach.baby", "qty": 3, "unit": "cup"},
-        {"ing": "ing.frozen.berries", "qty": 1.5, "unit": "cup"},
-        {"ing": "ing.milk.soy", "qty": 2, "unit": "cup"},
-        {"ing": "ing.yogurt.greek.nonfat", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.flax.ground", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.almondbutter", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.spice.cinnamon", "qty": 0.5, "unit": "tsp"}
+        {
+          "ing": "ing.banana",
+          "qty": 2,
+          "unit": "each",
+          "prep": "frozen"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.frozen.berries",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.soy",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flax.ground",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.almondbutter",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "Liquid first, then soft, then frozen — that order is why some blenders jam and others don't.",
@@ -83,7 +186,10 @@
       "restaurantTouch": "Freeze the bananas in chunks. Fresh banana makes a thin smoothie; frozen makes it milkshake-thick with nothing added.",
       "garden": "Spring spinach straight from the bed.",
       "leftovers": "Pour extras into popsicle molds. That is dessert solved too.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch"
+      ]
     },
     {
       "id": "rec.soft-scramble-greens",
@@ -95,23 +201,84 @@
       "activeMin": 12,
       "totalMin": 12,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["fast", "protein", "weekend"],
-      "equipment": ["nonstick skillet", "rubber spatula"],
-      "season": ["all"],
+      "tags": [
+        "fast",
+        "protein",
+        "weekend"
+      ],
+      "equipment": [
+        "nonstick skillet",
+        "rubber spatula"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.egg", "qty": 6, "unit": "each"},
-        {"ing": "ing.eggwhite", "qty": 4, "unit": "each"},
-        {"ing": "ing.oil.olive", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.spinach.baby", "qty": 4, "unit": "cup"},
-        {"ing": "ing.scallion", "qty": 2, "unit": "each", "prep": "sliced"},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove", "prep": "minced"},
-        {"ing": "ing.cheese.parmesan", "qty": 2, "unit": "tbsp", "prep": "grated"},
-        {"ing": "ing.salt.kosher", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.bread.wholegrain", "qty": 4, "unit": "slice", "prep": "toasted"},
-        {"ing": "ing.avocado", "qty": 1, "unit": "each", "prep": "sliced", "optional": true}
+        {
+          "ing": "ing.egg",
+          "qty": 6,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.eggwhite",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 4,
+          "unit": "slice",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced",
+          "optional": true
+        }
       ],
       "steps": [
         "Beat the eggs and whites with salt until the color is completely uniform — streaky eggs cook unevenly.",
@@ -125,7 +292,10 @@
       "garden": "Spring spinach and chives.",
       "leftovers": "None. Scrambled eggs do not keep and everybody knows it.",
       "heartNote": "Six whole eggs across four people is a moderate serving. The extra whites add protein without cholesterol.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch"
+      ]
     },
     {
       "id": "rec.baked-oatmeal",
@@ -137,23 +307,81 @@
       "activeMin": 12,
       "totalMin": 55,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["make-ahead", "batch", "freezer", "fiber", "kid-approved"],
-      "equipment": ["9x13 baking dish"],
-      "season": ["all"],
+      "tags": [
+        "make-ahead",
+        "batch",
+        "freezer",
+        "fiber",
+        "kid-approved"
+      ],
+      "equipment": [
+        "9x13 baking dish"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.oats.rolled", "qty": 3, "unit": "cup"},
-        {"ing": "ing.milk.soy", "qty": 2.5, "unit": "cup"},
-        {"ing": "ing.egg", "qty": 2, "unit": "each"},
-        {"ing": "ing.maple", "qty": 0.33, "unit": "cup"},
-        {"ing": "ing.flax.ground", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.bakingpowder", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.spice.cinnamon", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.vanilla", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.blueberries", "qty": 2, "unit": "cup"},
-        {"ing": "ing.walnuts", "qty": 0.5, "unit": "cup", "prep": "chopped"},
-        {"ing": "ing.banana", "qty": 1, "unit": "each", "prep": "mashed"}
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.soy",
+          "qty": 2.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flax.ground",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.walnuts",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.banana",
+          "qty": 1,
+          "unit": "each",
+          "prep": "mashed"
+        }
       ],
       "steps": [
         "Heat oven to 375°F and oil a 9x13 dish.",
@@ -166,7 +394,11 @@
       "restaurantTouch": "A spoon of Greek yogurt and a drizzle of maple on the plate turns a square of baked oatmeal into a café breakfast.",
       "garden": "Summer berries, obviously — and rhubarb in May if you have a patch.",
       "leftovers": "5 days refrigerated, 3 months frozen in individual squares. Microwave 90 seconds from frozen.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch",
+        "new-baby"
+      ]
     },
     {
       "id": "rec.avocado-white-bean-toast",
@@ -178,21 +410,74 @@
       "activeMin": 10,
       "totalMin": 10,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": false,
-      "tags": ["fast", "no-cook", "protein", "heart-star"],
-      "equipment": ["toaster", "fork"],
-      "season": ["all"],
+      "tags": [
+        "fast",
+        "no-cook",
+        "protein",
+        "heart-star"
+      ],
+      "equipment": [
+        "toaster",
+        "fork"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.bread.wholegrain", "qty": 4, "unit": "slice"},
-        {"ing": "ing.beans.cannellini", "qty": 1, "unit": "cup", "prep": "drained and rinsed"},
-        {"ing": "ing.avocado", "qty": 2, "unit": "each"},
-        {"ing": "ing.lemon", "qty": 2, "unit": "tbsp_juice"},
-        {"ing": "ing.oil.olive", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.spice.everything", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.spice.pepperflakes", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.tomato.cherry", "qty": 0.75, "unit": "cup", "prep": "halved", "optional": true},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove", "prep": "halved"}
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 4,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.beans.cannellini",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.everything",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "halved",
+          "optional": true
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "halved"
+        }
       ],
       "steps": [
         "Toast the bread hard — properly crisp, so it does not collapse — and rub each slice with the cut side of a garlic clove while it is still hot.",
@@ -204,7 +489,10 @@
       "restaurantTouch": "The hot-toast garlic rub. It is a thirty-second habit from Spanish kitchens and it changes toast permanently.",
       "garden": "Cherry tomatoes and a few basil leaves in August.",
       "leftovers": "None — make it to order.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch"
+      ]
     },
     {
       "id": "rec.chia-pudding",
@@ -216,19 +504,63 @@
       "activeMin": 5,
       "totalMin": 5,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["make-ahead", "no-cook", "fiber", "omega-3", "dessert-adjacent"],
-      "equipment": ["jars"],
-      "season": ["all"],
+      "tags": [
+        "make-ahead",
+        "no-cook",
+        "fiber",
+        "omega-3",
+        "dessert-adjacent"
+      ],
+      "equipment": [
+        "jars"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.chia", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.milk.soy", "qty": 2, "unit": "cup"},
-        {"ing": "ing.maple", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.vanilla", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.strawberries", "qty": 1, "unit": "cup", "prep": "sliced"},
-        {"ing": "ing.almonds", "qty": 0.25, "unit": "cup", "prep": "sliced and toasted"},
-        {"ing": "ing.cocoa", "qty": 2, "unit": "tbsp", "optional": true}
+        {
+          "ing": "ing.chia",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.soy",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.strawberries",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "sliced and toasted"
+        },
+        {
+          "ing": "ing.cocoa",
+          "qty": 2,
+          "unit": "tbsp",
+          "optional": true
+        }
       ],
       "steps": [
         "Whisk chia, soy milk, maple and vanilla. Wait 5 minutes and whisk again — that second whisk is what prevents a clump at the bottom of the jar.",
@@ -239,7 +571,10 @@
       "restaurantTouch": "Layer it: pudding, fruit, pudding, fruit. Same food, completely different reception.",
       "garden": "June strawberries.",
       "leftovers": "5 days.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "brunch"
+      ]
     },
     {
       "id": "rec.smashed-chickpea-sandwich",
@@ -251,25 +586,98 @@
       "activeMin": 15,
       "totalMin": 15,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["no-cook", "lunchbox", "meal-prep", "budget", "fast"],
-      "equipment": ["bowl", "potato masher or fork"],
-      "season": ["all"],
+      "tags": [
+        "no-cook",
+        "lunchbox",
+        "meal-prep",
+        "budget",
+        "fast"
+      ],
+      "equipment": [
+        "bowl",
+        "potato masher or fork"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.chickpeas.canned", "qty": 2, "unit": "can", "prep": "drained and rinsed"},
-        {"ing": "ing.yogurt.greek.nonfat", "qty": 0.33, "unit": "cup"},
-        {"ing": "ing.mustard.dijon", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.celery", "qty": 2, "unit": "stalk", "prep": "finely diced"},
-        {"ing": "ing.onion.red", "qty": 0.25, "unit": "each", "prep": "minced"},
-        {"ing": "ing.dill", "qty": 2, "unit": "tbsp", "prep": "chopped"},
-        {"ing": "ing.lemon", "qty": 2, "unit": "tbsp_juice"},
-        {"ing": "ing.capers", "qty": 1, "unit": "tbsp", "prep": "rinsed and chopped", "optional": true},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.bread.wholegrain", "qty": 8, "unit": "slice"},
-        {"ing": "ing.romaine", "qty": 4, "unit": "cup", "prep": "leaves"},
-        {"ing": "ing.tomato.roma", "qty": 2, "unit": "each", "prep": "sliced"}
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 2,
+          "unit": "stalk",
+          "prep": "finely diced"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.25,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.dill",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.capers",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "rinsed and chopped",
+          "optional": true
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 8,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "leaves"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        }
       ],
       "steps": [
         "Smash the chickpeas with a masher or fork until about two thirds are broken down and a third stay whole. Texture is everything here.",
@@ -280,14 +688,26 @@
       "omnivore": {
         "label": "Add canned tuna",
         "note": "Half the chickpea mix plus a drained can of tuna is a natural for the omnivores.",
-        "add": [{"ing": "ing.tuna.canned", "qty": 1, "unit": "can", "prep": "drained"}],
-        "steps": ["Fold the drained tuna into half the mixture."]
+        "add": [
+          {
+            "ing": "ing.tuna.canned",
+            "qty": 1,
+            "unit": "can",
+            "prep": "drained"
+          }
+        ],
+        "steps": [
+          "Fold the drained tuna into half the mixture."
+        ]
       },
       "kidTweak": "Serve it as a scoop with crackers and cut vegetables instead of a sandwich. Same food, more likely eaten.",
       "restaurantTouch": "Rinsed chopped capers. A tablespoon adds the briny pop that makes people ask what is in it.",
       "garden": "Dill, and lettuce in spring and fall.",
       "leftovers": "The salad keeps 4 days. Do not build the sandwich until you are eating it.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "picnic"
+      ]
     },
     {
       "id": "rec.greek-jar-salad",
@@ -299,25 +719,96 @@
       "activeMin": 15,
       "totalMin": 15,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": false,
-      "tags": ["meal-prep", "no-cook", "lunchbox", "make-ahead"],
-      "equipment": ["4 quart jars"],
-      "season": ["summer"],
+      "tags": [
+        "meal-prep",
+        "no-cook",
+        "lunchbox",
+        "make-ahead"
+      ],
+      "equipment": [
+        "4 quart jars"
+      ],
+      "season": [
+        "summer"
+      ],
       "ingredients": [
-        {"ing": "ing.chickpeas.canned", "qty": 1, "unit": "can", "prep": "drained and rinsed"},
-        {"ing": "ing.cucumber", "qty": 1, "unit": "each", "prep": "diced"},
-        {"ing": "ing.tomato.cherry", "qty": 1, "unit": "cup", "prep": "halved"},
-        {"ing": "ing.onion.red", "qty": 0.5, "unit": "each", "prep": "thinly sliced"},
-        {"ing": "ing.olives.kalamata", "qty": 0.25, "unit": "cup"},
-        {"ing": "ing.cheese.feta", "qty": 3, "unit": "oz", "prep": "crumbled"},
-        {"ing": "ing.oil.olive", "qty": 4, "unit": "tbsp"},
-        {"ing": "ing.lemon", "qty": 3, "unit": "tbsp_juice"},
-        {"ing": "ing.vinegar.redwine", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.spice.oregano", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.mustard.dijon", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.romaine", "qty": 6, "unit": "cup", "prep": "chopped"},
-        {"ing": "ing.quinoa", "qty": 0.75, "unit": "cup", "prep": "dry, cooked", "optional": true}
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.olives.kalamata",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 3,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 6,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.quinoa",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "dry, cooked",
+          "optional": true
+        }
       ],
       "steps": [
         "Whisk olive oil, lemon juice, vinegar, oregano and Dijon. Divide among four jars — dressing always goes in first.",
@@ -328,7 +819,10 @@
       "restaurantTouch": "Marinating the onion and chickpeas in the dressing for days is not a compromise — it is genuinely better than dressing a salad at the last second.",
       "garden": "Cucumbers and tomatoes at their July peak.",
       "leftovers": "That is the entire point. 4 days.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "picnic"
+      ]
     },
     {
       "id": "rec.tomato-lentil-soup",
@@ -340,25 +834,97 @@
       "activeMin": 12,
       "totalMin": 35,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["make-ahead", "freezer", "lunchbox", "budget", "one-pot"],
-      "equipment": ["saucepan", "immersion blender"],
-      "season": ["fall", "winter"],
+      "tags": [
+        "make-ahead",
+        "freezer",
+        "lunchbox",
+        "budget",
+        "one-pot"
+      ],
+      "equipment": [
+        "saucepan",
+        "immersion blender"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
       "ingredients": [
-        {"ing": "ing.oil.olive", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.onion.yellow", "qty": 1, "unit": "each", "prep": "diced"},
-        {"ing": "ing.carrot", "qty": 2, "unit": "each", "prep": "diced"},
-        {"ing": "ing.garlic", "qty": 3, "unit": "clove", "prep": "minced"},
-        {"ing": "ing.spice.cumin", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.spice.smokedpaprika", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.tomatopaste", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.lentil.red", "qty": 1, "unit": "cup", "prep": "rinsed"},
-        {"ing": "ing.tomato.canned.crushed", "qty": 1, "unit": "can"},
-        {"ing": "ing.broth.veg", "qty": 4, "unit": "cup"},
-        {"ing": "ing.lemon", "qty": 2, "unit": "tbsp_juice"},
-        {"ing": "ing.salt.kosher", "qty": 0.75, "unit": "tsp"},
-        {"ing": "ing.yogurt.greek.nonfat", "qty": 0.5, "unit": "cup", "optional": true}
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lentil.red",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "rinsed"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup",
+          "optional": true
+        }
       ],
       "steps": [
         "Cook onion and carrot in oil 8 minutes. Add garlic and spices 45 seconds, then tomato paste for a minute.",
@@ -370,7 +936,10 @@
       "restaurantTouch": "A swirl of yogurt and a drizzle of olive oil on top when it is served at home.",
       "garden": "Nothing needed — this is the deep-winter recipe.",
       "leftovers": "5 days refrigerated, 3 months frozen in single-serving jars.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "new-baby"
+      ]
     },
     {
       "id": "rec.black-bean-quesadillas",
@@ -382,22 +951,77 @@
       "activeMin": 12,
       "totalMin": 12,
       "difficulty": "easy",
-      "diet": ["vegetarian"],
+      "diet": [
+        "vegetarian"
+      ],
       "kidFriendly": true,
-      "tags": ["fast", "kid-approved", "budget", "after-school"],
-      "equipment": ["skillet"],
-      "season": ["all"],
+      "tags": [
+        "fast",
+        "kid-approved",
+        "budget",
+        "after-school"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.tortilla.wholewheat", "qty": 4, "unit": "each"},
-        {"ing": "ing.beans.black", "qty": 1, "unit": "can", "prep": "drained and rinsed"},
-        {"ing": "ing.spinach.baby", "qty": 3, "unit": "cup"},
-        {"ing": "ing.cheese.cheddar", "qty": 3, "unit": "oz", "prep": "shredded"},
-        {"ing": "ing.spice.cumin", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.spice.smokedpaprika", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.oil.olive", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.scallion", "qty": 2, "unit": "each", "prep": "sliced"},
-        {"ing": "ing.salsa", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.yogurt.greek.nonfat", "qty": 0.25, "unit": "cup", "optional": true}
+        {
+          "ing": "ing.tortilla.wholewheat",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.beans.black",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.salsa",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.25,
+          "unit": "cup",
+          "optional": true
+        }
       ],
       "steps": [
         "Wilt the spinach in a dry skillet, 90 seconds, then chop it fine and squeeze out the water in a towel. Wet spinach makes a soggy quesadilla.",
@@ -410,7 +1034,10 @@
       "restaurantTouch": "Cook them dry, not in butter. A dry pan crisps the tortilla into layers; fat makes it greasy and soft.",
       "garden": "Spinach in spring and fall.",
       "leftovers": "Reheat in a skillet, never a microwave.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "weeknight-rush"
+      ]
     },
     {
       "id": "rec.build-a-bowl",
@@ -422,25 +1049,98 @@
       "activeMin": 15,
       "totalMin": 40,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["formula", "meal-prep", "flexible", "leftovers", "component"],
-      "equipment": ["sheet pan", "saucepan"],
-      "season": ["all"],
+      "tags": [
+        "formula",
+        "meal-prep",
+        "flexible",
+        "leftovers",
+        "component"
+      ],
+      "equipment": [
+        "sheet pan",
+        "saucepan"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.farro", "qty": 1, "unit": "cup", "prep": "dry — or quinoa, or brown rice"},
-        {"ing": "ing.broccoli", "qty": 1, "unit": "head", "prep": "florets — or any roastable vegetable"},
-        {"ing": "ing.sweetpotato", "qty": 2, "unit": "each", "prep": "diced"},
-        {"ing": "ing.chickpeas.canned", "qty": 1, "unit": "can", "prep": "drained and dried"},
-        {"ing": "ing.oil.olive", "qty": 3, "unit": "tbsp"},
-        {"ing": "ing.tahini", "qty": 0.25, "unit": "cup"},
-        {"ing": "ing.lemon", "qty": 3, "unit": "tbsp_juice"},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove", "prep": "grated"},
-        {"ing": "ing.pumpkinseeds", "qty": 4, "unit": "tbsp"},
-        {"ing": "ing.parsley.flat", "qty": 0.5, "unit": "cup", "prep": "chopped"},
-        {"ing": "ing.onion.red", "qty": 0.5, "unit": "each", "prep": "thinly sliced and quick-pickled"},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.5, "unit": "tsp"}
+        {
+          "ing": "ing.farro",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "dry — or quinoa, or brown rice"
+        },
+        {
+          "ing": "ing.broccoli",
+          "qty": 1,
+          "unit": "head",
+          "prep": "florets — or any roastable vegetable"
+        },
+        {
+          "ing": "ing.sweetpotato",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and dried"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tahini",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 3,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.pumpkinseeds",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "thinly sliced and quick-pickled"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "GRAIN: cook 1 cup dry farro like pasta in salted water, 25 minutes, drain. Makes about 3 cups.",
@@ -454,8 +1154,17 @@
       "omnivore": {
         "label": "Add any leftover protein",
         "note": "Sliced chicken, salmon, a jammy egg — the formula does not care.",
-        "add": [{"ing": "ing.chicken.thigh", "qty": 12, "unit": "oz", "prep": "cooked"}],
-        "steps": ["Warm and slice; lay on top."]
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 12,
+            "unit": "oz",
+            "prep": "cooked"
+          }
+        ],
+        "steps": [
+          "Warm and slice; lay on top."
+        ]
       },
       "kidTweak": "Same components, arranged in separate piles rather than layered, with sauce in a small cup.",
       "restaurantTouch": "The quick pickle. Every good grain bowl in every good restaurant has one, and it takes twenty minutes of doing nothing.",
@@ -473,20 +1182,67 @@
       "activeMin": 8,
       "totalMin": 8,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["component", "no-cook", "snack", "make-ahead", "budget"],
-      "equipment": ["food processor"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "no-cook",
+        "snack",
+        "make-ahead",
+        "budget"
+      ],
+      "equipment": [
+        "food processor"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.chickpeas.canned", "qty": 1, "unit": "can", "prep": "drained and rinsed"},
-        {"ing": "ing.tahini", "qty": 0.33, "unit": "cup"},
-        {"ing": "ing.lemon", "qty": 4, "unit": "tbsp_juice"},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove"},
-        {"ing": "ing.spice.cumin", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.oil.olive", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.spice.smokedpaprika", "qty": 0.25, "unit": "tsp", "optional": true}
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.tahini",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 4,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.25,
+          "unit": "tsp",
+          "optional": true
+        }
       ],
       "steps": [
         "Blend the tahini, lemon juice and garlic alone first, for a full minute, until it is pale and thick. Doing this before the chickpeas go in is the single biggest difference between good and mediocre hummus.",
@@ -498,7 +1254,12 @@
       "restaurantTouch": "The swoosh. Spread it wide and shallow with a spoon and pool the oil in the middle — never serve hummus in a mound.",
       "garden": "Nothing, unless you count garlic — and you should grow garlic.",
       "leftovers": "5 days. Press plastic against the surface so it does not skin over.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "game-day",
+        "potluck",
+        "picnic"
+      ]
     },
     {
       "id": "rec.house-vinaigrette",
@@ -510,20 +1271,65 @@
       "activeMin": 3,
       "totalMin": 3,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["component", "no-cook", "heart-star", "5-minute"],
-      "equipment": ["jar with a lid"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "no-cook",
+        "heart-star",
+        "5-minute"
+      ],
+      "equipment": [
+        "jar with a lid"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.oil.olive", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.lemon", "qty": 3, "unit": "tbsp_juice"},
-        {"ing": "ing.vinegar.redwine", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.mustard.dijon", "qty": 2, "unit": "tsp"},
-        {"ing": "ing.maple", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove", "prep": "grated"},
-        {"ing": "ing.salt.kosher", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"}
+        {
+          "ing": "ing.oil.olive",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 3,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "Put everything in a jar, seal it, and shake hard for 30 seconds. The Dijon is the emulsifier — without it the dressing separates in a minute.",
@@ -547,18 +1353,58 @@
       "activeMin": 5,
       "totalMin": 5,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["component", "no-cook", "sauce", "heart-star"],
-      "equipment": ["bowl", "whisk"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "no-cook",
+        "sauce",
+        "heart-star"
+      ],
+      "equipment": [
+        "bowl",
+        "whisk"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.tahini", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.lemon", "qty": 4, "unit": "tbsp_juice"},
-        {"ing": "ing.garlic", "qty": 1, "unit": "clove", "prep": "grated"},
-        {"ing": "ing.salt.kosher", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.spice.cumin", "qty": 0.5, "unit": "tsp", "optional": true},
-        {"ing": "ing.maple", "qty": 1, "unit": "tsp", "optional": true}
+        {
+          "ing": "ing.tahini",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 4,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 0.5,
+          "unit": "tsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tsp",
+          "optional": true
+        }
       ],
       "steps": [
         "Whisk tahini, lemon juice, garlic and salt. It will seize into a stiff paste and look ruined. It is not.",
@@ -581,20 +1427,71 @@
       "activeMin": 10,
       "totalMin": 35,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["component", "method", "sheet-pan", "flexible", "garden"],
-      "equipment": ["sheet pan"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "method",
+        "sheet-pan",
+        "flexible",
+        "garden"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.broccoli", "qty": 1, "unit": "head", "prep": "florets — or substitute any vegetable below"},
-        {"ing": "ing.carrot", "qty": 4, "unit": "each", "prep": "cut on the bias"},
-        {"ing": "ing.brusselsprouts", "qty": 2, "unit": "cup", "prep": "halved"},
-        {"ing": "ing.oil.olive", "qty": 3, "unit": "tbsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.75, "unit": "tsp"},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"},
-        {"ing": "ing.lemon", "qty": 1, "unit": "each", "prep": "cut into wedges"},
-        {"ing": "ing.garlic", "qty": 3, "unit": "clove", "prep": "smashed", "optional": true}
+        {
+          "ing": "ing.broccoli",
+          "qty": 1,
+          "unit": "head",
+          "prep": "florets — or substitute any vegetable below"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 4,
+          "unit": "each",
+          "prep": "cut on the bias"
+        },
+        {
+          "ing": "ing.brusselsprouts",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into wedges"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "smashed",
+          "optional": true
+        }
       ],
       "steps": [
         "425°F, always. Lower and vegetables steam; higher and the outside burns before the inside softens.",
@@ -608,7 +1505,12 @@
       "restaurantTouch": "Preheat the sheet pan in the oven and add the vegetables to hot metal. Immediate sizzle, better crust.",
       "garden": "This is the method that absorbs anything the garden produces in quantity.",
       "leftovers": "4 days. Cold roasted vegetables belong in tomorrow's grain bowl, eggs, or a sandwich.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "thanksgiving",
+        "winter-holidays",
+        "potluck"
+      ]
     },
     {
       "id": "rec.garlicky-greens",
@@ -620,19 +1522,64 @@
       "activeMin": 10,
       "totalMin": 10,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": false,
-      "tags": ["component", "fast", "heart-star", "garden", "iron"],
-      "equipment": ["large skillet with lid"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "fast",
+        "heart-star",
+        "garden",
+        "iron"
+      ],
+      "equipment": [
+        "large skillet with lid"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.kale.lacinato", "qty": 2, "unit": "bunch", "prep": "stemmed and torn"},
-        {"ing": "ing.oil.olive", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.garlic", "qty": 4, "unit": "clove", "prep": "thinly sliced"},
-        {"ing": "ing.spice.pepperflakes", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.lemon", "qty": 1, "unit": "tbsp_juice"},
-        {"ing": "ing.salt.kosher", "qty": 0.25, "unit": "tsp"},
-        {"ing": "ing.almonds", "qty": 2, "unit": "tbsp", "prep": "toasted and chopped", "optional": true}
+        {
+          "ing": "ing.kale.lacinato",
+          "qty": 2,
+          "unit": "bunch",
+          "prep": "stemmed and torn"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "toasted and chopped",
+          "optional": true
+        }
       ],
       "steps": [
         "Start the garlic in cold oil over medium and let it come up to temperature slowly, 2-3 minutes, until it is barely golden. Garlic dropped into hot oil burns before it flavors anything.",
@@ -644,7 +1591,11 @@
       "restaurantTouch": "Slice the garlic instead of mincing it. Sliced garlic goes sweet and nutty; minced garlic burns.",
       "garden": "Lacinato kale is a nine-month crop in this climate, and chard regrows all summer from the same plants.",
       "leftovers": "3 days. Fold into eggs, soup, or pasta.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "thanksgiving",
+        "winter-holidays"
+      ]
     },
     {
       "id": "rec.crispy-chickpeas",
@@ -656,18 +1607,56 @@
       "activeMin": 5,
       "totalMin": 45,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["component", "snack", "budget", "crunch", "hands-off"],
-      "equipment": ["sheet pan"],
-      "season": ["all"],
+      "tags": [
+        "component",
+        "snack",
+        "budget",
+        "crunch",
+        "hands-off"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.chickpeas.canned", "qty": 2, "unit": "can", "prep": "drained, rinsed, dried very well"},
-        {"ing": "ing.oil.olive", "qty": 1.5, "unit": "tbsp"},
-        {"ing": "ing.spice.smokedpaprika", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.spice.cumin", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.spice.garlicpowder", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.5, "unit": "tsp"}
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained, rinsed, dried very well"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "Heat oven to 400°F. Dry the chickpeas on a towel and roll them around — genuinely dry, or they steam. Rub off any loose skins.",
@@ -679,7 +1668,11 @@
       "restaurantTouch": "Scatter them over salads, soups and grain bowls in place of croutons.",
       "garden": "None.",
       "leftovers": "Best the same day. Store uncovered at room temperature — a sealed container makes them chewy overnight.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "game-day",
+        "picnic"
+      ]
     },
     {
       "id": "rec.energy-bites",
@@ -691,19 +1684,61 @@
       "activeMin": 10,
       "totalMin": 10,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": true,
-      "tags": ["no-cook", "make-ahead", "lunchbox", "kids-cook", "snack"],
-      "equipment": ["food processor"],
-      "season": ["all"],
+      "tags": [
+        "no-cook",
+        "make-ahead",
+        "lunchbox",
+        "kids-cook",
+        "snack"
+      ],
+      "equipment": [
+        "food processor"
+      ],
+      "season": [
+        "all"
+      ],
       "ingredients": [
-        {"ing": "ing.dates.medjool", "qty": 1.5, "unit": "cup", "prep": "pitted"},
-        {"ing": "ing.almonds", "qty": 1, "unit": "cup"},
-        {"ing": "ing.oats.rolled", "qty": 0.5, "unit": "cup"},
-        {"ing": "ing.cocoa", "qty": 2, "unit": "tbsp"},
-        {"ing": "ing.chia", "qty": 1, "unit": "tbsp"},
-        {"ing": "ing.vanilla", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.salt.kosher", "qty": 0.125, "unit": "tsp"}
+        {
+          "ing": "ing.dates.medjool",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "pitted"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cocoa",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.chia",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.125,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "Pulse the almonds and oats until coarsely ground, about 15 pulses.",
@@ -717,7 +1752,11 @@
       "garden": "None.",
       "leftovers": "2 weeks refrigerated, 3 months frozen. Eat them straight from the freezer.",
       "allergenNote": "Contains tree nuts. Sunflower seeds substitute one-for-one.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "bake-sale",
+        "picnic"
+      ]
     },
     {
       "id": "rec.everyday-big-salad",
@@ -729,26 +1768,105 @@
       "activeMin": 15,
       "totalMin": 15,
       "difficulty": "easy",
-      "diet": ["vegetarian", "vegan"],
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
       "kidFriendly": false,
-      "tags": ["no-cook", "fast", "flexible", "garden", "heart-star"],
-      "equipment": ["big bowl"],
-      "season": ["summer", "fall"],
+      "tags": [
+        "no-cook",
+        "fast",
+        "flexible",
+        "garden",
+        "heart-star"
+      ],
+      "equipment": [
+        "big bowl"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
       "ingredients": [
-        {"ing": "ing.romaine", "qty": 1, "unit": "head", "prep": "chopped"},
-        {"ing": "ing.arugula", "qty": 3, "unit": "cup"},
-        {"ing": "ing.cucumber", "qty": 1, "unit": "each", "prep": "half-moons"},
-        {"ing": "ing.tomato.cherry", "qty": 1, "unit": "cup", "prep": "halved"},
-        {"ing": "ing.carrot", "qty": 2, "unit": "each", "prep": "shaved with a peeler"},
-        {"ing": "ing.chickpeas.canned", "qty": 1, "unit": "can", "prep": "drained and rinsed"},
-        {"ing": "ing.avocado", "qty": 1, "unit": "each", "prep": "sliced"},
-        {"ing": "ing.pumpkinseeds", "qty": 4, "unit": "tbsp", "prep": "toasted"},
-        {"ing": "ing.cranberries.dried", "qty": 3, "unit": "tbsp"},
-        {"ing": "ing.cheese.feta", "qty": 2, "unit": "oz", "prep": "crumbled", "optional": true},
-        {"ing": "ing.oil.olive", "qty": 3, "unit": "tbsp"},
-        {"ing": "ing.lemon", "qty": 2, "unit": "tbsp_juice"},
-        {"ing": "ing.mustard.dijon", "qty": 1, "unit": "tsp"},
-        {"ing": "ing.spice.blackpepper", "qty": 0.5, "unit": "tsp"}
+        {
+          "ing": "ing.romaine",
+          "qty": 1,
+          "unit": "head",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.arugula",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 1,
+          "unit": "each",
+          "prep": "half-moons"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "shaved with a peeler"
+        },
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.pumpkinseeds",
+          "qty": 4,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.cranberries.dried",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 2,
+          "unit": "oz",
+          "prep": "crumbled",
+          "optional": true
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 2,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
       ],
       "steps": [
         "Dry the greens properly. Wet greens repel dressing and it pools at the bottom of the bowl — a salad spinner is the highest-value ten dollars in a kitchen.",
@@ -759,14 +1877,26 @@
       "omnivore": {
         "label": "Add any leftover protein",
         "note": "Sliced chicken, flaked salmon, or a jammy egg.",
-        "add": [{"ing": "ing.chicken.breast", "qty": 10, "unit": "oz", "prep": "cooked and sliced"}],
-        "steps": ["Slice and fan over the top of individual plates."]
+        "add": [
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 10,
+            "unit": "oz",
+            "prep": "cooked and sliced"
+          }
+        ],
+        "steps": [
+          "Slice and fan over the top of individual plates."
+        ]
       },
       "kidTweak": "Give a kid a plate of the components in rows instead of a tossed bowl. Salad refusal is usually about mixing, not vegetables.",
       "restaurantTouch": "Dress in the bowl you built it in and toss with your hands. Never pour dressing over the top of a finished salad.",
       "garden": "June through October this salad is 80% backyard.",
       "leftovers": "Dressed salad does not keep. Store components separately.",
-      "source": "ERRERLabs original"
+      "source": "ERRERLabs original",
+      "occasions": [
+        "picnic"
+      ]
     }
   ]
 }
