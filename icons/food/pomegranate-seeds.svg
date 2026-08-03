@@ -1,20 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
-  <title id="t">Pomegranate seeds</title>
-  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
-  <defs>
-    <filter id="pomegranate-seeds-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
-    </filter>
-    <radialGradient id="pomegranate-seeds-clay" cx="27%" cy="20%" r="88%">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="pomegranate-seeds-title" data-aisle="Produce" data-render-style="dimensional">
+  <title id="pomegranate-seeds-title">Pomegranate seeds</title>
+  <defs><radialGradient id="pomegranate-seeds-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-clay" cx="27%" cy="20%" r="88%">
       <stop offset="0" stop-color="#F1A176"/>
       <stop offset="0.48" stop-color="#C66B3D"/>
       <stop offset="1" stop-color="#813A26"/>
     </radialGradient>
-    <radialGradient id="pomegranate-seeds-red" cx="27%" cy="20%" r="88%">
+<radialGradient id="pomegranate-seeds-clay2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F6C79F"/>
+      <stop offset="0.48" stop-color="#DF9A68"/>
+      <stop offset="1" stop-color="#A85C3B"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+<radialGradient id="pomegranate-seeds-red" cx="27%" cy="20%" r="88%">
       <stop offset="0" stop-color="#DC8066"/>
       <stop offset="0.48" stop-color="#9E4938"/>
       <stop offset="1" stop-color="#5E2824"/>
     </radialGradient>
-  </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pomegranate-seeds-depth)"><path d="M22 22L26 26L24 32H19L18 26Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M32 19L36 23L34 29H29L28 23Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M42 24L46 28L44 34H39L38 28Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M26 33L30 37L28 43H23L22 37Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M37 32L41 36L39 42H34L33 36Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M20 43L24 47L22 53H17L16 47Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M32 43L36 47L34 53H29L28 47Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M45 41L49 45L47 51H42L41 45Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/></g>
+    <filter id="pomegranate-seeds-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter></defs>
+  <style>
+    .food-icon { color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) {
+      .food-icon { stroke: #F3E8CF; }
+
+      .food-icon [data-tone="charcoal"] { fill: url(#pomegranate-seeds-cream); }
+      .food-icon [data-tone="cream"] { fill: url(#pomegranate-seeds-charcoal); }
+      .food-icon [fill="#303532"] { fill: #F3E8CF; }
+      .food-icon [fill="#F3E8CF"] { fill: #303532; }
+      .food-icon [stroke="#303532"] { stroke: #F3E8CF; }
+      .food-icon [stroke="#F3E8CF"] { stroke: #303532; }
+    }
+  </style>
+  <g class="food-icon" stroke="#303532" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" filter="url(#pomegranate-seeds-depth)">
+    <g class="optical-alignment" transform="translate(32 32) scale(1.26027) translate(-32.5 -36.25)"><path d="M22 22L26 26L24 32H19L18 26Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M32 19L36 23L34 29H29L28 23Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M42 24L46 28L44 34H39L38 28Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M26 33L30 37L28 43H23L22 37Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M37 32L41 36L39 42H34L33 36Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M20 43L24 47L22 53H17L16 47Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/><path d="M32 43L36 47L34 53H29L28 47Z" fill="url(#pomegranate-seeds-clay)" data-tone="clay"/><path d="M45 41L49 45L47 51H42L41 45Z" fill="url(#pomegranate-seeds-red)" data-tone="red"/></g>
+  </g>
 </svg>

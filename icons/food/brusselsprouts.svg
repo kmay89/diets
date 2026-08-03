@@ -1,20 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
-  <title id="t">Brussels sprouts</title>
-  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
-  <defs>
-    <filter id="brusselsprouts-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
-    </filter>
-    <radialGradient id="brusselsprouts-green2" cx="27%" cy="20%" r="88%">
-      <stop offset="0" stop-color="#BCD099"/>
-      <stop offset="0.48" stop-color="#6F8B61"/>
-      <stop offset="1" stop-color="#405538"/>
-    </radialGradient>
-    <radialGradient id="brusselsprouts-green" cx="27%" cy="20%" r="88%">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="brusselsprouts-title" data-aisle="Produce" data-render-style="dimensional">
+  <title id="brusselsprouts-title">Brussels sprouts</title>
+  <defs><radialGradient id="brusselsprouts-green" cx="27%" cy="20%" r="88%">
       <stop offset="0" stop-color="#79A18A"/>
       <stop offset="0.48" stop-color="#244C3F"/>
       <stop offset="1" stop-color="#142F28"/>
     </radialGradient>
-  </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#brusselsprouts-depth)"><circle cx="25" cy="35" r="10" fill="url(#brusselsprouts-green2)" data-tone="green2" /><path d="M17 35Q25 31.34 33 35Q25 38.66 17 35Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(0 25 35)" stroke-width="1.2"/><circle cx="40" cy="39" r="9" fill="url(#brusselsprouts-green)" data-tone="green" /><path d="M33 39Q40 35.34 47 39Q40 42.66 33 39Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(38 40 39)" stroke-width="1.2"/><circle cx="34" cy="25" r="9" fill="url(#brusselsprouts-green2)" data-tone="green2" /><path d="M27 25Q34 21.34 41 25Q34 28.66 27 25Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(76 34 25)" stroke-width="1.2"/></g>
+<radialGradient id="brusselsprouts-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-clay2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F6C79F"/>
+      <stop offset="0.48" stop-color="#DF9A68"/>
+      <stop offset="1" stop-color="#A85C3B"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+<radialGradient id="brusselsprouts-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+    <filter id="brusselsprouts-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter></defs>
+  <style>
+    .food-icon { color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) {
+      .food-icon { stroke: #F3E8CF; }
+
+      .food-icon [data-tone="charcoal"] { fill: url(#brusselsprouts-cream); }
+      .food-icon [data-tone="cream"] { fill: url(#brusselsprouts-charcoal); }
+      .food-icon [fill="#303532"] { fill: #F3E8CF; }
+      .food-icon [fill="#F3E8CF"] { fill: #303532; }
+      .food-icon [stroke="#303532"] { stroke: #F3E8CF; }
+      .food-icon [stroke="#F3E8CF"] { stroke: #303532; }
+    }
+  </style>
+  <g class="food-icon" stroke="#303532" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" filter="url(#brusselsprouts-depth)">
+    <g class="optical-alignment" transform="translate(32 32) scale(1.26897) translate(-32 -32.1875)"><circle cx="25" cy="35" r="10" fill="url(#brusselsprouts-green2)" data-tone="green2" /><path d="M17 35Q25 31.34 33 35Q25 38.66 17 35Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(0 25 35)" stroke-width="1.2"/><circle cx="40" cy="39" r="9" fill="url(#brusselsprouts-green)" data-tone="green" /><path d="M33 39Q40 35.34 47 39Q40 42.66 33 39Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(38 40 39)" stroke-width="1.2"/><circle cx="34" cy="25" r="9" fill="url(#brusselsprouts-green2)" data-tone="green2" /><path d="M27 25Q34 21.34 41 25Q34 28.66 27 25Z" fill="url(#brusselsprouts-green)" data-tone="green" transform="rotate(76 34 25)" stroke-width="1.2"/></g>
+  </g>
 </svg>

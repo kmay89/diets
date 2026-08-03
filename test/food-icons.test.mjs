@@ -20,6 +20,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'icons/food');
 
 const ingredients = JSON.parse(readFileSync(join(root, 'data/ingredients.json'), 'utf8')).items;
+const alignment = JSON.parse(readFileSync(join(root, 'scripts/food-icon-alignment.json'), 'utf8'));
 const slugFor = (id) => id.replace(/^ing\./, '').replace(/\./g, '-');
 
 const files = existsSync(dir) ? readdirSync(dir).filter(f => f.endsWith('.svg')) : [];
@@ -67,6 +68,25 @@ test('every icon is on the 64-unit grid and named for a screen reader', () => {
     return !/viewBox="0 0 64 64"/.test(svg) || !/<title[^>]*>[^<]+<\/title>/.test(svg);
   });
   assert.deepEqual(bad, [], `wrong viewBox or missing title: ${bad.join(', ')}`);
+});
+
+test('every icon carries its shared optical alignment', () => {
+  const expected = new Set(ingredients.map(i => slugFor(i.id)));
+  const unmapped = [...expected].filter(slug => !alignment[slug]);
+  const orphaned = Object.keys(alignment).filter(slug => !expected.has(slug));
+  const unaligned = files.filter(f => {
+    const slug = f.replace(/\.svg$/, '');
+    const transform = alignment[slug];
+    if (!transform) return true;
+    const { scale, cx, cy } = transform;
+    return !read(f).includes(
+      `class="optical-alignment" transform="translate(32 32) scale(${scale}) translate(${-cx} ${-cy})"`
+    );
+  });
+
+  assert.deepEqual(unmapped, [], `no alignment for: ${unmapped.join(', ')}`);
+  assert.deepEqual(orphaned, [], `alignment left behind for: ${orphaned.join(', ')}`);
+  assert.deepEqual(unaligned, [], `wrong or missing alignment: ${unaligned.join(', ')}`);
 });
 
 test('an icon title matches the ingredient name the app shows', () => {
