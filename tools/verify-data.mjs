@@ -27,7 +27,7 @@ const warn = (m) => warnings.push(m);
 const ingredientsFile = read('data/ingredients.json');
 const aislesFile = read('data/aisles.json');
 const gardenFile = read('data/garden.json');
-const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json'].map(read);
+const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json', 'data/recipes.occasions.json'].map(read);
 
 const ingredients = ingredientsFile.items;
 const recipes = recipeFiles.flatMap(f => f.recipes);
@@ -78,7 +78,7 @@ for (const i of ingredients) {
 /* ---------- recipes ---------- */
 
 const seenRec = new Set();
-const COURSES = new Set(['breakfast', 'lunch', 'dinner', 'side', 'snack', 'component']);
+const COURSES = new Set(['breakfast', 'lunch', 'dinner', 'side', 'snack', 'dessert', 'component']);
 
 for (const r of recipes) {
   if (seenRec.has(r.id)) err(`duplicate recipe id: ${r.id}`);
@@ -117,8 +117,8 @@ for (const r of recipes) {
     }
   }
 
-  // A recipe whose base is not vegetarian should offer a swap, since the cook
-  // this app is built for is a vegetarian.
+  // A recipe whose base is not vegetarian should offer a swap, so that a table
+  // with a vegetarian at it never needs a second dinner cooked.
   const veg = (r.diet || []).some(d => d === 'vegetarian' || d === 'vegan');
   if (!veg && !r.vegetarianSwap && r.course !== 'component') {
     warn(`${r.id}: not vegetarian and has no vegetarianSwap`);

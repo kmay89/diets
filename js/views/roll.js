@@ -5,11 +5,13 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, toast, minutes, scoreBadge, pill } from '../ui.js';
+import { h, mount, chip, toast, minutes, scoreBadge, pill, plural } from '../ui.js';
 import { getDb, pantryCoverage, seasonNow, heartFor } from '../data.js';
 import { getState, setPref, addToPlan, isPlanned, setRecipeLike } from '../store.js';
 import { roll, rerollOne, newSeed, explainPick } from '../roll.js';
 import { servingEquivalents } from '../nutrition.js';
+import { play, tumble, stagger, pulse } from '../feedback.js';
+import { upcomingOccasion, recipesForOccasion } from '../occasions.js';
 
 /** Session-only: the current hand. Not persisted — a roll is a moment, not a document. */
 let hand = [];        // [{ recipe, locked }]
@@ -27,8 +29,27 @@ function view(draw, navigate) {
 
   return h('section.view',
     header(state, equiv, draw),
+    upcomingCard(navigate),
     controls(state, draw),
     hand.length ? results(state, draw, navigate) : emptyState(state, draw)
+  );
+}
+
+function upcomingCard(navigate) {
+  const occ = upcomingOccasion();
+  if (!occ) return null;
+  const count = recipesForOccasion(occ.id).length;
+  if (!count) return null;
+  return h('button.card.upcoming', {
+    type: 'button',
+    onclick: () => navigate(`#/browse?occasion=${occ.id}`)
+  },
+    h('span.upcoming__icon', occ.icon),
+    h('div.upcoming__body',
+      h('strong', occ.name),
+      h('p', `${occ.blurb} · ${count} recipes`)
+    ),
+    h('span.muted', '→')
   );
 }
 
@@ -39,7 +60,7 @@ function header(state, equiv, draw) {
       h('p.view__sub',
         `${state.household.members.filter(m => m.eats !== false).length} eating · `,
         `about ${equiv.total} servings a meal · `,
-        `${seasonNow()} in Hudson`
+        `${seasonNow()}`
       )
     )
   );
@@ -53,6 +74,7 @@ function controls(state, draw) {
   const doRoll = (n) => {
     const state2 = getState();
     const keep = hand.filter(x => x.locked).map(x => x.recipe);
+    play('roll');
     const result = roll(state2, Math.max(0, n - keep.length), { course, keep });
     lastSeed = result.seed;
     hand = [
@@ -63,6 +85,7 @@ function controls(state, draw) {
       toast('Ran out of matching recipes — loosen a filter for more variety', { kind: 'warn' });
     }
     draw();
+    requestAnimationFrame(() => stagger(document.querySelector('.card-grid')));
   };
 
   return h('div.card.roller',
@@ -99,8 +122,8 @@ function controls(state, draw) {
     ),
     h('button.btn.btn--primary.btn--big', {
       type: 'button',
-      onclick: () => doRoll(state.prefs.rollSize)
-    }, hand.length ? `🎲 Re-roll ${hand.filter(x => !x.locked).length || size} unlocked` : `🎲 Roll ${size} ${course}${size > 1 ? 's' : ''}`)
+      onclick: (e) => { tumble(e.currentTarget.querySelector('.dice') || e.currentTarget); doRoll(state.prefs.rollSize); }
+    }, h('span.dice', '🎲'), ' ', hand.length ? `Re-roll ${hand.filter(x => !x.locked).length || size} unlocked` : `Roll ${size} ${course}${size > 1 ? 's' : ''}`)
   );
 }
 
@@ -137,6 +160,7 @@ function results(state, draw, navigate) {
             addToPlan(recipe.id, { course, servings: suggestedServings(recipe, equiv) });
             added++;
           }
+          play(added ? 'complete' : 'warn');
           toast(added ? `Added ${added} to the plan` : 'Everything here is already planned');
           draw();
         }
@@ -189,7 +213,7 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
     h('div.recipe-card__actions',
       h('button.btn', {
         type: 'button',
-        onclick: () => { slot.locked = !slot.locked; draw(); }
+        onclick: () => { slot.locked = !slot.locked; play(slot.locked ? 'check' : 'uncheck'); draw(); }
       }, locked ? '🔒 Locked' : '🔓 Lock'),
       h('button.btn', {
         type: 'button',
@@ -209,8 +233,8 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
         class: planned ? 'btn' : 'btn btn--primary',
         type: 'button',
         disabled: planned,
-        onclick: () => { addToPlan(recipe.id, { course, servings }); toast(`Added — cooking ${servings} servings`); draw(); }
-      }, planned ? 'In the plan' : `Add (${servings} servings)`),
+        onclick: () => { addToPlan(recipe.id, { course, servings }); toast(`Added — cooking ${plural(servings, 'serving')}`); draw(); }
+      }, planned ? 'In the plan' : `Add (${plural(servings, 'serving')})`),
       h('button.btn.btn--ghost', { type: 'button', onclick: () => navigate(`#/recipe/${recipe.id}`) }, 'Open →')
     )
   );

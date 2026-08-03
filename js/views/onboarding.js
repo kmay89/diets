@@ -76,19 +76,38 @@ function view(state, draw, navigate) {
 
 function welcomeStep() {
   return h('div.step',
-    h('h1.step__title', 'Dinner, solved.'),
+    h('p.hero__eyebrow', 'Welcome'),
+    h('h1.step__title', 'Food is nourishment first.'),
     h('p.lede',
-      'Roll a few meal ideas, get an ingredient list that already knows what is in your kitchen, ',
-      'and walk out the door with a shopping list in the order you actually shop.'),
+      'Most eating advice starts with what to cut. This starts somewhere else: dinner is how you ',
+      'take care of the people at your table, and the meal you will happily cook again next month ',
+      'is worth more than the perfect meal you cook once.'
+    ),
+    h('p.lede',
+      'So nothing here asks you to eat less. It asks what could go ', h('em', 'on'), ' the plate to make ',
+      'it better — more plants, more fibre, more colour, flavour built from technique instead of salt. ',
+      'The rest takes care of itself, quietly.'
+    ),
     h('ul.feature-list',
-      feature('🎲', 'Roll, do not browse', 'Tell it how many meals you need. It weighs your tastes, the season, your pantry and the clock, then deals you a hand. Re-roll anything you do not like.'),
-      feature('🌱', 'One dinner, two ways', 'Every dinner has a vegetarian base the whole table eats, plus a fork-in-the-road add-on for the omnivores. Nobody cooks twice.'),
-      feature('❤️', 'Heart-forward by default', 'Sodium, saturated fat, fiber and potassium are tracked on every plate, using public USDA data.'),
-      feature('📴', 'Yours, offline', 'Everything lives on this device. No account, no server, no analytics. Add it to your home screen and it works on airplane mode.')
+      feature('🎲', 'Roll, don\u2019t browse',
+        'Say how many meals you need. It weighs your tastes, the season, your pantry and the clock, then deals you a hand. Re-roll anything you don\u2019t like.'),
+      feature('🌱', 'One dinner, everybody eats',
+        'Every dinner has a base the whole table can eat, plus a fork in the road for anyone who wants meat — cooked in a separate pan. Nobody cooks twice, and nobody eats a compromise.'),
+      feature('❤️', 'Backed by real research',
+        'Every health, cost and climate claim in this app is attached to a study you can open, labelled with what kind of evidence it is and what it does not show.'),
+      feature('📴', 'Yours, and private',
+        'Everything stays on this device. No account, no server, no analytics. Add it to your home screen and it works with no signal at all.')
+    ),
+    h('div.card.info',
+      h('h3', 'No streaks. No points. No red numbers.'),
+      h('p.muted',
+        'A week where you cook twice is a good week. This is a tool for making the cooking easier, ',
+        'not a scoreboard for how you eat.')
     ),
     h('p.fine-print',
-      'This is a planning tool, not medical advice. If someone in your house is managing heart disease, ',
-      'their cardiologist or a registered dietitian should have the final word on targets.')
+      'A planning tool, not medical advice. If someone in your house is managing heart disease, their ',
+      'clinician sets the targets \u2014 this just helps you hit them at dinner. The ',
+      h('a', { href: '#/why' }, 'Why'), ' page explains what food can and cannot do, with sources.')
   );
 }
 
@@ -100,10 +119,10 @@ function feature(icon, title, text) {
 }
 
 const TEMPLATES = [
-  { label: 'Me', partial: { name: 'Me', sex: 'female', age: 42, diet: 'vegetarian', isCook: true } },
-  { label: 'Partner', partial: { name: 'Partner', sex: 'male', age: 44, diet: 'omnivore' } },
-  { label: 'Kid', partial: { name: 'Kid', sex: 'female', age: 10, diet: 'omnivore', activity: 'active' } },
-  { label: 'Teen', partial: { name: 'Teen', sex: 'male', age: 15, diet: 'omnivore', activity: 'active' } }
+  { label: 'Adult', partial: { name: '', age: 40, diet: 'omnivore' } },
+  { label: 'Adult (vegetarian)', partial: { name: '', age: 40, diet: 'vegetarian' } },
+  { label: 'Child', partial: { name: '', age: 9, diet: 'omnivore', activity: 'active' } },
+  { label: 'Teen', partial: { name: '', age: 15, diet: 'omnivore', activity: 'active' } }
 ];
 
 function householdStep(state, draw) {
@@ -122,7 +141,7 @@ function householdStep(state, draw) {
       ? h('div.member-list', ...members.map(m => memberCard(m, draw)))
       : h('p.empty', 'No one yet — tap a button above to add the first person.'),
     members.length
-      ? h('p.fine-print', 'Diet matters: mark the vegetarian, and every dinner rolled will have a base she can eat, with meat kept to a separate pan.')
+      ? h('p.fine-print', 'Diet matters. Mark anyone who does not eat meat and every dinner rolled will have a base they can eat, with meat kept to a separate pan.')
       : null
   );
 }

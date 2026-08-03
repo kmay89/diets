@@ -1,7 +1,7 @@
 {
   "name": "veg-nourish",
-  "version": "1.2.0",
-  "description": "A private, offline-first family meal planner: roll dinner ideas, size portions to your household, and walk out with a shopping list in aisle order. Vegetarian base with an omnivore fork in the road, heart-forward by default.",
+  "version": "2.0.0",
+  "description": "A private, offline-first meal planner for tables where people eat differently. One dinner everybody can eat, with a fork in the road for meat. Heart-forward, sourced, and built for the whole year.",
   "type": "module",
   "license": "MIT",
   "author": "ERRERLabs",

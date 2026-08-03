@@ -6,11 +6,20 @@
 
 /** Hyperscript: h('div.card', {onclick}, 'text', childNode) */
 export function h(spec, props = null, ...children) {
+  // Accepts 'div', 'div#id', 'div.a.b' and 'div.a#id' — the id may ride on the
+  // tag or on the last class, because both look right and one silently failing
+  // is a bug you find in a screenshot an hour later.
   const [tagPart, ...classParts] = String(spec).split('.');
-  const [tag, id] = tagPart.split('#');
+  let [tag, id] = tagPart.split('#');
+  const classes = [];
+  for (const part of classParts) {
+    const [cls, tailId] = part.split('#');
+    if (cls) classes.push(cls);
+    if (tailId) id = tailId;
+  }
   const node = document.createElement(tag || 'div');
   if (id) node.id = id;
-  if (classParts.length) node.className = classParts.join(' ');
+  if (classes.length) node.className = classes.join(' ');
 
   if (props && (typeof props !== 'object' || props instanceof Node || Array.isArray(props))) {
     children.unshift(props);
@@ -116,6 +125,11 @@ export function minutes(n) {
   const h1 = Math.floor(n / 60);
   const m = n % 60;
   return m ? `${h1} hr ${m} min` : `${h1} hr`;
+}
+
+/** "1 serving" / "2 servings" — pluralise a count without a library. */
+export function plural(n, one, many = one + 's') {
+  return `${n} ${n === 1 ? one : many}`;
 }
 
 export function titleCase(s) {

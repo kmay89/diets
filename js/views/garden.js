@@ -1,6 +1,6 @@
 /**
  * garden.js (view) — what to plant, when, and what it unlocks in the kitchen.
- * Calibrated for USDA zone 6a (Hudson, Ohio).
+ * Calibrated for USDA zone 6a by default; edit data/garden.json for your own region.
  *
  * ERRERLabs — MIT licensed.
  */
@@ -19,7 +19,7 @@ export function render(root, { navigate }) {
     h('div.view__head',
       h('div',
         h('h1.view__title', 'The garden'),
-        h('p.view__sub', `${garden.location.name} · zone ${garden.location.zone} · last frost ${garden.location.lastFrostAvg}`)
+        h('p.view__sub', `${garden.location.name} · last frost ${garden.location.lastFrostAvg} · first frost ${garden.location.firstFrostAvg}`)
       )
     ),
 
@@ -91,6 +91,6 @@ export function render(root, { navigate }) {
       ))
     ),
 
-    h('p.fine-print', garden.location.note)
+    h('div', h('p.fine-print', garden.location.note), garden.location.howToAdapt ? h('p.fine-print', garden.location.howToAdapt) : null)
   ));
 }

@@ -4,8 +4,11 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, $, toast } from './ui.js';
+import { h, mount, $, toast, sheet } from './ui.js';
 import { loadAll } from './data.js';
+import { loadCitations } from './citations.js';
+import { loadOccasions } from './occasions.js';
+import { initFeedback, play } from './feedback.js';
 import { getState, subscribe } from './store.js';
 
 import * as onboarding from './views/onboarding.js';
@@ -16,6 +19,7 @@ import * as pantryView from './views/pantry.js';
 import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
 import * as settingsView from './views/settings.js';
+import * as whyView from './views/why.js';
 
 const ROUTES = [
   { pattern: /^#\/onboarding$/, view: (m) => ({ render: onboarding.render, params: {} }) },
@@ -26,17 +30,24 @@ const ROUTES = [
   { pattern: /^#\/pantry$/, view: () => ({ render: pantryView.render, params: {} }) },
   { pattern: /^#\/list$/, view: () => ({ render: listView.render, params: {} }) },
   { pattern: /^#\/garden$/, view: () => ({ render: gardenView.render, params: {} }) },
-  { pattern: /^#\/settings$/, view: () => ({ render: settingsView.render, params: {} }) }
+  { pattern: /^#\/settings$/, view: () => ({ render: settingsView.render, params: {} }) },
+  { pattern: /^#\/why$/, view: () => ({ render: whyView.render, params: {} }) }
 ];
 
+// Five tabs, because a row of eight is a wall of icons nobody reads. The rest
+// live one tap away behind More, which is where people look for them anyway.
 const NAV = [
   { href: '#/roll', label: 'Roll', icon: '🎲' },
   { href: '#/plan', label: 'Plan', icon: '📋' },
   { href: '#/list', label: 'List', icon: '🛒' },
-  { href: '#/browse', label: 'Recipes', icon: '📖' },
-  { href: '#/pantry', label: 'Pantry', icon: '🏠' },
-  { href: '#/garden', label: 'Garden', icon: '🌿' },
-  { href: '#/settings', label: 'Settings', icon: '⚙️' }
+  { href: '#/browse', label: 'Recipes', icon: '📖' }
+];
+
+const MORE = [
+  { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
+  { href: '#/garden', label: 'Garden', icon: '🌿', blurb: 'What to plant, and when' },
+  { href: '#/why', label: 'Why this works', icon: '💡', blurb: 'The research, with every source' },
+  { href: '#/settings', label: 'Settings', icon: '⚙️', blurb: 'Household, preferences, your data' }
 ];
 
 function navigate(hash) {
@@ -68,12 +79,14 @@ function route() {
 }
 
 function paintNav(hash) {
-  for (const a of document.querySelectorAll('.tabbar__item')) {
+  for (const a of document.querySelectorAll('.tabbar__item[href]')) {
     const on = hash.startsWith(a.getAttribute('href'));
     a.classList.toggle('is-active', on);
     if (on) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
+  const moreTab = $('#more-tab');
+  if (moreTab) moreTab.classList.toggle('is-active', MORE.some(m => hash.startsWith(m.href)));
 }
 
 function buildChrome() {
@@ -81,9 +94,26 @@ function buildChrome() {
     ...NAV.map(item => h('a.tabbar__item', { href: item.href },
       h('span.tabbar__icon', item.icon),
       h('span.tabbar__label', item.label)
-    ))
+    )),
+    h('button.tabbar__item', { id: 'more-tab', type: 'button', onclick: openMore },
+      h('span.tabbar__icon', '⋯'),
+      h('span.tabbar__label', 'More')
+    )
   );
   document.body.appendChild(nav);
+}
+
+function openMore() {
+  play('tap');
+  const dlg = sheet('More', h('div.more-grid',
+    ...MORE.map(item => h('a.more-item', {
+      href: item.href,
+      onclick: () => setTimeout(() => dlg.close(), 60)
+    },
+      h('span.more-item__icon', item.icon),
+      h('div', h('strong', item.label), h('p.muted.small', item.blurb))
+    ))
+  ));
 }
 
 /* ---------- install prompt ---------- */
@@ -142,6 +172,7 @@ async function boot() {
   const main = $('#main');
   try {
     await loadAll();
+    await Promise.all([loadCitations(), loadOccasions()]);
   } catch (err) {
     console.error(err);
     mount(main, h('section.view',
@@ -155,6 +186,7 @@ async function boot() {
   settingsView.applyTheme(getState().prefs.theme || 'system');
   buildChrome();
   wireInstallButtons();
+  initFeedback();
 
   const splash = $('#splash');
   if (splash) splash.remove();
