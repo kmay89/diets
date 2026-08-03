@@ -118,7 +118,18 @@ function controls(state, draw) {
       chip('Kid-friendly only', { on: state.prefs.kidFriendlyOnly, onclick: () => { setPref('kidFriendlyOnly', !state.prefs.kidFriendlyOnly); draw(); } }),
       chip('Use the pantry', { on: state.prefs.preferPantry, onclick: () => { setPref('preferPantry', !state.prefs.preferPantry); draw(); } }),
       chip('In season', { on: state.prefs.seasonAware, onclick: () => { setPref('seasonAware', !state.prefs.seasonAware); draw(); } }),
-      chip('Heart-forward', { on: state.prefs.heartMode, onclick: () => { setPref('heartMode', !state.prefs.heartMode); draw(); } })
+      chip('Heart-forward', { on: state.prefs.heartMode, onclick: () => { setPref('heartMode', !state.prefs.heartMode); draw(); } }),
+      chip('🍯 Treat night', {
+        on: state.prefs.treatNight,
+        onclick: () => {
+          const on = !state.prefs.treatNight;
+          setPref('treatNight', on);
+          hand = [];
+          play(on ? 'complete' : 'tap');
+          if (on) toast('Rolling the crave list. Scores still show — they just stop steering.', { duration: 3600 });
+          draw();
+        }
+      })
     ),
     h('button.btn.btn--primary.btn--big', {
       type: 'button',

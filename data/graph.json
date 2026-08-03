@@ -10,10 +10,10 @@
   ]
  },
  "counts": {
-  "nodes": 556,
-  "edges": 3088,
-  "ingredients": 208,
-  "recipes": 70
+  "nodes": 604,
+  "edges": 3645,
+  "ingredients": 227,
+  "recipes": 89
  },
  "predicates": [
   "CONTAINS",
@@ -10693,6 +10693,906 @@
    "label": "fat swap"
   },
   {
+   "id": "ing.gnocchi",
+   "type": "ingredient",
+   "label": "Potato gnocchi (shelf-stable)",
+   "aisle": "dry-goods",
+   "units": {
+    "package": 500,
+    "cup": 180,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (16 oz) potato gnocchi",
+    "grams": 500
+   },
+   "per100g": [
+    160,
+    4,
+    1,
+    0.2,
+    33,
+    2,
+    1,
+    430,
+    120,
+    0,
+    15,
+    1.1
+   ],
+   "tags": [
+    "pantry",
+    "quick",
+    "storage"
+   ],
+   "diet": [
+    "vegetarian"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.cheese.gruyere",
+   "type": "ingredient",
+   "label": "Gruyère",
+   "aisle": "dairy-eggs",
+   "units": {
+    "cup": 108,
+    "oz": 28.35,
+    "tbsp": 7,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz Gruyère",
+    "grams": 28.35
+   },
+   "per100g": [
+    413,
+    29.8,
+    32.3,
+    18.9,
+    0.4,
+    0,
+    0.4,
+    336,
+    81,
+    110,
+    1011,
+    0.17
+   ],
+   "tags": [
+    "cheese",
+    "rich",
+    "finishing"
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "tag.cheese",
+   "type": "tag",
+   "label": "cheese"
+  },
+  {
+   "id": "tag.rich",
+   "type": "tag",
+   "label": "rich"
+  },
+  {
+   "id": "ing.paneer",
+   "type": "ingredient",
+   "label": "Paneer",
+   "aisle": "dairy-eggs",
+   "units": {
+    "package": 340,
+    "cup": 150,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (12 oz) paneer",
+    "grams": 340
+   },
+   "per100g": [
+    296,
+    18.3,
+    22.8,
+    14.5,
+    3.6,
+    0,
+    2.6,
+    18,
+    100,
+    70,
+    480,
+    0.2
+   ],
+   "tags": [
+    "protein",
+    "cheese"
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.chilicrisp",
+   "type": "ingredient",
+   "label": "Chili crisp",
+   "aisle": "international",
+   "units": {
+    "tbsp": 15,
+    "tsp": 5,
+    "jar": 200,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (7 oz) chili crisp",
+    "grams": 200
+   },
+   "per100g": [
+    480,
+    4,
+    48,
+    7,
+    8,
+    3,
+    1,
+    1400,
+    200,
+    0,
+    40,
+    2
+   ],
+   "tags": [
+    "condiment",
+    "heat",
+    "finishing",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.sesame.seeds",
+   "type": "ingredient",
+   "label": "Sesame seeds",
+   "aisle": "nuts-seeds",
+   "units": {
+    "tbsp": 9,
+    "tsp": 3,
+    "cup": 144,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz sesame seeds",
+    "grams": 28.35
+   },
+   "per100g": [
+    573,
+    17.7,
+    49.7,
+    7,
+    23.4,
+    11.8,
+    0.3,
+    11,
+    468,
+    0,
+    975,
+    14.6
+   ],
+   "tags": [
+    "finishing",
+    "crunch",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.peanuts",
+   "type": "ingredient",
+   "label": "Roasted peanuts",
+   "aisle": "nuts-seeds",
+   "units": {
+    "cup": 146,
+    "tbsp": 9,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz roasted unsalted peanuts",
+    "grams": 28.35
+   },
+   "per100g": [
+    587,
+    24.4,
+    49.7,
+    6.9,
+    21.5,
+    8,
+    4.2,
+    6,
+    634,
+    0,
+    54,
+    2.3
+   ],
+   "tags": [
+    "crunch",
+    "finishing",
+    "cheap",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.mushroom.porcini.dried",
+   "type": "ingredient",
+   "label": "Dried porcini mushrooms",
+   "aisle": "dry-goods",
+   "units": {
+    "oz": 28.35,
+    "cup": 20,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz dried porcini",
+    "grams": 28.35
+   },
+   "per100g": [
+    296,
+    30,
+    3,
+    0.5,
+    60,
+    25,
+    3,
+    30,
+    2000,
+    0,
+    60,
+    5
+   ],
+   "tags": [
+    "umami",
+    "pantry",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.wine.red",
+   "type": "ingredient",
+   "label": "Dry red wine",
+   "aisle": "beverages",
+   "units": {
+    "cup": 235,
+    "tbsp": 15,
+    "bottle": 750,
+    "g": 1
+   },
+   "shop": {
+    "unit": "bottle",
+    "label": "bottles dry red wine",
+    "grams": 750
+   },
+   "per100g": [
+    85,
+    0.07,
+    0,
+    0,
+    2.6,
+    0,
+    0.6,
+    4,
+    127,
+    0,
+    8,
+    0.46
+   ],
+   "tags": [
+    "braising",
+    "deglaze"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.chile.guajillo",
+   "type": "ingredient",
+   "label": "Dried guajillo chiles",
+   "aisle": "international",
+   "units": {
+    "each": 8,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz dried guajillo chiles",
+    "grams": 28.35
+   },
+   "per100g": [
+    320,
+    12,
+    8,
+    1.2,
+    60,
+    28,
+    10,
+    90,
+    2000,
+    0,
+    150,
+    7
+   ],
+   "tags": [
+    "chile",
+    "pantry",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "tag.chile",
+   "type": "tag",
+   "label": "chile"
+  },
+  {
+   "id": "ing.cream.heavy",
+   "type": "ingredient",
+   "label": "Heavy cream",
+   "aisle": "dairy-eggs",
+   "units": {
+    "cup": 238,
+    "tbsp": 15,
+    "g": 1
+   },
+   "shop": {
+    "unit": "cup",
+    "label": "half-pints heavy cream",
+    "grams": 238
+   },
+   "per100g": [
+    340,
+    2.8,
+    36.1,
+    23,
+    2.9,
+    0,
+    2.9,
+    27,
+    95,
+    113,
+    65,
+    0.03
+   ],
+   "tags": [
+    "rich",
+    "finishing"
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.kimchi",
+   "type": "ingredient",
+   "label": "Kimchi",
+   "aisle": "international",
+   "units": {
+    "cup": 150,
+    "tbsp": 15,
+    "jar": 450,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (16 oz) kimchi",
+    "grams": 450
+   },
+   "per100g": [
+    15,
+    1.1,
+    0.5,
+    0.1,
+    2.4,
+    1.6,
+    1.1,
+    498,
+    151,
+    0,
+    33,
+    0.6
+   ],
+   "tags": [
+    "fermented",
+    "acid",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.noodle.wheat",
+   "type": "ingredient",
+   "label": "Wheat noodles (lo mein or ramen)",
+   "aisle": "international",
+   "units": {
+    "oz": 28.35,
+    "package": 400,
+    "g": 1
+   },
+   "shop": {
+    "unit": "package",
+    "label": "packages (14 oz) wheat noodles",
+    "grams": 400
+   },
+   "per100g": [
+    360,
+    12,
+    1.5,
+    0.3,
+    73,
+    3,
+    2,
+    10,
+    160,
+    0,
+    20,
+    3
+   ],
+   "tags": [
+    "pantry",
+    "quick",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.baguette",
+   "type": "ingredient",
+   "label": "Baguette",
+   "aisle": "bakery",
+   "units": {
+    "each": 250,
+    "slice": 25,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "each",
+    "label": "baguettes",
+    "grams": 250
+   },
+   "per100g": [
+    274,
+    9,
+    2.5,
+    0.5,
+    52,
+    2.3,
+    2.5,
+    580,
+    110,
+    0,
+    60,
+    3.2
+   ],
+   "tags": [
+    "bread",
+    "crouton"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "tag.bread",
+   "type": "tag",
+   "label": "bread"
+  },
+  {
+   "id": "tag.crouton",
+   "type": "tag",
+   "label": "crouton"
+  },
+  {
+   "id": "ing.mayo.olive",
+   "type": "ingredient",
+   "label": "Olive oil mayonnaise",
+   "aisle": "condiments",
+   "units": {
+    "tbsp": 14,
+    "cup": 224,
+    "tsp": 4.7,
+    "g": 1
+   },
+   "shop": {
+    "unit": "cup",
+    "label": "jars olive oil mayonnaise",
+    "grams": 224
+   },
+   "per100g": [
+    360,
+    0.5,
+    40,
+    5,
+    1,
+    0,
+    1,
+    620,
+    5,
+    25,
+    5,
+    0.1
+   ],
+   "tags": [
+    "condiment",
+    "rich"
+   ],
+   "diet": [
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.harissa",
+   "type": "ingredient",
+   "label": "Harissa paste",
+   "aisle": "international",
+   "units": {
+    "tbsp": 16,
+    "tsp": 5,
+    "jar": 190,
+    "g": 1
+   },
+   "shop": {
+    "unit": "jar",
+    "label": "jars (6.7 oz) harissa",
+    "grams": 190
+   },
+   "per100g": [
+    100,
+    3,
+    6,
+    0.8,
+    10,
+    4,
+    4,
+    900,
+    300,
+    0,
+    40,
+    2
+   ],
+   "tags": [
+    "condiment",
+    "heat",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.peach",
+   "type": "ingredient",
+   "label": "Peach",
+   "aisle": "produce",
+   "units": {
+    "each": 150,
+    "cup": 154,
+    "g": 1
+   },
+   "shop": {
+    "unit": "each",
+    "label": "peaches",
+    "grams": 150
+   },
+   "per100g": [
+    39,
+    0.9,
+    0.25,
+    0.02,
+    9.5,
+    1.5,
+    8.4,
+    0,
+    190,
+    0,
+    6,
+    0.25
+   ],
+   "tags": [
+    "fruit",
+    "summer",
+    "seasonal"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "tag.fruit",
+   "type": "tag",
+   "label": "fruit"
+  },
+  {
+   "id": "tag.seasonal",
+   "type": "tag",
+   "label": "seasonal"
+  },
+  {
+   "id": "ing.pistachios",
+   "type": "ingredient",
+   "label": "Pistachios",
+   "aisle": "nuts-seeds",
+   "units": {
+    "cup": 123,
+    "tbsp": 8,
+    "oz": 28.35,
+    "g": 1
+   },
+   "shop": {
+    "unit": "oz",
+    "label": "oz shelled pistachios",
+    "grams": 28.35
+   },
+   "per100g": [
+    560,
+    20.2,
+    45.3,
+    5.6,
+    27.2,
+    10.6,
+    7.7,
+    1,
+    1025,
+    0,
+    105,
+    3.9
+   ],
+   "tags": [
+    "finishing",
+    "crunch",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.jackfruit.canned",
+   "type": "ingredient",
+   "label": "Young green jackfruit (canned)",
+   "aisle": "canned-jarred",
+   "units": {
+    "can": 400,
+    "cup": 150,
+    "g": 1
+   },
+   "shop": {
+    "unit": "can",
+    "label": "cans (14 oz) young green jackfruit in brine",
+    "grams": 400
+   },
+   "per100g": [
+    30,
+    1,
+    0.2,
+    0.05,
+    7,
+    4,
+    1,
+    250,
+    120,
+    0,
+    20,
+    0.5
+   ],
+   "tags": [
+    "texture",
+    "pantry",
+    "storage"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": false,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "ing.chives",
+   "type": "ingredient",
+   "label": "Chives",
+   "aisle": "produce",
+   "units": {
+    "tbsp": 3,
+    "cup": 48,
+    "bunch": 30,
+    "g": 1
+   },
+   "shop": {
+    "unit": "bunch",
+    "label": "bunches chives",
+    "grams": 30
+   },
+   "per100g": [
+    30,
+    3.27,
+    0.73,
+    0.15,
+    4.35,
+    2.5,
+    1.85,
+    3,
+    296,
+    0,
+    92,
+    1.6
+   ],
+   "tags": [
+    "herb",
+    "finishing",
+    "fresh"
+   ],
+   "diet": [
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+   ],
+   "allergens": [],
+   "growable": true,
+   "tips": null,
+   "heartNote": null,
+   "dietNote": null
+  },
+  {
+   "id": "crop.ing.chives",
+   "type": "crop",
+   "label": "Chives",
+   "difficulty": "easy",
+   "sow": "Seed or divide a clump in April",
+   "harvest": "April through hard frost",
+   "note": "A perennial that comes back a little bigger every year and is the first green thing out of the ground in an Ohio spring. Cut it hard; it likes it."
+  },
+  {
    "id": "month.january",
    "type": "month",
    "label": "January",
@@ -12574,6 +13474,736 @@
    "ingredientCount": 19
   },
   {
+   "id": "rec.crispy-gnocchi-brown-butter",
+   "type": "recipe",
+   "label": "Crispy Gnocchi with Brown Butter, Sage and White Beans",
+   "blurb": "Skip the boiling water. Shelf-stable gnocchi dropped straight into a hot pan turns into little crisp-shelled pillows, and brown butter with fried sage is the sauce that ruins you for other sauces.",
+   "course": "dinner",
+   "cuisine": "italian",
+   "servings": 4,
+   "activeMin": 20,
+   "totalMin": 25,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "one-pan",
+    "quick",
+    "pantry",
+    "crowd-pleaser"
+   ],
+   "season": [
+    "fall",
+    "winter",
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 529.8,
+    "protein_g": 18,
+    "fat_g": 21.7,
+    "satfat_g": 7.9,
+    "carb_g": 68,
+    "fiber_g": 10.6,
+    "sugar_g": 2.2,
+    "sodium_mg": 807.8,
+    "potassium_mg": 703.4,
+    "cholesterol_mg": 26.7,
+    "calcium_mg": 219.1,
+    "iron_mg": 5.3
+   },
+   "nutritionOmnivore": {
+    "kcal": 630.6,
+    "protein_g": 27.6,
+    "fat_g": 27.9,
+    "satfat_g": 9.5,
+    "carb_g": 69.1,
+    "fiber_g": 10.6,
+    "sugar_g": 2.7,
+    "sodium_mg": 1199.8,
+    "potassium_mg": 843.4,
+    "cholesterol_mg": 71.5,
+    "calcium_mg": 230.3,
+    "iron_mg": 5.8
+   },
+   "heart": {
+    "score": 27,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 13
+  },
+  {
+   "id": "tag.crave",
+   "type": "tag",
+   "label": "crave"
+  },
+  {
+   "id": "rec.french-onion-soup",
+   "type": "recipe",
+   "label": "Real French Onion Soup",
+   "blurb": "Five pounds of onions cooked down for the better part of an hour into something jammy and almost sweet, under a raft of bread and melted Gruyère. There is no shortcut and there does not need to be — the stove does the work while you do something else.",
+   "course": "dinner",
+   "cuisine": "french",
+   "servings": 6,
+   "activeMin": 25,
+   "totalMin": 90,
+   "difficulty": "medium",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "make-ahead",
+    "showstopper",
+    "budget",
+    "one-pot"
+   ],
+   "season": [
+    "fall",
+    "winter"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 436.4,
+    "protein_g": 15.6,
+    "fat_g": 18.7,
+    "satfat_g": 9.5,
+    "carb_g": 44.2,
+    "fiber_g": 3.4,
+    "sugar_g": 8.8,
+    "sodium_mg": 852.5,
+    "potassium_mg": 393.4,
+    "cholesterol_mg": 46.2,
+    "calcium_mg": 370,
+    "iron_mg": 2.7
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": 6,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 16
+  },
+  {
+   "id": "tag.showstopper",
+   "type": "tag",
+   "label": "showstopper"
+  },
+  {
+   "id": "rec.chile-crisp-noodles",
+   "type": "recipe",
+   "label": "Chile Crisp Noodles with Jammy Eggs",
+   "blurb": "Fifteen minutes, one pot, and a bowl of noodles slick with chili crisp and soy that tastes like something you would order out. The jammy egg on top is not optional in the way that things labelled optional usually are.",
+   "course": "dinner",
+   "cuisine": "asian-american",
+   "servings": 4,
+   "activeMin": 15,
+   "totalMin": 15,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "quick",
+    "pantry",
+    "one-pot",
+    "spicy"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 561.8,
+    "protein_g": 22.3,
+    "fat_g": 21,
+    "satfat_g": 3.9,
+    "carb_g": 71.3,
+    "fiber_g": 5.4,
+    "sugar_g": 5,
+    "sodium_mg": 553.7,
+    "potassium_mg": 572.3,
+    "cholesterol_mg": 186,
+    "calcium_mg": 173.3,
+    "iron_mg": 5.3
+   },
+   "nutritionOmnivore": {
+    "kcal": 633.2,
+    "protein_g": 39.1,
+    "fat_g": 21.4,
+    "satfat_g": 4,
+    "carb_g": 71.3,
+    "fiber_g": 5.4,
+    "sugar_g": 5,
+    "sodium_mg": 653.7,
+    "potassium_mg": 794,
+    "cholesterol_mg": 313.7,
+    "calcium_mg": 218.7,
+    "iron_mg": 5.7
+   },
+   "heart": {
+    "score": 55,
+    "grade": "D",
+    "contextual": false
+   },
+   "ingredientCount": 12
+  },
+  {
+   "id": "tag.spicy",
+   "type": "tag",
+   "label": "spicy"
+  },
+  {
+   "id": "rec.mushroom-bourguignon",
+   "type": "recipe",
+   "label": "Mushroom Bourguignon",
+   "blurb": "The braise that makes people go quiet at the table. Mushrooms browned hard, red wine reduced properly, and dried porcini doing the job that beef normally does. It tastes like it took all day and takes about an hour.",
+   "course": "dinner",
+   "cuisine": "french",
+   "servings": 6,
+   "activeMin": 30,
+   "totalMin": 70,
+   "difficulty": "medium",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "showstopper",
+    "make-ahead",
+    "one-pot",
+    "date-night"
+   ],
+   "season": [
+    "fall",
+    "winter"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 335.9,
+    "protein_g": 9.4,
+    "fat_g": 9.2,
+    "satfat_g": 3.3,
+    "carb_g": 47,
+    "fiber_g": 6.6,
+    "sugar_g": 8.5,
+    "sodium_mg": 397.7,
+    "potassium_mg": 1597.4,
+    "cholesterol_mg": 11,
+    "calcium_mg": 105.3,
+    "iron_mg": 3.2
+   },
+   "nutritionOmnivore": {
+    "kcal": 416,
+    "protein_g": 21.6,
+    "fat_g": 12.3,
+    "satfat_g": 4.4,
+    "carb_g": 47,
+    "fiber_g": 6.6,
+    "sugar_g": 8.5,
+    "sodium_mg": 427.4,
+    "potassium_mg": 1787.8,
+    "cholesterol_mg": 45.8,
+    "calcium_mg": 114.8,
+    "iron_mg": 4.1
+   },
+   "heart": {
+    "score": 73,
+    "grade": "B",
+    "contextual": false
+   },
+   "ingredientCount": 20
+  },
+  {
+   "id": "rec.baked-feta-pasta",
+   "type": "recipe",
+   "label": "Baked Feta Pasta with Blistered Tomatoes",
+   "blurb": "A block of feta in a dish of cherry tomatoes and olive oil, roasted until the tomatoes burst and the cheese slumps, then stirred into a sauce. It went round the world for a reason, and it is genuinely good.",
+   "course": "dinner",
+   "cuisine": "greek",
+   "servings": 5,
+   "activeMin": 10,
+   "totalMin": 45,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "hands-off",
+    "one-pan",
+    "crowd-pleaser",
+    "summer"
+   ],
+   "season": [
+    "summer",
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 495.9,
+    "protein_g": 17.1,
+    "fat_g": 21.8,
+    "satfat_g": 8.4,
+    "carb_g": 58.9,
+    "fiber_g": 4.4,
+    "sugar_g": 6.7,
+    "sodium_mg": 548.9,
+    "potassium_mg": 604.8,
+    "cholesterol_mg": 39.9,
+    "calcium_mg": 284.8,
+    "iron_mg": 3.8
+   },
+   "nutritionOmnivore": {
+    "kcal": 553.1,
+    "protein_g": 30.7,
+    "fat_g": 22.1,
+    "satfat_g": 8.5,
+    "carb_g": 58.9,
+    "fiber_g": 4.4,
+    "sugar_g": 6.7,
+    "sodium_mg": 628.8,
+    "potassium_mg": 782.2,
+    "cholesterol_mg": 142,
+    "calcium_mg": 321.1,
+    "iron_mg": 4.1
+   },
+   "heart": {
+    "score": 31,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 12
+  },
+  {
+   "id": "rec.crispy-rice-kimchi-bowl",
+   "type": "recipe",
+   "label": "Crispy Rice Bowl with Kimchi and a Fried Egg",
+   "blurb": "Cold leftover rice pressed into a hot pan and left there until the bottom forms a golden crust you have to break with a spoon. Kimchi, a runny egg, and that crust — it is the best thing you can do with yesterday's rice.",
+   "course": "dinner",
+   "cuisine": "korean-inspired",
+   "servings": 4,
+   "activeMin": 20,
+   "totalMin": 25,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "quick",
+    "leftovers",
+    "one-pan",
+    "budget"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 469.4,
+    "protein_g": 14.5,
+    "fat_g": 16.2,
+    "satfat_g": 2.8,
+    "carb_g": 66.5,
+    "fiber_g": 3.7,
+    "sugar_g": 4.7,
+    "sodium_mg": 622.9,
+    "potassium_mg": 595.4,
+    "cholesterol_mg": 186,
+    "calcium_mg": 146.9,
+    "iron_mg": 3.5
+   },
+   "nutritionOmnivore": {
+    "kcal": 570.2,
+    "protein_g": 32,
+    "fat_g": 19.2,
+    "satfat_g": 3.8,
+    "carb_g": 66.5,
+    "fiber_g": 3.7,
+    "sugar_g": 4.7,
+    "sodium_mg": 667.4,
+    "potassium_mg": 930.6,
+    "cholesterol_mg": 240.6,
+    "calcium_mg": 152,
+    "iron_mg": 4.3
+   },
+   "heart": {
+    "score": 41,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 13
+  },
+  {
+   "id": "tag.leftovers",
+   "type": "tag",
+   "label": "leftovers"
+  },
+  {
+   "id": "rec.mushroom-birria-tacos",
+   "type": "recipe",
+   "label": "Mushroom Birria Tacos with Consommé",
+   "blurb": "Tortillas dipped in a deep red chile broth, griddled until the edges go crisp, and served with a cup of that same broth for dunking. It is a whole event, and the broth is what people remember.",
+   "course": "dinner",
+   "cuisine": "mexican",
+   "servings": 6,
+   "activeMin": 35,
+   "totalMin": 75,
+   "difficulty": "medium",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "showstopper",
+    "make-ahead",
+    "crowd-pleaser"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 333.4,
+    "protein_g": 14.5,
+    "fat_g": 12.3,
+    "satfat_g": 3.6,
+    "carb_g": 46.3,
+    "fiber_g": 11.1,
+    "sugar_g": 7.5,
+    "sodium_mg": 805.9,
+    "potassium_mg": 852.1,
+    "cholesterol_mg": 15.1,
+    "calcium_mg": 336.8,
+    "iron_mg": 3
+   },
+   "nutritionOmnivore": {
+    "kcal": 424.9,
+    "protein_g": 29.4,
+    "fat_g": 15.4,
+    "satfat_g": 4.4,
+    "carb_g": 46.3,
+    "fiber_g": 11.1,
+    "sugar_g": 7.5,
+    "sodium_mg": 871,
+    "potassium_mg": 1026.1,
+    "cholesterol_mg": 86.2,
+    "calcium_mg": 341.4,
+    "iron_mg": 3.7
+   },
+   "heart": {
+    "score": 46,
+    "grade": "D",
+    "contextual": false
+   },
+   "ingredientCount": 19
+  },
+  {
+   "id": "rec.paneer-tikka-masala",
+   "type": "recipe",
+   "label": "Skillet Paneer Tikka Masala",
+   "blurb": "Cubes of paneer browned in butter and folded into a tomato sauce built on bloomed garam masala. Restaurant tikka masala usually runs on a cup of cream; this one uses three tablespoons and gets the rest of its body from blended onion.",
+   "course": "dinner",
+   "cuisine": "indian",
+   "servings": 5,
+   "activeMin": 25,
+   "totalMin": 40,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "one-pan",
+    "crowd-pleaser",
+    "make-ahead"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 609.1,
+    "protein_g": 22.4,
+    "fat_g": 28.8,
+    "satfat_g": 15.5,
+    "carb_g": 68.2,
+    "fiber_g": 7.6,
+    "sugar_g": 12.7,
+    "sodium_mg": 316.7,
+    "potassium_mg": 888.7,
+    "cholesterol_mg": 69.8,
+    "calcium_mg": 433.5,
+    "iron_mg": 4.5
+   },
+   "nutritionOmnivore": {
+    "kcal": 719,
+    "protein_g": 40.3,
+    "fat_g": 32.5,
+    "satfat_g": 16.5,
+    "carb_g": 68.2,
+    "fiber_g": 7.6,
+    "sugar_g": 12.7,
+    "sodium_mg": 394.8,
+    "potassium_mg": 1097.5,
+    "cholesterol_mg": 155.2,
+    "calcium_mg": 438.9,
+    "iron_mg": 5.4
+   },
+   "heart": {
+    "score": 52,
+    "grade": "D",
+    "contextual": false
+   },
+   "ingredientCount": 20
+  },
+  {
+   "id": "rec.gochujang-tofu",
+   "type": "recipe",
+   "label": "Sticky Gochujang Tofu",
+   "blurb": "Tofu cornstarched and fried until the outside shatters, then tossed in a glaze that reduces to a lacquer in the pan. Cold cucumber salad on the side because something has to cut through it.",
+   "course": "dinner",
+   "cuisine": "korean-inspired",
+   "servings": 4,
+   "activeMin": 25,
+   "totalMin": 35,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian",
+    "vegan"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "quick",
+    "one-pan",
+    "crowd-pleaser"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 779.4,
+    "protein_g": 42.2,
+    "fat_g": 32.1,
+    "satfat_g": 4.1,
+    "carb_g": 87.7,
+    "fiber_g": 7.5,
+    "sugar_g": 13.4,
+    "sodium_mg": 763,
+    "potassium_mg": 685.9,
+    "cholesterol_mg": 0,
+    "calcium_mg": 492.4,
+    "iron_mg": 7.3
+   },
+   "nutritionOmnivore": {
+    "kcal": 916.7,
+    "protein_g": 64.6,
+    "fat_g": 36.7,
+    "satfat_g": 5.3,
+    "carb_g": 87.7,
+    "fiber_g": 7.5,
+    "sugar_g": 13.4,
+    "sodium_mg": 860.6,
+    "potassium_mg": 946.9,
+    "cholesterol_mg": 106.7,
+    "calcium_mg": 499.2,
+    "iron_mg": 8.3
+   },
+   "heart": {
+    "score": 56,
+    "grade": "D",
+    "contextual": false
+   },
+   "ingredientCount": 15
+  },
+  {
+   "id": "rec.harissa-chickpeas-yogurt",
+   "type": "recipe",
+   "label": "Harissa Butter Chickpeas over Garlic Yogurt",
+   "blurb": "Chickpeas crisped in harissa butter, spooned over a pool of cold garlicky yogurt so it streaks pink where the two meet. Twenty minutes, mostly pantry, and it looks like something you would pay for.",
+   "course": "dinner",
+   "cuisine": "middle-eastern",
+   "servings": 4,
+   "activeMin": 20,
+   "totalMin": 20,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "quick",
+    "pantry",
+    "one-pan",
+    "budget"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 734.2,
+    "protein_g": 33.3,
+    "fat_g": 27.8,
+    "satfat_g": 8.7,
+    "carb_g": 93.7,
+    "fiber_g": 21,
+    "sugar_g": 13.5,
+    "sodium_mg": 581.1,
+    "potassium_mg": 965.9,
+    "cholesterol_mg": 31.1,
+    "calcium_mg": 314.8,
+    "iron_mg": 7.7
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": 76,
+    "grade": "B",
+    "contextual": false
+   },
+   "ingredientCount": 15
+  },
+  {
+   "id": "rec.cacio-e-pepe-peas",
+   "type": "recipe",
+   "label": "Cacio e Pepe with Sweet Peas",
+   "blurb": "Four ingredients and a technique. Pecorino, black pepper toasted in a dry pan, and starchy pasta water whisked into a sauce that clings like cream without any cream in it. Peas make it dinner rather than a side.",
+   "course": "dinner",
+   "cuisine": "italian",
+   "servings": 4,
+   "activeMin": 20,
+   "totalMin": 20,
+   "difficulty": "medium",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "quick",
+    "pantry",
+    "budget",
+    "date-night"
+   ],
+   "season": [
+    "spring",
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 574.1,
+    "protein_g": 25.9,
+    "fat_g": 19.7,
+    "satfat_g": 11.8,
+    "carb_g": 71.8,
+    "fiber_g": 5.3,
+    "sugar_g": 4.9,
+    "sodium_mg": 976.5,
+    "potassium_mg": 328.1,
+    "cholesterol_mg": 59.3,
+    "calcium_mg": 444.1,
+    "iron_mg": 3.9
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": 7,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 8
+  },
+  {
+   "id": "rec.charred-cabbage-miso-butter",
+   "type": "recipe",
+   "label": "Charred Cabbage Steaks with Miso Butter",
+   "blurb": "A three-dollar head of cabbage roasted hard until the outer leaves blacken and the inside goes sweet and silky, then brushed with miso butter. It is the cheapest thing in this collection and one of the best.",
+   "course": "dinner",
+   "cuisine": "japanese-inspired",
+   "servings": 4,
+   "activeMin": 15,
+   "totalMin": 45,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "budget",
+    "hands-off",
+    "one-pan",
+    "winter"
+   ],
+   "season": [
+    "fall",
+    "winter"
+   ],
+   "hasOmnivore": true,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 643.2,
+    "protein_g": 17.4,
+    "fat_g": 29.9,
+    "satfat_g": 9.2,
+    "carb_g": 80.8,
+    "fiber_g": 12.2,
+    "sugar_g": 12.9,
+    "sodium_mg": 574.2,
+    "potassium_mg": 878.1,
+    "cholesterol_mg": 30.1,
+    "calcium_mg": 190,
+    "iron_mg": 4.2
+   },
+   "nutritionOmnivore": {
+    "kcal": 996.8,
+    "protein_g": 52.1,
+    "fat_g": 52.7,
+    "satfat_g": 14.4,
+    "carb_g": 80.8,
+    "fiber_g": 12.2,
+    "sugar_g": 12.9,
+    "sodium_mg": 674.5,
+    "potassium_mg": 1495.2,
+    "cholesterol_mg": 123.6,
+    "calcium_mg": 205.3,
+    "iron_mg": 4.8
+   },
+   "heart": {
+    "score": 57,
+    "grade": "D",
+    "contextual": false
+   },
+   "ingredientCount": 13
+  },
+  {
    "id": "rec.overnight-oats",
    "type": "recipe",
    "label": "Heart-Smart Overnight Oats",
@@ -13169,11 +14799,6 @@
    "label": "formula"
   },
   {
-   "id": "tag.leftovers",
-   "type": "tag",
-   "label": "leftovers"
-  },
-  {
    "id": "tag.component",
    "type": "tag",
    "label": "component"
@@ -13599,6 +15224,150 @@
     "contextual": false
    },
    "ingredientCount": 14
+  },
+  {
+   "id": "rec.miso-butter-mushroom-toast",
+   "type": "recipe",
+   "label": "Miso Butter Mushrooms on Toast",
+   "blurb": "Mushrooms cooked past the point where they give up their water and start to brown, in butter cut with white miso. On thick toast this is lunch; on a small plate it is the thing people ask you to make again.",
+   "course": "lunch",
+   "cuisine": "japanese-inspired",
+   "servings": 2,
+   "activeMin": 18,
+   "totalMin": 18,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "quick",
+    "one-pan",
+    "budget"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 471.7,
+    "protein_g": 19.3,
+    "fat_g": 23.4,
+    "satfat_g": 9.9,
+    "carb_g": 50.4,
+    "fiber_g": 8.2,
+    "sugar_g": 7.8,
+    "sodium_mg": 903.1,
+    "potassium_mg": 1123.7,
+    "cholesterol_mg": 34.2,
+    "calcium_mg": 230.3,
+    "iron_mg": 4.6
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": 20,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 12
+  },
+  {
+   "id": "rec.crispy-smashed-potatoes",
+   "type": "recipe",
+   "label": "Crispy Smashed Potatoes with Garlic Aioli",
+   "blurb": "Boiled until soft, squashed flat, then roasted hard so every ragged edge turns to glass. There is no better potato, and the five-minute lemon-garlic aioli is why the pan comes back empty.",
+   "course": "side",
+   "cuisine": "american",
+   "servings": 6,
+   "activeMin": 15,
+   "totalMin": 60,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "crowd-pleaser",
+    "budget",
+    "make-ahead"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 276.9,
+    "protein_g": 4.8,
+    "fat_g": 14.1,
+    "satfat_g": 2,
+    "carb_g": 34.4,
+    "fiber_g": 4.2,
+    "sugar_g": 2,
+    "sodium_mg": 367.4,
+    "potassium_mg": 832.9,
+    "cholesterol_mg": 3.7,
+    "calcium_mg": 38.2,
+    "iron_mg": 1.7
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": null,
+    "grade": null,
+    "contextual": true
+   },
+   "ingredientCount": 11
+  },
+  {
+   "id": "rec.dutch-baby",
+   "type": "recipe",
+   "label": "Lemon Dutch Baby",
+   "blurb": "Batter poured into a screaming hot buttered skillet, and twenty minutes later a pancake the size of the pan climbs up the sides and comes out looking like something that should not be possible at home.",
+   "course": "breakfast",
+   "cuisine": "american",
+   "servings": 4,
+   "activeMin": 10,
+   "totalMin": 30,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "showstopper",
+    "quick",
+    "one-pan"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 325.1,
+    "protein_g": 13.5,
+    "fat_g": 14.6,
+    "satfat_g": 7.6,
+    "carb_g": 34.8,
+    "fiber_g": 1.7,
+    "sugar_g": 14.5,
+    "sodium_mg": 171,
+    "potassium_mg": 246.5,
+    "cholesterol_mg": 213.7,
+    "calcium_mg": 127.2,
+    "iron_mg": 2.1
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": 33,
+    "grade": "F",
+    "contextual": false
+   },
+   "ingredientCount": 12
   },
   {
    "id": "rec.harvest-stuffed-squash",
@@ -14493,11 +16262,6 @@
    "label": "oven"
   },
   {
-   "id": "tag.spicy",
-   "type": "tag",
-   "label": "spicy"
-  },
-  {
    "id": "rec.mediterranean-orzo-salad",
    "type": "recipe",
    "label": "Mediterranean Orzo Salad",
@@ -15036,6 +16800,202 @@
     "contextual": false
    },
    "ingredientCount": 13
+  },
+  {
+   "id": "rec.whipped-feta-hot-honey",
+   "type": "recipe",
+   "label": "Whipped Feta with Hot Honey and Pistachios",
+   "blurb": "Feta and yogurt beaten until it turns into something closer to a cloud, then flooded with warm chile honey. It takes eight minutes and it is always the first bowl to empty.",
+   "course": "snack",
+   "cuisine": "greek",
+   "servings": 8,
+   "activeMin": 10,
+   "totalMin": 10,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": false,
+   "tags": [
+    "crave",
+    "quick",
+    "make-ahead",
+    "crowd-pleaser",
+    "no-cook"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 311.8,
+    "protein_g": 11.2,
+    "fat_g": 14.5,
+    "satfat_g": 5.5,
+    "carb_g": 37,
+    "fiber_g": 4.3,
+    "sugar_g": 9,
+    "sodium_mg": 425.6,
+    "potassium_mg": 189.2,
+    "cholesterol_mg": 26.3,
+    "calcium_mg": 204.7,
+    "iron_mg": 2
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": null,
+    "grade": null,
+    "contextual": true
+   },
+   "ingredientCount": 12
+  },
+  {
+   "id": "rec.skillet-garlic-bread",
+   "type": "recipe",
+   "label": "Skillet Garlic Bread with a Parmesan Crust",
+   "blurb": "Garlic butter worked into a split baguette, then the cut face pressed into parmesan and crisped in a skillet until it forms a lacy golden crust. It is not the garlic bread from the freezer aisle.",
+   "course": "side",
+   "cuisine": "italian-american",
+   "servings": 8,
+   "activeMin": 12,
+   "totalMin": 20,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "quick",
+    "crowd-pleaser",
+    "budget"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 203.6,
+    "protein_g": 6.4,
+    "fat_g": 11.9,
+    "satfat_g": 6.4,
+    "carb_g": 17.3,
+    "fiber_g": 0.8,
+    "sugar_g": 0.9,
+    "sodium_mg": 367.5,
+    "potassium_mg": 65.3,
+    "cholesterol_mg": 25.2,
+    "calcium_mg": 137.5,
+    "iron_mg": 1.2
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": null,
+    "grade": null,
+    "contextual": true
+   },
+   "ingredientCount": 9
+  },
+  {
+   "id": "rec.tahini-chocolate-chip-cookies",
+   "type": "recipe",
+   "label": "Salted Tahini Chocolate Chip Cookies",
+   "blurb": "Tahini gives these the savoury, slightly bitter edge that makes a chocolate chip cookie interesting instead of just sweet. Flaky salt on top, and the middles stay soft for days.",
+   "course": "dessert",
+   "cuisine": "american",
+   "servings": 20,
+   "activeMin": 20,
+   "totalMin": 70,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "baking",
+    "make-ahead",
+    "crowd",
+    "freezer"
+   ],
+   "season": [
+    "all"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 216.2,
+    "protein_g": 3.4,
+    "fat_g": 12.2,
+    "satfat_g": 5.6,
+    "carb_g": 24.1,
+    "fiber_g": 2.1,
+    "sugar_g": 12.7,
+    "sodium_mg": 103.3,
+    "potassium_mg": 124.8,
+    "cholesterol_mg": 21.8,
+    "calcium_mg": 52.4,
+    "iron_mg": 2.2
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": null,
+    "grade": null,
+    "contextual": true
+   },
+   "ingredientCount": 12
+  },
+  {
+   "id": "rec.skillet-peach-crumble",
+   "type": "recipe",
+   "label": "Skillet Peach and Blueberry Crumble",
+   "blurb": "August peaches cooked down in the same pan they are baked in, under a buttery oat topping that stays crunchy. It goes in the oven while you eat and comes out at exactly the right moment.",
+   "course": "dessert",
+   "cuisine": "american",
+   "servings": 8,
+   "activeMin": 20,
+   "totalMin": 60,
+   "difficulty": "easy",
+   "diet": [
+    "vegetarian"
+   ],
+   "kidFriendly": true,
+   "tags": [
+    "crave",
+    "one-pan",
+    "seasonal",
+    "crowd-pleaser",
+    "summer"
+   ],
+   "season": [
+    "summer",
+    "fall"
+   ],
+   "hasOmnivore": false,
+   "hasVegSwap": false,
+   "nutrition": {
+    "kcal": 335.9,
+    "protein_g": 8.4,
+    "fat_g": 14.7,
+    "satfat_g": 6.2,
+    "carb_g": 46.3,
+    "fiber_g": 5.5,
+    "sugar_g": 27.4,
+    "sodium_mg": 83.5,
+    "potassium_mg": 441.7,
+    "cholesterol_mg": 25.4,
+    "calcium_mg": 92.2,
+    "iron_mg": 1.5
+   },
+   "nutritionOmnivore": null,
+   "heart": {
+    "score": null,
+    "grade": null,
+    "contextual": true
+   },
+   "ingredientCount": 14
   }
  ],
  "edges": [
@@ -23450,6 +25410,796 @@
    "o": "tag.kid-friendly"
   },
   {
+   "s": "ing.gnocchi",
+   "p": "IN_AISLE",
+   "o": "aisle.dry-goods"
+  },
+  {
+   "s": "ing.gnocchi",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.gnocchi",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "ing.gnocchi",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "ing.gnocchi",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.gnocchi",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.pasta.regular"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "IN_AISLE",
+   "o": "aisle.dairy-eggs"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "HAS_TAG",
+   "o": "tag.cheese"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "HAS_TAG",
+   "o": "tag.rich"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cheese.parmesan"
+  },
+  {
+   "s": "ing.cheese.gruyere",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cheese.mozzarella"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "IN_AISLE",
+   "o": "aisle.dairy-eggs"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "HAS_TAG",
+   "o": "tag.protein"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "HAS_TAG",
+   "o": "tag.cheese"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.tofu.firm"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cheese.feta"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "IN_AISLE",
+   "o": "aisle.international"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "HAS_TAG",
+   "o": "tag.condiment"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "HAS_TAG",
+   "o": "tag.heat"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.sriracha"
+  },
+  {
+   "s": "ing.chilicrisp",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.spice.pepperflakes"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "IN_AISLE",
+   "o": "aisle.nuts-seeds"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "HAS_TAG",
+   "o": "tag.crunch"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.spice.everything"
+  },
+  {
+   "s": "ing.sesame.seeds",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.sunflowerseeds"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "IN_AISLE",
+   "o": "aisle.nuts-seeds"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "HAS_TAG",
+   "o": "tag.crunch"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "HAS_TAG",
+   "o": "tag.cheap"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cashews"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.almonds"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "IN_AISLE",
+   "o": "aisle.dry-goods"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "HAS_TAG",
+   "o": "tag.umami"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.mushroom.porcini.dried",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.mushroom.shiitake"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "IN_AISLE",
+   "o": "aisle.beverages"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "HAS_TAG",
+   "o": "tag.braising"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "HAS_TAG",
+   "o": "tag.deglaze"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.broth.veg"
+  },
+  {
+   "s": "ing.wine.red",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.wine.white"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "IN_AISLE",
+   "o": "aisle.international"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "HAS_TAG",
+   "o": "tag.chile"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.chipotle.adobo"
+  },
+  {
+   "s": "ing.chile.guajillo",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.spice.chili"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "IN_AISLE",
+   "o": "aisle.dairy-eggs"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "HAS_TAG",
+   "o": "tag.rich"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.milk.1pct"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.coconutmilk.light"
+  },
+  {
+   "s": "ing.cream.heavy",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cashews"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "IN_AISLE",
+   "o": "aisle.international"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "HAS_TAG",
+   "o": "tag.fermented"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "HAS_TAG",
+   "o": "tag.acid"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.cabbage.green"
+  },
+  {
+   "s": "ing.kimchi",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.sriracha"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "IN_AISLE",
+   "o": "aisle.international"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.pasta.regular"
+  },
+  {
+   "s": "ing.noodle.wheat",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.noodle.rice"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "IN_AISLE",
+   "o": "aisle.bakery"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "HAS_TAG",
+   "o": "tag.bread"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "HAS_TAG",
+   "o": "tag.crouton"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.bread.wholegrain"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "IN_AISLE",
+   "o": "aisle.condiments"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "HAS_TAG",
+   "o": "tag.condiment"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "HAS_TAG",
+   "o": "tag.rich"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.yogurt.greek.2"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.tahini"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "IN_AISLE",
+   "o": "aisle.international"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "HAS_TAG",
+   "o": "tag.condiment"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "HAS_TAG",
+   "o": "tag.heat"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.chipotle.adobo"
+  },
+  {
+   "s": "ing.harissa",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.spice.smokedpaprika"
+  },
+  {
+   "s": "ing.peach",
+   "p": "IN_AISLE",
+   "o": "aisle.produce"
+  },
+  {
+   "s": "ing.peach",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.peach",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.peach",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.peach",
+   "p": "HAS_TAG",
+   "o": "tag.fruit"
+  },
+  {
+   "s": "ing.peach",
+   "p": "HAS_TAG",
+   "o": "tag.summer"
+  },
+  {
+   "s": "ing.peach",
+   "p": "HAS_TAG",
+   "o": "tag.seasonal"
+  },
+  {
+   "s": "ing.peach",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.pear"
+  },
+  {
+   "s": "ing.peach",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.apple"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "IN_AISLE",
+   "o": "aisle.nuts-seeds"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "HAS_TAG",
+   "o": "tag.crunch"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.almonds"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.walnuts"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "IN_AISLE",
+   "o": "aisle.canned-jarred"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "HAS_TAG",
+   "o": "tag.texture"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "HAS_TAG",
+   "o": "tag.storage"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.mushroom.portobello"
+  },
+  {
+   "s": "ing.jackfruit.canned",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.chickpeas.canned"
+  },
+  {
+   "s": "ing.chives",
+   "p": "IN_AISLE",
+   "o": "aisle.produce"
+  },
+  {
+   "s": "ing.chives",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "ing.chives",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.chives",
+   "p": "SUITS_DIET",
+   "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.chives",
+   "p": "HAS_TAG",
+   "o": "tag.herb"
+  },
+  {
+   "s": "ing.chives",
+   "p": "HAS_TAG",
+   "o": "tag.finishing"
+  },
+  {
+   "s": "ing.chives",
+   "p": "HAS_TAG",
+   "o": "tag.fresh"
+  },
+  {
+   "s": "ing.chives",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.scallion"
+  },
+  {
+   "s": "ing.chives",
+   "p": "SUBSTITUTES_WITH",
+   "o": "ing.parsley.flat"
+  },
+  {
+   "s": "crop.ing.chives",
+   "p": "YIELDS",
+   "o": "ing.chives"
+  },
+  {
    "s": "month.january",
    "p": "SUGGESTS",
    "o": "rec.three-bean-chili"
@@ -27829,6 +30579,2012 @@
    "grams": 227
   },
   {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.gnocchi",
+   "qty": 1,
+   "unit": "package",
+   "grams": 500,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 13.5,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.sage.fresh",
+   "qty": 12,
+   "unit": "leaf",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 3,
+   "unit": "clove",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.beans.cannellini",
+   "qty": 1,
+   "unit": "can",
+   "grams": 425,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.spinach.baby",
+   "qty": 4,
+   "unit": "cup",
+   "grams": 120,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tsp_zest",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tbsp_juice",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.4,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.2,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.walnuts",
+   "qty": 0.33,
+   "unit": "cup",
+   "grams": 38.6,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "CONTAINS",
+   "o": "ing.cheese.parmesan",
+   "qty": 4,
+   "unit": "tbsp",
+   "grams": 24,
+   "optional": true
+  },
+  {
+   "s": "rec.crispy-gnocchi-brown-butter",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.sausage.chicken.italian",
+   "qty": 8,
+   "unit": "oz",
+   "grams": 224
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "HAS_TAG",
+   "o": "tag.showstopper"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "HAS_TAG",
+   "o": "tag.one-pot"
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 13.5,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.onion.yellow",
+   "qty": 6,
+   "unit": "each",
+   "grams": 660,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1.25,
+   "unit": "tsp",
+   "grams": 3.5,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.sugar.granulated",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 4.2,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 4,
+   "unit": "clove",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.flour.ap",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.wine.white",
+   "qty": 1,
+   "unit": "cup",
+   "grams": 240,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.broth.veg",
+   "qty": 6,
+   "unit": "cup",
+   "grams": 1440,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.thyme.fresh",
+   "qty": 6,
+   "unit": "sprig",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.spice.bayleaf",
+   "qty": 2,
+   "unit": "each",
+   "grams": 0.4,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.vinegar.balsamic",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.2,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.baguette",
+   "qty": 12,
+   "unit": "slice",
+   "grams": 300,
+   "optional": false
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "CONTAINS",
+   "o": "ing.cheese.gruyere",
+   "qty": 6,
+   "unit": "oz",
+   "grams": 170.1,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "HAS_TAG",
+   "o": "tag.one-pot"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "HAS_TAG",
+   "o": "tag.spicy"
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.noodle.wheat",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 340.2,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.egg",
+   "qty": 4,
+   "unit": "each",
+   "grams": 200,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.bokchoy",
+   "qty": 3,
+   "unit": "each",
+   "grams": 300,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.chilicrisp",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 45,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 32,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.vinegar.rice",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.oil.sesame",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.maple",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 6.7,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 2,
+   "unit": "clove",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.scallion",
+   "qty": 4,
+   "unit": "each",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.peanuts",
+   "qty": 0.33,
+   "unit": "cup",
+   "grams": 48.2,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "CONTAINS",
+   "o": "ing.sesame.seeds",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.shrimp",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "HAS_TAG",
+   "o": "tag.showstopper"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "HAS_TAG",
+   "o": "tag.one-pot"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "HAS_TAG",
+   "o": "tag.date-night"
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.mushroom.porcini.dried",
+   "qty": 0.5,
+   "unit": "oz",
+   "grams": 14.2,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.broth.veg",
+   "qty": 3,
+   "unit": "cup",
+   "grams": 720,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 27,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.mushroom.cremini",
+   "qty": 8,
+   "unit": "cup",
+   "grams": 576,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.mushroom.portobello",
+   "qty": 2,
+   "unit": "each",
+   "grams": 168,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 28,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.onion.yellow",
+   "qty": 1,
+   "unit": "each",
+   "grams": 110,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.carrot",
+   "qty": 3,
+   "unit": "each",
+   "grams": 183,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 4,
+   "unit": "clove",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.tomatopaste",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 32,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.flour.ap",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 24,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.wine.red",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 352.5,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.thyme.fresh",
+   "qty": 6,
+   "unit": "sprig",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.spice.bayleaf",
+   "qty": 2,
+   "unit": "each",
+   "grams": 0.4,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.8,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 1.7,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.potato.yukon",
+   "qty": 2,
+   "unit": "lb",
+   "grams": 908,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.milk.1pct",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 122,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "CONTAINS",
+   "o": "ing.parsley.flat",
+   "qty": 0.25,
+   "unit": "cup",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-bourguignon",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.beef.sirloin",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "HAS_TAG",
+   "o": "tag.hands-off"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "HAS_TAG",
+   "o": "tag.summer"
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.tomato.cherry",
+   "qty": 2,
+   "unit": "pint",
+   "grams": 550,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.cheese.feta",
+   "qty": 8,
+   "unit": "oz",
+   "grams": 224,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 4,
+   "unit": "tbsp",
+   "grams": 54,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 5,
+   "unit": "clove",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.spice.pepperflakes",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 0.9,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.spice.oregano",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 1,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.4,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.2,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.pasta.regular",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.spinach.baby",
+   "qty": 4,
+   "unit": "cup",
+   "grams": 120,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.basil",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tbsp_juice",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.baked-feta-pasta",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.shrimp",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "HAS_TAG",
+   "o": "tag.leftovers"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.rice.jasmine",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 277.5,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.oil.canola",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 28,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.oil.sesame",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.kimchi",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 225,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.gochujang",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 18,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.maple",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 6.7,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 2,
+   "unit": "clove",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.spinach.baby",
+   "qty": 4,
+   "unit": "cup",
+   "grams": 120,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.egg",
+   "qty": 4,
+   "unit": "each",
+   "grams": 200,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.scallion",
+   "qty": 4,
+   "unit": "each",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.sesame.seeds",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "CONTAINS",
+   "o": "ing.cucumber",
+   "qty": 1,
+   "unit": "each",
+   "grams": 301,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.pork.tenderloin",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "HAS_TAG",
+   "o": "tag.showstopper"
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.chile.guajillo",
+   "qty": 6,
+   "unit": "each",
+   "grams": 48,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.broth.veg",
+   "qty": 5,
+   "unit": "cup",
+   "grams": 1200,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.tomato.roma",
+   "qty": 3,
+   "unit": "each",
+   "grams": 186,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.onion.yellow",
+   "qty": 1,
+   "unit": "each",
+   "grams": 110,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 6,
+   "unit": "clove",
+   "grams": 18,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.chipotle.adobo",
+   "qty": 2,
+   "unit": "each",
+   "grams": 36,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.spice.cumin",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 4.2,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.spice.oregano",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.spice.cinnamon",
+   "qty": 0.25,
+   "unit": "tsp",
+   "grams": 0.7,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.vinegar.redwine",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.oil.canola",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 28,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.mushroom.portobello",
+   "qty": 4,
+   "unit": "each",
+   "grams": 336,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.jackfruit.canned",
+   "qty": 1,
+   "unit": "can",
+   "grams": 400,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1.25,
+   "unit": "tsp",
+   "grams": 3.5,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.tortilla.corn",
+   "qty": 12,
+   "unit": "each",
+   "grams": 312,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.cheese.mozzarella",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 168,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.onion.red",
+   "qty": 0.5,
+   "unit": "each",
+   "grams": 55,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.cilantro",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "CONTAINS",
+   "o": "ing.lime",
+   "qty": 2,
+   "unit": "each",
+   "grams": 134,
+   "optional": false
+  },
+  {
+   "s": "rec.mushroom-birria-tacos",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.chicken.thigh",
+   "qty": 1,
+   "unit": "lb",
+   "grams": 454
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.paneer",
+   "qty": 1,
+   "unit": "package",
+   "grams": 340,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 28,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.oil.canola",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 14,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.onion.yellow",
+   "qty": 1,
+   "unit": "each",
+   "grams": 110,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 5,
+   "unit": "clove",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.ginger",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.spice.garam",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 4,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.spice.cumin",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.1,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.spice.turmeric",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.5,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.spice.smokedpaprika",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.3,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.spice.pepperflakes",
+   "qty": 0.25,
+   "unit": "tsp",
+   "grams": 0.5,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.tomatopaste",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 32,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.tomato.canned.crushed",
+   "qty": 1,
+   "unit": "can",
+   "grams": 794,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.broth.veg",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 180,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.cream.heavy",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 45,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.8,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.peas.frozen",
+   "qty": 1,
+   "unit": "cup",
+   "grams": 134,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.cilantro",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 8,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.rice.brown",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 285,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tbsp_juice",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.paneer-tikka-masala",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.chicken.thigh",
+   "qty": 1,
+   "unit": "lb",
+   "grams": 454
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "SUITS_DIET",
+   "o": "diet.vegan"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.tofu.firm",
+   "qty": 2,
+   "unit": "block",
+   "grams": 792,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.cornstarch",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 24,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.oil.canola",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.gochujang",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 54,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 32,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.maple",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 40,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.vinegar.rice",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.oil.sesame",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 3,
+   "unit": "clove",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.ginger",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 4,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.cucumber",
+   "qty": 2,
+   "unit": "each",
+   "grams": 602,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.scallion",
+   "qty": 4,
+   "unit": "each",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.sesame.seeds",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.rice.jasmine",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 277.5,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.4,
+   "optional": false
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.chicken.thigh",
+   "qty": 1,
+   "unit": "lb",
+   "grams": 454
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.chickpeas.canned",
+   "qty": 2,
+   "unit": "can",
+   "grams": 850,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 27,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.harissa",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 32,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.spice.cumin",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.1,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.spice.smokedpaprika",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.3,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 4,
+   "unit": "clove",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.yogurt.greek.2",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 340.5,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 2,
+   "unit": "tbsp_juice",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tsp_zest",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 2.1,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.spinach.baby",
+   "qty": 5,
+   "unit": "cup",
+   "grams": 150,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.mint",
+   "qty": 0.25,
+   "unit": "cup",
+   "grams": 8,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.pita.wholewheat",
+   "qty": 4,
+   "unit": "each",
+   "grams": 256,
+   "optional": false
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "CONTAINS",
+   "o": "ing.pistachios",
+   "qty": 0.25,
+   "unit": "cup",
+   "grams": 30.8,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "HAS_TAG",
+   "o": "tag.pantry"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "HAS_TAG",
+   "o": "tag.date-night"
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.pasta.regular",
+   "qty": 12,
+   "unit": "oz",
+   "grams": 336,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 4.6,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.cheese.pecorino",
+   "qty": 1.25,
+   "unit": "cup",
+   "grams": 125,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.cheese.parmesan",
+   "qty": 0.25,
+   "unit": "cup",
+   "grams": 25,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.peas.frozen",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 201,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 2.8,
+   "optional": false
+  },
+  {
+   "s": "rec.cacio-e-pepe-peas",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tsp_zest",
+   "grams": 2,
+   "optional": true
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "HAS_TAG",
+   "o": "tag.hands-off"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "HAS_TAG",
+   "o": "tag.winter"
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.cabbage.green",
+   "qty": 1,
+   "unit": "head",
+   "grams": 908,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.oil.canola",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 2.1,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 4,
+   "unit": "tbsp",
+   "grams": 56,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.miso.white",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 34,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.maple",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 20,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.vinegar.rice",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 2,
+   "unit": "clove",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.scallion",
+   "qty": 3,
+   "unit": "each",
+   "grams": 45,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.sesame.seeds",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 9,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.rice.brown",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 285,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.edamame.frozen",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 232.5,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "CONTAINS",
+   "o": "ing.oil.sesame",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 4.5,
+   "optional": false
+  },
+  {
+   "s": "rec.charred-cabbage-miso-butter",
+   "p": "OMNIVORE_ADD",
+   "o": "ing.salmon",
+   "qty": 4,
+   "unit": "fillet",
+   "grams": 680
+  },
+  {
    "s": "rec.overnight-oats",
    "p": "SUITS_DIET",
    "o": "diet.vegetarian"
@@ -30084,6 +34840,396 @@
    "qty": 10,
    "unit": "oz",
    "grams": 280
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.mushroom.cremini",
+   "qty": 5,
+   "unit": "cup",
+   "grams": 360,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 13.5,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 28,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.miso.white",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 17,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 2,
+   "unit": "clove",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.thyme.fresh",
+   "qty": 4,
+   "unit": "sprig",
+   "grams": 4,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.soysauce.lowsodium",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 5.3,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tbsp_juice",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.2,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.bread.wholegrain",
+   "qty": 4,
+   "unit": "slice",
+   "grams": 172,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.parsley.flat",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 8,
+   "optional": false
+  },
+  {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "CONTAINS",
+   "o": "ing.cheese.parmesan",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 12,
+   "optional": true
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.potato.yukon",
+   "qty": 2.5,
+   "unit": "lb",
+   "grams": 1135,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 1.5,
+   "unit": "tsp",
+   "grams": 4.2,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 4,
+   "unit": "tbsp",
+   "grams": 54,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 1.7,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.rosemary",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.mayo.olive",
+   "qty": 5,
+   "unit": "tbsp",
+   "grams": 70,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.yogurt.greek.2",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 45,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 2,
+   "unit": "clove",
+   "grams": 6,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tbsp_juice",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.mustard.dijon",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 5,
+   "optional": false
+  },
+  {
+   "s": "rec.crispy-smashed-potatoes",
+   "p": "CONTAINS",
+   "o": "ing.chives",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 6,
+   "optional": true
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "HAS_TAG",
+   "o": "tag.showstopper"
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.egg",
+   "qty": 4,
+   "unit": "each",
+   "grams": 200,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.milk.1pct",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 183,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.flour.ap",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 93.8,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.sugar.granulated",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 12.5,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.vanilla",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 4.2,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.25,
+   "unit": "tsp",
+   "grams": 0.7,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tsp_zest",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 42,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 2,
+   "unit": "tbsp_juice",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.powdered.sugar",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.blueberries",
+   "qty": 1,
+   "unit": "cup",
+   "grams": 148,
+   "optional": false
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "CONTAINS",
+   "o": "ing.yogurt.greek.2",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 113.5,
+   "optional": true
   },
   {
    "s": "rec.harvest-stuffed-squash",
@@ -33854,6 +39000,544 @@
    "optional": true
   },
   {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "HAS_TAG",
+   "o": "tag.no-cook"
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.cheese.feta",
+   "qty": 8,
+   "unit": "oz",
+   "grams": 224,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.yogurt.greek.2",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 113.5,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 40.5,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 2,
+   "unit": "tbsp_juice",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 1,
+   "unit": "tsp_zest",
+   "grams": 2,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 1,
+   "unit": "clove",
+   "grams": 3,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.spice.blackpepper",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.2,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.honey",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 63,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.spice.pepperflakes",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 0.9,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.pistachios",
+   "qty": 0.33,
+   "unit": "cup",
+   "grams": 40.6,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.mint",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 4,
+   "optional": false
+  },
+  {
+   "s": "rec.whipped-feta-hot-honey",
+   "p": "CONTAINS",
+   "o": "ing.pita.wholewheat",
+   "qty": 6,
+   "unit": "each",
+   "grams": 384,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "HAS_TAG",
+   "o": "tag.quick"
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "HAS_TAG",
+   "o": "tag.budget"
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.baguette",
+   "qty": 1,
+   "unit": "each",
+   "grams": 250,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 5,
+   "unit": "tbsp",
+   "grams": 70,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.oil.olive",
+   "qty": 1,
+   "unit": "tbsp",
+   "grams": 13.5,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.garlic",
+   "qty": 5,
+   "unit": "clove",
+   "grams": 15,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.parsley.flat",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 12,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.cheese.parmesan",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 75,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.spice.pepperflakes",
+   "qty": 0.25,
+   "unit": "tsp",
+   "grams": 0.5,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.25,
+   "unit": "tsp",
+   "grams": 0.7,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-garlic-bread",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 0.5,
+   "unit": "tsp_zest",
+   "grams": 1,
+   "optional": true
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "HAS_TAG",
+   "o": "tag.baking"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "HAS_TAG",
+   "o": "tag.make-ahead"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "HAS_TAG",
+   "o": "tag.crowd"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "HAS_TAG",
+   "o": "tag.freezer"
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 113.5,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.tahini",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 120,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.sugar.brown",
+   "qty": 0.75,
+   "unit": "cup",
+   "grams": 165,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.sugar.granulated",
+   "qty": 0.25,
+   "unit": "cup",
+   "grams": 50,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.egg",
+   "qty": 1,
+   "unit": "each",
+   "grams": 50,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.vanilla",
+   "qty": 2,
+   "unit": "tsp",
+   "grams": 8.4,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.flour.ap",
+   "qty": 1.25,
+   "unit": "cup",
+   "grams": 156.3,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.flour.wholewheat",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.bakingsoda",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 3.5,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.75,
+   "unit": "tsp",
+   "grams": 2.1,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.chocolate.dark70",
+   "qty": 6,
+   "unit": "oz",
+   "grams": 168,
+   "optional": false
+  },
+  {
+   "s": "rec.tahini-chocolate-chip-cookies",
+   "p": "CONTAINS",
+   "o": "ing.sesame.seeds",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 18,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "SUITS_DIET",
+   "o": "diet.vegetarian"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "HAS_TAG",
+   "o": "tag.crave"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "HAS_TAG",
+   "o": "tag.one-pan"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "HAS_TAG",
+   "o": "tag.seasonal"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "HAS_TAG",
+   "o": "tag.crowd-pleaser"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "HAS_TAG",
+   "o": "tag.summer"
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.peach",
+   "qty": 6,
+   "unit": "each",
+   "grams": 900,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.blueberries",
+   "qty": 1.5,
+   "unit": "cup",
+   "grams": 222,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.sugar.brown",
+   "qty": 0.33,
+   "unit": "cup",
+   "grams": 72.6,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.cornstarch",
+   "qty": 2,
+   "unit": "tbsp",
+   "grams": 16,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.lemon",
+   "qty": 2,
+   "unit": "tbsp_juice",
+   "grams": 30,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.spice.cinnamon",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.3,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.vanilla",
+   "qty": 1,
+   "unit": "tsp",
+   "grams": 4.2,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.oats.rolled",
+   "qty": 1,
+   "unit": "cup",
+   "grams": 81,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.flour.wholewheat",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.almonds",
+   "qty": 0.5,
+   "unit": "cup",
+   "grams": 71.5,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.butter.unsalted",
+   "qty": 6,
+   "unit": "tbsp",
+   "grams": 84,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.salt.kosher",
+   "qty": 0.5,
+   "unit": "tsp",
+   "grams": 1.4,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.maple",
+   "qty": 3,
+   "unit": "tbsp",
+   "grams": 60,
+   "optional": false
+  },
+  {
+   "s": "rec.skillet-peach-crumble",
+   "p": "CONTAINS",
+   "o": "ing.yogurt.greek.2",
+   "qty": 1,
+   "unit": "cup",
+   "grams": 227,
+   "optional": true
+  },
+  {
    "s": "rec.lentil-bolognese",
    "p": "SHARES_SHOPPING",
    "o": "rec.white-bean-kale-soup",
@@ -33873,6 +39557,20 @@
    "o": "rec.peanut-noodles",
    "shared": 6,
    "overlap": 0.3
+  },
+  {
+   "s": "rec.crispy-tofu-broccoli",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.gochujang-tofu",
+   "shared": 9,
+   "overlap": 0.6
+  },
+  {
+   "s": "rec.crispy-tofu-broccoli",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.charred-cabbage-miso-butter",
+   "shared": 6,
+   "overlap": 0.38
   },
   {
    "s": "rec.crispy-tofu-broccoli",
@@ -33945,6 +39643,20 @@
    "overlap": 0.42
   },
   {
+   "s": "rec.red-lentil-dal",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.paneer-tikka-masala",
+   "shared": 8,
+   "overlap": 0.35
+  },
+  {
+   "s": "rec.mushroom-farro-risotto",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.miso-butter-mushroom-toast",
+   "shared": 4,
+   "overlap": 0.33
+  },
+  {
    "s": "rec.mushroom-farro-risotto",
    "p": "SHARES_SHOPPING",
    "o": "rec.herb-stuffing",
@@ -33985,6 +39697,27 @@
    "o": "rec.peanut-noodles",
    "shared": 9,
    "overlap": 0.45
+  },
+  {
+   "s": "rec.garden-stirfry",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.chile-crisp-noodles",
+   "shared": 6,
+   "overlap": 0.32
+  },
+  {
+   "s": "rec.garden-stirfry",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.crispy-rice-kimchi-bowl",
+   "shared": 6,
+   "overlap": 0.3
+  },
+  {
+   "s": "rec.garden-stirfry",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.gochujang-tofu",
+   "shared": 10,
+   "overlap": 0.59
   },
   {
    "s": "rec.garden-stirfry",
@@ -34148,6 +39881,62 @@
    "overlap": 0.36
   },
   {
+   "s": "rec.lentil-shepherds-pie",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.mushroom-bourguignon",
+   "shared": 9,
+   "overlap": 0.45
+  },
+  {
+   "s": "rec.french-onion-soup",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.mushroom-bourguignon",
+   "shared": 6,
+   "overlap": 0.3
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.crispy-rice-kimchi-bowl",
+   "shared": 6,
+   "overlap": 0.35
+  },
+  {
+   "s": "rec.chile-crisp-noodles",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.gochujang-tofu",
+   "shared": 6,
+   "overlap": 0.33
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.gochujang-tofu",
+   "shared": 9,
+   "overlap": 0.56
+  },
+  {
+   "s": "rec.crispy-rice-kimchi-bowl",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.egg-fried-rice",
+   "shared": 5,
+   "overlap": 0.31
+  },
+  {
+   "s": "rec.gochujang-tofu",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.charred-cabbage-miso-butter",
+   "shared": 6,
+   "overlap": 0.33
+  },
+  {
+   "s": "rec.harissa-chickpeas-yogurt",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.whipped-feta-hot-honey",
+   "shared": 4,
+   "overlap": 0.31
+  },
+  {
    "s": "rec.overnight-oats",
    "p": "SHARES_SHOPPING",
    "o": "rec.baked-oatmeal",
@@ -34160,6 +39949,13 @@
    "o": "rec.chia-pudding",
    "shared": 4,
    "overlap": 0.36
+  },
+  {
+   "s": "rec.overnight-oats",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.skillet-peach-crumble",
+   "shared": 5,
+   "overlap": 0.33
   },
   {
    "s": "rec.baked-oatmeal",
@@ -34211,6 +40007,41 @@
    "overlap": 0.42
   },
   {
+   "s": "rec.miso-butter-mushroom-toast",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.herb-stuffing",
+   "shared": 4,
+   "overlap": 0.36
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.oatmeal-cookies",
+   "shared": 5,
+   "overlap": 0.36
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.olive-oil-brownies",
+   "shared": 4,
+   "overlap": 0.36
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.baked-french-toast",
+   "shared": 4,
+   "overlap": 0.31
+  },
+  {
+   "s": "rec.dutch-baby",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.tahini-chocolate-chip-cookies",
+   "shared": 5,
+   "overlap": 0.36
+  },
+  {
    "s": "rec.harvest-stuffed-squash",
    "p": "SHARES_SHOPPING",
    "o": "rec.herb-stuffing",
@@ -34239,9 +40070,30 @@
    "overlap": 0.31
   },
   {
+   "s": "rec.olive-oil-banana-bread",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.tahini-chocolate-chip-cookies",
+   "shared": 6,
+   "overlap": 0.4
+  },
+  {
    "s": "rec.oatmeal-cookies",
    "p": "SHARES_SHOPPING",
    "o": "rec.olive-oil-brownies",
+   "shared": 5,
+   "overlap": 0.38
+  },
+  {
+   "s": "rec.oatmeal-cookies",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.tahini-chocolate-chip-cookies",
+   "shared": 7,
+   "overlap": 0.47
+  },
+  {
+   "s": "rec.olive-oil-brownies",
+   "p": "SHARES_SHOPPING",
+   "o": "rec.tahini-chocolate-chip-cookies",
    "shared": 5,
    "overlap": 0.38
   }
@@ -34270,6 +40122,11 @@
     "rec.slow-roasted-salmon",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.baked-feta-pasta",
+    "rec.harissa-chickpeas-yogurt",
     "rec.soft-scramble-greens",
     "rec.avocado-white-bean-toast",
     "rec.greek-jar-salad",
@@ -34282,6 +40139,8 @@
     "rec.garlicky-greens",
     "rec.crispy-chickpeas",
     "rec.everyday-big-salad",
+    "rec.miso-butter-mushroom-toast",
+    "rec.crispy-smashed-potatoes",
     "rec.harvest-stuffed-squash",
     "rec.green-beans-almondine",
     "rec.herb-stuffing",
@@ -34300,7 +40159,9 @@
     "rec.olive-oil-brownies",
     "rec.15-min-chickpea-skillet",
     "rec.loaded-sweet-potato",
-    "rec.spring-pea-tart"
+    "rec.spring-pea-tart",
+    "rec.whipped-feta-hot-honey",
+    "rec.skillet-garlic-bread"
    ],
    "ing.onion.yellow": [
     "rec.lentil-bolognese",
@@ -34314,6 +40175,10 @@
     "rec.enchilada-skillet",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
     "rec.tomato-lentil-soup",
     "rec.harvest-stuffed-squash",
     "rec.herb-stuffing",
@@ -34329,6 +40194,7 @@
     "rec.zaatar-sheetpan-chickpeas",
     "rec.peanut-noodles",
     "rec.lentil-shepherds-pie",
+    "rec.mushroom-bourguignon",
     "rec.tomato-lentil-soup",
     "rec.any-vegetable-roast",
     "rec.everyday-big-salad",
@@ -34372,6 +40238,17 @@
     "rec.slow-roasted-salmon",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.french-onion-soup",
+    "rec.chile-crisp-noodles",
+    "rec.mushroom-bourguignon",
+    "rec.baked-feta-pasta",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
+    "rec.gochujang-tofu",
+    "rec.harissa-chickpeas-yogurt",
+    "rec.charred-cabbage-miso-butter",
     "rec.soft-scramble-greens",
     "rec.avocado-white-bean-toast",
     "rec.tomato-lentil-soup",
@@ -34380,6 +40257,8 @@
     "rec.house-vinaigrette",
     "rec.tahini-sauce",
     "rec.garlicky-greens",
+    "rec.miso-butter-mushroom-toast",
+    "rec.crispy-smashed-potatoes",
     "rec.harvest-stuffed-squash",
     "rec.green-beans-almondine",
     "rec.herb-stuffing",
@@ -34389,7 +40268,9 @@
     "rec.grilled-vegetable-platter",
     "rec.baked-ziti-white-beans",
     "rec.15-min-chickpea-skillet",
-    "rec.egg-fried-rice"
+    "rec.egg-fried-rice",
+    "rec.whipped-feta-hot-honey",
+    "rec.skillet-garlic-bread"
    ],
    "ing.tomatopaste": [
     "rec.lentil-bolognese",
@@ -34400,6 +40281,8 @@
     "rec.three-bean-chili",
     "rec.creamy-tomato-rigatoni",
     "rec.lentil-shepherds-pie",
+    "rec.mushroom-bourguignon",
+    "rec.paneer-tikka-masala",
     "rec.tomato-lentil-soup",
     "rec.baked-ziti-white-beans",
     "rec.15-min-chickpea-skillet"
@@ -34415,6 +40298,7 @@
     "rec.three-bean-chili",
     "rec.creamy-tomato-rigatoni",
     "rec.enchilada-skillet",
+    "rec.paneer-tikka-masala",
     "rec.tomato-lentil-soup",
     "rec.baked-ziti-white-beans"
    ],
@@ -34429,6 +40313,10 @@
     "rec.miso-noodle-bowl",
     "rec.three-bean-chili",
     "rec.lentil-shepherds-pie",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
     "rec.tomato-lentil-soup",
     "rec.harvest-stuffed-squash",
     "rec.herb-stuffing",
@@ -34438,6 +40326,8 @@
     "rec.lentil-bolognese",
     "rec.greek-quinoa-bowls",
     "rec.three-bean-chili",
+    "rec.baked-feta-pasta",
+    "rec.mushroom-birria-tacos",
     "rec.greek-jar-salad",
     "rec.baked-ziti-white-beans",
     "rec.mediterranean-orzo-salad"
@@ -34455,20 +40345,27 @@
     "rec.friday-garden-pizza",
     "rec.summer-corn-zucchini-polenta",
     "rec.creamy-tomato-rigatoni",
+    "rec.baked-feta-pasta",
+    "rec.paneer-tikka-masala",
     "rec.avocado-white-bean-toast",
     "rec.garlicky-greens",
     "rec.hoppin-john",
     "rec.grilled-vegetable-platter",
     "rec.baked-ziti-white-beans",
-    "rec.15-min-chickpea-skillet"
+    "rec.15-min-chickpea-skillet",
+    "rec.whipped-feta-hot-honey",
+    "rec.skillet-garlic-bread"
    ],
    "ing.spice.bayleaf": [
     "rec.lentil-bolognese",
     "rec.white-bean-kale-soup",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
     "rec.hoppin-john"
    ],
    "ing.vinegar.balsamic": [
-    "rec.lentil-bolognese"
+    "rec.lentil-bolognese",
+    "rec.french-onion-soup"
    ],
    "ing.salt.kosher": [
     "rec.lentil-bolognese",
@@ -34487,6 +40384,16 @@
     "rec.slow-roasted-salmon",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.baked-feta-pasta",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
+    "rec.gochujang-tofu",
+    "rec.harissa-chickpeas-yogurt",
+    "rec.cacio-e-pepe-peas",
+    "rec.charred-cabbage-miso-butter",
     "rec.soft-scramble-greens",
     "rec.smashed-chickpea-sandwich",
     "rec.tomato-lentil-soup",
@@ -34498,6 +40405,8 @@
     "rec.garlicky-greens",
     "rec.crispy-chickpeas",
     "rec.energy-bites",
+    "rec.crispy-smashed-potatoes",
+    "rec.dutch-baby",
     "rec.harvest-stuffed-squash",
     "rec.green-beans-almondine",
     "rec.herb-stuffing",
@@ -34517,7 +40426,10 @@
     "rec.olive-oil-brownies",
     "rec.baked-french-toast",
     "rec.15-min-chickpea-skillet",
-    "rec.spring-pea-tart"
+    "rec.spring-pea-tart",
+    "rec.skillet-garlic-bread",
+    "rec.tahini-chocolate-chip-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.spice.blackpepper": [
     "rec.lentil-bolognese",
@@ -34526,12 +40438,19 @@
     "rec.slow-roasted-salmon",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.baked-feta-pasta",
+    "rec.cacio-e-pepe-peas",
     "rec.soft-scramble-greens",
     "rec.smashed-chickpea-sandwich",
     "rec.build-a-bowl",
     "rec.house-vinaigrette",
     "rec.any-vegetable-roast",
     "rec.everyday-big-salad",
+    "rec.miso-butter-mushroom-toast",
+    "rec.crispy-smashed-potatoes",
     "rec.harvest-stuffed-squash",
     "rec.green-beans-almondine",
     "rec.herb-stuffing",
@@ -34543,7 +40462,8 @@
     "rec.mediterranean-orzo-salad",
     "rec.egg-fried-rice",
     "rec.white-bean-tuna-melt",
-    "rec.spring-pea-tart"
+    "rec.spring-pea-tart",
+    "rec.whipped-feta-hot-honey"
    ],
    "ing.pasta.wholewheat": [
     "rec.lentil-bolognese",
@@ -34554,17 +40474,25 @@
    "ing.tofu.firm": [
     "rec.crispy-tofu-broccoli",
     "rec.garden-stirfry",
-    "rec.miso-noodle-bowl"
+    "rec.miso-noodle-bowl",
+    "rec.gochujang-tofu"
    ],
    "ing.cornstarch": [
     "rec.crispy-tofu-broccoli",
-    "rec.garden-stirfry"
+    "rec.garden-stirfry",
+    "rec.gochujang-tofu",
+    "rec.skillet-peach-crumble"
    ],
    "ing.oil.canola": [
     "rec.crispy-tofu-broccoli",
     "rec.red-lentil-dal",
     "rec.garden-stirfry",
     "rec.butternut-chickpea-curry",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
     "rec.buffalo-cauliflower",
     "rec.oatmeal-cookies",
     "rec.egg-fried-rice"
@@ -34580,6 +40508,12 @@
     "rec.miso-noodle-bowl",
     "rec.peanut-noodles",
     "rec.lentil-shepherds-pie",
+    "rec.french-onion-soup",
+    "rec.chile-crisp-noodles",
+    "rec.mushroom-bourguignon",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
+    "rec.miso-butter-mushroom-toast",
     "rec.mushroom-wellington",
     "rec.egg-fried-rice"
    ],
@@ -34587,6 +40521,10 @@
     "rec.crispy-tofu-broccoli",
     "rec.garden-stirfry",
     "rec.peanut-noodles",
+    "rec.chile-crisp-noodles",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
     "rec.overnight-oats",
     "rec.baked-oatmeal",
     "rec.chia-pudding",
@@ -34594,12 +40532,16 @@
     "rec.cranberry-sauce",
     "rec.whipped-sweet-potatoes",
     "rec.picnic-slaw",
-    "rec.baked-french-toast"
+    "rec.baked-french-toast",
+    "rec.skillet-peach-crumble"
    ],
    "ing.vinegar.rice": [
     "rec.crispy-tofu-broccoli",
     "rec.garden-stirfry",
     "rec.peanut-noodles",
+    "rec.chile-crisp-noodles",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
     "rec.picnic-slaw"
    ],
    "ing.ginger": [
@@ -34609,6 +40551,8 @@
     "rec.butternut-chickpea-curry",
     "rec.miso-noodle-bowl",
     "rec.peanut-noodles",
+    "rec.paneer-tikka-masala",
+    "rec.gochujang-tofu",
     "rec.egg-fried-rice"
    ],
    "ing.oil.sesame": [
@@ -34616,6 +40560,10 @@
     "rec.garden-stirfry",
     "rec.miso-noodle-bowl",
     "rec.peanut-noodles",
+    "rec.chile-crisp-noodles",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
     "rec.egg-fried-rice"
    ],
    "ing.scallion": [
@@ -34623,6 +40571,10 @@
     "rec.garden-stirfry",
     "rec.miso-noodle-bowl",
     "rec.peanut-noodles",
+    "rec.chile-crisp-noodles",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
     "rec.soft-scramble-greens",
     "rec.black-bean-quesadillas",
     "rec.hoppin-john",
@@ -34635,6 +40587,8 @@
    ],
    "ing.rice.brown": [
     "rec.crispy-tofu-broccoli",
+    "rec.paneer-tikka-masala",
+    "rec.charred-cabbage-miso-butter",
     "rec.hoppin-john",
     "rec.egg-fried-rice"
    ],
@@ -34657,6 +40611,9 @@
     "rec.three-bean-chili",
     "rec.zaatar-sheetpan-chickpeas",
     "rec.enchilada-skillet",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
+    "rec.harissa-chickpeas-yogurt",
     "rec.tomato-lentil-soup",
     "rec.black-bean-quesadillas",
     "rec.whipped-hummus",
@@ -34674,6 +40631,8 @@
     "rec.stuffed-peppers",
     "rec.three-bean-chili",
     "rec.enchilada-skillet",
+    "rec.paneer-tikka-masala",
+    "rec.harissa-chickpeas-yogurt",
     "rec.tomato-lentil-soup",
     "rec.black-bean-quesadillas",
     "rec.crispy-chickpeas",
@@ -34692,6 +40651,7 @@
     "rec.butternut-chickpea-curry",
     "rec.greek-quinoa-bowls",
     "rec.zaatar-sheetpan-chickpeas",
+    "rec.harissa-chickpeas-yogurt",
     "rec.smashed-chickpea-sandwich",
     "rec.greek-jar-salad",
     "rec.build-a-bowl",
@@ -34704,8 +40664,11 @@
    "ing.egg": [
     "rec.chickpea-shakshuka",
     "rec.garden-frittata",
+    "rec.chile-crisp-noodles",
+    "rec.crispy-rice-kimchi-bowl",
     "rec.soft-scramble-greens",
     "rec.baked-oatmeal",
+    "rec.dutch-baby",
     "rec.herb-stuffing",
     "rec.mushroom-wellington",
     "rec.black-bean-burgers",
@@ -34715,7 +40678,8 @@
     "rec.olive-oil-brownies",
     "rec.baked-french-toast",
     "rec.egg-fried-rice",
-    "rec.spring-pea-tart"
+    "rec.spring-pea-tart",
+    "rec.tahini-chocolate-chip-cookies"
    ],
    "ing.parsley.flat": [
     "rec.chickpea-shakshuka",
@@ -34723,14 +40687,19 @@
     "rec.pasta-e-ceci",
     "rec.cauliflower-steaks-romesco",
     "rec.zaatar-sheetpan-chickpeas",
+    "rec.mushroom-bourguignon",
     "rec.build-a-bowl",
+    "rec.miso-butter-mushroom-toast",
     "rec.harvest-stuffed-squash",
     "rec.herb-stuffing",
     "rec.grilled-vegetable-platter",
-    "rec.mediterranean-orzo-salad"
+    "rec.mediterranean-orzo-salad",
+    "rec.skillet-garlic-bread"
    ],
    "ing.pita.wholewheat": [
-    "rec.chickpea-shakshuka"
+    "rec.chickpea-shakshuka",
+    "rec.harissa-chickpeas-yogurt",
+    "rec.whipped-feta-hot-honey"
    ],
    "ing.sweetpotato": [
     "rec.black-bean-sweet-potato-tacos",
@@ -34757,6 +40726,7 @@
    ],
    "ing.cabbage.green": [
     "rec.black-bean-sweet-potato-tacos",
+    "rec.charred-cabbage-miso-butter",
     "rec.picnic-slaw"
    ],
    "ing.lime": [
@@ -34767,6 +40737,7 @@
     "rec.three-bean-chili",
     "rec.enchilada-skillet",
     "rec.peanut-noodles",
+    "rec.mushroom-birria-tacos",
     "rec.grilled-corn-chili-lime",
     "rec.watermelon-feta-salad",
     "rec.seven-layer-dip",
@@ -34794,6 +40765,8 @@
     "rec.stuffed-peppers",
     "rec.enchilada-skillet",
     "rec.peanut-noodles",
+    "rec.mushroom-birria-tacos",
+    "rec.paneer-tikka-masala",
     "rec.picnic-slaw",
     "rec.grilled-corn-chili-lime",
     "rec.seven-layer-dip",
@@ -34809,10 +40782,12 @@
    ],
    "ing.tortilla.corn": [
     "rec.black-bean-sweet-potato-tacos",
-    "rec.enchilada-skillet"
+    "rec.enchilada-skillet",
+    "rec.mushroom-birria-tacos"
    ],
    "ing.spice.turmeric": [
-    "rec.red-lentil-dal"
+    "rec.red-lentil-dal",
+    "rec.paneer-tikka-masala"
    ],
    "ing.spice.coriander": [
     "rec.red-lentil-dal"
@@ -34835,6 +40810,10 @@
     "rec.butternut-chickpea-curry",
     "rec.creamy-tomato-rigatoni",
     "rec.garden-frittata",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.baked-feta-pasta",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.harissa-chickpeas-yogurt",
     "rec.green-smoothie",
     "rec.soft-scramble-greens",
     "rec.black-bean-quesadillas",
@@ -34843,16 +40822,21 @@
     "rec.15-min-chickpea-skillet"
    ],
    "ing.spice.garam": [
-    "rec.red-lentil-dal"
+    "rec.red-lentil-dal",
+    "rec.paneer-tikka-masala"
    ],
    "ing.rice.jasmine": [
     "rec.red-lentil-dal",
     "rec.garden-stirfry",
-    "rec.butternut-chickpea-curry"
+    "rec.butternut-chickpea-curry",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu"
    ],
    "ing.mushroom.cremini": [
     "rec.mushroom-farro-risotto",
     "rec.lentil-shepherds-pie",
+    "rec.mushroom-bourguignon",
+    "rec.miso-butter-mushroom-toast",
     "rec.harvest-stuffed-squash",
     "rec.mushroom-wellington",
     "rec.black-bean-burgers"
@@ -34864,6 +40848,9 @@
    "ing.thyme.fresh": [
     "rec.mushroom-farro-risotto",
     "rec.lentil-shepherds-pie",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.miso-butter-mushroom-toast",
     "rec.harvest-stuffed-squash",
     "rec.herb-stuffing",
     "rec.mushroom-wellington"
@@ -34875,6 +40862,7 @@
    "ing.wine.white": [
     "rec.mushroom-farro-risotto",
     "rec.lentil-shepherds-pie",
+    "rec.french-onion-soup",
     "rec.mushroom-wellington"
    ],
    "ing.cheese.parmesan": [
@@ -34885,17 +40873,31 @@
     "rec.friday-garden-pizza",
     "rec.summer-corn-zucchini-polenta",
     "rec.creamy-tomato-rigatoni",
+    "rec.cacio-e-pepe-peas",
     "rec.soft-scramble-greens",
-    "rec.baked-ziti-white-beans"
+    "rec.baked-ziti-white-beans",
+    "rec.skillet-garlic-bread"
    ],
    "ing.butter.unsalted": [
     "rec.mushroom-farro-risotto",
     "rec.summer-corn-zucchini-polenta",
     "rec.lentil-shepherds-pie",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.paneer-tikka-masala",
+    "rec.harissa-chickpeas-yogurt",
+    "rec.cacio-e-pepe-peas",
+    "rec.charred-cabbage-miso-butter",
+    "rec.miso-butter-mushroom-toast",
+    "rec.dutch-baby",
     "rec.herb-stuffing",
     "rec.whipped-sweet-potatoes",
     "rec.buffalo-cauliflower",
-    "rec.oatmeal-cookies"
+    "rec.oatmeal-cookies",
+    "rec.skillet-garlic-bread",
+    "rec.tahini-chocolate-chip-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.lemon": [
     "rec.mushroom-farro-risotto",
@@ -34906,6 +40908,10 @@
     "rec.summer-corn-zucchini-polenta",
     "rec.zaatar-sheetpan-chickpeas",
     "rec.slow-roasted-salmon",
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.baked-feta-pasta",
+    "rec.paneer-tikka-masala",
+    "rec.harissa-chickpeas-yogurt",
     "rec.avocado-white-bean-toast",
     "rec.smashed-chickpea-sandwich",
     "rec.greek-jar-salad",
@@ -34917,21 +40923,28 @@
     "rec.any-vegetable-roast",
     "rec.garlicky-greens",
     "rec.everyday-big-salad",
+    "rec.miso-butter-mushroom-toast",
+    "rec.crispy-smashed-potatoes",
+    "rec.dutch-baby",
     "rec.green-beans-almondine",
     "rec.grilled-vegetable-platter",
     "rec.mediterranean-orzo-salad",
     "rec.15-min-chickpea-skillet",
     "rec.white-bean-tuna-melt",
-    "rec.spring-pea-tart"
+    "rec.spring-pea-tart",
+    "rec.whipped-feta-hot-honey",
+    "rec.skillet-peach-crumble"
    ],
    "ing.rosemary": [
     "rec.white-bean-kale-soup",
-    "rec.pasta-e-ceci"
+    "rec.pasta-e-ceci",
+    "rec.crispy-smashed-potatoes"
    ],
    "ing.beans.cannellini": [
     "rec.white-bean-kale-soup",
     "rec.three-bean-chili",
     "rec.creamy-tomato-rigatoni",
+    "rec.crispy-gnocchi-brown-butter",
     "rec.avocado-white-bean-toast",
     "rec.baked-ziti-white-beans",
     "rec.white-bean-tuna-melt"
@@ -34947,6 +40960,7 @@
     "rec.soft-scramble-greens",
     "rec.avocado-white-bean-toast",
     "rec.smashed-chickpea-sandwich",
+    "rec.miso-butter-mushroom-toast",
     "rec.herb-stuffing",
     "rec.baked-french-toast",
     "rec.15-min-chickpea-skillet",
@@ -34965,10 +40979,12 @@
     "rec.cauliflower-steaks-romesco",
     "rec.chia-pudding",
     "rec.energy-bites",
-    "rec.green-beans-almondine"
+    "rec.green-beans-almondine",
+    "rec.skillet-peach-crumble"
    ],
    "ing.vinegar.redwine": [
     "rec.cauliflower-steaks-romesco",
+    "rec.mushroom-birria-tacos",
     "rec.greek-jar-salad",
     "rec.house-vinaigrette",
     "rec.citrus-fennel-salad",
@@ -34987,7 +41003,8 @@
    ],
    "ing.bokchoy": [
     "rec.garden-stirfry",
-    "rec.miso-noodle-bowl"
+    "rec.miso-noodle-bowl",
+    "rec.chile-crisp-noodles"
    ],
    "ing.eggplant": [
     "rec.skillet-eggplant-parm",
@@ -35000,6 +41017,7 @@
    "ing.cheese.mozzarella": [
     "rec.skillet-eggplant-parm",
     "rec.friday-garden-pizza",
+    "rec.mushroom-birria-tacos",
     "rec.baked-ziti-white-beans"
    ],
    "ing.panko": [
@@ -35013,6 +41031,7 @@
     "rec.summer-corn-zucchini-polenta",
     "rec.creamy-tomato-rigatoni",
     "rec.garden-frittata",
+    "rec.baked-feta-pasta",
     "rec.baked-ziti-white-beans"
    ],
    "ing.currypaste.red": [
@@ -35035,6 +41054,8 @@
    ],
    "ing.cucumber": [
     "rec.greek-quinoa-bowls",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
     "rec.greek-jar-salad",
     "rec.everyday-big-salad",
     "rec.mediterranean-orzo-salad"
@@ -35044,6 +41065,7 @@
     "rec.friday-garden-pizza",
     "rec.summer-corn-zucchini-polenta",
     "rec.garden-frittata",
+    "rec.baked-feta-pasta",
     "rec.greek-jar-salad",
     "rec.everyday-big-salad",
     "rec.seven-layer-dip",
@@ -35052,6 +41074,7 @@
    "ing.onion.red": [
     "rec.greek-quinoa-bowls",
     "rec.zaatar-sheetpan-chickpeas",
+    "rec.mushroom-birria-tacos",
     "rec.smashed-chickpea-sandwich",
     "rec.greek-jar-salad",
     "rec.build-a-bowl",
@@ -35071,11 +41094,13 @@
    ],
    "ing.cheese.feta": [
     "rec.greek-quinoa-bowls",
+    "rec.baked-feta-pasta",
     "rec.greek-jar-salad",
     "rec.grilled-corn-chili-lime",
     "rec.watermelon-feta-salad",
     "rec.buffalo-cauliflower",
-    "rec.mediterranean-orzo-salad"
+    "rec.mediterranean-orzo-salad",
+    "rec.whipped-feta-hot-honey"
    ],
    "ing.dill": [
     "rec.greek-quinoa-bowls",
@@ -35113,6 +41138,8 @@
     "rec.summer-corn-zucchini-polenta",
     "rec.garden-frittata",
     "rec.lentil-shepherds-pie",
+    "rec.mushroom-bourguignon",
+    "rec.dutch-baby",
     "rec.whipped-sweet-potatoes",
     "rec.buffalo-cauliflower",
     "rec.baked-french-toast"
@@ -35150,11 +41177,14 @@
     "rec.mushroom-wellington"
    ],
    "ing.miso.white": [
-    "rec.miso-noodle-bowl"
+    "rec.miso-noodle-bowl",
+    "rec.charred-cabbage-miso-butter",
+    "rec.miso-butter-mushroom-toast"
    ],
    "ing.edamame.frozen": [
     "rec.miso-noodle-bowl",
-    "rec.peanut-noodles"
+    "rec.peanut-noodles",
+    "rec.charred-cabbage-miso-butter"
    ],
    "ing.noodle.rice": [
     "rec.miso-noodle-bowl",
@@ -35176,7 +41206,8 @@
     "rec.zaatar-sheetpan-chickpeas",
     "rec.build-a-bowl",
     "rec.whipped-hummus",
-    "rec.tahini-sauce"
+    "rec.tahini-sauce",
+    "rec.tahini-chocolate-chip-cookies"
    ],
    "ing.peanutbutter": [
     "rec.peanut-noodles"
@@ -35191,7 +41222,9 @@
    ],
    "ing.potato.yukon": [
     "rec.slow-roasted-salmon",
-    "rec.lentil-shepherds-pie"
+    "rec.lentil-shepherds-pie",
+    "rec.mushroom-bourguignon",
+    "rec.crispy-smashed-potatoes"
    ],
    "ing.mustard.dijon": [
     "rec.slow-roasted-salmon",
@@ -35199,6 +41232,7 @@
     "rec.greek-jar-salad",
     "rec.house-vinaigrette",
     "rec.everyday-big-salad",
+    "rec.crispy-smashed-potatoes",
     "rec.picnic-slaw",
     "rec.mediterranean-orzo-salad",
     "rec.white-bean-tuna-melt"
@@ -35210,14 +41244,149 @@
    ],
    "ing.peas.frozen": [
     "rec.lentil-shepherds-pie",
+    "rec.paneer-tikka-masala",
+    "rec.cacio-e-pepe-peas",
     "rec.egg-fried-rice",
     "rec.spring-pea-tart"
+   ],
+   "ing.gnocchi": [
+    "rec.crispy-gnocchi-brown-butter"
+   ],
+   "ing.sage.fresh": [
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.harvest-stuffed-squash",
+    "rec.herb-stuffing",
+    "rec.whipped-sweet-potatoes"
+   ],
+   "ing.walnuts": [
+    "rec.crispy-gnocchi-brown-butter",
+    "rec.overnight-oats",
+    "rec.baked-oatmeal",
+    "rec.mushroom-wellington"
+   ],
+   "ing.sugar.granulated": [
+    "rec.french-onion-soup",
+    "rec.dutch-baby",
+    "rec.cranberry-sauce",
+    "rec.oatmeal-cookies",
+    "rec.olive-oil-brownies",
+    "rec.tahini-chocolate-chip-cookies"
+   ],
+   "ing.flour.ap": [
+    "rec.french-onion-soup",
+    "rec.mushroom-bourguignon",
+    "rec.dutch-baby",
+    "rec.buffalo-cauliflower",
+    "rec.olive-oil-banana-bread",
+    "rec.oatmeal-cookies",
+    "rec.olive-oil-brownies",
+    "rec.tahini-chocolate-chip-cookies"
+   ],
+   "ing.baguette": [
+    "rec.french-onion-soup",
+    "rec.skillet-garlic-bread"
+   ],
+   "ing.cheese.gruyere": [
+    "rec.french-onion-soup"
+   ],
+   "ing.noodle.wheat": [
+    "rec.chile-crisp-noodles"
+   ],
+   "ing.chilicrisp": [
+    "rec.chile-crisp-noodles"
+   ],
+   "ing.peanuts": [
+    "rec.chile-crisp-noodles"
+   ],
+   "ing.sesame.seeds": [
+    "rec.chile-crisp-noodles",
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu",
+    "rec.charred-cabbage-miso-butter",
+    "rec.tahini-chocolate-chip-cookies"
+   ],
+   "ing.mushroom.porcini.dried": [
+    "rec.mushroom-bourguignon"
+   ],
+   "ing.mushroom.portobello": [
+    "rec.mushroom-bourguignon",
+    "rec.mushroom-birria-tacos"
+   ],
+   "ing.wine.red": [
+    "rec.mushroom-bourguignon"
+   ],
+   "ing.pasta.regular": [
+    "rec.baked-feta-pasta",
+    "rec.cacio-e-pepe-peas"
+   ],
+   "ing.kimchi": [
+    "rec.crispy-rice-kimchi-bowl"
+   ],
+   "ing.gochujang": [
+    "rec.crispy-rice-kimchi-bowl",
+    "rec.gochujang-tofu"
+   ],
+   "ing.chile.guajillo": [
+    "rec.mushroom-birria-tacos"
+   ],
+   "ing.tomato.roma": [
+    "rec.mushroom-birria-tacos",
+    "rec.smashed-chickpea-sandwich",
+    "rec.black-bean-burgers",
+    "rec.white-bean-tuna-melt"
+   ],
+   "ing.chipotle.adobo": [
+    "rec.mushroom-birria-tacos",
+    "rec.black-bean-burgers",
+    "rec.seven-layer-dip"
+   ],
+   "ing.spice.cinnamon": [
+    "rec.mushroom-birria-tacos",
+    "rec.overnight-oats",
+    "rec.green-smoothie",
+    "rec.baked-oatmeal",
+    "rec.olive-oil-banana-bread",
+    "rec.oatmeal-cookies",
+    "rec.baked-french-toast",
+    "rec.skillet-peach-crumble"
+   ],
+   "ing.jackfruit.canned": [
+    "rec.mushroom-birria-tacos"
+   ],
+   "ing.paneer": [
+    "rec.paneer-tikka-masala"
+   ],
+   "ing.cream.heavy": [
+    "rec.paneer-tikka-masala"
+   ],
+   "ing.harissa": [
+    "rec.harissa-chickpeas-yogurt"
+   ],
+   "ing.yogurt.greek.2": [
+    "rec.harissa-chickpeas-yogurt",
+    "rec.crispy-smashed-potatoes",
+    "rec.whipped-feta-hot-honey"
+   ],
+   "ing.mint": [
+    "rec.harissa-chickpeas-yogurt",
+    "rec.citrus-fennel-salad",
+    "rec.watermelon-feta-salad",
+    "rec.spring-pea-tart",
+    "rec.whipped-feta-hot-honey"
+   ],
+   "ing.pistachios": [
+    "rec.harissa-chickpeas-yogurt",
+    "rec.whipped-feta-hot-honey"
+   ],
+   "ing.cheese.pecorino": [
+    "rec.cacio-e-pepe-peas"
    ],
    "ing.oats.rolled": [
     "rec.overnight-oats",
     "rec.baked-oatmeal",
     "rec.energy-bites",
-    "rec.oatmeal-cookies"
+    "rec.oatmeal-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.chia": [
     "rec.overnight-oats",
@@ -35230,33 +41399,25 @@
     "rec.baked-oatmeal",
     "rec.chia-pudding"
    ],
-   "ing.spice.cinnamon": [
-    "rec.overnight-oats",
-    "rec.green-smoothie",
-    "rec.baked-oatmeal",
-    "rec.olive-oil-banana-bread",
-    "rec.oatmeal-cookies",
-    "rec.baked-french-toast"
-   ],
    "ing.vanilla": [
     "rec.overnight-oats",
     "rec.baked-oatmeal",
     "rec.chia-pudding",
     "rec.energy-bites",
+    "rec.dutch-baby",
     "rec.olive-oil-banana-bread",
     "rec.oatmeal-cookies",
     "rec.olive-oil-brownies",
-    "rec.baked-french-toast"
+    "rec.baked-french-toast",
+    "rec.tahini-chocolate-chip-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.blueberries": [
     "rec.overnight-oats",
     "rec.baked-oatmeal",
-    "rec.baked-french-toast"
-   ],
-   "ing.walnuts": [
-    "rec.overnight-oats",
-    "rec.baked-oatmeal",
-    "rec.mushroom-wellington"
+    "rec.dutch-baby",
+    "rec.baked-french-toast",
+    "rec.skillet-peach-crumble"
    ],
    "ing.banana": [
     "rec.green-smoothie",
@@ -35283,11 +41444,6 @@
    "ing.strawberries": [
     "rec.chia-pudding"
    ],
-   "ing.tomato.roma": [
-    "rec.smashed-chickpea-sandwich",
-    "rec.black-bean-burgers",
-    "rec.white-bean-tuna-melt"
-   ],
    "ing.tortilla.wholewheat": [
     "rec.black-bean-quesadillas"
    ],
@@ -35305,6 +41461,12 @@
     "rec.everyday-big-salad",
     "rec.harvest-stuffed-squash"
    ],
+   "ing.mayo.olive": [
+    "rec.crispy-smashed-potatoes"
+   ],
+   "ing.powdered.sugar": [
+    "rec.dutch-baby"
+   ],
    "ing.squash.acorn": [
     "rec.harvest-stuffed-squash"
    ],
@@ -35313,11 +41475,6 @@
    ],
    "ing.apple": [
     "rec.harvest-stuffed-squash"
-   ],
-   "ing.sage.fresh": [
-    "rec.harvest-stuffed-squash",
-    "rec.herb-stuffing",
-    "rec.whipped-sweet-potatoes"
    ],
    "ing.pecans": [
     "rec.harvest-stuffed-squash",
@@ -35332,11 +41489,6 @@
    "ing.cranberries.fresh": [
     "rec.cranberry-sauce"
    ],
-   "ing.sugar.granulated": [
-    "rec.cranberry-sauce",
-    "rec.oatmeal-cookies",
-    "rec.olive-oil-brownies"
-   ],
    "ing.orange": [
     "rec.cranberry-sauce",
     "rec.citrus-fennel-salad"
@@ -35347,11 +41499,6 @@
    "ing.fennel": [
     "rec.citrus-fennel-salad"
    ],
-   "ing.mint": [
-    "rec.citrus-fennel-salad",
-    "rec.watermelon-feta-salad",
-    "rec.spring-pea-tart"
-   ],
    "ing.pepper.bell.green": [
     "rec.hoppin-john"
    ],
@@ -35360,10 +41507,6 @@
    ],
    "ing.beans.blackeyed": [
     "rec.hoppin-john"
-   ],
-   "ing.chipotle.adobo": [
-    "rec.black-bean-burgers",
-    "rec.seven-layer-dip"
    ],
    "ing.bun.wholewheat": [
     "rec.black-bean-burgers"
@@ -35374,12 +41517,6 @@
    "ing.ricotta.partskim": [
     "rec.baked-ziti-white-beans",
     "rec.spring-pea-tart"
-   ],
-   "ing.flour.ap": [
-    "rec.buffalo-cauliflower",
-    "rec.olive-oil-banana-bread",
-    "rec.oatmeal-cookies",
-    "rec.olive-oil-brownies"
    ],
    "ing.sriracha": [
     "rec.buffalo-cauliflower"
@@ -35393,14 +41530,19 @@
    "ing.sugar.brown": [
     "rec.olive-oil-banana-bread",
     "rec.oatmeal-cookies",
-    "rec.olive-oil-brownies"
+    "rec.olive-oil-brownies",
+    "rec.tahini-chocolate-chip-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.flour.wholewheat": [
-    "rec.olive-oil-banana-bread"
+    "rec.olive-oil-banana-bread",
+    "rec.tahini-chocolate-chip-cookies",
+    "rec.skillet-peach-crumble"
    ],
    "ing.bakingsoda": [
     "rec.olive-oil-banana-bread",
-    "rec.oatmeal-cookies"
+    "rec.oatmeal-cookies",
+    "rec.tahini-chocolate-chip-cookies"
    ],
    "ing.raisins": [
     "rec.oatmeal-cookies"
@@ -35410,6 +41552,15 @@
    ],
    "ing.capers": [
     "rec.white-bean-tuna-melt"
+   ],
+   "ing.honey": [
+    "rec.whipped-feta-hot-honey"
+   ],
+   "ing.chocolate.dark70": [
+    "rec.tahini-chocolate-chip-cookies"
+   ],
+   "ing.peach": [
+    "rec.skillet-peach-crumble"
    ]
   }
  }

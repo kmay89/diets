@@ -91,12 +91,19 @@ export function scoreRecipe(recipe, state, ctx = {}) {
   const parts = {};
 
   // Heart-forward weighting, stronger when heart mode is on.
+  //
+  // Treat night suspends it. Not inverts — a lower score never becomes a
+  // reason to pick something. It stops being a reason not to, and the recipes
+  // built to be craved get pulled to the front instead. The grade and its
+  // caveats still show on every card either way; nothing here hides a number.
   const heart = heartFor(recipe);
-  if (heart.score != null) {
+  const treat = !!prefs.treatNight;
+  if (heart.score != null && !treat) {
     parts.heart = ((heart.score - 60) / 40) * (prefs.heartMode ? 22 : 8);
   } else {
     parts.heart = 0;
   }
+  parts.crave = treat && recipe.tags?.includes('crave') ? 26 : 0;
 
   // Loved ingredients.
   let loved = 0;

@@ -61,10 +61,17 @@ dropped into iMessage, Messages, Slack or WhatsApp expands into a card with that
 timing and numbers, not a bare URL. Tapping it opens a readable page that needs no app and no
 JavaScript; if you already use the app, it deep-links you straight to that recipe instead.
 
-**📅 Built for the whole year.** 70 recipes across the days that actually shape cooking:
+**📅 Built for the whole year.** 89 recipes across the days that actually shape cooking:
 Thanksgiving and the winter holidays, New Year, cookouts and Labor Day, potlucks, game days, bake
 sales, picnics, brunch, feeding a family with a new baby — and fifteen-minute dinners for the nights
 when none of that applies.
+
+**🍯 And a list that is just about being delicious.** Nineteen of those recipes are tagged *crave* —
+brown butter and crisped gnocchi, forty-five minutes of caramelised onions under melted Gruyère,
+cacio e pepe, birria tacos with a cup of consommé to dunk them in. They are filed under **Lick the
+plate** in Recipes, and **Treat night** on the roll screen stops the heart score from steering the
+dice for an evening. It never hides the score: a dish that grades an F still shows an F, and says in
+plain numbers which ingredient put it there and what to change if you want it lower.
 
 **📚 Every claim is sourced.** The health, cost and climate statements in this app live in a data
 file with their citations attached, rendered with numbered markers you can open. Each source shows
@@ -109,10 +116,10 @@ js/
   ui.js                 ~200 lines of DOM helpers
   views/                one module per screen
 data/
-  ingredients.json      208 ingredients: nutrition, units, aisle, subs, garden info
-  recipes.dinners.json  25 weeknight dinners
-  recipes.daily.json    19 breakfasts, lunches, sides, sauces and snacks
-  recipes.occasions.json 26 holiday, cookout, potluck, bake-sale and 15-minute recipes
+  ingredients.json      227 ingredients: nutrition, units, aisle, subs, garden info
+  recipes.dinners.json  37 weeknight dinners
+  recipes.daily.json    22 breakfasts, lunches, sides, sauces and snacks
+  recipes.occasions.json 30 holiday, cookout, potluck, bake-sale and 15-minute recipes
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat
   claims.json           every factual statement, attached to those sources
