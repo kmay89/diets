@@ -21,6 +21,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { RECIPE_FILES } from './recipe-files.mjs';
 import { recipeNutrition, heartScore, formatQty } from '../js/nutrition.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -29,11 +30,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const site = read('site.config.json');
 const ingredients = read('data/ingredients.json').items;
 const index = new Map(ingredients.map(i => [i.id, i]));
-const recipes = [
-  ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes,
-  ...read('data/recipes.occasions.json').recipes
-];
+const recipes = RECIPE_FILES.flatMap(f => read(f).recipes);
 
 export const slugFor = (recipeId) => recipeId.replace(/^rec\./, '');
 

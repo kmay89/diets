@@ -38,12 +38,25 @@ test('every app module is precached', () => {
   assert.deepEqual(missing, [], `not in sw.js PRECACHE: ${missing.join(', ')}`);
 });
 
-test('every data file is precached', () => {
+test('every data file is precached, listed or derived', () => {
+  // The recipe part files are not listed in PRECACHE. There are nine of them
+  // and the list would go stale the first time one was added, so the service
+  // worker reads data/recipes.index.json at install time and precaches what it
+  // names — the same trick it uses for the food icons. What is asserted here is
+  // that the derivation exists and that the index covers every part file.
+  assert.match(sw, /recipes\.index\.json/, 'sw.js does not derive the recipe part files');
+
+  const parts = new Set(
+    JSON.parse(readFileSync(join(root, 'data/recipes.index.json'), 'utf8')).parts.map(p => p.file)
+  );
   const missing = readdirSync(join(root, 'data'))
     .filter(f => f.endsWith('.json'))
     .map(f => `data/${f}`)
-    .filter(f => !precache.has(f));
-  assert.deepEqual(missing, [], `not in sw.js PRECACHE: ${missing.join(', ')}`);
+    .filter(f => !precache.has(f) && !parts.has(f));
+  assert.deepEqual(missing, [], `neither precached nor in the recipe index: ${missing.join(', ')}`);
+
+  const orphans = [...parts].filter(f => { try { readFileSync(join(root, f)); return false; } catch { return true; } });
+  assert.deepEqual(orphans, [], `recipes.index.json names files that do not exist: ${orphans.join(', ')}`);
 });
 
 test('nothing precached has since been deleted', () => {

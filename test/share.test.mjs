@@ -10,17 +10,14 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { RECIPE_FILES } from '../tools/recipe-files.mjs';
 import { recipeShareUrl } from '../js/shopping.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
 const site = read('site.config.json');
-const recipes = [
-  ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes,
-  ...read('data/recipes.occasions.json').recipes
-];
+const recipes = RECIPE_FILES.flatMap(f => read(f).recipes);
 const origin = site.url.replace(/\/$/, '');
 const slugOf = (id) => id.replace(/^rec\./, '');
 const pageFor = (id) => readFileSync(join(root, 'r', slugOf(id), 'index.html'), 'utf8');

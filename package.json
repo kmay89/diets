@@ -1,7 +1,7 @@
 {
   "name": "veg-nourish",
-  "version": "2.0.0",
-  "description": "A private, offline-first meal planner for tables where people eat differently. One dinner everybody can eat, with a fork in the road for meat. Heart-forward, sourced, and built for the whole year.",
+  "version": "3.0.0",
+  "description": "A private, offline-first meal planner for tables where people eat differently. 230 recipes across the cuisines of the world and the regions of the United States, one dinner everybody can eat, with a fork in the road for meat. Heart-forward, sourced, and built for the whole year.",
   "type": "module",
   "license": "MIT",
   "author": "ERRERLabs",
@@ -31,14 +31,17 @@
     "build:social": "node tools/make-social-card.mjs",
     "build:cards": "node tools/make-recipe-cards.mjs",
     "build:food-icons": "node tools/split-food-icons.mjs",
-    "build": "npm run build:graph && npm run build:share",
-    "build:all": "npm run build:graph && npm run build:share && npm run build:icons && npm run build:social && npm run build:cards",
+    "build": "npm run build:graph && npm run build:share && npm run build:art",
+    "build:all": "npm run build:graph && npm run build:share && npm run build:art && npm run build:icons && npm run build:icons.food && npm run build:social && npm run build:cards",
     "verify": "node tools/verify-data.mjs",
-    "test": "node --test \"test/*.test.mjs\" && node tools/verify-data.mjs"
+    "test": "node --test \"test/*.test.mjs\" && node tools/verify-data.mjs",
+    "build:icons.food": "node tools/make-food-icons.mjs",
+    "build:art": "node tools/art-manifest.mjs"
   },
   "engines": {
     "node": ">=18"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
 }

@@ -11,6 +11,7 @@ import { loadOccasions } from './occasions.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
 import { matchRoute } from './routes.js';
+import { initTheme, refreshThemeToggles } from './theme.js';
 import { getState, subscribe } from './store.js';
 
 import * as onboarding from './views/onboarding.js';
@@ -139,7 +140,7 @@ async function boot() {
     return;
   }
 
-  settingsView.applyTheme(getState().prefs.theme || 'system');
+  initTheme();
   buildChrome();
   initInstall();
   initFeedback();

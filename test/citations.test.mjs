@@ -10,6 +10,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { RECIPE_FILES } from '../tools/recipe-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -17,11 +18,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const citations = read('data/citations.json');
 const claims = read('data/claims.json');
 const occasions = read('data/occasions.json');
-const recipes = [
-  ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes,
-  ...read('data/recipes.occasions.json').recipes
-];
+const recipes = RECIPE_FILES.flatMap(f => read(f).recipes);
 
 const sources = new Map(citations.sources.map(s => [s.id, s]));
 

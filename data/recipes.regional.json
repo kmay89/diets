@@ -1,0 +1,3529 @@
+{
+  "schema": "errerlabs.diets.recipes/1",
+  "part": "regional",
+  "note": "American regional cooking, which is not one cuisine but a dozen. The South, Louisiana, Texas and New Mexico, New England, the Chesapeake, the Midwest, California, the Pacific Northwest, Hawaii and Appalachia — each with the technique and the history that makes the dish what it is.",
+  "recipes": [
+    {
+      "id": "rec.cheese-grits-mushrooms",
+      "title": "Cheese Grits with Smothered Mushrooms",
+      "blurb": "Stone-ground grits cooked the slow way, and mushrooms smothered in a peppery pan sauce. The vegetarian answer to shrimp and grits, and it is not a consolation prize.",
+      "cuisine": "southern",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 55,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "comfort",
+        "skillet",
+        "crave",
+        "kid-favorite",
+        "budget"
+      ],
+      "equipment": [
+        "heavy saucepan",
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.grits",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 4,
+          "unit": "oz",
+          "prep": "sharp, grated"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 5,
+          "unit": "cup",
+          "prep": "sliced thick"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Whisk the grits into the broth and milk in a heavy pan and bring to a bare simmer. Cook 40 minutes, whisking every five, adding hot water whenever they get stiff. Instant grits take five minutes and taste like paste; this is the whole reason to buy stone-ground.",
+        "Off the heat, beat in the cheddar, butter and salt.",
+        "Meanwhile, brown the mushrooms in the oil over high heat, undisturbed for the first 4 minutes, until deeply colored. Add the onion, cook 5 minutes, then the garlic, paprika and cayenne for 1.",
+        "Add 1/2 cup water and scrape everything off the bottom of the pan. Simmer 3 minutes until it becomes a loose, glossy sauce.",
+        "Finish the mushrooms with lemon juice and hot sauce. Spoon the grits into shallow bowls, make a well, and pile the mushrooms in with their sauce. Scallions on top."
+      ],
+      "omnivore": {
+        "label": "Shrimp, the original",
+        "note": "Season the shrimp with the same paprika and cayenne and sear them 90 seconds a side in the mushroom pan just before serving.",
+        "add": [
+          {
+            "ing": "ing.shrimp",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "peeled"
+          }
+        ]
+      },
+      "kidTweak": "Cheese grits with no cayenne is essentially polenta and most children eat it happily. Keep their mushrooms on the side.",
+      "restaurantTouch": "A well in the grits, mushrooms in the middle, and the pan sauce poured around rather than over.",
+      "leftovers": "Grits set solid in the fridge. Cut the block into slabs and fry them in butter — that is breakfast the next day and it is better than the first night.",
+      "allergenNote": "Contains dairy.",
+      "source": "ERRERLabs original, on the Lowcountry shrimp and grits tradition"
+    },
+    {
+      "id": "rec.hoppin-john-collards",
+      "title": "Hoppin' John with Collards",
+      "blurb": "Black-eyed peas and brown rice with the greens cooked right into the pot — peas for coins, greens for folding money. West African in origin and eaten across the Carolinas on New Year's Day.",
+      "cuisine": "southern",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "budget",
+        "make-ahead",
+        "heart-star",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "winter"
+      ],
+      "occasions": [
+        "new-year",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 3,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.beans.blackeyed",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.collards",
+          "qty": 6,
+          "unit": "cup",
+          "prep": "sliced into ribbons"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the onion, celery and bell pepper in the oil over medium for 8 minutes. That trio is the Southern trinity and it starts most of what follows in this file.",
+        "Add the garlic, paprika, thyme, bay and cayenne and cook 1 minute — the smoked paprika is standing in for the ham hock, and it does the job.",
+        "Add the rice, broth and salt. Bring to a boil, cover, and cook on the lowest heat 35 minutes for brown rice.",
+        "Stir in the black-eyed peas and the collard ribbons, cover, and leave off the heat 10 minutes. The greens wilt in the residual steam without going gray.",
+        "Fluff with a fork, add the vinegar, and taste for salt. Scallions and hot sauce at the table."
+      ],
+      "omnivore": {
+        "label": "Smoked ham or bacon",
+        "note": "Two slices of bacon rendered at the start, or a cup of diced ham added with the beans.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 2,
+            "unit": "slice",
+            "prep": "diced"
+          }
+        ]
+      },
+      "kidTweak": "Rice with beans in it. Chop the collards fine so they read as flecks rather than as greens.",
+      "restaurantTouch": "The vinegar at the end. Southern bean cookery almost always finishes with acid, and it is the step that gets left out of written recipes.",
+      "leftovers": "Keeps 5 days. Fry leftovers into a crisp cake in a hot skillet.",
+      "heartNote": "About 13 g fiber and 15 g protein a serving for well under a dollar. The collards bring calcium; the peas bring folate.",
+      "source": "ERRERLabs original, on a dish carried to the Carolinas from West Africa"
+    },
+    {
+      "id": "rec.skillet-cornbread",
+      "title": "Cast-Iron Skillet Cornbread",
+      "blurb": "Southern cornbread: no sugar, buttermilk, and batter poured into a screaming-hot greased skillet so the crust crackles. Twenty-five minutes.",
+      "cuisine": "southern",
+      "course": "side",
+      "servings": 8,
+      "activeMin": 10,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "quick",
+        "budget",
+        "potluck",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "10-inch cast-iron skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "thanksgiving",
+        "potluck",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cornmeal",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "stone-ground, medium grind"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bakingsoda",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.buttermilk",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 4,
+          "unit": "tbsp",
+          "prep": "melted"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Put the skillet in the oven with the tablespoon of oil in it and heat to 450°F. The pan has to be hot enough that the batter hisses when it lands.",
+        "Whisk the dry ingredients. In another bowl whisk the buttermilk, eggs and melted butter.",
+        "Combine with about ten strokes. Lumps are fine; a smooth batter means a tough cornbread.",
+        "Pour into the hot skillet — it should sizzle around the edge immediately — and bake 20-22 minutes until the top is golden and a tester comes out clean.",
+        "Turn it out of the pan after 5 minutes so the bottom crust stays crisp. Cut in wedges."
+      ],
+      "kidTweak": "For a Northern-style sweet cornbread, add 3 tablespoons of sugar. Southerners will object; children will not.",
+      "restaurantTouch": "Preheating the greased skillet is the entire technique. It fries the bottom crust while the middle bakes.",
+      "leftovers": "Best the day it is made. Day-old cornbread is what cornbread dressing and croutons are for.",
+      "allergenNote": "Contains wheat, dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.collards-braised",
+      "title": "Braised Collard Greens",
+      "blurb": "An hour on low, a splash of vinegar, and greens that taste like they had a ham hock in them. Save the pot liquor — it is the best part.",
+      "cuisine": "southern",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 70,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "one-pot",
+        "budget",
+        "make-ahead",
+        "heart-star",
+        "potluck"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "thanksgiving",
+        "new-year",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.collards",
+          "qty": 3,
+          "unit": "bunch",
+          "prep": "stemmed, sliced into ribbons"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.molasses",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the onion in the oil over medium for 8 minutes until soft. Add the garlic, paprika and pepper flakes for 1 minute.",
+        "Add the collards a few handfuls at a time, letting each batch wilt before the next goes in.",
+        "Pour in the broth, 2 tablespoons of the vinegar, the molasses and the salt. Cover and simmer very gently for 45-60 minutes. Collards are tough and they want the time — this is not a quick sauté vegetable.",
+        "Finish with the last tablespoon of vinegar off the heat. Serve with some of the pot liquor spooned over, and cornbread for dipping."
+      ],
+      "kidTweak": "Cut a smaller portion with a lot of the sweet pot liquor and some cornbread crumbled in. That is how most Southern children first meet collards.",
+      "restaurantTouch": "Molasses and vinegar together. Sweet and sour is what keeps a pot of long-cooked greens from being flat.",
+      "leftovers": "Improves for three days. Keeps 5.",
+      "garden": "Collards are the easiest winter crop in zone 6a. They survive hard frost and get sweeter for it — pick from October into January.",
+      "heartNote": "Collards deliver about 230 mg of calcium per cooked cup and, unlike spinach, in a form the body absorbs well.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.red-beans-rice",
+      "title": "Red Beans and Rice",
+      "blurb": "New Orleans on a Monday. Beans simmered until a third of them dissolve into their own creamy gravy — the texture is the entire dish, and it comes from patience.",
+      "cuisine": "creole",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 105,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "budget",
+        "make-ahead",
+        "crowd-pleaser",
+        "heart-star",
+        "stew"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "potluck",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.kidney",
+          "qty": 3,
+          "unit": "can",
+          "prep": "two drained, one with liquid"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 4,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 3,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 5,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the trinity — onion, celery, bell pepper — in the oil over medium for 12 minutes until completely soft and starting to gold. Louisiana cooks give this longer than seems necessary.",
+        "Add the garlic and all the dried spices, 1 minute.",
+        "Add the beans, broth, bay leaves and salt. Simmer uncovered 60-75 minutes, stirring every 15, until the liquid has reduced and gone creamy.",
+        "In the last 20 minutes, mash a third of the beans against the side of the pot with a wooden spoon. That, not flour, is what makes red beans creamy.",
+        "Cook the rice. Fish out the bay leaves, taste for salt, and serve the beans over rice with scallions and hot sauce."
+      ],
+      "omnivore": {
+        "label": "Andouille sausage",
+        "note": "The Monday tradition is smoked sausage. Brown sliced andouille first and let the fat start the trinity.",
+        "add": [
+          {
+            "ing": "ing.sausage.andouille.chicken",
+            "qty": 3,
+            "unit": "link",
+            "prep": "sliced"
+          }
+        ]
+      },
+      "kidTweak": "Halve the cayenne and put the hot sauce on the table. Beans over rice with a lot of gravy is a friendly plate.",
+      "restaurantTouch": "The mash. A third of the beans crushed into the pot is what separates New Orleans red beans from bean soup.",
+      "leftovers": "Famously better on day two — the reason it was a Monday dish is that it simmered while the laundry was done. Keeps 5 days, freezes 3 months.",
+      "source": "ERRERLabs original, on the New Orleans Monday tradition"
+    },
+    {
+      "id": "rec.gumbo-zherbes",
+      "title": "Gumbo z'Herbes",
+      "blurb": "The Lenten greens gumbo of New Orleans — a proper dark roux, seven greens, and okra. Tradition says an odd number of greens means a year of new friends.",
+      "cuisine": "cajun",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 40,
+      "totalMin": 90,
+      "difficulty": "hard",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "stew",
+        "one-pot",
+        "project",
+        "advanced",
+        "make-ahead",
+        "heart-star"
+      ],
+      "equipment": [
+        "dutch oven",
+        "wooden spoon"
+      ],
+      "season": [
+        "spring",
+        "fall"
+      ],
+      "occasions": [
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 8,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 4,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.collards",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.kale.lacinato",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.chard",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cabbage.green",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 6,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.okra",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 6,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Simmer all the greens and the cabbage in the broth for 20 minutes. Lift them out, chop them finer, and keep every drop of the liquid — that pot liquor is the base of the gumbo.",
+        "Now the roux, and it needs your whole attention. Whisk the flour into the oil in the dry pot over medium heat and stir constantly for 20-25 minutes. It goes blond, then peanut butter, then milk chocolate. Chocolate is where you want it. A roux that scorches is not fixable — start again.",
+        "Add the trinity straight into the hot roux. It will hiss violently and stop the roux cooking, which is exactly the point. Cook 8 minutes.",
+        "Add the garlic, thyme, cayenne and bay, then the reserved pot liquor, a ladle at a time, whisking smooth.",
+        "Add the greens and the okra and simmer 30 minutes, uncovered. The okra dissolves and thickens the pot alongside the roux.",
+        "Add the parsley, scallions and salt at the end. Serve over rice with hot sauce, and pass the vinegar."
+      ],
+      "omnivore": {
+        "label": "Sausage or smoked turkey",
+        "note": "Traditionally this is the meatless Lenten gumbo, but a browned andouille added with the greens is common the rest of the year.",
+        "add": [
+          {
+            "ing": "ing.sausage.andouille.chicken",
+            "qty": 3,
+            "unit": "link",
+            "prep": "sliced"
+          }
+        ]
+      },
+      "kidTweak": "Serve rice with a ladle of the broth and very few greens, and leave the cayenne out of the pot in favor of hot sauce at the table.",
+      "restaurantTouch": "Dark roux is a skill worth having, and the only way to learn it is to stand there for 25 minutes. Have the trinity chopped and ready before you start — it is the fire extinguisher.",
+      "leftovers": "Keeps 5 days and freezes 3 months. Like most gumbo it improves overnight.",
+      "heartNote": "Twenty cups of greens go into this pot. A bowl carries around 9 g fiber, 1,000 mg potassium and a substantial amount of vitamin K and folate.",
+      "allergenNote": "Contains wheat.",
+      "source": "ERRERLabs original, on the New Orleans Holy Thursday tradition"
+    },
+    {
+      "id": "rec.jambalaya",
+      "title": "Vegetable Jambalaya",
+      "blurb": "Creole style, with tomato: the rice cooks in the pot with everything else and takes on all of it. One pot, forty minutes, feeds eight.",
+      "cuisine": "creole",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "budget",
+        "crowd-pleaser",
+        "make-ahead"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "potluck",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 3,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "quartered"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomato.canned.diced",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.rice.jasmine",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.beans.kidney",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.okra",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Brown the mushrooms hard in the oil, 6 minutes, then add the trinity and cook 8 minutes more.",
+        "Add the garlic and all the dried spices, 1 minute, then the tomatoes. Cook 3 minutes until it thickens.",
+        "Stir in the rice and coat it. Add the broth and salt, bring to a boil, then cover and drop to the lowest heat for 20 minutes. Do not lift the lid — jambalaya rice is steamed, and every peek costs you.",
+        "Scatter the beans and okra over the top, replace the lid, and leave off the heat 10 minutes.",
+        "Fold everything together with a fork. Scallions and hot sauce at the table."
+      ],
+      "omnivore": {
+        "label": "Sausage and chicken",
+        "note": "Brown sliced andouille and chunks of thigh first, remove, and return them when the rice goes in.",
+        "add": [
+          {
+            "ing": "ing.sausage.andouille.chicken",
+            "qty": 3,
+            "unit": "link",
+            "prep": "sliced"
+          },
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "cubed"
+          }
+        ]
+      },
+      "kidTweak": "Cut the cayenne to a pinch. It is rice with vegetables in it and it disappears fast.",
+      "restaurantTouch": "The lid stays on. Creole jambalaya is a covered rice dish and the crust that forms on the bottom is a bonus, not a failure.",
+      "leftovers": "Keeps 4 days. Fry leftovers in a hot skillet with a splash of broth.",
+      "source": "ERRERLabs original, in the New Orleans Creole style"
+    },
+    {
+      "id": "rec.texas-chili",
+      "title": "Texas-Style Chili with Mushrooms and Beans",
+      "blurb": "Built on whole dried chiles rather than chili powder — that is the Texas part. The beans are not, and Texans will tell you so, but they make it dinner.",
+      "cuisine": "tex-mex",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 30,
+      "totalMin": 80,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "stew",
+        "one-pot",
+        "crowd-pleaser",
+        "make-ahead",
+        "freezer",
+        "crave"
+      ],
+      "equipment": [
+        "blender",
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "game-day",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.chile.ancho",
+          "qty": 4,
+          "unit": "each",
+          "prep": "stemmed and seeded"
+        },
+        {
+          "ing": "ing.chile.guajillo",
+          "qty": 3,
+          "unit": "each",
+          "prep": "stemmed and seeded"
+        },
+        {
+          "ing": "ing.chipotle.adobo",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 3,
+          "unit": "each",
+          "prep": "diced small"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.masa",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.beans.pinto",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.lentil.brown",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "grated",
+          "optional": true
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "diced",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Toast the dried chiles in a dry pot, 25 seconds a side, until they smell sweet. Cover with 2 cups boiling water and soak 20 minutes.",
+        "Blend the soaked chiles with the chipotles and 1 cup of the soaking liquid until completely smooth. This purée is the chili — chili powder is a shortcut to the same place and it never gets all the way there.",
+        "Brown the diced portobello hard in the oil, 8 minutes. Add the onions, 8 minutes, then garlic, cumin and oregano for 1.",
+        "Stir in the chile purée and fry it 5 minutes until it darkens.",
+        "Add the tomatoes, broth, lentils and salt. Simmer 35 minutes, then add the pinto beans and simmer 10 more.",
+        "Whisk the masa with 1/2 cup water and stir it in. Simmer 5 minutes — masa is the traditional Texas thickener and it adds a corn flavor cornstarch cannot.",
+        "Finish with the vinegar. Serve with cheese and raw onion for whoever wants them."
+      ],
+      "omnivore": {
+        "label": "Beef chuck, cubed not ground",
+        "note": "Texas chili uses cubed chuck. Brown 1.5 lb in the pot first, remove, and return it with the broth — then give the pot 2 hours instead of 45 minutes.",
+        "add": [
+          {
+            "ing": "ing.beef.chuck",
+            "qty": 1.5,
+            "unit": "lb",
+            "prep": "cut into 1/2-inch cubes"
+          }
+        ]
+      },
+      "kidTweak": "Anchos and guajillos are mild. Skip the chipotles for a chili with deep color, no heat, and a lot of cheese on top.",
+      "restaurantTouch": "The vinegar at the end wakes up an hour of long-simmered flavors. A tablespoon in a big pot changes everything and nobody can name it.",
+      "leftovers": "Better on day two and three. Keeps 5 days, freezes 3 months.",
+      "source": "ERRERLabs original, on the Texas chile-purée method"
+    },
+    {
+      "id": "rec.green-chile-stew",
+      "title": "New Mexico Green Chile Stew",
+      "blurb": "Roasted green chiles, potatoes and pinto beans in a clean, brothy stew. In New Mexico the answer to 'red or green?' is a serious question and this is the green.",
+      "cuisine": "new-mexican",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 25,
+      "totalMin": 55,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "stew",
+        "one-pot",
+        "budget",
+        "make-ahead"
+      ],
+      "equipment": [
+        "dutch oven",
+        "broiler"
+      ],
+      "season": [
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pepper.poblano",
+          "qty": 6,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.pepper.jalapeno",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 5,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 4,
+          "unit": "each",
+          "prep": "cut into 3/4-inch cubes"
+        },
+        {
+          "ing": "ing.beans.pinto",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.frozen.corn",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.tortilla.flour",
+          "qty": 6,
+          "unit": "each"
+        }
+      ],
+      "steps": [
+        "Broil the poblanos and jalapeños on a sheet pan, turning, until blackened all over, about 12 minutes. Seal them in a bowl under a plate for 10 minutes, then slip off the skins and chop. That steam is what makes the skins come away.",
+        "Cook the onions in the oil over medium for 8 minutes, add the garlic and the flour, and stir 2 minutes.",
+        "Add the broth, potatoes, cumin, oregano and salt. Simmer 20 minutes until the potatoes are tender and the broth has thickened slightly.",
+        "Add the chopped chiles, beans and corn and simmer 10 minutes more.",
+        "Finish with lime and cilantro. Serve with warm flour tortillas for dipping — in New Mexico the tortilla is the spoon."
+      ],
+      "omnivore": {
+        "label": "Pork, the classic",
+        "note": "Cubed pork shoulder browned first and simmered from the beginning, an extra 45 minutes.",
+        "add": [
+          {
+            "ing": "ing.pork.shoulder",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "cubed"
+          }
+        ]
+      },
+      "kidTweak": "Leave the jalapeños out and it is a mild potato-corn stew with a smoky edge.",
+      "restaurantTouch": "Roast your own chiles even though canned green chile exists. The char is most of the flavor.",
+      "leftovers": "Keeps 4 days, freezes 3 months. Roasted chiles freeze well on their own — do a big tray in September when poblanos are cheap.",
+      "garden": "Six poblano plants will keep a household in roasted green chile all winter. Roast, peel and freeze flat in bags.",
+      "source": "ERRERLabs original, in the New Mexico style"
+    },
+    {
+      "id": "rec.calabacitas",
+      "title": "Calabacitas",
+      "blurb": "Summer squash, corn and green chile cooked down with a little milk and cheese. Fifteen minutes, and it is what to do with the August zucchini glut.",
+      "cuisine": "southwestern",
+      "course": "side",
+      "servings": 5,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "quick",
+        "15-minute",
+        "budget",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "large skillet"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.zucchini",
+          "qty": 3,
+          "unit": "each",
+          "prep": "cut into half-moons"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.pepper.poblano",
+          "qty": 2,
+          "unit": "each",
+          "prep": "roasted, peeled and chopped"
+        },
+        {
+          "ing": "ing.corn.kernels",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.monterey",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.25,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Cook the onion in the oil over medium-high for 4 minutes. Add the garlic for 30 seconds.",
+        "Add the zucchini in one layer and leave it 3 minutes to brown before stirring. Wet, stirred zucchini turns to water.",
+        "Add the corn, chiles, oregano and salt and cook 4 minutes.",
+        "Pour in the milk and let it bubble down for 2 minutes. Off the heat, stir in the cheese so it melts into a light sauce rather than a rope.",
+        "Cilantro on top. Serve as a side, or over rice with a fried egg as dinner."
+      ],
+      "kidTweak": "Sweet corn and melted cheese carry it. Cut the zucchini small.",
+      "restaurantTouch": "Brown the squash before anything wet touches it.",
+      "leftovers": "Keeps 3 days. Excellent folded into quesadillas.",
+      "garden": "Three zucchini plants will overwhelm any household by August. This recipe and the grill are the two answers.",
+      "allergenNote": "Contains dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.corn-chowder",
+      "title": "New England Corn Chowder",
+      "blurb": "Corn cobs simmered into the milk for a broth that tastes twice as much like corn. Salt pork optional, potatoes not.",
+      "cuisine": "new-england",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 25,
+      "totalMin": 45,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "soup",
+        "one-pot",
+        "comfort",
+        "kid-favorite",
+        "budget"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.corn.kernels",
+          "qty": 6,
+          "unit": "ear",
+          "prep": "kernels cut off, cobs saved"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 2,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 3,
+          "unit": "each",
+          "prep": "cut into 1/2-inch cubes"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 4,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chives",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "snipped"
+        }
+      ],
+      "steps": [
+        "Simmer the stripped cobs in the broth and milk for 20 minutes while you prep everything else. Then pull them out and scrape them with the back of a knife into the pot. Everything good in a corn chowder is in the cobs.",
+        "In the pot, cook the onion and celery in the butter for 6 minutes. Stir in the flour and cook 2 minutes.",
+        "Add the corn milk a ladle at a time, whisking. Add the potatoes, thyme, bay, salt and pepper.",
+        "Simmer 15 minutes until the potatoes are tender. Add the kernels for the last 4 minutes only, so they stay sweet and snappy.",
+        "Crush a few potatoes against the side of the pot to thicken. Fish out the herbs. Serve with chives and plenty of black pepper."
+      ],
+      "omnivore": {
+        "label": "Clams or bacon",
+        "note": "A can of chopped clams with its juice in the last five minutes turns this into clam chowder. Rendered bacon at the start gives you the traditional New England start.",
+        "add": [
+          {
+            "ing": "ing.clams.canned",
+            "qty": 1,
+            "unit": "can"
+          }
+        ]
+      },
+      "kidTweak": "Sweet, creamy and full of potatoes. Hold the black pepper.",
+      "restaurantTouch": "Simmering the cobs takes twenty passive minutes and doubles the corn flavor. Nobody who skips it knows what they are missing.",
+      "leftovers": "Keeps 3 days. Reheat gently; a dairy soup that boils will break.",
+      "garden": "Six ears in August from a farm stand costs a few dollars and makes the best version of this by a wide margin.",
+      "allergenNote": "Contains dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.boston-baked-beans",
+      "title": "Boston Baked Beans",
+      "blurb": "Molasses, mustard and onion, and four hours in a low oven. It is why the city is called Beantown, and it is almost entirely unattended time.",
+      "cuisine": "new-england",
+      "course": "side",
+      "servings": 8,
+      "activeMin": 15,
+      "totalMin": 260,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "make-ahead",
+        "budget",
+        "potluck",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "bean pot or dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "cookout",
+        "potluck",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.cannellini",
+          "qty": 3,
+          "unit": "can",
+          "prep": "drained, or navy beans"
+        },
+        {
+          "ing": "ing.molasses",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mustard.yellow",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 300°F. Stir everything together in a heavy pot with a lid — the beans should be just covered with liquid.",
+        "Cover and bake 3 hours, checking every hour and adding hot water if they look dry.",
+        "Uncover and bake 1 hour more. The top darkens and the liquid reduces to a thick, glossy syrup. That last hour is where the color comes from.",
+        "Taste for salt and vinegar. They should be sweet, sour, smoky and dark all at once."
+      ],
+      "omnivore": {
+        "label": "Salt pork or bacon",
+        "note": "A quarter pound of salt pork buried in the middle of the pot is the traditional version.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 4,
+            "unit": "slice"
+          }
+        ]
+      },
+      "kidTweak": "Sweet baked beans are an easy sell. Serve with brown bread or cornbread.",
+      "restaurantTouch": "Molasses, not brown sugar alone. Blackstrap is bitter here; plain unsulphured molasses is what makes this taste like Boston.",
+      "leftovers": "Keeps a week and gets better. Freezes 3 months.",
+      "heartNote": "Sweet, but the sweetness is doing work across eight servings — about 10 g of fiber a portion and no saturated fat unless you add the pork.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.crab-cakes-maryland",
+      "title": "Maryland Crab Cakes",
+      "blurb": "Almost no filler, barely any binder, broiled not fried. In Baltimore the measure of a crab cake is how little is in it that is not crab — a pound of lump for four cakes, and nothing else pretending to be crab.",
+      "cuisine": "mid-atlantic",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 50,
+      "difficulty": "medium",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "quick",
+        "restaurant",
+        "special-occasion"
+      ],
+      "equipment": [
+        "sheet pan",
+        "broiler"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "birthday",
+        "brunch"
+      ],
+      "primaryDiet": "pescatarian",
+      "ingredients": [
+        {
+          "ing": "ing.crab.lump",
+          "qty": 2,
+          "unit": "container"
+        },
+        {
+          "ing": "ing.panko",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.oldbay",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "melted"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 1,
+          "unit": "head",
+          "prep": "for serving"
+        }
+      ],
+      "steps": [
+        "Whisk the mayonnaise, egg, mustard, Old Bay, parsley and a squeeze of lemon into a smooth binder.",
+        "Tip the crab into a wide bowl and pick through it gently for shell. Add the panko and the binder and fold — five or six strokes with a rubber spatula, no more. Every extra fold shreds the lumps you paid for.",
+        "Form four tall, loose mounds — a proper Maryland crab cake is four ounces and stands up on its own, not a flat patty. Chill 30 minutes so they hold together.",
+        "Brush with melted butter and broil 6 inches from the element for 8-10 minutes until browned on top and hot through. Broiling is the Maryland way; frying is a restaurant concession.",
+        "Serve with lemon wedges and a plain green salad. Tartar sauce is optional and, in Maryland, contentious."
+      ],
+      "vegetarianSwap": {
+        "label": "Artichoke cakes",
+        "note": "Chopped artichoke hearts, squeezed very dry, have almost exactly the right texture. Use the same binder, the same Old Bay, and the same broil.",
+        "add": [
+          {
+            "ing": "ing.artichoke.canned",
+            "qty": 1,
+            "unit": "can",
+            "prep": "drained and chopped"
+          }
+        ]
+      },
+      "kidTweak": "Serve on a soft roll with lettuce. Old Bay is savory rather than hot and children generally like it.",
+      "restaurantTouch": "Tall mounds, not flat discs. A flat crab cake dries out; a tall one steams itself from the inside.",
+      "leftovers": "Best the day they are made. Keeps 2 days.",
+      "heartNote": "Crab is very lean — about 18 g of protein per 100 g with under a gram of fat. Old Bay is the sodium here, so nothing else gets salted.",
+      "allergenNote": "Contains shellfish, egg and wheat.",
+      "source": "ERRERLabs original, in the Baltimore style"
+    },
+    {
+      "id": "rec.wild-rice-soup",
+      "title": "Minnesota Wild Rice and Mushroom Soup",
+      "blurb": "Nutty wild rice, a lot of mushrooms, and just enough dairy. The Northwoods answer to a cold night, finished with toasted almonds.",
+      "cuisine": "midwestern",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 20,
+      "totalMin": 65,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "soup",
+        "one-pot",
+        "comfort",
+        "make-ahead"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.wild",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 5,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 3,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 3,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 6,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 4,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "sliced and toasted"
+        }
+      ],
+      "steps": [
+        "Simmer the wild rice in 3 cups of water for 40 minutes until the grains split open and curl. Drain and reserve. True hand-harvested wild rice cooks faster than the cultivated kind — start checking at 25 minutes.",
+        "Brown the mushrooms in the butter over high heat, in two batches, 6 minutes each. Set aside.",
+        "Cook the onion, carrot and celery in the same pot for 10 minutes, then the garlic for 1.",
+        "Stir in the flour, cook 2 minutes, and add the broth gradually, whisking. Add the thyme and simmer 15 minutes.",
+        "Add the rice and mushrooms back, then the milk, salt and pepper. Warm through without boiling.",
+        "Serve with parsley and toasted almonds — the almonds are a Minnesota supper-club touch and they belong."
+      ],
+      "omnivore": {
+        "label": "Chicken and wild rice",
+        "note": "Shredded poached chicken breast stirred in at the end. That is the version every Minnesota church cookbook carries.",
+        "add": [
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 2,
+            "unit": "each",
+            "prep": "poached and shredded"
+          }
+        ]
+      },
+      "kidTweak": "Creamy soup with chewy rice. Blend a cup of it smooth and stir it back if a child objects to the texture.",
+      "restaurantTouch": "Toasted almonds on a creamy soup. Crunch on soft is the oldest trick there is and it never stops working.",
+      "leftovers": "Keeps 4 days; the rice drinks the broth, so thin it when reheating.",
+      "allergenNote": "Contains dairy, wheat and tree nut.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tater-tot-hotdish",
+      "title": "Tater Tot Hotdish",
+      "blurb": "The Upper Midwest's most sincere casserole, made without a can of condensed soup — a real mushroom gravy takes ten minutes and tastes like ten times more.",
+      "cuisine": "midwestern",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 25,
+      "totalMin": 65,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "comfort",
+        "kid-favorite",
+        "crowd-pleaser",
+        "potluck",
+        "make-ahead"
+      ],
+      "equipment": [
+        "skillet",
+        "9x13 baking dish"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "potluck",
+        "game-day",
+        "new-baby"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.lentil.brown",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "cooked"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.peas.frozen",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.corn.kernels",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tots.frozen",
+          "qty": 5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "grated"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 425°F. Brown the mushrooms and onion in the butter over high heat for 10 minutes until the pan is dry and everything is well colored.",
+        "Stir in the flour and cook 2 minutes. Add the broth and milk gradually, whisking, and simmer 4 minutes until it thickens into a gravy. This is what the can of soup was standing in for.",
+        "Stir in the mustard, thyme, lentils, peas, corn, salt and pepper. Spread in the baking dish.",
+        "Line the tots up on top in tidy rows — this matters to people from Minnesota — and bake 35 minutes.",
+        "Scatter the cheese over and bake 8 minutes more until the tots are crisp and the cheese has melted. Rest 5 minutes before serving."
+      ],
+      "omnivore": {
+        "label": "Ground beef",
+        "note": "A pound of 90% lean, browned and drained, in place of the lentils.",
+        "add": [
+          {
+            "ing": "ing.beef.ground90",
+            "qty": 1,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "This is the recipe children request. Serve it with something raw and green on the side to balance the plate.",
+      "restaurantTouch": "Do not cover the dish. The whole appeal is a crisp tot roof, and steam is its enemy.",
+      "leftovers": "Keeps 4 days. Reheat in the oven, not the microwave, or the tots go soft.",
+      "prepAhead": "Assemble the gravy layer up to two days ahead; add tots and bake from cold, adding 10 minutes.",
+      "allergenNote": "Contains dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.cincinnati-chili",
+      "title": "Cincinnati Chili, Three-Way",
+      "blurb": "Cinnamon, allspice, cocoa and a hint of clove, simmered thin and ladled over spaghetti with a haystack of cheddar. It is not Texas chili and it is not trying to be.",
+      "cuisine": "midwestern",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 75,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "pasta",
+        "comfort",
+        "kid-favorite",
+        "make-ahead"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "game-day",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.lentil.brown",
+          "qty": 1.25,
+          "unit": "cup",
+          "prep": "rinsed"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "finely chopped"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "one diced, one for topping"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.allspice",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cloves",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cocoa",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.pasta.regular",
+          "qty": 12,
+          "unit": "oz",
+          "prep": "spaghetti"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 6,
+          "unit": "oz",
+          "prep": "grated fine"
+        },
+        {
+          "ing": "ing.beans.kidney",
+          "qty": 1,
+          "unit": "can",
+          "prep": "warmed",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Cook the mushrooms and diced onion in the oil for 10 minutes until browned and dry. Add the garlic for 1 minute.",
+        "Add every spice, the cocoa and the bay leaves and stir for 45 seconds in the hot pan.",
+        "Add the lentils, tomatoes, broth and salt. Simmer, partly covered, 45 minutes. Cincinnati chili is deliberately thin — it is a sauce, not a stew.",
+        "Add the vinegar. Taste: it should be faintly sweet and warmly spiced, more like a Greek meat sauce than like chili. That is exactly what it descends from — Macedonian immigrants opened the first parlor in 1922.",
+        "Boil the spaghetti. Serve it in a shallow bowl with the chili ladled over, then a mountain of finely grated cheddar. That is a three-way. Add beans for a four-way, diced raw onion for a five-way.",
+        "Oyster crackers on the side, and hot sauce if you want it."
+      ],
+      "omnivore": {
+        "label": "Ground beef, simmered not browned",
+        "note": "The parlors simmer raw ground beef straight into the liquid, which gives the fine, almost powdery texture the dish is known for. Crumble 1 lb into the broth at step 3 and skip browning.",
+        "add": [
+          {
+            "ing": "ing.beef.ground90",
+            "qty": 1,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "Sweet-spiced sauce on spaghetti with cheese on top. Serve it as a two-way — no onions, no beans.",
+      "restaurantTouch": "Grate the cheddar as fine as you can, on a microplane if you have one. It should sit on top like snow, not melt in.",
+      "leftovers": "Keeps 5 days, freezes 3 months. The spices settle and deepen.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original, on the Cincinnati parlor tradition since 1922"
+    },
+    {
+      "id": "rec.cobb-salad",
+      "title": "California Cobb Salad",
+      "blurb": "Invented at the Brown Derby in Hollywood in the 1930s and still the best-composed salad in America. Rows, not a toss — that is the whole idea.",
+      "cuisine": "californian",
+      "course": "lunch",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "salad",
+        "quick",
+        "meal-prep"
+      ],
+      "equipment": [
+        "large platter"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "picnic",
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.romaine",
+          "qty": 1,
+          "unit": "head",
+          "prep": "chopped fine"
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 1,
+          "unit": "head",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each",
+          "prep": "hard-boiled, chopped"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and roasted crisp"
+        },
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled, standing in for blue cheese"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Roast the drained chickpeas at 425°F for 25 minutes with a spoonful of oil and a pinch of salt until they crackle. They are the crunch that bacon usually provides.",
+        "Chop the lettuces much finer than feels normal. A Cobb is meant to be eaten with a spoon.",
+        "Shake the oil, vinegar, lemon juice, mustard, garlic, salt and pepper into a dressing.",
+        "Spread the lettuce on a wide platter and lay the toppings in tight parallel rows: egg, avocado, tomato, chickpeas, cheese, scallion.",
+        "Bring it to the table looking like that, then dress and toss in front of everyone. That is how the Brown Derby did it and it still gets a reaction."
+      ],
+      "omnivore": {
+        "label": "The original: bacon and chicken",
+        "note": "Crisp bacon and diced roast chicken breast get their own rows.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 4,
+            "unit": "slice"
+          },
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 1,
+            "unit": "each",
+            "prep": "roasted and diced"
+          }
+        ]
+      },
+      "kidTweak": "Rows mean a child can take exactly what they want and skip the rest without a negotiation. That is the underrated genius of a composed salad.",
+      "restaurantTouch": "Everything chopped to the same small dice. It is more knife work and it is the difference between a Cobb and a pile of salad.",
+      "leftovers": "Dress only what you are eating. Undressed components keep 3 days and make excellent lunches.",
+      "heartNote": "Avocado, olive oil and eggs make this a fat-forward plate, but almost all of it is unsaturated. About 14 g of protein and 12 g of fiber a serving.",
+      "allergenNote": "Contains egg and dairy.",
+      "source": "ERRERLabs original, on the Brown Derby Cobb"
+    },
+    {
+      "id": "rec.baja-fish-tacos",
+      "title": "Baja Fish Tacos",
+      "blurb": "Beer-battered is the original; this version roasts the fish hot and fast, keeps the crema and the lime-dressed cabbage, and gets to the table in thirty minutes.",
+      "cuisine": "californian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "weeknight",
+        "roast",
+        "crave"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "summer"
+      ],
+      "primaryDiet": "pescatarian",
+      "occasions": [
+        "cookout"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cod",
+          "qty": 4,
+          "unit": "fillet"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cabbage.red",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 3,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.chipotle.adobo",
+          "qty": 1,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.tortilla.corn",
+          "qty": 12,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 450°F. Toss the cabbage with the juice of one lime and a pinch of salt and leave it — twenty minutes turns it from raw cabbage into a quick slaw.",
+        "Mix the crema: yogurt, mayonnaise, minced chipotle and the juice of half a lime.",
+        "Rub the cod with the oil, chili powder, cumin, paprika and salt. Roast on a sheet pan 10-12 minutes until it flakes at the thickest point.",
+        "Warm the tortillas over a flame or in a dry pan until they puff.",
+        "Break the fish into big pieces. Build with two tortillas, fish, slaw, avocado, crema, cilantro and a hard squeeze of lime."
+      ],
+      "vegetarianSwap": {
+        "label": "Roasted cauliflower instead",
+        "note": "Half a head of cauliflower in the same spice rub, roasted 25 minutes at 450°F until the edges char. Everything else is identical.",
+        "add": [
+          {
+            "ing": "ing.cauliflower",
+            "qty": 0.5,
+            "unit": "head",
+            "prep": "cut into florets"
+          }
+        ]
+      },
+      "kidTweak": "Keep a plain piece of fish aside before the spice rub, and let them build their own with just fish, tortilla and lime.",
+      "restaurantTouch": "The lime-dressed cabbage sitting for twenty minutes. It is the single element that makes a fish taco taste like Ensenada.",
+      "leftovers": "Fish keeps 2 days. Slaw keeps 3 and gets better on day two.",
+      "heartNote": "Cod is very lean; the fat here is olive oil and avocado. About 32 g of protein a serving.",
+      "allergenNote": "Contains fish, dairy and egg.",
+      "source": "ERRERLabs original, on the Ensenada fish taco"
+    },
+    {
+      "id": "rec.salmon-blackberry",
+      "title": "Roast Salmon with Blackberry and Hazelnut",
+      "blurb": "The Pacific Northwest on a plate: salmon roasted low and slow, a sharp blackberry pan sauce, and toasted Oregon hazelnuts. Thirty minutes.",
+      "cuisine": "pacific-northwest",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 35,
+      "difficulty": "easy",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "roast",
+        "quick",
+        "weeknight",
+        "restaurant",
+        "special-occasion"
+      ],
+      "equipment": [
+        "sheet pan",
+        "small saucepan"
+      ],
+      "season": [
+        "summer"
+      ],
+      "primaryDiet": "pescatarian",
+      "occasions": [
+        "birthday",
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.salmon",
+          "qty": 4,
+          "unit": "fillet"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.blackberries",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.shallot",
+          "qty": 1,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.vinegar.balsamic",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 3,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.hazelnuts",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "toasted and chopped"
+        },
+        {
+          "ing": "ing.farro",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.arugula",
+          "qty": 4,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 275°F. Salmon roasted low comes out silky and evenly cooked all the way through, and it is very hard to overshoot.",
+        "Cook the farro in salted water, 25 minutes, and drain.",
+        "Rub the salmon with oil and salt and roast 18-22 minutes, until it flakes with gentle pressure and reads 125°F at the thickest point.",
+        "Meanwhile, simmer the blackberries, shallot, balsamic, maple and thyme in a small pan for 8 minutes, crushing half the berries. Strain it if you want it smooth; leave it if you want it rustic.",
+        "Off the heat, swirl the butter into the sauce so it turns glossy.",
+        "Serve the salmon on the farro with arugula alongside, the sauce spooned over, and the hazelnuts scattered last so they stay crisp."
+      ],
+      "vegetarianSwap": {
+        "label": "Roasted portobellos",
+        "note": "Two large portobellos per person, roasted at 425°F for 20 minutes, take the same sauce beautifully.",
+        "add": [
+          {
+            "ing": "ing.mushroom.portobello",
+            "qty": 4,
+            "unit": "each"
+          }
+        ]
+      },
+      "kidTweak": "Serve the sauce on the side. Salmon and buttery grains with berries to dip into is usually a win.",
+      "restaurantTouch": "Butter swirled into a sauce off the heat — a monter au beurre. One tablespoon turns a thin fruit reduction into something that clings.",
+      "leftovers": "Salmon keeps 2 days and is very good cold, flaked into the leftover farro with more arugula.",
+      "heartNote": "Salmon twice a week is the specific AHA recommendation for people managing heart disease, and this is one of the easier ways to hit it.",
+      "allergenNote": "Contains fish, tree nut, dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.poke-bowl",
+      "title": "Ahi Poke Bowl",
+      "blurb": "Hawaii's own: raw tuna cut in cubes, dressed simply, over warm rice. Twenty minutes of work, and the quality of the fish is the whole recipe.",
+      "cuisine": "hawaiian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "no-cook",
+        "quick",
+        "restaurant",
+        "salad"
+      ],
+      "equipment": [
+        "sharp knife"
+      ],
+      "season": [
+        "summer"
+      ],
+      "primaryDiet": "pescatarian",
+      "ingredients": [
+        {
+          "ing": "ing.tuna.ahi",
+          "qty": 1,
+          "unit": "lb",
+          "prep": "cut into 3/4-inch cubes"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.onion.sweet",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "sliced paper thin"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.nori",
+          "qty": 2,
+          "unit": "sheet",
+          "prep": "cut into fine strips"
+        },
+        {
+          "ing": "ing.rice.sushi",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.cucumber",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.edamame.frozen",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "shelled, thawed"
+        },
+        {
+          "ing": "ing.sriracha",
+          "qty": 1,
+          "unit": "tsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Cook the rice, then fold the rice vinegar and a pinch of salt through it while it is still warm. Let it cool to just above room temperature — hot rice cooks the fish.",
+        "Buy the fish from someone you trust and ask for sushi grade. This dish has nowhere to hide.",
+        "Cut the tuna into even cubes with a very sharp knife, in one stroke each rather than sawing.",
+        "Dress it gently with the soy, sesame oil, scallions and sweet onion. Ten minutes is enough; an hour turns the outside gray and mealy.",
+        "Build the bowls: rice, then poke, then avocado, cucumber, edamame, sesame seeds and nori strips. Sriracha for whoever wants it."
+      ],
+      "vegetarianSwap": {
+        "label": "Tofu poke",
+        "note": "Cubed extra-firm tofu takes the same dressing very well and needs no cooking at all.",
+        "add": [
+          {
+            "ing": "ing.tofu.firm",
+            "qty": 1,
+            "unit": "block",
+            "prep": "cubed"
+          }
+        ]
+      },
+      "kidTweak": "Raw fish is a big ask. Build them a bowl of rice, avocado, cucumber and edamame with the same dressing and everyone is at the same table.",
+      "restaurantTouch": "Sweet onion sliced paper thin, and nori cut into strips rather than crumbled. Both are what a Honolulu poke counter does.",
+      "leftovers": "Eat it the day it is made. Raw fish does not keep.",
+      "heartNote": "Ahi is very lean, so it carries far less omega-3 than salmon — about 32 g of protein a serving with almost no fat. Excellent protein, but not your oily fish serving.",
+      "allergenNote": "Contains fish, soy and sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.huli-huli-tofu",
+      "title": "Huli-Huli Tofu",
+      "blurb": "A Hawaiian fundraiser classic from 1955: pineapple, soy, ginger and brown sugar, brushed on and turned again and again over the fire. Huli means turn.",
+      "cuisine": "hawaiian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "cookout",
+        "kid-favorite",
+        "crave",
+        "make-ahead"
+      ],
+      "equipment": [
+        "grill"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day",
+        "picnic"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tofu.firm",
+          "qty": 2,
+          "unit": "block",
+          "prep": "pressed, cut into thick slabs"
+        },
+        {
+          "ing": "ing.pineapple",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "half juiced, half cut into rings"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.ketchup",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.rice.sushi",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cabbage.napa",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 4,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Simmer the pineapple juice, soy sauce, brown sugar, ketchup, ginger, garlic, vinegar and sesame oil for 8 minutes until it thickens enough to coat a spoon. Reserve half for serving before anything raw touches it.",
+        "Marinate the tofu slabs in the other half for 20 minutes.",
+        "Get the grill to medium — not high. This sauce is a quarter sugar and it will burn over a hot fire.",
+        "Grill the tofu 12-15 minutes total, turning and brushing with marinade every 3 minutes. That repetition is the technique and the name: layer after layer of glaze rather than one thick coat.",
+        "Grill the pineapple rings alongside, 2 minutes a side, until marked.",
+        "Serve over rice with shredded cabbage, the reserved sauce and scallions."
+      ],
+      "omnivore": {
+        "label": "Huli-huli chicken",
+        "note": "The original was bone-in halved chickens turned between two racks over kiawe wood. Thighs work at home: indirect heat for 25 minutes, then over the coals with the glaze for the last 8.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 8,
+            "unit": "each"
+          }
+        ]
+      },
+      "kidTweak": "Sweet, sticky, pineapple-y. Cut the tofu into strips before grilling so there is more glazed surface.",
+      "restaurantTouch": "Reserve half the sauce before it touches raw food, and use it at the table. That is how you get that clean glossy finish.",
+      "leftovers": "Keeps 4 days and is good cold, sliced into rice bowls.",
+      "allergenNote": "Contains soy.",
+      "source": "ERRERLabs original, on the huli-huli tradition begun by Ernest Morgado in 1955"
+    },
+    {
+      "id": "rec.soup-beans-appalachian",
+      "title": "Appalachian Soup Beans",
+      "blurb": "Pinto beans cooked down until the broth is thick and brown, eaten with cornbread and raw onion. A dollar a bowl, and it built a region.",
+      "cuisine": "appalachian",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 100,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "budget",
+        "make-ahead",
+        "comfort",
+        "heart-star",
+        "soup"
+      ],
+      "equipment": [
+        "dutch oven"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.pinto",
+          "qty": 3,
+          "unit": "can",
+          "prep": "two drained, one with liquid"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "smashed"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "diced, for the table"
+        },
+        {
+          "ing": "ing.hotsauce",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the onion in the oil over medium for 8 minutes. Add the garlic and paprika for 1.",
+        "Add the beans, bay leaves and broth. Simmer, partly covered, 60-75 minutes, until the liquid has gone thick and brown. If you start from a pound of dried pintos soaked overnight, give it two hours and salt only at the end.",
+        "Mash a cup of the beans against the side of the pot. The broth — soup beans are named for it — should coat a spoon.",
+        "Add the salt, pepper and vinegar. Taste; it will want more pepper than you expect.",
+        "Serve in bowls with a wedge of skillet cornbread, raw onion on top, and hot sauce. Crumble the cornbread in — that is the point of the bowl."
+      ],
+      "omnivore": {
+        "label": "A ham hock",
+        "note": "One smoked hock in the pot from the beginning, pulled at the end and the meat shredded back in.",
+        "add": [
+          {
+            "ing": "ing.ham.deli",
+            "qty": 4,
+            "unit": "oz",
+            "prep": "diced"
+          }
+        ]
+      },
+      "kidTweak": "Beans and cornbread. Serve the raw onion on the side.",
+      "restaurantTouch": "The mash and the vinegar. Two moves, thirty seconds, and it goes from beans in water to soup beans.",
+      "leftovers": "Better every day for four. Freezes 3 months.",
+      "heartNote": "About 12 g of fiber and 14 g of protein a bowl for well under a dollar. Nothing else in this collection is much better on either count.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.fried-apples",
+      "title": "Skillet Fried Apples",
+      "blurb": "Apples cooked in butter with cinnamon until they slump and caramelize. A side dish in Appalachia, a dessert everywhere else, and fifteen minutes either way.",
+      "cuisine": "appalachian",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 10,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "quick",
+        "15-minute",
+        "budget",
+        "kid-favorite",
+        "crave"
+      ],
+      "equipment": [
+        "cast-iron skillet"
+      ],
+      "season": [
+        "fall"
+      ],
+      "occasions": [
+        "thanksgiving",
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.apple",
+          "qty": 6,
+          "unit": "each",
+          "prep": "cored and cut into thick wedges"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        }
+      ],
+      "steps": [
+        "Melt the butter in a wide skillet over medium-high. Add the apples in one layer, cut side down, and leave them 4 minutes to brown.",
+        "Turn, add the brown sugar, cinnamon, nutmeg and salt, and cook 6-8 minutes more, turning now and then, until the apples are tender and the syrup has darkened and thickened.",
+        "A firm apple is essential — Granny Smith, Northern Spy, Jonathan. A soft one turns to sauce, which is a different dish.",
+        "Finish with a squeeze of lemon so it does not read as pure sugar. Serve alongside eggs, over yogurt, or with ice cream."
+      ],
+      "kidTweak": "Serve over plain yogurt for breakfast and it is a genuinely good one.",
+      "restaurantTouch": "Do not stir for the first four minutes. Browned apple faces are the difference between fried apples and stewed apples.",
+      "leftovers": "Keeps 4 days and reheats in a pan in two minutes.",
+      "garden": "Northeast Ohio is apple country from September through November. A half bushel of seconds from an orchard costs almost nothing and makes this all fall.",
+      "allergenNote": "Contains dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.hazelnut-mushroom-farro",
+      "title": "Oregon Mushroom and Hazelnut Farro",
+      "blurb": "Wild mushrooms, toasted hazelnuts, farro and a little cream — the Willamette Valley in a bowl. Thirty-five minutes, and it eats like a restaurant plate.",
+      "cuisine": "pacific-northwest",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 25,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "one-pot",
+        "restaurant",
+        "crave",
+        "make-ahead"
+      ],
+      "equipment": [
+        "large skillet",
+        "saucepan"
+      ],
+      "season": [
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.farro",
+          "qty": 1.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.mushroom.shiitake",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.mushroom.oyster",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.shallot",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 5,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.wine.white",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cream.heavy",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.hazelnuts",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "toasted, skinned, chopped"
+        },
+        {
+          "ing": "ing.kale.lacinato",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Simmer the farro in well-salted water 25 minutes until chewy, and drain.",
+        "Roast the hazelnuts at 350°F for 12 minutes, then rub them in a towel while warm — most of the bitter skin comes away.",
+        "Brown the mushrooms in the oil over high heat in two batches, leaving each batch still for the first 3 minutes. Wet, crowded mushrooms are the single most common mistake in home cooking.",
+        "Add the butter, shallots, garlic and thyme and cook 4 minutes. Pour in the wine and let it reduce almost away.",
+        "Add the broth and the farro and simmer 4 minutes. Stir in the kale to wilt, then the cream, lemon juice, parmesan and salt.",
+        "Serve with the hazelnuts scattered over at the last second so they stay loud."
+      ],
+      "omnivore": {
+        "label": "Seared salmon on top",
+        "note": "A fillet per person, roasted at 275°F for 20 minutes, laid over the farro.",
+        "add": [
+          {
+            "ing": "ing.salmon",
+            "qty": 4,
+            "unit": "fillet"
+          }
+        ]
+      },
+      "kidTweak": "Blend a cup of it briefly to soften the texture, and hold the thyme.",
+      "restaurantTouch": "Three tablespoons of cream for four people. Enough to bind and gloss, not enough to make it a cream sauce.",
+      "leftovers": "Keeps 4 days and is very good cold as a grain salad with extra lemon.",
+      "allergenNote": "Contains tree nut, dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.killed-lettuce",
+      "title": "Killed Lettuce",
+      "blurb": "Tender spring lettuce wilted under a hot bacon-and-vinegar dressing. An Appalachian spring ritual, older than any cookbook that records it.",
+      "cuisine": "appalachian",
+      "course": "side",
+      "servings": 4,
+      "activeMin": 12,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "salad",
+        "skillet",
+        "quick",
+        "15-minute",
+        "budget"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "spring"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 2,
+          "unit": "head",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 6,
+          "unit": "each",
+          "prep": "sliced, greens and whites"
+        },
+        {
+          "ing": "ing.radish",
+          "qty": 6,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each",
+          "prep": "hard-boiled, chopped",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Pile the torn lettuce, scallions and radishes in a wide heatproof bowl.",
+        "Heat the oil in a skillet until it shimmers. Take it off the heat and stir in the paprika — it burns in seconds over direct flame.",
+        "Add the vinegar, brown sugar, salt and pepper and swirl. It will spit.",
+        "Pour the hot dressing straight over the lettuce and toss immediately. It collapses — killed — into something between a salad and a cooked green.",
+        "Eat it right away, with cornbread and chopped egg if you have it. It does not wait."
+      ],
+      "omnivore": {
+        "label": "The original, with bacon grease",
+        "note": "Render three slices of bacon and use the fat in place of the oil, crumbling the bacon over the top. That is how it has been made in the mountains for two hundred years.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 3,
+            "unit": "slice"
+          }
+        ]
+      },
+      "kidTweak": "Warm sour lettuce is a specific taste. Serve them the radishes and egg on the side.",
+      "restaurantTouch": "The dressing has to be genuinely hot when it hits the leaves. Warm dressing gives you a limp salad instead of a wilted one.",
+      "leftovers": "None — this is a dish with a five-minute life.",
+      "garden": "The first cutting of leaf lettuce in April is exactly what this recipe exists for.",
+      "allergenNote": "Contains egg if you add it.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.hawaiian-mac-salad",
+      "title": "Hawaiian Plate Lunch Mac Salad",
+      "blurb": "Overcooked macaroni on purpose, dressed while hot so it drinks the dressing. The third scoop on every plate lunch in Hawaii, and it is nothing like a mainland pasta salad.",
+      "cuisine": "hawaiian",
+      "course": "side",
+      "servings": 8,
+      "activeMin": 15,
+      "totalMin": 75,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "make-ahead",
+        "potluck",
+        "picnic",
+        "kid-favorite",
+        "budget",
+        "salad"
+      ],
+      "equipment": [
+        "pot"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "potluck",
+        "picnic",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pasta.regular",
+          "qty": 12,
+          "unit": "oz",
+          "prep": "elbow macaroni"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.onion.sweet",
+          "qty": 0.25,
+          "unit": "each",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 2,
+          "unit": "stalk",
+          "prep": "diced fine"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Boil the macaroni about 3 minutes past the package time. Soft is correct here — this is the one pasta dish where al dente is wrong.",
+        "Drain and, while it is still steaming hot, toss it with the vinegar. Hot pasta absorbs; cold pasta repels.",
+        "Let it cool 10 minutes, then fold in the mayonnaise, milk, carrot, grated onion, celery, salt, pepper and sugar. It will look far too wet.",
+        "Chill at least an hour. The macaroni keeps drinking and it tightens into exactly the right consistency.",
+        "Check the seasoning cold — chilled food needs more salt than warm food. Serve with an ice cream scoop, which is how it appears on a plate lunch."
+      ],
+      "kidTweak": "This is macaroni salad at its most child-friendly: soft, mild and creamy.",
+      "restaurantTouch": "Vinegar on the hot pasta, mayonnaise on the cooled pasta. Two separate steps and it is why the Hawaiian version tastes seasoned all the way through.",
+      "leftovers": "Keeps 4 days and is better on day two.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.mission-burrito",
+      "title": "Mission-Style Burrito",
+      "blurb": "San Francisco's contribution to the world: a steamed flour tortilla wrapped around rice, beans, salsa and everything else, and the steaming is what makes it fold.",
+      "cuisine": "californian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 30,
+      "totalMin": 45,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sandwich",
+        "crowd-pleaser",
+        "meal-prep",
+        "kid-favorite",
+        "crave"
+      ],
+      "equipment": [
+        "skillet",
+        "foil"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "weeknight-rush",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.jasmine",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.beans.pinto",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tortilla.flour",
+          "qty": 4,
+          "unit": "each",
+          "prep": "the largest you can find"
+        },
+        {
+          "ing": "ing.cheese.monterey",
+          "qty": 5,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salsa",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.sourcream.light",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.romaine",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the rice, then fork through the juice of one lime, the cilantro and half a teaspoon of salt while it is hot.",
+        "Fry the garlic and cumin in the oil, add the beans and 1/2 cup water, and simmer 8 minutes, mashing about a third of them. Season with the rest of the salt.",
+        "Steam the tortillas: one at a time in a dry skillet under a damp paper towel for 30 seconds a side. A steamed tortilla folds without cracking, and a cold one splits every time.",
+        "Build in a line down the middle, leaving a wide margin: cheese first against the hot tortilla, then rice, beans, salsa, avocado, sour cream, lettuce. Do not overfill — the most common failure by far.",
+        "Fold the two short sides in first, then roll from the near edge, tucking tightly as you go.",
+        "Wrap in foil and rest 2 minutes seam side down, or griddle the seam for a minute to seal it."
+      ],
+      "omnivore": {
+        "label": "Carne asada or chicken",
+        "note": "Grilled and chopped skirt steak or thigh, layered over the rice.",
+        "add": [
+          {
+            "ing": "ing.beef.sirloin",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "grilled and chopped"
+          }
+        ]
+      },
+      "kidTweak": "Make theirs smaller with rice, beans and cheese only. A half burrito is a whole lunch for most children.",
+      "restaurantTouch": "Cheese against the hot tortilla so it melts into a layer. Every taqueria on Valencia Street does this.",
+      "leftovers": "Wrapped in foil they keep 2 days and reheat well in a 350°F oven. They also freeze.",
+      "heartNote": "About 18 g protein and 15 g fiber, and roughly half the sodium of the same burrito from a chain.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    }
+  ]
+}

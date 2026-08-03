@@ -124,10 +124,22 @@ test('no icon carries a script or an external reference', () => {
 });
 
 test('the set stays small enough to precache', () => {
-  const bytes = files.reduce((n, f) => n + readFileSync(join(dir, f)).length, 0);
-  // The service worker takes all of these on install. Well under a megabyte is
-  // fine; a jump past it means something got embedded that should not have.
-  assert.ok(bytes < 1_000_000, `icons total ${(bytes / 1024).toFixed(0)} KB`);
+  // The service worker takes all of these on install, so the set has a budget.
+  //
+  // The number moved twice: once when the hand-drawn icons were redrawn with
+  // richer gradients and a shared optical alignment, and once when the
+  // ingredient list grew past 350. Neither is the failure this test is for.
+  // What it is for is something getting embedded that should not be — a base64
+  // PNG in an SVG is invisible in a diff and enormous on the wire — and that
+  // shows up in the per-file numbers, not the total. So both are checked.
+  const sizes = files.map(f => [f, readFileSync(join(dir, f)).length]);
+  const bytes = sizes.reduce((n, [, b]) => n + b, 0);
+  const average = bytes / files.length;
+  const biggest = sizes.sort((a, b) => b[1] - a[1])[0];
+
+  assert.ok(average < 5_000, `icons average ${(average / 1024).toFixed(1)} KB each`);
+  assert.ok(biggest[1] < 12_000, `${biggest[0]} is ${(biggest[1] / 1024).toFixed(1)} KB — is something embedded in it?`);
+  assert.ok(bytes < 1_600_000, `icons total ${(bytes / 1024).toFixed(0)} KB`);
 });
 
 test('the service worker precaches the icons', () => {

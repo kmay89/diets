@@ -19,6 +19,16 @@
     "cx": 32,
     "cy": 34.6875
   },
+  "apricots-dried": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
+  },
+  "artichoke-canned": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "arugula": {
     "scale": 1.23077,
     "cx": 32.375,
@@ -33,6 +43,11 @@
     "scale": 1.03081,
     "cx": 32.4375,
     "cy": 34.3125
+  },
+  "bacon": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
   },
   "baguette": {
     "scale": 1.11178,
@@ -49,15 +64,30 @@
     "cx": 32,
     "cy": 35.6875
   },
+  "bamboo": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "banana": {
     "scale": 1.03662,
     "cx": 32.9375,
     "cy": 36
   },
+  "barley-pearl": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 37.5
+  },
   "basil": {
     "scale": 1.23077,
     "cx": 31.5,
     "cy": 35.1875
+  },
+  "bbqsauce": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
   },
   "beans-black": {
     "scale": 1.14642,
@@ -74,10 +104,30 @@
     "cx": 32,
     "cy": 34.9375
   },
+  "beans-kidney": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "beans-pinto": {
     "scale": 1.14642,
     "cx": 32,
     "cy": 34.9375
+  },
+  "beansprouts": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 33
+  },
+  "beef-chuck": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
+  },
+  "beef-ground90": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
   },
   "beef-sirloin": {
     "scale": 1.22667,
@@ -89,6 +139,16 @@
     "cx": 31.5,
     "cy": 36.3125
   },
+  "blackberries": {
+    "scale": 1.21622,
+    "cx": 31.5,
+    "cy": 32.611
+  },
+  "blackvinegar": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "blueberries": {
     "scale": 1.59307,
     "cx": 33,
@@ -98,6 +158,16 @@
     "scale": 1.01099,
     "cx": 31,
     "cy": 32.75
+  },
+  "bread-rye": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 38
+  },
+  "bread-sourdough": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 38
   },
   "bread-wholegrain": {
     "scale": 1.16088,
@@ -124,6 +194,11 @@
     "cx": 32,
     "cy": 32.1875
   },
+  "bulgur": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 37.5
+  },
   "bun-wholewheat": {
     "scale": 1.14286,
     "cx": 32,
@@ -134,10 +209,30 @@
     "cx": 32,
     "cy": 39.1875
   },
+  "buttermilk": {
+    "scale": 1.125,
+    "cx": 32,
+    "cy": 33
+  },
   "cabbage-green": {
     "scale": 1.19094,
     "cx": 32,
     "cy": 37.1875
+  },
+  "cabbage-napa": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 31
+  },
+  "cabbage-red": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
+  },
+  "cantaloupe": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 35
   },
   "capers": {
     "scale": 1.05444,
@@ -194,6 +289,16 @@
     "cx": 32.5,
     "cy": 35.8125
   },
+  "cheese-halloumi": {
+    "scale": 1.04651,
+    "cx": 34.5,
+    "cy": 34.5
+  },
+  "cheese-monterey": {
+    "scale": 1.04651,
+    "cx": 31.5,
+    "cy": 33
+  },
   "cheese-mozzarella": {
     "scale": 1.19481,
     "cx": 33,
@@ -208,6 +313,21 @@
     "scale": 1.17197,
     "cx": 32.5,
     "cy": 35.8125
+  },
+  "cheese-quesofresco": {
+    "scale": 1.04651,
+    "cx": 34.5,
+    "cy": 34.5
+  },
+  "cheese-swiss": {
+    "scale": 1.04651,
+    "cx": 31.5,
+    "cy": 33
+  },
+  "cherries-sweet": {
+    "scale": 1.28571,
+    "cx": 35.5,
+    "cy": 32
   },
   "chia": {
     "scale": 1.03081,
@@ -229,10 +349,25 @@
     "cx": 32,
     "cy": 34.9375
   },
+  "chickpeas-dried": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "chile-ancho": {
+    "scale": 0.98873,
+    "cx": 32.8825,
+    "cy": 33.4705
+  },
   "chile-guajillo": {
     "scale": 1.02222,
     "cx": 36.125,
     "cy": 31.0625
+  },
+  "chile-thai": {
+    "scale": 0.98873,
+    "cx": 32.8825,
+    "cy": 33.4705
   },
   "chilicrisp": {
     "scale": 1.05444,
@@ -269,6 +404,11 @@
     "cx": 32,
     "cy": 35.1875
   },
+  "clams-canned": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "clementine": {
     "scale": 1.15723,
     "cx": 32,
@@ -284,6 +424,11 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "coconutmilk-full": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "coconutmilk-light": {
     "scale": 1.14642,
     "cx": 32,
@@ -293,6 +438,16 @@
     "scale": 1.16456,
     "cx": 32.25,
     "cy": 35.1875
+  },
+  "coffee-espresso": {
+    "scale": 1.09756,
+    "cx": 33.5,
+    "cy": 36.5
+  },
+  "collards": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 31
   },
   "corn-kernels": {
     "scale": 1.2349,
@@ -319,6 +474,11 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "crab-lump": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 38.5
+  },
   "cranberries-dried": {
     "scale": 1.42636,
     "cx": 33,
@@ -339,10 +499,20 @@
     "cx": 33.25,
     "cy": 32.4375
   },
+  "currypaste-green": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "currypaste-red": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
+  },
+  "daikon": {
+    "scale": 1.125,
+    "cx": 32,
+    "cy": 32
   },
   "dates-medjool": {
     "scale": 1.27336,
@@ -353,6 +523,11 @@
     "scale": 1.14642,
     "cx": 34.25,
     "cy": 30.8125
+  },
+  "doubanjiang": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "edamame-frozen": {
     "scale": 1.03081,
@@ -374,6 +549,11 @@
     "cx": 32.5,
     "cy": 33.6875
   },
+  "englishmuffin": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 36
+  },
   "farro": {
     "scale": 1.03081,
     "cx": 32,
@@ -383,6 +563,11 @@
     "scale": 1.03371,
     "cx": 33.8125,
     "cy": 33.25
+  },
+  "fishsauce": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
   },
   "flax-ground": {
     "scale": 1.03081,
@@ -394,6 +579,11 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "flour-bread": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
   "flour-wholewheat": {
     "scale": 1.03081,
     "cx": 32,
@@ -404,10 +594,30 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "frozen-cherries": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
   "frozen-corn": {
     "scale": 1.03081,
     "cx": 32,
     "cy": 34.1875
+  },
+  "frozen-mango": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "frozen-pineapple": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "frozen-riced-cauliflower": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
   },
   "frozen-spinach": {
     "scale": 1.03081,
@@ -418,6 +628,11 @@
     "scale": 1.07602,
     "cx": 32.5,
     "cy": 32.875
+  },
+  "ghee": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "ginger": {
     "scale": 1.39924,
@@ -449,35 +664,90 @@
     "cx": 32.5,
     "cy": 34.25
   },
+  "grits": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 38.5
+  },
+  "ham-deli": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
+  },
   "harissa": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
+  },
+  "hazelnuts": {
+    "scale": 1.09165,
+    "cx": 32,
+    "cy": 32.611
   },
   "hemphearts": {
     "scale": 1.03081,
     "cx": 32,
     "cy": 34.1875
   },
+  "hoisin": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "hominy": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "honey": {
     "scale": 0.96588,
     "cx": 32,
     "cy": 32.6875
+  },
+  "horseradish": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "hotsauce": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
   },
   "jackfruit-canned": {
     "scale": 1.14642,
     "cx": 32,
     "cy": 34.9375
   },
+  "jicama": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 35
+  },
   "kale-lacinato": {
     "scale": 1.09524,
     "cx": 32.375,
     "cy": 34.875
   },
+  "ketchup": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "kimchi": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
+  },
+  "kombu": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
+  },
+  "ladyfingers": {
+    "scale": 1.06825,
+    "cx": 32,
+    "cy": 31.9375
   },
   "leek": {
     "scale": 0.97098,
@@ -489,6 +759,11 @@
     "cx": 32.5,
     "cy": 34.9375
   },
+  "lemongrass": {
+    "scale": 1.06825,
+    "cx": 32,
+    "cy": 31.9375
+  },
   "lentil-brown": {
     "scale": 1.03081,
     "cx": 32,
@@ -499,10 +774,25 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "lettuce-butter": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 31
+  },
   "lime": {
     "scale": 1.23906,
     "cx": 32.5,
     "cy": 34.9375
+  },
+  "macadamia": {
+    "scale": 1.09165,
+    "cx": 32,
+    "cy": 32.611
+  },
+  "mango": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
   },
   "maple": {
     "scale": 0.96588,
@@ -514,6 +804,16 @@
     "cx": 32,
     "cy": 34.6875
   },
+  "masa": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "mascarpone": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 38.5
+  },
   "mayo-olive": {
     "scale": 1.05444,
     "cx": 32,
@@ -523,6 +823,16 @@
     "scale": 1.00822,
     "cx": 32.5,
     "cy": 33.6875
+  },
+  "milk-condensed": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
+  "milk-oat": {
+    "scale": 1.125,
+    "cx": 32,
+    "cy": 33
   },
   "milk-soy": {
     "scale": 1.00822,
@@ -534,15 +844,35 @@
     "cx": 31.6875,
     "cy": 35.1875
   },
+  "mirin": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
+  "miso-red": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "miso-white": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
   },
+  "molasses": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "mushroom-cremini": {
     "scale": 1.16456,
     "cx": 32.5,
     "cy": 34.75
+  },
+  "mushroom-oyster": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 34.25
   },
   "mushroom-porcini-dried": {
     "scale": 1.2349,
@@ -564,15 +894,50 @@
     "cx": 32,
     "cy": 34.6875
   },
+  "mustard-yellow": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
+  "naan": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 36
+  },
+  "noodle-glass": {
+    "scale": 1.02273,
+    "cx": 32,
+    "cy": 36.5295
+  },
+  "noodle-ramen": {
+    "scale": 1.02273,
+    "cx": 32,
+    "cy": 36.5295
+  },
   "noodle-rice": {
     "scale": 1.03081,
     "cx": 32,
     "cy": 34.1875
   },
+  "noodle-soba": {
+    "scale": 1.02273,
+    "cx": 32,
+    "cy": 36.5295
+  },
+  "noodle-udon": {
+    "scale": 1.02273,
+    "cx": 32,
+    "cy": 36.5295
+  },
   "noodle-wheat": {
     "scale": 1.03081,
     "cx": 32,
     "cy": 34.1875
+  },
+  "nori": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
   },
   "nutritionalyeast": {
     "scale": 1.07918,
@@ -589,10 +954,20 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "oil-avocado": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "oil-canola": {
     "scale": 0.96588,
     "cx": 32,
     "cy": 32.6875
+  },
+  "oil-coconut": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "oil-olive": {
     "scale": 0.96588,
@@ -604,6 +979,11 @@
     "cx": 32,
     "cy": 32.6875
   },
+  "okra": {
+    "scale": 0.99368,
+    "cx": 27.5,
+    "cy": 32.357
+  },
   "olives-kalamata": {
     "scale": 1.05444,
     "cx": 32,
@@ -613,6 +993,11 @@
     "scale": 1.07602,
     "cx": 32.5,
     "cy": 33.125
+  },
+  "onion-sweet": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
   },
   "onion-yellow": {
     "scale": 1.07602,
@@ -643,6 +1028,11 @@
     "scale": 1.23077,
     "cx": 31.8125,
     "cy": 35.1875
+  },
+  "parsnip": {
+    "scale": 1.125,
+    "cx": 32,
+    "cy": 32
   },
   "pasta-chickpea": {
     "scale": 1.03081,
@@ -704,15 +1094,40 @@
     "cx": 31.5625,
     "cy": 29.8125
   },
+  "pepper-poblano": {
+    "scale": 0.98873,
+    "cx": 32.8825,
+    "cy": 33.4705
+  },
   "pepper-roasted": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
   },
+  "pepper-serrano": {
+    "scale": 0.98873,
+    "cx": 32.8825,
+    "cy": 33.4705
+  },
+  "phyllo": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
+  },
   "pickles-dill": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
+  },
+  "pineapple": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
+  },
+  "pinenuts": {
+    "scale": 1.09165,
+    "cx": 32,
+    "cy": 32.611
   },
   "pistachios": {
     "scale": 1.44314,
@@ -729,10 +1144,30 @@
     "cx": 32.5,
     "cy": 36.6875
   },
+  "plantain": {
+    "scale": 0.99368,
+    "cx": 27.5,
+    "cy": 32.357
+  },
+  "pomegranate-molasses": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "pomegranate-seeds": {
     "scale": 1.26027,
     "cx": 32.5,
     "cy": 36.25
+  },
+  "popcorn-kernels": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "pork-shoulder": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
   },
   "pork-tenderloin": {
     "scale": 1.09851,
@@ -749,6 +1184,16 @@
     "cx": 32,
     "cy": 34.9375
   },
+  "puffpastry": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
+  },
+  "pumpkin-canned": {
+    "scale": 1.18421,
+    "cx": 32,
+    "cy": 32
+  },
   "pumpkinseeds": {
     "scale": 1.46614,
     "cx": 32.25,
@@ -759,10 +1204,35 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "radish": {
+    "scale": 1.125,
+    "cx": 32,
+    "cy": 32
+  },
   "raisins": {
     "scale": 1.46032,
     "cx": 33,
     "cy": 36.25
+  },
+  "raspberries": {
+    "scale": 1.21622,
+    "cx": 31.5,
+    "cy": 32.611
+  },
+  "rhubarb": {
+    "scale": 1.06825,
+    "cx": 32,
+    "cy": 31.9375
+  },
+  "rice-arborio": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 37.5
+  },
+  "rice-basmati": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 37.5
   },
   "rice-brown": {
     "scale": 1.03081,
@@ -774,15 +1244,30 @@
     "cx": 32,
     "cy": 34.1875
   },
+  "rice-sushi": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 37.5
+  },
   "rice-wild": {
     "scale": 1.03081,
     "cx": 32,
     "cy": 34.1875
   },
+  "ricepaper": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
+  },
   "ricotta-partskim": {
     "scale": 1.05444,
     "cx": 32,
     "cy": 34.6875
+  },
+  "roll-hoagie": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 38
   },
   "romaine": {
     "scale": 1.11515,
@@ -814,6 +1299,16 @@
     "cx": 32,
     "cy": 33.1875
   },
+  "sauerkraut": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "sausage-andouille-chicken": {
+    "scale": 0.99368,
+    "cx": 27.5,
+    "cy": 32.357
+  },
   "sausage-chicken-italian": {
     "scale": 1.14642,
     "cx": 32.0625,
@@ -823,6 +1318,11 @@
     "scale": 1.09524,
     "cx": 32.75,
     "cy": 36
+  },
+  "semolina": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
   },
   "sesame-seeds": {
     "scale": 1.67273,
@@ -834,6 +1334,11 @@
     "cx": 32.5,
     "cy": 33.125
   },
+  "shaoxing": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
   "shrimp": {
     "scale": 1.32374,
     "cx": 33,
@@ -844,10 +1349,20 @@
     "cx": 32.5625,
     "cy": 34.625
   },
+  "sourcream-light": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 38.5
+  },
   "soysauce-lowsodium": {
     "scale": 0.96588,
     "cx": 32,
     "cy": 32.6875
+  },
+  "spice-allspice": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "spice-basil-dried": {
     "scale": 1.07918,
@@ -859,10 +1374,25 @@
     "cx": 32,
     "cy": 33.1875
   },
+  "spice-berbere": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "spice-blackpepper": {
     "scale": 1.07918,
     "cx": 32,
     "cy": 33.1875
+  },
+  "spice-cardamom": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "spice-cayenne": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "spice-chili": {
     "scale": 1.07918,
@@ -873,6 +1403,11 @@
     "scale": 1.07918,
     "cx": 32,
     "cy": 33.1875
+  },
+  "spice-cloves": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "spice-coriander": {
     "scale": 1.07918,
@@ -899,6 +1434,11 @@
     "cx": 32,
     "cy": 33.1875
   },
+  "spice-fivespice": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "spice-garam": {
     "scale": 1.07918,
     "cx": 32,
@@ -914,10 +1454,30 @@
     "cx": 32,
     "cy": 33.1875
   },
+  "spice-gochugaru": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "spice-italian": {
     "scale": 1.07918,
     "cx": 32,
     "cy": 33.1875
+  },
+  "spice-mustardseed": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "spice-nutmeg": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "spice-oldbay": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "spice-onionpowder": {
     "scale": 1.07918,
@@ -934,10 +1494,25 @@
     "cx": 32,
     "cy": 33.1875
   },
+  "spice-saffron": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
+  "spice-sichuanpeppercorn": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "spice-smokedpaprika": {
     "scale": 1.07918,
     "cx": 32,
     "cy": 33.1875
+  },
+  "spice-sumac": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "spice-thyme-dried": {
     "scale": 1.07918,
@@ -969,10 +1544,20 @@
     "cx": 32.1875,
     "cy": 34.25
   },
+  "squash-spaghetti": {
+    "scale": 1.07143,
+    "cx": 32,
+    "cy": 35
+  },
   "sriracha": {
     "scale": 1.07918,
     "cx": 32,
     "cy": 33.1875
+  },
+  "stirfrysauce-mushroom": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
   },
   "strawberries": {
     "scale": 1.17197,
@@ -1014,6 +1599,11 @@
     "cx": 32,
     "cy": 32.6875
   },
+  "tamarind": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
+  },
   "tempeh": {
     "scale": 1.22667,
     "cx": 32,
@@ -1028,6 +1618,11 @@
     "scale": 1.22667,
     "cx": 32.5,
     "cy": 37.75
+  },
+  "tomatillo": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 33.5
   },
   "tomato-canned-crushed": {
     "scale": 1.14642,
@@ -1059,10 +1654,25 @@
     "cx": 32,
     "cy": 37.6875
   },
+  "tortilla-flour": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 36
+  },
   "tortilla-wholewheat": {
     "scale": 1.14286,
     "cx": 32,
     "cy": 37.6875
+  },
+  "tots-frozen": {
+    "scale": 1.28571,
+    "cx": 32,
+    "cy": 34
+  },
+  "tuna-ahi": {
+    "scale": 0.97826,
+    "cx": 32,
+    "cy": 34.5
   },
   "tuna-canned": {
     "scale": 1.14642,
@@ -1078,6 +1688,11 @@
     "scale": 0.96588,
     "cx": 32,
     "cy": 32.6875
+  },
+  "vinegar-apple": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
   },
   "vinegar-balsamic": {
     "scale": 0.96588,
@@ -1118,6 +1733,21 @@
     "scale": 0.96588,
     "cx": 32,
     "cy": 32.6875
+  },
+  "wonton-wrappers": {
+    "scale": 1.14954,
+    "cx": 32.001,
+    "cy": 33.461
+  },
+  "worcestershire": {
+    "scale": 1,
+    "cx": 32,
+    "cy": 30.5
+  },
+  "yeast-instant": {
+    "scale": 1.09756,
+    "cx": 32,
+    "cy": 32.5
   },
   "yogurt-greek-2": {
     "scale": 1.05444,

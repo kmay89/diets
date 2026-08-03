@@ -2232,6 +2232,993 @@
       "leftovers": "Eat it within ten minutes. A Dutch baby is a moment rather than a dish, and reheating it produces a rubbery pancake.",
       "source": "ERRERLabs original",
       "heartNote": "Four eggs across four servings is 214 mg of cholesterol each, which is the whole reason for the score. Dietary cholesterol turns out to have far less effect on blood cholesterol than saturated fat does for most people, which is why the 2015 US guidelines dropped the 300 mg-a-day cap. If a clinician has told you to watch eggs specifically, this is one to share four ways rather than two."
+    },
+    {
+      "id": "rec.breakfast-tacos",
+      "title": "Austin Breakfast Tacos",
+      "blurb": "Soft eggs, crisp potato, salsa and a warm tortilla. Texas eats these every morning and they take fifteen minutes.",
+      "cuisine": "tex-mex",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "quick",
+        "weeknight",
+        "kid-favorite",
+        "budget",
+        "crave"
+      ],
+      "equipment": [
+        "two skillets"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "brunch",
+        "weeknight-rush"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced small"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 8,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.beans.black",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained and warmed"
+        },
+        {
+          "ing": "ing.tortilla.flour",
+          "qty": 8,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.monterey",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.salsa",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Fry the diced potato in the oil over medium-high with the paprika and half the salt, undisturbed for the first 5 minutes, then turning, 12 minutes total until crisp.",
+        "Beat the eggs with the rest of the salt. Cook them in the butter over low heat, stirring constantly with a spatula, 4-5 minutes. Low and slow gives you soft curds; high heat gives you rubber.",
+        "Pull the eggs off the heat while they still look slightly underdone — they keep cooking in the pan.",
+        "Warm the tortillas directly over a flame or in a dry skillet until they puff and blister.",
+        "Build: cheese first so it melts against the hot tortilla, then eggs, potato, beans, salsa, avocado, cilantro."
+      ],
+      "omnivore": {
+        "label": "Bacon or chorizo",
+        "note": "Cook it first and fry the potatoes in the fat. That is the Austin taqueria way.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 4,
+            "unit": "slice"
+          }
+        ]
+      },
+      "kidTweak": "Cheese and egg only, folded into a small tortilla. Salsa on the side.",
+      "restaurantTouch": "Cheese against the tortilla, not on top. It melts into a layer that holds the taco together.",
+      "leftovers": "The potato and beans keep 4 days; scramble eggs to order.",
+      "allergenNote": "Contains egg, wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.chilaquiles-verdes",
+      "title": "Chilaquiles Verdes",
+      "blurb": "Tortilla chips simmered in salsa verde for exactly one minute, so they soften without collapsing. Mexico's greatest breakfast and a use for stale tortillas.",
+      "cuisine": "mexican",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "quick",
+        "weeknight",
+        "budget",
+        "crave"
+      ],
+      "equipment": [
+        "wide skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tortilla.corn",
+          "qty": 10,
+          "unit": "each",
+          "prep": "cut into wedges and baked crisp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tomatillo",
+          "qty": 1,
+          "unit": "lb",
+          "prep": "husked"
+        },
+        {
+          "ing": "ing.pepper.jalapeno",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.quesofresco",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled"
+        },
+        {
+          "ing": "ing.sourcream.light",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.33,
+          "unit": "each",
+          "prep": "sliced thin"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Bake the tortilla wedges at 400°F for 12 minutes with a little oil until crisp, or use a bag of thick restaurant-style chips.",
+        "Broil the tomatillos, jalapeños, onion and garlic until blackened in spots, 8 minutes. Blend with the cilantro, broth and salt.",
+        "Fry the salsa in the oil in a wide skillet for 5 minutes until it darkens and thickens — Mexican sauces are always fried, and this is where the flavor concentrates.",
+        "Fry the eggs in a second pan, sunny side up.",
+        "Add the chips to the simmering salsa and fold for no more than a minute. They should be coated and just yielding, with some crunch left. Longer and you have soup.",
+        "Serve immediately with an egg on each portion, queso fresco, crema, red onion and avocado."
+      ],
+      "omnivore": {
+        "label": "Shredded chicken",
+        "note": "Stir poached shredded chicken into the salsa before the chips go in.",
+        "add": [
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 1,
+            "unit": "each",
+            "prep": "poached and shredded"
+          }
+        ]
+      },
+      "kidTweak": "Serve the chips and salsa side by side rather than combined, with the egg on top.",
+      "restaurantTouch": "One minute in the sauce. Chilaquiles are eaten immediately — this is a dish with a two-minute window and everyone in Mexico knows it.",
+      "leftovers": "The salsa keeps 10 days and freezes. Assemble to order.",
+      "allergenNote": "Contains egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.menemen",
+      "title": "Menemen",
+      "blurb": "Turkish soft-scrambled eggs cooked into peppers and tomato until it is almost a stew. Fifteen minutes, one pan, eaten with bread and no cutlery.",
+      "cuisine": "turkish",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "one-pot",
+        "quick",
+        "15-minute",
+        "budget"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced small"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 5,
+          "unit": "each",
+          "prep": "grated or finely chopped"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 6,
+          "unit": "each",
+          "prep": "lightly beaten"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cheese.feta",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.bread.sourdough",
+          "qty": 6,
+          "unit": "slice",
+          "prep": "for serving"
+        }
+      ],
+      "steps": [
+        "Cook the peppers in the olive oil over medium heat for 8 minutes until completely soft. Turkish cooks use long green sivri peppers; a green bell is the closest common substitute.",
+        "Add the tomatoes, pepper flakes and salt and cook 6-8 minutes until the mixture thickens and the oil separates out at the edges.",
+        "Turn the heat to low, pour in the eggs, and stir slowly with a wooden spoon. Menemen is meant to stay soft and loose — take it off the heat while it still looks a little wet.",
+        "Crumble the feta over, scatter parsley, and bring the pan to the table with a lot of bread. There are no plates in this recipe."
+      ],
+      "kidTweak": "Leave the pepper flakes out. Eggs and tomato with bread for scooping is an easy morning.",
+      "restaurantTouch": "Grate the tomatoes on a box grater and discard the skin. Thirty seconds, and no skin curls in the pan.",
+      "leftovers": "Eat immediately; scrambled eggs do not keep.",
+      "allergenNote": "Contains egg, dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.savory-miso-oatmeal",
+      "title": "Savory Miso Oatmeal",
+      "blurb": "Oats cooked in broth instead of milk, with miso, a jammy egg and scallions. Once you have had savory oats the sweet version starts to seem strange.",
+      "cuisine": "japanese-inspired",
+      "course": "breakfast",
+      "servings": 2,
+      "activeMin": 12,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "one-pot",
+        "quick",
+        "15-minute",
+        "budget",
+        "heart-star"
+      ],
+      "equipment": [
+        "saucepan"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.miso.white",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.mushroom.shiitake",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chilicrisp",
+          "qty": 2,
+          "unit": "tsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Soft-boil the eggs: 7 minutes from boiling, then ice water. Peel and halve.",
+        "Brown the mushrooms in the sesame oil for 5 minutes.",
+        "Add the oats and broth and simmer 5 minutes, stirring, until thick and creamy.",
+        "Stir the spinach in to wilt. Take the pan off the heat before whisking in the miso — boiling miso loses its aroma completely.",
+        "Top each bowl with an egg, scallions, sesame seeds and chili crisp."
+      ],
+      "kidTweak": "Not the recipe for a cautious eater. Make theirs with milk, cinnamon and fruit from the same pot of oats before the broth goes in.",
+      "restaurantTouch": "Miso off the heat, always. It takes two seconds to get right and it is the difference between savory and flat.",
+      "leftovers": "Keeps 2 days and thickens solid; loosen with broth.",
+      "heartNote": "Oat beta-glucan with about 8 g of protein and no added sugar. A serving of savory oats runs roughly a third the sugar of a flavored instant packet.",
+      "allergenNote": "Contains soy, egg and sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.buckwheat-pancakes",
+      "title": "Buckwheat Buttermilk Pancakes",
+      "blurb": "Nutty, tender and a genuine whole grain. The batter rests ten minutes while the pan heats, which is what makes them rise properly.",
+      "cuisine": "american",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "kid-favorite",
+        "budget",
+        "crave"
+      ],
+      "equipment": [
+        "griddle or skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.flour.wholewheat",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cornmeal",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.buttermilk",
+          "qty": 1.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "melted"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bakingsoda",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Whisk the dry ingredients. Whisk the buttermilk, eggs and melted butter separately.",
+        "Combine with a few strokes and stop while it is still lumpy. Overmixed pancake batter makes tough pancakes, every single time.",
+        "Rest the batter 10 minutes while the griddle heats over medium. The flour hydrates and the baking powder gets a head start.",
+        "Cook 2-3 minutes until bubbles form and the edges look dry, then flip once and cook 90 seconds more. One flip only.",
+        "Serve with maple syrup and blueberries. Keep them warm in a 200°F oven in a single layer, never stacked — stacked pancakes steam and go limp."
+      ],
+      "kidTweak": "Let them drop the blueberries onto each pancake after it hits the griddle. Distribution improves and so does buy-in.",
+      "restaurantTouch": "Melted butter in the batter, not just on the griddle. It is why diner pancakes taste better than yours.",
+      "leftovers": "Freeze flat in a bag with parchment between. They toast straight from frozen.",
+      "allergenNote": "Contains wheat, dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.freezer-breakfast-burritos",
+      "title": "Freezer Breakfast Burritos",
+      "blurb": "One hour on Sunday, twelve breakfasts in the freezer. Ninety seconds in the microwave and they are genuinely good, not just convenient.",
+      "cuisine": "tex-mex",
+      "course": "breakfast",
+      "servings": 12,
+      "activeMin": 45,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "make-ahead",
+        "freezer",
+        "meal-prep",
+        "budget",
+        "kid-favorite",
+        "batch"
+      ],
+      "equipment": [
+        "sheet pan",
+        "large skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "new-baby",
+        "weeknight-rush"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.sweetpotato",
+          "qty": 3,
+          "unit": "each",
+          "prep": "diced small"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 12,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.beans.black",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.cheese.monterey",
+          "qty": 8,
+          "unit": "oz",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.tortilla.flour",
+          "qty": 12,
+          "unit": "each",
+          "prep": "large"
+        },
+        {
+          "ing": "ing.salsa",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Roast the sweet potato, pepper and onion with the oil, chili powder, cumin and half the salt at 425°F for 25 minutes.",
+        "Scramble the eggs softly with the remaining salt — stop them while they are still glossy, because they cook again on reheating and dry eggs are what ruin freezer burritos.",
+        "Wilt the spinach in the residual heat of the egg pan and squeeze out any water.",
+        "Let everything cool to room temperature before assembling. Warm filling steams inside the wrap and gives you a soggy burrito and freezer ice.",
+        "Build each burrito with cheese first, then eggs, vegetables, beans and a spoonful of salsa. Fold the sides in, then roll tightly.",
+        "Wrap each in parchment, then freeze on a tray before bagging. To reheat: unwrap, microwave 90 seconds, flip, 45 seconds more — or 20 minutes at 350°F wrapped in foil."
+      ],
+      "kidTweak": "Make a few without the chili powder. Label them.",
+      "restaurantTouch": "Cheese against the tortilla on both sides of the filling. It seals the wrap and stops moisture getting into the bread.",
+      "leftovers": "Three months in the freezer. Do not refrigerate more than 3 days unfrozen.",
+      "heartNote": "About 21 g protein and 9 g fiber each, and roughly a third of the sodium of a fast-food breakfast sandwich.",
+      "allergenNote": "Contains egg, wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.skillet-granola",
+      "title": "Maple Olive Oil Granola",
+      "blurb": "Clusters that actually cluster: the trick is pressing it flat and not stirring it once it is in the oven. Forty minutes for two weeks of breakfasts.",
+      "cuisine": "american",
+      "course": "component",
+      "servings": 12,
+      "activeMin": 10,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "make-ahead",
+        "component",
+        "budget",
+        "heart-star",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "new-baby",
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.pecans",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.pumpkinseeds",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.flax.ground",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.cranberries.dried",
+          "qty": 0.75,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 325°F. Toss everything except the dried cranberries together until every oat is coated.",
+        "Tip it onto a parchment-lined sheet pan and press it down hard and flat with a spatula. That compression is what makes clusters.",
+        "Bake 35-40 minutes, rotating the pan once but never stirring. Stirring is what gives you loose granola instead of clusters.",
+        "It will still be soft when it comes out. Let it cool completely on the pan, untouched, for at least 45 minutes — it crisps as it cools.",
+        "Break it into chunks and fold in the dried cranberries. Add dried fruit after baking; in the oven it turns to charcoal."
+      ],
+      "kidTweak": "Bag some of the clusters on their own as a snack. It disappears faster than the cereal box does.",
+      "restaurantTouch": "Olive oil instead of a neutral oil. It sounds odd and it makes granola taste like it came from a good bakery.",
+      "leftovers": "Two weeks in a sealed jar; a month in the freezer.",
+      "heartNote": "Oats, nuts, seeds, flax and olive oil, sweetened with a half cup of maple across twelve servings — around 5 g fiber and 7 g protein a portion, and a fraction of the sugar in most boxed granola.",
+      "allergenNote": "Contains tree nut.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tofu-scramble",
+      "title": "Turmeric Tofu Scramble",
+      "blurb": "Crumbled firm tofu with turmeric for color and a pinch of black salt for the eggy note. Ten minutes, high protein, no eggs at all.",
+      "cuisine": "any",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "skillet",
+        "quick",
+        "15-minute",
+        "budget",
+        "heart-star",
+        "meal-prep"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tofu.firm",
+          "qty": 1,
+          "unit": "block",
+          "prep": "pressed and crumbled"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.spice.turmeric",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.nutritionalyeast",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 4,
+          "unit": "slice",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Press the tofu 10 minutes and crumble it by hand into uneven pieces — uniform cubes read as tofu, ragged crumbles read as scramble.",
+        "Cook the onion and pepper in the oil over medium-high for 5 minutes.",
+        "Add the tofu and cook 5 minutes without stirring much, letting some of it brown against the pan.",
+        "Add the turmeric, garlic powder, nutritional yeast, salt and pepper. The nutritional yeast is what makes it savory rather than beany.",
+        "Fold in the spinach until wilted. Serve on toast with avocado. A pinch of kala namak (black salt) at the end gives a genuinely eggy sulfur note if you can find it."
+      ],
+      "kidTweak": "Serve it in a warm tortilla with cheese and salsa and it becomes a breakfast taco.",
+      "restaurantTouch": "Let it sit still in the pan long enough to brown in patches. Constant stirring gives you a wet yellow pile.",
+      "leftovers": "Keeps 4 days and is excellent in burritos and fried rice.",
+      "heartNote": "About 16 g of complete plant protein a serving with no cholesterol at all — the practical swap for someone told to cut back on eggs.",
+      "allergenNote": "Contains soy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.slow-cooker-steel-cut-oats",
+      "title": "Overnight Slow Cooker Steel-Cut Oats",
+      "blurb": "Five minutes before bed, breakfast for a week waiting in the morning. Steel-cut oats hold their chew where rolled oats turn to glue.",
+      "cuisine": "american",
+      "course": "breakfast",
+      "servings": 6,
+      "activeMin": 5,
+      "totalMin": 430,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "slow-cooker",
+        "make-ahead",
+        "meal-prep",
+        "budget",
+        "heart-star",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "slow cooker"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oats.steelcut",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.soy",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.apple",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.flax.ground",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.walnuts",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.cranberries.dried",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Rub the crock with the teaspoon of oil — oats are the worst thing there is to scrub off a slow cooker.",
+        "Add the oats, soy milk, 3 cups water, apple, cinnamon and salt. Stir once.",
+        "Cook on low 7-8 hours. Set it before bed and it is done when you get up.",
+        "Stir in the maple, flax and half the walnuts in the morning. It will look too thick; a splash of milk brings it back.",
+        "Serve with the rest of the walnuts and the dried cranberries. Portion the leftovers into jars while it is still warm — it sets solid once cold."
+      ],
+      "kidTweak": "Set out bowls of toppings — berries, banana, chocolate chips, nuts — and let everyone build. Same pot, six different breakfasts.",
+      "restaurantTouch": "Salt in the oats. Unsalted porridge tastes like wallpaper paste no matter how much syrup goes on it.",
+      "leftovers": "Keeps 5 days portioned in jars. Reheat with a splash of milk.",
+      "heartNote": "Steel-cut oats plus flax plus walnuts: beta-glucan for LDL cholesterol, plant omega-3 from both the flax and the walnuts, and about 9 g of fiber a bowl.",
+      "allergenNote": "Contains soy and tree nut.",
+      "source": "ERRERLabs original"
     }
   ]
 }
