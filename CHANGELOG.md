@@ -7,6 +7,21 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **Costco and Sam's Club, as a second stop rather than another supermarket.** Picking one splits the
+  shopping list into two runs — the club first, because that is the trip with the frozen things in it
+  — each laid out in its own walking order and printed as two headed sections on the same sheet.
+- **A picker for what belongs on the bulk run**, sorted by whether it survives the pack: things that
+  keep at the top, things that need freezing next, and the ones a club pack would outlast at the
+  bottom with the reason attached. "Take the sensible ones" ticks the first two groups. Choices are
+  stored per ingredient, so "we always get the chicken at Costco" only has to be said once.
+- **The rot check.** A warehouse pack is only a saving if the food gets eaten, so every ingredient is
+  classified from data the app already had — the aisle, and the `pantry`, `storage` and `freezer`
+  tags: shelf-stable things are simply worth the big pack; meat, bread and hard cheese are worth it
+  *if portioned and frozen the day you get home*; delicate produce and fresh dairy are flagged as
+  buy-at-the-regular-store, with the share of a pack this plan actually uses. Forcing one onto the
+  club run anyway is allowed — the row just says "will not keep".
+- `js/bulk.js` and 12 tests covering the classification against the real ingredient data, including
+  that an unknown ingredient fails safe as perishable rather than as a bargain.
 - **141 new recipes, taking the collection from 89 to 230.** Whole cuisines rather than a token
   dish each: Sichuan mapo tofu and kung pao, Sapporo miso ramen, Japanese curry, okonomiyaki,
   japchae, kimchi jjigae, pad thai, green curry, pho chay, summer rolls, chana masala, palak paneer,

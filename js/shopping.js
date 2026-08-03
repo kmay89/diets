@@ -77,7 +77,9 @@ export function buildList(state, { includeOptional = false, includePantry = fals
       sources: rec.sources,
       inPantry,
       checked: !!state.checked[id],
-      tips: item.tips || null
+      tips: item.tips || null,
+      // The classifier needs the record itself, not just its aisle.
+      item
     });
   }
 
@@ -95,31 +97,63 @@ export function buildList(state, { includeOptional = false, includePantry = fals
   }
 
   const layout = storeLayouts[state.prefs.store] || storeLayouts.default;
-  const order = layout.order;
-  const groups = order
-    .map(aisleId => ({
-      aisle: aisleIndex.get(aisleId) || { id: aisleId, name: aisleId, icon: '🛒' },
-      items: items.filter(i => i.aisle === aisleId).sort((a, b) => a.name.localeCompare(b.name))
-    }))
-    .filter(g => g.items.length);
+  const bulkLayout = state.prefs.bulkStore ? storeLayouts[state.prefs.bulkStore] : null;
 
-  // Anything whose aisle is not in this store's layout still has to be bought.
-  const placed = new Set(groups.flatMap(g => g.items.map(i => i.key)));
-  const leftovers = items.filter(i => !placed.has(i.key));
-  if (leftovers.length) {
-    groups.push({ aisle: aisleIndex.get('other'), items: leftovers });
+  /** Lay a set of items out in one store's walking order. */
+  const groupFor = (list, storeLayout) => {
+    const groups = storeLayout.order
+      .map(aisleId => ({
+        aisle: aisleIndex.get(aisleId) || { id: aisleId, name: aisleId, icon: '🛒' },
+        items: list.filter(i => i.aisle === aisleId).sort((a, b) => a.name.localeCompare(b.name))
+      }))
+      .filter(g => g.items.length);
+
+    // Anything whose aisle is not in this store's layout still has to be bought.
+    const placed = new Set(groups.flatMap(g => g.items.map(i => i.key)));
+    const leftovers = list.filter(i => !placed.has(i.key));
+    if (leftovers.length) groups.push({ aisle: aisleIndex.get('other'), items: leftovers });
+    return groups;
+  };
+
+  // A warehouse club is a second stop, so the list becomes two runs in the
+  // order you would actually drive them: the club first, because that is the
+  // one with the frozen things that need to get home.
+  const forBulk = bulkLayout
+    ? items.filter(i => i.ingredientId && state.bulkPicks?.[i.ingredientId])
+    : [];
+  const bulkKeys = new Set(forBulk.map(i => i.key));
+  const forMain = items.filter(i => !bulkKeys.has(i.key));
+
+  const runs = [];
+  if (forBulk.length) {
+    runs.push({
+      store: { id: state.prefs.bulkStore, ...bulkLayout },
+      groups: groupFor(forBulk, bulkLayout),
+      items: forBulk
+    });
   }
+  runs.push({
+    store: { id: state.prefs.store, ...layout },
+    groups: groupFor(forMain, layout),
+    items: forMain
+  });
+
+  // `groups` stays the flat, single-store view every existing caller expects
+  // — the printed sheet, the exports — with the club's aisles simply first.
+  const groups = runs.flatMap(r => r.groups);
 
   const meta = {
     store: layout.name,
     storeNote: layout.note || '',
+    bulkStore: bulkLayout ? bulkLayout.name : null,
+    bulkCount: forBulk.length,
     totalItems: items.length,
     checkedItems: items.filter(i => i.checked).length,
     pantrySkipped: [...totals.keys()].filter(id => state.pantry[id]).length,
     mealCount: state.plan.length
   };
 
-  return { groups, items, meta };
+  return { groups, items, meta, runs };
 }
 
 /**

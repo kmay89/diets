@@ -96,29 +96,43 @@ export function printShoppingList(list) {
 
 function shoppingSheet(list) {
   // What is already in the cart is not what you are walking the store for.
-  const groups = list.groups
+  const prune = (gs) => gs
     .map(g => ({ aisle: g.aisle, items: g.items.filter(i => !i.checked) }))
     .filter(g => g.items.length);
+
+  // Two stops print as two headed sections on the one sheet — the point of a
+  // bulk run is that you do both trips off the same piece of paper.
+  const runs = (list.runs || [{ store: null, groups: list.groups }])
+    .map(r => ({ store: r.store, groups: prune(r.groups) }))
+    .filter(r => r.groups.length);
+  const split = runs.length > 1;
+  const groups = runs.flatMap(r => r.groups);
 
   const count = groups.reduce((n, g) => n + g.items.length, 0);
   const checked = list.meta.totalItems - count;
 
   return h('article', { class: `printout ${count > 60 ? 'printout--dense' : ''}` },
     sheetHead('Shopping list',
-      `${plural(count, 'item')} · ${plural(list.meta.mealCount, 'meal')} · ${list.meta.store} · ${today()}`),
+      `${plural(count, 'item')} · ${plural(list.meta.mealCount, 'meal')} · ` +
+      `${runs.map(r => r.store?.name).filter(Boolean).join(' + ') || list.meta.store} · ${today()}`),
 
     count
       ? h('div.printout__cols', { style: { columnCount: String(columnsFor(count)) } },
-          ...groups.map(g => h('section.printout__group',
-            h('h2.printout__group-title', g.aisle.name),
-            h('ul.printout__items',
-              ...g.items.map(i => h('li.printout__item',
-                h('span.printout__box'),
-                i.buy ? h('span.printout__qty', i.buy) : null,
-                h('span.printout__name', i.name)
-              ))
-            )
-          ))
+          ...runs.flatMap(run => [
+            split && run.store
+              ? h('h2.printout__store', run.store.name)
+              : null,
+            ...run.groups.map(g => h('section.printout__group',
+              h('h2.printout__group-title', g.aisle.name),
+              h('ul.printout__items',
+                ...g.items.map(i => h('li.printout__item',
+                  h('span.printout__box'),
+                  i.buy ? h('span.printout__qty', i.buy) : null,
+                  h('span.printout__name', i.name)
+                ))
+              )
+            ))
+          ].filter(Boolean))
         )
       : h('p.printout__empty', 'Everything on this list is already in the cart.'),
 

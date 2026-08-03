@@ -16,6 +16,7 @@ import { memberCard } from './member-card.js';
 import { openTasteEditor } from './taste-editor.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 import { promptInstall, isInstalled, isDismissed } from '../install.js';
+import { isWarehouse } from '../bulk.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -71,6 +72,22 @@ function view(draw, navigate) {
         h('select.input', { onchange: (e) => { setPref('store', e.target.value); draw(); } },
           ...Object.entries(db.storeLayouts).map(([id, l]) => h('option', { value: id, selected: state.prefs.store === id }, l.name)))
       ),
+      // Same preference the shopping list writes, so the two cannot disagree —
+      // it lives here as well because this is where somebody looks to set up
+      // their stores, and there because that is where they are using it.
+      h('label.field',
+        h('span.field__label', 'Bulk run (a second stop)'),
+        h('select.input', { onchange: (e) => { setPref('bulkStore', e.target.value || null); draw(); } },
+          h('option', { value: '', selected: !state.prefs.bulkStore }, 'No second stop'),
+          ...Object.entries(db.storeLayouts)
+            .filter(([id, l]) => isWarehouse(l) && id !== state.prefs.store)
+            .map(([id, l]) => h('option', { value: id, selected: state.prefs.bulkStore === id }, l.name)))
+      ),
+      state.prefs.bulkStore
+        ? h('p.fine-print',
+            'The shopping list splits into two runs, and the list screen has a picker for which groceries belong on the bulk one. ',
+            'It suggests the things that keep, and says which ones a club pack would outlast.')
+        : null,
       h('label.field',
         h('span.field__label', 'Appearance'),
         h('select.input', {
