@@ -311,7 +311,9 @@ function doneStep(state) {
       summaryRow('Pantry', `${pantry} items on hand`)
     ),
     h('p.lede', 'Next: roll a few dinners, check the ingredient lists against your kitchen, and send yourself a shopping list.'),
-    h('p.fine-print', 'Add this to your home screen from your browser menu and it will open like an app and work with no signal.')
+    h('p.fine-print',
+      'On an iPhone, tap Share and then “Add to Home Screen” — everywhere else it is in the browser menu. ',
+      'It then opens like an app and works with no signal.')
   );
 }
 

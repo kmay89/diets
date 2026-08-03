@@ -8,6 +8,7 @@ import { h, mount, chip, toast, sheet, titleCase } from '../ui.js';
 import { getDb } from '../data.js';
 import { play, stagger } from '../feedback.js';
 import { foodIcon } from '../food-icon.js';
+import { printShoppingList } from '../print.js';
 import {
   getState, setPref, addCustomItem, removeCustomItem, toggleChecked,
   suppressItem, clearChecked, togglePantry
@@ -84,7 +85,11 @@ function view(draw, navigate) {
       h('button.btn', { type: 'button', onclick: () => openExport(list, draw) }, 'Export…'),
       h('a.btn', { href: mailtoLink(list) }, '✉️ Email'),
       h('a.btn', { href: smsLink(list) }, '💬 Text'),
-      h('button.btn', { type: 'button', onclick: () => window.print() }, '🖨 Print')
+      h('button.btn', {
+        type: 'button',
+        title: 'One condensed page: everything still to buy, in aisle order',
+        onclick: () => printShoppingList(list)
+      }, '🖨 Print')
     ),
 
     ...list.groups.map(g => aisleBlock(g, state, draw)),

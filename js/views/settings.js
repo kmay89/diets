@@ -14,6 +14,7 @@ import { downloadFile } from '../shopping.js';
 import { memberCard } from './member-card.js';
 import { openTasteEditor } from './taste-editor.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
+import { promptInstall, isInstalled, isDismissed } from '../install.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -174,8 +175,15 @@ function view(draw, navigate) {
             }
           }
         }, 'Check for updates'),
-        h('button.btn', { type: 'button', onclick: () => { window.__dietsInstall?.(); } }, '📲 Add to home screen')
-      )
+        isInstalled()
+          ? null
+          : h('button.btn', { type: 'button', onclick: () => promptInstall() }, '📲 Add to home screen')
+      ),
+      // Dismissing the banner is meant to be final, so this is where it lives
+      // afterwards — otherwise "not now" quietly means "never".
+      !isInstalled() && isDismissed()
+        ? h('p.fine-print', 'You dismissed the home-screen banner. The button above still walks you through it.')
+        : null
     )
   );
 }

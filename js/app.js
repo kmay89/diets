@@ -9,6 +9,8 @@ import { loadAll } from './data.js';
 import { loadCitations } from './citations.js';
 import { loadOccasions } from './occasions.js';
 import { initFeedback, play } from './feedback.js';
+import { initInstall } from './install.js';
+import { matchRoute } from './routes.js';
 import { getState, subscribe } from './store.js';
 
 import * as onboarding from './views/onboarding.js';
@@ -21,18 +23,19 @@ import * as gardenView from './views/garden.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
 
-const ROUTES = [
-  { pattern: /^#\/onboarding$/, view: (m) => ({ render: onboarding.render, params: {} }) },
-  { pattern: /^#\/roll$/, view: () => ({ render: rollView.render, params: {} }) },
-  { pattern: /^#\/plan$/, view: () => ({ render: planView.render, params: {} }) },
-  { pattern: /^#\/browse$/, view: () => ({ render: recipeView.renderBrowse, params: {} }) },
-  { pattern: /^#\/recipe\/(.+)$/, view: (m) => ({ render: recipeView.render, params: { id: m[1] } }) },
-  { pattern: /^#\/pantry$/, view: () => ({ render: pantryView.render, params: {} }) },
-  { pattern: /^#\/list$/, view: () => ({ render: listView.render, params: {} }) },
-  { pattern: /^#\/garden$/, view: () => ({ render: gardenView.render, params: {} }) },
-  { pattern: /^#\/settings$/, view: () => ({ render: settingsView.render, params: {} }) },
-  { pattern: /^#\/why$/, view: () => ({ render: whyView.render, params: {} }) }
-];
+/** Route id → the view it draws. The patterns themselves live in routes.js. */
+const VIEWS = {
+  onboarding: () => ({ render: onboarding.render, params: {} }),
+  roll: () => ({ render: rollView.render, params: {} }),
+  plan: () => ({ render: planView.render, params: {} }),
+  browse: () => ({ render: recipeView.renderBrowse, params: {} }),
+  recipe: (m) => ({ render: recipeView.render, params: { id: m[1] } }),
+  pantry: () => ({ render: pantryView.render, params: {} }),
+  list: () => ({ render: listView.render, params: {} }),
+  garden: () => ({ render: gardenView.render, params: {} }),
+  settings: () => ({ render: settingsView.render, params: {} }),
+  why: () => ({ render: whyView.render, params: {} })
+};
 
 // Five tabs, because a row of eight is a wall of icons nobody reads. The rest
 // live one tap away behind More, which is where people look for them anyway.
@@ -61,7 +64,10 @@ function route() {
   const hash = location.hash || (getState().onboarded ? '#/roll' : '#/onboarding');
   if (!location.hash) { location.replace(hash); return; }
 
-  const match = ROUTES.find(r => r.pattern.test(hash));
+  // A link can carry a query — #/browse?occasion=picnic comes off the roll
+  // screen — and matchRoute ignores it, leaving the view to read location.hash
+  // for whatever it needs.
+  const match = matchRoute(hash);
   const main = $('#main');
 
   if (!match) {
@@ -70,7 +76,7 @@ function route() {
     return;
   }
 
-  const { render, params } = match.view(hash.match(match.pattern));
+  const { render, params } = VIEWS[match.id](match.match);
   main.scrollTop = 0;
   window.scrollTo(0, 0);
   currentRoot = main;
@@ -116,56 +122,6 @@ function openMore() {
   ));
 }
 
-/* ---------- install prompt ---------- */
-
-let deferredPrompt = null;
-const INSTALL_DISMISSED = 'errerlabs.diets.installDismissed';
-
-function showInstallAffordances(on) {
-  const banner = $('#install-banner');
-  const btn = $('#install-btn');
-  const dismissed = localStorage.getItem(INSTALL_DISMISSED) === '1';
-  if (banner) banner.hidden = !on || dismissed;
-  if (btn) btn.hidden = !on;
-}
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  showInstallAffordances(true);
-});
-
-window.addEventListener('appinstalled', () => {
-  deferredPrompt = null;
-  showInstallAffordances(false);
-  toast('Installed — look for it on your home screen');
-});
-
-window.__dietsInstall = async () => {
-  if (!deferredPrompt) {
-    // iOS and desktop Safari never fire beforeinstallprompt; the browser menu
-    // is the only route there.
-    toast('Use your browser menu → "Add to Home Screen"', { duration: 4000 });
-    return;
-  }
-  deferredPrompt.prompt();
-  const { outcome } = await deferredPrompt.userChoice;
-  deferredPrompt = null;
-  showInstallAffordances(false);
-  if (outcome === 'accepted') toast('Installing…');
-};
-
-/** Wired here rather than with inline onclick, so the page needs no 'unsafe-inline'. */
-function wireInstallButtons() {
-  $('#install-btn')?.addEventListener('click', () => window.__dietsInstall());
-  $('#install-accept')?.addEventListener('click', () => window.__dietsInstall());
-  $('#install-dismiss')?.addEventListener('click', () => {
-    localStorage.setItem(INSTALL_DISMISSED, '1');
-    const banner = $('#install-banner');
-    if (banner) banner.hidden = true;
-  });
-}
-
 /* ---------- boot ---------- */
 
 async function boot() {
@@ -185,7 +141,7 @@ async function boot() {
 
   settingsView.applyTheme(getState().prefs.theme || 'system');
   buildChrome();
-  wireInstallButtons();
+  initInstall();
   initFeedback();
 
   const splash = $('#splash');
