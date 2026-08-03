@@ -7,6 +7,28 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **Shop at as many stores as you actually shop at.** Kroger and Costco, Meijer and Costco, Marc's
+  and Aldi — the list splits into a run per store, in the order you tap them, each in its own walking
+  order, and prints as headed sections on one sheet. A store you shop at but need nothing from this
+  week is left out rather than shown empty.
+- **Nine more stores**: Marc's, Walmart, Target, Whole Foods, Trader Joe's and Amazon Grocery join
+  Costco and Sam's Club, alongside the chains that were already there. Each carries a note about how
+  its trip actually goes.
+- **No setup screen, on purpose.** The app learns where things come from by watching somebody sort a
+  list once, because that is the only moment they are thinking about it. Move a row and it remembers
+  the item. Move three things out of the same aisle to the same store and it offers to generalize —
+  *"You keep sending meat & seafood to Costco. Always?"* — inline in that aisle, ignorable, and asked
+  once: a "just these" is remembered as firmly as an "always".
+- Where an item gets bought resolves in one order: what you said about that exact thing, then what
+  you said about its aisle, then home base. Dropping a store releases whatever was filed there rather
+  than stranding it on a stop nobody is making.
+
+### Changed
+- The old Costco-only "bulk run" is now the general case. An existing two-store setup migrates on
+  load — `bulkStore` becomes the second stop and every bulk pick becomes an assignment to it — so
+  nobody has to say it twice. The warehouse advice is unchanged and now hangs off any club run.
+
+### Added
 - **Costco and Sam's Club, as a second stop rather than another supermarket.** Picking one splits the
   shopping list into two runs — the club first, because that is the trip with the frozen things in it
   — each laid out in its own walking order and printed as two headed sections on the same sheet.

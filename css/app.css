@@ -744,6 +744,26 @@ button.tabbar__item {
    Wrapping only at spaces: "baby spina/ch" is worse than two clean lines. */
 .list-item__name { flex: 1; min-width: 0; text-decoration: underline dotted var(--line); text-underline-offset: 3px; }
 .list-item.is-checked .list-item__name, .list-item.is-checked .list-item__qty { color: var(--ink-faint); text-decoration: line-through; }
+/* ---------- where you shop ---------- */
+
+.store-picker { display: grid; gap: 4px; margin-bottom: var(--sp-3); }
+.store-picker .chip-row { margin-bottom: 2px; }
+.store-picker .fine-print { margin: 0; }
+
+/* The one question this feature asks. Sits inside the aisle it is about, so it
+   is obviously about that aisle, and is ignorable — no overlay, no modal. */
+.rule-offer {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--sp-3);
+  margin: 0 0 var(--sp-3);
+  padding: var(--sp-3);
+  border: 1px dashed var(--green-300);
+  border-radius: var(--radius-sm);
+  background: var(--green-050);
+}
+.rule-offer__text { font-size: .88rem; }
+.rule-offer__actions { display: flex; gap: var(--sp-2); }
+
 /* ---------- the bulk run ---------- */
 
 /* Two stops need a visible seam, or the list reads as one long shop. */

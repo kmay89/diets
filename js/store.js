@@ -40,8 +40,15 @@ function defaultState() {
       preferPantry: true,
       avoidAllergens: [],
       store: 'default',
-      /** A warehouse club as a *second* stop, or null for one-store shopping.
-       *  Not a replacement for `store`: nobody does the whole week at Costco. */
+      /**
+       * The stores this household actually shops at, in the order they get
+       * driven. The first one is home base: anything with no opinion attached
+       * ends up there, so a one-store household never sees a second section.
+       *
+       * `store` above stays as the home store so nothing that reads it breaks.
+       */
+      stores: [],
+      /** Kept so an existing setup migrates cleanly. Superseded by `stores`. */
       bulkStore: null,
       rollSize: 4,
       theme: 'system'
@@ -62,9 +69,21 @@ function defaultState() {
     checked: {},
     /** ingredientIds the user removed from this week's list by hand */
     suppressed: {},
-    /** ingredientId -> true when this one is bought at the warehouse club
-     *  instead of the regular store. Survives the plan changing, so "we always
-     *  get the chicken at Costco" only has to be said once. */
+    /**
+     * ingredientId -> storeId. Set by moving a row, never by a setup wizard:
+     * the app learns where things come from by watching somebody sort their
+     * list once, which is the only moment they are actually thinking about it.
+     */
+    assignments: {},
+    /**
+     * aisleId -> storeId. The generalization of the above — "we get all our
+     * meat at Costco" rather than eleven separate facts about meat. Offered
+     * only after the same aisle has been moved a few times, and only once.
+     */
+    aisleRules: {},
+    /** aisleId -> true when the offer above was declined, so it stays declined. */
+    declinedRules: {},
+    /** Superseded by `assignments`; migrated on load. */
     bulkPicks: {},
     /** recipeIds recently cooked, newest first */
     history: [],
@@ -97,13 +116,44 @@ function migrate(saved) {
     ...saved,
     schema: SCHEMA,
     household: { ...base.household, ...(saved.household || {}) },
-    prefs: { ...base.prefs, ...(saved.prefs || {}) },
     // History used to be a bare list of recipe ids. Those entries are real —
     // they just have no date, so they count as "cooked at some point" and stay
     // out of anything that measures a window of time.
     history: (saved.history || []).map(e =>
       typeof e === 'string' ? { id: e, at: null } : e
-    ).filter(e => e && e.id)
+    ).filter(e => e && e.id),
+    ...migrateStores(base, saved)
+  };
+}
+
+/**
+ * The two-store version of this shipped before the many-store one, so a
+ * household that already told the app "Kroger, and Costco for the chicken"
+ * must not have to say it twice.
+ *
+ * `bulkStore` becomes the second entry in `stores`, and every `bulkPicks` id
+ * becomes an assignment to it. The old fields are left in place rather than
+ * deleted: they cost nothing, and a backup restored into an older build still
+ * works.
+ */
+function migrateStores(base, saved) {
+  const prefs = { ...base.prefs, ...(saved.prefs || {}) };
+  const assignments = { ...(saved.assignments || {}) };
+
+  if (!(prefs.stores || []).length) {
+    prefs.stores = [prefs.store, prefs.bulkStore].filter(Boolean);
+  }
+  if (prefs.bulkStore && saved.bulkPicks) {
+    for (const id of Object.keys(saved.bulkPicks)) {
+      if (!assignments[id]) assignments[id] = prefs.bulkStore;
+    }
+  }
+
+  return {
+    prefs,
+    assignments,
+    aisleRules: { ...base.aisleRules, ...(saved.aisleRules || {}) },
+    declinedRules: { ...base.declinedRules, ...(saved.declinedRules || {}) }
   };
 }
 
@@ -360,29 +410,64 @@ export function resetAll() {
   return state;
 }
 
-/**
- * Move one item between the regular store and the warehouse club.
+/* ------------------------------------------------------------------ *
+ * Where things get bought
  *
- * Keyed by ingredient rather than by list entry, so the choice outlives this
- * week's plan — the whole point is that it is a standing preference.
- */
-export function toggleBulkPick(ingredientId, force) {
+ * There is no setup wizard here on purpose. The only moment somebody is
+ * actually thinking about which store a thing comes from is the moment they
+ * are sorting a list, so that is the moment the app listens: move a row, and
+ * it remembers. Move three rows out of the same aisle and it offers to
+ * generalize, once, and never asks about that aisle again either way.
+ * ------------------------------------------------------------------ */
+
+/** The stores this household shops at, home store first. */
+export function shoppingStores(s = state) {
+  const list = (s.prefs.stores || []).filter(Boolean);
+  if (list.length) return list;
+  // Nobody has set this up yet — fall back to the single store they already
+  // chose, plus the old bulk store if that is how they had it configured.
+  return [s.prefs.store, s.prefs.bulkStore].filter(Boolean);
+}
+
+export function setStores(ids) {
   update(s => {
-    const next = force ?? !s.bulkPicks[ingredientId];
-    if (next) s.bulkPicks[ingredientId] = true;
-    else delete s.bulkPicks[ingredientId];
+    const next = [...new Set(ids.filter(Boolean))];
+    s.prefs.stores = next;
+    // The home store is the first one, and `prefs.store` is what the rest of
+    // the app still reads for a single-store answer.
+    if (next.length) s.prefs.store = next[0];
+    // Anything pinned to a store that is no longer on the list goes back to
+    // having no opinion, rather than silently vanishing from the trip.
+    const live = new Set(next);
+    for (const [k, v] of Object.entries(s.assignments)) if (!live.has(v)) delete s.assignments[k];
+    for (const [k, v] of Object.entries(s.aisleRules)) if (!live.has(v)) delete s.aisleRules[k];
   });
 }
 
-export function setBulkPicks(ingredientIds) {
+/** Pin one ingredient to a store, or pass null to let the rules decide again. */
+export function assignItem(ingredientId, storeId) {
   update(s => {
-    s.bulkPicks = {};
-    for (const id of ingredientIds) s.bulkPicks[id] = true;
+    if (storeId) s.assignments[ingredientId] = storeId;
+    else delete s.assignments[ingredientId];
   });
 }
 
-export function clearBulkPicks() {
-  update(s => { s.bulkPicks = {}; });
+/** "We get all our meat at Costco." Null clears it. */
+export function setAisleRule(aisleId, storeId) {
+  update(s => {
+    if (storeId) s.aisleRules[aisleId] = storeId;
+    else delete s.aisleRules[aisleId];
+    delete s.declinedRules[aisleId];
+  });
+}
+
+/** Said no to generalizing this aisle. Asked once, then dropped. */
+export function declineAisleRule(aisleId) {
+  update(s => { s.declinedRules[aisleId] = true; });
+}
+
+export function clearStoreMemory() {
+  update(s => { s.assignments = {}; s.aisleRules = {}; s.declinedRules = {}; });
 }
 
 export function setPref(key, value) {

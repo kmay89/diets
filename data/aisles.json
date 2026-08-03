@@ -258,6 +258,29 @@
         "other"
       ]
     },
+    "marcs": {
+      "name": "Marc's",
+      "note": "A deep-discount store, so the front is closeout general merchandise and the pharmacy and the groceries are further in. Produce is the reason to go and the prices are the reason to go often, but the center-store selection moves week to week — worth having a second stop for the things you always need.",
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "canned-jarred",
+        "dry-goods",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "baking",
+        "nuts-seeds",
+        "international",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
+    },
     "acme-fresh": {
       "name": "Acme Fresh Market",
       "note": "Strong local produce program in summer — Ohio sweet corn, tomatoes, and peaches in season.",
@@ -289,6 +312,98 @@
         "bakery",
         "dairy-eggs",
         "meat-seafood",
+        "other"
+      ]
+    },
+    "walmart": {
+      "name": "Walmart",
+      "note": "A supercenter: groceries are one half of a very large building, so come in the grocery entrance or the trip doubles. Produce and the bakery are at that end, the cold wall runs along the back, and the center aisles are deep — the list in aisle order is doing real work here.",
+      "order": [
+        "produce",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dairy-eggs",
+        "canned-jarred",
+        "dry-goods",
+        "international",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "baking",
+        "nuts-seeds",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
+    },
+    "target": {
+      "name": "Target",
+      "note": "Grocery is a corner of the store rather than the store, so the run is short: one produce and dairy wall, a couple of center aisles, and a frozen run. Good for the staples on the way past, not for a full week.",
+      "order": [
+        "produce",
+        "dairy-eggs",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "dry-goods",
+        "canned-jarred",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "baking",
+        "nuts-seeds",
+        "international",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
+    },
+    "whole-foods": {
+      "name": "Whole Foods",
+      "note": "Produce and prepared food at the front, butcher and fish counter along the back, and the bulk bins are worth the trip for grains, lentils and nuts in the amount you actually want.",
+      "order": [
+        "produce",
+        "deli",
+        "bakery",
+        "meat-seafood",
+        "dairy-eggs",
+        "dry-goods",
+        "nuts-seeds",
+        "canned-jarred",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "baking",
+        "frozen",
+        "beverages",
+        "household",
+        "other"
+      ]
+    },
+    "trader-joes": {
+      "name": "Trader Joe's",
+      "note": "Small, one-way, and mostly own-brand: you walk it in a loop and either they have it or they do not. Excellent for frozen, nuts, dairy and the odd sauce; not the place to expect a specific brand of anything.",
+      "order": [
+        "produce",
+        "bakery",
+        "dairy-eggs",
+        "deli",
+        "meat-seafood",
+        "nuts-seeds",
+        "dry-goods",
+        "canned-jarred",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "baking",
+        "frozen",
+        "beverages",
+        "household",
         "other"
       ]
     },
@@ -337,6 +452,30 @@
         "deli",
         "meat-seafood",
         "frozen",
+        "other"
+      ]
+    },
+    "amazon": {
+      "name": "Amazon Grocery",
+      "kind": "delivery",
+      "note": "Delivered, so there is no walking order to optimize — the sections are just how the basket reads back. Best for the shelf-stable half of a list; anything fresh is a gamble on substitutions and a box that sat on a step.",
+      "order": [
+        "dry-goods",
+        "canned-jarred",
+        "nuts-seeds",
+        "baking",
+        "condiments",
+        "oils-vinegars",
+        "spices",
+        "international",
+        "beverages",
+        "household",
+        "frozen",
+        "dairy-eggs",
+        "bakery",
+        "deli",
+        "meat-seafood",
+        "produce",
         "other"
       ]
     }
