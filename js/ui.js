@@ -29,7 +29,7 @@ export function h(spec, props = null, ...children) {
   for (const [k, v] of Object.entries(props || {})) {
     if (v == null || v === false) continue;
     if (k === 'class') node.className = [node.className, v].filter(Boolean).join(' ');
-    else if (k === 'style' && typeof v === 'object') Object.assign(node.style, v);
+    else if (k === 'style' && typeof v === 'object') setStyle(node, v);
     else if (k === 'dataset') Object.assign(node.dataset, v);
     else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2).toLowerCase(), v);
     else if (k === 'html') node.innerHTML = v;
@@ -39,6 +39,19 @@ export function h(spec, props = null, ...children) {
 
   append(node, children);
   return node;
+}
+
+/**
+ * Custom properties are invisible to `Object.assign(node.style, …)` — the
+ * assignment succeeds and sets nothing, so `--ring-pct` silently never
+ * arrives and the element renders as though the value were absent.
+ */
+function setStyle(node, styles) {
+  for (const [prop, value] of Object.entries(styles)) {
+    if (value == null) continue;
+    if (prop.startsWith('--')) node.style.setProperty(prop, String(value));
+    else node.style[prop] = value;
+  }
 }
 
 function append(node, children) {

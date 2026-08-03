@@ -1,7 +1,6 @@
 {
   "schema": "vegnourish.claims/1",
   "note": "Every factual statement the app makes outside a recipe lives here, attached to the sources in citations.json. If a claim cannot be sourced, it does not belong in this file — and it does not belong on the screen.",
-
   "topics": [
     {
       "id": "nourishment",
@@ -16,18 +15,30 @@
         {
           "id": "nourish.fibre",
           "text": "Most people eat around half the fibre associated with the lowest risk of early death — the sweet spot in the evidence sits between 25 g and 30 g a day.",
-          "cites": ["reynolds2019"],
+          "cites": [
+            "reynolds2019"
+          ],
           "strength": "meta-analysis"
         },
         {
           "id": "nourish.addition",
           "text": "Eating more fibre-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
-          "cites": ["reynolds2019"],
+          "cites": [
+            "reynolds2019"
+          ],
           "strength": "meta-analysis"
+        },
+        {
+          "id": "nourish.plants",
+          "text": "People who eat more than 30 different plant foods in a week carry a more diverse set of gut bacteria than people who eat 10 or fewer.",
+          "cites": [
+            "mcdonald2018"
+          ],
+          "strength": "cohort",
+          "detail": "Thirty is a useful nudge toward variety rather than a threshold with a health outcome attached. Herbs, spices, nuts, seeds, grains and pulses all count toward it."
         }
       ]
     },
-
     {
       "id": "heart",
       "title": "What food does to a heart — and what it doesn't",
@@ -45,34 +56,44 @@
             {
               "id": "heart.fats",
               "text": "Replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular disease by about 30% in randomised trials — an effect the American Heart Association notes is similar in size to statin treatment.",
-              "cites": ["sacks2017"],
+              "cites": [
+                "sacks2017"
+              ],
               "strength": "guideline",
               "detail": "The benefit is in the swap. Cutting saturated fat and replacing it with refined starch or sugar does not produce the same result, which is why this app cooks with olive oil rather than simply cooking with less."
             },
             {
               "id": "heart.pattern",
               "text": "A Mediterranean-style pattern with extra-virgin olive oil or nuts cut heart attacks, strokes and cardiovascular death by roughly 30% over five years in a randomised trial of nearly 7,500 people at high risk.",
-              "cites": ["estruch2018"],
+              "cites": [
+                "estruch2018"
+              ],
               "strength": "rct",
               "detail": "This trial was retracted and republished in 2018 after randomisation problems at some sites. The reanalysis reached the same conclusions. We cite the corrected version, and we mention the retraction because a citation engine that hides inconvenient history is decoration."
             },
             {
               "id": "heart.sodium",
               "text": "Swapping ordinary salt for a potassium-based salt substitute reduced stroke by about 14% and death by about 12% in a five-year randomised trial of nearly 21,000 people.",
-              "cites": ["neal2021"],
+              "cites": [
+                "neal2021"
+              ],
               "strength": "rct",
               "detail": "Potassium-based substitutes are not safe for everyone — kidney disease and some blood-pressure medications make them risky. Ask a clinician before switching. The broader point stands on its own: sodium is worth taking seriously, and most of it arrives from packaged food and restaurant food rather than the salt shaker."
             },
             {
               "id": "heart.fibre",
               "text": "People eating the most dietary fibre had 15–30% lower cardiovascular and all-cause mortality than those eating the least.",
-              "cites": ["reynolds2019"],
+              "cites": [
+                "reynolds2019"
+              ],
               "strength": "meta-analysis"
             },
             {
               "id": "heart.oats",
               "text": "Oats and barley carry an FDA-authorised heart-disease health claim at 3 g of beta-glucan soluble fibre a day.",
-              "cites": ["fda-betaglucan"],
+              "cites": [
+                "fda-betaglucan"
+              ],
               "strength": "regulatory"
             }
           ]
@@ -89,13 +110,17 @@
             {
               "id": "heart.fh",
               "text": "In inherited high cholesterol, lifestyle change is an adjunct to medication and is unlikely to reach treatment targets on its own.",
-              "cites": ["nla-fh"],
+              "cites": [
+                "nla-fh"
+              ],
               "strength": "guideline"
             },
             {
               "id": "heart.guideline",
               "text": "Major cholesterol guidelines treat a heart-healthy dietary pattern as the foundation for everyone, and drug therapy as necessary on top of it for defined risk groups — not as an either/or.",
-              "cites": ["grundy2019"],
+              "cites": [
+                "grundy2019"
+              ],
               "strength": "guideline"
             },
             {
@@ -108,7 +133,6 @@
         }
       ]
     },
-
     {
       "id": "planet",
       "title": "What it means for the planet",
@@ -118,33 +142,41 @@
         {
           "id": "planet.share",
           "text": "Food systems account for roughly a quarter to a third of global greenhouse gas emissions — 26% by one widely cited estimate, 34% by another using a broader boundary.",
-          "cites": ["poore2018", "crippa2021"],
+          "cites": [
+            "poore2018",
+            "crippa2021"
+          ],
           "strength": "modelling",
           "detail": "The two estimates differ because they draw the system boundary differently, not because one is wrong. The IPCC's own range is 21–37%. We quote the range rather than the most dramatic number in it."
         },
         {
           "id": "planet.land",
           "text": "Animal products use around 83% of the world's farmland while providing about 18% of its calories and 37% of its protein.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "meta-analysis"
         },
         {
           "id": "planet.shift",
           "text": "A global shift away from animal products would cut farmland use by around 76% and food's greenhouse gas emissions by roughly half.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "modelling",
           "detail": "That is a global thought experiment, not a prediction and not a demand. The practical read is directional: moving some meals toward plants moves the number, and the size of the shift scales with how much you actually change."
         },
         {
           "id": "planet.variation",
           "text": "Impact varies enormously between producers of the same food — so where something was grown can matter as much as what it is.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "meta-analysis",
           "detail": "This cuts against tidy rules. It is also why this app does not put a carbon score on every recipe: the honest error bars would be wider than the differences we would be claiming to show."
         }
       ]
     },
-
     {
       "id": "wallet",
       "title": "What it means for the grocery bill",
@@ -154,20 +186,23 @@
         {
           "id": "wallet.cost",
           "text": "Modelled across 150 countries, vegetarian and vegan patterns cost 21–34% less than the current typical diet in high-income countries; a low-meat flexitarian pattern about 14% less.",
-          "cites": ["springmann2021"],
+          "cites": [
+            "springmann2021"
+          ],
           "strength": "modelling",
           "detail": "This models retail food prices only. It does not count your time, your kitchen, or whether the cheap options are stocked where you shop — all of which are real costs, and none of which show up in a price index."
         },
         {
           "id": "wallet.practical",
           "text": "The savings come from the substitutions, not from buying speciality products. Meat substitutes and packaged plant foods are frequently more expensive than the meat they replace.",
-          "cites": ["springmann2021"],
+          "cites": [
+            "springmann2021"
+          ],
           "strength": "editorial",
           "detail": "Which is why almost nothing in this collection calls for a meat substitute. Beans, lentils, eggs, tofu, grains and whatever is in season do the work."
         }
       ]
     },
-
     {
       "id": "animals",
       "title": "What it means for animals",
@@ -177,7 +212,9 @@
         {
           "id": "animals.count",
           "text": "More than 80 billion land animals were slaughtered for meat worldwide in 2022, the great majority of them chickens.",
-          "cites": ["owid-animals"],
+          "cites": [
+            "owid-animals"
+          ],
           "strength": "dataset",
           "detail": "That count excludes fish and other aquatic animals, which are reported by weight rather than by individual, and excludes animals that die in egg and dairy production."
         },

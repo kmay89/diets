@@ -71,6 +71,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# The two typefaces, self-hosted so the CSP never has to name another origin.
+# Their filenames carry no hash, but a typeface is only ever replaced by a
+# different file, so a year of immutable is safe and saves the round trip.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "font/woff2"
+
 # The per-recipe preview images. Link previews are cached hard by iMessage,
 # Slack and friends, so these are treated as immutable and a changed card gets
 # a changed filename via its slug.

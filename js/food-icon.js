@@ -86,3 +86,66 @@ export function foodIcon(item, { size = 24 } = {}) {
 
   return img;
 }
+
+/* ------------------------------------------------------------------ *
+ * Picking which ingredients to draw
+ * ------------------------------------------------------------------ */
+
+/** Words too common to identify anything — every recipe has salt and oil. */
+const TOO_GENERIC = new Set([
+  'salt', 'water', 'oil', 'pepper', 'spice', 'broth', 'stock', 'sugar', 'flour', 'kosher'
+]);
+
+/**
+ * Aisles that are the medium rather than the subject.
+ *
+ * Blocking the word "olive" would take the olives with the olive oil, so the
+ * distinction is drawn at the aisle instead: a step is about the broccoli, not
+ * about the fat it was tossed in, even though it names both. These still get
+ * drawn when nothing else in the step matched — "heat the oil in a dutch oven"
+ * is genuinely about the oil.
+ */
+const BACKGROUND_AISLES = new Set(['oils-vinegars', 'spices', 'baking']);
+
+/** The words that would let you point at this ingredient across a kitchen. */
+function matchKeys(item) {
+  const fromId = String(item.id).replace(/^ing\./, '').split('.');
+  const fromName = String(item.name).toLowerCase().match(/[a-z]+/g) || [];
+  const keys = new Set();
+  for (const w of [...fromId, ...fromName]) {
+    if (w.length >= 4 && !TOO_GENERIC.has(w)) keys.add(w);
+  }
+  return [...keys].sort((a, b) => b.length - a.length);
+}
+
+/**
+ * The ingredients a piece of text actually names, in the order it names them.
+ *
+ * Used to illustrate a cooking step from its own instruction, and to work out
+ * which ingredients a recipe title is about — "Weeknight Lentil Bolognese"
+ * should be drawn with lentils, not with whichever tin happens to weigh most.
+ * Returns nothing rather than something arbitrary when there is no match.
+ */
+export function ingredientsNamedIn(text, lines, ingIndex, limit = 3) {
+  const hay = ` ${String(text).toLowerCase()} `;
+  const hits = [];
+  const seen = new Set();
+
+  for (const line of lines || []) {
+    const item = ingIndex.get(line.ing);
+    if (!item || seen.has(item.id)) continue;
+    for (const key of matchKeys(item)) {
+      const at = hay.indexOf(key);
+      if (at === -1) continue;
+      hits.push({ item, at });
+      seen.add(item.id);
+      break;
+    }
+  }
+
+  hits.sort((a, b) => a.at - b.at);
+
+  const foreground = hits.filter(x => !BACKGROUND_AISLES.has(x.item.aisle));
+  const chosen = foreground.length ? foreground : hits;
+  return chosen.slice(0, limit).map(x => x.item);
+}
