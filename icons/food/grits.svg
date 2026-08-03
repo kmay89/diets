@@ -8,9 +8,5 @@
     <radialGradient id="grits-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFEFA8"/><stop offset="0.48" stop-color="#F2CE3E"/><stop offset="1" stop-color="#B08F12"/></radialGradient>
     <radialGradient id="grits-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#grits-depth)">
-  <path d="M9 31h46a23 21 0 0 1-46 0Z" fill="url(#grits-a)"/>
-  <ellipse cx="32" cy="31" rx="23" ry="6" fill="url(#grits-b)"/>
-  <path d="M24 28q8-5 16 0" fill="none" stroke-width="1.6" opacity="0.7"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#grits-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.97826) translate(-32 -38.5)"><path d="M9 31h46a23 21 0 0 1-46 0Z" fill="url(#grits-a)"/><ellipse cx="32" cy="31" rx="23" ry="6" fill="url(#grits-b)"/><path d="M24 28q8-5 16 0" fill="none" stroke-width="1.6" opacity="0.7"/></g></g>
 </svg>

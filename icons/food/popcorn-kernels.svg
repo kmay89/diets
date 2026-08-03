@@ -8,9 +8,5 @@
     <radialGradient id="popcorn-kernels-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFDCA0"/><stop offset="0.48" stop-color="#E8B44A"/><stop offset="1" stop-color="#A87420"/></radialGradient>
     <radialGradient id="popcorn-kernels-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#popcorn-kernels-depth)">
-  <path d="M18 21q14-9 28 0v27q-14 7-28 0Z" fill="url(#popcorn-kernels-a)"/>
-  <path d="M18 21q14 9 28 0" fill="none"/>
-  <rect x="24" y="31" width="16" height="11" rx="2.5" fill="url(#popcorn-kernels-b)" stroke="none" opacity="0.9"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#popcorn-kernels-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.28571) translate(-32 -34)"><path d="M18 21q14-9 28 0v27q-14 7-28 0Z" fill="url(#popcorn-kernels-a)"/><path d="M18 21q14 9 28 0" fill="none"/><rect x="24" y="31" width="16" height="11" rx="2.5" fill="url(#popcorn-kernels-b)" stroke="none" opacity="0.9"/></g></g>
 </svg>

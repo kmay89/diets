@@ -8,9 +8,5 @@
     <radialGradient id="tomatillo-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="tomatillo-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#tomatillo-depth)">
-  <circle cx="32" cy="37" r="19" fill="url(#tomatillo-a)"/>
-  <path d="M32 18V11" fill="none" stroke-width="2.8"/>
-  <path d="M33 13q8-4 13 0q-6 4-13 0Z" fill="url(#tomatillo-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#tomatillo-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1) translate(-32 -33.5)"><circle cx="32" cy="37" r="19" fill="url(#tomatillo-a)"/><path d="M32 18V11" fill="none" stroke-width="2.8"/><path d="M33 13q8-4 13 0q-6 4-13 0Z" fill="url(#tomatillo-b)"/></g></g>
 </svg>

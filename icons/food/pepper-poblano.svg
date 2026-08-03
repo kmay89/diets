@@ -8,9 +8,5 @@
     <radialGradient id="pepper-poblano-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#79A18A"/><stop offset="0.48" stop-color="#244C3F"/><stop offset="1" stop-color="#142F28"/></radialGradient>
     <radialGradient id="pepper-poblano-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pepper-poblano-depth)">
-  <path d="M41 19q9 13 1 27q-9 15-22 8q11-5 14-18q3-13 7-17Z" fill="url(#pepper-poblano-a)"/>
-  <path d="M41 19l-4-7" fill="none" stroke-width="2.6"/>
-  <path d="M33 13q6-4 10-1q-5 4-10 1Z" fill="url(#pepper-poblano-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pepper-poblano-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.98873) translate(-32.8825 -33.4705)"><path d="M41 19q9 13 1 27q-9 15-22 8q11-5 14-18q3-13 7-17Z" fill="url(#pepper-poblano-a)"/><path d="M41 19l-4-7" fill="none" stroke-width="2.6"/><path d="M33 13q6-4 10-1q-5 4-10 1Z" fill="url(#pepper-poblano-b)"/></g></g>
 </svg>

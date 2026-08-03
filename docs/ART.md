@@ -15,7 +15,7 @@ Everything visual in Veg-Nourish, what state it is in, and the brief for whateve
 | Collection artwork | 0 / 52 | optional — collections use an emoji today |
 | App icon, maskable icons, social card | 6 | done |
 
-Icon set weight: 590 KB (the service worker precaches all of it; the test fails past 1,000 KB).
+Icon set weight: 1065 KB (the service worker precaches all of it; the test fails past 1,000 KB).
 Preview cards: 11753 KB across 230 files.
 
 ---

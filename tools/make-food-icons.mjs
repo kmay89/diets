@@ -15,6 +15,12 @@
  * art, and docs/ART.md lists every slug drawn this way so an illustrator (or
  * ChatGPT) knows exactly what is still worth replacing by hand.
  *
+ * Icons drawn here join the set's shared optical alignment: every file wraps its
+ * artwork in the transform recorded in scripts/food-icon-alignment.json, so a
+ * tall bottle and a wide platter carry the same visual weight at 24 px. The
+ * entries for generated icons are written from each shape's measured bounding
+ * box rather than guessed, and the test compares the file against the JSON.
+ *
  * Nothing here overwrites an existing file. Delete an icon to have it redrawn,
  * or pass slugs to redraw explicitly:
  *
@@ -219,6 +225,75 @@ const SHAPES = {
 };
 
 /* ------------------------------------------------------------------ *
+ * Optical alignment
+ *
+ * The hand-drawn set centers every silhouette on the 64-unit grid and scales
+ * it to a common visual weight, recorded in scripts/food-icon-alignment.json.
+ * Generated icons have to play by the same rule or they sit noticeably larger
+ * or smaller than their neighbors in a list.
+ *
+ * Every icon using a given shape has an identical bounding box — the geometry
+ * is fixed and only the colors change — so one measurement per shape is enough.
+ * These were measured by rendering each shape and reading getBBox(), not
+ * estimated from the path data.
+ * ------------------------------------------------------------------ */
+
+/** shape -> [x, y, width, height] of the drawn artwork, before alignment. */
+const BOX = {
+  bag: [18, 16.5, 28, 35],
+  berry: [13, 14.222, 37, 36.778],
+  block: [13, 17, 43, 35],
+  bottle: [21, 8, 22, 45],
+  bowl: [9, 25, 46, 27],
+  box: [17, 13, 30, 40],
+  can: [15, 13, 34, 38],
+  carton: [19, 13, 26, 40],
+  cheese: [10, 21, 43, 24],
+  chile: [20, 10.714, 25.765, 45.513],
+  cup: [13, 19, 41, 35],
+  disc: [9, 20, 46, 32],
+  fruitcluster: [18, 16, 35, 32],
+  grain: [11, 32, 42, 11],
+  jar: [18, 12, 28, 41],
+  leafy: [13, 8, 38, 46],
+  loaf: [11, 24, 42, 28],
+  mushroom: [11, 18, 42, 32.5],
+  noodles: [10, 18.059, 44, 36.941],
+  nut: [18.238, 12, 27.524, 41.222],
+  pod: [13, 9.714, 29, 45.286],
+  root: [19, 12, 26, 40],
+  round: [13, 11, 38, 45],
+  sheet: [12.428, 16.833, 39.146, 33.256],
+  slab: [9, 22, 46, 25],
+  sprig: [19, 12, 26, 42],
+  stalks: [14, 10.875, 36, 42.125],
+  tuber: [11, 21, 42, 28],
+  wedge: [9, 24, 46, 22]
+};
+
+/**
+ * The size the aligned artwork is scaled to fill, in grid units.
+ *
+ * 45 rather than the 48 the grid would allow: measured against the hand-drawn
+ * icons, whose alignment was computed from path control hulls and so runs a
+ * few percent smaller than a rendered bounding box, this lands a generated
+ * icon within a percent or two of its neighbors.
+ */
+const TARGET = 45;
+
+const round = (n, places) => Number(n.toFixed(places));
+
+/** The translate/scale/translate the set uses to center and weight a silhouette. */
+export function alignmentFor(shape) {
+  const [x, y, w, h] = BOX[shape] || BOX.bowl;
+  return {
+    scale: round(TARGET / Math.max(w, h), 5),
+    cx: round(x + w / 2, 4),
+    cy: round(y + h / 2, 4)
+  };
+}
+
+/* ------------------------------------------------------------------ *
  * Which shape and colors each ingredient gets.
  *
  * Anything not named here falls back to its aisle's default, which is
@@ -391,10 +466,15 @@ function stops(name) {
   return `<stop offset="0" stop-color="${a}"/><stop offset="0.48" stop-color="${b}"/><stop offset="1" stop-color="${c}"/>`;
 }
 
+export function shapeFor(item) {
+  return (SPEC[slugFor(item.id)] || AISLE_DEFAULT[item.aisle] || AISLE_DEFAULT.other)[0];
+}
+
 export function drawIcon(item) {
   const slug = slugFor(item.id);
   const [shape, primary, secondary] = SPEC[slug] || AISLE_DEFAULT[item.aisle] || AISLE_DEFAULT.other;
   const body = SHAPES[shape] || SHAPES.bowl;
+  const { scale, cx, cy } = alignmentFor(shape);
 
   const gradA = `${slug}-a`;
   const gradB = `${slug}-b`;
@@ -410,8 +490,7 @@ export function drawIcon(item) {
     <radialGradient id="${gradA}" cx="27%" cy="20%" r="88%">${stops(primary)}</radialGradient>
     <radialGradient id="${gradB}" cx="27%" cy="20%" r="88%">${stops(secondary)}</radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#${depth})">${body(`url(#${gradA})`, `url(#${gradB})`)}
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#${depth})"><g class="optical-alignment" transform="translate(32 32) scale(${scale}) translate(${-cx} ${-cy})">${body(`url(#${gradA})`, `url(#${gradB})`).replace(/\n\s+/g, '')}</g></g>
 </svg>
 `;
 }
@@ -429,6 +508,12 @@ if (isMain) {
 
   mkdirSync(OUT, { recursive: true });
 
+  // The alignment file is shared with the hand-drawn set, so entries are added
+  // and never rewritten wholesale — a hand-tuned number must survive this tool.
+  const alignPath = join(root, 'scripts/food-icon-alignment.json');
+  const alignment = existsSync(alignPath) ? JSON.parse(readFileSync(alignPath, 'utf8')) : {};
+  const known = new Set(ingredients.map(i => slugFor(i.id)));
+
   const written = [];
   const kept = [];
   for (const item of ingredients) {
@@ -443,9 +528,19 @@ if (isMain) {
     if (exists && !generated && !named.has(slug)) { kept.push(slug); continue; }
 
     writeFileSync(file, drawIcon(item));
+    alignment[slug] = alignmentFor(shapeFor(item));
     written.push(slug);
   }
 
+  // An ingredient that has been removed leaves an entry behind, and the test
+  // fails on orphans — so the sweep happens here rather than being remembered.
+  const orphans = Object.keys(alignment).filter(slug => !known.has(slug));
+  for (const slug of orphans) delete alignment[slug];
+
+  const ordered = Object.fromEntries(Object.keys(alignment).sort().map(k => [k, alignment[k]]));
+  writeFileSync(alignPath, JSON.stringify(ordered, null, 2) + '\n');
+
   console.log(`drew ${written.length} icons, left ${kept.length} alone`);
+  if (orphans.length) console.log(`  dropped ${orphans.length} stale alignment entries: ${orphans.join(' ')}`);
   if (written.length) console.log('  ' + written.join(' '));
 }

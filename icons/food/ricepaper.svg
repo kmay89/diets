@@ -8,8 +8,5 @@
     <radialGradient id="ricepaper-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.48" stop-color="#EDEDE4"/><stop offset="1" stop-color="#BFBFB2"/></radialGradient>
     <radialGradient id="ricepaper-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#ricepaper-depth)">
-  <path d="M14 20h30v28H14Z" fill="url(#ricepaper-a)" transform="rotate(-7 32 34)"/>
-  <path d="M20 18h30v28H20Z" fill="url(#ricepaper-b)" transform="rotate(6 32 34)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#ricepaper-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.14954) translate(-32.001 -33.461)"><path d="M14 20h30v28H14Z" fill="url(#ricepaper-a)" transform="rotate(-7 32 34)"/><path d="M20 18h30v28H20Z" fill="url(#ricepaper-b)" transform="rotate(6 32 34)"/></g></g>
 </svg>

@@ -8,9 +8,5 @@
     <radialGradient id="blackvinegar-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#758078"/><stop offset="0.48" stop-color="#303532"/><stop offset="1" stop-color="#151917"/></radialGradient>
     <radialGradient id="blackvinegar-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#blackvinegar-depth)">
-  <path d="M27 12h10v7l6 9v25H21V28l6-9Z" fill="url(#blackvinegar-a)"/>
-  <rect x="26" y="8" width="12" height="5" rx="1.5" fill="url(#blackvinegar-b)"/>
-  <rect x="24" y="33" width="16" height="12" rx="2" fill="url(#blackvinegar-b)" stroke="none" opacity="0.9"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#blackvinegar-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1) translate(-32 -30.5)"><path d="M27 12h10v7l6 9v25H21V28l6-9Z" fill="url(#blackvinegar-a)"/><rect x="26" y="8" width="12" height="5" rx="1.5" fill="url(#blackvinegar-b)"/><rect x="24" y="33" width="16" height="12" rx="2" fill="url(#blackvinegar-b)" stroke="none" opacity="0.9"/></g></g>
 </svg>

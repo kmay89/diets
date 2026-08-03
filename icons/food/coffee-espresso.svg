@@ -8,9 +8,5 @@
     <radialGradient id="coffee-espresso-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
     <radialGradient id="coffee-espresso-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#coffee-espresso-depth)">
-  <path d="M13 24h30v15a15 15 0 0 1-30 0Z" fill="url(#coffee-espresso-a)"/>
-  <path d="M43 28h5a6 6 0 0 1 0 12h-5" fill="none"/>
-  <ellipse cx="28" cy="24" rx="15" ry="5" fill="url(#coffee-espresso-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#coffee-espresso-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.09756) translate(-33.5 -36.5)"><path d="M13 24h30v15a15 15 0 0 1-30 0Z" fill="url(#coffee-espresso-a)"/><path d="M43 28h5a6 6 0 0 1 0 12h-5" fill="none"/><ellipse cx="28" cy="24" rx="15" ry="5" fill="url(#coffee-espresso-b)"/></g></g>
 </svg>

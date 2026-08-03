@@ -8,10 +8,5 @@
     <radialGradient id="cabbage-napa-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="cabbage-napa-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cabbage-napa-depth)">
-  <path d="M32 54V32" fill="none" stroke-width="2.6"/>
-  <path d="M32 36q-17-3-19-19q17-2 19 19Z" fill="url(#cabbage-napa-a)"/>
-  <path d="M32 36q17-3 19-19q-17-2-19 19Z" fill="url(#cabbage-napa-a)"/>
-  <path d="M32 24q-4-10 0-16q4 6 0 16Z" fill="url(#cabbage-napa-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cabbage-napa-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.97826) translate(-32 -31)"><path d="M32 54V32" fill="none" stroke-width="2.6"/><path d="M32 36q-17-3-19-19q17-2 19 19Z" fill="url(#cabbage-napa-a)"/><path d="M32 36q17-3 19-19q-17-2-19 19Z" fill="url(#cabbage-napa-a)"/><path d="M32 24q-4-10 0-16q4 6 0 16Z" fill="url(#cabbage-napa-b)"/></g></g>
 </svg>

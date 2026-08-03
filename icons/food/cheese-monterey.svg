@@ -8,9 +8,5 @@
     <radialGradient id="cheese-monterey-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="cheese-monterey-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFDCA0"/><stop offset="0.48" stop-color="#E8B44A"/><stop offset="1" stop-color="#A87420"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cheese-monterey-depth)">
-  <path d="M10 45 53 21v24Z" fill="url(#cheese-monterey-a)"/>
-  <circle cx="34" cy="38" r="3.5" fill="url(#cheese-monterey-b)" stroke="none"/>
-  <circle cx="44" cy="33" r="2.5" fill="url(#cheese-monterey-b)" stroke="none"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cheese-monterey-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.04651) translate(-31.5 -33)"><path d="M10 45 53 21v24Z" fill="url(#cheese-monterey-a)"/><circle cx="34" cy="38" r="3.5" fill="url(#cheese-monterey-b)" stroke="none"/><circle cx="44" cy="33" r="2.5" fill="url(#cheese-monterey-b)" stroke="none"/></g></g>
 </svg>

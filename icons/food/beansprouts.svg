@@ -8,9 +8,5 @@
     <radialGradient id="beansprouts-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.48" stop-color="#EDEDE4"/><stop offset="1" stop-color="#BFBFB2"/></radialGradient>
     <radialGradient id="beansprouts-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#beansprouts-depth)">
-  <path d="M32 54q0-24 0-42" fill="none" stroke-width="2.6"/>
-  <path d="M32 20q-10-6-13 2q9 5 13-2ZM32 30q10-6 13 2q-9 5-13-2ZM32 40q-10-6-13 2q9 5 13-2Z" fill="url(#beansprouts-a)"/>
-  <path d="M32 12q5 4 0 8q-5-4 0-8Z" fill="url(#beansprouts-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#beansprouts-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.07143) translate(-32 -33)"><path d="M32 54q0-24 0-42" fill="none" stroke-width="2.6"/><path d="M32 20q-10-6-13 2q9 5 13-2ZM32 30q10-6 13 2q-9 5-13-2ZM32 40q-10-6-13 2q9 5 13-2Z" fill="url(#beansprouts-a)"/><path d="M32 12q5 4 0 8q-5-4 0-8Z" fill="url(#beansprouts-b)"/></g></g>
 </svg>

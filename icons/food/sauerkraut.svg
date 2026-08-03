@@ -8,9 +8,5 @@
     <radialGradient id="sauerkraut-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="sauerkraut-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sauerkraut-depth)">
-  <rect x="18" y="12" width="28" height="6" rx="2" fill="url(#sauerkraut-b)"/>
-  <path d="M20 18H44L46 25V53H18V25Z" fill="url(#sauerkraut-a)"/>
-  <rect x="21" y="30" width="22" height="15" rx="3" fill="url(#sauerkraut-b)" stroke="none" opacity="0.9"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sauerkraut-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.09756) translate(-32 -32.5)"><rect x="18" y="12" width="28" height="6" rx="2" fill="url(#sauerkraut-b)"/><path d="M20 18H44L46 25V53H18V25Z" fill="url(#sauerkraut-a)"/><rect x="21" y="30" width="22" height="15" rx="3" fill="url(#sauerkraut-b)" stroke="none" opacity="0.9"/></g></g>
 </svg>

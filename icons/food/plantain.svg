@@ -8,9 +8,5 @@
     <radialGradient id="plantain-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFEFA8"/><stop offset="0.48" stop-color="#F2CE3E"/><stop offset="1" stop-color="#B08F12"/></radialGradient>
     <radialGradient id="plantain-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#plantain-depth)">
-  <path d="M22 11q3 27 20 44q-19-4-25-25Z" fill="url(#plantain-a)"/>
-  <path d="M24 20q6 18 16 28" fill="none" stroke-width="1.5" opacity="0.7"/>
-  <path d="M22 11q-6-3-9 1q5 4 9-1Z" fill="url(#plantain-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#plantain-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.99368) translate(-27.5 -32.357)"><path d="M22 11q3 27 20 44q-19-4-25-25Z" fill="url(#plantain-a)"/><path d="M24 20q6 18 16 28" fill="none" stroke-width="1.5" opacity="0.7"/><path d="M22 11q-6-3-9 1q5 4 9-1Z" fill="url(#plantain-b)"/></g></g>
 </svg>

@@ -8,9 +8,5 @@
     <radialGradient id="apricots-dried-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFC98A"/><stop offset="0.48" stop-color="#EE8B2D"/><stop offset="1" stop-color="#A85410"/></radialGradient>
     <radialGradient id="apricots-dried-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#apricots-dried-depth)">
-  <circle cx="32" cy="37" r="19" fill="url(#apricots-dried-a)"/>
-  <path d="M32 18V11" fill="none" stroke-width="2.8"/>
-  <path d="M33 13q8-4 13 0q-6 4-13 0Z" fill="url(#apricots-dried-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#apricots-dried-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1) translate(-32 -33.5)"><circle cx="32" cy="37" r="19" fill="url(#apricots-dried-a)"/><path d="M32 18V11" fill="none" stroke-width="2.8"/><path d="M33 13q8-4 13 0q-6 4-13 0Z" fill="url(#apricots-dried-b)"/></g></g>
 </svg>

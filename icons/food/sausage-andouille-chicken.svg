@@ -8,9 +8,5 @@
     <radialGradient id="sausage-andouille-chicken-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F1A176"/><stop offset="0.48" stop-color="#C66B3D"/><stop offset="1" stop-color="#813A26"/></radialGradient>
     <radialGradient id="sausage-andouille-chicken-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sausage-andouille-chicken-depth)">
-  <path d="M22 11q3 27 20 44q-19-4-25-25Z" fill="url(#sausage-andouille-chicken-a)"/>
-  <path d="M24 20q6 18 16 28" fill="none" stroke-width="1.5" opacity="0.7"/>
-  <path d="M22 11q-6-3-9 1q5 4 9-1Z" fill="url(#sausage-andouille-chicken-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sausage-andouille-chicken-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.99368) translate(-27.5 -32.357)"><path d="M22 11q3 27 20 44q-19-4-25-25Z" fill="url(#sausage-andouille-chicken-a)"/><path d="M24 20q6 18 16 28" fill="none" stroke-width="1.5" opacity="0.7"/><path d="M22 11q-6-3-9 1q5 4 9-1Z" fill="url(#sausage-andouille-chicken-b)"/></g></g>
 </svg>

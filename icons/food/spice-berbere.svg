@@ -8,9 +8,5 @@
     <radialGradient id="spice-berbere-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F08C7A"/><stop offset="0.48" stop-color="#C0392B"/><stop offset="1" stop-color="#7B1E14"/></radialGradient>
     <radialGradient id="spice-berbere-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFDCA0"/><stop offset="0.48" stop-color="#E8B44A"/><stop offset="1" stop-color="#A87420"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#spice-berbere-depth)">
-  <rect x="18" y="12" width="28" height="6" rx="2" fill="url(#spice-berbere-b)"/>
-  <path d="M20 18H44L46 25V53H18V25Z" fill="url(#spice-berbere-a)"/>
-  <rect x="21" y="30" width="22" height="15" rx="3" fill="url(#spice-berbere-b)" stroke="none" opacity="0.9"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#spice-berbere-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.09756) translate(-32 -32.5)"><rect x="18" y="12" width="28" height="6" rx="2" fill="url(#spice-berbere-b)"/><path d="M20 18H44L46 25V53H18V25Z" fill="url(#spice-berbere-a)"/><rect x="21" y="30" width="22" height="15" rx="3" fill="url(#spice-berbere-b)" stroke="none" opacity="0.9"/></g></g>
 </svg>

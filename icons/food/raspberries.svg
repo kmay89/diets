@@ -8,10 +8,5 @@
     <radialGradient id="raspberries-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F7BFCF"/><stop offset="0.48" stop-color="#D9738F"/><stop offset="1" stop-color="#8E3B54"/></radialGradient>
     <radialGradient id="raspberries-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#raspberries-depth)">
-  <circle cx="24" cy="40" r="11" fill="url(#raspberries-a)"/>
-  <circle cx="41" cy="41" r="9" fill="url(#raspberries-a)"/>
-  <circle cx="33" cy="27" r="10" fill="url(#raspberries-a)"/>
-  <path d="M33 17q7-5 12-1q-6 5-12 1Z" fill="url(#raspberries-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#raspberries-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.21622) translate(-31.5 -32.611)"><circle cx="24" cy="40" r="11" fill="url(#raspberries-a)"/><circle cx="41" cy="41" r="9" fill="url(#raspberries-a)"/><circle cx="33" cy="27" r="10" fill="url(#raspberries-a)"/><path d="M33 17q7-5 12-1q-6 5-12 1Z" fill="url(#raspberries-b)"/></g></g>
 </svg>

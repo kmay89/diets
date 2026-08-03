@@ -8,11 +8,5 @@
     <radialGradient id="cherries-sweet-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F08C7A"/><stop offset="0.48" stop-color="#C0392B"/><stop offset="1" stop-color="#7B1E14"/></radialGradient>
     <radialGradient id="cherries-sweet-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cherries-sweet-depth)">
-  <circle cx="26" cy="36" r="8"/>
-  <circle cx="26" cy="36" r="8" fill="url(#cherries-sweet-a)"/>
-  <circle cx="40" cy="38" r="10" fill="url(#cherries-sweet-a)"/>
-  <path d="M40 28V16" fill="none" stroke-width="2.4"/>
-  <path d="M41 18q8-4 12 0q-6 4-12 0Z" fill="url(#cherries-sweet-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cherries-sweet-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.28571) translate(-35.5 -32)"><circle cx="26" cy="36" r="8"/><circle cx="26" cy="36" r="8" fill="url(#cherries-sweet-a)"/><circle cx="40" cy="38" r="10" fill="url(#cherries-sweet-a)"/><path d="M40 28V16" fill="none" stroke-width="2.4"/><path d="M41 18q8-4 12 0q-6 4-12 0Z" fill="url(#cherries-sweet-b)"/></g></g>
 </svg>

@@ -8,9 +8,5 @@
     <radialGradient id="bulgur-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
     <radialGradient id="bulgur-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFDCA0"/><stop offset="0.48" stop-color="#E8B44A"/><stop offset="1" stop-color="#A87420"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bulgur-depth)">
-  <path d="M11 43q21-17 42 0Z" fill="url(#bulgur-a)"/>
-  <path d="M11 43h42" fill="none" stroke-width="2.4"/>
-  <path d="M24 36h3M31 32h3M38 36h3M28 40h3M35 40h3" fill="none" stroke="url(#bulgur-b)" stroke-width="2.6"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bulgur-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.07143) translate(-32 -37.5)"><path d="M11 43q21-17 42 0Z" fill="url(#bulgur-a)"/><path d="M11 43h42" fill="none" stroke-width="2.4"/><path d="M24 36h3M31 32h3M38 36h3M28 40h3M35 40h3" fill="none" stroke="url(#bulgur-b)" stroke-width="2.6"/></g></g>
 </svg>

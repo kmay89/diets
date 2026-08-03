@@ -8,9 +8,5 @@
     <radialGradient id="ham-deli-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F7BFCF"/><stop offset="0.48" stop-color="#D9738F"/><stop offset="1" stop-color="#8E3B54"/></radialGradient>
     <radialGradient id="ham-deli-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#ham-deli-depth)">
-  <path d="M9 39q11-17 27-17t19 11q-7 14-25 14T9 39Z" fill="url(#ham-deli-a)"/>
-  <path d="M20 30q9 5 9 15M29 26q9 5 9 16" fill="none" stroke-width="1.5" opacity="0.75"/>
-  <path d="M55 33q-4 3 0 8" fill="url(#ham-deli-b)" stroke="none"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#ham-deli-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.97826) translate(-32 -34.5)"><path d="M9 39q11-17 27-17t19 11q-7 14-25 14T9 39Z" fill="url(#ham-deli-a)"/><path d="M20 30q9 5 9 15M29 26q9 5 9 16" fill="none" stroke-width="1.5" opacity="0.75"/><path d="M55 33q-4 3 0 8" fill="url(#ham-deli-b)" stroke="none"/></g></g>
 </svg>

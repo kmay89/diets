@@ -8,8 +8,5 @@
     <radialGradient id="rhubarb-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#F08C7A"/><stop offset="0.48" stop-color="#C0392B"/><stop offset="1" stop-color="#7B1E14"/></radialGradient>
     <radialGradient id="rhubarb-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#rhubarb-depth)">
-  <path d="M22 52q-3-24 2-40M32 53q-1-26 0-41M42 52q3-24-2-40" fill="none" stroke-width="6" stroke="url(#rhubarb-a)" stroke-linecap="round"/>
-  <path d="M24 14q-5-5-10-2q5 6 10 2ZM40 14q5-5 10-2q-5 6-10 2Z" fill="url(#rhubarb-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#rhubarb-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.06825) translate(-32 -31.9375)"><path d="M22 52q-3-24 2-40M32 53q-1-26 0-41M42 52q3-24-2-40" fill="none" stroke-width="6" stroke="url(#rhubarb-a)" stroke-linecap="round"/><path d="M24 14q-5-5-10-2q5 6 10 2ZM40 14q5-5 10-2q-5 6-10 2Z" fill="url(#rhubarb-b)"/></g></g>
 </svg>

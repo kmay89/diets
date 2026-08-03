@@ -8,9 +8,5 @@
     <radialGradient id="bread-rye-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
     <radialGradient id="bread-rye-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bread-rye-depth)">
-  <path d="M11 45q0-21 21-21t21 21q0 7-7 7H18q-7 0-7-7Z" fill="url(#bread-rye-a)"/>
-  <path d="M21 30q3 6 2 12M32 27q2 7 1 15M43 30q-3 6-2 12" fill="none" stroke-width="1.6" opacity="0.7"/>
-  <path d="M11 45h42" fill="none" stroke="none"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#bread-rye-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.07143) translate(-32 -38)"><path d="M11 45q0-21 21-21t21 21q0 7-7 7H18q-7 0-7-7Z" fill="url(#bread-rye-a)"/><path d="M21 30q3 6 2 12M32 27q2 7 1 15M43 30q-3 6-2 12" fill="none" stroke-width="1.6" opacity="0.7"/><path d="M11 45h42" fill="none" stroke="none"/></g></g>
 </svg>

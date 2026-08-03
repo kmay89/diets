@@ -8,10 +8,5 @@
     <radialGradient id="cantaloupe-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFC98A"/><stop offset="0.48" stop-color="#EE8B2D"/><stop offset="1" stop-color="#A85410"/></radialGradient>
     <radialGradient id="cantaloupe-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cantaloupe-depth)">
-  <path d="M9 46q23-31 46 0Z" fill="url(#cantaloupe-a)"/>
-  <path d="M32 24v22" fill="none" stroke-width="1.6"/>
-  <path d="M20 35q12-8 24 0" fill="none" stroke-width="1.6"/>
-  <path d="M9 46h46" fill="none" stroke="none"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cantaloupe-depth)"><g class="optical-alignment" transform="translate(32 32) scale(0.97826) translate(-32 -35)"><path d="M9 46q23-31 46 0Z" fill="url(#cantaloupe-a)"/><path d="M32 24v22" fill="none" stroke-width="1.6"/><path d="M20 35q12-8 24 0" fill="none" stroke-width="1.6"/><path d="M9 46h46" fill="none" stroke="none"/></g></g>
 </svg>

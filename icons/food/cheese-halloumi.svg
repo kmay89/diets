@@ -8,9 +8,5 @@
     <radialGradient id="cheese-halloumi-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.48" stop-color="#EDEDE4"/><stop offset="1" stop-color="#BFBFB2"/></radialGradient>
     <radialGradient id="cheese-halloumi-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cheese-halloumi-depth)">
-  <path d="M13 26h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H13Z" fill="url(#cheese-halloumi-a)"/>
-  <path d="M13 26l7-9h32l-7 9" fill="url(#cheese-halloumi-b)"/>
-  <path d="M49 30l7-9v18l-7 9" fill="url(#cheese-halloumi-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cheese-halloumi-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.04651) translate(-34.5 -34.5)"><path d="M13 26h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H13Z" fill="url(#cheese-halloumi-a)"/><path d="M13 26l7-9h32l-7 9" fill="url(#cheese-halloumi-b)"/><path d="M49 30l7-9v18l-7 9" fill="url(#cheese-halloumi-b)"/></g></g>
 </svg>

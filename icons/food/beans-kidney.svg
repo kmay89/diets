@@ -8,9 +8,5 @@
     <radialGradient id="beans-kidney-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#D79BB4"/><stop offset="0.48" stop-color="#8E2F52"/><stop offset="1" stop-color="#4E1428"/></radialGradient>
     <radialGradient id="beans-kidney-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#beans-kidney-depth)">
-  <path d="M15 19h34v26a17 6 0 0 1-34 0Z" fill="url(#beans-kidney-a)"/>
-  <ellipse cx="32" cy="19" rx="17" ry="6" fill="url(#beans-kidney-b)"/>
-  <path d="M15 30h34" fill="none" stroke-width="1.4" opacity="0.6"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#beans-kidney-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.18421) translate(-32 -32)"><path d="M15 19h34v26a17 6 0 0 1-34 0Z" fill="url(#beans-kidney-a)"/><ellipse cx="32" cy="19" rx="17" ry="6" fill="url(#beans-kidney-b)"/><path d="M15 30h34" fill="none" stroke-width="1.4" opacity="0.6"/></g></g>
 </svg>

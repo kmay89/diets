@@ -8,10 +8,5 @@
     <radialGradient id="noodle-ramen-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFDCA0"/><stop offset="0.48" stop-color="#E8B44A"/><stop offset="1" stop-color="#A87420"/></radialGradient>
     <radialGradient id="noodle-ramen-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#noodle-ramen-depth)">
-  <path d="M10 34h44a22 21 0 0 1-44 0Z" fill="url(#noodle-ramen-a)"/>
-  <path d="M16 30q6-12 16-8M28 28q4-13 14-9M38 27q5-10 12-6" fill="none" stroke-width="2.4"/>
-  <path d="M10 34h44" fill="none" stroke-width="2.4"/>
-  <path d="M22 40h20" fill="url(#noodle-ramen-b)" stroke="none"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#noodle-ramen-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.02273) translate(-32 -36.5295)"><path d="M10 34h44a22 21 0 0 1-44 0Z" fill="url(#noodle-ramen-a)"/><path d="M16 30q6-12 16-8M28 28q4-13 14-9M38 27q5-10 12-6" fill="none" stroke-width="2.4"/><path d="M10 34h44" fill="none" stroke-width="2.4"/><path d="M22 40h20" fill="url(#noodle-ramen-b)" stroke="none"/></g></g>
 </svg>

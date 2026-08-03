@@ -8,8 +8,5 @@
     <radialGradient id="nori-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#79A18A"/><stop offset="0.48" stop-color="#244C3F"/><stop offset="1" stop-color="#142F28"/></radialGradient>
     <radialGradient id="nori-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#758078"/><stop offset="0.48" stop-color="#303532"/><stop offset="1" stop-color="#151917"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#nori-depth)">
-  <path d="M14 20h30v28H14Z" fill="url(#nori-a)" transform="rotate(-7 32 34)"/>
-  <path d="M20 18h30v28H20Z" fill="url(#nori-b)" transform="rotate(6 32 34)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#nori-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.14954) translate(-32.001 -33.461)"><path d="M14 20h30v28H14Z" fill="url(#nori-a)" transform="rotate(-7 32 34)"/><path d="M20 18h30v28H20Z" fill="url(#nori-b)" transform="rotate(6 32 34)"/></g></g>
 </svg>

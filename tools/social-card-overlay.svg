@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="warm-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF9EA" stop-opacity="0.99"/>
+      <stop offset="0.68" stop-color="#F5E8CF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#E8D5B3" stop-opacity="0.74"/>
+    </linearGradient>
+    <linearGradient id="edge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F8F0DE" stop-opacity="0.92"/>
+      <stop offset="0.64" stop-color="#F8F0DE" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#F8F0DE" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-depth" x="-30%" y="-40%" width="160%" height="190%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#183F34" flood-opacity="0.22"/>
+    </filter>
+    <filter id="script-depth" x="-10%" y="-30%" width="120%" height="170%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#7D3826" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <path d="M0 0H579C628 74 593 143 626 209C667 291 609 366 647 445C668 489 664 554 620 630H0Z" fill="url(#warm-paper)"/>
+  <rect width="790" height="630" fill="url(#edge-fade)"/>
+  <rect x="4" y="4" width="1192" height="622" rx="27" fill="none" stroke="#FFFDF4" stroke-opacity="0.76" stroke-width="8"/>
+  <rect x="12" y="12" width="1176" height="606" rx="21" fill="none" stroke="#244C3F" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <g transform="translate(66 45)">
+    <circle cx="24" cy="24" r="23" fill="#244C3F"/>
+    <circle cx="24" cy="24" r="29" fill="none" stroke="#C66B3D" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+    <path d="M23 34C14 30 13 21 18 16C22 12 27 14 29 19C32 13 39 13 41 19C43 27 34 34 23 34Z" fill="#FFF5DF"/>
+    <path d="M23 34C23 27 26 20 32 15" fill="none" stroke="#C66B3D" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="66" y="31" fill="#244C3F" font-family="Avenir Next, Avenir, sans-serif" font-size="25" font-weight="700" letter-spacing="3.6">VEG NOURISH</text>
+  </g>
+
+  <g transform="translate(68 111)">
+    <rect width="358" height="36" rx="18" fill="#244C3F" fill-opacity="0.09" stroke="#244C3F" stroke-opacity="0.18"/>
+    <circle cx="20" cy="18" r="5" fill="#C66B3D"/>
+    <text x="36" y="24" fill="#536A5F" font-family="Avenir Next, Avenir, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2.2">MEAL PLANNING THAT FEELS GOOD</text>
+  </g>
+
+  <g fill="#183F34" font-family="Canela Text, New York, Georgia, serif" font-size="70" font-weight="700">
+    <text x="66" y="227">Plan meals.</text>
+    <text x="66" y="307">Shop smarter.</text>
+    <text x="66" y="387" font-size="50">Delicious.</text>
+  </g>
+  <text x="340" y="389" fill="#BC603A" font-family="Canela Text, New York, Georgia, serif" font-size="50" font-style="italic" font-weight="700" filter="url(#script-depth)">Healthy.</text>
+  <path d="M341 403C385 411 437 410 505 398" fill="none" stroke="#C66B3D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M494 400C506 390 518 390 524 396C513 400 504 406 496 415" fill="#6F8B61" stroke="#244C3F" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <g fill="none" stroke="#C66B3D" stroke-linecap="round">
+    <path d="M542 170v22M531 181h22" stroke-width="2.6"/>
+    <path d="M523 159l6 6M555 159l-6 6M523 203l6-6M555 203l-6-6" stroke-width="1.8"/>
+  </g>
+  <circle cx="565" cy="221" r="4" fill="#D7A84E"/>
+  <circle cx="545" cy="229" r="2.5" fill="#6F8B61"/>
+
+  <text x="70" y="449" fill="#43554C" font-family="Avenir Next, Avenir, sans-serif" font-size="20" font-weight="500">
+    <tspan x="70" dy="0">A calmer pantry, an easier grocery list,</tspan>
+    <tspan x="70" dy="30">and nourishing meals you’ll actually crave.</tspan>
+  </text>
+
+  <g filter="url(#soft-depth)">
+    <rect x="68" y="526" width="267" height="61" rx="30.5" fill="#244C3F"/>
+    <rect x="71" y="529" width="261" height="55" rx="27.5" fill="none" stroke="#FFF7E6" stroke-opacity="0.16"/>
+    <text x="97" y="565" fill="#FFF9EA" font-family="Avenir Next, Avenir, sans-serif" font-size="19" font-weight="700" letter-spacing="0.35">veg-nourish.com</text>
+    <circle cx="305" cy="556.5" r="18" fill="#C66B3D"/>
+    <path d="M298 556.5H312M307 551L312.5 556.5L307 562" fill="none" stroke="#FFF9EA" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(359 544)" font-family="Avenir Next, Avenir, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.8">
+    <text x="0" y="0" fill="#6F7D75">PLAN</text>
+    <circle cx="51" cy="-5" r="3" fill="#C66B3D"/>
+    <text x="64" y="0" fill="#6F7D75">SHOP</text>
+    <circle cx="120" cy="-5" r="3" fill="#D7A84E"/>
+    <text x="133" y="0" fill="#6F7D75">NOURISH</text>
+  </g>
+</svg>

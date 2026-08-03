@@ -8,9 +8,5 @@
     <radialGradient id="mushroom-oyster-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="mushroom-oyster-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#mushroom-oyster-depth)">
-  <path d="M11 33a21 15 0 0 1 42 0Z" fill="url(#mushroom-oyster-a)"/>
-  <path d="M25 33h14v15q-7 5-14 0Z" fill="url(#mushroom-oyster-b)"/>
-  <path d="M11 33h42" fill="none" stroke-width="2.2"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#mushroom-oyster-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.07143) translate(-32 -34.25)"><path d="M11 33a21 15 0 0 1 42 0Z" fill="url(#mushroom-oyster-a)"/><path d="M25 33h14v15q-7 5-14 0Z" fill="url(#mushroom-oyster-b)"/><path d="M11 33h42" fill="none" stroke-width="2.2"/></g></g>
 </svg>

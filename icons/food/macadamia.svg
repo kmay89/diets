@@ -8,9 +8,5 @@
     <radialGradient id="macadamia-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFDF2"/><stop offset="0.48" stop-color="#F3E8CF"/><stop offset="1" stop-color="#C6B184"/></radialGradient>
     <radialGradient id="macadamia-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#C9A57E"/><stop offset="0.48" stop-color="#8A5A33"/><stop offset="1" stop-color="#4E2F17"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#macadamia-depth)">
-  <path d="M32 12q17 9 13 27q-4 16-13 14t-13-14q-4-18 13-27Z" fill="url(#macadamia-a)"/>
-  <path d="M32 14v37" fill="none" stroke-width="1.6" opacity="0.75"/>
-  <path d="M25 24q7 6 14 0" fill="none" stroke="url(#macadamia-b)" stroke-width="1.6"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#macadamia-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.09165) translate(-32 -32.611)"><path d="M32 12q17 9 13 27q-4 16-13 14t-13-14q-4-18 13-27Z" fill="url(#macadamia-a)"/><path d="M32 14v37" fill="none" stroke-width="1.6" opacity="0.75"/><path d="M25 24q7 6 14 0" fill="none" stroke="url(#macadamia-b)" stroke-width="1.6"/></g></g>
 </svg>

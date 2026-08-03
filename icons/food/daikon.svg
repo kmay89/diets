@@ -8,10 +8,5 @@
     <radialGradient id="daikon-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.48" stop-color="#EDEDE4"/><stop offset="1" stop-color="#BFBFB2"/></radialGradient>
     <radialGradient id="daikon-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#B2D28C"/><stop offset="0.48" stop-color="#5E8C3F"/><stop offset="1" stop-color="#33541F"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#daikon-depth)">
-  <path d="M26 22h12l-3 26q-3 8-6 0Z" fill="url(#daikon-a)"/>
-  <path d="M32 22V12" fill="none" stroke-width="2.4"/>
-  <path d="M32 16q-8-6-13-2q5 7 13 2Z" fill="url(#daikon-b)"/>
-  <path d="M32 16q8-6 13-2q-5 7-13 2Z" fill="url(#daikon-b)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#daikon-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.125) translate(-32 -32)"><path d="M26 22h12l-3 26q-3 8-6 0Z" fill="url(#daikon-a)"/><path d="M32 22V12" fill="none" stroke-width="2.4"/><path d="M32 16q-8-6-13-2q5 7 13 2Z" fill="url(#daikon-b)"/><path d="M32 16q8-6 13-2q-5 7-13 2Z" fill="url(#daikon-b)"/></g></g>
 </svg>

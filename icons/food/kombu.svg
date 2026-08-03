@@ -8,8 +8,5 @@
     <radialGradient id="kombu-a" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#79A18A"/><stop offset="0.48" stop-color="#244C3F"/><stop offset="1" stop-color="#142F28"/></radialGradient>
     <radialGradient id="kombu-b" cx="27%" cy="20%" r="88%"><stop offset="0" stop-color="#8FD0C8"/><stop offset="0.48" stop-color="#2E8B84"/><stop offset="1" stop-color="#155650"/></radialGradient>
   </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#kombu-depth)">
-  <path d="M14 20h30v28H14Z" fill="url(#kombu-a)" transform="rotate(-7 32 34)"/>
-  <path d="M20 18h30v28H20Z" fill="url(#kombu-b)" transform="rotate(6 32 34)"/>
-  </g>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#kombu-depth)"><g class="optical-alignment" transform="translate(32 32) scale(1.14954) translate(-32.001 -33.461)"><path d="M14 20h30v28H14Z" fill="url(#kombu-a)" transform="rotate(-7 32 34)"/><path d="M20 18h30v28H20Z" fill="url(#kombu-b)" transform="rotate(6 32 34)"/></g></g>
 </svg>
