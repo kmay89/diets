@@ -4,6 +4,30 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- **A real printed page.** The 🖨 buttons no longer print the app. The shopping list becomes a
+  single branded sheet — wordmark, one line of context, then checkboxes in aisle order, set in
+  columns chosen from how much there is to fit. A week of dinners lands on one side of one piece of
+  paper; a fortnight drops one type size and still does. Recipes print the same way: ingredients and
+  method, nothing else. Whatever is already in the cart is left off, and the footer says so.
+- **Step-by-step home-screen instructions** for every browser that has no install prompt to fire,
+  naming the buttons people actually press: Share, then "Add to Home Screen".
+- `js/routes.js`, so the router can be checked without a browser, plus a test that every link the
+  app builds resolves to a screen.
+
+### Fixed
+- **The occasion card on the roll screen went nowhere.** It linked to `#/browse?occasion=picnic`
+  while the route table matched `#/browse` exactly, so the one place advertising fifteen picnic
+  recipes led to "That page does not exist." The router now matches on the path and leaves the query
+  to the view.
+- **The occasion card's title was invisible.** As a `<button>` it inherited the platform button
+  colour, which on a device set to dark with the app forced light is white on a pale green card.
+- **The install banner could not be dismissed.** `[hidden]` loses to any class that sets `display`,
+  so the ✕ set the attribute and the banner stayed put. Hiding now wins everywhere, dismissing takes
+  the toolbar button with it, and the decision is remembered — with the way back in Settings.
+
 ## [2.0.0] — 2026-08-03
 
 Opened up: written for anyone's table, sourced throughout, and stocked for the whole year.

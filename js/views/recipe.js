@@ -16,6 +16,7 @@ import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
 import { foodIcon } from '../food-icon.js';
 import { withSwaps, swapCount, substitutionsFor, swappedLine } from '../swaps.js';
+import { printRecipe } from '../print.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -136,7 +137,11 @@ export function render(root, { navigate, params }) {
             }
           }
         }, '📤 Share'),
-        h('button.btn', { type: 'button', onclick: () => printRecipe(recipe, servings) }, '🖨 Print')
+        h('button.btn', {
+          type: 'button',
+          title: 'One condensed page: ingredients and method, nothing else',
+          onclick: () => printRecipe(recipe, servings, { withOmnivore, withVegSwap })
+        }, '🖨 Print')
       )
     );
   };
@@ -383,12 +388,6 @@ function nutritionBlock(recipe, nut, nutOmni, heart, state) {
 
 function block(title, ...content) {
   return h('section.card.block', h('h2.block__title', title), ...content);
-}
-
-function printRecipe(recipe, servings) {
-  document.body.dataset.printing = recipe.id;
-  window.print();
-  setTimeout(() => { delete document.body.dataset.printing; }, 500);
 }
 
 /* ------------------------------------------------------------------ *
