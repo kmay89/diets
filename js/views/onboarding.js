@@ -10,7 +10,8 @@
 import { h, mount, chip, toast } from '../ui.js';
 import { getDb } from '../data.js';
 import { getState, update, newMember, setLike, togglePantry, setPref } from '../store.js';
-import { ACTIVITY, energyNeeds } from '../nutrition.js';
+import { memberCard } from './member-card.js';
+import { energyNeeds } from '../nutrition.js';
 
 const STEPS = ['welcome', 'household', 'health', 'time', 'tastes', 'pantry', 'done'];
 
@@ -138,84 +139,11 @@ function householdStep(state, draw) {
     h('p.lede', 'Ages and activity drive the portion math — how many servings to cook and how the calories split across the family. Height and weight are optional and only sharpen the estimate.'),
     h('div.chip-row', ...TEMPLATES.map(t => chip(`+ ${t.label}`, { onclick: () => add(t.partial) }))),
     members.length
-      ? h('div.member-list', ...members.map(m => memberCard(m, draw)))
+      ? h('div.member-list', ...members.map(m => memberCard(m, { onStructuralChange: draw })))
       : h('p.empty', 'No one yet — tap a button above to add the first person.'),
     members.length
       ? h('p.fine-print', 'Diet matters. Mark anyone who does not eat meat and every dinner rolled will have a base they can eat, with meat kept to a separate pan.')
       : null
-  );
-}
-
-function memberCard(m, draw) {
-  const est = energyNeeds(m);
-  const set = (patch) => {
-    update(s => {
-      const t = s.household.members.find(x => x.id === m.id);
-      if (t) Object.assign(t, patch);
-    });
-    draw();
-  };
-
-  return h('div.card.member',
-    h('div.member__row',
-      h('input.input.input--name', {
-        type: 'text', value: m.name, placeholder: 'Name',
-        oninput: (e) => update(s => {
-          const t = s.household.members.find(x => x.id === m.id);
-          if (t) t.name = e.target.value;
-        })
-      }),
-      h('button.icon-btn', {
-        type: 'button', 'aria-label': `Remove ${m.name || 'person'}`,
-        onclick: () => { update(s => { s.household.members = s.household.members.filter(x => x.id !== m.id); }); draw(); }
-      }, '🗑')
-    ),
-    h('div.field-grid',
-      field('Age', h('input.input', {
-        type: 'number', min: 1, max: 110, value: m.age ?? '',
-        oninput: (e) => set({ age: Number(e.target.value) || null })
-      })),
-      field('Sex', select(['female', 'male'], m.sex, v => set({ sex: v }), { female: 'Female', male: 'Male' })),
-      field('Diet', select(['omnivore', 'vegetarian', 'vegan', 'pescatarian'], m.diet, v => set({ diet: v }), {
-        omnivore: 'Omnivore', vegetarian: 'Vegetarian', vegan: 'Vegan', pescatarian: 'Pescatarian'
-      })),
-      field('Activity', select(Object.keys(ACTIVITY), m.activity, v => set({ activity: v }),
-        Object.fromEntries(Object.entries(ACTIVITY).map(([k, v]) => [k, v.label.split(' — ')[0]])))),
-      field('Height', heightInput(m, set)),
-      field('Weight (lb)', h('input.input', {
-        type: 'number', min: 20, max: 500, value: m.weightKg ? Math.round(m.weightKg * 2.2046) : '',
-        placeholder: 'optional',
-        oninput: (e) => set({ weightKg: e.target.value ? Number(e.target.value) / 2.2046 : null })
-      }))
-    ),
-    h('p.member__est',
-      `≈ ${est.target.toLocaleString()} kcal a day `,
-      h('span.muted', `(${est.method})`)
-    )
-  );
-}
-
-function heightInput(m, set) {
-  const totalIn = m.heightCm ? Math.round(m.heightCm / 2.54) : null;
-  const ft = totalIn ? Math.floor(totalIn / 12) : '';
-  const inch = totalIn ? totalIn % 12 : '';
-  const apply = (f, i) => {
-    const t = (Number(f) || 0) * 12 + (Number(i) || 0);
-    set({ heightCm: t ? t * 2.54 : null });
-  };
-  return h('div.height-input',
-    h('input.input', { type: 'number', min: 1, max: 8, value: ft, placeholder: 'ft', oninput: (e) => apply(e.target.value, inch) }),
-    h('input.input', { type: 'number', min: 0, max: 11, value: inch, placeholder: 'in', oninput: (e) => apply(ft, e.target.value) })
-  );
-}
-
-function field(label, control) {
-  return h('label.field', h('span.field__label', label), control);
-}
-
-function select(values, current, onchange, labels = {}) {
-  return h('select.input', { onchange: (e) => onchange(e.target.value) },
-    ...values.map(v => h('option', { value: v, selected: v === current }, labels[v] || v))
   );
 }
 

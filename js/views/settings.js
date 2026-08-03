@@ -7,11 +7,11 @@
 import { h, mount, chip, toast, sheet, confirmSheet, titleCase } from '../ui.js';
 import { getDb } from '../data.js';
 import {
-  getState, setPref, addMember, updateMember, removeMember, newMember,
-  exportData, importData, resetAll, setLike
+  getState, setPref, addMember, exportData, importData, resetAll, setLike
 } from '../store.js';
-import { ACTIVITY, energyNeeds, dailyTargets } from '../nutrition.js';
+import { energyNeeds, dailyTargets } from '../nutrition.js';
 import { downloadFile } from '../shopping.js';
+import { memberCard } from './member-card.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 
 export function render(root, { navigate }) {
@@ -23,12 +23,30 @@ function view(draw, navigate) {
   const state = getState();
   const db = getDb();
 
+  // "Targets in use" restates what the household cards say, so it has to follow
+  // an edit — but by patching one container, never by redrawing the page under
+  // whichever field is being typed into.
+  const targetsBody = h('div');
+  const refreshTargets = () => targetsBody.replaceChildren(
+    ...getState().household.members.filter(m => m.eats !== false).map(m => {
+      const t = dailyTargets(m, { heartMode: getState().prefs.heartMode });
+      const e = energyNeeds(m);
+      return h('div.target-row',
+        h('strong', m.name || 'Unnamed'),
+        h('p.muted.small',
+          `${e.target.toLocaleString()} kcal · ${t.sodium_mg} mg sodium · ${t.satfat_g} g sat fat · ${t.fiber_g} g fiber · ${t.protein_g} g protein`),
+        h('p.fine-print', `Energy method: ${e.method}`)
+      );
+    })
+  );
+  refreshTargets();
+
   return h('section.view',
     h('div.view__head', h('h1.view__title', 'Settings')),
 
     h('section.card.block',
       h('h2.block__title', 'Household'),
-      ...state.household.members.map(m => memberRow(m, state, draw)),
+      ...state.household.members.map(m => memberCard(m, { onStructuralChange: draw, onValueChange: refreshTargets })),
       h('div.row-actions',
         h('button.btn', { type: 'button', onclick: () => { addMember({ name: 'New person' }); draw(); } }, '+ Add a person')
       )
@@ -127,16 +145,7 @@ function view(draw, navigate) {
 
     h('section.card.block',
       h('h2.block__title', 'Targets in use'),
-      ...state.household.members.filter(m => m.eats !== false).map(m => {
-        const t = dailyTargets(m, { heartMode: state.prefs.heartMode });
-        const e = energyNeeds(m);
-        return h('div.target-row',
-          h('strong', m.name || 'Unnamed'),
-          h('p.muted.small',
-            `${e.target.toLocaleString()} kcal · ${t.sodium_mg} mg sodium · ${t.satfat_g} g sat fat · ${t.fiber_g} g fiber · ${t.protein_g} g protein`),
-          h('p.fine-print', `Energy method: ${e.method}`)
-        );
-      }),
+      targetsBody,
       h('p.fine-print',
         'Adult energy uses Mifflin-St Jeor with an activity factor; children use the Dietary Guidelines reference tables. ',
         'Sodium and saturated fat targets follow American Heart Association guidance when heart-forward mode is on. ',
@@ -169,33 +178,6 @@ function view(draw, navigate) {
     )
   );
 }
-
-function memberRow(m, state, draw) {
-  const e = energyNeeds(m);
-  return h('div.card.member',
-    h('div.member__row',
-      h('input.input.input--name', {
-        type: 'text', value: m.name, placeholder: 'Name',
-        oninput: (ev) => updateMember(m.id, { name: ev.target.value })
-      }),
-      h('button.icon-btn', { type: 'button', 'aria-label': 'Remove', onclick: () => { removeMember(m.id); draw(); } }, '🗑')
-    ),
-    h('div.field-grid',
-      f('Age', h('input.input', { type: 'number', value: m.age ?? '', oninput: (ev) => { updateMember(m.id, { age: Number(ev.target.value) || null }); draw(); } })),
-      f('Sex', sel(['female', 'male'], m.sex, v => { updateMember(m.id, { sex: v }); draw(); })),
-      f('Diet', sel(['omnivore', 'vegetarian', 'vegan', 'pescatarian'], m.diet, v => { updateMember(m.id, { diet: v }); draw(); })),
-      f('Activity', sel(Object.keys(ACTIVITY), m.activity, v => { updateMember(m.id, { activity: v }); draw(); })),
-      f('Goal', sel(['maintain', 'lose', 'gain'], m.goal, v => { updateMember(m.id, { goal: v }); draw(); })),
-      f('Eats here', h('input', { type: 'checkbox', checked: m.eats !== false, onchange: (ev) => { updateMember(m.id, { eats: ev.target.checked }); draw(); } }))
-    ),
-    h('p.member__est', `≈ ${e.target.toLocaleString()} kcal a day (${e.method})`)
-  );
-}
-
-const f = (label, control) => h('label.field', h('span.field__label', label), control);
-const sel = (values, current, onchange) =>
-  h('select.input', { onchange: (e) => onchange(e.target.value) },
-    ...values.map(v => h('option', { value: v, selected: v === current }, titleCase(v))));
 
 function toggle(title, desc, value, onchange, draw) {
   return h('label.switch-row',

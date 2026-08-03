@@ -233,7 +233,7 @@ export function energyNeeds(member) {
     method = 'Mifflin-St Jeor';
   } else {
     tdee = member.sex === 'male' ? 2400 : 1900;
-    method = 'population average (fill in height and weight for a real estimate)';
+    method = 'population average';
   }
 
   let target = tdee;
@@ -304,6 +304,25 @@ export function householdTargets(members, opts) {
     for (const [k, v] of Object.entries(t)) out[k] = (out[k] || 0) + v;
   }
   return out;
+}
+
+
+/**
+ * Rough body figures used only when someone taps "use typical values" — a
+ * starting point for sizing a pot of food, not a health assessment and not a
+ * target. These are round approximations of US adult averages, deliberately
+ * unfussy: the activity level moves the estimate far more than either of them.
+ */
+export function typicalBody(sex = 'female', age = null) {
+  const adult = age == null || age >= 18;
+  if (!adult) {
+    // Children vary far too much by age for a single figure to mean anything,
+    // so we only offer an age and let the DGA reference tables do the rest.
+    return { age: age ?? 10, heightCm: null, weightKg: null };
+  }
+  return sex === 'male'
+    ? { age: age ?? 40, heightCm: 175, weightKg: 89 }
+    : { age: age ?? 40, heightCm: 162, weightKg: 77 };
 }
 
 /* ------------------------------------------------------------------ *

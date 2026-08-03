@@ -758,3 +758,69 @@ a { color: var(--green-600); }
 }
 .roller__label { min-width: 0; }
 .dice { display: inline-block; }
+
+/* ---------- member card: legible, optional-by-default fields ---------- */
+
+.member { padding: var(--sp-4); }
+.member__row { gap: var(--sp-2); margin-bottom: var(--sp-2); }
+.member .field-grid { gap: var(--sp-3) var(--sp-3); }
+
+.field__label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .74rem; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--ink-faint);
+}
+.field__optional {
+  text-transform: none; letter-spacing: 0; font-size: .92em;
+  color: var(--ink-faint); opacity: .8; font-style: italic;
+}
+
+/* The "why are you asking?" affordance. Small, always available, never loud. */
+.why-btn {
+  width: 16px; height: 16px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: transparent; color: var(--ink-faint);
+  font: inherit; font-size: .62rem; font-weight: 700; line-height: 1;
+  cursor: pointer; padding: 0;
+  transition: border-color .15s var(--ease), color .15s var(--ease);
+}
+.why-btn:hover { border-color: var(--green-300); color: var(--green-700); }
+
+.member__est {
+  margin: var(--sp-4) 0 0; padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+  font-size: .92rem; color: var(--ink);
+}
+.member__est .muted { display: block; margin-top: 2px; }
+
+.member__hint {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-2);
+  margin-top: var(--sp-3);
+}
+.member__hint .fine-print { flex: 1; min-width: 200px; margin: 0; }
+
+/* Number fields on phones: big enough to hit, no spinner clutter. */
+.input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.input[type="number"]::-webkit-outer-spin-button,
+.input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.input { min-height: 44px; }
+.height-input { display: flex; gap: 6px; }
+.height-input .input { min-width: 0; }
+
+/* A unit that stays visible after the placeholder has been typed over. */
+.unit-pair { position: relative; display: block; flex: 1; min-width: 0; }
+.unit-pair .input { width: 100%; padding-right: 30px; }
+.unit-pair .unit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .8rem;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+
+/* Unbulleted definition-ish list used inside explanation sheets. */
+.plain-list { list-style: none; margin: 12px 0 0; padding: 0; }
+.plain-list li { padding: 6px 0; border-top: 1px solid var(--line); font-size: .9rem; }
