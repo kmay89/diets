@@ -39,3 +39,27 @@ jobs:
             if [ ! -e "$f" ]; then echo "::error::sw.js precaches missing file: $f"; missing=1; fi
           done
           exit $missing
+
+      - name: Check the deployed pages stay CSP-clean
+        run: |
+          # The production Content-Security-Policy has no 'unsafe-inline'. An
+          # inline handler or a <style> block would break the live site while
+          # working perfectly on a local server, so catch it here instead.
+          bad=0
+          for f in index.html 404.html; do
+            if grep -nE '<(script|style)(>|[^>]*>[^<])' "$f" | grep -v 'src='; then
+              echo "::error::$f has an inline <script> or <style> block; the CSP forbids it"; bad=1
+            fi
+            if grep -nE '\son[a-z]+="' "$f"; then
+              echo "::error::$f has an inline event handler; wire it up in JS instead"; bad=1
+            fi
+          done
+          exit $bad
+
+      - name: Check the files Netlify serves are present
+        run: |
+          missing=0
+          for f in netlify.toml 404.html robots.txt sitemap.xml manifest.webmanifest icons/social-card.png; do
+            if [ ! -e "$f" ]; then echo "::error::missing $f"; missing=1; fi
+          done
+          exit $missing

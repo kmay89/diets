@@ -25,5 +25,6 @@
     { "name": "Shopping list", "short_name": "List", "url": "./index.html#/list", "description": "Open this week's list, grouped by aisle" },
     { "name": "The plan", "short_name": "Plan", "url": "./index.html#/plan", "description": "See what is being cooked this week" }
   ],
+  "launch_handler": { "client_mode": "focus-existing" },
   "prefer_related_applications": false
 }

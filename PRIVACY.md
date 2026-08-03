@@ -3,7 +3,7 @@
 **Short version: everything stays on your device. There is no account, no server, and no analytics.
 We cannot see your data because it never leaves your browser.**
 
-Last updated: 2026-08-03 · Applies to: Diets v1.0.0 (ERRERLabs)
+Last updated: 2026-08-03 · Applies to: Diets v1.1.0 (ERRERLabs)
 
 ---
 
@@ -65,7 +65,7 @@ Settings → *Download a backup* first, which writes a JSON file to your device 
 ## Data your browser stores on its own
 
 The service worker keeps a cache of the app files and recipe data (a Cache Storage entry named
-`errerlabs-diets-v1.0.0`). It contains only the app itself — no personal data — and is cleared with
+`errerlabs-diets-v1.1.0`). It contains only the app itself — no personal data — and is cleared with
 your site data.
 
 ## Children
@@ -76,10 +76,18 @@ terms as everything else.
 
 ## Hosting
 
-If you self-host or fork this, whoever runs the web server can see ordinary web-server request logs
-(IP address, time, which files were requested) the same as any website. That is a property of the
-host, not the app; the app itself sends nothing. GitHub Pages, Netlify and similar hosts each have
-their own logging policies.
+The public copy at **vegeat.netlify.app** is served by Netlify as static files. Like any web host,
+Netlify can see ordinary server request logs — IP address, time, and which files were requested —
+for the initial download of the app. It never sees your household, your plan or your list, because
+those are never sent anywhere. After the first visit the service worker serves the app from your
+device, so even those request logs largely stop.
+
+Netlify's own privacy practices are theirs, not ours: <https://www.netlify.com/privacy/>. The site
+is configured with no Netlify Analytics, no forms, no serverless functions and no edge functions —
+there is nothing on the server side to collect anything.
+
+If you self-host or fork this, the same holds for whichever host you use. That is a property of the
+host, not the app; the app itself sends nothing.
 
 ## Changes
 

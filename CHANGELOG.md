@@ -4,6 +4,32 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-08-03
+
+Went live at [vegeat.netlify.app](https://vegeat.netlify.app).
+
+### Added
+- `netlify.toml`: build runs `build:graph` + `verify`, so invalid data fails the deploy rather than
+  shipping. Strict `Content-Security-Policy` with no `unsafe-inline`, HSTS, `nosniff`,
+  `frame-ancestors 'none'`, and a `Permissions-Policy` that disables every sensor. Immutable caching
+  for icons, revalidate-always for `sw.js`, `index.html`, the manifest and the data files. Catch-all
+  rewrite to the app for mistyped paths, and a real 404 under `/data/`.
+- Open Graph and Twitter card metadata, plus a rendered 1200x630 link-preview card
+  (`icons/social-card.png`, designed in `tools/social-card.html`).
+- `404.html`, `robots.txt`, `sitemap.xml`, and a canonical URL.
+- `npm run build:social` to regenerate the preview card.
+
+### Changed
+- Removed the inline `onclick` handlers from `index.html` and wired the install buttons in
+  `js/app.js`, so the page needs no `unsafe-inline` in its script policy.
+- The install banner can be dismissed for good, and the app bar's Install button now appears with
+  the banner. Added an `appinstalled` handler.
+- Service worker cache bumped to `v1.1.0`; it now precaches the favicon and the 404 page.
+
+### Fixed
+- `tools/make-icons.py` wrote a square PNG header regardless of the image's real dimensions, which
+  corrupted any non-square output.
+
 ## [1.0.0] — 2026-08-03
 
 First release.
@@ -33,4 +59,5 @@ First release.
 - **Privacy** — all state local to the device; JSON backup and restore; one-tap erase.
 - Data verification (`npm run verify`) and unit tests (`npm test`).
 
+[1.1.0]: https://github.com/kmay89/diets/releases/tag/v1.1.0
 [1.0.0]: https://github.com/kmay89/diets/releases/tag/v1.0.0

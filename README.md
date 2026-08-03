@@ -7,6 +7,9 @@ else is not, someone in the family is managing heart disease, and nobody has nin
 Tuesday. Every dinner has a vegetarian base the whole table eats and a **fork in the road** — one
 extra pan for the omnivores — so nothing gets cooked twice.
 
+**Live: [vegeat.netlify.app](https://vegeat.netlify.app)** — open it on your phone and use
+**Add to Home Screen**. After the first load it runs entirely offline.
+
 Built by [ERRERLabs](https://github.com/kmay89). MIT licensed. No account, no server, no analytics.
 
 ```
@@ -14,9 +17,6 @@ npm run verify        # check the data
 npm test              # unit tests + data checks
 npm start             # serve at http://localhost:8080
 ```
-
-Open `http://localhost:8080`, then use your browser's **Add to Home Screen** to install it. After
-the first load it runs entirely offline.
 
 ---
 
@@ -63,7 +63,10 @@ and JSON data files. It is a static site — put the folder on any web host and 
 
 ```
 index.html              app shell
+404.html                a friendly dead end that points back into the app
 manifest.webmanifest    PWA manifest (install, shortcuts, icons)
+netlify.toml            hosting: build checks, headers, CSP, caching, redirects
+robots.txt sitemap.xml  crawler basics
 sw.js                   service worker — precaches everything, offline-first
 css/app.css             one stylesheet, light + dark + print
 js/
@@ -86,6 +89,8 @@ tools/
   build-graph.mjs       compiles the graph from the source data
   verify-data.mjs       integrity + plausibility checks
   make-icons.py         renders the PNG icons with no image library
+  social-card.html      the link-preview card design
+  make-social-card.mjs  renders that card to a PNG (needs a headless browser)
 test/                   unit tests for the math
 ```
 
@@ -152,6 +157,35 @@ your store is actually laid out.
 sources. The rest of the app has no geography baked in.
 
 ---
+
+## Deploying
+
+The site is static — every file in the repo root is the site. It is hosted on Netlify at
+[vegeat.netlify.app](https://vegeat.netlify.app), deploying from `main`.
+
+`netlify.toml` carries the whole configuration:
+
+- **Build**: `npm run build:graph && npm run verify`. There is no bundler; the "build" regenerates
+  the food graph and validates the data, so a bad recipe or an impossible nutrition figure fails the
+  deploy instead of going live. Deploy previews and branch builds run the same checks.
+- **Headers**: a strict `Content-Security-Policy` (`default-src 'self'`, no `unsafe-inline`
+  anywhere), `nosniff`, `frame-ancestors 'none'`, HSTS, and a `Permissions-Policy` that turns off
+  every sensor. The app loads nothing from any other origin, so the policy can be this tight and
+  stay meaningful.
+- **Caching**: `sw.js`, `index.html`, `manifest.webmanifest` and `data/*` are revalidated on every
+  request so a release lands immediately; `icons/*` are immutable for a year.
+- **Redirects**: a catch-all rewrite to `index.html` for mistyped paths (routing is hash-based, so
+  real files always win), and a real 404 for anything under `/data/`.
+
+To host it somewhere else, serve the repo root as a static directory over HTTPS — service workers
+require a secure context, and nothing else is needed. `SECURITY.md` has an equivalent CSP for other
+servers.
+
+The link-preview card is a committed PNG. Regenerate it after editing `tools/social-card.html`:
+
+```
+npm i -D playwright && npm run build:social
+```
 
 ## Browser support
 

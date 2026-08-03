@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "ERRERLabs",
   "private": false,
-  "homepage": "https://github.com/kmay89/diets",
+  "homepage": "https://vegeat.netlify.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/kmay89/diets.git"
@@ -27,6 +27,7 @@
     "serve": "python3 -m http.server 8080",
     "build:graph": "node tools/build-graph.mjs",
     "build:icons": "python3 tools/make-icons.py",
+    "build:social": "node tools/make-social-card.mjs",
     "build": "npm run build:graph && npm run build:icons",
     "verify": "node tools/verify-data.mjs",
     "test": "node --test \"test/*.test.mjs\" && node tools/verify-data.mjs"
