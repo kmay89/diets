@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v2.5.0';
+const VERSION = 'v3.0.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -42,6 +42,7 @@ const PRECACHE = [
   './js/views/roll.js',
   './js/views/plan.js',
   './js/views/recipe.js',
+  './js/views/nutrition-panel.js',
   './js/views/pantry.js',
   './js/views/list.js',
   './js/views/garden.js',
@@ -52,15 +53,16 @@ const PRECACHE = [
   './js/occasions.js',
   './js/install.js',
   './js/routes.js',
+  './js/theme.js',
+  './js/collections.js',
   './js/print.js',
   './data/citations.json',
   './data/claims.json',
   './data/occasions.json',
   './js/share-page.js',
   './data/ingredients.json',
-  './data/recipes.dinners.json',
-  './data/recipes.daily.json',
-  './data/recipes.occasions.json',
+  './data/recipes.index.json',
+  './data/collections.json',
   './data/aisles.json',
   './data/garden.json',
   './data/graph.json',
@@ -95,10 +97,27 @@ async function foodIconUrls() {
   }
 }
 
+/**
+ * The recipe part files, likewise derived rather than listed. data/recipes.index.json
+ * is the collection's table of contents; precaching what it names means a new
+ * part file is offline-ready without touching the service worker.
+ */
+async function recipePartUrls() {
+  try {
+    const res = await fetch('./data/recipes.index.json', { cache: 'reload' });
+    if (!res.ok) return [];
+    const { parts } = await res.json();
+    return parts.map(p => `./${p.file}`);
+  } catch (err) {
+    console.warn('[sw] could not derive the recipe file list', err);
+    return [];
+  }
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    const urls = [...PRECACHE, ...await foodIconUrls()];
+    const urls = [...PRECACHE, ...await recipePartUrls(), ...await foodIconUrls()];
     // addAll fails the whole install if any single file 404s, so add
     // individually and let one missing optional asset go by.
     await Promise.all(urls.map(async (url) => {

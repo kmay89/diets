@@ -15,6 +15,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { recipeNutrition, heartScore, gramsFor, NUTRIENT_KEYS } from '../js/nutrition.js';
+import { RECIPE_FILES } from './recipe-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -27,7 +28,7 @@ const warn = (m) => warnings.push(m);
 const ingredientsFile = read('data/ingredients.json');
 const aislesFile = read('data/aisles.json');
 const gardenFile = read('data/garden.json');
-const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json', 'data/recipes.occasions.json'].map(read);
+const recipeFiles = RECIPE_FILES.map(read);
 
 const ingredients = ingredientsFile.items;
 const recipes = recipeFiles.flatMap(f => f.recipes);
@@ -121,15 +122,15 @@ for (const r of recipes) {
     if (!(line.qty > 0)) err(`${r.id}: ${line.ing} has quantity ${line.qty}`);
   }
 
-  // A vegetarian-labelled recipe must not contain meat or fish in its base.
+  // A vegetarian-labeled recipe must not contain meat or fish in its base.
   if ((r.diet || []).includes('vegetarian') || (r.diet || []).includes('vegan')) {
     for (const line of r.ingredients || []) {
       const d = index.get(line.ing)?.diet || [];
       if (d.includes('omnivore') || d.includes('pescatarian')) {
-        err(`${r.id}: labelled vegetarian but the base contains ${line.ing}`);
+        err(`${r.id}: labeled vegetarian but the base contains ${line.ing}`);
       }
       if ((r.diet || []).includes('vegan') && !d.includes('vegan') && !line.optional) {
-        err(`${r.id}: labelled vegan but contains non-vegan ${line.ing}`);
+        err(`${r.id}: labeled vegan but contains non-vegan ${line.ing}`);
       }
     }
   }

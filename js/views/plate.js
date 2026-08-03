@@ -21,7 +21,7 @@ import { getDb, heartFor, recipesUsing } from '../data.js';
 import { foodIcon } from '../food-icon.js';
 import { play } from '../feedback.js';
 import { getState } from '../store.js';
-import { lineNutrients, heartScore, dailyTargets, typicalBody, MEAL_SHARE } from '../nutrition.js';
+import { lineNutrients, heartScore, dailyTargets, typicalBody, dailyValue, MEAL_SHARE } from '../nutrition.js';
 
 function isProtein(item) {
   return (item.tags || []).some(t => t === 'protein' || t === 'lean-protein' || t === 'complete-protein')
@@ -48,7 +48,7 @@ const SWEET_FRUIT = new Set([
 
 /**
  * The four quarters, the portion each contributes to one serving, and how to
- * recognise the ingredients that belong in it. Grams are a plated serving:
+ * recognize the ingredients that belong in it. Grams are a plated serving:
  * grain is dry weight, the rest as they land on the plate.
  */
 const SLOTS = [
@@ -86,7 +86,7 @@ const SLOTS = [
   }
 ];
 
-/** Shown in an empty quarter, greyed back — the shape of what goes there. */
+/** Shown in an empty quarter, grayed back — the shape of what goes there. */
 const SLOT_GHOST = {
   grain: 'ing.farro',
   veg: 'ing.broccoli',
@@ -269,32 +269,44 @@ function plateNutrition(filled) {
   return lineNutrients(lines, ingIndex).total;
 }
 
+/**
+ * The same reading the recipe page gives, on a plate you are still building.
+ *
+ * These bars used to carry a fixed tint each — fiber always green, sodium
+ * always gold, saturated fat always clay — which made the color decoration
+ * rather than information: a plate of nothing but salt looked exactly like a
+ * plate of nothing but lentils. Worse, the recipe screen next door was busy
+ * deriving an actual verdict from `dailyValue()`, so the two screens could
+ * describe the same sodium in two different tones.
+ *
+ * One source of thresholds now. A plate is one dinner, so the day-share it is
+ * measured against is dinner's, exactly as on the recipe page.
+ */
 function nutritionStrip(nut, state) {
   const eaters = state.household.members.filter(m => m.eats !== false);
   const ref = eaters[0] || typicalBody();
   const targets = dailyTargets(ref, { heartMode: state.prefs.heartMode });
-  const share = MEAL_SHARE.dinner;
+  const pace = Math.round(MEAL_SHARE.dinner * 100);
 
   const rows = [
-    { label: 'Fibre', value: nut.fiber_g, target: targets.fiber_g * share, unit: 'g', tint: 'green', lower: false },
-    { label: 'Sodium', value: nut.sodium_mg, target: targets.sodium_mg * share, unit: 'mg', tint: 'gold', lower: true },
-    { label: 'Sat fat', value: nut.satfat_g, target: targets.satfat_g * share, unit: 'g', tint: 'clay', lower: true }
+    { key: 'fiber_g', label: 'Fiber', value: nut.fiber_g, unit: 'g' },
+    { key: 'sodium_mg', label: 'Sodium', value: nut.sodium_mg, unit: 'mg' },
+    { key: 'satfat_g', label: 'Sat fat', value: nut.satfat_g, unit: 'g' }
   ];
 
   return h('div.plate__nutri', ...rows.map(r => {
-    const pct = Math.min(100, Math.round((r.value / (r.target || 1)) * 100));
-    const over = r.lower && r.value > r.target;
-    return h('div.plate__nutri-cell',
+    const dv = dailyValue(r.key, r.value, targets[r.key], { pace });
+    const pct = Math.min(100, dv.pct ?? 0);
+    return h('div', { class: `plate__nutri-cell nut-row--${dv.tone}` },
       h('div.plate__nutri-top',
         h('span.eyebrow', r.label),
         h('span.plate__nutri-val', `${num(r.value, r.unit === 'g' ? 1 : 0)}${r.unit}`)
       ),
       h('div.plate__nutri-track',
-        h('div', {
-          class: `plate__nutri-fill plate__nutri-fill--${r.tint} ${over ? 'is-over' : ''}`,
-          style: { width: `${pct}%` }
-        })
-      )
+        h('div.plate__nutri-fill', { style: { width: `${pct}%` } })
+      ),
+      // The word, not just the color — same rule as the recipe page.
+      h('span.plate__nutri-band', dv.note)
     );
   }));
 }

@@ -1,5 +1,5 @@
 /**
- * share-page.js — the small amount of behaviour a shared recipe page needs.
+ * share-page.js — the small amount of behavior a shared recipe page needs.
  *
  * A link arriving from iMessage lands on a static, readable recipe page. That
  * is the right destination for someone who has never seen this app. But if the

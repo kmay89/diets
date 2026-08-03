@@ -95,7 +95,7 @@ function daySummary(meals, state, ingIndex) {
 
   const cells = [
     { value: num(totals.sodium_mg), unit: 'mg', label: 'sodium', of: `of ${num(targets.sodium_mg)}` },
-    { value: num(totals.fiber_g), unit: 'g', label: 'fibre', of: `of ${num(targets.fiber_g)}` },
+    { value: num(totals.fiber_g), unit: 'g', label: 'fiber', of: `of ${num(targets.fiber_g)}` },
     { value: num(totals.satfat_g, 1), unit: 'g', label: 'sat fat', of: `of ${num(targets.satfat_g)}` },
     { value: String(plants.size), unit: '', label: 'plants', of: 'different' }
   ];

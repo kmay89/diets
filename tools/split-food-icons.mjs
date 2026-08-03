@@ -8,7 +8,8 @@
  * possible — for any slug we can pull out exactly the definitions it uses.
  *
  * Each icon is written to icons/food/<slug>.svg on its native 0 0 64 64 grid,
- * with the sheet's layout transform stripped off.
+ * with the sheet's layout transform stripped off and its ingredient-specific
+ * optical transform applied from scripts/food-icon-alignment.json.
  *
  * Two things are added on the way out, because the sheet does not carry them:
  *
@@ -16,7 +17,7 @@
  *     sheet's label, so the accessible name and the visible name never drift
  *   - a dark-mode rule. The artwork is drawn in charcoal outlines with cream
  *     interior marks, which is right on a light background and wrong on a dark
- *     one — the outline disappears and the marks glare. Those two colours are
+ *     one — the outline disappears and the marks glare. Those two colors are
  *     lifted into classes and swapped under prefers-color-scheme: dark.
  *
  * The file is rendered through <img>, so it is its own document: no script in
@@ -40,6 +41,7 @@ if (!sheetPath) {
 
 const sheet = readFileSync(sheetPath, 'utf8');
 const ingredients = JSON.parse(readFileSync(join(root, 'data/ingredients.json'), 'utf8')).items;
+const alignment = JSON.parse(readFileSync(join(root, 'scripts/food-icon-alignment.json'), 'utf8'));
 
 const slugFor = (id) => id.replace(/^ing\./, '').replace(/\./g, '-');
 const nameBySlug = new Map(ingredients.map(i => [slugFor(i.id), i.name]));
@@ -86,12 +88,12 @@ const CHARCOAL = '#303532';
 const CREAM = '#F3E8CF';
 
 /**
- * Swap the two structural colours for classes the stylesheet can flip.
+ * Swap the two structural colors for classes the stylesheet can flip.
  * Presentation attributes cannot take a custom property, so classes it is.
  */
 function themeable(markup) {
-  return markup.replace(/(fill|stroke)="(#303532|#F3E8CF)"/gi, (_, prop, colour) => {
-    const tone = colour.toUpperCase() === CHARCOAL.toUpperCase() ? 'ink' : 'paper';
+  return markup.replace(/(fill|stroke)="(#303532|#F3E8CF)"/gi, (_, prop, color) => {
+    const tone = color.toUpperCase() === CHARCOAL.toUpperCase() ? 'ink' : 'paper';
     return `class="${tone}-${prop[0]}"`;
   });
 }
@@ -106,6 +108,14 @@ function mergeClasses(markup) {
     const cleaned = attrs.replace(/\s*class="[^"]*"/g, () => (first ? (first = false, ` class="${merged}"`) : ''));
     return `<${tag}${cleaned}>`;
   });
+}
+
+/** Keep silhouettes optically centered and equally weighted on the 64-unit grid. */
+function alignArtwork(slug, artwork) {
+  const transform = alignment[slug];
+  if (!transform) return artwork;
+  const { scale, cx, cy } = transform;
+  return `<g class="optical-alignment" transform="translate(32 32) scale(${scale}) translate(${-cx} ${-cy})">${artwork}</g>`;
 }
 
 const STYLE = [
@@ -139,7 +149,7 @@ for (const m of sheet.matchAll(ICON_OPEN)) {
   const defs = [...used].map(id => defById.get(id)).filter(Boolean).join('\n    ');
 
   const groupAttrs = themeable(`${before}${after}`.replace(/\s+/g, ' ').trim());
-  const artwork = mergeClasses(themeable(body));
+  const artwork = alignArtwork(slug, mergeClasses(themeable(body)));
 
   const svg = [
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">`,

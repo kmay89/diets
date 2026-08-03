@@ -42,7 +42,7 @@ What remains, and what we care about:
 
 - Someone with physical access to an unlocked device reading local data — that is inherent to
   client-side storage and is documented.
-- The behaviour of retailer sites reached through the shopping-list search links.
+- The behavior of retailer sites reached through the shopping-list search links.
 - Self-hosting misconfiguration (missing HTTPS, permissive headers) on a fork.
 
 ## Hardening for self-hosters

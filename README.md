@@ -49,7 +49,7 @@ written into the step, taking the top of a range because a timer that goes off e
 learn to ignore.
 
 **🍽 Build a plate.** Start from the shape of a dinner rather than from a recipe: a whole grain, a
-vegetable, a protein and something to finish. The heart-forward score and the fibre, sodium and
+vegetable, a protein and something to finish. The heart-forward score and the fiber, sodium and
 saturated fat move as you fill the quarters, and it says plainly when the plate does not work for
 someone at your table. It never invents a recipe — once there is enough on the plate it finds the
 dinners that already cook that combination.
@@ -57,7 +57,7 @@ dinners that already cook that combination.
 **🌅 Today.** What is for dinner tonight, what is left on the shopping list, and how the week has
 gone. The one screen worth opening at five o'clock.
 
-**🌱 Progress without a scoreboard.** Sodium, fibre, saturated fat and plant variety over the last
+**🌱 Progress without a scoreboard.** Sodium, fiber, saturated fat and plant variety over the last
 seven days, counted from meals actually marked cooked. No streaks, no points, no red numbers — a
 quiet week is allowed to look like a quiet week.
 
@@ -86,7 +86,7 @@ sales, picnics, brunch, feeding a family with a new baby — and fifteen-minute 
 when none of that applies.
 
 **🍯 And a list that is just about being delicious.** Nineteen of those recipes are tagged *crave* —
-brown butter and crisped gnocchi, forty-five minutes of caramelised onions under melted Gruyère,
+brown butter and crisped gnocchi, forty-five minutes of caramelized onions under melted Gruyère,
 cacio e pepe, birria tacos with a cup of consommé to dunk them in. They are filed under **Lick the
 plate** in Recipes, and **Treat night** on the roll screen stops the heart score from steering the
 dice for an evening. It never hides the score: a dish that grades an F still shows an F, and says in
@@ -105,7 +105,7 @@ ingredients get pulled toward the top of every roll; anything marked never leave
 
 **📚 Every claim is sourced.** The health, cost and climate statements in this app live in a data
 file with their citations attached, rendered with numbered markers you can open. Each source shows
-what kind of evidence it is — randomised trial, meta-analysis, model, guideline — and what it *does
+what kind of evidence it is — randomized trial, meta-analysis, model, guideline — and what it *does
 not* show. A claim that cannot be sourced cannot be displayed.
 
 **🥑 Every ingredient has a face.** 227 hand-drawn SVG icons, one per ingredient, on the
@@ -154,6 +154,8 @@ js/
   shopping.js           list building, purchase units, exports, import
   citations.js          the citation engine: markers, sources, references
   occasions.js          what is coming up, and what to cook for it
+  collections.js        the saved filters behind the browse shelf
+  theme.js              the auto/light/dark switch in the top right
   feedback.js           synthesised sound and micro-animations
   swaps.js              substitutions, converted through grams
   ui.js                 ~200 lines of DOM helpers
@@ -161,10 +163,18 @@ js/
   views/                one module per screen — today, create, plate, cook, plan,
                         day, recipe, pantry, list, progress, garden, settings, why
 data/
-  ingredients.json      227 ingredients: nutrition, units, aisle, subs, garden info
+  ingredients.json      353 ingredients: nutrition, units, aisle, subs, garden info
+  recipes.index.json    the table of contents — the one list of recipe part files
   recipes.dinners.json  37 weeknight dinners
-  recipes.daily.json    22 breakfasts, lunches, sides, sauces and snacks
+  recipes.daily.json    31 breakfasts, lunches, sides, sauces and snacks
   recipes.occasions.json 30 holiday, cookout, potluck, bake-sale and 15-minute recipes
+  recipes.world.json    42 dishes from the cuisines of the world
+  recipes.regional.json 27 American regional, from the Lowcountry to Hawaii
+  recipes.methods.json  20 by method: grill, air fryer, sheet pan, one pot, slow cooker
+  recipes.sandwiches.json 12 sandwiches and handhelds
+  recipes.snacks.json   16 snacks, dips and smoothies
+  recipes.sweets.json   15 desserts, honestly scored
+  collections.json      52 saved filters in 5 groups — the ways into the collection
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat
   claims.json           every factual statement, attached to those sources
@@ -172,7 +182,7 @@ data/
   garden.json           zone 6a planting calendar (editable for any region)
   graph.json            generated — the food graph
 icons/
-  food/                 227 ingredient icons, named <slug>.svg
+  food/                 353 ingredient icons, named <slug>.svg
   cards/                per-recipe link-preview images
 tools/
   build-graph.mjs       compiles the graph from the source data
@@ -233,14 +243,21 @@ servings to 6, or adding the chicken, updates every number honestly.
 
 ## Making it yours
 
-**Add a recipe.** Append to `data/recipes.dinners.json` or `data/recipes.daily.json`, then run
-`npm run verify && npm run build:graph`. The verifier checks every ingredient reference, every unit,
-diet labelling (a "vegetarian" recipe containing chicken is an error), time sanity, and flags
+**Add a recipe.** Append to whichever part file fits — they are all listed in
+`data/recipes.index.json`, which is the single place the app, the build scripts and the tests read.
+A brand new part file is a one-line addition there. Then run `npm run verify && npm run build`. The verifier checks every ingredient reference, every unit,
+diet labeling (a "vegetarian" recipe containing chicken is an error), time sanity, and flags
 implausible nutrition.
 
 **Add an ingredient.** Append to `data/ingredients.json` with per-100 g values in the documented
 order, gram weights for each unit you want to use in recipes, an aisle, and how it is sold. An
-Atwater cross-check will warn if the calories and macros disagree.
+Atwater cross-check will warn if the calories and macros disagree. Then run
+`npm run build:icons.food`, which draws an icon for anything that does not have one so the set never
+has a hole in it — and `npm run build:art`, which lists it in `docs/ART.md` as wanting real art.
+
+**Add a way into the collection.** `data/collections.json`. A collection is a saved filter over
+courses, tags and cuisines, so a recipe joins one by being tagged honestly rather than by being
+added to a second list.
 
 **Change the store layout.** `data/aisles.json` → `storeLayouts`. Reorder the aisle ids to match how
 your store is actually laid out.
@@ -318,12 +335,12 @@ works online.
 The rules the citation engine enforces, and that `npm test` checks:
 
 1. **Claims are data.** Every factual sentence outside a recipe lives in `data/claims.json` with its
-   sources attached. A claim with no source can only be displayed if it is explicitly labelled as
+   sources attached. A claim with no source can only be displayed if it is explicitly labeled as
    editorial — our view, not a research finding.
 2. **Every source carries its caveat.** `data/citations.json` requires a `caveat` field, and the UI
    always shows it. A citation that presents only the flattering half of a study borrows the
    authority of research while discarding what makes research trustworthy.
-3. **Evidence types are labelled and not equal.** A randomised trial and a modelling study are
+3. **Evidence types are labeled and not equal.** A randomized trial and a modeling study are
    marked differently, because treating them the same is misleading people politely.
 4. **Ranges, not the most dramatic number in them.** Where credible estimates disagree — food's
    share of global emissions is 21–37% depending on the boundary — the app says so.

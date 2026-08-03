@@ -1,0 +1,1495 @@
+{
+  "schema": "errerlabs.diets.recipes/1",
+  "part": "sweets",
+  "note": "Desserts, scored honestly. A tiramisu is a tiramisu and the app does not pretend otherwise — it shows the numbers and says plainly that this one is for a birthday. A few here happen to be built on fruit, yogurt and nuts and score well without trying; the rest are worth every gram and say so.",
+  "recipes": [
+    {
+      "id": "rec.tiramisu",
+      "title": "Tiramisu",
+      "blurb": "No baking, no oven, thirty minutes plus a night in the fridge. The two things that matter: hard savoiardi, and a dip in the coffee measured in seconds.",
+      "cuisine": "italian",
+      "course": "dessert",
+      "servings": 10,
+      "activeMin": 30,
+      "totalMin": 390,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "no-cook",
+        "make-ahead",
+        "crave",
+        "special-occasion",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "9x9 dish",
+        "hand mixer"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "birthday",
+        "winter-holidays",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.ladyfingers",
+          "qty": 24,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.coffee.espresso",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "strong, cooled"
+        },
+        {
+          "ing": "ing.mascarpone",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cream.heavy",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 3,
+          "unit": "each",
+          "prep": "yolks only"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cocoa",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 1,
+          "unit": "oz",
+          "prep": "shaved",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Whisk the yolks and sugar in a bowl set over barely simmering water for 6-8 minutes, until pale, thick and hot to the touch — about 160°F. This is a zabaglione, and cooking the yolks is what makes the dessert safe as well as stable.",
+        "Cool it 10 minutes, then beat in the mascarpone until smooth. Do not overbeat; mascarpone splits.",
+        "Whip the cream to soft peaks with the vanilla and fold it in, in three additions.",
+        "Dip each ladyfinger in the coffee for one second a side. One. They go on absorbing for twenty minutes afterward, and a soggy tiramisu is always an over-dipped one.",
+        "Layer: biscuits, half the cream, biscuits, the rest of the cream. Smooth the top.",
+        "Refrigerate at least 6 hours, ideally overnight. Dust thickly with cocoa immediately before serving — cocoa dusted early turns to mud."
+      ],
+      "kidTweak": "Make a small dish with strong hot chocolate instead of coffee. It works, and it is a genuinely good children's dessert.",
+      "restaurantTouch": "A pinch of salt in the cream. Every rich dessert improves with it and nobody can identify why.",
+      "leftovers": "Keeps 3 days and is best on day two. It does not freeze.",
+      "heartNote": "Mascarpone and heavy cream make this one of the richest things in the collection — the app scores it accordingly and it is not wrong. It is a birthday dessert for ten people, and at that size it is entirely reasonable.",
+      "allergenNote": "Contains egg, dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tarte-tatin",
+      "title": "Apple Tarte Tatin",
+      "blurb": "Apples caramelized in the pan, pastry laid over the top, baked and flipped. The most impressive thing you can make from four ingredients, and it is genuinely not hard.",
+      "cuisine": "french",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 30,
+      "totalMin": 75,
+      "difficulty": "hard",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "project",
+        "advanced",
+        "crave",
+        "special-occasion"
+      ],
+      "equipment": [
+        "10-inch oven-safe skillet"
+      ],
+      "season": [
+        "fall"
+      ],
+      "occasions": [
+        "thanksgiving",
+        "winter-holidays",
+        "birthday"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.apple",
+          "qty": 7,
+          "unit": "each",
+          "prep": "firm variety, peeled, cored, halved"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.puffpastry",
+          "qty": 1,
+          "unit": "sheet",
+          "prep": "thawed"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Toss the apple halves with lemon juice. Use a firm apple — Honeycrisp, Braeburn, Northern Spy. A McIntosh will dissolve.",
+        "Melt the butter and sugar in the skillet over medium heat and cook, swirling but not stirring, 6-8 minutes until it turns amber. Caramel is done by color, not by time, and it goes from amber to burnt in about twenty seconds.",
+        "Off the heat, add the vanilla and salt, then pack the apple halves in tightly, rounded side down, in concentric circles. They shrink, so tighter than looks right.",
+        "Cook over medium-low 15 minutes, basting the tops with the caramel a few times.",
+        "Lay the pastry over, tuck the edges down inside the pan, cut three steam vents, and bake at 400°F for 28-32 minutes until the pastry is deep golden and puffed.",
+        "Rest exactly 5 minutes — no more, or the caramel sets and glues it in. Put a plate over the pan and flip in one committed motion, away from yourself. It is hot caramel; use oven mitts and mean it."
+      ],
+      "kidTweak": "Serve with cold plain yogurt or ice cream. The contrast is most of the pleasure.",
+      "restaurantTouch": "Amber, not gold. An underdone caramel gives you a sweet tart; a proper one gives you a bitter edge that makes the whole thing taste like something.",
+      "leftovers": "Keeps 2 days at room temperature. Reheat in a 350°F oven to re-crisp the pastry.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.olive-oil-citrus-cake",
+      "title": "Olive Oil and Citrus Cake",
+      "blurb": "One bowl, no mixer, and it keeps for four days getting better. Olive oil cakes stay moist in a way butter cakes cannot.",
+      "cuisine": "italian",
+      "course": "dessert",
+      "servings": 10,
+      "activeMin": 15,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "quick",
+        "make-ahead",
+        "bake-sale",
+        "potluck"
+      ],
+      "equipment": [
+        "9-inch cake pan"
+      ],
+      "season": [
+        "winter",
+        "spring"
+      ],
+      "occasions": [
+        "bake-sale",
+        "brunch",
+        "birthday",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.flour.ap",
+          "qty": 1.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 3,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.orange",
+          "qty": 2,
+          "unit": "each",
+          "prep": "zest of both, juice of one"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each",
+          "prep": "zest and juice"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bakingsoda",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.powdered.sugar",
+          "qty": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 350°F. Line and oil a 9-inch pan.",
+        "Rub the citrus zest into the sugar with your fingertips for a minute until the sugar is damp and smells like an orange grove. This releases the oils in a way that stirring never does, and it is the single best trick in citrus baking.",
+        "Whisk in the eggs, then the olive oil in a steady stream, then the yogurt, juice and vanilla.",
+        "Fold in the flour, baking powder, baking soda and salt until just combined. Stop while a few streaks remain.",
+        "Bake 40-45 minutes until a skewer comes out with a crumb or two. The top should be deep gold and cracked.",
+        "Cool in the pan 10 minutes, then turn out. Dust with powdered sugar. Use a fruity, decent olive oil — you will taste it, and that is the point."
+      ],
+      "kidTweak": "Bake it in a muffin tin for 18 minutes for lunchbox portions.",
+      "restaurantTouch": "Zest rubbed into sugar. Thirty seconds of work for twice the citrus flavor.",
+      "leftovers": "Better on day two. Keeps 4 days covered at room temperature; freezes well.",
+      "heartNote": "Three-quarters of a cup of olive oil rather than butter means this dessert has almost no saturated fat — about 2 g a slice against 9 or 10 for a butter cake.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.chocolate-avocado-mousse",
+      "title": "Dark Chocolate Avocado Mousse",
+      "blurb": "Ten minutes in a blender, no cooking, no eggs. Nobody guesses the avocado — it is there for texture, and the cocoa and real chocolate do the rest.",
+      "cuisine": "any",
+      "course": "dessert",
+      "servings": 6,
+      "activeMin": 10,
+      "totalMin": 70,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "no-cook",
+        "blender",
+        "quick",
+        "make-ahead",
+        "crave"
+      ],
+      "equipment": [
+        "blender or food processor"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "birthday",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.avocado",
+          "qty": 3,
+          "unit": "each",
+          "prep": "very ripe"
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 4,
+          "unit": "oz",
+          "prep": "melted"
+        },
+        {
+          "ing": "ing.cocoa",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.oat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.raspberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.pistachios",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "chopped"
+        }
+      ],
+      "steps": [
+        "The avocados have to be properly ripe — any firmness leaves a green note and a lumpy texture.",
+        "Blend the avocado, cocoa, maple, oat milk, vanilla and salt until completely smooth, scraping down twice. Give it longer than you think; two full minutes.",
+        "Melt the chocolate gently and blend it in last. Real chocolate rather than cocoa alone is what gives the mousse body as it chills.",
+        "Chill at least an hour. It firms considerably.",
+        "Serve in small cups with raspberries and pistachios. Small — it is rich."
+      ],
+      "kidTweak": "Do not tell them until after. Then tell them, because it is a good trick.",
+      "restaurantTouch": "Half a teaspoon of salt in a chocolate dessert. It is more than feels right and it is what makes the chocolate taste dark rather than sweet.",
+      "leftovers": "Keeps 3 days pressed with wrap. The surface can darken slightly; stir it.",
+      "heartNote": "A genuinely good-scoring dessert: the fat is avocado and cocoa butter, the sweetener is maple, and a serving carries about 7 g of fiber.",
+      "allergenNote": "Contains tree nut; the chocolate may contain dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.blueberry-buckle",
+      "title": "Blueberry Buckle",
+      "blurb": "New England's summer cake: a tender crumb, more blueberries than batter, and a cinnamon streusel that sinks in and makes the top buckle.",
+      "cuisine": "new-england",
+      "course": "dessert",
+      "servings": 9,
+      "activeMin": 20,
+      "totalMin": 70,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "make-ahead",
+        "bake-sale",
+        "potluck",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "9x9 pan"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "bake-sale",
+        "brunch",
+        "picnic",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.blueberries",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 6,
+          "unit": "tbsp",
+          "prep": "softened"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.buttermilk",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each",
+          "prep": "zest only"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 350°F. Make the streusel first: rub 1/3 cup of the flour, the brown sugar, cinnamon and 2 tablespoons of the butter together with your fingers into coarse crumbs. Chill it.",
+        "Cream the remaining butter with the granulated sugar and lemon zest for 3 minutes until pale and fluffy. That aeration is the cake's lift.",
+        "Beat in the egg and vanilla, then alternate the remaining flour (with the baking powder and salt) and the buttermilk, in three additions, starting and ending with flour.",
+        "Toss the blueberries with a tablespoon of flour and fold them in gently. The flour is what keeps them suspended instead of sinking.",
+        "Spread in the pan, scatter the streusel over, and bake 45-50 minutes until a skewer comes out clean and the middle no longer wobbles.",
+        "Cool at least 20 minutes. Buckle is better warm than hot."
+      ],
+      "kidTweak": "It is cake with fruit in it and crumbs on top. There is no tweak needed.",
+      "restaurantTouch": "Lemon zest creamed into the butter and sugar. It makes the blueberries taste more like blueberries.",
+      "leftovers": "Keeps 3 days covered. Excellent for breakfast, which is what a buckle is really for.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.banana-pudding",
+      "title": "Banana Pudding",
+      "blurb": "A real stovetop custard rather than a box of instant, layered with wafers and bananas and left overnight to go soft. Southern potluck royalty.",
+      "cuisine": "southern",
+      "course": "dessert",
+      "servings": 10,
+      "activeMin": 25,
+      "totalMin": 260,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "make-ahead",
+        "potluck",
+        "crowd-pleaser",
+        "kid-favorite",
+        "crave"
+      ],
+      "equipment": [
+        "saucepan",
+        "trifle dish or 9x13"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "potluck",
+        "cookout",
+        "birthday",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.66,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each",
+          "prep": "yolks only"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.banana",
+          "qty": 5,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.ladyfingers",
+          "qty": 30,
+          "unit": "each",
+          "prep": "or vanilla wafers"
+        },
+        {
+          "ing": "ing.cream.heavy",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.powdered.sugar",
+          "qty": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Whisk the sugar, cornstarch and salt in a saucepan, then whisk in the milk gradually so there are no lumps. Cook over medium, whisking constantly, until it thickens and just bubbles, about 8 minutes.",
+        "Temper the yolks: whisk a cup of the hot mixture into the beaten yolks, then pour it all back into the pan. Cook 2 minutes more, whisking hard. Skipping the tempering gives you sweet scrambled eggs.",
+        "Off the heat, whisk in the butter and vanilla. Strain it through a sieve — a thirty-second insurance policy against any lumps.",
+        "Layer in the dish: custard, wafers, bananas, repeating and finishing with custard. Press wrap onto the surface and chill 4 hours or overnight.",
+        "Before serving, whip the cream with the powdered sugar to soft peaks and spread it over. The wafers should have gone completely soft — that is the whole point and it takes the full four hours."
+      ],
+      "kidTweak": "Assemble it in individual jars and let each child layer their own.",
+      "restaurantTouch": "Strain the custard. Every professional pastry kitchen does it and it takes half a minute.",
+      "leftovers": "Keeps 2 days; the bananas darken. Make it the day before, not two.",
+      "heartNote": "Four yolks and a cup of cream across ten servings — a proper dessert, honestly scored. Made with 1% milk rather than whole it is meaningfully lighter than the classic and no worse for it.",
+      "allergenNote": "Contains dairy, egg and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.flan",
+      "title": "Flan",
+      "blurb": "Caramel in the bottom of the dish, a custard poured over, baked in a water bath and inverted. Five ingredients and the most elegant dessert in Latin America.",
+      "cuisine": "mexican",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 25,
+      "totalMin": 320,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "make-ahead",
+        "special-occasion",
+        "crave"
+      ],
+      "equipment": [
+        "9-inch round cake pan",
+        "roasting pan"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "birthday",
+        "winter-holidays",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.condensed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.orange",
+          "qty": 1,
+          "unit": "each",
+          "prep": "zest only",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Heat the oven to 325°F. Melt the sugar in a dry pan over medium heat without stirring — swirl it — until it is deep amber, 7-9 minutes. Pour it straight into the cake pan and tilt to coat the bottom. It sets hard in seconds; that is fine.",
+        "Blend or whisk the condensed milk, milk, eggs, vanilla, salt and zest until smooth. Do not aerate it — bubbles become holes in the set custard.",
+        "Strain the custard over the caramel.",
+        "Set the pan inside a roasting pan and pour hot water halfway up its sides. The water bath is what keeps the custard from curdling at the edges.",
+        "Bake 50-60 minutes until the center wobbles as a single mass rather than rippling.",
+        "Chill at least 4 hours, ideally overnight. Run a knife around the edge, put a rimmed plate over the top, and invert — the caramel has liquefied into a sauce and it pours out over the top."
+      ],
+      "kidTweak": "It is a wobbly caramel custard, which is a universally popular category. Serve small.",
+      "restaurantTouch": "Overnight in the fridge. A flan turned out after four hours is good; after twelve, the caramel has fully dissolved into sauce and it is a different dessert.",
+      "leftovers": "Keeps 3 days and stays good the whole time.",
+      "allergenNote": "Contains dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.mango-sticky-rice",
+      "title": "Mango Sticky Rice",
+      "blurb": "Thailand's great dessert: warm coconut-sweetened glutinous rice, cold ripe mango, salted coconut cream poured over. Steaming the rice properly is the whole thing.",
+      "cuisine": "thai",
+      "course": "dessert",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 60,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "make-ahead",
+        "crave",
+        "special-occasion"
+      ],
+      "equipment": [
+        "steamer or fine sieve over a pot"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "birthday",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.sushi",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "or Thai glutinous rice, soaked 4 hours"
+        },
+        {
+          "ing": "ing.coconutmilk.full",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mango",
+          "qty": 3,
+          "unit": "each",
+          "prep": "ripe, sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Soak the rice at least 4 hours, or overnight. True Thai glutinous rice is worth seeking out; short-grain sushi rice is the closest common substitute.",
+        "Steam the drained rice over simmering water for 25 minutes, lined with cheesecloth or a fine sieve, until translucent and chewy. Boiling it gives you porridge.",
+        "Warm three-quarters of the coconut milk with the sugar and half a teaspoon of salt until dissolved — do not boil it.",
+        "Pour that over the hot rice, stir once, cover, and leave 20 minutes. It looks far too wet and it drinks all of it.",
+        "For the topping, simmer the remaining coconut milk with the cornstarch and the last quarter teaspoon of salt for 2 minutes until slightly thickened. It should taste distinctly salty against the sweet rice — that contrast is the dish.",
+        "Serve warm rice with cold mango, the salted cream poured over, and sesame seeds."
+      ],
+      "kidTweak": "Sweet sticky rice with mango is close to universally liked. Serve small portions; it is rich.",
+      "restaurantTouch": "Salt in the coconut topping. Without it the dessert is flat and sugary; with it, it is one of the great sweet-salty combinations.",
+      "leftovers": "The rice hardens cold. Steam it again 5 minutes to bring it back. Best the day it is made.",
+      "heartNote": "Full-fat coconut milk is very high in saturated fat. This is a real dessert for a special occasion, not a weeknight pudding.",
+      "allergenNote": "Contains sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.affogato",
+      "title": "Affogato",
+      "blurb": "A scoop of something cold, a shot of hot espresso poured over. Two ingredients, ninety seconds, and it ends a dinner party better than anything you could bake.",
+      "cuisine": "italian",
+      "course": "dessert",
+      "servings": 4,
+      "activeMin": 5,
+      "totalMin": 5,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "no-cook",
+        "quick",
+        "15-minute",
+        "restaurant",
+        "special-occasion"
+      ],
+      "equipment": [
+        "espresso maker or moka pot"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "birthday",
+        "brunch"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.coffee.espresso",
+          "qty": 4,
+          "unit": "shot"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "frozen, or vanilla ice cream"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 1,
+          "unit": "oz",
+          "prep": "shaved"
+        },
+        {
+          "ing": "ing.hazelnuts",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "toasted and chopped"
+        }
+      ],
+      "steps": [
+        "For the frozen yogurt version: stir the maple into the yogurt, freeze it in a shallow container for 3 hours, and scrape it into scoops. Or use good vanilla ice cream and skip this.",
+        "Chill four small glasses. A cold glass buys you thirty seconds before it becomes a milkshake.",
+        "Put a scoop in each glass. Pull the espresso and pour it over at the table, in front of people.",
+        "Shaved chocolate and hazelnuts on top. Eat it immediately — the whole appeal is the moment when it is half melted."
+      ],
+      "kidTweak": "Hot chocolate instead of espresso works and is a real dessert in its own right.",
+      "restaurantTouch": "Pour it at the table. There is a small theater to affogato and it costs nothing.",
+      "leftovers": "There is no such thing.",
+      "heartNote": "Frozen Greek yogurt instead of ice cream cuts the saturated fat by roughly two-thirds and adds about 10 g of protein a serving.",
+      "allergenNote": "Contains dairy and tree nut.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-apple-hand-pies",
+      "title": "Air Fryer Apple Hand Pies",
+      "blurb": "Puff pastry, spiced apple, twelve minutes in the air fryer. Warm hand pies on a weeknight without heating the oven or frying anything.",
+      "cuisine": "american",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 20,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "kid-favorite",
+        "bake-sale",
+        "crave"
+      ],
+      "equipment": [
+        "air fryer"
+      ],
+      "season": [
+        "fall"
+      ],
+      "occasions": [
+        "bake-sale",
+        "picnic",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.apple",
+          "qty": 3,
+          "unit": "each",
+          "prep": "peeled and diced small"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.puffpastry",
+          "qty": 1,
+          "unit": "sheet",
+          "prep": "thawed"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 1,
+          "unit": "each",
+          "prep": "beaten"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Cook the diced apple with the butter, brown sugar, spices, lemon and salt over medium for 6 minutes until softened. Stir in the cornstarch slurried with a teaspoon of water and cook 1 minute more.",
+        "Cool the filling completely. Warm filling melts pastry and you get leaks.",
+        "Cut the pastry into 8 rectangles. Put a heaped tablespoon of filling on half of each, fold over, and seal the edges with a fork pressed hard.",
+        "Cut two small vents in each top, brush with egg, sprinkle with granulated sugar.",
+        "Air fry at 350°F for 11-13 minutes until deep golden and puffed. Lower and slower than most air fryer recipes — pastry needs time for its layers to separate.",
+        "Cool 10 minutes. The filling is molten and it will burn a mouth."
+      ],
+      "kidTweak": "Sealing the edges with a fork is a good job for small hands, and they are more careful about it than adults.",
+      "restaurantTouch": "Vents in the top. Without them the steam blows a hole in the side and the filling ends up in the basket.",
+      "leftovers": "Keeps 2 days. Re-crisp for 3 minutes at 350°F.",
+      "allergenNote": "Contains wheat, dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.churros",
+      "title": "Air Fryer Churros",
+      "blurb": "A real choux paste piped, air fried and rolled in cinnamon sugar, with a proper chocolate sauce for dipping. Thirty minutes, no vat of oil.",
+      "cuisine": "spanish",
+      "course": "dessert",
+      "servings": 6,
+      "activeMin": 25,
+      "totalMin": 35,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "kid-favorite",
+        "crave",
+        "special-occasion"
+      ],
+      "equipment": [
+        "saucepan",
+        "piping bag with a star tip",
+        "air fryer"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "birthday",
+        "potluck",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.flour.ap",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 4,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Bring 1 cup water, the butter, salt and 1 tablespoon of the sugar to a boil. Dump in the flour all at once and stir hard over the heat for 2 minutes until it forms a smooth ball that leaves a film on the pan bottom.",
+        "Cool 5 minutes, then beat in the eggs one at a time and the vanilla. It will look broken after each egg and come back together — keep beating.",
+        "Pipe 5-inch lengths through a large star tip straight into the air fryer basket, lined with perforated paper. The ridges from the star tip are structural: they give the churro its crisp edges.",
+        "Mist with oil and air fry at 375°F for 10-12 minutes until golden and firm.",
+        "Toss the hot churros in the remaining sugar mixed with the cinnamon.",
+        "Sauce: warm the milk and pour it over the chopped chocolate, then stir until glossy. Spanish chocolate for churros is thick enough to coat — it is a dipping sauce, not a drink."
+      ],
+      "kidTweak": "Piping is the fun part. Let them do it and accept the shapes.",
+      "restaurantTouch": "Sugar them while they are hot. Cold churros will not hold the coating.",
+      "leftovers": "Eat immediately — this is genuinely a to-order dessert.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.kheer",
+      "title": "Kheer (Cardamom Rice Pudding)",
+      "blurb": "Rice simmered slowly in milk until it thickens on its own, scented with cardamom and saffron and finished with pistachios. No eggs, no thickener, no rush.",
+      "cuisine": "indian",
+      "course": "dessert",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "make-ahead",
+        "comfort",
+        "budget",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "heavy saucepan"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "potluck",
+        "winter-holidays"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.basmati",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "rinsed"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 6,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.cardamom",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.saffron",
+          "qty": 1,
+          "unit": "pinch"
+        },
+        {
+          "ing": "ing.pistachios",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.raisins",
+          "qty": 3,
+          "unit": "tbsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Bring the milk to a simmer with the rice in a heavy pan. Heavy matters — thin pans scorch milk and there is no recovering from that taste.",
+        "Simmer 40-45 minutes on low, stirring every five minutes and scraping the bottom, until the rice has broken down and the milk has reduced by about a third. The starch from the rice is the only thickener.",
+        "Crush the saffron and steep it in a tablespoon of warm milk, then stir it in with the sugar, cardamom and salt in the last 10 minutes. Sugar added early slows the rice down.",
+        "Stir in most of the nuts and the raisins.",
+        "Serve warm or cold — both are correct, and it thickens considerably in the fridge. Top with the remaining pistachios."
+      ],
+      "kidTweak": "Rice pudding is rice pudding. Serve warm with a little extra milk poured over.",
+      "restaurantTouch": "Scrape the bottom every time you stir. The caramelized milk solids down there are flavor if they are incorporated and ruin if they are left to burn.",
+      "leftovers": "Keeps 4 days and thickens to a spoonable pudding. Loosen with milk.",
+      "heartNote": "Made with 1% milk this is about 200 calories a serving with 8 g of protein — one of the lighter desserts here, and it does not taste like a compromise.",
+      "allergenNote": "Contains dairy and tree nut.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.strawberry-shortcake",
+      "title": "Strawberry Shortcake",
+      "blurb": "Real biscuits, not sponge cake — flaky, barely sweet, split and filled with macerated berries and lightly whipped cream. June, on a plate.",
+      "cuisine": "american",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 25,
+      "totalMin": 55,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "crave",
+        "potluck",
+        "special-occasion",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "sheet pan",
+        "box grater"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "birthday",
+        "picnic",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.strawberries",
+          "qty": 2,
+          "unit": "lb",
+          "prep": "hulled and sliced"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 2.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 8,
+          "unit": "tbsp",
+          "prep": "frozen"
+        },
+        {
+          "ing": "ing.buttermilk",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.bakingsoda",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cream.heavy",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Toss the strawberries with half the sugar and the lemon juice and leave them at room temperature at least 30 minutes. They collapse slightly and make their own syrup — that syrup is the sauce.",
+        "Heat the oven to 425°F. Grate the frozen butter into the flour, baking powder, baking soda, salt and 2 tablespoons of the sugar. Grating frozen butter gives you flakier biscuits than cutting it in, with a fraction of the work.",
+        "Stir in the buttermilk until it just holds together. Pat it out, fold it in thirds twice — those folds are the layers — and cut eight rounds.",
+        "Bake 14-16 minutes until risen and golden. Do not twist the cutter; a twisted edge seals and the biscuit rises lopsided.",
+        "Whip the cream with the remaining sugar and vanilla to soft peaks. Stop while it still slumps.",
+        "Split the warm biscuits, spoon berries and syrup over the bottoms, add cream, and lean the tops on at an angle."
+      ],
+      "kidTweak": "Let them mash a few of the berries with a fork. More syrup, and it makes them part of it.",
+      "restaurantTouch": "Soft peaks, not stiff. Cream whipped to stiff peaks is a frosting; cream at soft peaks folds into the berry syrup on the plate.",
+      "leftovers": "Biscuits keep a day. Assemble to order — this dessert has a fifteen-minute window and that is part of its charm.",
+      "garden": "June strawberries from a local patch make a version of this that supermarket berries cannot touch. It is worth planning the month around.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.baklava",
+      "title": "Walnut Pistachio Baklava",
+      "blurb": "Forty layers of phyllo, nuts and butter, cut before baking and drenched in lemon-honey syrup after. A Saturday project that keeps for two weeks.",
+      "cuisine": "greek",
+      "course": "dessert",
+      "servings": 24,
+      "activeMin": 50,
+      "totalMin": 140,
+      "difficulty": "hard",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "project",
+        "advanced",
+        "make-ahead",
+        "crowd-pleaser",
+        "potluck"
+      ],
+      "equipment": [
+        "9x13 pan",
+        "pastry brush",
+        "sharp knife"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "winter-holidays",
+        "potluck",
+        "bake-sale",
+        "birthday"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.phyllo",
+          "qty": 40,
+          "unit": "sheet",
+          "prep": "thawed overnight in the fridge"
+        },
+        {
+          "ing": "ing.walnuts",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.pistachios",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 12,
+          "unit": "tbsp",
+          "prep": "melted"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.honey",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cloves",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Make the syrup first and let it cool completely: simmer 1 cup of the sugar with 1 cup water, the honey, a strip of lemon peel and the juice for 10 minutes. Cold syrup onto hot pastry is the rule — the reverse gives you a soggy tray.",
+        "Pulse the nuts with the remaining sugar, cinnamon, cloves and salt to a coarse crumb, not a powder.",
+        "Keep the phyllo stack under a damp towel while you work; exposed sheets shatter within a minute.",
+        "Butter the pan. Lay 10 sheets, brushing every second one with butter. Spread a third of the nuts. Repeat with 8 sheets and nuts, twice more, then finish with 14 sheets on top, buttering more generously as you go.",
+        "Cut all the way through into diamonds before baking. Baked baklava cannot be cut without shattering.",
+        "Bake at 325°F for 70-80 minutes until deep golden all the way through. Slow is essential — the middle layers need to dry out and crisp.",
+        "Pour the cold syrup over the hot pastry the moment it comes out. It will hiss and sizzle for a full minute. Leave it uncovered at least 6 hours before eating; overnight is better."
+      ],
+      "kidTweak": "Brushing butter on phyllo is a genuinely satisfying job and children are patient with it for longer than you would expect.",
+      "restaurantTouch": "Cold syrup, hot pastry. That temperature difference is what lets the syrup soak in without softening the layers.",
+      "leftovers": "Two weeks at room temperature, loosely covered. Never refrigerate it — it goes gluey.",
+      "heartNote": "Twenty-four small pieces, three cups of nuts and twelve tablespoons of butter. Cut it small — one diamond is a portion, and that is how it is served across the Levant and Greece.",
+      "allergenNote": "Contains wheat, dairy and tree nut.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.berry-hazelnut-crisp",
+      "title": "Northwest Berry Hazelnut Crisp",
+      "cuisine": "pacific-northwest",
+      "course": "dessert",
+      "servings": 8,
+      "activeMin": 15,
+      "totalMin": 60,
+      "difficulty": "easy",
+      "blurb": "Blackberries and raspberries under an oat and hazelnut topping. Cornstarch and a long enough bake are what keep the fruit from flooding the dish.",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "quick",
+        "make-ahead",
+        "potluck",
+        "crave",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "9-inch baking dish"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "potluck",
+        "cookout",
+        "birthday"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.blackberries",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.raspberries",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.hazelnuts",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "toasted and chopped"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.sugar.brown",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 6,
+          "unit": "tbsp",
+          "prep": "cold, cubed"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 375°F. Toss the berries with the granulated sugar, cornstarch and the zest and juice of the lemon. Cornstarch is what turns berry juice into sauce instead of soup.",
+        "Rub the oats, hazelnuts, flour, brown sugar, cinnamon, salt and cold butter together with your fingers until it clumps in pieces the size of peas and hazelnuts.",
+        "Scatter the topping over the fruit without pressing it down — a packed topping steams instead of crisping.",
+        "Bake 40-45 minutes until the topping is deep gold and the fruit is bubbling thickly at the edges. Bubbling is the doneness cue; a crisp pulled before the fruit boils will be runny.",
+        "Cool at least 20 minutes so the juices set. Serve warm with yogurt or ice cream."
+      ],
+      "kidTweak": "Frozen berries work straight from the freezer — add 10 minutes to the bake and do not thaw them first.",
+      "restaurantTouch": "Toast and skin the hazelnuts before they go in the topping. Raw hazelnut in a crisp tastes like nothing.",
+      "leftovers": "Keeps 3 days. The topping softens; re-crisp it in a 350°F oven for 10 minutes.",
+      "garden": "Blackberries and raspberries both thrive in zone 6a and a few canes will supply this all August.",
+      "allergenNote": "Contains tree nut, wheat and dairy.",
+      "source": "ERRERLabs original"
+    }
+  ]
+}

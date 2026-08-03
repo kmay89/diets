@@ -7,6 +7,50 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **141 new recipes, taking the collection from 89 to 230.** Whole cuisines rather than a token
+  dish each: Sichuan mapo tofu and kung pao, Sapporo miso ramen, Japanese curry, okonomiyaki,
+  japchae, kimchi jjigae, pad thai, green curry, pho chay, summer rolls, chana masala, palak paneer,
+  dal tadka, mujaddara, falafel, tabbouleh, risotto, pasta alla norma, pesto, ratatouille, French
+  onion soup, tortilla española, paella, pozole verde, enchiladas with a real chile sauce, tacos al
+  pastor, jerk, feijoada, misir wot, tagine, pierogi, colcannon, adobo, pancit, congrí, paprikash.
+  Each one carries the technique that makes it work — the cracked coconut cream, the dark roux, the
+  bloomed spices, the one-second dip — and where a step is a shortcut it says so.
+- **American regional cooking as ten cuisines rather than one.** The Lowcountry, the Gulf, Texas and
+  New Mexico, New England, the Chesapeake, the Upper Midwest, California, the Pacific Northwest,
+  Hawaii and Appalachia.
+- **Recipes organized by the thing you cook them in** — grill, air fryer, sheet pan, one pot and
+  slow cooker — plus sandwiches, snacks and smoothies, and fifteen desserts scored honestly.
+- **126 new ingredients**, each with USDA-based per-100 g nutrition, gram weights per unit, aisle,
+  substitutions and shopping units.
+- **Collections**: 52 saved filters in five groups — what kind of meal, how it gets cooked, cuisines
+  of the world, around the United States, and time and effort. A collection is a filter over
+  courses, tags and cuisines rather than a second copy of the data, so a recipe joins one by being
+  tagged honestly and no list can go stale.
+- **An auto/light/dark switch in the top right of every screen.** Three states, not two: Auto
+  follows the device and stays following it, which is different from picking light. It writes the
+  same preference the Settings screen does, so the two can never disagree, and it moves the browser
+  chrome color with it.
+- **Recipe cards now carry artwork** — the three ingredients that say what the dish actually is,
+  drawn from the icon set. No photography, which is not a thing a household app can maintain for 230
+  recipes.
+- **An entry hub at the end of setup.** Four named ways in — roll tonight, browse the collection,
+  fill the pantry, see the garden plan — because a planner that opens on a dice screen assumes
+  everybody wants the dice.
+- `tools/make-food-icons.mjs`, which draws an on-style icon for any ingredient that does not have
+  one, so the set can never have a hole in it.
+- `docs/ART.md` and `tools/art-manifest.mjs`: a generated manifest of every visual asset, what state
+  it is in, and the exact brief and prompt for the artwork still worth drawing by hand.
+- `data/recipes.index.json`, the collection's table of contents. The app, four build scripts and
+  three tests read the list of part files from one place instead of eight.
+
+### Changed
+- **The interface now uses the palette the food icons were drawn in** — charcoal ink on warm paper,
+  deep green and clay, in both light and dark. Matching the art to the interface is most of why the
+  two now look like one thing.
+- The browse screen leads with a collection shelf: one row of groups, one row of chips, counts on
+  everything.
+
+### Added
 - **A real printed page.** The 🖨 buttons no longer print the app. The shopping list becomes a
   single branded sheet — wordmark, one line of context, then checkboxes in aisle order, set in
   columns chosen from how much there is to fit. A week of dinners lands on one side of one piece of
@@ -35,7 +79,7 @@ All notable changes to this project are documented here. Format follows
   recipes led to "That page does not exist." The router now matches on the path and leaves the query
   to the view.
 - **The occasion card's title was invisible.** As a `<button>` it inherited the platform button
-  colour, which on a device set to dark with the app forced light is white on a pale green card.
+  color, which on a device set to dark with the app forced light is white on a pale green card.
 - **The install banner could not be dismissed.** `[hidden]` loses to any class that sets `display`,
   so the ✕ set the attribute and the banner stayed put. Hiding now wins everywhere, dismissing takes
   the toolbar button with it, and the decision is remembered — with the way back in Settings.
@@ -48,11 +92,11 @@ All notable changes to this project are documented here. Format follows
 - **Create** (`#/create`) — the four honest ways into a meal (the dice, a plate, the pantry, the
   collection) gathered in one place instead of scattered across the tab bar and the More sheet.
 - **The plate builder** (`#/plate`) — compose a dinner in four quarters and watch the heart-forward
-  score, fibre, sodium and saturated fat move. Flags anyone at the table the plate does not suit,
+  score, fiber, sodium and saturated fat move. Flags anyone at the table the plate does not suit,
   and finds the recipes that already cook the combination rather than inventing one.
 - **A day view** (`#/day/<day>`) — every meal on one day, in the order it gets eaten, with the day's
   numbers against a whole-day target.
-- **Progress** (`#/progress`) — sodium, fibre, saturated fat and plant variety across the last seven
+- **Progress** (`#/progress`) — sodium, fiber, saturated fat and plant variety across the last seven
   days, from meals marked cooked. No streaks and no points, in keeping with the rest of the app.
 - **Newsreader and Karla**, self-hosted and precached. Three variable `.woff2` files, latin subset,
   about 310 KB, under the SIL Open Font License — see `fonts/README.md`.
@@ -84,7 +128,7 @@ Opened up: written for anyone's table, sourced throughout, and stocked for the w
 ### Changed
 - **The app speaks to everyone now.** The copy, the household templates, the garden calendar and the
   store layouts no longer assume one particular cook in one particular town. The garden data is
-  labelled as zone 6a and documented as editable for any region.
+  labeled as zone 6a and documented as editable for any region.
 - **The intro leads with nourishment**, not restriction: no streaks, no points, no red numbers.
 - **Calmer interface.** One spacing scale, lighter elevation, quieter pills, more air. The tab bar
   went from eight items to five with the rest behind More — a row of eight icons is a wall nobody

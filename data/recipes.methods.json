@@ -1,0 +1,2462 @@
+{
+  "schema": "errerlabs.diets.recipes/1",
+  "part": "methods",
+  "note": "Recipes organized by the thing you cook them in. Grill, air fryer, sheet pan, one pot, slow cooker — each one has a job it does better than anything else, and these are the dishes that make the case.",
+  "recipes": [
+    {
+      "id": "rec.grilled-elote",
+      "title": "Grilled Elote",
+      "blurb": "Mexican street corn: charred hard, rolled in a lime-chile crema, showered with crumbled cheese. Fifteen minutes and it steals every cookout it goes to.",
+      "cuisine": "mexican",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "quick",
+        "cookout",
+        "kid-favorite",
+        "crave",
+        "15-minute"
+      ],
+      "equipment": [
+        "grill"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day",
+        "picnic"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.corn.kernels",
+          "qty": 6,
+          "unit": "ear",
+          "prep": "husked"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.cheese.quesofresco",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "crumbled fine"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Get the grill hot — you want real char, not gentle browning.",
+        "Whisk the mayonnaise, yogurt, the juice of one lime, garlic, half the chili powder and the salt into a loose crema.",
+        "Grill the corn 8-10 minutes, turning every 2, until blistered black in patches on all sides. Those black spots are the flavor; pale grilled corn is just boiled corn that took longer.",
+        "Brush each ear with crema while it is still hot enough to melt into it.",
+        "Roll in the cheese, then dust with the rest of the chili powder and the paprika. Cilantro and the second lime, cut into wedges."
+      ],
+      "kidTweak": "Cut the ears in half for smaller hands, and hold the chili powder on theirs — the crema and cheese alone is plenty.",
+      "restaurantTouch": "Crumble the cheese as fine as you can so it sticks. A coarse crumble falls straight into the plate.",
+      "leftovers": "Cut the kernels off leftovers and stir them into a bowl of the crema for esquites, which is the same thing eaten with a spoon.",
+      "garden": "Corn picked the same morning is a different vegetable. If a farm stand is within driving distance in August, this is the recipe that proves it.",
+      "allergenNote": "Contains dairy and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.halloumi-peach-skewers",
+      "title": "Grilled Halloumi and Peach Skewers",
+      "blurb": "Halloumi does not melt, so it grills like meat: squeaky, browned, salty against hot sweet peaches and a hit of honey and mint. Twenty minutes.",
+      "cuisine": "mediterranean",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "quick",
+        "cookout",
+        "crave",
+        "restaurant"
+      ],
+      "equipment": [
+        "grill",
+        "skewers"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "picnic",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cheese.halloumi",
+          "qty": 1,
+          "unit": "package",
+          "prep": "cut into 3/4-inch cubes"
+        },
+        {
+          "ing": "ing.peach",
+          "qty": 4,
+          "unit": "each",
+          "prep": "firm-ripe, cut into wedges"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into wide petals"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.honey",
+          "qty": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mint",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.arugula",
+          "qty": 5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bulgur",
+          "qty": 1,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Soak wooden skewers 20 minutes. Cook the bulgur: equal volume boiling water, covered, off the heat, 20 minutes.",
+        "Thread halloumi, peach and onion alternately. Brush with 2 tablespoons of the oil.",
+        "Grill over direct medium heat 8-10 minutes, turning every couple of minutes, until the cheese is browned in stripes and the peaches have collapsed slightly at the edges.",
+        "Whisk the honey, lemon juice, remaining oil and pepper flakes into a dressing.",
+        "Toss the arugula and bulgur with half the dressing. Lay the skewers on top, spoon the rest over while everything is hot, and finish with the mint."
+      ],
+      "omnivore": {
+        "label": "Add chicken or shrimp",
+        "note": "Separate skewers so the timing is right — chicken thigh cubes need 12 minutes, shrimp need 4.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1,
+            "unit": "lb",
+            "prep": "cubed"
+          }
+        ]
+      },
+      "kidTweak": "Grilled cheese on a stick with warm peaches. Let them build their own skewer before it goes on the fire.",
+      "restaurantTouch": "Dress it while it is hot. Warm halloumi drinks a lemon-honey dressing; cold halloumi repels it.",
+      "leftovers": "Halloumi goes rubbery cold — this one is best eaten at the grill. The bulgur salad keeps 3 days.",
+      "heartNote": "Halloumi is brined, so it carries the salt for the whole plate. Nothing else here is salted, and the arugula and bulgur bring the balance back.",
+      "allergenNote": "Contains dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.portobello-burgers",
+      "title": "Marinated Portobello Burgers",
+      "blurb": "The mushroom burger that is not an apology: marinated in balsamic and smoke, grilled until it gives up its juice, stacked with charred onion and garlic aioli.",
+      "cuisine": "american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 50,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "cookout",
+        "crave",
+        "quick",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "grill"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 4,
+          "unit": "each",
+          "prep": "stems and gills removed"
+        },
+        {
+          "ing": "ing.vinegar.balsamic",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "three minced, one grated"
+        },
+        {
+          "ing": "ing.onion.sweet",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into thick rings"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.bun.wholewheat",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 3,
+          "unit": "oz",
+          "prep": "sliced",
+          "optional": true
+        },
+        {
+          "ing": "ing.lettuce.butter",
+          "qty": 4,
+          "unit": "leaf"
+        },
+        {
+          "ing": "ing.tomato.roma",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        }
+      ],
+      "steps": [
+        "Whisk the balsamic, 2 tablespoons oil, soy sauce, paprika and minced garlic. Marinate the mushrooms gill side up for 30 minutes so the caps fill like bowls.",
+        "Scrape the gills out before marinating — they hold a lot of water and they muddy everything they touch.",
+        "Mix the aioli: mayonnaise, grated garlic, lemon juice.",
+        "Grill the mushrooms gill side up first, 5 minutes, so the juices pool. Flip and grill 4 more, and put the cheese on now if you are using it. Brush the onion rings with the last oil and grill them alongside.",
+        "Toast the buns cut side down for 30 seconds.",
+        "Build: aioli on both halves, lettuce, mushroom, onion, tomato. Eat it before the juices soak the bun."
+      ],
+      "omnivore": {
+        "label": "Beef patties alongside",
+        "note": "Same grill, same buns, same aioli. Season the patties only with salt and pepper and do not press them.",
+        "add": [
+          {
+            "ing": "ing.beef.ground90",
+            "qty": 1,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "Cut it in half and add the cheese. A grilled mushroom cap in a bun with melted mozzarella is a genuinely easy sell.",
+      "restaurantTouch": "Gill side up first. That five minutes turns the cap into a bowl of concentrated mushroom juice instead of a puddle on the grate.",
+      "leftovers": "Sliced cold portobello is excellent in a grain bowl the next day. Keeps 3 days.",
+      "allergenNote": "Contains wheat, soy, egg and (optionally) dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.grilled-caesar",
+      "title": "Grilled Romaine Caesar",
+      "blurb": "Halved romaine hearts on a hot grate for ninety seconds — warm and smoky at the base, cold and crisp at the tips. The dressing is anchovy-free and still tastes like Caesar.",
+      "cuisine": "italian-american",
+      "course": "side",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "grill",
+        "salad",
+        "quick",
+        "15-minute",
+        "cookout",
+        "restaurant"
+      ],
+      "equipment": [
+        "grill"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.romaine",
+          "qty": 2,
+          "unit": "head",
+          "prep": "halved lengthwise, root left on"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.capers",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "rinsed and minced"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "grated, plus shavings"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.bread.sourdough",
+          "qty": 3,
+          "unit": "slice",
+          "prep": "torn into croutons"
+        }
+      ],
+      "steps": [
+        "Whisk 3 tablespoons of the oil with the garlic, mustard, minced capers, lemon juice, yogurt, grated parmesan and pepper. The capers do what anchovy does — briny, savory, sharp — and this dressing needs no salt beyond them.",
+        "Toss the torn bread with 1 tablespoon oil and grill or toast until crisp at the edges and chewy in the middle.",
+        "Brush the cut faces of the romaine with the last tablespoon of oil.",
+        "Grill cut side down over high heat for 90 seconds. No longer — you are marking it, not cooking it. The center should still be cold.",
+        "Lay the halves cut side up, spoon the dressing into the leaves, add croutons and shave more parmesan over. Serve immediately with a knife and fork."
+      ],
+      "omnivore": {
+        "label": "Anchovy, the original",
+        "note": "Two oil-packed anchovy fillets mashed into the dressing. It is the traditional version and it is better.",
+        "add": [
+          {
+            "ing": "ing.tuna.canned",
+            "qty": 0.25,
+            "unit": "can"
+          }
+        ]
+      },
+      "kidTweak": "Warm lettuce is a hard sell. Keep a few raw leaves aside with dressing for dipping and croutons on the side.",
+      "restaurantTouch": "Leave the root end on. It holds the half together on the grate and comes off in one cut at the table.",
+      "leftovers": "Eat it hot. The dressing keeps 5 days and is excellent on anything.",
+      "allergenNote": "Contains dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.grilled-pizza",
+      "title": "Grilled Pizza",
+      "blurb": "Two minutes a side over live fire gives a blistered, smoky crust no home oven can. Once you have done it once you will not go back.",
+      "cuisine": "italian",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 30,
+      "totalMin": 45,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "project",
+        "crave",
+        "kid-favorite",
+        "cookout",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "grill",
+        "two sheet pans"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "birthday",
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pizzadough.wholewheat",
+          "qty": 2,
+          "unit": "ball"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 5,
+          "unit": "oz",
+          "prep": "torn, patted very dry"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.zucchini",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced into ribbons"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Let the dough sit at room temperature an hour — cold dough will not stretch. Divide into four and stretch each into a rough oval on an oiled sheet pan. Thin, and do not chase a circle.",
+        "Season the crushed tomatoes with the garlic, salt and pepper flakes. No cooking; it cooks on the pizza.",
+        "Set the grill up with one hot zone and one cooler zone, and have every topping within arm's reach. From here it moves fast.",
+        "Lay a stretched piece of dough straight onto the hot grate. In 2 minutes it will puff and the underside will be marked and firm. Flip it onto the cooler zone.",
+        "Working on the cooked side, spread a thin layer of sauce, then cheese, then vegetables. Less than feels right — a wet pizza will not crisp.",
+        "Close the lid for 3-4 minutes until the cheese melts and the bottom is crisp. Basil after it comes off, never before. Four pizzas cut into wedges feeds six with a salad."
+      ],
+      "omnivore": {
+        "label": "Sausage",
+        "note": "Cook crumbled chicken sausage first, on the grill in a small pan. Raw sausage will not cook through in four minutes.",
+        "add": [
+          {
+            "ing": "ing.sausage.chicken.italian",
+            "qty": 2,
+            "unit": "link",
+            "prep": "casings removed, browned"
+          }
+        ]
+      },
+      "kidTweak": "Give each child their own dough. Nobody argues about toppings when they only have to negotiate with themselves.",
+      "restaurantTouch": "Grill one side first, then build on the cooked side. That is the whole trick, and it is why grilled pizza works when everyone assumes it cannot.",
+      "leftovers": "Best immediately. Reheat in a dry skillet, not a microwave.",
+      "prepAhead": "Sauce and toppings can be prepped hours ahead. Dough is happiest at room temperature for the last hour.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original",
+      "heartNote": "Store-bought pizza dough is the sodium in this recipe — about 1,000 mg a serving before anything goes on it, which is why the sauce takes a quarter teaspoon of salt rather than a full one. It is worth reading the dough label; they vary by a factor of two."
+    },
+    {
+      "id": "rec.grilled-veg-chimichurri",
+      "title": "Grilled Vegetable Platter with Chimichurri",
+      "blurb": "Everything in the crisper over hot coals, piled on a board, and a bright green Argentine herb sauce spooned over while it steams. The sauce takes five minutes.",
+      "cuisine": "argentinian",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 25,
+      "totalMin": 35,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "grill",
+        "cookout",
+        "crowd-pleaser",
+        "heart-star",
+        "budget"
+      ],
+      "equipment": [
+        "grill"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "labor-day",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.zucchini",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced lengthwise 1/2-inch thick"
+        },
+        {
+          "ing": "ing.eggplant",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced into rounds"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 2,
+          "unit": "each",
+          "prep": "quartered"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "thick rings"
+        },
+        {
+          "ing": "ing.asparagus",
+          "qty": 1,
+          "unit": "bunch",
+          "prep": "trimmed"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 2,
+          "unit": "each",
+          "prep": "thick sliced"
+        },
+        {
+          "ing": "ing.oil.avocado",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "finely chopped"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "finely chopped"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.redwine",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 6,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Chimichurri first, so it has time to sit: stir the parsley, cilantro, garlic, oregano, pepper flakes, vinegar, olive oil and half a teaspoon of the salt together. Chopped by hand, never blended — a blender turns it into a bitter purée.",
+        "Toss the vegetables with the avocado oil, which takes grill heat without smoking, and the rest of the salt.",
+        "Grill in order of how long each takes: eggplant and peppers 5 minutes a side, zucchini and portobello 4, onion 4, asparagus 3.",
+        "Pile everything hot onto a board or platter and spoon a third of the chimichurri over immediately — hot vegetables absorb it.",
+        "Serve the rest of the sauce alongside. This is a meal with bread and beans, and a side with anything else."
+      ],
+      "kidTweak": "Grilled peppers and zucchini go sweet. Serve the chimichurri on the side; the raw garlic is usually the objection.",
+      "restaurantTouch": "Salt the vegetables before they go on, dress them the second they come off. Both timings matter more than anything you do in between.",
+      "leftovers": "Cold grilled vegetables with chimichurri on sourdough is one of the best sandwiches there is. Keeps 4 days.",
+      "garden": "This is the recipe for the week in August when everything ripens at once.",
+      "heartNote": "Almost entirely vegetables and unsaturated oil. The chimichurri is what makes it taste like a treat rather than a virtue.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-tofu",
+      "title": "Air Fryer Crispy Tofu",
+      "blurb": "The single best thing an air fryer does. Cornstarch, hot circulating air, fifteen minutes — crunchy outside, custardy inside, no deep fryer and no oily pan.",
+      "cuisine": "any",
+      "course": "component",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 30,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "meal-prep",
+        "kid-favorite",
+        "component",
+        "budget"
+      ],
+      "equipment": [
+        "air fryer"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tofu.firm",
+          "qty": 1,
+          "unit": "block",
+          "prep": "pressed 15 minutes, cut into 3/4-inch cubes"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Press the tofu properly — 15 minutes under something heavy. Water is the enemy of crisp and this is the step people skip.",
+        "Toss the cubes with the soy sauce first so they season, then the oil, then the cornstarch and spices last. That order coats every face without turning the starch to paste.",
+        "Air fry at 400°F for 15-18 minutes, shaking the basket twice. Do not crowd it — one layer, two batches if you need to. Crowding steams.",
+        "They are done when they sound hollow against the basket and the corners are dark gold.",
+        "Eat them within twenty minutes for the best texture, or toss them into any bowl, salad, stir-fry or taco."
+      ],
+      "kidTweak": "Serve them as nuggets with barbecue sauce or a peanut dip. This is the recipe that converts children to tofu.",
+      "restaurantTouch": "Cornstarch, not flour. Cornstarch has no gluten to go bready and it fries into a glassy shell.",
+      "leftovers": "Keeps 4 days and re-crisps in 4 minutes at 400°F. Do not sauce it until serving or it softens.",
+      "heartNote": "About 18 g of complete plant protein a serving for roughly a dollar, with a fraction of the oil that pan-frying takes.",
+      "allergenNote": "Contains soy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-sweet-potato-fries",
+      "title": "Air Fryer Sweet Potato Fries",
+      "blurb": "The cornstarch-and-cold-soak trick that finally makes sweet potato fries crisp instead of floppy. Twenty-five minutes, one tablespoon of oil.",
+      "cuisine": "american",
+      "course": "side",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 45,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "kid-favorite",
+        "budget",
+        "crave"
+      ],
+      "equipment": [
+        "air fryer"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "game-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.sweetpotato",
+          "qty": 3,
+          "unit": "each",
+          "prep": "cut into 1/4-inch batons"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "qty": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.chipotle.adobo",
+          "qty": 1,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 0.5,
+          "unit": "each"
+        }
+      ],
+      "steps": [
+        "Soak the cut fries in cold water 20 minutes to pull out surface starch, then dry them completely on a towel. Wet fries steam.",
+        "Toss with the cornstarch until they look dusty, then the oil, then the spices.",
+        "Air fry at 380°F for 12 minutes, shake, then 6-8 more at 400°F. The two-temperature approach cooks the inside first and crisps the outside second.",
+        "Salt them the moment they come out — salt slides off cold fries.",
+        "Whisk the yogurt with the chipotle and lime for dipping."
+      ],
+      "kidTweak": "Skip the chipotle in the dip and use plain yogurt with a little honey, or just ketchup.",
+      "restaurantTouch": "Salt at the end, never before the fryer. Salt draws out water and water is the whole problem.",
+      "leftovers": "They do not keep well — eat them hot. This is one recipe worth making to order.",
+      "heartNote": "A tablespoon of oil for four servings, against a cup or more for deep frying. That difference is the reason the machine earns its counter space.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-eggplant-parm",
+      "title": "Air Fryer Eggplant Parmesan",
+      "blurb": "The crisp of fried eggplant without a quart of oil or a splattered stove. Thirty-five minutes for a dish that usually takes an afternoon.",
+      "cuisine": "italian-american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 30,
+      "totalMin": 50,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "comfort",
+        "crave",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "air fryer",
+        "baking dish"
+      ],
+      "season": [
+        "summer",
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.eggplant",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced into 1/2-inch rounds"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.panko",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.spice.italian",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each",
+          "prep": "beaten"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.33,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.marinara.lowsodium",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 5,
+          "unit": "oz",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 0.5,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Salt the eggplant rounds on both sides and lay them in a colander for 20 minutes. Blot dry. This seasons them and pulls out the water that would otherwise steam the crust off.",
+        "Set up three plates: flour, beaten egg, and panko mixed with the parmesan and Italian seasoning.",
+        "Coat each round flour, egg, crumb, pressing the crumbs on. Mist or brush lightly with oil on both sides.",
+        "Air fry at 380°F, one layer at a time, 10-12 minutes, flipping halfway, until deep golden and firm.",
+        "Layer in a baking dish: a little sauce, the eggplant overlapping, more sauce, mozzarella. Do not drown it — the crust you just built is the point.",
+        "Bake at 400°F for 10 minutes until bubbling, or run it under the broiler for 3. Basil after it comes out."
+      ],
+      "omnivore": {
+        "label": "Chicken parm, same method",
+        "note": "Pounded chicken cutlets take the same breading and 12 minutes at 380°F.",
+        "add": [
+          {
+            "ing": "ing.chicken.breast",
+            "qty": 2,
+            "unit": "each",
+            "prep": "pounded thin"
+          }
+        ]
+      },
+      "kidTweak": "Serve the crisp rounds plain with sauce for dipping and skip the assembly. Half of them will not make it to the baking dish anyway.",
+      "restaurantTouch": "Sauce sparingly and assemble at the last minute. Eggplant parm goes soggy from sitting, not from cooking.",
+      "leftovers": "Keeps 3 days. Reheat in the air fryer at 350°F, uncovered.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-zucchini-fries",
+      "title": "Air Fryer Zucchini Fries with Herb Ranch",
+      "blurb": "Crisp, salty, dippable, and made almost entirely of zucchini. Twenty minutes, and the fastest way to get a garden glut eaten by children.",
+      "cuisine": "american",
+      "course": "snack",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "kid-favorite",
+        "budget",
+        "dip"
+      ],
+      "equipment": [
+        "air fryer"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "game-day",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.zucchini",
+          "qty": 3,
+          "unit": "each",
+          "prep": "cut into batons"
+        },
+        {
+          "ing": "ing.panko",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each",
+          "prep": "beaten"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 0.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.dill",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.chives",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "snipped"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 0.5,
+          "unit": "each"
+        }
+      ],
+      "steps": [
+        "Toss the zucchini batons with the flour and salt. Dip in egg, then press into the panko mixed with parmesan, garlic powder and paprika.",
+        "Air fry at 400°F for 10-12 minutes in a single layer, shaking once, until golden and crisp.",
+        "Stir the yogurt, mayonnaise, dill, chives and lemon juice into a ranch with a pinch of salt.",
+        "Serve straight from the basket. They soften as they cool, so this is a stand-at-the-counter food."
+      ],
+      "kidTweak": "This is the entire point of the recipe. Call them fries, serve them with ranch, say nothing about zucchini.",
+      "restaurantTouch": "Parmesan in the crumb, not on top. It browns into the crust and does the salting for you.",
+      "leftovers": "Eat immediately. The ranch keeps 5 days and is good on everything.",
+      "garden": "One zucchini plant produces more than a household can eat. This recipe and the grill are the two answers.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.air-fryer-salmon",
+      "title": "Air Fryer Miso Salmon",
+      "blurb": "Nine minutes from fridge to plate, lacquered with miso and maple, and the machine handles it without heating the kitchen. A weeknight fish dinner that is genuinely fast.",
+      "cuisine": "japanese-inspired",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "pescatarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "air-fryer",
+        "quick",
+        "weeknight",
+        "15-minute",
+        "restaurant"
+      ],
+      "equipment": [
+        "air fryer"
+      ],
+      "season": [
+        "all"
+      ],
+      "primaryDiet": "pescatarian",
+      "ingredients": [
+        {
+          "ing": "ing.salmon",
+          "qty": 4,
+          "unit": "fillet"
+        },
+        {
+          "ing": "ing.miso.white",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.mirin",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 1,
+          "unit": "tsp",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.rice.sushi",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bokchoy",
+          "qty": 4,
+          "unit": "each",
+          "prep": "halved"
+        }
+      ],
+      "steps": [
+        "Whisk the miso, maple, mirin, rice vinegar and ginger into a thick glaze.",
+        "Pat the salmon dry and spread the glaze over the tops only — the underside would burn against the basket.",
+        "Air fry at 390°F for 8-10 minutes depending on thickness. It is done at 125°F internal; it will carry to 130°F resting.",
+        "Steam or sear the bok choy while the salmon cooks, and cook the rice.",
+        "Sesame seeds and scallions over the top. The glaze should be caramelized at the edges and still glossy in the middle."
+      ],
+      "vegetarianSwap": {
+        "label": "The same glaze on tofu or eggplant",
+        "note": "Thick tofu slabs, 15 minutes at 390°F; or eggplant halves, 18 minutes. The glaze is the recipe and it works on all three.",
+        "add": [
+          {
+            "ing": "ing.tofu.firm",
+            "qty": 1,
+            "unit": "block",
+            "prep": "cut into slabs"
+          }
+        ]
+      },
+      "kidTweak": "Sweet, glossy fish. Serve it flaked over rice with the glaze spooned around.",
+      "restaurantTouch": "Glaze on top only. Sugar on the basket side scorches before the fish is done.",
+      "leftovers": "Cold miso salmon flaked into rice with cucumber is a genuinely good lunch. Keeps 2 days.",
+      "heartNote": "One of the fastest routes to the AHA's two servings of fatty fish a week — 10 minutes of cooking, most of it unattended.",
+      "allergenNote": "Contains fish, soy and sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.sheet-pan-fajitas",
+      "title": "Sheet-Pan Fajitas",
+      "blurb": "One tray, 425°F, and the char comes from the pan being preheated. Everything is on the table in half an hour and there is one thing to wash.",
+      "cuisine": "tex-mex",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 15,
+      "totalMin": 40,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "sheet-pan",
+        "roast",
+        "quick",
+        "weeknight",
+        "kid-favorite",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "weeknight-rush",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.pepper.bell.green",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "sliced thick"
+        },
+        {
+          "ing": "ing.mushroom.portobello",
+          "qty": 3,
+          "unit": "each",
+          "prep": "sliced thick"
+        },
+        {
+          "ing": "ing.beans.black",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.oil.avocado",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.tortilla.corn",
+          "qty": 12,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 425°F with the sheet pan inside for 10 minutes. Vegetables hitting hot metal sear; vegetables hitting cold metal sweat.",
+        "Toss the peppers, onions and mushrooms with the oil, all the spices and the salt.",
+        "Spread them on the hot pan in one layer — use two pans rather than crowding one — and roast 20 minutes.",
+        "Add the black beans, toss, and roast 5 minutes more until the edges are charred in places.",
+        "Squeeze a whole lime over the hot pan and scrape everything together with the juices.",
+        "Warm the tortillas. Serve with avocado, cilantro, yogurt and the second lime."
+      ],
+      "omnivore": {
+        "label": "Chicken or steak on the same pan",
+        "note": "Sliced thigh or skirt steak in the same spice mix, on its own half of a second pan so the juices do not steam the vegetables.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1.25,
+            "unit": "lb",
+            "prep": "sliced"
+          }
+        ]
+      },
+      "kidTweak": "Build-your-own is most of the appeal. Put everything in bowls in the middle of the table.",
+      "restaurantTouch": "Preheat the pan. It is the difference between roasted vegetables and fajitas.",
+      "leftovers": "Keeps 4 days and makes excellent quesadillas, burritos and grain bowls.",
+      "heartNote": "About 12 g fiber a serving and roughly 400 mg sodium — a restaurant fajita platter typically runs three times that.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.sheet-pan-harissa-squash",
+      "title": "Sheet-Pan Harissa Chickpeas and Squash",
+      "blurb": "Chickpeas that crackle, squash that caramelizes, harissa that ties it together, and a lemon-yogurt drizzle. One pan, forty minutes, almost no work.",
+      "cuisine": "north-african",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 45,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": false,
+      "tags": [
+        "sheet-pan",
+        "roast",
+        "weeknight",
+        "make-ahead",
+        "heart-star",
+        "budget"
+      ],
+      "equipment": [
+        "sheet pan"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.squash.butternut",
+          "qty": 5,
+          "unit": "cup",
+          "prep": "cubed"
+        },
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained and dried well"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "cut into wedges"
+        },
+        {
+          "ing": "ing.harissa",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.coriander",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.pumpkinseeds",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.couscous.wholewheat",
+          "qty": 1,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Heat the oven to 425°F. Dry the chickpeas properly on a towel — damp chickpeas never crisp.",
+        "Toss squash, chickpeas and onion with the oil, harissa, cumin, coriander and salt.",
+        "Spread on a large sheet pan with space between everything and roast 35 minutes, turning once at 20. The chickpeas should rattle and the squash should be dark at the corners.",
+        "Whisk the yogurt with the garlic, the juice of half the lemon and a pinch of salt.",
+        "Steam the couscous. Serve the pan over it, drizzled with the yogurt, then parsley, pumpkin seeds and the rest of the lemon."
+      ],
+      "kidTweak": "Harissa varies a lot in heat. Roast a corner of the pan with plain oil and cumin for anyone who wants it mild.",
+      "restaurantTouch": "The cold, sharp yogurt against the hot spiced pan. That contrast is why this eats like a restaurant dish and not a tray of vegetables.",
+      "leftovers": "Keeps 4 days and packs well cold. Re-crisp in a hot oven.",
+      "heartNote": "About 15 g fiber a serving, no saturated fat to speak of, and the vitamin A in a cup of butternut covers a day on its own.",
+      "allergenNote": "Contains dairy and wheat.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.slow-cooker-white-bean-kale",
+      "title": "Slow Cooker White Bean, Kale and Rosemary",
+      "blurb": "Ten minutes in the morning, and by evening the beans have gone silky and the broth tastes like it was made from something. Dried beans, no soaking.",
+      "cuisine": "italian",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 420,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "slow-cooker",
+        "make-ahead",
+        "budget",
+        "heart-star",
+        "soup",
+        "stew"
+      ],
+      "equipment": [
+        "slow cooker"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "new-baby"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.cannellini",
+          "qty": 3,
+          "unit": "can",
+          "prep": "drained — or 1.5 cups dried, unsoaked"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 3,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.celery",
+          "qty": 3,
+          "unit": "stalk",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove",
+          "prep": "smashed"
+        },
+        {
+          "ing": "ing.rosemary",
+          "qty": 3,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 6,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.kale.lacinato",
+          "qty": 6,
+          "unit": "cup",
+          "prep": "stemmed and torn"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "grated",
+          "optional": true
+        },
+        {
+          "ing": "ing.bread.sourdough",
+          "qty": 6,
+          "unit": "slice",
+          "prep": "toasted"
+        }
+      ],
+      "steps": [
+        "Put the beans, onion, carrot, celery, garlic, rosemary, bay, tomato paste and broth in the slow cooker. Do not salt yet if you are using dried beans — salt early keeps their skins tough.",
+        "Cook on low 7-8 hours, or high 4. Dried unsoaked beans want the full low setting; canned beans are happy with 4 hours on low.",
+        "In the last 20 minutes, add the kale, the salt and the olive oil and put the lid back on.",
+        "Fish out the rosemary stems and bay. Mash a cup of the beans against the side to thicken the broth.",
+        "Finish every bowl with lemon juice, a thread of olive oil, parmesan if you want it, and a slab of toast pushed down into it."
+      ],
+      "omnivore": {
+        "label": "A parmesan rind or pancetta",
+        "note": "A parmesan rind in the pot all day is the vegetarian version of a ham hock and does much the same job. Diced pancetta rendered first is the other route.",
+        "add": [
+          {
+            "ing": "ing.bacon",
+            "qty": 3,
+            "unit": "slice",
+            "prep": "diced"
+          }
+        ]
+      },
+      "kidTweak": "Blend two ladles smooth and stir them back for a creamier texture, and serve with a lot of toast.",
+      "restaurantTouch": "Olive oil and lemon at the table, not in the pot. Eight hours flattens both; thirty seconds before eating restores them.",
+      "leftovers": "Keeps 5 days and freezes 3 months. It thickens into something closer to a stew.",
+      "heartNote": "About 16 g fiber and 18 g protein a bowl. The olive-oil-and-lemon finish is doing real work, not just decoration.",
+      "allergenNote": "Contains wheat, and dairy if you add the cheese.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.slow-cooker-tikka-masala",
+      "title": "Slow Cooker Chickpea Tikka Masala",
+      "blurb": "The spices get bloomed in a skillet first — five extra minutes that make the difference between a slow cooker curry and a good one. Then walk away for six hours.",
+      "cuisine": "indian",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 20,
+      "totalMin": 380,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "slow-cooker",
+        "make-ahead",
+        "crowd-pleaser",
+        "kid-favorite",
+        "freezer"
+      ],
+      "equipment": [
+        "slow cooker",
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "potluck",
+        "new-baby"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oil.canola",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.spice.garam",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.coriander",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.tomato.canned.crushed",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "ing": "ing.chickpeas.canned",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.sweetpotato",
+          "qty": 2,
+          "unit": "each",
+          "prep": "cubed"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.2",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.rice.basmati",
+          "qty": 2,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "In a skillet, cook the onions in the oil over medium-high for 8 minutes until browned at the edges. Add garlic and ginger for 1 minute.",
+        "Add all the ground spices and the tomato paste and fry 90 seconds until it darkens and smells toasted. Slow cookers never get hot enough to do this, which is why unbloomed slow-cooker curries taste dusty.",
+        "Scrape the skillet into the cooker with the crushed tomatoes, chickpeas, sweet potato, broth and salt.",
+        "Cook on low 6 hours or high 3.",
+        "Turn it off and stir in the yogurt — off the heat, or it splits. Cilantro on top, over basmati."
+      ],
+      "omnivore": {
+        "label": "Chicken tikka",
+        "note": "Chicken thighs, marinated in yogurt and a spoonful of the spice mix, broiled until charred, then added for the last hour.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 1.5,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "There is no chile in this at all — it is warm rather than hot. Serve with naan for scooping.",
+      "restaurantTouch": "The char is what tikka means. If you have five extra minutes, broil the chickpeas on a tray until spotted before they go in.",
+      "leftovers": "Better on day two. Keeps 5 days, freezes 3 months without the yogurt.",
+      "allergenNote": "Contains dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.slow-cooker-bbq-jackfruit",
+      "title": "Slow Cooker BBQ Jackfruit",
+      "blurb": "Jackfruit shreds like pulled pork and drinks up smoke and vinegar. Six hours unattended, then piled on buns with slaw.",
+      "cuisine": "southern",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 15,
+      "totalMin": 380,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "slow-cooker",
+        "sandwich",
+        "crowd-pleaser",
+        "make-ahead",
+        "kid-favorite",
+        "crave"
+      ],
+      "equipment": [
+        "slow cooker"
+      ],
+      "season": [
+        "summer"
+      ],
+      "occasions": [
+        "cookout",
+        "game-day",
+        "potluck",
+        "labor-day"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.jackfruit.canned",
+          "qty": 3,
+          "unit": "can",
+          "prep": "drained, rinsed, cores trimmed"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.bbqsauce",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.vinegar.apple",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.chili",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.mustard.yellow",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.molasses",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cabbage.green",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "shredded"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.mayo.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.bun.wholewheat",
+          "qty": 6,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.pickles.dill",
+          "qty": 6,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        "Squeeze the jackfruit dry and pull the chunks apart with your fingers, discarding the tough core pieces.",
+        "Combine everything through the broth in the cooker, with the tomato paste. Half a cup of bottled sauce plus tomato paste, vinegar, molasses and smoked paprika gets you the same flavor as a full cup with half the sodium and sugar. Cook on low 6 hours.",
+        "Shred the jackfruit with two forks in the pot. If it is wet, leave the lid off on high for 30 minutes to reduce.",
+        "Slaw: toss the cabbage and carrot with the mayonnaise, yogurt, a splash of the vinegar and a pinch of salt.",
+        "Pile onto toasted buns with slaw and pickles. Serve with plenty of napkins."
+      ],
+      "omnivore": {
+        "label": "Pulled pork",
+        "note": "A 3 lb pork shoulder in the same sauce, low for 8 hours, shredded and returned to the liquid.",
+        "add": [
+          {
+            "ing": "ing.pork.shoulder",
+            "qty": 3,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "Sweet, shreddable and served in a bun. Most children do not ask what it is.",
+      "restaurantTouch": "Slaw on the sandwich, not beside it. The crunch and the acid are what keep a sweet sandwich from being cloying.",
+      "leftovers": "Keeps 5 days, freezes 3 months. Excellent on nachos or in quesadillas.",
+      "heartNote": "Bottled barbecue sauce is the whole sodium story here — about 175 mg a tablespoon. Half a cup across six sandwiches, stretched with tomato paste and vinegar, brings a sandwich in around 800 mg instead of 1,300.",
+      "allergenNote": "Contains wheat and egg.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.slow-cooker-pot-roast",
+      "title": "Slow Cooker Root Vegetable Pot Roast",
+      "blurb": "Sunday dinner with a Saturday's worth of effort. A whole cauliflower and root vegetables braised in red wine gravy — with a beef chuck fork for the table that wants it.",
+      "cuisine": "american",
+      "course": "dinner",
+      "servings": 6,
+      "activeMin": 25,
+      "totalMin": 440,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "slow-cooker",
+        "comfort",
+        "crowd-pleaser",
+        "make-ahead"
+      ],
+      "equipment": [
+        "slow cooker",
+        "skillet"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "occasions": [
+        "winter-holidays",
+        "potluck"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cauliflower",
+          "qty": 1,
+          "unit": "head",
+          "prep": "left whole, leaves trimmed"
+        },
+        {
+          "ing": "ing.mushroom.cremini",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.potato.yukon",
+          "qty": 4,
+          "unit": "each",
+          "prep": "quartered"
+        },
+        {
+          "ing": "ing.carrot",
+          "qty": 4,
+          "unit": "each",
+          "prep": "in big chunks"
+        },
+        {
+          "ing": "ing.parsnip",
+          "qty": 3,
+          "unit": "each",
+          "prep": "in big chunks"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 2,
+          "unit": "each",
+          "prep": "quartered"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 6,
+          "unit": "clove"
+        },
+        {
+          "ing": "ing.tomatopaste",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.wine.red",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.thyme.fresh",
+          "qty": 5,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.rosemary",
+          "qty": 2,
+          "unit": "sprig"
+        },
+        {
+          "ing": "ing.spice.bayleaf",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.flour.ap",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.parsley.flat",
+          "qty": 0.33,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Brown the mushrooms and quartered onions hard in the oil in a skillet, 10 minutes. Add the tomato paste and fry it 2 minutes until brick-colored.",
+        "Deglaze with the wine and let it bubble 3 minutes. That step cooks off the raw alcohol a slow cooker never will.",
+        "Put the root vegetables in the cooker, sit the whole cauliflower on top, and pour the skillet contents plus broth, soy sauce, herbs and salt around it.",
+        "Cook on low 7 hours. The cauliflower comes out carvable with a spoon.",
+        "Lift everything onto a platter. Whisk the flour with 1/2 cup of the cooking liquid, stir it back in, and cook on high 15 minutes to thicken into gravy.",
+        "Carve the cauliflower into wedges, pour the gravy over, and finish with parsley."
+      ],
+      "omnivore": {
+        "label": "Beef chuck",
+        "note": "Brown a 2.5 lb chuck roast first and set it in the middle instead of the cauliflower — same time, same gravy. Or do both and let the table choose.",
+        "add": [
+          {
+            "ing": "ing.beef.chuck",
+            "qty": 2.5,
+            "unit": "lb"
+          }
+        ]
+      },
+      "kidTweak": "Roots braised this long go sweet. Serve the gravy over everything and let them eat the potatoes and carrots.",
+      "restaurantTouch": "Browning and deglazing in a skillet before anything goes in the cooker is fifteen minutes and about eighty percent of the flavor.",
+      "leftovers": "Keeps 4 days. Blend leftovers with the gravy into an excellent soup.",
+      "allergenNote": "Contains wheat and soy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.one-pot-orzo-spinach",
+      "title": "One-Pot Creamy Lemon Orzo",
+      "blurb": "The orzo cooks in the broth and thickens it with its own starch — creamy with no cream at all. Twenty-five minutes, one pot, dinner.",
+      "cuisine": "mediterranean",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "pasta",
+        "quick",
+        "weeknight",
+        "kid-favorite",
+        "budget"
+      ],
+      "equipment": [
+        "deep skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "weeknight-rush",
+        "new-baby"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.orzo",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.shallot",
+          "qty": 2,
+          "unit": "each",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 4,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.beans.cannellini",
+          "qty": 1,
+          "unit": "can",
+          "prep": "drained"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.peas.frozen",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.dill",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "chopped"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the shallots in the oil over medium for 3 minutes. Add the garlic for 30 seconds.",
+        "Add the orzo and toast it, stirring, for 2 minutes until it smells nutty and looks slightly golden. This keeps the grains distinct instead of gluey.",
+        "Add the broth and salt, bring to a simmer, and cook 9-10 minutes, stirring often, until the orzo is al dente and the liquid has gone creamy.",
+        "Stir in the beans, peas and spinach and cook 2 minutes until the spinach collapses.",
+        "Off the heat: the zest and juice of the lemon, the parmesan, dill and black pepper. It should be loose — it tightens fast, so serve it a little wetter than looks right."
+      ],
+      "omnivore": {
+        "label": "Shrimp or chicken",
+        "note": "Shrimp poached in the broth for the last 3 minutes; or shredded rotisserie chicken stirred in at the end.",
+        "add": [
+          {
+            "ing": "ing.shrimp",
+            "qty": 8,
+            "unit": "oz"
+          }
+        ]
+      },
+      "kidTweak": "Small pasta, cheese and lemon. Leave the dill on the side if herbs are a problem.",
+      "restaurantTouch": "Zest as well as juice. The zest carries the perfume; the juice only carries the sour.",
+      "leftovers": "Keeps 3 days and thickens solid — loosen with broth over low heat.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.congee",
+      "title": "Savory Rice Congee",
+      "blurb": "One cup of rice and eight of water, simmered until the grains dissolve into silk. The most comforting cheap food there is, and the toppings are the whole show.",
+      "cuisine": "chinese",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 90,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian",
+        "vegan"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "budget",
+        "comfort",
+        "make-ahead",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "heavy pot"
+      ],
+      "season": [
+        "fall",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.jasmine",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "rinsed"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.ginger",
+          "qty": 3,
+          "unit": "inch",
+          "prep": "sliced into coins"
+        },
+        {
+          "ing": "ing.mushroom.shiitake",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 5,
+          "unit": "each",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 4,
+          "unit": "each",
+          "prep": "soft-boiled or fried",
+          "optional": true
+        },
+        {
+          "ing": "ing.chilicrisp",
+          "qty": 2,
+          "unit": "tbsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.peanuts",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "crushed",
+          "optional": true
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.5,
+          "unit": "cup"
+        }
+      ],
+      "steps": [
+        "Freeze the rinsed rice for an hour first if you have time — the ice crystals split the grains and cut the cooking time roughly in half. Not essential, but it is the one real shortcut.",
+        "Combine rice, broth, 4 cups water, ginger coins and mushrooms. Bring to a boil, then drop to the lowest possible simmer.",
+        "Cook 75-90 minutes, uncovered, stirring every 15 minutes and scraping the bottom. It is done when the grains have broken down and it pours thickly off a spoon.",
+        "Add the salt and soy sauce at the end. Congee thickens as it stands — thin it with boiling water to whatever consistency you like.",
+        "Serve in bowls with sesame oil, scallions and cilantro, and put the eggs, chili crisp and peanuts on the table for people to build their own."
+      ],
+      "omnivore": {
+        "label": "Chicken or pork congee",
+        "note": "Poach two chicken thighs in the pot for the first 40 minutes, shred them and return. The broth gets noticeably richer.",
+        "add": [
+          {
+            "ing": "ing.chicken.thigh",
+            "qty": 2,
+            "unit": "each"
+          }
+        ]
+      },
+      "kidTweak": "This is the food given to sick children across most of Asia, for good reason. Plain, with a little soy and a soft egg.",
+      "restaurantTouch": "Everything interesting happens on top. A bowl of plain congee with six bowls of toppings around it is the actual dish.",
+      "leftovers": "Keeps 4 days and sets solid. Reheat with a lot of extra water, whisking.",
+      "allergenNote": "Contains soy; egg and peanut if you add them.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.focaccia",
+      "title": "No-Knead Focaccia",
+      "blurb": "Five minutes of stirring, an overnight rest in the fridge, and a pan of golden, dimpled, olive-oil-rich bread. The easiest impressive thing you can bake.",
+      "cuisine": "italian",
+      "course": "side",
+      "servings": 12,
+      "activeMin": 20,
+      "totalMin": 900,
+      "difficulty": "medium",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "baked",
+        "project",
+        "make-ahead",
+        "crowd-pleaser",
+        "potluck",
+        "kid-favorite"
+      ],
+      "equipment": [
+        "9x13 pan",
+        "large bowl"
+      ],
+      "season": [
+        "all"
+      ],
+      "occasions": [
+        "potluck",
+        "picnic",
+        "winter-holidays"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.flour.bread",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.yeast.instant",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.honey",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 8,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.rosemary",
+          "qty": 3,
+          "unit": "sprig",
+          "prep": "leaves picked"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "halved",
+          "optional": true
+        },
+        {
+          "ing": "ing.olives.kalamata",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "torn",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Whisk the flour, yeast and salt. Add the honey and 2 cups of cool water and stir with a spatula until there is no dry flour left. It will look like a shaggy paste — that is right, and there is no kneading.",
+        "Cover and refrigerate 12-24 hours. The long cold rise is what builds the flavor and the open holes; a two-hour rise gives you a decent bread and not this one.",
+        "Pour 4 tablespoons of the oil into the pan. Tip the dough in, turn it once to coat, and fold it over itself four times. Cover and leave at room temperature 2-4 hours until it is puffy and fills the pan.",
+        "Heat the oven to 450°F. Oil your fingers with 2 more tablespoons and press straight down through the dough to the pan bottom, all over. Those dimples are what hold the oil.",
+        "Scatter the rosemary and any toppings, drizzle the last oil, and sprinkle with flaky salt.",
+        "Bake 22-28 minutes until deep golden all over, including the underside. Lift it out of the pan immediately onto a rack or the bottom steams."
+      ],
+      "kidTweak": "Dimpling the dough is the best job in baking and children are better at it than adults.",
+      "restaurantTouch": "More oil than feels reasonable, in the pan and on top. Focaccia is fried on the bottom as much as baked, and that is the crust everyone remembers.",
+      "leftovers": "Best the day it is baked. Day two, split and toast it. Freezes well cut into squares.",
+      "heartNote": "Half a cup of olive oil across twelve pieces — mostly monounsaturated, and it is the reason this needs nothing on it.",
+      "allergenNote": "Contains wheat.",
+      "source": "ERRERLabs original"
+    }
+  ]
+}

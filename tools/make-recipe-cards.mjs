@@ -18,6 +18,7 @@
 import { readFileSync, mkdirSync, writeFileSync, rmSync, existsSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { RECIPE_FILES } from './recipe-files.mjs';
 import { recipeNutrition, heartScore } from '../js/nutrition.js';
 import { slugFor } from './build-share-pages.mjs';
 
@@ -27,11 +28,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const site = read('site.config.json');
 const ingredients = read('data/ingredients.json').items;
 const index = new Map(ingredients.map(i => [i.id, i]));
-const recipes = [
-  ...read('data/recipes.dinners.json').recipes,
-  ...read('data/recipes.daily.json').recipes,
-  ...read('data/recipes.occasions.json').recipes
-];
+const recipes = RECIPE_FILES.flatMap(f => read(f).recipes);
 
 const OUT = join(root, 'icons/cards');
 

@@ -1,29 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
-  <title id="t">Cream cheese</title>
-  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
-  <defs>
-    <filter id="cheese-creamcheese-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
-    </filter>
-    <radialGradient id="cheese-creamcheese-charcoal" cx="27%" cy="20%" r="88%">
-      <stop offset="0" stop-color="#758078"/>
-      <stop offset="0.48" stop-color="#303532"/>
-      <stop offset="1" stop-color="#151917"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="cheese-creamcheese-title" data-aisle="Dairy &amp; Eggs" data-render-style="dimensional">
+  <title id="cheese-creamcheese-title">Cream cheese</title>
+  <defs><radialGradient id="cheese-creamcheese-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
     </radialGradient>
-    <radialGradient id="cheese-creamcheese-cream" cx="27%" cy="20%" r="88%">
-      <stop offset="0" stop-color="#FFFDF2"/>
-      <stop offset="0.48" stop-color="#F3E8CF"/>
-      <stop offset="1" stop-color="#C6B184"/>
+<radialGradient id="cheese-creamcheese-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
     </radialGradient>
-    <radialGradient id="cheese-creamcheese-clay2" cx="27%" cy="20%" r="88%">
+<radialGradient id="cheese-creamcheese-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+<radialGradient id="cheese-creamcheese-clay2" cx="27%" cy="20%" r="88%">
       <stop offset="0" stop-color="#F6C79F"/>
       <stop offset="0.48" stop-color="#DF9A68"/>
       <stop offset="1" stop-color="#A85C3B"/>
     </radialGradient>
-  </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cheese-creamcheese-depth)">
+<radialGradient id="cheese-creamcheese-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+<radialGradient id="cheese-creamcheese-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+<radialGradient id="cheese-creamcheese-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+<radialGradient id="cheese-creamcheese-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+<radialGradient id="cheese-creamcheese-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+    <filter id="cheese-creamcheese-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter></defs>
+  <style>
+    .food-icon { color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) {
+      .food-icon { stroke: #F3E8CF; }
+
+      .food-icon [data-tone="charcoal"] { fill: url(#cheese-creamcheese-cream); }
+      .food-icon [data-tone="cream"] { fill: url(#cheese-creamcheese-charcoal); }
+      .food-icon [fill="#303532"] { fill: #F3E8CF; }
+      .food-icon [fill="#F3E8CF"] { fill: #303532; }
+      .food-icon [stroke="#303532"] { stroke: #F3E8CF; }
+      .food-icon [stroke="#F3E8CF"] { stroke: #303532; }
+    }
+  </style>
+  <g class="food-icon" stroke="#303532" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" filter="url(#cheese-creamcheese-depth)">
+    <g class="optical-alignment" transform="translate(32 32) scale(1.05444) translate(-32 -34.6875)">
   <ellipse cx="32" cy="19" rx="18" ry="5" fill="url(#cheese-creamcheese-charcoal)" data-tone="charcoal" />
   <path d="M16 20H48L45 53Q32 57 19 53Z" fill="url(#cheese-creamcheese-cream)" data-tone="cream"/>
   <rect x="20" y="30" width="24" height="16" rx="5" fill="url(#cheese-creamcheese-clay2)" data-tone="clay2" stroke="none"/>
-  <g transform="translate(0 5) scale(.48) translate(35 37)"><path d="M22 39Q32 28 42 39" fill="none" class="paper-s" stroke-width="3"/></g></g>
+  <g transform="translate(0 5) scale(.48) translate(35 37)"><path d="M22 39Q32 28 42 39" fill="none" stroke="#F3E8CF" stroke-width="3"/></g></g>
+  </g>
 </svg>

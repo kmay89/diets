@@ -20,6 +20,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { RECIPE_FILES } from './recipe-files.mjs';
 import { recipeNutrition, heartScore, gramsFor } from '../js/nutrition.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -28,7 +29,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const ingredientsFile = read('data/ingredients.json');
 const aislesFile = read('data/aisles.json');
 const gardenFile = read('data/garden.json');
-const recipeFiles = ['data/recipes.dinners.json', 'data/recipes.daily.json', 'data/recipes.occasions.json'].map(read);
+const recipeFiles = RECIPE_FILES.map(read);
 
 const ingredients = ingredientsFile.items;
 const recipes = recipeFiles.flatMap(f => f.recipes);

@@ -37,7 +37,7 @@ const WHY = {
   diet: 'The one field that changes what gets cooked. Mark anyone who does not eat meat and every dinner will have a base they can eat, with meat kept to a separate pan.',
   activity: 'The single biggest factor in how much someone actually eats — bigger than height or weight.',
   height: 'Optional. With height and weight the estimate uses a real equation instead of a population average.',
-  weight: 'Optional, and never shown as a judgement. It is one number in an equation that decides how big a pot of food to cook.',
+  weight: 'Optional, and never shown as a judgment. It is one number in an equation that decides how big a pot of food to cook.',
   goal: 'Whether to size portions for staying as you are, or to nudge them a little in one direction.'
 };
 

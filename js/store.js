@@ -266,7 +266,7 @@ export function isPlanned(recipeId) {
  * different question from "have we ever cooked this", and only the first one
  * is worth anything on the progress screen. The same recipe cooked twice in a
  * fortnight is two entries, not one moved to the top — otherwise the record
- * quietly rewrites itself every time you repeat a favourite.
+ * quietly rewrites itself every time you repeat a favorite.
  */
 export function markCooked(recipeId, at = new Date()) {
   update(s => {

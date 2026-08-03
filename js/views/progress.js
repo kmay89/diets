@@ -21,11 +21,11 @@ import { dailyTargets, typicalBody, MEAL_SHARE } from '../nutrition.js';
 /** The three the guidance turns on, and which direction is good. */
 const METRICS = [
   { key: 'sodium_mg', label: 'Sodium', unit: 'mg a serving', lower: true },
-  { key: 'fiber_g', label: 'Fibre', unit: 'g a serving', lower: false },
+  { key: 'fiber_g', label: 'Fiber', unit: 'g a serving', lower: false },
   { key: 'satfat_g', label: 'Sat fat', unit: 'g a serving', lower: true }
 ];
 
-/** Plant variety counts food you would recognise as a plant, not seasoning. */
+/** Plant variety counts food you would recognize as a plant, not seasoning. */
 const PLANT_AISLES = new Set(['produce', 'nuts-seeds', 'dry-goods']);
 
 /**

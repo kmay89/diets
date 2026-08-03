@@ -192,7 +192,7 @@ function openPaste(draw) {
   const ta = h('textarea.input.textarea', { rows: 10, placeholder: 'Paste a list from anywhere — one item per line.\n\n2 lemons\n- [ ] oat milk\n* 1 lb carrots' });
   const dlg = sheet('Paste a list',
     h('div',
-      h('p.muted', 'Bullets, checkboxes and numbers are stripped automatically, and each item is filed into the right aisle where it can be recognised.'),
+      h('p.muted', 'Bullets, checkboxes and numbers are stripped automatically, and each item is filed into the right aisle where it can be recognized.'),
       ta
     ),
     {

@@ -20,6 +20,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'icons/food');
 
 const ingredients = JSON.parse(readFileSync(join(root, 'data/ingredients.json'), 'utf8')).items;
+const alignment = JSON.parse(readFileSync(join(root, 'scripts/food-icon-alignment.json'), 'utf8'));
 const slugFor = (id) => id.replace(/^ing\./, '').replace(/\./g, '-');
 
 const files = existsSync(dir) ? readdirSync(dir).filter(f => f.endsWith('.svg')) : [];
@@ -69,6 +70,25 @@ test('every icon is on the 64-unit grid and named for a screen reader', () => {
   assert.deepEqual(bad, [], `wrong viewBox or missing title: ${bad.join(', ')}`);
 });
 
+test('every icon carries its shared optical alignment', () => {
+  const expected = new Set(ingredients.map(i => slugFor(i.id)));
+  const unmapped = [...expected].filter(slug => !alignment[slug]);
+  const orphaned = Object.keys(alignment).filter(slug => !expected.has(slug));
+  const unaligned = files.filter(f => {
+    const slug = f.replace(/\.svg$/, '');
+    const transform = alignment[slug];
+    if (!transform) return true;
+    const { scale, cx, cy } = transform;
+    return !read(f).includes(
+      `class="optical-alignment" transform="translate(32 32) scale(${scale}) translate(${-cx} ${-cy})"`
+    );
+  });
+
+  assert.deepEqual(unmapped, [], `no alignment for: ${unmapped.join(', ')}`);
+  assert.deepEqual(orphaned, [], `alignment left behind for: ${orphaned.join(', ')}`);
+  assert.deepEqual(unaligned, [], `wrong or missing alignment: ${unaligned.join(', ')}`);
+});
+
 test('an icon title matches the ingredient name the app shows', () => {
   const nameBySlug = new Map(ingredients.map(i => [slugFor(i.id), i.name]));
   const wrong = [];
@@ -84,7 +104,7 @@ test('an icon title matches the ingredient name the app shows', () => {
 
 test('every icon carries the dark-mode swap', () => {
   // Charcoal outlines vanish and cream marks glare on a dark background. Any
-  // icon using either colour has to be able to flip it.
+  // icon using either color has to be able to flip it.
   const bad = files.filter(f => {
     const svg = read(f);
     const usesTone = /ink-[sf]|paper-[sf]/.test(svg);
@@ -104,10 +124,22 @@ test('no icon carries a script or an external reference', () => {
 });
 
 test('the set stays small enough to precache', () => {
-  const bytes = files.reduce((n, f) => n + readFileSync(join(dir, f)).length, 0);
-  // The service worker takes all of these on install. Well under a megabyte is
-  // fine; a jump past it means something got embedded that should not have.
-  assert.ok(bytes < 1_000_000, `icons total ${(bytes / 1024).toFixed(0)} KB`);
+  // The service worker takes all of these on install, so the set has a budget.
+  //
+  // The number moved twice: once when the hand-drawn icons were redrawn with
+  // richer gradients and a shared optical alignment, and once when the
+  // ingredient list grew past 350. Neither is the failure this test is for.
+  // What it is for is something getting embedded that should not be — a base64
+  // PNG in an SVG is invisible in a diff and enormous on the wire — and that
+  // shows up in the per-file numbers, not the total. So both are checked.
+  const sizes = files.map(f => [f, readFileSync(join(dir, f)).length]);
+  const bytes = sizes.reduce((n, [, b]) => n + b, 0);
+  const average = bytes / files.length;
+  const biggest = sizes.sort((a, b) => b[1] - a[1])[0];
+
+  assert.ok(average < 5_000, `icons average ${(average / 1024).toFixed(1)} KB each`);
+  assert.ok(biggest[1] < 12_000, `${biggest[0]} is ${(biggest[1] / 1024).toFixed(1)} KB — is something embedded in it?`);
+  assert.ok(bytes < 1_600_000, `icons total ${(bytes / 1024).toFixed(0)} KB`);
 });
 
 test('the service worker precaches the icons', () => {

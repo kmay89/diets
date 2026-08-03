@@ -7,7 +7,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, toast } from '../ui.js';
+import { h, mount, chip, toast, rangeField } from '../ui.js';
 import { getDb } from '../data.js';
 import { getState, update, newMember, setLike, togglePantry, setPref } from '../store.js';
 import { memberCard } from './member-card.js';
@@ -87,7 +87,7 @@ function welcomeStep() {
     ),
     h('p.lede',
       'So nothing here asks you to eat less. It asks what could go ', h('em', 'on'), ' the plate to make ',
-      'it better — more plants, more fibre, more colour, flavour built from technique instead of salt. ',
+      'it better — more plants, more fiber, more color, flavor built from technique instead of salt. ',
       'The rest takes care of itself, quietly.'
     ),
     h('ul.feature-list',
@@ -96,7 +96,7 @@ function welcomeStep() {
       feature('🌱', 'One dinner, everybody eats',
         'Every dinner has a base the whole table can eat, plus a fork in the road for anyone who wants meat — cooked in a separate pan. Nobody cooks twice, and nobody eats a compromise.'),
       feature('❤️', 'Backed by real research',
-        'Every health, cost and climate claim in this app is attached to a study you can open, labelled with what kind of evidence it is and what it does not show.'),
+        'Every health, cost and climate claim in this app is attached to a study you can open, labeled with what kind of evidence it is and what it does not show.'),
       feature('📴', 'Yours, and private',
         'Everything stays on this device. No account, no server, no analytics. Add it to your home screen and it works with no signal at all.')
     ),
@@ -186,7 +186,7 @@ function healthStep(state, draw) {
         }
       }))
     ),
-    h('p.fine-print', 'Recipes containing anything you flag here are removed from rolls completely, not just labelled.')
+    h('p.fine-print', 'Recipes containing anything you flag here are removed from rolls completely, not just labeled.')
   );
 }
 
@@ -196,17 +196,16 @@ function timeStep(state, draw) {
     h('h1.step__title', 'How much time do you actually have?'),
     h('p.lede', 'Active time is hands-on work — chopping and stirring. Total time includes the oven doing its thing while you do something else.'),
     h('div.card',
-      h('label.field',
-        h('span.field__label', `Weeknight active time: ${p.maxActiveMin} minutes`),
-        h('input.range', {
-          type: 'range', min: 10, max: 60, step: 5, value: p.maxActiveMin,
-          oninput: (e) => { setPref('maxActiveMin', Number(e.target.value)); draw(); }
-        })
-      ),
-      h('div.range-legend', h('span', '10 min'), h('span', '60 min'))
+      rangeField('Weeknight active time', {
+        min: 10, max: 60, step: 5, value: p.maxActiveMin,
+        format: (v) => `${v} min`,
+        // No redraw: re-rendering mid-drag is what used to tear the slider out
+        // from under the pointer after a single step.
+        onInput: (v) => setPref('maxActiveMin', v)
+      })
     ),
     toggleRow('Only meals the kids will eat', 'Filters every roll down to the kid-tested list. You can turn this off any time — most recipes here have a kid tweak instead.', p.kidFriendlyOnly, v => setPref('kidFriendlyOnly', v), draw),
-    toggleRow('Cook with the season', 'Favours what is actually good in Northeast Ohio this month, and what is coming out of the garden.', p.seasonAware, v => setPref('seasonAware', v), draw),
+    toggleRow('Cook with the season', 'Favors what is actually good in Northeast Ohio this month, and what is coming out of the garden.', p.seasonAware, v => setPref('seasonAware', v), draw),
     toggleRow('Shop the pantry first', 'Weights the roll toward meals you can mostly already make.', p.preferPantry, v => setPref('preferPantry', v), draw)
   );
 }
@@ -223,7 +222,7 @@ function toggleRow(title, desc, value, onchange, draw) {
 const TASTE_GROUPS = [
   { title: 'Vegetables', ids: ['ing.broccoli', 'ing.cauliflower', 'ing.mushroom.cremini', 'ing.brusselsprouts', 'ing.eggplant', 'ing.zucchini', 'ing.sweetpotato', 'ing.kale.lacinato', 'ing.spinach.baby', 'ing.beet', 'ing.asparagus', 'ing.squash.butternut', 'ing.pepper.bell.red', 'ing.cabbage.green', 'ing.fennel'] },
   { title: 'Proteins', ids: ['ing.tofu.firm', 'ing.tempeh', 'ing.chickpeas.canned', 'ing.lentil.brown', 'ing.beans.black', 'ing.egg', 'ing.salmon', 'ing.shrimp', 'ing.chicken.thigh', 'ing.turkey.ground93'] },
-  { title: 'Flavours', ids: ['ing.spice.pepperflakes', 'ing.cilantro', 'ing.garlic', 'ing.ginger', 'ing.miso.white', 'ing.currypaste.red', 'ing.spice.smokedpaprika', 'ing.olives.kalamata', 'ing.cheese.feta', 'ing.tahini', 'ing.peanutbutter', 'ing.vinegar.balsamic'] },
+  { title: 'Flavors', ids: ['ing.spice.pepperflakes', 'ing.cilantro', 'ing.garlic', 'ing.ginger', 'ing.miso.white', 'ing.currypaste.red', 'ing.spice.smokedpaprika', 'ing.olives.kalamata', 'ing.cheese.feta', 'ing.tahini', 'ing.peanutbutter', 'ing.vinegar.balsamic'] },
   { title: 'Grains and pasta', ids: ['ing.pasta.wholewheat', 'ing.rice.brown', 'ing.quinoa', 'ing.farro', 'ing.oats.rolled', 'ing.tortilla.corn', 'ing.noodle.rice', 'ing.cornmeal'] }
 ];
 
@@ -310,10 +309,34 @@ function doneStep(state) {
       summaryRow('Taste map', `${loves} loved, ${nevers} never`),
       summaryRow('Pantry', `${pantry} items on hand`)
     ),
-    h('p.lede', 'Next: roll a few dinners, check the ingredient lists against your kitchen, and send yourself a shopping list.'),
+    h('p.eyebrow', 'Where would you like to start?'),
+    h('div.entry-grid',
+      entryCard('🎲', 'Roll tonight', 'Deal a hand of dinners that fit your time, your diets and what is already in the kitchen.', '#/roll'),
+      entryCard('📖', 'Browse the collection', `${getDb().recipes.length} recipes by meal, method, cuisine and region.`, '#/browse'),
+      entryCard('🏠', 'Fill the pantry', 'Tick off what you already have and every list from here on gets shorter.', '#/pantry'),
+      entryCard('🌿', 'See the garden plan', 'What to plant this month in zone 6a, tied to the recipes it feeds.', '#/garden')
+    ),
     h('p.fine-print',
       'On an iPhone, tap Share and then “Add to Home Screen” — everywhere else it is in the browser menu. ',
       'It then opens like an app and works with no signal.')
+  );
+}
+
+/**
+ * The four ways in, offered once at the end of setup.
+ *
+ * A meal planner that opens on a dice screen assumes everybody wants the dice.
+ * Some people arrive wanting a specific cuisine, some want to use up a fridge.
+ * Naming all four takes one screen and saves the other three from hunting.
+ */
+function entryCard(icon, title, body, href) {
+  return h('a.entry-card', { href },
+    h('span.entry-card__icon', { 'aria-hidden': 'true' }, icon),
+    h('span.entry-card__body',
+      h('strong.entry-card__title', title),
+      h('span.entry-card__text', body)
+    ),
+    h('span.entry-card__go', { 'aria-hidden': 'true' }, '→')
   );
 }
 

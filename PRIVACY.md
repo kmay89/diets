@@ -15,7 +15,7 @@ All of it lives in your browser's `localStorage` under a single key, `errerlabs.
 |---|---|
 | Household members — name, age, sex, height, weight, activity level, diet, goal | Portion sizing and calorie/nutrient targets |
 | Preferences — heart-forward mode, time budget, allergens to avoid, store layout, theme | Filtering and sorting meals |
-| Liked and disliked ingredients, favourited and hidden recipes | Weighting the roll |
+| Liked and disliked ingredients, favorited and hidden recipes | Weighting the roll |
 | Pantry — which ingredients you have on hand | Removing them from the shopping list |
 | Meal plan — recipes, servings, which night | The plan and shopping list screens |
 | Shopping list — hand-added items, what is ticked off | The list screen |

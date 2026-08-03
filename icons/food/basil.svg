@@ -1,20 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
-  <title id="t">Fresh basil</title>
-  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
-  <defs>
-    <filter id="basil-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
-    </filter>
-    <radialGradient id="basil-green2" cx="27%" cy="20%" r="88%">
-      <stop offset="0" stop-color="#BCD099"/>
-      <stop offset="0.48" stop-color="#6F8B61"/>
-      <stop offset="1" stop-color="#405538"/>
-    </radialGradient>
-    <radialGradient id="basil-green" cx="27%" cy="20%" r="88%">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="basil-title" data-aisle="Produce" data-render-style="dimensional">
+  <title id="basil-title">Fresh basil</title>
+  <defs><radialGradient id="basil-green" cx="27%" cy="20%" r="88%">
       <stop offset="0" stop-color="#79A18A"/>
       <stop offset="0.48" stop-color="#244C3F"/>
       <stop offset="1" stop-color="#142F28"/>
     </radialGradient>
-  </defs>
-  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#basil-depth)"><path d="M24 52L39 18" fill="none" stroke="#244C3F" stroke-width="3"/><path d="M17 39Q24 34.730000000000004 31 39Q24 43.269999999999996 17 39Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(-30 24 39)" /><path d="M20 29Q27 24.73 34 29Q27 33.269999999999996 20 29Z" fill="url(#basil-green)" data-tone="green" transform="rotate(-20 27 29)" /><path d="M28 24Q35 19.73 42 24Q35 28.27 28 24Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(10 35 24)" /><path d="M32 34Q39 29.73 46 34Q39 38.269999999999996 32 34Z" fill="url(#basil-green)" data-tone="green" transform="rotate(30 39 34)" /><path d="M31 43Q38 38.730000000000004 45 43Q38 47.269999999999996 31 43Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(45 38 43)" /></g>
+<radialGradient id="basil-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+<radialGradient id="basil-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+<radialGradient id="basil-clay2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F6C79F"/>
+      <stop offset="0.48" stop-color="#DF9A68"/>
+      <stop offset="1" stop-color="#A85C3B"/>
+    </radialGradient>
+<radialGradient id="basil-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+<radialGradient id="basil-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+<radialGradient id="basil-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+<radialGradient id="basil-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+<radialGradient id="basil-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+    <filter id="basil-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter></defs>
+  <style>
+    .food-icon { color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) {
+      .food-icon { stroke: #F3E8CF; }
+
+      .food-icon [data-tone="charcoal"] { fill: url(#basil-cream); }
+      .food-icon [data-tone="cream"] { fill: url(#basil-charcoal); }
+      .food-icon [fill="#303532"] { fill: #F3E8CF; }
+      .food-icon [fill="#F3E8CF"] { fill: #303532; }
+      .food-icon [stroke="#303532"] { stroke: #F3E8CF; }
+      .food-icon [stroke="#F3E8CF"] { stroke: #303532; }
+    }
+  </style>
+  <g class="food-icon" stroke="#303532" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" filter="url(#basil-depth)">
+    <g class="optical-alignment" transform="translate(32 32) scale(1.23077) translate(-31.5 -35.1875)"><path d="M24 52L39 18" fill="none" stroke="#244C3F" stroke-width="3"/><path d="M17 39Q24 34.730000000000004 31 39Q24 43.269999999999996 17 39Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(-30 24 39)" /><path d="M20 29Q27 24.73 34 29Q27 33.269999999999996 20 29Z" fill="url(#basil-green)" data-tone="green" transform="rotate(-20 27 29)" /><path d="M28 24Q35 19.73 42 24Q35 28.27 28 24Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(10 35 24)" /><path d="M32 34Q39 29.73 46 34Q39 38.269999999999996 32 34Z" fill="url(#basil-green)" data-tone="green" transform="rotate(30 39 34)" /><path d="M31 43Q38 38.730000000000004 45 43Q38 47.269999999999996 31 43Z" fill="url(#basil-green2)" data-tone="green2" transform="rotate(45 38 43)" /></g>
+  </g>
 </svg>

@@ -4,8 +4,9 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, toast, sheet, confirmSheet, titleCase } from '../ui.js';
+import { h, mount, chip, toast, sheet, confirmSheet, titleCase, rangeField } from '../ui.js';
 import { getDb } from '../data.js';
+import { setTheme, THEMES } from '../theme.js';
 import {
   getState, setPref, addMember, exportData, importData, resetAll
 } from '../store.js';
@@ -57,16 +58,14 @@ function view(draw, navigate) {
     h('section.card.block',
       h('h2.block__title', 'How meals are chosen'),
       toggle('Heart-forward mode', 'Tighter AHA sodium and saturated fat targets, and heart-friendly recipes float to the top.', state.prefs.heartMode, v => setPref('heartMode', v), draw),
-      toggle('Cook with the season', 'Favour what is good in Northeast Ohio this month.', state.prefs.seasonAware, v => setPref('seasonAware', v), draw),
+      toggle('Cook with the season', 'Favor what is good in Northeast Ohio this month.', state.prefs.seasonAware, v => setPref('seasonAware', v), draw),
       toggle('Shop the pantry first', 'Weight rolls toward meals you can nearly make already.', state.prefs.preferPantry, v => setPref('preferPantry', v), draw),
       toggle('Only kid-friendly meals', 'Hide anything not on the kid-tested list.', state.prefs.kidFriendlyOnly, v => setPref('kidFriendlyOnly', v), draw),
-      h('label.field',
-        h('span.field__label', `Weeknight active time: ${state.prefs.maxActiveMin} minutes`),
-        h('input.range', {
-          type: 'range', min: 10, max: 60, step: 5, value: state.prefs.maxActiveMin,
-          oninput: (e) => { setPref('maxActiveMin', Number(e.target.value)); draw(); }
-        })
-      ),
+      rangeField('Weeknight active time', {
+        min: 10, max: 60, step: 5, value: state.prefs.maxActiveMin,
+        format: (v) => `${v} min`,
+        onInput: (v) => setPref('maxActiveMin', v)
+      }),
       h('label.field',
         h('span.field__label', 'Default store layout'),
         h('select.input', { onchange: (e) => { setPref('store', e.target.value); draw(); } },
@@ -75,8 +74,10 @@ function view(draw, navigate) {
       h('label.field',
         h('span.field__label', 'Appearance'),
         h('select.input', {
-          onchange: (e) => { setPref('theme', e.target.value); applyTheme(e.target.value); draw(); }
-        }, ...['system', 'light', 'dark'].map(t => h('option', { value: t, selected: state.prefs.theme === t }, titleCase(t))))
+          onchange: (e) => { setTheme(e.target.value); draw(); }
+        }, ...THEMES.map(t => h('option', { value: t, selected: state.prefs.theme === t },
+          t === 'system' ? 'Auto — follow my device' : titleCase(t)))),
+        h('span.field__hint', 'The same switch lives in the top right of every screen.')
       )
     ),
 
@@ -225,8 +226,5 @@ function openImport(draw) {
   );
 }
 
-export function applyTheme(theme) {
-  const root = document.documentElement;
-  if (theme === 'system') root.removeAttribute('data-theme');
-  else root.setAttribute('data-theme', theme);
-}
+/** Kept as a re-export so older callers (and the tests) still have one name for it. */
+export { applyTheme } from '../theme.js';

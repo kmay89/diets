@@ -149,3 +149,39 @@ export function ingredientsNamedIn(text, lines, ingIndex, limit = 3) {
   const chosen = foreground.length ? foreground : hits;
   return chosen.slice(0, limit).map(x => x.item);
 }
+
+/**
+ * The three ingredients that say what a dish *is*.
+ *
+ * Salt, oil and spices are in almost every recipe, so they say nothing; the
+ * produce, the protein and the grain say everything. Ranked by aisle rather
+ * than by quantity, because a pound of potatoes is not more the point of a
+ * curry than the chickpeas are.
+ */
+const HERO_AISLES = ['meat-seafood', 'produce', 'international', 'canned-jarred', 'dry-goods', 'dairy-eggs', 'frozen', 'nuts-seeds', 'bakery', 'deli'];
+const NEVER_HERO = new Set(['ing.salt.kosher', 'ing.broth.veg', 'ing.broth.chicken', 'ing.water']);
+
+export function heroIngredients(recipe, index, count = 3) {
+  const seen = new Set();
+  const lines = (recipe?.ingredients || []).filter(l => !l.optional);
+  const ranked = lines
+    .map(l => index.get(l.ing))
+    .filter(item => item && !NEVER_HERO.has(item.id) && HERO_AISLES.includes(item.aisle))
+    .filter(item => (seen.has(item.id) ? false : seen.add(item.id)))
+    .sort((a, b) => HERO_AISLES.indexOf(a.aisle) - HERO_AISLES.indexOf(b.aisle));
+  return ranked.slice(0, count);
+}
+
+/**
+ * A little overlapping arrangement of those icons, used as a recipe card's
+ * artwork. The set carries the whole visual load of the app — there is no
+ * photography here and there never will be, because 230 honest photographs is
+ * not a thing a household app can maintain.
+ */
+export function iconCollage(recipe, index, { size = 46 } = {}) {
+  const items = heroIngredients(recipe, index);
+  if (!items.length) return null;
+  return h('div.icon-collage', { 'aria-hidden': 'true' },
+    ...items.map((item, i) => h('span.icon-collage__slot', { style: `--i:${i}` }, foodIcon(item, { size })))
+  );
+}
