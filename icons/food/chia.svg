@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Chia seeds</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="chia-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="chia-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="chia-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#chia-depth)">
+  <path d="M17 13H47L45 55H19Z" fill="url(#chia-cream)" data-tone="cream"/>
+  <path d="M18 19L46 19" fill="none" class="ink-s"/>
+  <path d="M20 25H44L42 50H22Z" fill="url(#chia-charcoal)" data-tone="charcoal" stroke="none"/>
+  <g transform="translate(0 3) scale(.62) translate(19 19)"><ellipse cx="24" cy="31" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/><ellipse cx="31" cy="28" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/><ellipse cx="39" cy="32" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/><ellipse cx="27" cy="38" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/><ellipse cx="35" cy="40" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/><ellipse cx="42" cy="43" rx="1.6" ry="1" fill="url(#chia-cream)" data-tone="cream" stroke="none"/></g></g>
+</svg>

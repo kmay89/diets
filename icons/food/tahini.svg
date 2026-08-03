@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Tahini</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="tahini-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="tahini-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+    <radialGradient id="tahini-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="tahini-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#tahini-depth)">
+  <rect x="18" y="14" width="28" height="7" rx="2" fill="url(#tahini-charcoal)" data-tone="charcoal" />
+  <path d="M19 21H45L47 27V51Q47 55 43 55H21Q17 55 17 51V27Z" fill="url(#tahini-cream)" data-tone="cream"/>
+  <rect x="19.5" y="28" width="25" height="20" rx="5" fill="url(#tahini-cream2)" data-tone="cream2" stroke="none"/>
+  <g transform="translate(0 0) scale(.72) translate(12.5 15)"><path d="M24.36 32.68Q25.56 28.12 29.759999999999998 29.68Q28.92 33.52 24.36 32.68Z" fill="url(#tahini-charcoal)" data-tone="charcoal" transform="rotate(-30 27 31)"/><path d="M31.36 30.68Q32.56 26.12 36.76 27.68Q35.92 31.52 31.36 30.68Z" fill="url(#tahini-charcoal)" data-tone="charcoal" transform="rotate(25 34 29)"/><path d="M35.36 37.68Q36.56 33.12 40.76 34.68Q39.92 38.52 35.36 37.68Z" fill="url(#tahini-charcoal)" data-tone="charcoal" transform="rotate(-20 38 36)"/><path d="M26.36 40.68Q27.56 36.12 31.759999999999998 37.68Q30.92 41.52 26.36 40.68Z" fill="url(#tahini-charcoal)" data-tone="charcoal" transform="rotate(18 29 39)"/><path d="M32.36 44.68Q33.56 40.12 37.76 41.68Q36.92 45.52 32.36 44.68Z" fill="url(#tahini-charcoal)" data-tone="charcoal" transform="rotate(-35 35 43)"/></g></g>
+</svg>

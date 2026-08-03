@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Dried cranberries</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="cranberries-dried-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="cranberries-dried-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+    <radialGradient id="cranberries-dried-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cranberries-dried-depth)"><path d="M18 31Q23 26 28 31Q23 36 18 31Z" fill="url(#cranberries-dried-clay)" data-tone="clay"/><path d="M29 27Q34 22 39 27Q34 32 29 27Z" fill="url(#cranberries-dried-red)" data-tone="red"/><path d="M38 34Q43 29 48 34Q43 39 38 34Z" fill="url(#cranberries-dried-clay)" data-tone="clay"/><path d="M23 42Q28 37 33 42Q28 47 23 42Z" fill="url(#cranberries-dried-red)" data-tone="red"/><path d="M34 45Q39 40 44 45Q39 50 34 45Z" fill="url(#cranberries-dried-clay)" data-tone="clay"/></g>
+</svg>

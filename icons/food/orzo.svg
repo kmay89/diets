@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Orzo (dry)</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="orzo-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="orzo-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="orzo-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#orzo-depth)">
+  <path d="M17 13H47L45 55H19Z" fill="url(#orzo-cream)" data-tone="cream"/>
+  <path d="M18 19L46 19" fill="none" class="ink-s"/>
+  <path d="M20 25H44L42 50H22Z" fill="url(#orzo-gold)" data-tone="gold" stroke="none"/>
+  <g transform="translate(0 3) scale(.62) translate(19 19)"><ellipse cx="24" cy="31" rx="4.5" ry="1.8" fill="url(#orzo-cream)" data-tone="cream" transform="rotate(0 24 31)"/><ellipse cx="34" cy="29" rx="4.5" ry="1.8" fill="url(#orzo-cream)" data-tone="cream" transform="rotate(35 34 29)"/><ellipse cx="40" cy="37" rx="4.5" ry="1.8" fill="url(#orzo-cream)" data-tone="cream" transform="rotate(70 40 37)"/><ellipse cx="28" cy="41" rx="4.5" ry="1.8" fill="url(#orzo-cream)" data-tone="cream" transform="rotate(105 28 41)"/><ellipse cx="36" cy="44" rx="4.5" ry="1.8" fill="url(#orzo-cream)" data-tone="cream" transform="rotate(140 36 44)"/></g></g>
+</svg>

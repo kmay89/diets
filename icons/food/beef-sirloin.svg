@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Top sirloin steak, lean</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="beef-sirloin-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="beef-sirloin-red" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#DC8066"/>
+      <stop offset="0.48" stop-color="#9E4938"/>
+      <stop offset="1" stop-color="#5E2824"/>
+    </radialGradient>
+    <radialGradient id="beef-sirloin-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="beef-sirloin-clay2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F6C79F"/>
+      <stop offset="0.48" stop-color="#DF9A68"/>
+      <stop offset="1" stop-color="#A85C3B"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#beef-sirloin-depth)"><path d="M15 36Q20 20 37 19Q52 22 50 38Q48 53 32 54Q17 53 15 36Z" fill="url(#beef-sirloin-red)" data-tone="red"/><ellipse cx="34" cy="35" rx="8" ry="10" fill="url(#beef-sirloin-cream)" data-tone="cream" /><ellipse cx="34" cy="35" rx="4" ry="6" fill="url(#beef-sirloin-clay2)" data-tone="clay2" /></g>
+</svg>

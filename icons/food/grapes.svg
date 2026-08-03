@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Grapes</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="grapes-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="grapes-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+    <radialGradient id="grapes-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+    <radialGradient id="grapes-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#grapes-depth)"><circle cx="32" cy="25" r="6" fill="url(#grapes-clay)" data-tone="clay" /><circle cx="25" cy="32" r="6" fill="url(#grapes-charcoal)" data-tone="charcoal" /><circle cx="36" cy="33" r="6" fill="url(#grapes-clay)" data-tone="clay" /><circle cx="45" cy="32" r="6" fill="url(#grapes-charcoal)" data-tone="charcoal" /><circle cx="28" cy="41" r="6" fill="url(#grapes-clay)" data-tone="clay" /><circle cx="39" cy="42" r="6" fill="url(#grapes-charcoal)" data-tone="charcoal" /><circle cx="34" cy="50" r="6" fill="url(#grapes-clay)" data-tone="clay" /><path d="M34 21L37 15" fill="none" stroke="#244C3F"/><path d="M35 18Q42 13.120000000000001 49 18Q42 22.88 35 18Z" fill="url(#grapes-green)" data-tone="green" transform="rotate(-20 42 18)" /></g>
+</svg>

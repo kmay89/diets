@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Roma tomatoes</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="tomato-roma-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="tomato-roma-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+    <radialGradient id="tomato-roma-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#tomato-roma-depth)"><path d="M32 22C20 20 17 31 20 43C23 54 41 55 45 43C49 31 43 20 32 22Z" fill="url(#tomato-roma-clay)" data-tone="clay"/><path d="M23 22Q32 18.34 41 22Q32 25.66 23 22Z" fill="url(#tomato-roma-green)" data-tone="green" transform="rotate(0 32 22)" /></g>
+</svg>

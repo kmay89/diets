@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Watermelon</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="watermelon-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="watermelon-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+    <radialGradient id="watermelon-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+    <radialGradient id="watermelon-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#watermelon-depth)"><path d="M14 41Q32 15 51 41Q33 58 14 41Z" fill="url(#watermelon-green)" data-tone="green"/><path d="M19 40Q32 23 46 40Q33 51 19 40Z" fill="url(#watermelon-clay)" data-tone="clay" stroke="none"/><path d="M27.46 37.98Q28.16 35.32 30.61 36.23Q30.12 38.47 27.46 37.98Z" fill="url(#watermelon-charcoal)" data-tone="charcoal" transform="rotate(20 29 37)"/><path d="M35.46 38.98Q36.16 36.32 38.61 37.23Q38.12 39.47 35.46 38.98Z" fill="url(#watermelon-charcoal)" data-tone="charcoal" transform="rotate(-20 37 38)"/></g>
+</svg>

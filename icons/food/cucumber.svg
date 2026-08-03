@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Cucumber</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="cucumber-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="cucumber-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+    <radialGradient id="cucumber-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="cucumber-gold" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F8D878"/>
+      <stop offset="0.48" stop-color="#D8A94F"/>
+      <stop offset="1" stop-color="#98651F"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#cucumber-depth)"><path d="M18 40Q14 30 23 25L43 17Q51 20 49 29L29 47Q21 49 18 40Z" fill="url(#cucumber-green2)" data-tone="green2"/><ellipse cx="43" cy="23" rx="7" ry="5" fill="url(#cucumber-cream)" data-tone="cream" transform="rotate(-25 43 23)"/><circle cx="42" cy="23" r="1.2" fill="url(#cucumber-gold)" data-tone="gold" stroke="none"/><circle cx="46" cy="22" r="1.2" fill="url(#cucumber-gold)" data-tone="gold" stroke="none"/></g>
+</svg>

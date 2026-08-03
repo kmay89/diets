@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Capers</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="capers-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="capers-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+    <radialGradient id="capers-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="capers-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+    <radialGradient id="capers-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#capers-depth)">
+  <rect x="18" y="14" width="28" height="7" rx="2" fill="url(#capers-charcoal)" data-tone="charcoal" />
+  <path d="M19 21H45L47 27V51Q47 55 43 55H21Q17 55 17 51V27Z" fill="url(#capers-cream)" data-tone="cream"/>
+  <rect x="19.5" y="28" width="25" height="20" rx="5" fill="url(#capers-green2)" data-tone="green2" stroke="none"/>
+  <g transform="translate(0 0) scale(.72) translate(12.5 15)"><circle cx="26" cy="32" r="2.5" fill="url(#capers-green)" data-tone="green" stroke="none"/><circle cx="34" cy="31" r="2.5" fill="url(#capers-green)" data-tone="green" stroke="none"/><circle cx="39" cy="38" r="2.5" fill="url(#capers-green)" data-tone="green" stroke="none"/><circle cx="28" cy="41" r="2.5" fill="url(#capers-green)" data-tone="green" stroke="none"/></g></g>
+</svg>

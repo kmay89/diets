@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Roasted red peppers (jarred)</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="pepper-roasted-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="pepper-roasted-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+    <radialGradient id="pepper-roasted-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="pepper-roasted-clay" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F1A176"/>
+      <stop offset="0.48" stop-color="#C66B3D"/>
+      <stop offset="1" stop-color="#813A26"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#pepper-roasted-depth)">
+  <rect x="18" y="14" width="28" height="7" rx="2" fill="url(#pepper-roasted-charcoal)" data-tone="charcoal" />
+  <path d="M19 21H45L47 27V51Q47 55 43 55H21Q17 55 17 51V27Z" fill="url(#pepper-roasted-cream)" data-tone="cream"/>
+  <rect x="19.5" y="28" width="25" height="20" rx="5" fill="url(#pepper-roasted-clay)" data-tone="clay" stroke="none"/>
+  <g transform="translate(0 0) scale(.72) translate(12.5 15)"><path d="M31 27C41 25 43 34 38 42C34 48 25 44 26 36C27 31 29 29 31 27Z" fill="url(#pepper-roasted-cream)" data-tone="cream"/><path d="M32 28L35 23" fill="none" stroke="#244C3F"/></g></g>
+</svg>

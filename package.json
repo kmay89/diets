@@ -30,6 +30,7 @@
     "build:share": "node tools/build-share-pages.mjs",
     "build:social": "node tools/make-social-card.mjs",
     "build:cards": "node tools/make-recipe-cards.mjs",
+    "build:food-icons": "node tools/split-food-icons.mjs",
     "build": "npm run build:graph && npm run build:share",
     "build:all": "npm run build:graph && npm run build:share && npm run build:icons && npm run build:social && npm run build:cards",
     "verify": "node tools/verify-data.mjs",

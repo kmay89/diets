@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Sesame seeds</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="sesame-seeds-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="sesame-seeds-cream2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#F4E8CB"/>
+      <stop offset="0.48" stop-color="#D8C9A7"/>
+      <stop offset="1" stop-color="#A8956C"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sesame-seeds-depth)"><path d="M20.46 31.98Q21.16 29.32 23.61 30.23Q23.12 32.47 20.46 31.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(-25 22 31)"/><path d="M28.46 27.98Q29.16 25.32 31.61 26.23Q31.12 28.47 28.46 27.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(20 30 27)"/><path d="M37.46 30.98Q38.16 28.32 40.61 29.23Q40.12 31.47 37.46 30.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(40 39 30)"/><path d="M43.46 37.98Q44.16 35.32 46.61 36.23Q46.12 38.47 43.46 37.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(-15 45 37)"/><path d="M26.46 39.98Q27.16 37.32 29.61 38.23Q29.12 40.47 26.46 39.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(5 28 39)"/><path d="M34.46 44.98Q35.16 42.32 37.61 43.23Q37.12 45.47 34.46 44.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(25 36 44)"/><path d="M21.46 47.98Q22.16 45.32 24.61 46.23Q24.12 48.47 21.46 47.98Z" fill="url(#sesame-seeds-cream2)" data-tone="cream2" transform="rotate(-30 23 47)"/></g>
+</svg>

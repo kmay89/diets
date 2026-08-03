@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Fresh sage</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="sage-fresh-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="sage-fresh-green2" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#BCD099"/>
+      <stop offset="0.48" stop-color="#6F8B61"/>
+      <stop offset="1" stop-color="#405538"/>
+    </radialGradient>
+    <radialGradient id="sage-fresh-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#sage-fresh-depth)"><path d="M24 52L39 18" fill="none" stroke="#244C3F" stroke-width="3"/><path d="M18 39Q25 33.51 32 39Q25 44.49 18 39Z" fill="url(#sage-fresh-green2)" data-tone="green2" transform="rotate(-35 25 39)" /><path d="M22 30Q29 24.509999999999998 36 30Q29 35.49 22 30Z" fill="url(#sage-fresh-green)" data-tone="green" transform="rotate(-15 29 30)" /><path d="M29 25Q36 19.509999999999998 43 25Q36 30.490000000000002 29 25Z" fill="url(#sage-fresh-green2)" data-tone="green2" transform="rotate(18 36 25)" /><path d="M32 37Q39 31.509999999999998 46 37Q39 42.49 32 37Z" fill="url(#sage-fresh-green)" data-tone="green" transform="rotate(38 39 37)" /></g>
+</svg>

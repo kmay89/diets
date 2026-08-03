@@ -7,6 +7,7 @@
 import { h, mount, chip, toast, sheet, titleCase } from '../ui.js';
 import { getDb } from '../data.js';
 import { play, stagger } from '../feedback.js';
+import { foodIcon } from '../food-icon.js';
 import {
   getState, setPref, addCustomItem, removeCustomItem, toggleChecked,
   suppressItem, clearChecked, togglePantry
@@ -109,6 +110,7 @@ function aisleBlock(group, state, draw) {
             onchange: (e) => { toggleChecked(item.key); play(e.target.checked ? 'check' : 'uncheck'); draw(); },
             'aria-label': `Got ${item.name}`
           }),
+          foodIcon(getDb().ingIndex.get(item.ingredientId), { size: 24 }),
           h('span.list-item__qty', item.buy || ''),
           h('span.list-item__name', { role: 'button', tabindex: '0', onclick: (e) => { e.preventDefault(); openItem(item, draw); } }, item.name)
         ),

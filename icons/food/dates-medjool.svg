@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Medjool dates</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="dates-medjool-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="dates-medjool-charcoal" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#758078"/>
+      <stop offset="0.48" stop-color="#303532"/>
+      <stop offset="1" stop-color="#151917"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#dates-medjool-depth)"><ellipse cx="23" cy="34" rx="5" ry="9" fill="url(#dates-medjool-charcoal)" data-tone="charcoal" transform="rotate(-20 23 34)"/><ellipse cx="34" cy="29" rx="5" ry="9" fill="url(#dates-medjool-charcoal)" data-tone="charcoal" transform="rotate(15 34 29)"/><ellipse cx="41" cy="40" rx="5" ry="9" fill="url(#dates-medjool-charcoal)" data-tone="charcoal" transform="rotate(25 41 40)"/><ellipse cx="29" cy="45" rx="5" ry="9" fill="url(#dates-medjool-charcoal)" data-tone="charcoal" transform="rotate(-15 29 45)"/></g>
+</svg>

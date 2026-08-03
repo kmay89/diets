@@ -422,6 +422,13 @@ a { color: var(--green-600); }
 .ing__prep, .ing__opt { color: var(--ink-faint); font-size: .88rem; }
 .ing.is-have .ing__name, .ing.is-have .ing__qty { color: var(--ink-faint); text-decoration: line-through; }
 .ing__meta { display: flex; gap: 5px; align-items: center; }
+/* On a phone, a checkbox, an icon, a quantity, a name and two buttons do not
+   fit on one line — the name ends up three words tall in a narrow column.
+   Give the row to the ingredient and let the buttons take the next line. */
+@media (max-width: 560px) {
+  .ing__main { min-width: 100%; }
+  .ing__meta { margin-left: auto; }
+}
 
 .tag-btn {
   border: 1px solid var(--line); background: transparent; color: var(--ink-soft);
@@ -494,7 +501,10 @@ a { color: var(--green-600); }
 .list-item__main { display: flex; align-items: center; gap: 9px; flex: 1; cursor: pointer; min-width: 0; }
 .list-item__main input { width: 21px; height: 21px; accent-color: var(--green-700); flex: none; }
 .list-item__qty { font-variant-numeric: tabular-nums; font-weight: 650; white-space: nowrap; }
-.list-item__name { text-decoration: underline dotted var(--line); text-underline-offset: 3px; }
+/* flex:1 with min-width:0 so a long name wraps inside the row instead of
+   pushing past the card edge — the icon column left it less room than it had.
+   Wrapping only at spaces: "baby spina/ch" is worse than two clean lines. */
+.list-item__name { flex: 1; min-width: 0; text-decoration: underline dotted var(--line); text-underline-offset: 3px; }
 .list-item.is-checked .list-item__name, .list-item.is-checked .list-item__qty { color: var(--ink-faint); text-decoration: line-through; }
 .list-item__actions { display: flex; gap: 4px; }
 .preview {
@@ -827,3 +837,35 @@ a { color: var(--green-600); }
 
 /* The one-line explanation under an active browse filter. */
 .filters__note { margin: 4px 2px 0; }
+
+/* ---------- food icons ---------- */
+
+/* Sized by the caller through --food-icon-size so one rule covers the
+   shopping list, the pantry grid and a recipe's ingredient rows. */
+.food-icon {
+  flex: none;
+  width: var(--food-icon-size, 24px);
+  height: var(--food-icon-size, 24px);
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+.food-icon--fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* An emoji at its natural size next to a 24px drawing reads as too big. */
+  font-size: calc(var(--food-icon-size, 24px) * .74);
+  line-height: 1;
+  opacity: .7;
+}
+/* A recipe's ingredient rows align on the text baseline, which drops an image
+   below the line. Centre it against the row instead, like the checkbox. */
+.ing__main .food-icon { align-self: center; }
+
+/* Ticked off, already in the pantry, already have it: the row recedes and
+   the icon should recede with it rather than staying the brightest thing. */
+.list-item.is-checked .food-icon,
+.pantry-item.is-have .food-icon { opacity: .45; }
+
+@media print { .food-icon { display: none; } }

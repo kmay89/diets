@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Steel-cut oats</title>
+  <style>.ink-s{stroke:#303532}.ink-f{fill:#303532}.paper-s{stroke:#F3E8CF}.paper-f{fill:#F3E8CF}@media(prefers-color-scheme:dark){.ink-s{stroke:#F3E8CF}.ink-f{fill:#F3E8CF}.paper-s{stroke:#303532}.paper-f{fill:#303532}}</style>
+  <defs>
+    <filter id="oats-steelcut-depth" x="-18%" y="-18%" width="136%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.35" dy="0.8" stdDeviation="0.6" flood-color="#111815" flood-opacity="0.27"/>
+    </filter>
+    <radialGradient id="oats-steelcut-cream" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.48" stop-color="#F3E8CF"/>
+      <stop offset="1" stop-color="#C6B184"/>
+    </radialGradient>
+    <radialGradient id="oats-steelcut-green" cx="27%" cy="20%" r="88%">
+      <stop offset="0" stop-color="#79A18A"/>
+      <stop offset="0.48" stop-color="#244C3F"/>
+      <stop offset="1" stop-color="#142F28"/>
+    </radialGradient>
+  </defs>
+  <g class="ink-s" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round" filter="url(#oats-steelcut-depth)">
+  <path d="M17 13H47L45 55H19Z" fill="url(#oats-steelcut-cream)" data-tone="cream"/>
+  <path d="M18 19L46 19" fill="none" class="ink-s"/>
+  <path d="M20 25H44L42 50H22Z" fill="url(#oats-steelcut-green)" data-tone="green" stroke="none"/>
+  <g transform="translate(0 3) scale(.62) translate(19 19)"><path d="M24.36 32.68Q25.56 28.12 29.759999999999998 29.68Q28.92 33.52 24.36 32.68Z" fill="url(#oats-steelcut-cream)" data-tone="cream" transform="rotate(-30 27 31)"/><path d="M31.36 30.68Q32.56 26.12 36.76 27.68Q35.92 31.52 31.36 30.68Z" fill="url(#oats-steelcut-cream)" data-tone="cream" transform="rotate(25 34 29)"/><path d="M35.36 37.68Q36.56 33.12 40.76 34.68Q39.92 38.52 35.36 37.68Z" fill="url(#oats-steelcut-cream)" data-tone="cream" transform="rotate(-20 38 36)"/><path d="M26.36 40.68Q27.56 36.12 31.759999999999998 37.68Q30.92 41.52 26.36 40.68Z" fill="url(#oats-steelcut-cream)" data-tone="cream" transform="rotate(18 29 39)"/><path d="M32.36 44.68Q33.56 40.12 37.76 41.68Q36.92 45.52 32.36 44.68Z" fill="url(#oats-steelcut-cream)" data-tone="cream" transform="rotate(-35 35 43)"/></g></g>
+</svg>
