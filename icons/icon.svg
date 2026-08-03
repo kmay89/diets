@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Diets by ERRERLabs">
+  <title>Diets — ERRERLabs</title>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f6f4a"/>
+      <stop offset="1" stop-color="#0f2e21"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="34%" cy="30%" r="62%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="30" y="30" width="452" height="452" rx="100" fill="url(#field)"/>
+  <rect x="30" y="30" width="452" height="452" rx="100" fill="url(#glow)"/>
+
+  <!-- fork -->
+  <g stroke="#f5faf7" fill="none" stroke-linecap="round">
+    <path d="M132 130 V214" stroke-width="24"/>
+    <path d="M162 130 V214" stroke-width="24"/>
+    <path d="M192 130 V214" stroke-width="24"/>
+    <path d="M120 214 H204" stroke-width="27"/>
+    <path d="M162 208 V286" stroke-width="37"/>
+    <path d="M162 280 V386" stroke-width="26"/>
+  </g>
+
+  <!-- leaf -->
+  <g transform="translate(330 290) rotate(-35)">
+    <path d="M-98 0 A135 135 0 0 1 98 0 A135 135 0 0 1 -98 0" fill="#c8ecd8"/>
+    <path d="M-88 0 H88" stroke="#1f6f4a" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,156 @@
+{
+  "schema": "errerlabs.diets.aisles/1",
+  "description": "Standard US supermarket department ordering, perimeter-first. Used to sort the shopping list the way people actually walk a store. Store hints are for Northeast Ohio (Summit County) chains.",
+  "aisles": [
+    {
+      "id": "produce",
+      "name": "Produce",
+      "order": 10,
+      "icon": "🥬",
+      "hint": "Walk the outer wall first. Buy hardy vegetables (carrots, cabbage, squash) for late-week meals and delicate greens for early-week meals."
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery & Bread",
+      "order": 20,
+      "icon": "🍞",
+      "hint": "Look for 'whole grain' as the first ingredient and under 150 mg sodium per slice."
+    },
+    {
+      "id": "deli",
+      "name": "Deli & Prepared",
+      "order": 30,
+      "icon": "🧀",
+      "hint": "Deli meats are a top-5 sodium source in the American diet. Buy roasted turkey breast sliced fresh instead of pre-packaged when you can."
+    },
+    {
+      "id": "meat-seafood",
+      "name": "Meat & Seafood",
+      "order": 40,
+      "icon": "🐟",
+      "hint": "Only needed for the omnivore add-ons. Ask the counter to portion and vacuum-seal in meal-size packs so you can freeze the rest."
+    },
+    {
+      "id": "dairy-eggs",
+      "name": "Dairy & Eggs",
+      "order": 50,
+      "icon": "🥛",
+      "hint": "Plain Greek yogurt does the work of sour cream, mayo, and cream in most of these recipes."
+    },
+    {
+      "id": "frozen",
+      "name": "Frozen",
+      "order": 60,
+      "icon": "❄️",
+      "hint": "Frozen vegetables are picked and frozen at peak ripeness; nutritionally they match or beat out-of-season fresh in Ohio in January."
+    },
+    {
+      "id": "canned-jarred",
+      "name": "Canned & Jarred",
+      "order": 70,
+      "icon": "🥫",
+      "hint": "Choose 'no salt added' beans and tomatoes. Rinsing regular canned beans in a colander removes roughly 40% of their sodium."
+    },
+    {
+      "id": "dry-goods",
+      "name": "Pasta, Rice & Grains",
+      "order": 80,
+      "icon": "🍚",
+      "hint": "Dry lentils, farro, and brown rice are the cheapest calories in the store and the highest fiber."
+    },
+    {
+      "id": "nuts-seeds",
+      "name": "Nuts, Seeds & Dried Fruit",
+      "order": 90,
+      "icon": "🥜",
+      "hint": "Buy raw and unsalted; toast them yourself in a dry skillet for 3 minutes. Store nuts in the freezer so they never go rancid."
+    },
+    {
+      "id": "baking",
+      "name": "Baking",
+      "order": 100,
+      "icon": "🧂",
+      "hint": "Flour, cornstarch, cocoa, baking powder — restock quarterly, not weekly."
+    },
+    {
+      "id": "condiments",
+      "name": "Condiments & Sauces",
+      "order": 110,
+      "icon": "🫙",
+      "hint": "Dijon, vinegars, and a good hot sauce carry more flavor per milligram of sodium than anything else in the store."
+    },
+    {
+      "id": "oils-vinegars",
+      "name": "Oils & Vinegars",
+      "order": 120,
+      "icon": "🫒",
+      "hint": "One good extra-virgin olive oil in a dark bottle is worth more than three mediocre oils."
+    },
+    {
+      "id": "spices",
+      "name": "Spices & Seasoning",
+      "order": 130,
+      "icon": "🧂",
+      "hint": "Spices are the whole heart-healthy trick: they replace salt. Replace ground spices yearly — old spices are why 'healthy' food tastes flat."
+    },
+    {
+      "id": "international",
+      "name": "International",
+      "order": 140,
+      "icon": "🌏",
+      "hint": "Miso, gochujang, curry paste, and tahini live here and each one turns a plain pot of vegetables into dinner."
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "order": 150,
+      "icon": "🫖",
+      "hint": ""
+    },
+    {
+      "id": "household",
+      "name": "Household & Other",
+      "order": 160,
+      "icon": "🧺",
+      "hint": ""
+    },
+    {
+      "id": "other",
+      "name": "Everything Else",
+      "order": 999,
+      "icon": "🛒",
+      "hint": ""
+    }
+  ],
+  "storeLayouts": {
+    "default": {
+      "name": "Standard supermarket",
+      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "frozen", "canned-jarred", "dry-goods", "nuts-seeds", "baking", "condiments", "oils-vinegars", "spices", "international", "beverages", "household", "other"]
+    },
+    "heinens-hudson": {
+      "name": "Heinen's (Hudson, OH)",
+      "note": "Produce and the cheese counter are at the front-left; the butcher and seafood counter run the back wall. Their bulk grains and nuts are worth using for lentils and farro.",
+      "order": ["produce", "deli", "bakery", "meat-seafood", "dairy-eggs", "dry-goods", "canned-jarred", "nuts-seeds", "condiments", "oils-vinegars", "spices", "international", "baking", "frozen", "beverages", "household", "other"]
+    },
+    "giant-eagle": {
+      "name": "Giant Eagle",
+      "note": "Larger center store; bring the list grouped by aisle or you will walk the whole thing twice.",
+      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "canned-jarred", "dry-goods", "condiments", "oils-vinegars", "spices", "baking", "nuts-seeds", "international", "frozen", "beverages", "household", "other"]
+    },
+    "aldi": {
+      "name": "Aldi",
+      "note": "Single-loop store, so the aisle order barely matters. Great on frozen vegetables, olive oil, nuts, and canned beans; thinner on fresh herbs and specialty pantry items.",
+      "order": ["produce", "dairy-eggs", "meat-seafood", "bakery", "canned-jarred", "dry-goods", "condiments", "oils-vinegars", "spices", "nuts-seeds", "baking", "frozen", "beverages", "household", "other"]
+    },
+    "acme-fresh": {
+      "name": "Acme Fresh Market",
+      "note": "Strong local produce program in summer — Ohio sweet corn, tomatoes, and peaches in season.",
+      "order": ["produce", "bakery", "deli", "meat-seafood", "dairy-eggs", "canned-jarred", "dry-goods", "nuts-seeds", "condiments", "oils-vinegars", "spices", "baking", "international", "frozen", "beverages", "household", "other"]
+    },
+    "farmers-market": {
+      "name": "Hudson Farmers Market (seasonal)",
+      "note": "Saturday mornings on the Green, roughly June through October. Buy the produce and herbs here first, then fill the gaps at the store.",
+      "order": ["produce", "bakery", "dairy-eggs", "meat-seafood", "other"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Diets — ERRERLabs",
+  "short_name": "Diets",
+  "description": "Roll dinner ideas, size portions to your household, tick off what is already in the pantry, and walk out with a shopping list in aisle order. Vegetarian base, omnivore fork in the road, heart-forward by default, works offline.",
+  "id": "/errerlabs-diets",
+  "start_url": "./index.html#/roll",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f1f5f3",
+  "theme_color": "#1f6f4a",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["food", "health", "lifestyle", "productivity"],
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Roll a meal", "short_name": "Roll", "url": "./index.html#/roll", "description": "Deal a fresh hand of dinner ideas" },
+    { "name": "Shopping list", "short_name": "List", "url": "./index.html#/list", "description": "Open this week's list, grouped by aisle" },
+    { "name": "The plan", "short_name": "Plan", "url": "./index.html#/plan", "description": "See what is being cooked this week" }
+  ],
+  "prefer_related_applications": false
+}
