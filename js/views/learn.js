@@ -17,6 +17,10 @@ import { tipsByGroup, searchTips, groupById, foundationTips } from '../tips.js';
 import { balanceAxes, balanceLessons } from '../balance.js';
 import { allMethods, prepSteps } from '../proteins.js';
 import { tipCard, openTip } from './tips-panel.js';
+import { skillsBlock } from './skills-panel.js';
+import { skillsFor } from '../skills.js';
+import { getState } from '../store.js';
+import { getDb } from '../data.js';
 import { play } from '../feedback.js';
 
 let query = '';
@@ -30,6 +34,10 @@ export function render(root, { navigate }) {
 function view(draw, navigate) {
   const groups = tipsByGroup();
   const results = query ? searchTips(query) : null;
+  // The library, with a "you are here" on it. Everything below is the same
+  // reference it always was; this sorts it by what the kitchen has already done.
+  const { recipes, recipeIndex } = getDb();
+  const craft = skillsFor(getState(), recipeIndex);
 
   return h('section.view',
     h('div.view__head',
@@ -41,6 +49,8 @@ function view(draw, navigate) {
           'it is what a good cook would say if they were standing next to you.')
       )
     ),
+
+    query ? null : skillsBlock(craft, recipes, navigate),
 
     h('div.card.filters',
       h('input.input', {

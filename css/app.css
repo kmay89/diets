@@ -3128,3 +3128,111 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 .kitchen-memory { margin-top: 18px; }
 .kitchen-memory__line { margin: 2px 0 8px; font-size: 1rem; }
 .kitchen-memory .linkish { display: block; width: 100%; text-align: left; }
+
+/* ------------------------------------------------------------------ *
+ * The techniques a kitchen has picked up
+ * ------------------------------------------------------------------ */
+
+/*
+ * Deliberately without a progress bar, a percentage or a level. The moment
+ * there is a total to fill, the honest answer "I cook six dishes and I am happy
+ * with that" becomes a failing grade, and the app starts nagging somebody about
+ * their own dinner. A filled diamond means done, a hollow one means started,
+ * and there is nothing to complete.
+ */
+.craft__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px 22px;
+  margin-top: 14px;
+}
+.craft__group { min-width: 0; }
+.craft__group .eyebrow { margin-bottom: 6px; }
+
+.craft__chip {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 8px;
+  margin-left: -8px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.craft__chip:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.craft__mark { flex: none; color: var(--gold); font-size: .8rem; }
+.craft__chip.is-started .craft__mark { color: color-mix(in srgb, var(--ink) 34%, transparent); }
+.craft__name { flex: 1; min-width: 0; font-size: .92rem; }
+.craft__chip.is-have .craft__name { font-weight: 600; }
+.craft__count {
+  flex: none;
+  font-size: .74rem;
+  color: color-mix(in srgb, var(--ink) 52%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* A suggestion always carries the count of dishes that would teach it. An
+ * unreachable one is not encouragement, it is a reproach. */
+.craft__next {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+.craft__lead {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0 0;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.craft__lead:hover { border-color: color-mix(in srgb, var(--ink) 28%, transparent); }
+.craft__lead-name { display: block; font-weight: 600; font-size: .95rem; }
+.craft__lead-why {
+  display: block;
+  margin-top: 2px;
+  font-size: .84rem;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+.craft__lead-count {
+  display: block;
+  margin-top: 4px;
+  font-size: .74rem;
+  color: color-mix(in srgb, var(--ink) 50%, transparent);
+}
+
+.craft-sheet__short {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+.craft-sheet__state {
+  margin: 0 0 14px;
+  font-size: .82rem;
+  color: color-mix(in srgb, var(--ink) 58%, transparent);
+}
+.craft-sheet__unlocks { margin-top: 12px; }
+.craft-sheet__dishes { margin-top: 18px; }
+.craft-sheet__dishes .linkish { display: block; width: 100%; text-align: left; margin-top: 4px; }
+
+/* On a recipe page: the one thing this dish is worth cooking to learn. */
+.teaches-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 4px;
+  font-size: .84rem;
+  color: color-mix(in srgb, var(--ink) 66%, transparent);
+}
+.teaches-line__mark { color: var(--gold); }

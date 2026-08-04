@@ -1,0 +1,494 @@
+{
+  "schema": 1,
+  "note": "The techniques a cook picks up without being taught them, and what each one is actually for. This is not a badge list. Nothing here is awarded, nothing expires, there is no order and no total to complete — a cook who only ever makes six dishes has picked up whatever those six dishes teach, and that is a real answer rather than a low score. What the file is for is naming things: most people who can already brown an onion properly have never been told the word for what is stuck to the pan, and a technique you can name is one you can carry to a recipe that does not spell it out.",
+  "voice": "Each skill says what it is, then why it matters, then what it opens up. Never 'you have unlocked'. The cook did the thing; the app noticed.",
+  "detection": "A skill is credited when a dish that plainly involves it gets marked cooked. The match is on the recipe's own words, so it works across the whole collection rather than the handful somebody had time to tag — and it is deliberately conservative. Crediting a technique nobody used is the one failure that makes the whole screen worthless, because a cook who sees one wrong entry stops believing the rest.",
+  "groups": [
+    {
+      "id": "heat",
+      "name": "Heat",
+      "blurb": "What a burner is actually doing, and how to tell."
+    },
+    {
+      "id": "flavor",
+      "name": "Flavor",
+      "blurb": "The handful of moves that separate food that tastes like something from food that tastes like nothing."
+    },
+    {
+      "id": "texture",
+      "name": "Texture",
+      "blurb": "Crisp, tender, silky, chewy — mostly a question of water and time."
+    },
+    {
+      "id": "structure",
+      "name": "Structure",
+      "blurb": "The techniques where the food changes state and there is no going back."
+    },
+    {
+      "id": "range",
+      "name": "Range",
+      "blurb": "How wide the kitchen has gotten."
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill.fond",
+      "group": "heat",
+      "name": "Fond",
+      "short": "Brown bits are flavor, not a mess.",
+      "what": "The stuck brown layer on the bottom of a hot pan is not burnt and is not a cleaning problem. It is the most concentrated flavor in the dish, and a splash of anything wet lifts it back into the food in about ten seconds.",
+      "unlocks": "Once you know it is there you stop washing it down the sink, and every braise, pan sauce and stew you make afterwards is better for a step that costs nothing.",
+      "words": [
+        "deglaze",
+        "deglazing",
+        "scrape up",
+        "scraping up",
+        "brown bits",
+        "fond"
+      ],
+      "at": 2,
+      "tip": "tip.stick"
+    },
+    {
+      "id": "skill.sear",
+      "group": "heat",
+      "name": "The dry pan and the untouched side",
+      "short": "Wet food steams. Crowded food steams. Poked food never browns.",
+      "what": "Browning needs a surface hot enough and dry enough for water to leave before the sugars and proteins can react. Anything that lowers the temperature — a wet surface, too much in the pan, moving it around — trades a brown crust for a gray simmer.",
+      "unlocks": "It is the same rule for tofu, mushrooms, halloumi, chickpeas and a steak, which means learning it once fixes five dishes.",
+      "words": [
+        "undisturbed",
+        "do not move",
+        "don't move",
+        "leave it alone",
+        "in one layer",
+        "single layer",
+        "pat dry",
+        "sear"
+      ],
+      "at": 3,
+      "tip": "tip.crowding"
+    },
+    {
+      "id": "skill.lowslow",
+      "group": "heat",
+      "name": "Low and slow",
+      "short": "Some things get tender by waiting, not by heat.",
+      "what": "Tough tissue and hard starches need time at a low temperature, not a high one. A pot that is barely moving will get there; a pot at a rolling boil will get there too, having shredded everything on the way.",
+      "unlocks": "Braises, beans, stews and every dish where the instruction 'simmer' is doing more work than it looks like it is doing.",
+      "words": [
+        "barely simmer",
+        "gentle simmer",
+        "bare simmer",
+        "braise",
+        "braising",
+        "low and slow",
+        "slow cooker",
+        "just barely bubbling"
+      ],
+      "at": 2,
+      "tip": "tip.slowcooker"
+    },
+    {
+      "id": "skill.roast",
+      "group": "heat",
+      "name": "Dry heat and edges",
+      "short": "An oven browns the outside and dries the surface. That is the whole trick.",
+      "what": "Roasting is not baking with vegetables in it. The point is the edges: high heat, room around each piece, enough fat to conduct, and the patience to leave it until the corners go dark.",
+      "unlocks": "Almost any vegetable becomes a dish rather than a side, and a sheet pan turns into the least demanding way to cook dinner.",
+      "words": [
+        "roast",
+        "roasting",
+        "sheet pan",
+        "sheet-pan",
+        "on a rimmed",
+        "toss with oil and",
+        "until the edges"
+      ],
+      "at": 5,
+      "tip": "tip.sheetpan"
+    },
+    {
+      "id": "skill.residual",
+      "group": "heat",
+      "name": "Off the heat",
+      "short": "Food keeps cooking after you stop cooking it.",
+      "what": "A pan holds heat and so does the food in it. Anything delicate — garlic, herbs, eggs, chili, dairy — added after the burner is off gets the warmth without the damage.",
+      "unlocks": "Why garlic burns in some recipes and not others, why scrambled eggs go rubbery on the plate rather than in the pan, and how to stop both.",
+      "words": [
+        "off the heat",
+        "remove from the heat",
+        "off heat",
+        "residual heat",
+        "carryover",
+        "let it rest",
+        "rest for"
+      ],
+      "at": 4,
+      "tip": "tip.carryover"
+    },
+    {
+      "id": "skill.acid-finish",
+      "group": "flavor",
+      "name": "Acid at the end",
+      "short": "Lemon off the heat tastes brighter than lemon cooked in.",
+      "what": "Acid is volatile. Simmered for twenty minutes it flattens into a background sourness; added in the last minute it stays sharp and lifts everything under it. Most food that tastes 'flat' is not short of salt, it is short of acid.",
+      "unlocks": "The single cheapest fix in cooking. A squeeze at the end rescues a dull soup, a heavy stew and almost every bean dish ever made.",
+      "words": [
+        "squeeze of lemon",
+        "squeeze of lime",
+        "stir in the lemon",
+        "finish with lemon",
+        "lemon juice off",
+        "splash of vinegar",
+        "juice of half",
+        "juice of one lemon",
+        "juice of 1 lemon"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.bloom",
+      "group": "flavor",
+      "name": "Blooming spice",
+      "short": "Dry spice in hot fat tastes like a different ingredient.",
+      "what": "Most of what a spice smells of is fat-soluble and locked up until it meets hot oil or butter. Thirty seconds in the pan before the liquid goes in is the difference between a curry that tastes of spices and one that tastes of dust.",
+      "unlocks": "It works for cumin, coriander, paprika, curry powder, chili flakes and tomato paste, and it costs half a minute.",
+      "words": [
+        "until fragrant",
+        "bloom",
+        "blooming",
+        "toast the spice",
+        "toasting the spice",
+        "in the oil until",
+        "stir in the spices and cook"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.aromatics",
+      "group": "flavor",
+      "name": "Building a base",
+      "short": "The first five minutes decide what the dish tastes like.",
+      "what": "Onion, carrot, celery, garlic, ginger, scallion whites — cooked slowly at the start, they stop tasting of themselves and become the floor everything else stands on. Rushed, they stay raw and sharp and every later ingredient has to work around them.",
+      "unlocks": "Once you can taste the difference between an onion that is soft and one that is genuinely golden, you have the thing most home cooking is missing.",
+      "words": [
+        "soffritto",
+        "mirepoix",
+        "until softened",
+        "until soft and",
+        "until golden",
+        "sweat the",
+        "cook the onion"
+      ],
+      "at": 5
+    },
+    {
+      "id": "skill.umami",
+      "group": "flavor",
+      "name": "Savory depth without meat",
+      "short": "Some ingredients are there for weight, not for taste.",
+      "what": "Miso, soy, tomato paste, dried mushroom, parmesan rind, anchovy, nutritional yeast, marmite. None of them make a dish taste of themselves at the amounts used; they make it taste of more.",
+      "unlocks": "It is the whole answer to why a vegetarian dish can taste thin, and it is a teaspoon of something you already have.",
+      "words": [
+        "miso",
+        "soy sauce",
+        "tamari",
+        "tomato paste",
+        "parmesan rind",
+        "dried mushroom",
+        "nutritional yeast",
+        "fish sauce",
+        "worcestershire"
+      ],
+      "at": 5
+    },
+    {
+      "id": "skill.season-layers",
+      "group": "flavor",
+      "name": "Salting as you go",
+      "short": "Salt added in stages tastes different from the same salt at the end.",
+      "what": "Salt draws water out and gets absorbed, both of which take time. A pinch with the onions, a pinch with the beans and a pinch at the end tastes seasoned; the same quantity stirred in at the table tastes salty.",
+      "unlocks": "Food that needs less salt overall to taste like enough, which is most of what heart-forward cooking is asking for.",
+      "words": [
+        "season with salt",
+        "a pinch of salt",
+        "salt to taste",
+        "season as you go",
+        "taste and season",
+        "taste and adjust"
+      ],
+      "at": 4
+    },
+    {
+      "id": "skill.fresh-finish",
+      "group": "flavor",
+      "name": "Something raw on top",
+      "short": "The last thing on is the first thing tasted.",
+      "what": "Herbs, scallion greens, zest, raw onion, a green chili, a spoon of yogurt. None of them are cooked, all of them are the first thing your nose gets, and they make a long-cooked dish taste like it was made just now.",
+      "unlocks": "The cheapest way to make a leftover or a freezer meal taste fresh, and the reason restaurant plates look and smell alive.",
+      "words": [
+        "scatter over",
+        "top with",
+        "sprinkle over",
+        "garnish with",
+        "finish with",
+        "just before serving",
+        "shower of"
+      ],
+      "at": 5
+    },
+    {
+      "id": "skill.taste",
+      "group": "flavor",
+      "name": "Tasting and fixing",
+      "short": "A recipe is a starting point. Your tongue is the instrument.",
+      "what": "Flat means acid. Dull means salt. Harsh means fat or sugar. Thin means umami. Four questions, asked with a spoon, and almost every dish that is nearly right becomes right.",
+      "unlocks": "The point where you stop following recipes and start using them, which is the actual thing everybody wants and nobody names.",
+      "words": [
+        "taste and adjust",
+        "taste it",
+        "adjust the seasoning",
+        "adjust seasoning",
+        "more lemon if",
+        "taste and add"
+      ],
+      "at": 4
+    },
+    {
+      "id": "skill.starch-water",
+      "group": "texture",
+      "name": "Starchy water",
+      "short": "The cloudy water the pasta cooked in is an ingredient.",
+      "what": "Water that has boiled pasta, potatoes or beans is full of dissolved starch, which makes fat and water hold together. A ladle of it turns oil and cheese into a sauce that clings instead of a puddle at the bottom of the bowl.",
+      "unlocks": "Every pasta dish, immediately and permanently. It is the one restaurant technique that costs nothing and changes everything.",
+      "words": [
+        "pasta water",
+        "cooking water",
+        "reserve a cup of",
+        "reserved water",
+        "starchy water",
+        "cooking liquid"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.emulsion",
+      "group": "texture",
+      "name": "Emulsion",
+      "short": "Oil and water do mix, briefly, if something holds them.",
+      "what": "Vinaigrette, mayonnaise, hollandaise, a pan sauce mounted with butter, tahini loosened with water — all the same trick: fat broken into droplets small enough to stay suspended, held there by mustard, egg, starch or just vigorous whisking.",
+      "unlocks": "Salad dressing you never buy again, and an understanding of why a sauce splits and how to bring it back.",
+      "words": [
+        "whisk in the oil",
+        "emulsif",
+        "vinaigrette",
+        "slowly drizzle",
+        "while whisking",
+        "in a steady stream",
+        "until creamy and combined"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.reduce",
+      "group": "texture",
+      "name": "Reduction",
+      "short": "Boiling something down is concentrating it, not just thickening it.",
+      "what": "Simmering a liquid uncovered removes water and leaves everything else behind — flavor, salt and sugar all get stronger at the same rate. Which is why a reduced sauce needs seasoning at the end and not the beginning.",
+      "unlocks": "Sauces with body and no thickener, and the reason a stew tastes better on the second day.",
+      "words": [
+        "reduce",
+        "reduced by half",
+        "until thickened",
+        "until it coats",
+        "uncovered until",
+        "cook down",
+        "until the liquid has"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.crisp",
+      "group": "texture",
+      "name": "Getting things crisp",
+      "short": "Crisp is the absence of water at the surface.",
+      "what": "Dry the surface, give it space, use enough fat to conduct heat into it, and leave it alone. Every crisp thing — roast potatoes, tofu, croutons, chickpeas, a grilled cheese — is the same four instructions.",
+      "unlocks": "The texture people say they cannot get at home, which is almost always a crowded pan and an impatient hand.",
+      "words": [
+        "until crisp",
+        "crispy",
+        "golden and crisp",
+        "until browned and crisp",
+        "give them room",
+        "in an even layer"
+      ],
+      "at": 3
+    },
+    {
+      "id": "skill.rest-grains",
+      "group": "texture",
+      "name": "Letting it sit",
+      "short": "Rice, bread and roasted meat all need a few minutes of nothing.",
+      "what": "Heat and moisture inside food are unevenly distributed the moment cooking stops. Rest redistributes both. Rice steams itself even off the burner; a cut made too early loses everything it was holding.",
+      "unlocks": "Rice that is not wet at the bottom and dry on top, and the discipline to leave a thing alone for ten minutes.",
+      "words": [
+        "let it stand",
+        "let stand",
+        "covered for 10",
+        "off the heat, covered",
+        "rest 5",
+        "rest 10",
+        "fluff with a fork"
+      ],
+      "at": 2
+    },
+    {
+      "id": "skill.knife",
+      "group": "texture",
+      "name": "Cutting to size",
+      "short": "Same size, same time. That is most of what knife work is for.",
+      "what": "Uniform pieces cook uniformly. It is not about speed or looking professional; it is that a pan of unevenly cut vegetables is a pan where some are burnt, some are raw and none are right.",
+      "unlocks": "Everything on the sheet pan being done at the same moment, which is the difference between a technique and a gamble.",
+      "words": [
+        "dice",
+        "diced",
+        "finely chop",
+        "thinly slice",
+        "julienne",
+        "cut into 1-inch",
+        "cut into even",
+        "same size",
+        "half-moons"
+      ],
+      "at": 6,
+      "tip": "tip.claw"
+    },
+    {
+      "id": "skill.dough",
+      "group": "structure",
+      "name": "Not overworking it",
+      "short": "Stirring a batter to death is what makes a muffin tough.",
+      "what": "Flour and water make gluten the moment they meet, and every stir makes more. Bread wants that; a muffin, a pancake and a scone do not. 'Until just combined' means lumps are correct and the instruction is not being polite.",
+      "unlocks": "Quick breads that are tender rather than rubbery, and the reason the same batter can go two ways.",
+      "words": [
+        "until just combined",
+        "do not overmix",
+        "don't overmix",
+        "a few lumps",
+        "fold in",
+        "fold gently",
+        "just until"
+      ],
+      "at": 3,
+      "tip": "tip.quickbread"
+    },
+    {
+      "id": "skill.leaven",
+      "group": "structure",
+      "name": "What makes it rise",
+      "short": "Baking soda needs an acid. Baking powder brought its own.",
+      "what": "Soda is a base and does nothing without something sour to react with — buttermilk, yogurt, lemon, molasses, cocoa. Powder is soda with the acid already mixed in. Swapping one for the other is not a substitution, it is a different recipe.",
+      "unlocks": "Being able to read a baking recipe and see why it contains what it contains, which is where baking stops being magic.",
+      "words": [
+        "baking soda",
+        "baking powder",
+        "buttermilk",
+        "yeast",
+        "proof",
+        "let it rise",
+        "until doubled"
+      ],
+      "at": 2,
+      "tip": "tip.baking-why"
+    },
+    {
+      "id": "skill.brownbutter",
+      "group": "structure",
+      "name": "Brown butter",
+      "short": "Butter cooked past melting becomes a different ingredient.",
+      "what": "Keep going past the foam and the milk solids toast on the bottom of the pan. It smells of hazelnut and toffee, it takes four minutes, and it goes from perfect to burnt in about fifteen seconds.",
+      "unlocks": "One of the few techniques that transforms something you already have into something you would pay for.",
+      "words": [
+        "brown butter",
+        "browned butter",
+        "beurre noisette",
+        "milk solids",
+        "until it smells nutty",
+        "until the butter is golden brown"
+      ],
+      "at": 1
+    },
+    {
+      "id": "skill.eggs",
+      "group": "structure",
+      "name": "Eggs and gentle heat",
+      "short": "An egg is a timer that does not forgive.",
+      "what": "Egg protein sets in a narrow band of temperature and keeps tightening past it. Custard, curd, carbonara and scrambled eggs are all the same problem: get it to set and stop, usually by taking it off the heat before it looks ready.",
+      "unlocks": "Silky rather than grainy, every time, and the confidence to make a sauce that most people are frightened of.",
+      "words": [
+        "temper",
+        "tempering",
+        "custard",
+        "coats the back of a spoon",
+        "curdle",
+        "scrambled",
+        "poach the egg",
+        "soft-set"
+      ],
+      "at": 2,
+      "tip": "tip.crack-egg"
+    },
+    {
+      "id": "skill.ferment",
+      "group": "structure",
+      "name": "Letting something sit and change",
+      "short": "Time is an ingredient, and sometimes it is the main one.",
+      "what": "Pickles, marinades, salted vegetables, overnight doughs, yogurt. Nothing is being cooked; salt, acid and bacteria are doing work that heat cannot do, and the only skill involved is starting early enough.",
+      "unlocks": "Flavor that cannot be added at the last minute, which is the whole category most weeknight cooking gives up on.",
+      "words": [
+        "marinate",
+        "quick pickle",
+        "pickled",
+        "overnight",
+        "let it sit for at least",
+        "salt and let stand",
+        "ferment"
+      ],
+      "at": 3
+    },
+    {
+      "id": "skill.range.cuisine",
+      "group": "range",
+      "kind": "breadth",
+      "of": "cuisine",
+      "name": "Cooking across borders",
+      "short": "Different kitchens solve the same problems differently.",
+      "what": "Every cuisine has its own answer to fat, acid, heat and aromatics. Cooking across several is the fastest way to see that they are answers rather than rules — a French base, an Indian base and a Mexican base are the same idea in three accents.",
+      "unlocks": "The point where you can taste a dish and guess what it needs, because you have seen the same problem solved five ways.",
+      "at": 8
+    },
+    {
+      "id": "skill.range.method",
+      "group": "range",
+      "kind": "breadth",
+      "of": "technique",
+      "name": "Across the families",
+      "short": "Heat, flavor, texture, structure — how many you have worked in.",
+      "what": "The techniques on this page fall into a few families, and most kitchens live in one or two of them for years. The others are not harder, only unfamiliar, and each one opens a set of dishes the first two cannot make.",
+      "unlocks": "Not being stuck when the usual approach does not suit the ingredient in front of you.",
+      "at": 4
+    },
+    {
+      "id": "skill.range.repeat",
+      "group": "range",
+      "kind": "breadth",
+      "of": "repeat",
+      "name": "A dish you own",
+      "short": "The fourth time you make something is when it stops being a recipe.",
+      "what": "Novelty is not skill. Cooking the same dish four or five times is how the timings become instinct, how you learn what it looks like when it is going wrong, and how it becomes something you can make while talking to someone.",
+      "unlocks": "A repertoire — the handful of things you can cook without thinking, which is what people actually mean when they say someone can cook.",
+      "at": 4
+    }
+  ]
+}
