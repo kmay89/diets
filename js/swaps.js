@@ -268,6 +268,39 @@ export function swapCount(recipe, swaps = {}) {
   return recipe.ingredients.filter(l => chosen[l.ing]).length;
 }
 
+/**
+ * A recipe with what the household added to it.
+ *
+ * The flavor panel suggests a squeeze of lemon or a handful of toasted almonds,
+ * and accepting one has to be a real change or the suggestion is theater: add
+ * the crunch and the panel must stop saying there is no crunch. So an addition
+ * becomes an ingredient line like any other, and the nutrition, the heart score,
+ * the dials and the shopping list all follow it without knowing where it came
+ * from.
+ *
+ * A fix written for the whole dish goes in as written. One written per serving
+ * — a spoonful of yogurt on each bowl — is multiplied up, because the line has
+ * to describe the pot rather than the plate.
+ */
+export function withAdditions(recipe, additions = {}) {
+  const added = additions?.[recipe.id];
+  if (!added?.length) return recipe;
+
+  const servings = Math.max(1, recipe.servings || 1);
+  const lines = added.map(line => ({
+    ...line,
+    qty: line.per === 'serving' ? line.qty * servings : line.qty,
+    added: true
+  }));
+
+  return { ...recipe, ingredients: [...recipe.ingredients, ...lines] };
+}
+
+/** A recipe as this household actually cooks it: swapped, then added to. */
+export function asCooked(recipe, { swaps = {}, additions = {} } = {}) {
+  return withAdditions(withSwaps(recipe, swaps), additions);
+}
+
 /* ------------------------------------------------------------------ *
  * The ladder — what to do when the two listed substitutes are also out
  * ------------------------------------------------------------------ */

@@ -21,25 +21,39 @@
             "ing": "ing.salt.kosher",
             "amount": "¼ tsp at a time",
             "how": "Stir it in, wait thirty seconds, taste again.",
-            "why": "Salt takes a moment to dissolve and spread. Adding the second quarter-teaspoon before you have tasted the first is how a pot goes from flat to ruined in one step."
+            "why": "Salt takes a moment to dissolve and spread. Adding the second quarter-teaspoon before you have tasted the first is how a pot goes from flat to ruined in one step.",
+            "qty": 0.25,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.miso.white",
             "amount": "1 tsp",
             "how": "Melt it into a spoonful of the hot liquid first, then stir that back in.",
-            "why": "Salt and savory depth in the same move. Miso dropped straight into a pot goes to the bottom in lumps."
+            "why": "Salt and savory depth in the same move. Miso dropped straight into a pot goes to the bottom in lumps.",
+            "qty": 1,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.cheese.parmesan",
             "amount": "1 tbsp grated, at the table",
             "how": "Grate it over each bowl rather than into the pot.",
-            "why": "Salt you can see lands harder than salt stirred in, so you need less of it for the same effect."
+            "why": "Salt you can see lands harder than salt stirred in, so you need less of it for the same effect.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "serving",
+            "prep": "grated, at the table"
           },
           {
             "ing": "ing.olives.kalamata",
             "amount": "a few, chopped",
             "how": "Scatter on top.",
-            "why": "Briny bursts read as seasoning across the whole plate even though only some bites have one."
+            "why": "Briny bursts read as seasoning across the whole plate even though only some bites have one.",
+            "qty": 4,
+            "unit": "each",
+            "per": "dish",
+            "prep": "chopped"
           }
         ]
       },
@@ -50,19 +64,30 @@
             "ing": "ing.lemon",
             "amount": "a squeeze",
             "how": "Off the heat, then taste.",
-            "why": "Acid reads as brightness and pulls attention off the salt. It is the first thing to try, because it is the only one that does not mean cooking more food."
+            "why": "Acid reads as brightness and pulls attention off the salt. It is the first thing to try, because it is the only one that does not mean cooking more food.",
+            "qty": 1,
+            "unit": "tbsp_juice",
+            "per": "dish"
           },
           {
             "ing": "ing.rice.brown",
             "amount": "another cup, cooked",
             "how": "Stretch the dish over more unsalted starch or vegetables.",
-            "why": "The salt per bite is what you taste. More unsalted bulk lowers it. The old trick of dropping in a potato to absorb salt does not work — a potato absorbs salty liquid, not salt, so it only helps by being extra unsalted food."
+            "why": "The salt per bite is what you taste. More unsalted bulk lowers it. The old trick of dropping in a potato to absorb salt does not work — a potato absorbs salty liquid, not salt, so it only helps by being extra unsalted food.",
+            "qty": 1,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "cooked"
           },
           {
             "ing": "ing.yogurt.greek.nonfat",
             "amount": "a spoonful per bowl",
             "how": "Dollop on top.",
-            "why": "Fat and cool dairy blunt the edge of salt without adding any more of it."
+            "why": "Fat and cool dairy blunt the edge of salt without adding any more of it.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "serving",
+            "prep": "on top"
           }
         ]
       },
@@ -125,25 +150,41 @@
             "ing": "ing.oil.olive",
             "amount": "1 tbsp, off the heat",
             "how": "Pour it over just before serving and do not stir much.",
-            "why": "Raw olive oil keeps its peppery aroma. The same oil heated for twenty minutes has cooked that away."
+            "why": "Raw olive oil keeps its peppery aroma. The same oil heated for twenty minutes has cooked that away.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "off the heat"
           },
           {
             "ing": "ing.almonds",
             "amount": "2 tbsp, toasted and chopped",
             "how": "Toast dry in a pan until they smell like almonds, then scatter.",
-            "why": "Fat and crunch in one move, and toasting is what turns a nut from filler into an ingredient."
+            "why": "Fat and crunch in one move, and toasting is what turns a nut from filler into an ingredient.",
+            "qty": 2,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "toasted and chopped"
           },
           {
             "ing": "ing.tahini",
             "amount": "1 tbsp thinned with water",
             "how": "Whisk with water and lemon until it is pourable, then drizzle.",
-            "why": "Richness without dairy, and it brings its own faint bitterness that keeps the dish from going flat-sweet."
+            "why": "Richness without dairy, and it brings its own faint bitterness that keeps the dish from going flat-sweet.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "thinned with water"
           },
           {
             "ing": "ing.avocado",
             "amount": "half, sliced",
             "how": "Lay it on at the table.",
-            "why": "Cold creaminess against something hot is a contrast a plate rarely has too much of."
+            "why": "Cold creaminess against something hot is a contrast a plate rarely has too much of.",
+            "qty": 0.5,
+            "unit": "each",
+            "per": "dish",
+            "prep": "sliced"
           }
         ]
       },
@@ -154,19 +195,30 @@
             "ing": "ing.vinegar.redwine",
             "amount": "1 tsp",
             "how": "Stir in at the very end.",
-            "why": "Acid cuts fat. This is why a rich braise gets a splash of vinegar and why fish and chips come with malt vinegar."
+            "why": "Acid cuts fat. This is why a rich braise gets a splash of vinegar and why fish and chips come with malt vinegar.",
+            "qty": 1,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.arugula",
             "amount": "a handful, dressed with lemon",
             "how": "Serve alongside, not on top.",
-            "why": "Bitter and raw beside rich and cooked resets your palate between bites, so the last bite tastes like the first."
+            "why": "Bitter and raw beside rich and cooked resets your palate between bites, so the last bite tastes like the first.",
+            "qty": 1,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "dressed with lemon"
           },
           {
             "ing": "ing.pickles.dill",
             "amount": "a few spears",
             "how": "On the side.",
-            "why": "The oldest fix in the book, and the reason a sandwich shop hands you one."
+            "why": "The oldest fix in the book, and the reason a sandwich shop hands you one.",
+            "qty": 1,
+            "unit": "spear",
+            "per": "serving",
+            "prep": "on the side"
           }
         ]
       },
@@ -219,25 +271,39 @@
             "ing": "ing.lemon",
             "amount": "½ lemon, juiced",
             "how": "Off the heat, then taste, then decide about the other half.",
-            "why": "The single most useful correction in cooking. It is also the best substitute for salt: acid makes an under-salted dish taste seasoned."
+            "why": "The single most useful correction in cooking. It is also the best substitute for salt: acid makes an under-salted dish taste seasoned.",
+            "qty": 1.5,
+            "unit": "tbsp_juice",
+            "per": "dish"
           },
           {
             "ing": "ing.vinegar.redwine",
             "amount": "1 tsp",
             "how": "Stir in at the end.",
-            "why": "For anything long-cooked and dark — beans, stews, braises — where lemon would read as out of place."
+            "why": "For anything long-cooked and dark — beans, stews, braises — where lemon would read as out of place.",
+            "qty": 1,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.yogurt.greek.nonfat",
             "amount": "a spoonful per bowl",
             "how": "Dollop on top.",
-            "why": "Acid and cool fat together, which is why yogurt sits beside so much of the world's spiced food."
+            "why": "Acid and cool fat together, which is why yogurt sits beside so much of the world's spiced food.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "serving",
+            "prep": "on top"
           },
           {
             "ing": "ing.onion.red",
             "amount": "¼ onion, sliced thin, in lime juice for 10 minutes",
             "how": "Scatter over at the table.",
-            "why": "Quick-pickled onion is acid you can see, and it turns an even-textured dish into one with high notes."
+            "why": "Quick-pickled onion is acid you can see, and it turns an even-textured dish into one with high notes.",
+            "qty": 0.25,
+            "unit": "each",
+            "per": "dish",
+            "prep": "sliced thin, quick-pickled"
           }
         ]
       },
@@ -248,13 +314,20 @@
             "ing": "ing.honey",
             "amount": "½ tsp",
             "how": "Stir in and taste.",
-            "why": "A trace of sweetness rounds an acidic edge without making the dish sweet."
+            "why": "A trace of sweetness rounds an acidic edge without making the dish sweet.",
+            "qty": 0.5,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.oil.olive",
             "amount": "1 tbsp",
             "how": "Stir in off the heat.",
-            "why": "Fat softens acid the same way acid cuts fat. The two dials pull against each other, which is why they are usually adjusted together."
+            "why": "Fat softens acid the same way acid cuts fat. The two dials pull against each other, which is why they are usually adjusted together.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "off the heat"
           }
         ]
       },
@@ -307,31 +380,49 @@
             "ing": "ing.tomatopaste",
             "amount": "1 tbsp",
             "how": "Fry it in the bare pan for 60–90 seconds until it turns brick red and smells sweet, then stir it in.",
-            "why": "Frying concentrates it and browns its sugars. This is a minute of work that tastes like an extra hour of simmering."
+            "why": "Frying concentrates it and browns its sugars. This is a minute of work that tastes like an extra hour of simmering.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "fried until it darkens"
           },
           {
             "ing": "ing.mushroom.porcini.dried",
             "amount": "a small handful",
             "how": "Soak in hot water 20 minutes; chop them in and pour the soaking liquid in too, leaving the grit behind.",
-            "why": "Dried mushrooms are the most concentrated savory thing in most kitchens, and the soaking water is the better half."
+            "why": "Dried mushrooms are the most concentrated savory thing in most kitchens, and the soaking water is the better half.",
+            "qty": 0.25,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "soaked, with the liquid"
           },
           {
             "ing": "ing.miso.white",
             "amount": "1–2 tsp",
             "how": "Melt into a spoon of hot liquid, then stir back in off the boil.",
-            "why": "Depth plus salt. Keep it off a hard boil so it stays fragrant."
+            "why": "Depth plus salt. Keep it off a hard boil so it stays fragrant.",
+            "qty": 1.5,
+            "unit": "tsp",
+            "per": "dish",
+            "prep": "melted into hot liquid"
           },
           {
             "ing": "ing.soysauce.lowsodium",
             "amount": "1 tsp",
             "how": "Stir in near the end.",
-            "why": "A teaspoon does not make a dish taste of soy sauce; it makes it taste more like itself. Watch the salt dial when you use it."
+            "why": "A teaspoon does not make a dish taste of soy sauce; it makes it taste more like itself. Watch the salt dial when you use it.",
+            "qty": 1,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.nutritionalyeast",
             "amount": "1 tbsp",
             "how": "Stir in or scatter over.",
-            "why": "Savory and cheesy with no dairy and almost no sodium."
+            "why": "Savory and cheesy with no dairy and almost no sodium.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "dish"
           }
         ]
       },
@@ -342,13 +433,20 @@
             "ing": "ing.lemon",
             "amount": "a squeeze",
             "how": "Off the heat.",
-            "why": "Acid keeps a very savory dish from reading as heavy."
+            "why": "Acid keeps a very savory dish from reading as heavy.",
+            "qty": 1,
+            "unit": "tbsp_juice",
+            "per": "dish"
           },
           {
             "ing": "ing.parsley.flat",
             "amount": "a handful, chopped",
             "how": "Over the top at the table.",
-            "why": "Something raw and green is the contrast a dark savory pot is usually missing."
+            "why": "Something raw and green is the contrast a dark savory pot is usually missing.",
+            "qty": 0.25,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "chopped"
           }
         ]
       },
@@ -401,13 +499,20 @@
             "ing": "ing.honey",
             "amount": "½ tsp",
             "how": "Stir in off the heat and taste.",
-            "why": "Enough to round an edge, not enough to notice as sweetness."
+            "why": "Enough to round an edge, not enough to notice as sweetness.",
+            "qty": 0.5,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.carrot",
             "amount": "1, grated in early",
             "how": "Cook it with the onions.",
-            "why": "The way a lot of Italian kitchens sweeten a sauce: a vegetable, cooked down, rather than sugar."
+            "why": "The way a lot of Italian kitchens sweeten a sauce: a vegetable, cooked down, rather than sugar.",
+            "qty": 1,
+            "unit": "each",
+            "per": "dish",
+            "prep": "grated in early"
           }
         ]
       },
@@ -418,19 +523,28 @@
             "ing": "ing.salt.kosher",
             "amount": "a pinch",
             "how": "Add and taste.",
-            "why": "Salt makes sweetness read as flavor instead of sugar. It is why salted caramel works."
+            "why": "Salt makes sweetness read as flavor instead of sugar. It is why salted caramel works.",
+            "qty": 0.125,
+            "unit": "tsp",
+            "per": "dish"
           },
           {
             "ing": "ing.lime",
             "amount": "a squeeze",
             "how": "Off the heat.",
-            "why": "Acid is the fastest way to make something over-sweet taste balanced."
+            "why": "Acid is the fastest way to make something over-sweet taste balanced.",
+            "qty": 1,
+            "unit": "tbsp_juice",
+            "per": "dish"
           },
           {
             "ing": "ing.spice.pepperflakes",
             "amount": "a pinch",
             "how": "Stir in.",
-            "why": "Heat against sweet is the Thai and Sichuan answer, and it works on a weeknight tomato sauce too."
+            "why": "Heat against sweet is the Thai and Sichuan answer, and it works on a weeknight tomato sauce too.",
+            "qty": 0.125,
+            "unit": "tsp",
+            "per": "dish"
           }
         ]
       },
@@ -485,13 +599,21 @@
             "ing": "ing.spice.pepperflakes",
             "amount": "¼ tsp, bloomed in the oil",
             "how": "Add to hot fat for twenty seconds before the liquid goes in.",
-            "why": "Blooming spreads heat through the whole dish. Sprinkled on at the end it sits in hot spots."
+            "why": "Blooming spreads heat through the whole dish. Sprinkled on at the end it sits in hot spots.",
+            "qty": 0.25,
+            "unit": "tsp",
+            "per": "dish",
+            "prep": "bloomed in the oil"
           },
           {
             "ing": "ing.chilicrisp",
             "amount": "a spoonful, at the table",
             "how": "Put the jar on the table.",
-            "why": "The one that keeps everybody eating the same dinner — the people who want heat add it to their own bowl."
+            "why": "The one that keeps everybody eating the same dinner — the people who want heat add it to their own bowl.",
+            "qty": 1,
+            "unit": "tsp",
+            "per": "serving",
+            "prep": "at the table"
           }
         ]
       },
@@ -502,13 +624,21 @@
             "ing": "ing.yogurt.greek.nonfat",
             "amount": "a spoonful",
             "how": "On top or on the side.",
-            "why": "Capsaicin dissolves in fat, not water. Dairy carries it away; a glass of water spreads it around."
+            "why": "Capsaicin dissolves in fat, not water. Dairy carries it away; a glass of water spreads it around.",
+            "qty": 1,
+            "unit": "tbsp",
+            "per": "serving",
+            "prep": "on top"
           },
           {
             "ing": "ing.rice.jasmine",
             "amount": "a bowl",
             "how": "Serve it under or beside.",
-            "why": "Plain starch is the built-in off switch, and the reason very hot food is almost always served with some."
+            "why": "Plain starch is the built-in off switch, and the reason very hot food is almost always served with some.",
+            "qty": 0.33,
+            "unit": "cup",
+            "per": "serving",
+            "prep": "cooked, alongside"
           }
         ]
       },
@@ -558,19 +688,30 @@
             "ing": "ing.parsley.flat",
             "amount": "a small handful, roughly chopped",
             "how": "Over the top, at the table.",
-            "why": "The default. It goes with almost everything and costs a dollar."
+            "why": "The default. It goes with almost everything and costs a dollar.",
+            "qty": 0.25,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "roughly chopped"
           },
           {
             "ing": "ing.lemon",
             "amount": "the zest of half",
             "how": "Grate it over just before serving.",
-            "why": "Zest is aroma without acid, so it lifts a dish that already has enough sharpness."
+            "why": "Zest is aroma without acid, so it lifts a dish that already has enough sharpness.",
+            "qty": 1,
+            "unit": "tsp_zest",
+            "per": "dish"
           },
           {
             "ing": "ing.scallion",
             "amount": "2, sliced thin",
             "how": "Scatter the green parts over.",
-            "why": "Raw allium bite. Cheap, keeps for weeks, and works on anything."
+            "why": "Raw allium bite. Cheap, keeps for weeks, and works on anything.",
+            "qty": 2,
+            "unit": "each",
+            "per": "dish",
+            "prep": "sliced thin"
           }
         ]
       }
@@ -588,25 +729,41 @@
             "ing": "ing.almonds",
             "amount": "2 tbsp, toasted and chopped",
             "how": "Dry pan, medium, until they smell toasty, then scatter.",
-            "why": "Crunch and fat together. Toasting is not optional — it is the whole difference."
+            "why": "Crunch and fat together. Toasting is not optional — it is the whole difference.",
+            "qty": 2,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "toasted and chopped"
           },
           {
             "ing": "ing.panko",
             "amount": "¼ cup, toasted in a little olive oil with garlic",
             "how": "Scatter over pasta, beans or roasted vegetables.",
-            "why": "Italian kitchens have used fried breadcrumbs as poor man's parmesan for centuries. It is the cheapest upgrade in this app."
+            "why": "Italian kitchens have used fried breadcrumbs as poor man's parmesan for centuries. It is the cheapest upgrade in this app.",
+            "qty": 0.25,
+            "unit": "cup",
+            "per": "dish",
+            "prep": "toasted in olive oil with garlic"
           },
           {
             "ing": "ing.pumpkinseeds",
             "amount": "2 tbsp, toasted",
             "how": "Scatter.",
-            "why": "For anything Mexican or fall-flavored, and they keep for months."
+            "why": "For anything Mexican or fall-flavored, and they keep for months.",
+            "qty": 2,
+            "unit": "tbsp",
+            "per": "dish",
+            "prep": "toasted"
           },
           {
             "ing": "ing.radish",
             "amount": "3, sliced thin",
             "how": "On top, raw.",
-            "why": "Crunch, peppery bite and cold against hot, with no cooking at all."
+            "why": "Crunch, peppery bite and cold against hot, with no cooking at all.",
+            "qty": 3,
+            "unit": "each",
+            "per": "dish",
+            "prep": "sliced thin"
           }
         ]
       }
@@ -1053,5 +1210,6 @@
       "title": "The last thirty seconds are half the dish",
       "body": "Raw oil, a squeeze of lemon, torn herbs, toasted nuts, flaky salt. None of them are cooking, all of them are the difference between a dish that tastes homemade and one that tastes like somebody cooked it on purpose."
     }
-  ]
+  ],
+  "fixNote": "Every fix carries a real amount as well as a written one, so it can be added to the dish rather than only described. 'per' says what the amount is for: 'dish' means the whole pot as written and 'serving' means each bowl, which is the difference between a spoonful of tomato paste stirred in and a spoonful of yogurt on top of every plate."
 }

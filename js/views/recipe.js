@@ -9,14 +9,14 @@
 
 import { h, mount, chip, pill, toast, minutes, scoreBadge, titleCase, debounce, sheet, plural } from '../ui.js';
 import { getDb, nutritionFor, heartFor, searchRecipes, pantryCoverage } from '../data.js';
-import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps, addCustomItem } from '../store.js';
+import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps, addToDish, removeFromDish, clearAdditions } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
 import { foodIcon, iconCollage } from '../food-icon.js';
 import { collectionsByGroup, collectionById, matchesCollection } from '../collections.js';
-import { withSwaps, swapCount, substitutionsFor, swappedLine, buildLadder, rolesFor, combosFor } from '../swaps.js';
+import { asCooked, swapCount, substitutionsFor, swappedLine, buildLadder, rolesFor, combosFor } from '../swaps.js';
 import { printRecipe } from '../print.js';
 import { glancePanel } from './nutrition-panel.js';
 import { computeBalance, balanceDelta } from '../balance.js';
@@ -52,8 +52,9 @@ export function render(root, { navigate, params }) {
     // Every number on this page — the ingredient amounts, the nutrition panel,
     // the heart score, the pantry count — reads the swapped recipe, so a swap
     // is a real change to the dish rather than a note beside it.
-    const recipe = withSwaps(base, st.swaps);
+    const recipe = asCooked(base, { swaps: st.swaps, additions: st.additions });
     const swapped = swapCount(base, st.swaps);
+    const added = st.additions?.[base.id] || [];
     const scale = servings / recipe.servings;
     const nut = nutritionFor(recipe, { withOmnivore: false, servings: recipe.servings });
     const nutOmni = recipe.omnivore ? nutritionFor(recipe, { withOmnivore: true, servings: recipe.servings }) : null;
@@ -95,13 +96,19 @@ export function render(root, { navigate, params }) {
 
       // Swaps change the numbers on this page, so the page says so rather than
       // letting a nutrition panel quietly describe a dish nobody is cooking.
-      swapped
+      swapped || added.length
         ? h('div.swap-banner',
-            h('span', `${plural(swapped, 'ingredient')} swapped. Everything below — amounts, nutrition, the shopping list — follows your version.`),
+            h('span',
+              [swapped ? `${plural(swapped, 'ingredient')} swapped` : null,
+                added.length ? `${plural(added.length, 'thing')} added` : null].filter(Boolean).join(' and '),
+              '. Everything below — amounts, nutrition, the flavor panel, the shopping list — follows your version.'),
             h('button.btn.btn--small', {
               type: 'button',
-              onclick: () => { clearSwaps(base.id); play('uncheck'); toast('Back to the recipe as written'); draw(); }
-            }, 'Put them back')
+              onclick: () => {
+                clearSwaps(base.id); clearAdditions(base.id);
+                play('uncheck'); toast('Back to the recipe as written'); draw();
+              }
+            }, 'Back to as written')
           )
         : null,
 
@@ -112,11 +119,19 @@ export function render(root, { navigate, params }) {
       // still balanced" in the same breath as the change.
       balanceBlock(profile, ingIndex, {
         delta,
-        onAdd: (item) => {
-          addCustomItem({ name: item.name, aisle: item.aisle, note: 'to finish the dish' });
+        added,
+        // Accepting a suggestion has to be a real change to the dish. The first
+        // version only put it on the shopping list, so tapping it looked like
+        // nothing happened and the panel went on saying there was no crunch.
+        onAdd: (fix, item) => {
+          addToDish(base.id, {
+            ing: fix.ing, qty: fix.qty, unit: fix.unit, prep: fix.prep || null, per: fix.per || 'dish'
+          });
           play('add');
-          toast(`${item.name} added to the list`);
-        }
+          toast(`${item.name} added to this dish — everything below follows it`);
+          draw();
+        },
+        onRemove: (ing) => { removeFromDish(base.id, ing); play('uncheck'); draw(); }
       }),
 
       recipe.omnivore ? forkBlock(recipe.omnivore, 'omnivore', scale, withOmnivore, (v) => { withOmnivore = v; draw(); }, st, draw) : null,
@@ -387,7 +402,7 @@ function ingredientList(recipe, state, scale, draw) {
         const canSwap = substitutionsFor(fromId, { diet: recipe.diet || [] }).length > 0
           || rolesFor(fromId).length > 0 || combosFor(fromId).length > 0;
 
-        return h('li', { class: `ing ${have ? 'is-have' : ''} ${swapFrom ? 'is-swapped' : ''}` },
+        return h('li', { class: `ing ${have ? 'is-have' : ''} ${swapFrom ? 'is-swapped' : ''} ${line.added ? 'is-added' : ''}` },
           h('label.ing__main',
             h('input', {
               type: 'checkbox', checked: have,
@@ -399,7 +414,8 @@ function ingredientList(recipe, state, scale, draw) {
             h('span.ing__name', item.name),
             line.prep ? h('span.ing__prep', `, ${line.prep}`) : null,
             line.optional ? h('span.ing__opt', ' (optional)') : null,
-            swapFrom ? h('span.ing__swapped', ` — instead of ${swapFrom.name}`) : null
+            swapFrom ? h('span.ing__swapped', ` — instead of ${swapFrom.name}`) : null,
+            line.added ? h('span.ing__added', ' — you added this') : null
           ),
           h('div.ing__meta',
             item.heartNote ? h('button.tag-btn', { type: 'button', title: item.heartNote, onclick: () => sheet(item.name, h('p', item.heartNote)) }, '❤ note') : null,
@@ -414,6 +430,13 @@ function ingredientList(recipe, state, scale, draw) {
               'aria-label': swapFrom ? `Change what replaces ${swapFrom.name}` : `Use something else instead of ${item.name}`,
               onclick: () => openSwapSheet(recipe.id, line, scale, draw)
             }, swapFrom ? '↔ swapped' : '↔') : null,
+            line.added
+              ? h('button.tag-btn', {
+                  type: 'button',
+                  title: `Take the ${item.name.toLowerCase()} back out`,
+                  onclick: () => { removeFromDish(recipe.id, line.ing); play('uncheck'); draw(); }
+                }, '× take it out')
+              : null,
             disliked ? h('span.pill.pill--warn', 'you marked this never') : null
           )
         );

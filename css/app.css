@@ -2459,3 +2459,33 @@ button.tabbar__item {
 .tip-card__short { font-size: .8rem; color: var(--ink-soft); line-height: 1.45; }
 .tip-card__group { font-size: .68rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; }
 .tip-sheet__why { padding: var(--sp-3); border-radius: var(--radius-sm); background: var(--surface-2); font-size: .9rem; }
+
+/* What the household added to a dish, and the way back out. */
+.added-row { margin-bottom: var(--sp-3); }
+.added-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.added-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px 5px 8px;
+  border: 1px solid var(--green-300);
+  border-radius: 999px;
+  background: var(--green-050);
+  color: var(--green-700);
+  font-size: .82rem;
+}
+.added-chip__name { font-weight: 600; }
+.added-chip__qty { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.added-chip__x {
+  border: 0;
+  background: transparent;
+  color: var(--ink-faint);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.added-chip__x:hover { color: var(--clay-600); }
+.ing.is-added { border-left: 3px solid var(--green-300); padding-left: 9px; }
+.ing__added { color: var(--green-600); font-size: .8rem; }

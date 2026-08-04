@@ -20,7 +20,9 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { computeBalance, balanceDelta, axisPotency } from '../js/balance.js';
+import { withAdditions } from '../js/swaps.js';
 import { RECIPE_FILES } from '../tools/recipe-files.mjs';
+import { gramsFor } from '../js/nutrition.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -213,4 +215,68 @@ test('cayenne is hotter than pepper flakes, which are hotter than a poblano', ()
   assert.ok(heat('ing.spice.cayenne') > heat('ing.spice.pepperflakes'), 'cayenne is not hotter than flakes');
   assert.ok(heat('ing.spice.pepperflakes') > heat('ing.pepper.jalapeno'), 'flakes are not hotter than a jalapeño');
   assert.ok(heat('ing.pepper.jalapeno') > heat('ing.pepper.poblano'), 'a jalapeño is not hotter than a poblano');
+});
+
+/* ---------- accepting a suggestion has to change the dish ---------- */
+
+test('every fix carries an amount the app can actually add', () => {
+  // The first version of this panel only described its suggestions. Tapping one
+  // put it on the shopping list and left the dish alone, so the panel went on
+  // saying there was no crunch in a dish somebody had just added almonds to.
+  const fixes = [
+    ...model.axes.flatMap(a => [...(a.whenLow?.fixes || []), ...(a.whenHigh?.fixes || [])]),
+    ...model.finishers.flatMap(f => f.whenMissing?.fixes || [])
+  ];
+  for (const fix of fixes) {
+    assert.ok(fix.qty > 0, `${fix.ing} has no numeric amount`);
+    assert.ok(fix.unit, `${fix.ing} has no unit`);
+    assert.ok(['dish', 'serving'].includes(fix.per), `${fix.ing} has per="${fix.per}"`);
+    const grams = gramsFor(index.get(fix.ing), fix.qty, fix.unit);
+    assert.ok(grams > 0, `${fix.ing}: ${fix.qty} ${fix.unit} does not convert to a weight`);
+  }
+});
+
+test('accepting the crunch fix makes the dish crunchy', () => {
+  const recipe = profiles.find(p => !p.profile.finishers.find(f => f.id === 'crunch').present).recipe;
+  const fix = model.finishers.find(f => f.id === 'crunch').whenMissing.fixes[0];
+
+  const after = computeBalance(
+    withAdditions(recipe, { [recipe.id]: [{ ing: fix.ing, qty: fix.qty, unit: fix.unit, per: fix.per }] }),
+    index, model
+  );
+  assert.equal(after.finishers.find(f => f.id === 'crunch').present, true,
+    `adding ${fix.qty} ${fix.unit} of ${fix.ing} to ${recipe.id} did not give it any crunch`);
+});
+
+test('accepting the acid fix lifts a flat dish out of low', () => {
+  const flat = profiles.find(p => p.profile.axes.find(a => a.id === 'acid').state === 'low');
+  assert.ok(flat, 'nothing in the collection is flat, so there is nothing to fix');
+  const fix = model.axes.find(a => a.id === 'acid').whenLow.fixes[0];
+
+  const after = computeBalance(
+    withAdditions(flat.recipe, { [flat.recipe.id]: [{ ing: fix.ing, qty: fix.qty, unit: fix.unit, per: fix.per }] }),
+    index, model
+  );
+  const acid = after.axes.find(a => a.id === 'acid');
+  assert.notEqual(acid.state, 'low', `${flat.recipe.id} is still flat after ${fix.amount} of ${fix.ing}`);
+});
+
+test('a per-serving fix scales to the pot, not the plate', () => {
+  // "A spoonful of yogurt per bowl" is six spoonfuls in a recipe for six, and a
+  // line that describes the pot has to say so.
+  const recipe = recipes.find(r => r.servings >= 4);
+  const line = { ing: 'ing.yogurt.greek.nonfat', qty: 1, unit: 'tbsp', per: 'serving' };
+  const applied = withAdditions(recipe, { [recipe.id]: [line] });
+  const added = applied.ingredients.find(l => l.ing === line.ing && l.added);
+  assert.equal(added.qty, recipe.servings, 'a per-serving amount was not multiplied up');
+
+  const perDish = withAdditions(recipe, { [recipe.id]: [{ ...line, per: 'dish' }] });
+  assert.equal(perDish.ingredients.find(l => l.added).qty, 1, 'a per-dish amount was scaled when it should not be');
+});
+
+test('taking an addition back out returns the dish to where it was', () => {
+  const recipe = recipes.find(r => r.id === 'rec.lentil-bolognese');
+  const before = computeBalance(recipe, index, model);
+  const after = computeBalance(withAdditions(recipe, {}), index, model);
+  assert.deepEqual(balanceDelta(before, after), [], 'an empty addition list changed the dish');
 });

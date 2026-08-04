@@ -180,16 +180,30 @@ const craft = {
 
 const ingRef = (id, where) => { if (!index.has(id)) err(`${where}: unknown ingredient "${id}"`); };
 
+// A fix has to be addable, not only readable: the panel puts it into the dish,
+// so an amount that cannot be converted to a weight is a button that does
+// nothing.
+const checkFix = (fix, where) => {
+  ingRef(fix.ing, where);
+  const item = index.get(fix.ing);
+  if (!item) return;
+  if (!(fix.qty > 0) || !fix.unit) err(`${where}: fix for ${fix.ing} has no addable amount`);
+  else if (gramsFor(item, fix.qty, fix.unit) == null) {
+    err(`${where}: fix for ${fix.ing} has no gram weight for unit "${fix.unit}"`);
+  }
+  if (!['dish', 'serving'].includes(fix.per)) err(`${where}: fix for ${fix.ing} has per="${fix.per}"`);
+};
+
 for (const axis of craft.balance.axes) {
   for (const fix of [...(axis.whenLow?.fixes || []), ...(axis.whenHigh?.fixes || [])]) {
-    ingRef(fix.ing, `balance ${axis.id}`);
+    checkFix(fix, `balance ${axis.id}`);
   }
   for (const [course, band] of Object.entries(axis.bands || {})) {
     if (!(band[0] < band[1])) err(`balance ${axis.id}/${course}: band ${band.join('–')} is not a range`);
   }
 }
 for (const f of craft.balance.finishers) {
-  for (const fix of f.whenMissing?.fixes || []) ingRef(fix.ing, `balance ${f.id}`);
+  for (const fix of f.whenMissing?.fixes || []) checkFix(fix, `balance ${f.id}`);
 }
 for (const [axis, tableOf] of Object.entries(craft.balance.potency)) {
   if (typeof tableOf !== 'object') continue;
