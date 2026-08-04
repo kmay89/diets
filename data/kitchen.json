@@ -1,0 +1,627 @@
+{
+  "schema": "vegnourish.kitchen/1",
+  "note": "Two things that belong together: who else can help with this recipe, and what this recipe asks of whoever is cooking it. Both are read off the recipe's own steps rather than authored per dish, so they work on all 242 recipes instead of the eight somebody had time to annotate.",
+  "wording": {
+    "note": "A note on the words used here, because they were chosen carefully. Recipes are not sorted by how good a cook you are — they are sorted by what they ask for. A dish that asks for four things at once is not better than one that asks for one thing; it is just a different evening. Nothing in this app is labeled easy, basic, beginner or simple as a judgment of the person reading it, and nothing is labeled advanced as a compliment.",
+    "avoid": [
+      "beginner",
+      "basic",
+      "easy mode",
+      "dummies",
+      "idiot-proof",
+      "just",
+      "simply",
+      "even you",
+      "foolproof"
+    ],
+    "prefer": [
+      "short",
+      "forgiving",
+      "one pan",
+      "hard to get wrong",
+      "asks a lot",
+      "worth an afternoon",
+      "new to you"
+    ],
+    "kidsNote": "The same goes for children. A five-year-old tearing basil is cooking — not helping, not playing at it. The jobs below are real jobs with real reasons, which is why every one of them says what it teaches."
+  },
+  "ages": [
+    {
+      "id": "age.toddler",
+      "label": "2 to 3",
+      "short": "Tiny hands",
+      "blurb": "Standing on a chair, in the way, delighted. Everything at this age is about touching food and being somewhere useful.",
+      "supervision": "Beside an adult the whole time, and nothing near heat."
+    },
+    {
+      "id": "age.small",
+      "label": "4 to 5",
+      "short": "Small hands",
+      "blurb": "Old enough to follow one instruction at a time and proud of finishing something. This is the age where measuring and mixing genuinely help.",
+      "supervision": "Adult in the kitchen, heat and blades still off limits."
+    },
+    {
+      "id": "age.middle",
+      "label": "6 to 8",
+      "short": "Real jobs",
+      "blurb": "Can read a step, use a table knife on soft things, and be trusted with a task while you do something else in the same room.",
+      "supervision": "Adult nearby. First lessons with a peeler and scissors happen here."
+    },
+    {
+      "id": "age.older",
+      "label": "9 to 12",
+      "short": "At the stove",
+      "blurb": "Ready for real knives and real heat, taught properly rather than avoided. Most children this age can cook a whole dish with somebody in the room.",
+      "supervision": "Taught once, then watched, then trusted."
+    },
+    {
+      "id": "age.teen",
+      "label": "13 and up",
+      "short": "Cooking dinner",
+      "blurb": "Capable of the whole recipe, start to finish, including the deciding. The useful thing an adult can do here is get out of the way and eat what is made.",
+      "supervision": "None required. Being asked to cook one dinner a week is how this becomes a life skill instead of a chore."
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job.wash",
+      "name": "Wash the vegetables",
+      "icon": "🚿",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle"
+      ],
+      "words": [
+        "rinse",
+        "rinsed",
+        "wash",
+        "washed",
+        "scrub"
+      ],
+      "teaches": "That food comes out of the ground, and that grit at the bottom of a bowl of greens is why we do this.",
+      "safe": "Cold water and a colander. Nothing sharp involved."
+    },
+    {
+      "id": "job.tear",
+      "name": "Tear the herbs and greens",
+      "icon": "🌿",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle"
+      ],
+      "words": [
+        "torn",
+        "tear",
+        "chopped basil",
+        "chopped parsley",
+        "chopped cilantro",
+        "chopped mint",
+        "roughly chopped herb"
+      ],
+      "teaches": "That soft herbs bruise when they are cut and torn edges hold more aroma — the first real cooking fact most children learn, and one plenty of adults do not know.",
+      "safe": "Hands only."
+    },
+    {
+      "id": "job.stir",
+      "name": "Stir it",
+      "icon": "🥄",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "stir together",
+        "stir in",
+        "whisk",
+        "mix",
+        "combine",
+        "toss"
+      ],
+      "teaches": "Patience, mostly. Also that a batter stirred to death goes tough, which is the reason muffins say 'until just combined'.",
+      "safe": "In a bowl off the heat, or at the stove with an adult holding the pan handle."
+    },
+    {
+      "id": "job.measure",
+      "name": "Measure and pour",
+      "icon": "🥣",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "measure",
+        "cup",
+        "cups",
+        "tablespoon",
+        "teaspoon",
+        "tbsp",
+        "tsp"
+      ],
+      "teaches": "Fractions, honestly, before anybody calls them fractions. Also that baking measurements are rules and savory ones are suggestions.",
+      "safe": "Do it over a bowl, not over the pan."
+    },
+    {
+      "id": "job.mash",
+      "name": "Mash it",
+      "icon": "🥔",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "mash",
+        "mashed",
+        "smash",
+        "smashed",
+        "press down"
+      ],
+      "teaches": "How much texture is a choice — half-mashed beans and fully mashed beans are two different dishes.",
+      "safe": "A fork or a masher, in a bowl, once the food has cooled enough to touch."
+    },
+    {
+      "id": "job.sprinkle",
+      "name": "Scatter the topping",
+      "icon": "✨",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "sprinkle",
+        "scatter",
+        "top with",
+        "garnish",
+        "finish with"
+      ],
+      "teaches": "That the last thing on is the first thing tasted, which is the whole reason this step exists.",
+      "safe": "Off the heat, at the table."
+    },
+    {
+      "id": "job.spread",
+      "name": "Spread and layer",
+      "icon": "🥪",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "spread",
+        "layer",
+        "assemble",
+        "fill the",
+        "roll up",
+        "wrap"
+      ],
+      "teaches": "Building a thing in order, and that the crisp part goes on top of the wet part or it stops being crisp.",
+      "safe": "A butter knife or the back of a spoon."
+    },
+    {
+      "id": "job.crack",
+      "name": "Crack the eggs",
+      "icon": "🥚",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "egg",
+        "eggs",
+        "beaten"
+      ],
+      "teaches": "A firm tap on a flat surface, not the rim of the bowl. Crack into a separate cup first and a stray shell costs nothing.",
+      "safe": "Wash hands afterward, before touching anything else."
+    },
+    {
+      "id": "job.peel",
+      "name": "Peel it",
+      "icon": "🥕",
+      "ages": [
+        "age.middle",
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "peeled",
+        "peel",
+        "trimmed"
+      ],
+      "teaches": "That a peeler goes away from you and the vegetable lies flat on a board rather than being held in the air.",
+      "safe": "A Y-peeler is safer and easier than a straight one. Peel onto a board, not into a hand."
+    },
+    {
+      "id": "job.scissors",
+      "name": "Cut the soft things",
+      "icon": "✂️",
+      "ages": [
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "chopped",
+        "sliced",
+        "diced",
+        "cut into"
+      ],
+      "teaches": "Knife work, starting with a tool nobody is frightened of. Kitchen scissors on herbs, scallions and greens; a table knife on a banana or a cooked potato.",
+      "safe": "Scissors and table knives only at this age. The claw grip and a real knife come next."
+    },
+    {
+      "id": "job.grate",
+      "name": "Grate the cheese",
+      "icon": "🧀",
+      "ages": [
+        "age.middle",
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "grated",
+        "grate",
+        "shredded"
+      ],
+      "teaches": "That cheese grated at the table tastes stronger than the same cheese stirred in — you smell it on the way to your mouth.",
+      "safe": "Stop while there is still a piece to hold. A grater guard, or hand the last inch to an adult."
+    },
+    {
+      "id": "job.squeeze",
+      "name": "Squeeze the lemon",
+      "icon": "🍋",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [
+        "juice",
+        "squeeze",
+        "juiced",
+        "zest"
+      ],
+      "teaches": "The single most useful thing in this whole app: taste it before the lemon, taste it after, and understand what acid does. Do this once with a child and they have learned something most adults never articulate.",
+      "safe": "Watch for cuts on hands — lemon juice finds every one."
+    },
+    {
+      "id": "job.taste",
+      "name": "Be the taster",
+      "icon": "👅",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle",
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "taste",
+        "season to taste",
+        "adjust"
+      ],
+      "teaches": "Everything. A child who is asked whether it needs more salt, and whose answer is actually used, is being taught to cook. This is the most valuable job on the list and it costs nothing.",
+      "safe": "A clean spoon each time, and let it cool first."
+    },
+    {
+      "id": "job.timer",
+      "name": "Run the timer",
+      "icon": "⏲",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "words": [],
+      "teaches": "That cooking runs on time as much as on ingredients, and that most things are checked before the timer rather than at it.",
+      "safe": "Nothing to it. A real job with real consequences, which is why children take it seriously.",
+      "regex": "\\b\\d+(?:\\s*[-–—]\\s*\\d+)?\\s*(?:minutes?|mins?|hours?|hrs?)\\b"
+    },
+    {
+      "id": "job.table",
+      "name": "Set the table",
+      "icon": "🍽",
+      "ages": [
+        "age.toddler",
+        "age.small",
+        "age.middle",
+        "age.older",
+        "age.teen"
+      ],
+      "words": [],
+      "always": true,
+      "teaches": "That dinner is a thing the household makes together rather than a thing that appears. Also water on the table, which is the one hydration habit on this app's list that actually needs a person to do it.",
+      "safe": "Plates one at a time."
+    },
+    {
+      "id": "job.stove",
+      "name": "Work the stove",
+      "icon": "🔥",
+      "ages": [
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "skillet",
+        "saucepan",
+        "over medium",
+        "over medium-high",
+        "simmer",
+        "sauté",
+        "sear",
+        "dutch oven",
+        "wok",
+        "griddle"
+      ],
+      "teaches": "Heat management, which is the skill that separates somebody who follows recipes from somebody who cooks. Start with the handle turned in and a dry towel already in the other hand.",
+      "safe": "Taught deliberately: pan handles turned inward, add food away from you, never a wet hand on a hot handle. Avoiding the stove until eighteen does not make anybody safer."
+    },
+    {
+      "id": "job.oven",
+      "name": "In and out of the oven",
+      "icon": "🔆",
+      "ages": [
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "preheat the oven",
+        "into the oven",
+        "oven to",
+        "roast",
+        "roasted",
+        "bake",
+        "baked",
+        "sheet pan",
+        "broil",
+        "baking dish",
+        "baking sheet"
+      ],
+      "teaches": "Where the hot parts of an oven are, and that a sheet pan wants both hands and a clear landing spot decided before the door opens.",
+      "safe": "Dry mitts — a wet one conducts heat straight through. Say out loud where the pan is going before it comes out."
+    },
+    {
+      "id": "job.plate",
+      "name": "Plate it up",
+      "icon": "🎨",
+      "ages": [
+        "age.middle",
+        "age.older",
+        "age.teen"
+      ],
+      "words": [
+        "serve",
+        "divide among",
+        "divide between",
+        "plate up",
+        "onto plates",
+        "into bowls"
+      ],
+      "teaches": "That how food looks changes how it tastes, and that a pile in the middle of a warm plate beats a thin layer across a cold one.",
+      "safe": "Warm plates rather than hot ones for this."
+    }
+  ],
+  "hazards": {
+    "note": "Words that mean a step belongs to an adult, or to an older child being taught rather than left to it. Matched per step, so one dangerous step does not put a whole recipe out of reach of a five-year-old who could happily do the other six.",
+    "words": [
+      "boiling",
+      "boil",
+      "boils",
+      "hot oil",
+      "deep-fry",
+      "fryer",
+      "blender",
+      "food processor",
+      "immersion",
+      "very hot",
+      "smoking",
+      "broiler",
+      "broil",
+      "carefully",
+      "drain",
+      "draining",
+      "sharp knife",
+      "mandoline",
+      "pressure cooker",
+      "pot of water"
+    ],
+    "say": "This step has heat, a blade or something heavy in it. It belongs to a grown-up, or to an older child who has been shown how — once, properly, rather than never."
+  },
+  "kidsNote": "Children who cook eat more of what they cooked. That is the whole argument, and it works better than any conversation about vegetables ever has.",
+  "ladder": [
+    {
+      "id": "ask.short",
+      "name": "Short and forgiving",
+      "icon": "🌱",
+      "blurb": "Few steps, nothing to time precisely, and hard to get wrong. Good for a Tuesday, good for a first attempt, good when the kitchen is full of people.",
+      "asks": "Reading a recipe and stirring.",
+      "max": {
+        "activeMin": 20,
+        "steps": 6,
+        "ingredients": 12
+      }
+    },
+    {
+      "id": "ask.onething",
+      "name": "One thing to get right",
+      "icon": "🎯",
+      "blurb": "Straightforward except for a single moment that decides how it comes out — the browning, the timing, the not-stirring. That moment is the whole lesson.",
+      "asks": "Paying attention once, at the right time.",
+      "max": {
+        "activeMin": 35,
+        "steps": 9,
+        "ingredients": 18
+      }
+    },
+    {
+      "id": "ask.juggle",
+      "name": "A few things at once",
+      "icon": "🍳",
+      "blurb": "Two or three pans, or a sauce going while something roasts. Nothing here is difficult on its own; the skill being asked for is keeping track.",
+      "asks": "Prep done before the heat goes on.",
+      "max": {
+        "activeMin": 60,
+        "steps": 14,
+        "ingredients": 26
+      }
+    },
+    {
+      "id": "ask.afternoon",
+      "name": "Worth an afternoon",
+      "icon": "🧑‍🍳",
+      "blurb": "Long, or fiddly, or both, and the reason to cook it is the cooking. Not better than anything above it — just a different kind of day.",
+      "asks": "Time, and the willingness to spend it.",
+      "max": null
+    }
+  ],
+  "teaches": {
+    "note": "One thing each recipe quietly teaches, matched from what its own method actually does. A cook who reads eighty of these has picked up eighty techniques without ever opening a technique book, which is the only way most people ever learn them.",
+    "lessons": [
+      {
+        "id": "learn.fond",
+        "words": [
+          "deglaze",
+          "scraping up",
+          "browned bits",
+          "stuck to the pan",
+          "fond"
+        ],
+        "title": "Deglazing",
+        "body": "The brown crust stuck to the pan is not mess, it is concentrated flavor that came out of the food. A splash of liquid dissolves it back into the dish. Everything that makes a pan sauce taste like something is on the bottom of the pan before the liquid goes in."
+      },
+      {
+        "id": "learn.bloom",
+        "words": [
+          "until fragrant",
+          "bloom",
+          "toast the spices",
+          "60 seconds until",
+          "stir in the spices"
+        ],
+        "title": "Blooming spices",
+        "body": "Most spice aromatics dissolve in fat and not in water. Thirty to sixty seconds in hot oil before the liquid goes in is the difference between tasting a spice and tasting the idea of one — and past ninety seconds they burn, which is why the window is stated so exactly."
+      },
+      {
+        "id": "learn.brown",
+        "words": [
+          "do not stir",
+          "undisturbed",
+          "leave it alone",
+          "without moving",
+          "let it sit"
+        ],
+        "title": "Leaving it alone",
+        "body": "Browning needs a surface to stay against the pan long enough to get above 300°F. Every stir starts that clock over. Doing nothing for four minutes is an active cooking skill and it is the one most people skip."
+      },
+      {
+        "id": "learn.emulsion",
+        "words": [
+          "pasta water",
+          "emulsif",
+          "whisk in the",
+          "until it thickens and coats",
+          "starchy water"
+        ],
+        "title": "Emulsifying",
+        "body": "Starchy pasta water is what turns oil and cheese into a sauce that clings instead of a puddle that slides off. The starch holds the fat and water together. This is the whole secret of Italian pasta, and it costs one ladle of water you were about to pour down the sink."
+      },
+      {
+        "id": "learn.rest",
+        "words": [
+          "let it rest",
+          "rest for",
+          "off the heat for",
+          "carryover"
+        ],
+        "title": "Resting",
+        "body": "Food keeps cooking after it comes off the heat, and the fibers are holding their liquid under pressure. Five minutes lets the temperature even out and the juice stay in the food instead of running onto the board."
+      },
+      {
+        "id": "learn.salt-water",
+        "words": [
+          "well-salted water",
+          "salted water",
+          "salt the water"
+        ],
+        "title": "Salting the water",
+        "body": "It is the only chance to season pasta or a vegetable from the inside. It should taste noticeably salty — most of it goes down the drain, and what stays behind is the difference between pasta that tastes of something and pasta that needs rescuing with sauce."
+      },
+      {
+        "id": "learn.acid-finish",
+        "words": [
+          "off the heat",
+          "stir in the lemon",
+          "squeeze of lemon",
+          "splash of vinegar",
+          "finishing move"
+        ],
+        "title": "Finishing with acid",
+        "body": "Acid is volatile and goes dull with heat, so the last squeeze goes in off the burner. This is the single most common thing missing from home cooking and the fastest fix for a dish nobody can find the fault in."
+      },
+      {
+        "id": "learn.crowd",
+        "words": [
+          "one layer",
+          "do not crowd",
+          "two batches",
+          "single layer",
+          "in batches"
+        ],
+        "title": "Not crowding the pan",
+        "body": "Food releases water. If there is nowhere for it to go, it collects and the food steams instead of browning. Empty space in a pan is an ingredient, and two batches genuinely beat one."
+      },
+      {
+        "id": "learn.mise",
+        "words": [
+          "before you start",
+          "have everything ready",
+          "prep everything",
+          "within reach"
+        ],
+        "title": "Everything ready first",
+        "body": "Not a French affectation. In anything that cooks in under ten minutes there is no time to chop, so the chopping decides whether the cooking works. This is why stir-fries fail."
+      },
+      {
+        "id": "learn.temper",
+        "words": [
+          "temper",
+          "off the boil",
+          "ladle of the hot",
+          "will split",
+          "curdle"
+        ],
+        "title": "Tempering dairy",
+        "body": "Yogurt, sour cream and milk split when they hit a boil — the proteins clump and squeeze out water. Warm them with a ladle of the hot liquid first, or stir them in off the heat, and they stay smooth."
+      },
+      {
+        "id": "learn.dry",
+        "words": [
+          "pat dry",
+          "blot",
+          "dry thoroughly",
+          "press the tofu",
+          "paper towel"
+        ],
+        "title": "Drying the surface",
+        "body": "Every drop of surface water has to boil off before anything can brown, and nothing browns below about 300°F. Ten seconds with a towel is the cheapest upgrade in cooking."
+      },
+      {
+        "id": "learn.layer-salt",
+        "words": [
+          "pinch of salt",
+          "season as you go",
+          "salt the onions",
+          "a pinch of salt with"
+        ],
+        "title": "Salting in layers",
+        "body": "Salt added early does work — it pulls water out of onions so they brown, and it seasons from the inside. Salt added at the end only sits on top. The same total amount tastes like more when it goes in over time."
+      }
+    ]
+  }
+}

@@ -12,6 +12,8 @@ import { getDb, recipesUsing } from '../data.js';
 import { play } from '../feedback.js';
 import { getState, togglePantry, clearPantry } from '../store.js';
 import { foodIcon } from '../food-icon.js';
+import { tipsByGroup } from '../tips.js';
+import { tipCard } from './tips-panel.js';
 
 let query = '';
 let showOnlyHave = false;
@@ -63,6 +65,11 @@ function view(draw, navigate) {
       )
     ),
 
+    // Storage advice belongs where somebody is looking at what they own. Half
+    // of what a household throws away was stored in the wrong place rather than
+    // bought in the wrong quantity.
+    storageTips(),
+
     ...groups.map(g => h('section.card.block',
       h('h2.block__title', `${g.aisle.icon || ''} ${g.aisle.name}`),
       g.aisle.hint ? h('p.muted.small', g.aisle.hint) : null,
@@ -83,5 +90,19 @@ function view(draw, navigate) {
     groups.length === 0 ? h('p.empty', 'Nothing matches that search.') : null,
 
     h('p.fine-print', 'The small number beside an ingredient is how many recipes in the collection use it — a decent guide to what is worth keeping stocked.')
+  );
+}
+
+/** How to keep what is in the house alive, from the technique library. */
+function storageTips() {
+  const group = tipsByGroup().find(g => g.group.id === 'storage');
+  if (!group) return null;
+  return h('section.card.block.tips',
+    h('div.balance__head',
+      h('h2.block__title', `${group.group.icon} ${group.group.name}`),
+      h('a.tag-btn', { href: '#/learn' }, 'the rest of it →')
+    ),
+    h('p.muted.small', group.group.blurb),
+    h('div.tip-row', ...group.tips.map(t => tipCard(t)))
   );
 }

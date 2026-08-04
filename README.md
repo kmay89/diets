@@ -26,6 +26,51 @@ npm start             # serve at http://localhost:8080
 
 ## What it does
 
+**⚖️ Where the flavor comes from.** Six dials with numbers behind them — salt, fat, acid, savory
+depth, sweet and chile heat — plus the two checks a cook makes in the last thirty seconds: is there
+anything fresh on this, and is there anything that stays crisp. Salt and fat are counted from the
+ingredient database; acid, depth and heat are weighted by how strong each ingredient actually is, so
+a teaspoon of cayenne and a teaspoon of gochugaru are not treated as the same amount of anything. A
+dial below its band is a prompt with a fix attached — *half a lemon, off the heat, then taste* — and
+never a verdict. And when a substitution takes the last acid out of a dish, the panel says so and
+hands the acid back.
+
+**↔ Substitutions that keep going.** The old answer to "I don't have that" was the two substitutes
+in the database, and if you had neither you had nothing. Now it walks a ladder: what the data says,
+then what *those* say, then anything that plays the same part — every bright acid, every melting
+cheese, every savory thing in the pantry — then making the missing thing out of what is in the
+house, and finally leaving it out with an honest account of what that costs. Everything is ranked
+pantry-first, converted to a real amount, and labeled with what it does to the balance of the dish.
+
+**🍳 Pick the protein, then pick what happens to it.** Two decisions a recipe usually conflates. 24
+proteins with a per-serving amount converted from the original, and 16 ways to cook them — each with
+what it does, why it works, how you know it is done, and how it goes wrong, which is the part a
+recipe never prints. Plus the five things worth doing before the heat: salting ahead, pressing,
+marinating, drying the surface, and resting.
+
+**🍽 At the table.** The twenty minutes on either side of the pan coming off the heat, which no
+recipe covers. A countdown worked back from the recipe's own times, plating that says pile it rather
+than spread it, what to eat first, and water guidance that adapts to a salty, sweet, fiber-heavy or
+genuinely hot meal. The evidence-based parts carry their sources and their caveats; the myths get a
+list of their own.
+
+**🧑‍🍳 Who else can help.** Kitchen jobs matched to a recipe's own steps and sorted by age, from
+tearing herbs at three to working the stove at ten — each one saying what it teaches, because a
+five-year-old tearing basil is cooking rather than helping. Steps with heat or a blade in them are
+named as a grown-up's, per step rather than per recipe, so one boiling pot does not put a whole
+dinner out of reach.
+
+**🔪 How cooking works.** The technique library: knife grip and how to cut an onion, what heat
+actually is and why gas, electric and induction are three different stoves, which pan for what and
+why food lets go when it is ready, the fats argument stated fairly, how much your oven lies to you,
+first techniques to teach a child, why cookies do what they do, how to keep berries and lettuce
+alive, and whether the dishwasher beats the sink. Matched to the recipe in front of you and
+browsable in full.
+
+**🌱 Sorted by what it asks, never by how good you are.** Recipes sit on a ladder from *short and
+forgiving* through *one thing to get right* to *worth an afternoon*. Nothing here is labeled easy,
+basic or for beginners — a dish that asks for less is not a lesser dish, it is a Tuesday.
+
 **🎲 Roll, don't browse.** Tell it how many meals you need — or hit *surprise* and let it pick the
 number too. It weighs your tastes, the season, what is already in your pantry, your weeknight time
 budget, the heart-forward score and the shopping overlap with what has already been rolled, then
@@ -157,11 +202,17 @@ js/
   collections.js        the saved filters behind the browse shelf
   theme.js              the auto/light/dark switch in the top right
   feedback.js           synthesised sound and micro-animations
-  swaps.js              substitutions, converted through grams
+  swaps.js              substitutions: the ladder, converted through grams
+  balance.js            the six flavor dials and the two finishing checks
+  proteins.js           which protein, and what to do to it
+  table.js              the countdown, the plate, and what to drink
+  kitchen.js            kitchen jobs by age, and what a recipe asks for
+  tips.js               the technique library, matched to the dish in front of you
   ui.js                 ~200 lines of DOM helpers
   food-icon.js          the icon per ingredient, and which ones illustrate a step
   views/                one module per screen — today, create, plate, cook, plan,
-                        day, recipe, pantry, list, progress, garden, settings, why
+                        day, recipe, pantry, list, progress, garden, settings, why,
+                        learn — plus the panels the recipe screen is assembled from
 data/
   ingredients.json      353 ingredients: nutrition, units, aisle, subs, garden info
   recipes.index.json    the table of contents — the one list of recipe part files
@@ -174,7 +225,14 @@ data/
   recipes.sandwiches.json 12 sandwiches and handhelds
   recipes.snacks.json   16 snacks, dips and smoothies
   recipes.sweets.json   15 desserts, honestly scored
-  collections.json      52 saved filters in 5 groups — the ways into the collection
+  recipes.easy.json     12 short, forgiving dishes with real jobs for small hands
+  balance.json          the flavor model: dials, potencies, bands and the fixes
+  substitutions.json    role groups, make-it-yourself combinations, ranking weights
+  proteins.json         24 proteins, 16 ways to cook them, 5 things to do first
+  table.json            the countdown, plating, eating order, water and the myths
+  kitchen.json          age-banded kitchen jobs, the asks ladder, techniques taught
+  tips.json             43 technique notes in 9 groups — knives, heat, pans, storage
+  collections.json      54 saved filters in 5 groups — the ways into the collection
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat
   claims.json           every factual statement, attached to those sources

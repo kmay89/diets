@@ -161,6 +161,101 @@ for (const r of recipes) {
   }
 }
 
+/* ---------- the craft models ---------- */
+
+/**
+ * balance.json, substitutions.json, proteins.json, tips.json and kitchen.json
+ * all point at ingredient ids, and a dangling one is invisible in the app: the
+ * fix simply does not render, or the role group quietly gets shorter. The test
+ * suite checks these in depth; this is the build-blocking subset.
+ */
+const craft = {
+  balance: read('data/balance.json'),
+  subs: read('data/substitutions.json'),
+  proteins: read('data/proteins.json'),
+  table: read('data/table.json'),
+  kitchen: read('data/kitchen.json'),
+  tips: read('data/tips.json')
+};
+
+const ingRef = (id, where) => { if (!index.has(id)) err(`${where}: unknown ingredient "${id}"`); };
+
+for (const axis of craft.balance.axes) {
+  for (const fix of [...(axis.whenLow?.fixes || []), ...(axis.whenHigh?.fixes || [])]) {
+    ingRef(fix.ing, `balance ${axis.id}`);
+  }
+  for (const [course, band] of Object.entries(axis.bands || {})) {
+    if (!(band[0] < band[1])) err(`balance ${axis.id}/${course}: band ${band.join('–')} is not a range`);
+  }
+}
+for (const f of craft.balance.finishers) {
+  for (const fix of f.whenMissing?.fixes || []) ingRef(fix.ing, `balance ${f.id}`);
+}
+for (const [axis, tableOf] of Object.entries(craft.balance.potency)) {
+  if (typeof tableOf !== 'object') continue;
+  for (const key of Object.keys(tableOf)) {
+    if (key === 'note' || key === 'unitNote') continue;
+    ingRef(key, `balance potency ${axis}`);
+  }
+}
+
+for (const role of craft.subs.roles) {
+  for (const m of role.members) ingRef(m, `role ${role.id}`);
+  if (role.members.length < 3) warn(`role ${role.id} has only ${role.members.length} members`);
+  const axis = role.scaleBy?.replace(/^balance:/, '');
+  if (axis && !craft.balance.potency[axis]) err(`role ${role.id}: scaleBy names no dial "${axis}"`);
+}
+for (const combo of craft.subs.combos) {
+  ingRef(combo.makes, `combo ${combo.id}`);
+  for (const part of combo.from) ingRef(part.ing, `combo ${combo.id}`);
+}
+
+const methodIds = new Set(craft.proteins.methods.map(m => m.id));
+const proteinIds = new Set(craft.proteins.proteins.map(p => p.id));
+for (const p of craft.proteins.proteins) {
+  ingRef(p.ing, `protein ${p.id}`);
+  for (const m of p.methods) {
+    if (!methodIds.has(m)) err(`protein ${p.id}: unknown method "${m}"`);
+    else if (!craft.proteins.methods.find(x => x.id === m).proteins.includes(p.id)) {
+      err(`protein ${p.id} claims method ${m}, which does not list it back`);
+    }
+  }
+  if (!(p.swapRatio > 0.2 && p.swapRatio < 3)) err(`protein ${p.id}: swapRatio ${p.swapRatio} is implausible`);
+}
+for (const m of craft.proteins.methods) {
+  for (const p of m.proteins) if (!proteinIds.has(p)) err(`method ${m.id}: unknown protein "${p}"`);
+}
+for (const b of craft.proteins.before) {
+  for (const p of b.worksOn) if (!proteinIds.has(p)) err(`prep ${b.id}: unknown protein "${p}"`);
+}
+
+// Anything the app says about health or resources has to be a claim with a
+// source behind it, the same as everywhere else.
+const claimIds = new Set();
+for (const topic of read('data/claims.json').topics) {
+  for (const c of topic.claims || []) claimIds.add(c.id);
+  for (const s of topic.sections || []) for (const c of s.claims || []) claimIds.add(c.id);
+}
+for (const note of Object.values(craft.table.eating)) {
+  if (note.claim && !claimIds.has(note.claim)) err(`table: claim "${note.claim}" is not in claims.json`);
+}
+if (craft.table.water.base.claim && !claimIds.has(craft.table.water.base.claim)) {
+  err(`table: water claim "${craft.table.water.base.claim}" is not in claims.json`);
+}
+
+const ageIds = new Set(craft.kitchen.ages.map(a => a.id));
+for (const job of craft.kitchen.jobs) {
+  for (const a of job.ages) if (!ageIds.has(a)) err(`job ${job.id}: unknown age band "${a}"`);
+}
+
+const tipGroups = new Set(craft.tips.groups.map(g => g.id));
+for (const tip of craft.tips.tips) {
+  if (!tipGroups.has(tip.group)) err(`tip ${tip.id}: unknown group "${tip.group}"`);
+  if (tip.claim && !claimIds.has(tip.claim)) err(`tip ${tip.id}: claim "${tip.claim}" is not in claims.json`);
+  for (const i of tip.match?.ingredients || []) ingRef(i, `tip ${tip.id}`);
+  for (const a of tip.ages || []) if (!ageIds.has(a)) err(`tip ${tip.id}: unknown age band "${a}"`);
+}
+
 /* ---------- garden ---------- */
 
 for (const m of gardenFile.calendar) {

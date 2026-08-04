@@ -66,6 +66,34 @@ export function citationNumber(id) {
   return getCitations().numbers.get(id) ?? null;
 }
 
+/**
+ * A claim, by its id, from anywhere in the topic tree.
+ *
+ * Screens outside "Why this works" reference claims rather than sources — a
+ * sentence about a short walk after dinner belongs to the claim, and the claim
+ * knows which papers it rests on. Built once, lazily, because most sessions
+ * never ask.
+ */
+let claimsById = null;
+export function claimById(id) {
+  if (!db) return null;
+  if (!claimsById) {
+    claimsById = new Map();
+    const walk = (list) => { for (const c of list || []) claimsById.set(c.id, c); };
+    for (const topic of db.topics) {
+      walk(topic.claims);
+      for (const section of topic.sections || []) walk(section.claims);
+    }
+  }
+  return claimsById.get(id) || null;
+}
+
+/** The markers for one claim id, ready to sit at the end of a sentence. */
+export function citeMarkersFor(claimId) {
+  const claim = claimById(claimId);
+  return (claim?.cites || []).map(id => citeMarker(id)).filter(Boolean);
+}
+
 const STRENGTH_LABEL = {
   rct: 'Randomized trial',
   'meta-analysis': 'Meta-analysis',

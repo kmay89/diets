@@ -1,0 +1,894 @@
+{
+  "schema": "vegnourish.substitutions/1",
+  "note": "The second and third answers to 'I do not have that'. The ingredient database already carries a couple of direct substitutes per ingredient, which covers the easy case and runs out fast — if a recipe wants lemon and you have neither lemon nor lime, two suggestions is two dead ends. So this file adds the two things a cook actually does next: reach for anything else that plays the same part, or make the missing thing out of what is in the house.",
+  "roles": [
+    {
+      "id": "role.acid.bright",
+      "name": "A bright acid",
+      "does": "Lifts a dish at the end. Interchangeable in a squeeze-over role; not interchangeable where the amount is structural, like a dressing or a marinade.",
+      "members": [
+        "ing.lemon",
+        "ing.lime",
+        "ing.vinegar.white_wine",
+        "ing.vinegar.apple",
+        "ing.vinegar.rice",
+        "ing.spice.sumac"
+      ],
+      "swapNote": "Vinegar is sharper than citrus by volume — start with two thirds as much and taste.",
+      "scaleBy": "balance:acid"
+    },
+    {
+      "id": "role.acid.dark",
+      "name": "A dark, sweet-sour acid",
+      "does": "For long-cooked, brown, savory things where a lemon would taste out of place.",
+      "members": [
+        "ing.vinegar.balsamic",
+        "ing.vinegar.redwine",
+        "ing.blackvinegar",
+        "ing.pomegranate.molasses",
+        "ing.tamarind",
+        "ing.worcestershire"
+      ],
+      "scaleBy": "balance:acid"
+    },
+    {
+      "id": "role.acid.creamy",
+      "name": "A cool, sour dairy",
+      "does": "Acid and fat together — the dollop that goes on chili, curry and anything spicy.",
+      "members": [
+        "ing.yogurt.greek.nonfat",
+        "ing.yogurt.greek.2",
+        "ing.sourcream.light",
+        "ing.buttermilk",
+        "ing.cheese.goat",
+        "ing.cheese.feta",
+        "ing.cottagecheese"
+      ]
+    },
+    {
+      "id": "role.allium",
+      "name": "An onion of some kind",
+      "does": "The savory base almost everything starts from.",
+      "members": [
+        "ing.onion.yellow",
+        "ing.onion.red",
+        "ing.onion.sweet",
+        "ing.shallot",
+        "ing.leek",
+        "ing.scallion",
+        "ing.garlic",
+        "ing.chives",
+        "ing.spice.onionpowder",
+        "ing.spice.garlicpowder"
+      ],
+      "swapNote": "Powders are for seasoning, not for a base — they have no water to sweat out and they burn in about forty seconds.",
+      "strength": {
+        "ing.onion.yellow": 1,
+        "ing.onion.red": 1,
+        "ing.onion.sweet": 1,
+        "ing.shallot": 1,
+        "ing.leek": 1,
+        "ing.scallion": 1,
+        "ing.garlic": 1,
+        "ing.chives": 1,
+        "ing.spice.onionpowder": 8,
+        "ing.spice.garlicpowder": 8
+      }
+    },
+    {
+      "id": "role.fat.cook",
+      "name": "A fat to cook in",
+      "does": "Carries heat into the food and dissolves the aromatics. Choose by smoke point, then by flavor.",
+      "members": [
+        "ing.oil.olive",
+        "ing.oil.canola",
+        "ing.oil.avocado",
+        "ing.oil.coconut",
+        "ing.ghee",
+        "ing.butter.unsalted",
+        "ing.oil.sesame"
+      ],
+      "swapNote": "Butter browns and burns well before olive oil does. For anything above a medium flame, use an oil and finish with the butter."
+    },
+    {
+      "id": "role.fat.finish",
+      "name": "A fat to finish with",
+      "does": "Goes on off the heat, for aroma and shine rather than cooking.",
+      "members": [
+        "ing.oil.olive",
+        "ing.oil.sesame",
+        "ing.butter.unsalted",
+        "ing.chilicrisp",
+        "ing.tahini",
+        "ing.mayo.olive"
+      ]
+    },
+    {
+      "id": "role.umami.pantry",
+      "name": "Savory depth from the pantry",
+      "does": "The shelf-stable answers to 'it tastes thin'. All of them except the yeast and the mushrooms bring salt with them.",
+      "members": [
+        "ing.miso.white",
+        "ing.miso.red",
+        "ing.soysauce.lowsodium",
+        "ing.tamari",
+        "ing.tomatopaste",
+        "ing.mushroom.porcini.dried",
+        "ing.nutritionalyeast",
+        "ing.worcestershire",
+        "ing.cheese.parmesan",
+        "ing.kombu",
+        "ing.sundriedtomato",
+        "ing.fishsauce"
+      ],
+      "scaleBy": "balance:umami"
+    },
+    {
+      "id": "role.heat.dry",
+      "name": "Dry chile heat",
+      "does": "Goes in early, in fat, so the heat spreads evenly through the dish.",
+      "members": [
+        "ing.spice.pepperflakes",
+        "ing.spice.cayenne",
+        "ing.spice.chili",
+        "ing.spice.gochugaru",
+        "ing.chile.guajillo",
+        "ing.chile.ancho",
+        "ing.spice.berbere"
+      ],
+      "swapNote": "These are nowhere near equal. Cayenne is roughly twice as hot as pepper flakes and gochugaru is about a third as hot, so swap by taste, a pinch at a time.",
+      "scaleBy": "balance:heat"
+    },
+    {
+      "id": "role.heat.fresh",
+      "name": "A fresh chile",
+      "does": "Sharper and greener than dried heat, and it can go in at the end so anyone can skip it.",
+      "members": [
+        "ing.pepper.jalapeno",
+        "ing.pepper.serrano",
+        "ing.pepper.poblano",
+        "ing.chile.thai"
+      ],
+      "swapNote": "Most of the heat is in the white pith, not the seeds. Leave the pith in for more, cut it out for less.",
+      "scaleBy": "balance:heat"
+    },
+    {
+      "id": "role.heat.paste",
+      "name": "A chile paste or sauce",
+      "does": "Heat with salt, acid and depth attached — a whole seasoning rather than only fire.",
+      "members": [
+        "ing.sriracha",
+        "ing.harissa",
+        "ing.gochujang",
+        "ing.chipotle.adobo",
+        "ing.doubanjiang",
+        "ing.chilicrisp",
+        "ing.hotsauce",
+        "ing.currypaste.red",
+        "ing.currypaste.green"
+      ],
+      "scaleBy": "balance:heat"
+    },
+    {
+      "id": "role.herb.soft",
+      "name": "A soft herb",
+      "does": "Aroma at the end. Never cooked for more than a minute.",
+      "members": [
+        "ing.parsley.flat",
+        "ing.cilantro",
+        "ing.basil",
+        "ing.mint",
+        "ing.dill",
+        "ing.chives",
+        "ing.scallion"
+      ],
+      "swapNote": "Parsley is the one that goes with anything. Cilantro, dill and mint each take the dish somewhere specific, so swapping between them changes the cuisine more than it changes the balance.",
+      "scaleBy": "balance:fresh"
+    },
+    {
+      "id": "role.herb.hardy",
+      "name": "A hardy herb",
+      "does": "Woody, and it wants time and fat. These go in early.",
+      "members": [
+        "ing.thyme.fresh",
+        "ing.rosemary",
+        "ing.sage.fresh",
+        "ing.spice.thyme.dried",
+        "ing.spice.oregano",
+        "ing.spice.italian"
+      ],
+      "swapNote": "Dried is about a third of fresh by volume, and it wants to go in earlier, not later.",
+      "strength": {
+        "ing.thyme.fresh": 1,
+        "ing.rosemary": 1,
+        "ing.sage.fresh": 1,
+        "ing.spice.thyme.dried": 3,
+        "ing.spice.oregano": 3,
+        "ing.spice.italian": 3
+      }
+    },
+    {
+      "id": "role.green.cook",
+      "name": "A green that gets cooked",
+      "does": "Wilts into anything. The tougher ones want more time and a little more fat.",
+      "members": [
+        "ing.spinach.baby",
+        "ing.kale.lacinato",
+        "ing.chard",
+        "ing.collards",
+        "ing.bokchoy",
+        "ing.cabbage.napa",
+        "ing.frozen.spinach",
+        "ing.arugula"
+      ],
+      "swapNote": "Spinach is done in one minute, kale in four, collards in twenty. Swapping one for another means changing when it goes in, not only what goes in."
+    },
+    {
+      "id": "role.green.raw",
+      "name": "A salad green",
+      "does": "Stays raw. Choose by how much bitterness and structure you want.",
+      "members": [
+        "ing.romaine",
+        "ing.arugula",
+        "ing.lettuce.butter",
+        "ing.spinach.baby",
+        "ing.cabbage.green",
+        "ing.cabbage.red",
+        "ing.radish"
+      ]
+    },
+    {
+      "id": "role.bean",
+      "name": "A bean or lentil",
+      "does": "Bulk, protein and fiber. Nearly interchangeable by volume once cooked.",
+      "members": [
+        "ing.beans.black",
+        "ing.beans.cannellini",
+        "ing.beans.pinto",
+        "ing.beans.kidney",
+        "ing.beans.blackeyed",
+        "ing.chickpeas.canned",
+        "ing.lentil.brown",
+        "ing.lentil.red"
+      ],
+      "swapNote": "Red lentils fall apart and thicken whatever they are in; brown lentils hold their shape. That is a texture decision, not a flavor one."
+    },
+    {
+      "id": "role.grain",
+      "name": "A grain",
+      "does": "The base of the bowl. All of them absorb what they are cooked in.",
+      "members": [
+        "ing.rice.brown",
+        "ing.rice.jasmine",
+        "ing.rice.basmati",
+        "ing.quinoa",
+        "ing.farro",
+        "ing.bulgur",
+        "ing.barley.pearl",
+        "ing.couscous.wholewheat",
+        "ing.rice.wild"
+      ],
+      "swapNote": "Cooking times run from five minutes for couscous to fifty for wild rice. Check the package before you swap the pot."
+    },
+    {
+      "id": "role.noodle",
+      "name": "A noodle",
+      "does": "Same job, different bite and different cooking time.",
+      "members": [
+        "ing.pasta.wholewheat",
+        "ing.pasta.regular",
+        "ing.pasta.chickpea",
+        "ing.noodle.rice",
+        "ing.noodle.wheat",
+        "ing.noodle.soba",
+        "ing.noodle.udon",
+        "ing.noodle.ramen",
+        "ing.noodle.glass",
+        "ing.orzo"
+      ]
+    },
+    {
+      "id": "role.crunch.top",
+      "name": "Something toasted to scatter",
+      "does": "The crunch that goes on last. Toast it or it is just an ingredient sitting there.",
+      "members": [
+        "ing.almonds",
+        "ing.walnuts",
+        "ing.pecans",
+        "ing.pistachios",
+        "ing.peanuts",
+        "ing.cashews",
+        "ing.pumpkinseeds",
+        "ing.sunflowerseeds",
+        "ing.sesame.seeds",
+        "ing.panko",
+        "ing.hazelnuts",
+        "ing.pinenuts"
+      ],
+      "scaleBy": "balance:crunch"
+    },
+    {
+      "id": "role.creamy",
+      "name": "Something creamy",
+      "does": "Body and richness. Some are sour, some are sweet, some split when boiled — worth knowing which before you stir it in.",
+      "members": [
+        "ing.yogurt.greek.nonfat",
+        "ing.sourcream.light",
+        "ing.coconutmilk.light",
+        "ing.coconutmilk.full",
+        "ing.cashews",
+        "ing.tahini",
+        "ing.ricotta.partskim",
+        "ing.cottagecheese",
+        "ing.cheese.creamcheese",
+        "ing.cream.heavy",
+        "ing.avocado",
+        "ing.milk.soy"
+      ],
+      "swapNote": "Yogurt and light sour cream split if you boil them. Temper them with a ladle of the hot liquid first, or stir them in off the heat."
+    },
+    {
+      "id": "role.cheese.hard",
+      "name": "A hard, salty cheese",
+      "does": "Grated over the top: salt, savory depth and aroma in one move.",
+      "members": [
+        "ing.cheese.parmesan",
+        "ing.cheese.pecorino",
+        "ing.nutritionalyeast"
+      ],
+      "swapNote": "Pecorino is sheep's milk and noticeably saltier than parmesan. Use a little less of it.",
+      "scaleBy": "balance:umami"
+    },
+    {
+      "id": "role.cheese.melty",
+      "name": "A melting cheese",
+      "does": "For anything that has to stretch or go gooey.",
+      "members": [
+        "ing.cheese.mozzarella",
+        "ing.cheese.monterey",
+        "ing.cheese.cheddar",
+        "ing.cheese.gruyere",
+        "ing.cheese.swiss",
+        "ing.cheese.halloumi"
+      ],
+      "swapNote": "Halloumi is the exception — it browns instead of melting, which is a feature if you are grilling it and a problem if you wanted it stringy."
+    },
+    {
+      "id": "role.cheese.crumbly",
+      "name": "A crumbly, salty cheese",
+      "does": "Scattered on at the end, in pieces you can see.",
+      "members": [
+        "ing.cheese.feta",
+        "ing.cheese.goat",
+        "ing.cheese.quesofresco",
+        "ing.ricotta.partskim"
+      ]
+    },
+    {
+      "id": "role.sweetener",
+      "name": "A sweetener",
+      "does": "Rounds edges in savory cooking; does structural work in baking, where swapping liquid for dry changes the recipe.",
+      "members": [
+        "ing.honey",
+        "ing.maple",
+        "ing.sugar.brown",
+        "ing.sugar.granulated",
+        "ing.molasses",
+        "ing.dates.medjool"
+      ],
+      "swapNote": "Liquid for granulated is a baking change, not a seasoning change — a cup of honey is not a cup of sugar. In a savory pan they are interchangeable a half-teaspoon at a time.",
+      "scaleBy": "balance:sweet"
+    },
+    {
+      "id": "role.thickener",
+      "name": "A thickener",
+      "does": "Turns a thin liquid into a sauce that coats.",
+      "members": [
+        "ing.cornstarch",
+        "ing.flour.ap",
+        "ing.masa",
+        "ing.oats.rolled"
+      ],
+      "swapNote": "Cornstarch is about twice as strong as flour and has to reach a boil to work. Flour wants cooking in fat first or the sauce tastes raw.",
+      "strength": {
+        "ing.cornstarch": 2,
+        "ing.flour.ap": 1,
+        "ing.masa": 1,
+        "ing.oats.rolled": 0.6
+      }
+    },
+    {
+      "id": "role.broth",
+      "name": "A cooking liquid with flavor",
+      "does": "What the dish simmers in. Water plus one savory thing beats a bad broth.",
+      "members": [
+        "ing.broth.veg",
+        "ing.broth.chicken",
+        "ing.miso.white",
+        "ing.kombu",
+        "ing.mushroom.porcini.dried"
+      ],
+      "strength": {
+        "ing.broth.veg": 1,
+        "ing.broth.chicken": 1,
+        "ing.miso.white": 90,
+        "ing.kombu": 100,
+        "ing.mushroom.porcini.dried": 100
+      },
+      "swapNote": "The last three are not liquids, they are what you put in water to make one. Use the amount shown, stirred or steeped into the same volume of water."
+    },
+    {
+      "id": "role.tomato",
+      "name": "Tomatoes in a can or out",
+      "does": "Acid, savory depth and body all at once, which is why so much of the world's cooking starts here.",
+      "members": [
+        "ing.tomato.canned.crushed",
+        "ing.tomato.canned.diced",
+        "ing.marinara.lowsodium",
+        "ing.tomato.roma",
+        "ing.tomato.cherry",
+        "ing.tomatopaste",
+        "ing.sundriedtomato",
+        "ing.salsa"
+      ]
+    },
+    {
+      "id": "role.mushroom",
+      "name": "A mushroom",
+      "does": "Savory depth and a meaty bite. All of them want a hot, uncrowded pan.",
+      "members": [
+        "ing.mushroom.cremini",
+        "ing.mushroom.shiitake",
+        "ing.mushroom.portobello",
+        "ing.mushroom.oyster",
+        "ing.mushroom.porcini.dried"
+      ]
+    },
+    {
+      "id": "role.root.roast",
+      "name": "A root to roast",
+      "does": "Cut to the same size, high heat, one layer, do not stir for the first twenty minutes.",
+      "members": [
+        "ing.carrot",
+        "ing.parsnip",
+        "ing.sweetpotato",
+        "ing.potato.yukon",
+        "ing.beet",
+        "ing.squash.butternut",
+        "ing.squash.acorn",
+        "ing.fennel",
+        "ing.onion.red"
+      ]
+    },
+    {
+      "id": "role.crucifer.roast",
+      "name": "A cruciferous vegetable to roast",
+      "does": "Roasts hot and fast, browns at the edges, and turns sweet where it touches the pan.",
+      "members": [
+        "ing.broccoli",
+        "ing.cauliflower",
+        "ing.brusselsprouts",
+        "ing.cabbage.green",
+        "ing.frozen.riced.cauliflower"
+      ]
+    },
+    {
+      "id": "role.wrap",
+      "name": "Something to wrap it in",
+      "does": "Holds dinner. Swap freely — it changes the meal's name more than its balance.",
+      "members": [
+        "ing.tortilla.corn",
+        "ing.tortilla.wholewheat",
+        "ing.tortilla.flour",
+        "ing.pita.wholewheat",
+        "ing.naan",
+        "ing.lettuce.butter",
+        "ing.ricepaper",
+        "ing.bread.wholegrain"
+      ]
+    },
+    {
+      "id": "role.egg",
+      "name": "An egg's job",
+      "does": "Eggs bind, enrich and set. Which of those three a recipe needs decides what can stand in.",
+      "members": [
+        "ing.egg",
+        "ing.eggwhite",
+        "ing.flax.ground",
+        "ing.tofu.firm",
+        "ing.chia"
+      ],
+      "swapNote": "Ground flax binds and does not set, so it works in pancakes and muffins and not in a custard or an omelet."
+    }
+  ],
+  "combos": [
+    {
+      "id": "combo.buttermilk",
+      "makes": "ing.buttermilk",
+      "yield": "1 cup",
+      "from": [
+        {
+          "ing": "ing.milk.1pct",
+          "amount": "1 cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "amount": "1 tbsp juice"
+        }
+      ],
+      "how": "Stir and leave it alone for ten minutes. It will look curdled, which is the point.",
+      "why": "Buttermilk is doing two things in a recipe: acid, and acid that reacts with baking soda to make lift. Soured milk does both. What it will not do is the thickness, so a dressing made this way is thinner.",
+      "waitMin": 10
+    },
+    {
+      "id": "combo.cream",
+      "makes": "ing.cream.heavy",
+      "yield": "1 cup, for cooking only",
+      "from": [
+        {
+          "ing": "ing.milk.1pct",
+          "amount": "¾ cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "amount": "¼ cup, melted"
+        }
+      ],
+      "how": "Whisk the melted butter into the milk slowly so it does not seize.",
+      "why": "Close enough for a pan sauce or a soup, where you want fat and body. It will not whip — whipping needs the fat globules that only real cream has."
+    },
+    {
+      "id": "combo.tomato-sauce",
+      "makes": "ing.marinara.lowsodium",
+      "yield": "about 2 cups",
+      "from": [
+        {
+          "ing": "ing.tomatopaste",
+          "amount": "½ cup"
+        },
+        {
+          "ing": "ing.garlic",
+          "amount": "2 cloves"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "amount": "1 tsp"
+        }
+      ],
+      "how": "Cook the garlic in the oil, fry the paste until it darkens, then whisk in 1½ cups of water and the oregano and simmer ten minutes.",
+      "why": "A can of tomato paste is concentrated tomato with the water taken out. Putting the water back is not a trick, it is the same ingredient — and frying the paste first makes it taste better than most jars."
+    },
+    {
+      "id": "combo.broth",
+      "makes": "ing.broth.veg",
+      "yield": "4 cups",
+      "from": [
+        {
+          "ing": "ing.miso.white",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "amount": "1 tsp"
+        }
+      ],
+      "how": "Whisk into 4 cups of hot water off the boil.",
+      "why": "Water with one savory thing in it beats a thin, salty carton every time. If you have a dried mushroom or a piece of kombu, steep that in the water first and you are most of the way to a real stock."
+    },
+    {
+      "id": "combo.dashi",
+      "makes": "ing.broth.veg",
+      "yield": "4 cups, Japanese style",
+      "from": [
+        {
+          "ing": "ing.kombu",
+          "amount": "a 4-inch piece"
+        },
+        {
+          "ing": "ing.mushroom.shiitake",
+          "amount": "2, dried or fresh"
+        }
+      ],
+      "how": "Steep in 4 cups of cold water for 30 minutes, then bring it just to the edge of a simmer and pull the kombu out before it boils.",
+      "why": "The base of Japanese cooking, and about the highest ratio of flavor to effort there is. Boiling the kombu makes it slippery and bitter, which is the only way to get this wrong."
+    },
+    {
+      "id": "combo.flax-egg",
+      "makes": "ing.egg",
+      "yield": "1 egg, for binding",
+      "from": [
+        {
+          "ing": "ing.flax.ground",
+          "amount": "1 tbsp"
+        }
+      ],
+      "how": "Stir into 3 tbsp of water and leave for 5 minutes until it thickens.",
+      "why": "Works where the egg is holding things together — pancakes, muffins, veggie burgers, cookies. It will not work where the egg is the structure, like a custard, a meringue or an omelet.",
+      "waitMin": 5
+    },
+    {
+      "id": "combo.mirin",
+      "makes": "ing.mirin",
+      "yield": "1 tbsp",
+      "from": [
+        {
+          "ing": "ing.vinegar.rice",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "amount": "½ tsp"
+        }
+      ],
+      "how": "Stir until it dissolves.",
+      "why": "Mirin is sweet rice wine, so sweetened rice vinegar covers the sweet-and-sour part. It misses the depth, which matters in a glaze and not in a dressing."
+    },
+    {
+      "id": "combo.fishsauce",
+      "makes": "ing.fishsauce",
+      "yield": "1 tbsp, and vegetarian",
+      "from": [
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "amount": "2 tsp"
+        },
+        {
+          "ing": "ing.lime",
+          "amount": "1 tsp juice"
+        },
+        {
+          "ing": "ing.miso.white",
+          "amount": "¼ tsp"
+        }
+      ],
+      "how": "Whisk together and use it wherever the recipe says fish sauce.",
+      "why": "Fish sauce is salt, funk and savory depth. Soy brings the first and third, miso adds the funk, lime keeps it from tasting flat. Not the same thing, close enough to keep a Thai dinner on the table for a vegetarian."
+    },
+    {
+      "id": "combo.gochujang",
+      "makes": "ing.gochujang",
+      "yield": "2 tbsp",
+      "from": [
+        {
+          "ing": "ing.miso.white",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.gochugaru",
+          "amount": "2 tsp"
+        },
+        {
+          "ing": "ing.honey",
+          "amount": "1 tsp"
+        }
+      ],
+      "how": "Mash together with a splash of water until it is a paste.",
+      "why": "Gochujang is fermented chile, soybean and sweetness. This gets the three notes without the ferment, which is most of what a weeknight dish is asking for."
+    },
+    {
+      "id": "combo.harissa",
+      "makes": "ing.harissa",
+      "yield": "2 tbsp",
+      "from": [
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.cayenne",
+          "amount": "¼ tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "amount": "1 clove, grated"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "amount": "½ tsp"
+        }
+      ],
+      "how": "Stir into a paste. It keeps a week in the refrigerator.",
+      "why": "Smoke, heat, garlic and cumin are the shape of harissa. The real thing is made from rehydrated chiles and tastes deeper, but this will not let a recipe down."
+    },
+    {
+      "id": "combo.zaatar",
+      "makes": "ing.spice.zaatar",
+      "yield": "2 tbsp",
+      "from": [
+        {
+          "ing": "ing.spice.thyme.dried",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.sumac",
+          "amount": "2 tsp"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "amount": "1 tbsp, toasted"
+        }
+      ],
+      "how": "Mix. Toast the sesame first in a dry pan until it smells nutty.",
+      "why": "That is essentially the recipe. Za'atar blends vary by household across the Levant, and none of them are wrong."
+    },
+    {
+      "id": "combo.italian-seasoning",
+      "makes": "ing.spice.italian",
+      "yield": "1 tbsp",
+      "from": [
+        {
+          "ing": "ing.spice.oregano",
+          "amount": "1½ tsp"
+        },
+        {
+          "ing": "ing.spice.basil.dried",
+          "amount": "1 tsp"
+        },
+        {
+          "ing": "ing.spice.thyme.dried",
+          "amount": "½ tsp"
+        }
+      ],
+      "how": "Mix.",
+      "why": "Italian seasoning is a jar of exactly this. Making it means you can lean on whichever of the three you like."
+    },
+    {
+      "id": "combo.garam",
+      "makes": "ing.spice.garam",
+      "yield": "1 tbsp",
+      "from": [
+        {
+          "ing": "ing.spice.cumin",
+          "amount": "1½ tsp"
+        },
+        {
+          "ing": "ing.spice.coriander",
+          "amount": "1 tsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "amount": "¼ tsp"
+        },
+        {
+          "ing": "ing.spice.cardamom",
+          "amount": "¼ tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "amount": "¼ tsp"
+        }
+      ],
+      "how": "Mix, and add it near the end of cooking rather than the start.",
+      "why": "Garam masala is a finishing blend of warm spices, and every family's is different. Unlike most spice mixes it goes in late, because its aroma is the point and heat drives it off."
+    },
+    {
+      "id": "combo.taco-seasoning",
+      "makes": "ing.spice.chili",
+      "yield": "2 tbsp, taco style",
+      "from": [
+        {
+          "ing": "ing.spice.chili",
+          "amount": "1 tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "amount": "1½ tsp"
+        },
+        {
+          "ing": "ing.spice.garlicpowder",
+          "amount": "½ tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "amount": "½ tsp"
+        },
+        {
+          "ing": "ing.spice.oregano",
+          "amount": "½ tsp"
+        }
+      ],
+      "how": "Mix, and bloom it in the oil before the liquid goes in.",
+      "why": "The packet is this plus salt, cornstarch and about 400 mg of sodium a serving. Making it means you decide the salt."
+    },
+    {
+      "id": "combo.brown-sugar",
+      "makes": "ing.sugar.brown",
+      "yield": "1 cup",
+      "from": [
+        {
+          "ing": "ing.sugar.granulated",
+          "amount": "1 cup"
+        },
+        {
+          "ing": "ing.molasses",
+          "amount": "1 tbsp"
+        }
+      ],
+      "how": "Rub together with your fingers until it is even and damp.",
+      "why": "This is literally how brown sugar is made. Two tablespoons of molasses gives you dark brown."
+    },
+    {
+      "id": "combo.powdered-sugar",
+      "makes": "ing.powdered.sugar",
+      "yield": "1 cup",
+      "from": [
+        {
+          "ing": "ing.sugar.granulated",
+          "amount": "1 cup"
+        },
+        {
+          "ing": "ing.cornstarch",
+          "amount": "1 tsp"
+        }
+      ],
+      "how": "Blend on high for a minute. Let the dust settle before you open the blender.",
+      "why": "Powdered sugar is ground sugar with a little starch to keep it from clumping. A blender does it in a minute."
+    },
+    {
+      "id": "combo.breadcrumbs",
+      "makes": "ing.panko",
+      "yield": "1 cup",
+      "from": [
+        {
+          "ing": "ing.bread.wholegrain",
+          "amount": "2 slices, stale"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "amount": "1 tbsp"
+        }
+      ],
+      "how": "Tear the bread rough, pulse it or chop it, then toast in the oil over medium until golden.",
+      "why": "Better than the box, because you control the size and they are toasted in good oil. Torn beats blitzed — the uneven pieces are what makes it crunchy."
+    },
+    {
+      "id": "combo.tahini-sauce",
+      "makes": "ing.tahini",
+      "yield": "½ cup of sauce",
+      "from": [
+        {
+          "ing": "ing.tahini",
+          "amount": "¼ cup"
+        },
+        {
+          "ing": "ing.lemon",
+          "amount": "2 tbsp juice"
+        },
+        {
+          "ing": "ing.garlic",
+          "amount": "1 clove"
+        }
+      ],
+      "how": "Whisk with ¼ cup cold water. It will seize and look ruined; keep whisking and it comes back smooth and pale.",
+      "why": "Not a substitution so much as the thing worth knowing about tahini: it breaks before it emulsifies. Cooks throw out a perfectly good sauce at exactly that moment every day."
+    }
+  ],
+  "omit": {
+    "note": "Leaving something out is a legitimate answer, and an app that only offers replacements is pretending otherwise. What it owes you is an honest account of what goes missing and the cheapest way to cover it.",
+    "safeToSkip": "Nothing here is structural — the dish will be fine without it.",
+    "changesDish": "You can leave it out. The dish still works; it becomes a slightly different dish.",
+    "loadBearing": "This one is doing real work. Skipping it is a bigger change than a substitution would be."
+  },
+  "ranking": {
+    "note": "How the options get ordered. Something already in the kitchen beats a better idea that means a trip to the store, because the trip is the reason people order a pizza instead.",
+    "inPantry": 100,
+    "direct": 60,
+    "secondDegree": 25,
+    "sameRole": 20,
+    "sharedTags": 6,
+    "sameAisle": 4,
+    "keepsBalance": 14,
+    "breaksBalance": -30,
+    "dislikedPenalty": -80,
+    "lovedBonus": 12
+  },
+  "scaleNote": "A role group can say how to convert between its members. 'scaleBy' points at one of the flavor dials in data/balance.json and reuses the intensities already calibrated there, so a teaspoon of cayenne and a teaspoon of gochugaru are not treated as the same amount of heat. 'strength' is an explicit table for the groups where the difference is not a flavor dial at all — dried herb against fresh, cornstarch against flour, a spoon of miso against four cups of broth. Either way the number is a starting point to taste from, never a measurement."
+}

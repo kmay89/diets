@@ -9,16 +9,23 @@
 
 import { h, mount, chip, pill, toast, minutes, scoreBadge, titleCase, debounce, sheet, plural } from '../ui.js';
 import { getDb, nutritionFor, heartFor, searchRecipes, pantryCoverage } from '../data.js';
-import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps } from '../store.js';
+import { getState, togglePantry, addToPlan, isPlanned, setLike, setRecipeLike, markCooked, setSwap, clearSwaps, addCustomItem } from '../store.js';
 import { formatQty, servingEquivalents, dailyTargets, heartFlags, topContributors, NUTRIENT_LABELS, NUTRIENT_UNITS } from '../nutrition.js';
 import { shareRecipe, recipeShareUrl, copyText } from '../shopping.js';
 import { play, stagger, pulse } from '../feedback.js';
 import { allOccasions, occasionById } from '../occasions.js';
 import { foodIcon, iconCollage } from '../food-icon.js';
 import { collectionsByGroup, collectionById, matchesCollection } from '../collections.js';
-import { withSwaps, swapCount, substitutionsFor, swappedLine } from '../swaps.js';
+import { withSwaps, swapCount, substitutionsFor, swappedLine, buildLadder, rolesFor, combosFor } from '../swaps.js';
 import { printRecipe } from '../print.js';
 import { glancePanel } from './nutrition-panel.js';
+import { computeBalance, balanceDelta } from '../balance.js';
+import { balanceBlock } from './balance-panel.js';
+import { proteinBlock } from './protein-panel.js';
+import { tableBlock } from './table-panel.js';
+import { kidsBlock, teachesBlock, asksPill } from './kitchen-panel.js';
+import { tipsBlock } from './tips-panel.js';
+import { proteinSwapLine } from '../proteins.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -52,6 +59,11 @@ export function render(root, { navigate, params }) {
     const nutOmni = recipe.omnivore ? nutritionFor(recipe, { withOmnivore: true, servings: recipe.servings }) : null;
     const heart = heartFor(recipe);
     const cov = pantryCoverage(recipe, st.pantry);
+    const { ingIndex } = getDb();
+    // The flavor profile of the dish as it will actually be cooked, and — when
+    // something has been swapped — what that swap did to it.
+    const profile = computeBalance(recipe, ingIndex);
+    const delta = swapped ? balanceDelta(computeBalance(base, ingIndex), profile) : [];
 
     return h('section.view.recipe',
       h('button.linkish', { type: 'button', onclick: () => history.back() }, '← Back'),
@@ -71,7 +83,8 @@ export function render(root, { navigate, params }) {
         pill(titleCase(recipe.difficulty)),
         ...(recipe.diet || []).map(d => pill(d, 'green')),
         recipe.kidFriendly ? pill('kids eat it') : null,
-        ...(recipe.tags || []).slice(0, 4).map(t => pill(t.replace(/-/g, ' ')))
+        asksPill(recipe),
+        ...(recipe.tags || []).slice(0, 3).map(t => pill(t.replace(/-/g, ' ')))
       ),
 
       servingControl(recipe, servings, equiv, (n) => { servings = n; draw(); }),
@@ -94,16 +107,47 @@ export function render(root, { navigate, params }) {
 
       ingredientList(recipe, st, scale, draw),
 
+      // The flavor panel sits directly under the ingredients, because that is
+      // where a swap happens and the whole point of it is to answer "is this
+      // still balanced" in the same breath as the change.
+      balanceBlock(profile, ingIndex, {
+        delta,
+        onAdd: (item) => {
+          addCustomItem({ name: item.name, aisle: item.aisle, note: 'to finish the dish' });
+          play('add');
+          toast(`${item.name} added to the list`);
+        }
+      }),
+
       recipe.omnivore ? forkBlock(recipe.omnivore, 'omnivore', scale, withOmnivore, (v) => { withOmnivore = v; draw(); }, st, draw) : null,
       recipe.vegetarianSwap ? forkBlock(recipe.vegetarianSwap, 'veg', scale, withVegSwap, (v) => { withVegSwap = v; draw(); }, st, draw) : null,
 
+      proteinBlock(base, ingIndex, {
+        pantry: st.pantry,
+        scale,
+        onSwap: (current, option) => {
+          const next = proteinSwapLine(current.line, current.protein, option.protein, ingIndex);
+          if (!next) { toast('That one cannot be converted cleanly — use it by eye.'); return; }
+          setSwap(base.id, current.line.ing, option.protein.ing);
+          play('check');
+          toast(`Using ${option.protein.name.toLowerCase()} instead`);
+          draw();
+        }
+      }),
+
       stepsBlock(recipe),
+
+      teachesBlock(recipe),
+      tipsBlock(recipe),
+      kidsBlock(recipe),
 
       recipe.variations?.length
         ? block('Variations', h('ul.tight', ...recipe.variations.map(v => h('li', v))))
         : null,
 
       notesBlock(recipe),
+
+      tableBlock(recipe, { perServing: nut.perServing, balance: profile }),
 
       nutritionBlock(recipe, nut, nutOmni, heart, st),
 
@@ -187,15 +231,39 @@ function servingControl(recipe, servings, equiv, onchange) {
  * would actually use, and choosing one rewrites the line — and the nutrition,
  * and the shopping list — until you put it back.
  */
+/**
+ * The sheet behind the swap button, now with somewhere to go when the obvious
+ * answers run out.
+ *
+ * The old version listed the two substitutes in the ingredient database and
+ * stopped. If you had neither, it had handed you nothing. This one walks the
+ * ladder: the direct answers, then their answers, then anything that plays the
+ * same part, then making the thing out of what is in the house, and finally
+ * leaving it out with an honest account of what that costs.
+ *
+ * Every option carries what the swap does to the balance of the dish, because
+ * "loses the acid" is the single most useful thing to know before choosing.
+ */
 function openSwapSheet(recipeId, line, scale, draw) {
   const { ingIndex, recipeIndex } = getDb();
+  const state = getState();
+  const recipe = recipeIndex.get(recipeId);
   const originalId = line.swappedFrom || line.ing;
   const original = ingIndex.get(originalId);
   const source = originalLine(recipeId, originalId);
   if (!original || !source) return;
 
   const current = line.swappedFrom ? line.ing : null;
-  const options = substitutionsFor(originalId, { diet: recipeIndex.get(recipeId)?.diet || [] });
+  const ladder = buildLadder(originalId, {
+    ingIndex,
+    recipe,
+    line: source,
+    diet: recipe?.diet || [],
+    pantry: state.pantry,
+    likes: state.likes,
+    limit: 6
+  });
+  if (!ladder) return;
 
   const amountFor = (subId) => {
     const next = swappedLine(source, subId);
@@ -210,28 +278,89 @@ function openSwapSheet(recipeId, line, scale, draw) {
     toast(subId ? `Using ${ingIndex.get(subId).name} instead` : `Back to ${original.name}`);
   };
 
-  const row = (label, amount, note, { on, onclick }) =>
+  const row = (label, amount, note, { on, onclick, badges = [], effect = null }) =>
     h('button', { type: 'button', class: `swap-option ${on ? 'is-on' : ''}`, onclick },
       h('span.swap-option__head',
         h('span.swap-option__name', label),
         amount ? h('span.swap-option__qty', amount) : null,
         on ? h('span.pill.pill--green', 'in use') : null
       ),
+      badges.length || effect
+        ? h('span.swap-option__badges',
+            ...badges.map(b => h('span.swap-badge', b)),
+            effect
+              ? h('span', { class: `swap-badge swap-badge--${effect.lost.length ? 'warn' : 'ok'}` }, effect.label)
+              : null
+          )
+        : null,
       note ? h('span.swap-option__note', note) : null
     );
 
+  const optionRow = (o) => row(o.item.name, amountFor(o.item.id), o.note, {
+    on: current === o.item.id,
+    onclick: () => choose(o.item.id),
+    effect: o.effect,
+    badges: [
+      o.inPantry ? 'you have this' : null,
+      o.via ? `by way of ${o.via.toLowerCase()}` : null,
+      o.assumedRatio ? 'amount is a starting point' : null
+    ].filter(Boolean)
+  });
+
+  const tier = (title, blurb, list) => (list.length
+    ? h('div.swap-tier',
+        h('p.swap-tier__title', title),
+        blurb ? h('p.swap-tier__blurb', blurb) : null,
+        h('div.swap-options', ...list.map(optionRow)))
+    : null);
+
   const dlg = sheet(`Instead of ${original.name}`,
-    h('div',
+    h('div.swap-sheet',
       h('p.muted.small',
         'Amounts are converted, not copied — a few of these are nowhere near one for one. ',
         'Choosing one changes this recipe, its nutrition and your shopping list.'),
+
       h('div.swap-options',
         row(original.name, formatQty(source.qty * scale, source.unit), 'The recipe as written.',
-          { on: !current, onclick: () => choose(null) }),
-        ...options.map(o => row(o.item.name, amountFor(o.item.id), o.note,
-          { on: current === o.item.id, onclick: () => choose(o.item.id) }))
-      )
+          { on: !current, onclick: () => choose(null) })),
+
+      tier('Use instead', null, ladder.direct),
+      tier('One step further out',
+        'What those substitutes themselves stand in for. Further from the original, still in the neighborhood.',
+        ladder.second),
+      tier(ladder.roles.length ? `Plays the same part — ${ladder.roles.map(r => r.name.toLowerCase()).join(', ')}` : 'Plays the same part',
+        ladder.roles[0]?.does || 'Different ingredient, same job in the dish.',
+        ladder.role),
+
+      ladder.combos.length
+        ? h('div.swap-tier',
+            h('p.swap-tier__title', 'Or make it'),
+            ...ladder.combos.map(c => h('div.combo',
+              h('p.combo__head',
+                h('strong', c.yield), ' from ',
+                c.parts.map(p => `${p.amount} ${(p.item?.name || p.ing).toLowerCase()}`).join(' + '),
+                c.ready ? h('span.swap-badge', 'you have everything') : null
+              ),
+              h('p.combo__how', c.how),
+              h('p.combo__why', c.why)
+            )))
+        : null,
+
+      ladder.omit ? omitBlock(ladder.omit, original) : null
     )
+  );
+}
+
+/** Leaving it out, with what that costs stated plainly. */
+function omitBlock(omit, original) {
+  return h('div.swap-tier.swap-tier--omit',
+    h('p.swap-tier__title', 'Or leave it out'),
+    h('p.swap-tier__blurb',
+      omit.say,
+      omit.lost.length ? ` Without it there is no ${omit.lost.join(' or ').toLowerCase()} left in the dish.` : ''),
+    ...omit.compensate.map(f => h('p.combo__how',
+      h('strong', `${f.amount} ${(f.item?.name || f.ing).toLowerCase()}`), ' — ', f.how, ' ', h('em', f.why))),
+    h('p.fine-print', `Nothing is removed for you — this is what happens if you skip the ${original.name.toLowerCase()}.`)
   );
 }
 
@@ -251,7 +380,12 @@ function ingredientList(recipe, state, scale, draw) {
         const have = !!state.pantry[line.ing];
         const disliked = state.likes[line.ing] === -1;
         const swapFrom = line.swappedFrom ? ingIndex.get(line.swappedFrom) : null;
-        const canSwap = substitutionsFor(line.swappedFrom || line.ing, { diet: recipe.diet || [] }).length > 0;
+        // The ladder means almost everything has somewhere to go now — a direct
+        // substitute, a role group, or a way to make it — so the button shows
+        // whenever any of the three has something in it.
+        const fromId = line.swappedFrom || line.ing;
+        const canSwap = substitutionsFor(fromId, { diet: recipe.diet || [] }).length > 0
+          || rolesFor(fromId).length > 0 || combosFor(fromId).length > 0;
 
         return h('li', { class: `ing ${have ? 'is-have' : ''} ${swapFrom ? 'is-swapped' : ''}` },
           h('label.ing__main',

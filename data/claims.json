@@ -15,13 +15,17 @@
         {
           "id": "nourish.fiber",
           "text": "Most people eat around half the fiber associated with the lowest risk of early death — the sweet spot in the evidence sits between 25 g and 30 g a day.",
-          "cites": ["reynolds2019"],
+          "cites": [
+            "reynolds2019"
+          ],
           "strength": "meta-analysis"
         },
         {
           "id": "nourish.addition",
           "text": "Eating more fiber-rich food is linked to lower blood pressure and lower cholesterol in trials, not only to lower risk in population studies.",
-          "cites": ["reynolds2019"],
+          "cites": [
+            "reynolds2019"
+          ],
           "strength": "meta-analysis"
         },
         {
@@ -32,6 +36,79 @@
           ],
           "strength": "cohort",
           "detail": "Thirty is a useful nudge toward variety rather than a threshold with a health outcome attached. Herbs, spices, nuts, seeds, grains and pulses all count toward it."
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "title": "What happens at the table",
+      "icon": "🍽",
+      "lede": "Cooking gets all the attention, and then the meal is eaten in eleven minutes standing near the counter. The twenty minutes after the pan comes off the heat are cheap to improve and almost nobody thinks about them — so here is what is actually known, and what is only a good habit.",
+      "body": [
+        "Three of the four things on this list cost nothing and take no equipment: the order you eat a plate in, how fast you eat it, and whether you stand up afterward. None of them are treatments for anything. They are small, free, and better supported than most of what gets said about eating.",
+        "The fourth is water, where the confident advice in circulation is mostly invented. The honest version is shorter than the folklore."
+      ],
+      "claims": [
+        {
+          "id": "table.order",
+          "text": "Eating the vegetables and protein of a meal before its carbohydrate lowered the blood-glucose rise afterward by roughly a third at 30 and 60 minutes, compared with the same meal eaten carbohydrate-first.",
+          "cites": [
+            "shukla2015"
+          ],
+          "strength": "rct",
+          "detail": "Eleven adults with type 2 diabetes, the same 628-calorie meal twice a week apart. It measures the shape of the curve after single meals rather than any long-term outcome, and the effect depends on the parts of the plate actually being eaten separately — a stew mixes them for you. Free to try, and not a reason to change anything a clinician has told you."
+        },
+        {
+          "id": "table.pace",
+          "text": "Across many experiments, people served the same meal ate less of it when they ate more slowly, and reported no more hunger afterward.",
+          "cites": [
+            "robinson2014"
+          ],
+          "strength": "meta-analysis",
+          "detail": "Fullness signals take time to arrive and fast eating outruns them. These are single-meal laboratory studies of how much gets eaten, not trials of long-term eating or health. Putting the fork down between bites is the entire intervention."
+        },
+        {
+          "id": "table.walk",
+          "text": "Short bouts of light walking that break up sitting lowered post-meal glucose and insulin significantly compared with staying seated — including bouts of only a few minutes.",
+          "cites": [
+            "buffey2022"
+          ],
+          "strength": "meta-analysis",
+          "detail": "Pooled from acute studies measuring the hours after a meal in small samples. Clearing the table and washing up counts. It is one of the cheapest habits available and that is the whole claim being made for it."
+        },
+        {
+          "id": "table.late",
+          "text": "For people with reflux, gastroenterology guidance recommends leaving two to three hours between the last meal and lying down.",
+          "cites": [
+            "katz2022"
+          ],
+          "strength": "guideline",
+          "detail": "This is guidance for people who have symptoms, not a rule about when everybody should eat dinner. There is no clock at which food becomes fat."
+        },
+        {
+          "id": "table.water.total",
+          "text": "The adequate intake for total water is about 3.7 liters a day for men and 2.7 for women, counting every drink and the water in food — roughly a fifth of it arrives in food.",
+          "cites": [
+            "iom2005water"
+          ],
+          "strength": "guideline",
+          "detail": "An adequate intake is the median of what apparently well-hydrated people consume, not a target to hit, and there is no eight-glass rule in any guideline. Coffee and tea count. Heat, exercise, illness and medication all move it, and heart or kidney conditions can come with fluid limits from a clinician that override anything an app says."
+        },
+        {
+          "id": "table.dilution",
+          "text": "Drinking water with a meal does not dilute stomach acid enough to matter, and there is no evidence it impairs digestion.",
+          "cites": [],
+          "strength": "editorial",
+          "detail": "Included because the opposite is repeated confidently and often. The stomach regulates its own acid secretion, and a glass of water has left it long before digestion is finished."
+        },
+        {
+          "id": "kitchen.dishwasher",
+          "text": "A full ENERGY STAR certified dishwasher uses about 3.2 gallons of water a cycle, against up to 27 gallons for washing the same load by hand under a running tap.",
+          "cites": [
+            "energystar-dishwashers"
+          ],
+          "strength": "regulatory",
+          "detail": "Three conditions carry it: run it full, skip the pre-rinse, and use the normal cycle. The 27-gallon figure assumes the tap runs the whole time — washing in a filled basin closes most of the gap, and that is the honest comparison for anybody without a machine."
         }
       ]
     },
@@ -52,34 +129,44 @@
             {
               "id": "heart.fats",
               "text": "Replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular disease by about 30% in randomized trials — an effect the American Heart Association notes is similar in size to statin treatment.",
-              "cites": ["sacks2017"],
+              "cites": [
+                "sacks2017"
+              ],
               "strength": "guideline",
               "detail": "The benefit is in the swap. Cutting saturated fat and replacing it with refined starch or sugar does not produce the same result, which is why this app cooks with olive oil rather than simply cooking with less."
             },
             {
               "id": "heart.pattern",
               "text": "A Mediterranean-style pattern with extra-virgin olive oil or nuts cut heart attacks, strokes and cardiovascular death by roughly 30% over five years in a randomized trial of nearly 7,500 people at high risk.",
-              "cites": ["estruch2018"],
+              "cites": [
+                "estruch2018"
+              ],
               "strength": "rct",
               "detail": "This trial was retracted and republished in 2018 after randomization problems at some sites. The reanalysis reached the same conclusions. We cite the corrected version, and we mention the retraction because a citation engine that hides inconvenient history is decoration."
             },
             {
               "id": "heart.sodium",
               "text": "Swapping ordinary salt for a potassium-based salt substitute reduced stroke by about 14% and death by about 12% in a five-year randomized trial of nearly 21,000 people.",
-              "cites": ["neal2021"],
+              "cites": [
+                "neal2021"
+              ],
               "strength": "rct",
               "detail": "Potassium-based substitutes are not safe for everyone — kidney disease and some blood-pressure medications make them risky. Ask a clinician before switching. The broader point stands on its own: sodium is worth taking seriously, and most of it arrives from packaged food and restaurant food rather than the salt shaker."
             },
             {
               "id": "heart.fiber",
               "text": "People eating the most dietary fiber had 15–30% lower cardiovascular and all-cause mortality than those eating the least.",
-              "cites": ["reynolds2019"],
+              "cites": [
+                "reynolds2019"
+              ],
               "strength": "meta-analysis"
             },
             {
               "id": "heart.oats",
               "text": "Oats and barley carry an FDA-authorised heart-disease health claim at 3 g of beta-glucan soluble fiber a day.",
-              "cites": ["fda-betaglucan"],
+              "cites": [
+                "fda-betaglucan"
+              ],
               "strength": "regulatory"
             }
           ]
@@ -128,7 +215,10 @@
         {
           "id": "planet.share",
           "text": "Food systems account for roughly a quarter to a third of global greenhouse gas emissions — 26% by one widely cited estimate, 34% by another using a broader boundary.",
-          "cites": ["poore2018", "crippa2021"],
+          "cites": [
+            "poore2018",
+            "crippa2021"
+          ],
           "strength": "modeling",
           "detail": "The two estimates differ because they draw the system boundary differently, not because one is wrong. The IPCC's own range is 21–37%. We quote the range rather than the most dramatic number in it."
         },
@@ -143,7 +233,9 @@
         {
           "id": "planet.shift",
           "text": "A global shift away from animal products would cut farmland use by around 76% and food's greenhouse gas emissions by roughly half.",
-          "cites": ["poore2018"],
+          "cites": [
+            "poore2018"
+          ],
           "strength": "modeling",
           "detail": "That is a global thought experiment, not a prediction and not a demand. The practical read is directional: moving some meals toward plants moves the number, and the size of the shift scales with how much you actually change."
         },
@@ -167,7 +259,9 @@
         {
           "id": "wallet.cost",
           "text": "Modeled across 150 countries, vegetarian and vegan patterns cost 21–34% less than the current typical diet in high-income countries; a low-meat flexitarian pattern about 14% less.",
-          "cites": ["springmann2021"],
+          "cites": [
+            "springmann2021"
+          ],
           "strength": "modeling",
           "detail": "This models retail food prices only. It does not count your time, your kitchen, or whether the cheap options are stocked where you shop — all of which are real costs, and none of which show up in a price index."
         },

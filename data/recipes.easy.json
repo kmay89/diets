@@ -1,0 +1,1241 @@
+{
+  "schema": "errerlabs.diets.recipes/1",
+  "part": "easy",
+  "title": "Short and forgiving",
+  "note": "Dishes that ask very little and still taste like somebody meant them. Every one of them has real jobs in it for a child — smashing, tearing, squeezing, scattering — and every one is finished with the same acid-and-crunch move the rest of the collection uses, because a short recipe is not a lesser one.",
+  "recipes": [
+    {
+      "id": "rec.pasta-peas-parmesan",
+      "title": "Pasta with Peas, Butter and Parmesan",
+      "blurb": "The dish that proves a sauce does not need a recipe. Pasta water, butter and parmesan shaken together turn into something glossy that clings to every noodle, and the peas go in frozen at the end.",
+      "cuisine": "italian",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "weeknight",
+        "one-pot",
+        "kid-favorite",
+        "kid-cook",
+        "pasta",
+        "budget",
+        "crowd-pleaser"
+      ],
+      "equipment": [
+        "large pot",
+        "colander"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pasta.wholewheat",
+          "qty": 10,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.peas.frozen",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 0.5,
+          "unit": "cup",
+          "prep": "finely grated"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "torn",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Bring a large pot of well-salted water to a boil and cook the pasta to one minute short of the package time.",
+        "Two minutes before the pasta is done, tip the frozen peas straight into the same pot. They only need to heat through.",
+        "Scoop out a full cup of the cooking water and set it aside where you will not forget it. This is the sauce. Then drain the pasta and peas.",
+        "Put the pot back on low heat with the butter and olive oil. Return the pasta, add half the parmesan and a big splash of the pasta water, and stir hard for about a minute. It will look thin, then suddenly turn creamy and coat the noodles — that is the starch doing its work.",
+        "Off the heat, stir in the lemon zest and the pepper. Taste it. Add more parmesan or another splash of pasta water until it looks right.",
+        "Scatter the rest of the parmesan and the torn basil over the bowls at the table."
+      ],
+      "kidTweak": "This one is theirs. Tipping the peas in, scattering the cheese and tearing the basil are all real steps with real consequences, and the pasta water trick is genuinely impressive to watch.",
+      "restaurantTouch": "Grate the parmesan on the fine side of the grater, not the shredder side. It melts into the water instead of sitting on top in strings, which is most of the difference between this and a plate of buttered noodles.",
+      "garden": "Basil from a pot on the windowsill, torn in at the end.",
+      "leftovers": "Best the day it is made. Reheat with a splash of water rather than in a dry pan.",
+      "heartNote": "Whole wheat pasta and two cups of peas put around 10 g of fiber into this before anything else happens.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.stovetop-mac-cauliflower",
+      "title": "Stovetop Mac and Cheese with Hidden Cauliflower",
+      "blurb": "Cauliflower simmered soft and blended into the sauce, where it disappears completely and makes the whole thing creamier. No roux, no baking dish, one pot.",
+      "cuisine": "american",
+      "course": "dinner",
+      "servings": 5,
+      "activeMin": 20,
+      "totalMin": 25,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "weeknight",
+        "one-pot",
+        "kid-favorite",
+        "kid-cook",
+        "pasta",
+        "comfort",
+        "crowd-pleaser",
+        "budget"
+      ],
+      "equipment": [
+        "large pot",
+        "blender or immersion blender"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.pasta.wholewheat",
+          "qty": 10,
+          "unit": "oz"
+        },
+        {
+          "ing": "ing.cauliflower",
+          "qty": 3,
+          "unit": "cup",
+          "prep": "cut small"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 1.25,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.panko",
+          "qty": 0.33,
+          "unit": "cup",
+          "optional": true
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Put the cauliflower in a large pot with the milk and a pinch of the salt. Cover and cook over medium for 10 minutes, until a fork goes through with no resistance.",
+        "Blend the cauliflower and milk smooth — an immersion blender in the pot is easiest. This is the grown-up step.",
+        "Meanwhile cook the pasta in salted water, one minute short of the package time, and drain it.",
+        "Put the cauliflower purée back over low heat. Add the cheddar a handful at a time, stirring until each one disappears before the next goes in. Keep it off a boil or the sauce goes grainy.",
+        "Stir in the mustard, smoked paprika, salt and pepper. Taste it — this is where it either becomes mac and cheese or stays cauliflower sauce, and the answer is almost always more salt.",
+        "Fold the pasta in. If you want a crunchy top, toast the panko in the olive oil in a small pan until golden and scatter it over the bowls.",
+        "Serve straight away, while it is at its creamiest."
+      ],
+      "kidTweak": "Do not hide the cauliflower — show them. A vegetable that made the sauce creamier is a much better story than a vegetable that was smuggled in, and it survives being discovered.",
+      "restaurantTouch": "The toasted panko. Thirty seconds of work, and it turns a soft bowl into something with a texture in it.",
+      "leftovers": "Keeps 3 days. Reheat over low heat with a splash of milk, stirring, rather than in the microwave on high.",
+      "heartNote": "Blending cauliflower into the base means about a third less cheese for the same creaminess, which takes real saturated fat out without anybody negotiating over it.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.tortilla-pizzas",
+      "title": "Crispy Tortilla Pizzas",
+      "blurb": "A tortilla in a hot dry skillet gets shatteringly crisp in about four minutes, which makes it a better pizza base on a Tuesday than any dough. Everybody builds their own.",
+      "cuisine": "italian-american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 15,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "weeknight",
+        "15-minute",
+        "kid-favorite",
+        "kid-cook",
+        "skillet",
+        "crowd-pleaser",
+        "budget"
+      ],
+      "equipment": [
+        "large skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.tortilla.wholewheat",
+          "qty": 4,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.marinara.lowsodium",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.cheese.mozzarella",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.spice.italian",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.tomato.cherry",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "halved"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "thinly sliced",
+          "optional": true
+        },
+        {
+          "ing": "ing.spice.pepperflakes",
+          "qty": 0.25,
+          "unit": "tsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.basil",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "torn"
+        }
+      ],
+      "steps": [
+        "Set the skillet over medium-high with a teaspoon of the olive oil. Lay one tortilla in and leave it alone for 2 minutes, until the underside is blistered and stiff.",
+        "Flip it, then spread 3 tablespoons of marinara over the crisp side and scatter over a quarter of the cheese, a pinch of the Italian seasoning, and whatever toppings that person wants.",
+        "Cover the pan for 2 minutes, until the cheese has melted and the bottom is crisp enough to lift with tongs in one piece.",
+        "Slide it onto a board and repeat with the rest. They cook faster as the pan gets hotter, so watch the last ones.",
+        "Scatter the torn basil over at the table and cut into wedges. The pepper flakes go on individual slices, so the heat is each person's own decision."
+      ],
+      "kidTweak": "Set out the toppings in small bowls and let everyone build their own before it goes in the pan. A pizza somebody designed gets eaten; a pizza somebody was handed gets negotiated.",
+      "restaurantTouch": "Brush the rim of the tortilla with olive oil before the second side goes down. It fries into something close to a real crust.",
+      "garden": "Cherry tomatoes and basil, straight off the plants in August.",
+      "leftovers": "These do not keep — they go soft. Make what you will eat.",
+      "allergenNote": "Contains wheat and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.rice-bowl-fried-egg",
+      "title": "Rice Bowl with a Fried Egg and Greens",
+      "blurb": "Leftover rice, whatever green is in the drawer, and an egg with a runny yolk that turns into the sauce. Dinner in eight minutes, and it is genuinely good rather than merely fast.",
+      "cuisine": "any",
+      "course": "dinner",
+      "servings": 2,
+      "activeMin": 10,
+      "totalMin": 10,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "weeknight",
+        "15-minute",
+        "one-pot",
+        "kid-cook",
+        "budget",
+        "skillet"
+      ],
+      "equipment": [
+        "skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.rice.brown",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "dry, or 2 cups cooked"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 4,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 2,
+          "unit": "clove",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 2,
+          "unit": "each",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.chilicrisp",
+          "qty": 1,
+          "unit": "tsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Cook the rice if you do not have leftovers, or reheat two cups of cooked rice with a splash of water and divide it between two bowls.",
+        "Heat the canola oil in a skillet over medium. Add the garlic and cook 30 seconds, then the spinach with a pinch of salt, and stir until it collapses — about a minute. Pile it on the rice.",
+        "Turn the heat to medium and add a little more oil. Crack in the eggs and leave them alone until the whites are set and the edges are lacy and brown. Cover the pan for the last 30 seconds if you want the tops set.",
+        "Lay an egg on each bowl. Stir the soy sauce, rice vinegar and sesame oil together and spoon it over.",
+        "Scatter the scallions and sesame seeds. Break the yolk at the table and stir it through — that is the sauce.",
+        "Chile crisp on the side, so whoever wants heat adds their own."
+      ],
+      "kidTweak": "Let them break the yolk and stir it in. It is the best part of the bowl and it is the one moment where a child gets to change how the dish works.",
+      "restaurantTouch": "Toast the sesame seeds in the dry pan before anything else goes in. Untoasted sesame seeds taste of almost nothing, and it takes ninety seconds.",
+      "leftovers": "Cook the rice ahead — cold day-old rice is better here than fresh. The egg has to be made to order.",
+      "heartNote": "Brown rice and four cups of spinach do most of the fiber work; the egg is the only real source of saturated fat and there is one each.",
+      "allergenNote": "Contains egg, soy and sesame.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.cheesy-broccoli-rice",
+      "title": "One-Pot Cheesy Broccoli Rice",
+      "blurb": "Rice, broth and broccoli in one pot, with the cheese stirred in at the end off the heat. Nothing to drain, nothing to time precisely, and the broccoli goes soft enough that nobody argues with it.",
+      "cuisine": "american",
+      "course": "dinner",
+      "servings": 4,
+      "activeMin": 12,
+      "totalMin": 35,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "one-pot",
+        "weeknight",
+        "kid-favorite",
+        "kid-cook",
+        "budget",
+        "comfort",
+        "batch"
+      ],
+      "equipment": [
+        "medium pot with a lid"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.onion.yellow",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 3,
+          "unit": "clove",
+          "prep": "minced"
+        },
+        {
+          "ing": "ing.rice.brown",
+          "qty": 1.25,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broth.veg",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.broccoli",
+          "qty": 4,
+          "unit": "cup",
+          "prep": "cut into small florets"
+        },
+        {
+          "ing": "ing.cheese.cheddar",
+          "qty": 1,
+          "unit": "cup",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.mustard.dijon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        "Cook the onion in the olive oil over medium with a pinch of salt until soft and golden at the edges, 6 minutes. Add the garlic for the last 30 seconds.",
+        "Stir in the rice so every grain gets coated, then add the broth and the salt. Bring it up, cover, and turn the heat to low for 25 minutes.",
+        "Lay the broccoli on top of the rice for the last 8 minutes and put the lid straight back on. It steams there without being stirred into mush.",
+        "Take the pot off the heat entirely. Wait a minute, then stir in the cheddar and the mustard — off the heat, so the cheese melts smooth instead of splitting.",
+        "Stir in the lemon juice and the pepper. Taste it. The lemon is what stops this tasting heavy, so add the rest of the lemon if it needs waking up."
+      ],
+      "kidTweak": "Cutting broccoli into little trees with kitchen scissors is a job most six-year-olds will do for as long as you let them, and small florets cook faster anyway.",
+      "restaurantTouch": "Grate the cheese yourself. Pre-shredded is coated in starch to stop it clumping in the bag, and that starch is exactly what makes a stirred-in cheese sauce grainy.",
+      "garden": "Broccoli is a spring and fall crop in the north — the fall planting is the sweeter one.",
+      "leftovers": "Keeps 4 days and reheats well with a splash of water. Good cold in a lunchbox too.",
+      "heartNote": "Four cups of broccoli in a pot that feeds four is a serving of cruciferous vegetables each, without anyone eating a side of broccoli.",
+      "allergenNote": "Contains dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.banana-oat-pancakes",
+      "title": "Three-Ingredient Banana Oat Pancakes",
+      "blurb": "Oats, banana and egg blended into a batter. No flour, no sugar, and they taste like banana bread — which is what happens when the only sweetness is fruit that was going brown anyway.",
+      "cuisine": "american",
+      "course": "breakfast",
+      "servings": 3,
+      "activeMin": 15,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "breakfast",
+        "kid-favorite",
+        "kid-cook",
+        "budget",
+        "whole-grain",
+        "blender",
+        "freezer"
+      ],
+      "equipment": [
+        "blender",
+        "nonstick skillet or griddle"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.banana",
+          "qty": 2,
+          "unit": "each",
+          "prep": "very ripe"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 3,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.milk.1pct",
+          "qty": 0.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.bakingpowder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.canola",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 2,
+          "unit": "tbsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 0.5,
+          "unit": "cup",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Put the oats, bananas, eggs, milk, baking powder, cinnamon and salt in the blender and run it for 30 seconds, until it is smooth and pourable. This is the grown-up step.",
+        "Let the batter sit for 5 minutes. The oats drink the milk and it thickens noticeably — skip this and the pancakes spread thin.",
+        "Heat a nonstick skillet over medium with a little of the oil. Pour in scant quarter-cups, then drop a few blueberries onto each one.",
+        "Cook until bubbles appear across the surface and the edges look dry, about 3 minutes, then flip once and give them 90 seconds more. Only flip once — the second flip is what makes a pancake tough.",
+        "Serve with the rest of the blueberries, a spoonful of yogurt, and maple syrup if you want it."
+      ],
+      "kidTweak": "Dropping the blueberries onto each pancake is the job, and counting them out is the part they will insist on doing themselves.",
+      "restaurantTouch": "Medium heat, not medium-high. A pale golden pancake cooked through beats a dark one that is raw in the middle, and the difference is one notch on the dial.",
+      "leftovers": "They freeze beautifully. Cool flat, freeze on a tray, then bag them and reheat in a toaster.",
+      "heartNote": "Rolled oats bring beta-glucan, the soluble fiber with an authorized heart-health claim behind it, and the sweetness here is fruit rather than sugar.",
+      "allergenNote": "Contains egg, dairy and oats — buy certified gluten-free oats if that matters at your table.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.yogurt-crunch-bowls",
+      "title": "Yogurt Bowls with Toasted Oat Crunch",
+      "blurb": "Five minutes of toasting turns rolled oats and almonds into something with real crunch, and it keeps for two weeks in a jar. After that this is a breakfast a six-year-old can make alone.",
+      "cuisine": "any",
+      "course": "breakfast",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 15,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "breakfast",
+        "no-cook",
+        "kid-favorite",
+        "kid-cook",
+        "make-ahead",
+        "meal-prep",
+        "fiber"
+      ],
+      "equipment": [
+        "small skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 0.75,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 0.33,
+          "unit": "cup",
+          "prep": "roughly chopped"
+        },
+        {
+          "ing": "ing.oil.coconut",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.maple",
+          "qty": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.yogurt.greek.nonfat",
+          "qty": 2,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.strawberries",
+          "qty": 1.5,
+          "unit": "cup",
+          "prep": "sliced"
+        },
+        {
+          "ing": "ing.blueberries",
+          "qty": 1,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.chia",
+          "qty": 2,
+          "unit": "tbsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.honey",
+          "qty": 2,
+          "unit": "tsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Warm the coconut oil in a small skillet over medium. Add the oats, almonds, cinnamon and salt and stir for 4 to 5 minutes, until the oats smell toasty and the almonds have gone a shade darker.",
+        "Pour in the maple syrup and stir for another 30 seconds — it will hiss and coat everything — then tip it all onto a plate to cool. It crisps as it cools, not in the pan.",
+        "Spoon the yogurt into four bowls and pile the fruit on one side rather than mixing it in.",
+        "Scatter the cooled crunch over the top, along with the chia if you are using it. It goes on last so it stays crunchy.",
+        "A little honey over the top for anyone who wants it, decided per bowl."
+      ],
+      "kitchenNote": "The crunch is the whole recipe. Make a triple batch and keep it in a jar — it turns yogurt, oatmeal and a bowl of fruit into something worth eating for the rest of the week.",
+      "kidTweak": "Once the crunch is made, everything left is a child's job: spooning, slicing strawberries with a table knife, and building their own bowl. Six-year-olds can do this whole breakfast on their own.",
+      "restaurantTouch": "Fruit piled on one side, crunch across the top, rather than everything stirred together. You taste each thing separately, and the crunch stays crunchy to the last spoonful.",
+      "garden": "June strawberries, straight from the row into the bowl.",
+      "leftovers": "The crunch keeps 2 weeks in a sealed jar. Assemble the bowls fresh.",
+      "heartNote": "Oats, almonds and berries in one bowl — three of the most consistently heart-associated foods there are, and no added sugar beyond a spoonful of maple.",
+      "allergenNote": "Contains tree nuts and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.egg-in-a-hole-greens",
+      "title": "Egg in a Hole with Wilted Greens",
+      "blurb": "A piece of toast with an egg cooked into the middle of it, and a handful of spinach wilted in the same pan while the egg sets. Six minutes, one pan, and the cut-out circle is the best bit.",
+      "cuisine": "american",
+      "course": "breakfast",
+      "servings": 2,
+      "activeMin": 8,
+      "totalMin": 8,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "breakfast",
+        "15-minute",
+        "kid-favorite",
+        "kid-cook",
+        "skillet",
+        "budget"
+      ],
+      "equipment": [
+        "large skillet"
+      ],
+      "season": [
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.bread.wholegrain",
+          "qty": 2,
+          "unit": "slice"
+        },
+        {
+          "ing": "ing.butter.unsalted",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.egg",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.spinach.baby",
+          "qty": 3,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.blackpepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cheese.parmesan",
+          "qty": 2,
+          "unit": "tbsp",
+          "prep": "grated",
+          "optional": true
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Press a glass into the middle of each slice of bread and lift out the circle. Keep the circles — they toast alongside and they are the reward for whoever did the pressing.",
+        "Melt the butter in the skillet over medium and lay in the bread and the circles. Let them go golden on the underside, about 2 minutes.",
+        "Flip everything, then crack an egg into each hole. Season with half the salt and pepper. Cover the pan and cook 3 minutes for a set white and a soft yolk.",
+        "While that happens, push the toast to one side, add the olive oil and garlic to the empty part of the pan for 20 seconds, then the spinach and the rest of the salt. It wilts in under a minute.",
+        "Slide onto plates with the greens alongside. Parmesan and lemon zest over the top if you have them."
+      ],
+      "kidTweak": "Pressing out the circle with a glass is the entire appeal of this breakfast, and the toasted circle dipped in the yolk is the payment.",
+      "restaurantTouch": "Lemon zest over a fried egg. It sounds like a stretch and it wakes the whole plate up.",
+      "leftovers": "None. This is a made-to-order breakfast.",
+      "heartNote": "The spinach is doing quiet work here — three cups wilts to nearly nothing and puts potassium and folate next to the egg.",
+      "allergenNote": "Contains wheat, egg and dairy.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.sesame-cucumber-smash",
+      "title": "Smashed Cucumbers with Sesame and Rice Vinegar",
+      "blurb": "Cucumbers hit with the flat of a knife until they crack open, then dressed. Smashing instead of slicing gives the dressing rough edges to hold onto, which is why this tastes so much stronger than a sliced cucumber salad.",
+      "cuisine": "chinese",
+      "course": "side",
+      "servings": 4,
+      "activeMin": 10,
+      "totalMin": 20,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "no-cook",
+        "salad",
+        "kid-cook",
+        "15-minute",
+        "summer",
+        "raw",
+        "garden-star"
+      ],
+      "equipment": [
+        "large knife",
+        "colander"
+      ],
+      "season": [
+        "summer"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.cucumber",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.vinegar.rice",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.soysauce.lowsodium",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.oil.sesame",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.garlic",
+          "qty": 1,
+          "unit": "clove",
+          "prep": "grated"
+        },
+        {
+          "ing": "ing.sugar.granulated",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.sesame.seeds",
+          "qty": 1,
+          "unit": "tbsp",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.scallion",
+          "qty": 2,
+          "unit": "each",
+          "prep": "thinly sliced"
+        },
+        {
+          "ing": "ing.chilicrisp",
+          "qty": 2,
+          "unit": "tsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.25,
+          "unit": "cup",
+          "prep": "torn",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Lay a cucumber on a board and press down on it with the flat side of a large knife until it cracks along its length. Repeat down the cucumber, then tear or cut it into rough two-inch pieces.",
+        "Toss the pieces with the salt in a colander and leave them over the sink for 10 minutes. A surprising amount of water comes out, and that water is what would otherwise dilute the dressing.",
+        "Whisk the rice vinegar, soy sauce, sesame oil, garlic and sugar together in the serving bowl.",
+        "Shake the cucumbers dry and toss them through the dressing. Taste — it should be sharp enough to make you blink.",
+        "Scatter the sesame seeds, scallions and cilantro over. Chile crisp on the side. Eat within an hour, while the edges are still crisp."
+      ],
+      "kidTweak": "The smashing is the point and children are extremely good at it. Put the cucumber in a zip bag first and let them use a rolling pin — same result, no knife.",
+      "restaurantTouch": "The ten minutes in salt. It is the only difference between this and a watery cucumber salad, and it is the step everybody skips.",
+      "garden": "August, when the cucumber plants are producing faster than anybody can eat them.",
+      "leftovers": "Best inside an hour. After a few hours it is still good, just softer.",
+      "allergenNote": "Contains soy and sesame.",
+      "source": "ERRERLabs original",
+      "dietNote": "Vegan with maple syrup in place of the sugar, which is what a lot of Sichuan cooks would use anyway."
+    },
+    {
+      "id": "rec.black-bean-corn-salad",
+      "title": "Black Bean and Corn Salad",
+      "blurb": "Opened, drained, tipped in, squeezed over. A child of eight can make this entirely alone, and it is still the bowl that empties first at a cookout.",
+      "cuisine": "mexican-american",
+      "course": "side",
+      "servings": 6,
+      "activeMin": 10,
+      "totalMin": 10,
+      "difficulty": "easy",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "no-cook",
+        "salad",
+        "kid-cook",
+        "15-minute",
+        "potluck",
+        "cookout",
+        "budget",
+        "fiber",
+        "make-ahead"
+      ],
+      "equipment": [
+        "colander",
+        "large bowl"
+      ],
+      "season": [
+        "summer",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.beans.black",
+          "qty": 2,
+          "unit": "can",
+          "prep": "drained and rinsed"
+        },
+        {
+          "ing": "ing.frozen.corn",
+          "qty": 2,
+          "unit": "cup",
+          "prep": "thawed"
+        },
+        {
+          "ing": "ing.pepper.bell.red",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced"
+        },
+        {
+          "ing": "ing.onion.red",
+          "qty": 0.5,
+          "unit": "each",
+          "prep": "finely diced"
+        },
+        {
+          "ing": "ing.lime",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.oil.olive",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.spice.smokedpaprika",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.salt.kosher",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.cilantro",
+          "qty": 0.75,
+          "unit": "cup",
+          "prep": "torn"
+        },
+        {
+          "ing": "ing.avocado",
+          "qty": 1,
+          "unit": "each",
+          "prep": "diced",
+          "optional": true
+        },
+        {
+          "ing": "ing.pepper.jalapeno",
+          "qty": 1,
+          "unit": "each",
+          "prep": "finely diced",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Put the diced red onion in the bottom of the bowl and squeeze the juice of one lime over it. Leave it there while you do everything else — ten minutes in acid takes the raw bite out of raw onion.",
+        "Drain and rinse the beans until the water runs clear, and shake them properly dry.",
+        "Tip the beans, corn and bell pepper into the bowl. Add the olive oil, cumin, smoked paprika and salt, and the juice of the second lime.",
+        "Toss it all together and taste it. It will want more lime and more salt than you expect — this is a dish that lives on acid.",
+        "Tear the cilantro in at the end, and fold the avocado through last so it stays in pieces."
+      ],
+      "kidTweak": "This is the recipe to hand over completely. Draining, tipping, squeezing limes, tearing cilantro, tasting and deciding — every step is theirs, and it comes out right.",
+      "restaurantTouch": "The onion sitting in lime juice while you make the rest. Ten minutes of nothing turns the sharpest ingredient in the bowl into the best one.",
+      "garden": "Cilantro bolts the moment it gets hot — sow a short row every three weeks through the summer.",
+      "leftovers": "Keeps 3 days and is better on day two, though add the avocado fresh.",
+      "heartNote": "Two cans of beans across six servings is around 7 g of fiber a portion, with almost no sodium because the beans are rinsed and the salt is yours.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.apple-peanut-boats",
+      "title": "Apple Boats with Peanut Butter and Crunch",
+      "blurb": "Apple wedges hollowed slightly, filled with peanut butter, and loaded with whatever is crunchy. The after-school snack that actually holds somebody until dinner.",
+      "cuisine": "american",
+      "course": "snack",
+      "servings": 4,
+      "activeMin": 8,
+      "totalMin": 8,
+      "difficulty": "easy",
+      "diet": [
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "no-cook",
+        "snack",
+        "kid-favorite",
+        "kid-cook",
+        "15-minute",
+        "lunchbox",
+        "budget",
+        "fall"
+      ],
+      "equipment": [
+        "apple corer or a small spoon"
+      ],
+      "season": [
+        "fall",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.apple",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tbsp_juice"
+        },
+        {
+          "ing": "ing.peanutbutter",
+          "qty": 4,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.oats.rolled",
+          "qty": 0.2,
+          "unit": "cup",
+          "prep": "toasted"
+        },
+        {
+          "ing": "ing.raisins",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.sunflowerseeds",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.spice.cinnamon",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.chocolate.chips",
+          "qty": 1,
+          "unit": "tbsp",
+          "optional": true
+        },
+        {
+          "ing": "ing.coconut.shredded",
+          "qty": 1,
+          "unit": "tbsp",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Cut each apple into six thick wedges and take out the core edge. Toss the wedges with the lemon juice so they do not go brown — this matters if they are going in a lunchbox.",
+        "Spread peanut butter along the cut side of each wedge. A butter knife or the back of a spoon works.",
+        "Put the oats, raisins, sunflower seeds, cinnamon and anything else out in small bowls.",
+        "Everybody loads their own. The peanut butter is the glue and the toppings are the decision.",
+        "Eat straight away, or pack them cut-side up in a container with a paper towel underneath."
+      ],
+      "kidTweak": "The whole thing is the kid tweak. The only adult job is cutting the apple, and after eight or so most children can do that with a table knife on a soft apple.",
+      "restaurantTouch": "Toast the oats in a dry pan for three minutes first. Raw rolled oats on peanut butter are chewy; toasted ones are a crunch, and it takes no time at all.",
+      "garden": "Ohio apples come in from late August through October, and the tart ones are much better here than the sweet ones.",
+      "leftovers": "Best fresh. Lemon juice buys a lunchbox a few hours.",
+      "allergenNote": "Contains peanuts. Sunflower seed butter works exactly the same way for a nut-free table.",
+      "source": "ERRERLabs original"
+    },
+    {
+      "id": "rec.berry-banana-soft-serve",
+      "title": "Two-Minute Berry Banana Soft Serve",
+      "blurb": "Frozen banana blended until it stops being a fruit and starts being ice cream. There is no dairy in it and nothing added, and it genuinely works — the trick is patience with the blender.",
+      "cuisine": "any",
+      "course": "dessert",
+      "servings": 4,
+      "activeMin": 5,
+      "totalMin": 5,
+      "difficulty": "easy",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "kidFriendly": true,
+      "tags": [
+        "quick",
+        "no-cook",
+        "kid-favorite",
+        "kid-cook",
+        "15-minute",
+        "blender",
+        "dessert",
+        "summer",
+        "treat"
+      ],
+      "equipment": [
+        "food processor or a strong blender"
+      ],
+      "season": [
+        "summer",
+        "all"
+      ],
+      "ingredients": [
+        {
+          "ing": "ing.banana",
+          "qty": 4,
+          "unit": "each",
+          "prep": "very ripe, sliced and frozen"
+        },
+        {
+          "ing": "ing.frozen.berries",
+          "qty": 1.5,
+          "unit": "cup"
+        },
+        {
+          "ing": "ing.milk.oat",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ing": "ing.lemon",
+          "qty": 1,
+          "unit": "tsp_zest"
+        },
+        {
+          "ing": "ing.vanilla",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ing": "ing.almonds",
+          "qty": 3,
+          "unit": "tbsp",
+          "prep": "toasted and chopped",
+          "optional": true
+        },
+        {
+          "ing": "ing.chocolate.dark70",
+          "qty": 0.75,
+          "unit": "oz",
+          "prep": "shaved",
+          "optional": true
+        }
+      ],
+      "steps": [
+        "Freeze the sliced bananas at least four hours ahead, on a tray so they do not fuse into a brick. This is the only planning the recipe asks for.",
+        "Put the frozen banana, berries, oat milk, lemon zest and vanilla in the processor. This is the grown-up step.",
+        "Run it. It will go through gravel, then crumbs, then a paste, and then quite suddenly turn smooth and glossy like soft serve. That takes about two minutes and most people give up at ninety seconds.",
+        "Scrape the sides down once during that, and add oat milk a teaspoon at a time only if it truly will not come together.",
+        "Serve immediately in cold bowls, with the almonds and shaved chocolate over the top."
+      ],
+      "kidTweak": "Let them watch through the lid. The moment it turns from crumbs into ice cream is genuinely surprising, and it is the reason this gets requested again.",
+      "restaurantTouch": "The lemon zest. You will not taste it as lemon — it stops the banana tasting flat and sweet, which is exactly what a bright note is for.",
+      "leftovers": "Eat it now. Refrozen it becomes a solid block; let it sit 15 minutes and re-blend if you must.",
+      "heartNote": "A dessert with no added sugar, no saturated fat and 4 g of fiber a serving, which is not something that can be said of much on a dessert list.",
+      "source": "ERRERLabs original"
+    }
+  ]
+}

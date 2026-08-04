@@ -2,68 +2,727 @@
   "schema": "errerlabs.diets.collections/1",
   "note": "Ways into the collection that are not 'every recipe, alphabetically'. A collection is a saved filter, not a second copy of the data: it names courses, tags or cuisines, and any recipe matching any one of them belongs. That means a recipe joins a collection by being tagged honestly, and no list has to be kept in sync by hand.",
   "groups": [
-    { "id": "kind", "name": "What kind of meal", "blurb": "The plate you are actually trying to fill." },
-    { "id": "method", "name": "How it gets cooked", "blurb": "Sometimes the appliance picks the recipe." },
-    { "id": "world", "name": "Cuisines of the world", "blurb": "Cooked the way it is cooked where it comes from — technique first, shortcuts named as shortcuts." },
-    { "id": "usa", "name": "Around the United States", "blurb": "American regional cooking is not one cuisine. These are ten." },
-    { "id": "effort", "name": "Time and effort", "blurb": "From fifteen minutes to a Saturday." }
+    {
+      "id": "kind",
+      "name": "What kind of meal",
+      "blurb": "The plate you are actually trying to fill."
+    },
+    {
+      "id": "method",
+      "name": "How it gets cooked",
+      "blurb": "Sometimes the appliance picks the recipe."
+    },
+    {
+      "id": "world",
+      "name": "Cuisines of the world",
+      "blurb": "Cooked the way it is cooked where it comes from — technique first, shortcuts named as shortcuts."
+    },
+    {
+      "id": "usa",
+      "name": "Around the United States",
+      "blurb": "American regional cooking is not one cuisine. These are ten."
+    },
+    {
+      "id": "effort",
+      "name": "Time and effort",
+      "blurb": "From fifteen minutes to a Saturday."
+    }
   ],
   "collections": [
-    { "id": "breakfast", "group": "kind", "name": "Breakfast", "icon": "🍳", "blurb": "Mornings on a weekday and mornings with time.", "match": { "course": ["breakfast"] } },
-    { "id": "lunch", "group": "kind", "name": "Lunch", "icon": "🥗", "blurb": "Packable, portable, and good cold.", "match": { "course": ["lunch"] } },
-    { "id": "dinner", "group": "kind", "name": "Dinner", "icon": "🍽", "blurb": "One dinner everybody eats, with a fork in the road for meat.", "match": { "course": ["dinner"] } },
-    { "id": "sandwiches", "group": "kind", "name": "Sandwiches", "icon": "🥪", "blurb": "Subs, pitas, tortas, wraps and the ones worth making at home.", "match": { "tags": ["sandwich"] } },
-    { "id": "soups", "group": "kind", "name": "Soups and stews", "icon": "🥣", "blurb": "A pot, a lid, and an afternoon of smell.", "match": { "tags": ["soup", "stew"] } },
-    { "id": "salads", "group": "kind", "name": "Salads", "icon": "🥬", "blurb": "Built to be a meal, not a garnish.", "match": { "tags": ["salad"] } },
-    { "id": "pasta-noodles", "group": "kind", "name": "Pasta and noodles", "icon": "🍝", "blurb": "Wheat, rice, buckwheat and sweet potato.", "match": { "tags": ["pasta", "noodles"] } },
-    { "id": "snacks", "group": "kind", "name": "Snacks and dips", "icon": "🥕", "blurb": "The food that makes a plate of raw vegetables disappear.", "match": { "course": ["snack"], "tags": ["dip"] } },
-    { "id": "smoothies", "group": "kind", "name": "Smoothies", "icon": "🥤", "blurb": "Five minutes, one blender, real fruit.", "match": { "tags": ["smoothie"] } },
-    { "id": "desserts", "group": "kind", "name": "Desserts", "icon": "🍰", "blurb": "Honestly scored. A cake is a cake.", "match": { "course": ["dessert"] } },
-    { "id": "sides", "group": "kind", "name": "Sides", "icon": "🥔", "blurb": "The dish people actually remember.", "match": { "course": ["side"] } },
-    { "id": "components", "group": "kind", "name": "Sauces and staples", "icon": "🫙", "blurb": "Make once, eat four times.", "match": { "course": ["component"] } },
-
-    { "id": "grill", "group": "method", "name": "Grill", "icon": "🔥", "blurb": "Live fire, and not one sad foil packet.", "match": { "tags": ["grill"] } },
-    { "id": "air-fryer", "group": "method", "name": "Air fryer", "icon": "🌀", "blurb": "A small convection oven that gets very hot very fast. Used for what it is genuinely good at.", "match": { "tags": ["air-fryer"] } },
-    { "id": "oven", "group": "method", "name": "Oven and sheet pan", "icon": "🔆", "blurb": "One tray, one temperature, one thing to wash.", "match": { "tags": ["sheet-pan", "roast", "baked"] } },
-    { "id": "one-pot", "group": "method", "name": "One pot", "icon": "🍲", "blurb": "Dinner and the dishes, settled at once.", "match": { "tags": ["one-pot", "skillet"] } },
-    { "id": "slow-cooker", "group": "method", "name": "Slow cooker", "icon": "⏲", "blurb": "Twenty minutes in the morning, dinner waiting at six.", "match": { "tags": ["slow-cooker"] } },
-    { "id": "no-cook", "group": "method", "name": "No cooking", "icon": "❄️", "blurb": "For August, and for the nights the stove is not happening.", "match": { "tags": ["no-cook"] } },
-    { "id": "blender", "group": "method", "name": "Blender", "icon": "🌪", "blurb": "Smoothies, sauces, soups and dips.", "match": { "tags": ["blender", "smoothie"] } },
-    { "id": "make-ahead", "group": "method", "name": "Make ahead and freeze", "icon": "🧊", "blurb": "Cook on Sunday, eat on Wednesday.", "match": { "tags": ["make-ahead", "freezer", "meal-prep"] } },
-
-    { "id": "chinese", "group": "world", "name": "Chinese", "icon": "🥢", "blurb": "Sichuan heat, Cantonese restraint, and the wok technique underneath both.", "match": { "cuisine": ["chinese", "chinese-american", "sichuan", "cantonese"] } },
-    { "id": "japanese", "group": "world", "name": "Japanese", "icon": "🍜", "blurb": "Dashi, miso, rice and the discipline of leaving things alone.", "match": { "cuisine": ["japanese", "japanese-inspired"] } },
-    { "id": "korean", "group": "world", "name": "Korean", "icon": "🌶", "blurb": "Gochujang, sesame, ferment and the table full of small dishes.", "match": { "cuisine": ["korean", "korean-inspired"] } },
-    { "id": "thai", "group": "world", "name": "Thai", "icon": "🍤", "blurb": "The four-way balance: salty, sour, sweet, hot — adjusted at the end, every time.", "match": { "cuisine": ["thai", "thai-inspired"] } },
-    { "id": "vietnamese", "group": "world", "name": "Vietnamese", "icon": "🌿", "blurb": "Broth with an hour in it, and a plate of herbs on the side.", "match": { "cuisine": ["vietnamese"] } },
-    { "id": "filipino", "group": "world", "name": "Filipino", "icon": "🍚", "blurb": "Vinegar, soy, garlic and the confidence to use all three at once.", "match": { "cuisine": ["filipino"] } },
-    { "id": "indian", "group": "world", "name": "Indian", "icon": "🍛", "blurb": "Whole spices bloomed in fat — the single technique that everything else is built on.", "match": { "cuisine": ["indian", "south-indian"] } },
-    { "id": "middle-eastern", "group": "world", "name": "Middle Eastern", "icon": "🫓", "blurb": "Levantine and Persian: lemon, herbs by the bunch, and legumes treated as the main event.", "match": { "cuisine": ["middle-eastern", "lebanese", "turkish", "persian"] } },
-    { "id": "mediterranean", "group": "world", "name": "Greek and Mediterranean", "icon": "🫒", "blurb": "Olive oil as an ingredient, not a lubricant.", "match": { "cuisine": ["greek", "mediterranean"] } },
-    { "id": "italian", "group": "world", "name": "Italian", "icon": "🇮🇹", "blurb": "Few ingredients, exactly handled. Most of it is under thirty minutes.", "match": { "cuisine": ["italian", "italian-american"] } },
-    { "id": "french", "group": "world", "name": "French", "icon": "🥖", "blurb": "Technique you keep forever: a real sauté, a real braise, a real custard.", "match": { "cuisine": ["french"] } },
-    { "id": "spanish", "group": "world", "name": "Spanish", "icon": "🥘", "blurb": "Smoked paprika, saffron, and the socarrat at the bottom of the pan.", "match": { "cuisine": ["spanish"] } },
-    { "id": "mexican", "group": "world", "name": "Mexican", "icon": "🌮", "blurb": "Chiles toasted and soaked, salsas from scratch, corn treated with respect.", "match": { "cuisine": ["mexican", "mexican-american"] } },
-    { "id": "caribbean", "group": "world", "name": "Caribbean and Latin America", "icon": "🌴", "blurb": "Jamaica, Cuba, Puerto Rico, Peru and Brazil.", "match": { "cuisine": ["caribbean", "jamaican", "cuban", "puerto-rican", "peruvian", "brazilian"] } },
-    { "id": "african", "group": "world", "name": "African and North African", "icon": "🌾", "blurb": "Ethiopian berbere, Moroccan tagines, and the spice blends that carry them.", "match": { "cuisine": ["ethiopian", "moroccan", "north-african", "west-african"] } },
-    { "id": "european", "group": "world", "name": "Central and Eastern Europe", "icon": "🥔", "blurb": "Cabbage, potato, dill, paprika and sour cream — cold-country cooking that earns its place.", "match": { "cuisine": ["german", "polish", "hungarian", "russian", "swedish"] } },
-    { "id": "british", "group": "world", "name": "British and Irish", "icon": "☘️", "blurb": "Better than its reputation, and built for a wet Tuesday.", "match": { "cuisine": ["british", "irish"] } },
-
-    { "id": "the-south", "group": "usa", "name": "The South", "icon": "🌽", "blurb": "Greens, grits, cornbread and the long-cooked bean.", "match": { "cuisine": ["southern"] } },
-    { "id": "cajun-creole", "group": "usa", "name": "Cajun and Creole", "icon": "⚜️", "blurb": "The trinity, a dark roux, and Louisiana's own sense of timing.", "match": { "cuisine": ["cajun", "creole"] } },
-    { "id": "tex-mex", "group": "usa", "name": "Tex-Mex and the Southwest", "icon": "🌵", "blurb": "Texas chili, New Mexico green chile, breakfast tacos.", "match": { "cuisine": ["tex-mex", "southwestern", "new-mexican"] } },
-    { "id": "new-england", "group": "usa", "name": "New England", "icon": "🦞", "blurb": "Chowder, baked beans, brown bread and blueberries.", "match": { "cuisine": ["new-england"] } },
-    { "id": "mid-atlantic", "group": "usa", "name": "Mid-Atlantic", "icon": "🦀", "blurb": "Philadelphia, Baltimore, and the Chesapeake.", "match": { "cuisine": ["mid-atlantic"] } },
-    { "id": "midwest", "group": "usa", "name": "The Midwest", "icon": "🌾", "blurb": "Hotdish, wild rice, Cincinnati chili and the church-basement potluck.", "match": { "cuisine": ["midwestern"] } },
-    { "id": "california", "group": "usa", "name": "California", "icon": "🥑", "blurb": "The produce is the point; everything else is seasoning.", "match": { "cuisine": ["californian"] } },
-    { "id": "pacific-northwest", "group": "usa", "name": "Pacific Northwest", "icon": "🌲", "blurb": "Salmon, berries, hazelnuts, mushrooms and rain.", "match": { "cuisine": ["pacific-northwest"] } },
-    { "id": "hawaii", "group": "usa", "name": "Hawaii", "icon": "🌺", "blurb": "Poke, plate lunch, and the Pacific crossroads that made them.", "match": { "cuisine": ["hawaiian"] } },
-    { "id": "appalachia", "group": "usa", "name": "Appalachia", "icon": "⛰", "blurb": "Soup beans, skillet cornbread, apples and thrift as a cuisine.", "match": { "cuisine": ["appalachian"] } },
-
-    { "id": "weeknight", "group": "effort", "name": "Under 30 minutes", "icon": "⚡", "blurb": "Active time, honestly counted.", "match": { "tags": ["quick", "weeknight", "15-minute"] } },
-    { "id": "project", "group": "effort", "name": "Project cooking", "icon": "🧑‍🍳", "blurb": "A Saturday, a technique worth learning, and something to show for it.", "match": { "tags": ["advanced", "project"] } },
-    { "id": "kids", "group": "effort", "name": "Kids will eat it", "icon": "🧒", "blurb": "Tested against actual children.", "match": { "tags": ["kid-favorite"] } },
-    { "id": "budget", "group": "effort", "name": "Cheap", "icon": "🪙", "blurb": "Under about two dollars a serving, and not apologetically.", "match": { "tags": ["budget"] } },
-    { "id": "crowd", "group": "effort", "name": "Feeding a crowd", "icon": "👨‍👩‍👧‍👦", "blurb": "Potlucks, parties and the whole family showing up.", "match": { "tags": ["crowd-pleaser", "potluck", "batch"] } }
+    {
+      "id": "breakfast",
+      "group": "kind",
+      "name": "Breakfast",
+      "icon": "🍳",
+      "blurb": "Mornings on a weekday and mornings with time.",
+      "match": {
+        "course": [
+          "breakfast"
+        ]
+      }
+    },
+    {
+      "id": "lunch",
+      "group": "kind",
+      "name": "Lunch",
+      "icon": "🥗",
+      "blurb": "Packable, portable, and good cold.",
+      "match": {
+        "course": [
+          "lunch"
+        ]
+      }
+    },
+    {
+      "id": "dinner",
+      "group": "kind",
+      "name": "Dinner",
+      "icon": "🍽",
+      "blurb": "One dinner everybody eats, with a fork in the road for meat.",
+      "match": {
+        "course": [
+          "dinner"
+        ]
+      }
+    },
+    {
+      "id": "sandwiches",
+      "group": "kind",
+      "name": "Sandwiches",
+      "icon": "🥪",
+      "blurb": "Subs, pitas, tortas, wraps and the ones worth making at home.",
+      "match": {
+        "tags": [
+          "sandwich"
+        ]
+      }
+    },
+    {
+      "id": "soups",
+      "group": "kind",
+      "name": "Soups and stews",
+      "icon": "🥣",
+      "blurb": "A pot, a lid, and an afternoon of smell.",
+      "match": {
+        "tags": [
+          "soup",
+          "stew"
+        ]
+      }
+    },
+    {
+      "id": "salads",
+      "group": "kind",
+      "name": "Salads",
+      "icon": "🥬",
+      "blurb": "Built to be a meal, not a garnish.",
+      "match": {
+        "tags": [
+          "salad"
+        ]
+      }
+    },
+    {
+      "id": "pasta-noodles",
+      "group": "kind",
+      "name": "Pasta and noodles",
+      "icon": "🍝",
+      "blurb": "Wheat, rice, buckwheat and sweet potato.",
+      "match": {
+        "tags": [
+          "pasta",
+          "noodles"
+        ]
+      }
+    },
+    {
+      "id": "snacks",
+      "group": "kind",
+      "name": "Snacks and dips",
+      "icon": "🥕",
+      "blurb": "The food that makes a plate of raw vegetables disappear.",
+      "match": {
+        "course": [
+          "snack"
+        ],
+        "tags": [
+          "dip"
+        ]
+      }
+    },
+    {
+      "id": "smoothies",
+      "group": "kind",
+      "name": "Smoothies",
+      "icon": "🥤",
+      "blurb": "Five minutes, one blender, real fruit.",
+      "match": {
+        "tags": [
+          "smoothie"
+        ]
+      }
+    },
+    {
+      "id": "desserts",
+      "group": "kind",
+      "name": "Desserts",
+      "icon": "🍰",
+      "blurb": "Honestly scored. A cake is a cake.",
+      "match": {
+        "course": [
+          "dessert"
+        ]
+      }
+    },
+    {
+      "id": "sides",
+      "group": "kind",
+      "name": "Sides",
+      "icon": "🥔",
+      "blurb": "The dish people actually remember.",
+      "match": {
+        "course": [
+          "side"
+        ]
+      }
+    },
+    {
+      "id": "components",
+      "group": "kind",
+      "name": "Sauces and staples",
+      "icon": "🫙",
+      "blurb": "Make once, eat four times.",
+      "match": {
+        "course": [
+          "component"
+        ]
+      }
+    },
+    {
+      "id": "grill",
+      "group": "method",
+      "name": "Grill",
+      "icon": "🔥",
+      "blurb": "Live fire, and not one sad foil packet.",
+      "match": {
+        "tags": [
+          "grill"
+        ]
+      }
+    },
+    {
+      "id": "air-fryer",
+      "group": "method",
+      "name": "Air fryer",
+      "icon": "🌀",
+      "blurb": "A small convection oven that gets very hot very fast. Used for what it is genuinely good at.",
+      "match": {
+        "tags": [
+          "air-fryer"
+        ]
+      }
+    },
+    {
+      "id": "oven",
+      "group": "method",
+      "name": "Oven and sheet pan",
+      "icon": "🔆",
+      "blurb": "One tray, one temperature, one thing to wash.",
+      "match": {
+        "tags": [
+          "sheet-pan",
+          "roast",
+          "baked"
+        ]
+      }
+    },
+    {
+      "id": "one-pot",
+      "group": "method",
+      "name": "One pot",
+      "icon": "🍲",
+      "blurb": "Dinner and the dishes, settled at once.",
+      "match": {
+        "tags": [
+          "one-pot",
+          "skillet"
+        ]
+      }
+    },
+    {
+      "id": "slow-cooker",
+      "group": "method",
+      "name": "Slow cooker",
+      "icon": "⏲",
+      "blurb": "Twenty minutes in the morning, dinner waiting at six.",
+      "match": {
+        "tags": [
+          "slow-cooker"
+        ]
+      }
+    },
+    {
+      "id": "no-cook",
+      "group": "method",
+      "name": "No cooking",
+      "icon": "❄️",
+      "blurb": "For August, and for the nights the stove is not happening.",
+      "match": {
+        "tags": [
+          "no-cook"
+        ]
+      }
+    },
+    {
+      "id": "blender",
+      "group": "method",
+      "name": "Blender",
+      "icon": "🌪",
+      "blurb": "Smoothies, sauces, soups and dips.",
+      "match": {
+        "tags": [
+          "blender",
+          "smoothie"
+        ]
+      }
+    },
+    {
+      "id": "make-ahead",
+      "group": "method",
+      "name": "Make ahead and freeze",
+      "icon": "🧊",
+      "blurb": "Cook on Sunday, eat on Wednesday.",
+      "match": {
+        "tags": [
+          "make-ahead",
+          "freezer",
+          "meal-prep"
+        ]
+      }
+    },
+    {
+      "id": "chinese",
+      "group": "world",
+      "name": "Chinese",
+      "icon": "🥢",
+      "blurb": "Sichuan heat, Cantonese restraint, and the wok technique underneath both.",
+      "match": {
+        "cuisine": [
+          "chinese",
+          "chinese-american",
+          "sichuan",
+          "cantonese"
+        ]
+      }
+    },
+    {
+      "id": "japanese",
+      "group": "world",
+      "name": "Japanese",
+      "icon": "🍜",
+      "blurb": "Dashi, miso, rice and the discipline of leaving things alone.",
+      "match": {
+        "cuisine": [
+          "japanese",
+          "japanese-inspired"
+        ]
+      }
+    },
+    {
+      "id": "korean",
+      "group": "world",
+      "name": "Korean",
+      "icon": "🌶",
+      "blurb": "Gochujang, sesame, ferment and the table full of small dishes.",
+      "match": {
+        "cuisine": [
+          "korean",
+          "korean-inspired"
+        ]
+      }
+    },
+    {
+      "id": "thai",
+      "group": "world",
+      "name": "Thai",
+      "icon": "🍤",
+      "blurb": "The four-way balance: salty, sour, sweet, hot — adjusted at the end, every time.",
+      "match": {
+        "cuisine": [
+          "thai",
+          "thai-inspired"
+        ]
+      }
+    },
+    {
+      "id": "vietnamese",
+      "group": "world",
+      "name": "Vietnamese",
+      "icon": "🌿",
+      "blurb": "Broth with an hour in it, and a plate of herbs on the side.",
+      "match": {
+        "cuisine": [
+          "vietnamese"
+        ]
+      }
+    },
+    {
+      "id": "filipino",
+      "group": "world",
+      "name": "Filipino",
+      "icon": "🍚",
+      "blurb": "Vinegar, soy, garlic and the confidence to use all three at once.",
+      "match": {
+        "cuisine": [
+          "filipino"
+        ]
+      }
+    },
+    {
+      "id": "indian",
+      "group": "world",
+      "name": "Indian",
+      "icon": "🍛",
+      "blurb": "Whole spices bloomed in fat — the single technique that everything else is built on.",
+      "match": {
+        "cuisine": [
+          "indian",
+          "south-indian"
+        ]
+      }
+    },
+    {
+      "id": "middle-eastern",
+      "group": "world",
+      "name": "Middle Eastern",
+      "icon": "🫓",
+      "blurb": "Levantine and Persian: lemon, herbs by the bunch, and legumes treated as the main event.",
+      "match": {
+        "cuisine": [
+          "middle-eastern",
+          "lebanese",
+          "turkish",
+          "persian"
+        ]
+      }
+    },
+    {
+      "id": "mediterranean",
+      "group": "world",
+      "name": "Greek and Mediterranean",
+      "icon": "🫒",
+      "blurb": "Olive oil as an ingredient, not a lubricant.",
+      "match": {
+        "cuisine": [
+          "greek",
+          "mediterranean"
+        ]
+      }
+    },
+    {
+      "id": "italian",
+      "group": "world",
+      "name": "Italian",
+      "icon": "🇮🇹",
+      "blurb": "Few ingredients, exactly handled. Most of it is under thirty minutes.",
+      "match": {
+        "cuisine": [
+          "italian",
+          "italian-american"
+        ]
+      }
+    },
+    {
+      "id": "french",
+      "group": "world",
+      "name": "French",
+      "icon": "🥖",
+      "blurb": "Technique you keep forever: a real sauté, a real braise, a real custard.",
+      "match": {
+        "cuisine": [
+          "french"
+        ]
+      }
+    },
+    {
+      "id": "spanish",
+      "group": "world",
+      "name": "Spanish",
+      "icon": "🥘",
+      "blurb": "Smoked paprika, saffron, and the socarrat at the bottom of the pan.",
+      "match": {
+        "cuisine": [
+          "spanish"
+        ]
+      }
+    },
+    {
+      "id": "mexican",
+      "group": "world",
+      "name": "Mexican",
+      "icon": "🌮",
+      "blurb": "Chiles toasted and soaked, salsas from scratch, corn treated with respect.",
+      "match": {
+        "cuisine": [
+          "mexican",
+          "mexican-american"
+        ]
+      }
+    },
+    {
+      "id": "caribbean",
+      "group": "world",
+      "name": "Caribbean and Latin America",
+      "icon": "🌴",
+      "blurb": "Jamaica, Cuba, Puerto Rico, Peru and Brazil.",
+      "match": {
+        "cuisine": [
+          "caribbean",
+          "jamaican",
+          "cuban",
+          "puerto-rican",
+          "peruvian",
+          "brazilian"
+        ]
+      }
+    },
+    {
+      "id": "african",
+      "group": "world",
+      "name": "African and North African",
+      "icon": "🌾",
+      "blurb": "Ethiopian berbere, Moroccan tagines, and the spice blends that carry them.",
+      "match": {
+        "cuisine": [
+          "ethiopian",
+          "moroccan",
+          "north-african",
+          "west-african"
+        ]
+      }
+    },
+    {
+      "id": "european",
+      "group": "world",
+      "name": "Central and Eastern Europe",
+      "icon": "🥔",
+      "blurb": "Cabbage, potato, dill, paprika and sour cream — cold-country cooking that earns its place.",
+      "match": {
+        "cuisine": [
+          "german",
+          "polish",
+          "hungarian",
+          "russian",
+          "swedish"
+        ]
+      }
+    },
+    {
+      "id": "british",
+      "group": "world",
+      "name": "British and Irish",
+      "icon": "☘️",
+      "blurb": "Better than its reputation, and built for a wet Tuesday.",
+      "match": {
+        "cuisine": [
+          "british",
+          "irish"
+        ]
+      }
+    },
+    {
+      "id": "the-south",
+      "group": "usa",
+      "name": "The South",
+      "icon": "🌽",
+      "blurb": "Greens, grits, cornbread and the long-cooked bean.",
+      "match": {
+        "cuisine": [
+          "southern"
+        ]
+      }
+    },
+    {
+      "id": "cajun-creole",
+      "group": "usa",
+      "name": "Cajun and Creole",
+      "icon": "⚜️",
+      "blurb": "The trinity, a dark roux, and Louisiana's own sense of timing.",
+      "match": {
+        "cuisine": [
+          "cajun",
+          "creole"
+        ]
+      }
+    },
+    {
+      "id": "tex-mex",
+      "group": "usa",
+      "name": "Tex-Mex and the Southwest",
+      "icon": "🌵",
+      "blurb": "Texas chili, New Mexico green chile, breakfast tacos.",
+      "match": {
+        "cuisine": [
+          "tex-mex",
+          "southwestern",
+          "new-mexican"
+        ]
+      }
+    },
+    {
+      "id": "new-england",
+      "group": "usa",
+      "name": "New England",
+      "icon": "🦞",
+      "blurb": "Chowder, baked beans, brown bread and blueberries.",
+      "match": {
+        "cuisine": [
+          "new-england"
+        ]
+      }
+    },
+    {
+      "id": "mid-atlantic",
+      "group": "usa",
+      "name": "Mid-Atlantic",
+      "icon": "🦀",
+      "blurb": "Philadelphia, Baltimore, and the Chesapeake.",
+      "match": {
+        "cuisine": [
+          "mid-atlantic"
+        ]
+      }
+    },
+    {
+      "id": "midwest",
+      "group": "usa",
+      "name": "The Midwest",
+      "icon": "🌾",
+      "blurb": "Hotdish, wild rice, Cincinnati chili and the church-basement potluck.",
+      "match": {
+        "cuisine": [
+          "midwestern"
+        ]
+      }
+    },
+    {
+      "id": "california",
+      "group": "usa",
+      "name": "California",
+      "icon": "🥑",
+      "blurb": "The produce is the point; everything else is seasoning.",
+      "match": {
+        "cuisine": [
+          "californian"
+        ]
+      }
+    },
+    {
+      "id": "pacific-northwest",
+      "group": "usa",
+      "name": "Pacific Northwest",
+      "icon": "🌲",
+      "blurb": "Salmon, berries, hazelnuts, mushrooms and rain.",
+      "match": {
+        "cuisine": [
+          "pacific-northwest"
+        ]
+      }
+    },
+    {
+      "id": "hawaii",
+      "group": "usa",
+      "name": "Hawaii",
+      "icon": "🌺",
+      "blurb": "Poke, plate lunch, and the Pacific crossroads that made them.",
+      "match": {
+        "cuisine": [
+          "hawaiian"
+        ]
+      }
+    },
+    {
+      "id": "appalachia",
+      "group": "usa",
+      "name": "Appalachia",
+      "icon": "⛰",
+      "blurb": "Soup beans, skillet cornbread, apples and thrift as a cuisine.",
+      "match": {
+        "cuisine": [
+          "appalachian"
+        ]
+      }
+    },
+    {
+      "id": "weeknight",
+      "group": "effort",
+      "name": "Under 30 minutes",
+      "icon": "⚡",
+      "blurb": "Active time, honestly counted.",
+      "match": {
+        "tags": [
+          "quick",
+          "weeknight",
+          "15-minute"
+        ]
+      }
+    },
+    {
+      "id": "project",
+      "group": "effort",
+      "name": "Project cooking",
+      "icon": "🧑‍🍳",
+      "blurb": "A Saturday, a technique worth learning, and something to show for it.",
+      "match": {
+        "tags": [
+          "advanced",
+          "project"
+        ]
+      }
+    },
+    {
+      "id": "kids",
+      "group": "effort",
+      "name": "Kids will eat it",
+      "icon": "🧒",
+      "blurb": "Tested against actual children.",
+      "match": {
+        "tags": [
+          "kid-favorite"
+        ]
+      }
+    },
+    {
+      "id": "budget",
+      "group": "effort",
+      "name": "Cheap",
+      "icon": "🪙",
+      "blurb": "Under about two dollars a serving, and not apologetically.",
+      "match": {
+        "tags": [
+          "budget"
+        ]
+      }
+    },
+    {
+      "id": "crowd",
+      "group": "effort",
+      "name": "Feeding a crowd",
+      "icon": "👨‍👩‍👧‍👦",
+      "blurb": "Potlucks, parties and the whole family showing up.",
+      "match": {
+        "tags": [
+          "crowd-pleaser",
+          "potluck",
+          "batch"
+        ]
+      }
+    },
+    {
+      "id": "kid-cook",
+      "group": "effort",
+      "name": "Cook with kids",
+      "icon": "🧑‍🍳",
+      "blurb": "Dishes with real jobs in them for small hands — smashing, tearing, squeezing, scattering. Not helping: cooking.",
+      "match": {
+        "tags": [
+          "kid-cook"
+        ]
+      }
+    },
+    {
+      "id": "short-forgiving",
+      "group": "effort",
+      "name": "Short and forgiving",
+      "icon": "🌱",
+      "blurb": "Few steps, nothing to time precisely, and hard to get wrong. Not a lesser dish — a Tuesday one.",
+      "match": {
+        "tags": [
+          "15-minute",
+          "quick",
+          "no-cook"
+        ]
+      }
+    }
   ]
 }
