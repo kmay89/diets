@@ -14,6 +14,7 @@ import { memberCard } from './member-card.js';
 import { openTasteEditor } from './taste-editor.js';
 import { energyNeeds } from '../nutrition.js';
 import { play } from '../feedback.js';
+import { ALLERGENS } from '../allergy.js';
 
 const STEPS = ['welcome', 'household', 'health', 'time', 'tastes', 'pantry', 'done'];
 
@@ -192,15 +193,14 @@ function openHouseholdHelp() {
       'textures as well as flavors: mark the ingredient, not the whole diet. There is also a ',
       '“kids eat it” filter, and most recipes carry a kid tweak.'),
     qa('Allergies?',
-      'The next screen. Anything flagged there is removed from rolls completely — not labeled, removed.'),
+      'The next screen. Anything flagged there is never recommended anywhere — not dealt in a roll, ',
+      'not offered as a substitute or a flavor fix. Removed, not labeled.'),
     qa('Someone only sometimes at the table?',
       'Add the people you cook for on a normal night. Portions round up to whole servings on ',
       'purpose — leftovers are a feature — and the list is a ten-second edit in Settings whenever ',
       'the table changes.')
   ));
 }
-
-const ALLERGENS = ['dairy', 'egg', 'gluten', 'soy', 'peanut', 'tree-nut', 'sesame', 'fish', 'shellfish'];
 
 function healthStep(state, draw) {
   const p = state.prefs;
@@ -227,18 +227,27 @@ function healthStep(state, draw) {
     ),
     h('h3.step__sub', 'Anything to keep out of the house entirely?'),
     h('div.chip-row',
-      ...ALLERGENS.map(a => chip(a.replace('-', ' '), {
-        on: p.avoidAllergens.includes(a),
+      ...ALLERGENS.map(a => chip(a.label, {
+        on: p.avoidAllergens.includes(a.id),
         onclick: () => {
-          const next = p.avoidAllergens.includes(a)
-            ? p.avoidAllergens.filter(x => x !== a)
-            : [...p.avoidAllergens, a];
+          const next = p.avoidAllergens.includes(a.id)
+            ? p.avoidAllergens.filter(x => x !== a.id)
+            : [...p.avoidAllergens, a.id];
           setPref('avoidAllergens', next);
           draw();
         }
       }))
     ),
-    h('p.fine-print', 'Recipes containing anything you flag here are removed from rolls completely, not just labeled.')
+    h('div.card.info',
+      h('h3', 'What flagging one does — and honestly does not'),
+      h('ul.tight',
+        h('li', 'Anything you flag is never recommended, anywhere: not dealt in a roll, not offered as a substitute or a flavor fix, not suggested for the meat pan. Removed, not labeled.'),
+        h('li', 'Jarred sauces that often hide an allergen without saying so — Thai curry paste and shrimp, chili crisp and peanuts — are treated as containing it, and the app tells you to check the jar.'),
+        h('li', 'A recipe you open from the collection yourself stays readable, with a clear warning at the top — hiding pages from a cookbook helps nobody.'),
+        h('li', 'The honest limit: the app reads its own ingredient lists. It cannot see cross-contact in a kitchen or a factory, or a "may contain" line on a package. Gluten here means no ingredient that contains gluten — which is not the same as certified safe for celiac disease.')
+      )
+    ),
+    h('p.fine-print', 'For a severe allergy, the label on the package outranks anything this app says — every time.')
   );
 }
 

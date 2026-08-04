@@ -17,6 +17,7 @@ import { buildList } from '../shopping.js';
 import { getState, DAYS } from '../store.js';
 import { recentNutrition } from './progress.js';
 import { worthRepeating, whenWords } from '../memory.js';
+import { avoidedSet, recipeConflicts } from '../allergy.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -160,9 +161,16 @@ function noPlanCard(state, recipeIndex, navigate) {
   //
   // Not literally the last thing cooked, though: that is usually last night,
   // and nobody wants last night twice. It is the most recent meal old enough to
-  // want again, skipping anything the kitchen said no to.
-  const repeat = worthRepeating(state, { limit: 1 })[0]
-    || state.history.find(e => recipeIndex.has(e.id));
+  // want again, skipping anything the kitchen said no to — and skipping
+  // anything that has since become an allergen in this house, because what got
+  // cooked before a flag was set does not get recommended after it.
+  const avoid = avoidedSet(state.prefs);
+  const safe = (recipe) =>
+    recipe && !(avoid.size && recipeConflicts(recipe, avoid, getDb().ingIndex).length);
+
+  const repeat = worthRepeating(state, { limit: 8 })
+      .find(e => safe(recipeIndex.get(e.id)))
+    || state.history.find(e => safe(recipeIndex.get(e.id)));
   const again = repeat ? recipeIndex.get(repeat.id) : null;
 
   return h('article.card.tonight--empty',

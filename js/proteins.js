@@ -23,6 +23,7 @@
 
 import { gramsFor } from './nutrition.js';
 import { naturalUnit } from './swaps.js';
+import { blocksItem } from './allergy.js';
 
 let model = null;
 
@@ -72,7 +73,7 @@ export function proteinsIn(recipe, m = model) {
  * recipe offering chicken is not a helpful option, it is a bug.
  */
 export function proteinOptionsFor(recipe, current, {
-  ingIndex, pantry = {}, diet = [], m = model, limit = 8
+  ingIndex, pantry = {}, diet = [], avoid = null, m = model, limit = 8
 } = {}) {
   if (!m || !current) return [];
   const fromItem = ingIndex.get(current.line.ing);
@@ -91,6 +92,10 @@ export function proteinOptionsFor(recipe, current, {
     .map(p => {
       const item = ingIndex.get(p.ing);
       if (!item) return null;
+      // Salmon is not "what else works here" for a fish allergy, and shrimp
+      // is not it for shellfish. Left out entirely rather than shown and
+      // disabled, same as the diet rule above.
+      if (avoid?.size && blocksItem(item, avoid)) return null;
       const ratio = (p.swapRatio || 1) / (current.protein.swapRatio || 1);
       const amount = grams != null ? naturalUnit(item, grams * ratio) : null;
       const cuisineFit = (p.cuisines || []).some(c => c === 'any' || cuisine.includes(c));

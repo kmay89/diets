@@ -31,6 +31,7 @@ import { tipsBlock } from './tips-panel.js';
 import { proteinSwapLine } from '../proteins.js';
 import { cardLook } from '../palette.js';
 import { tableBlock as methodTableBlock } from './recipe-table.js';
+import { avoidedSet, recipeConflicts, forkConflicts, conflictPhrase } from '../allergy.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -52,8 +53,13 @@ export function render(root, { navigate, params }) {
   // fraction — an eighth of a cup of flour — which reads as a broken page
   // rather than as a helpful default.
   let servings = equiv.total > 0 ? Math.max(1, Math.ceil(equiv.total)) : (base.servings || 1);
-  let withOmnivore = !!base.omnivore;
-  let withVegSwap = !!base.vegetarianSwap;
+  // A fork that carries a flagged allergen starts switched off. It can still
+  // be turned on by hand — the person tapping knows their own table — but the
+  // app does not offer an allergen as the default.
+  const avoid0 = avoidedSet(state.prefs);
+  const { ingIndex: ingIndex0 } = getDb();
+  let withOmnivore = !!base.omnivore && !forkConflicts(base.omnivore, avoid0, ingIndex0).length;
+  let withVegSwap = !!base.vegetarianSwap && !forkConflicts(base.vegetarianSwap, avoid0, ingIndex0).length;
 
   const draw = () => mount(root, view());
   const view = () => {
@@ -74,6 +80,14 @@ export function render(root, { navigate, params }) {
     // something has been swapped — what that swap did to it.
     const profile = computeBalance(recipe, ingIndex);
     const delta = swapped ? balanceDelta(computeBalance(base, ingIndex), profile) : [];
+
+    // A recipe that conflicts with the house's allergen list never comes up in
+    // a roll or a suggestion, but it can be opened by hand — the collection is
+    // a cookbook, and hiding pages helps nobody. Opened, it says so plainly.
+    const avoid = avoidedSet(st.prefs);
+    const baseConflicts = recipeConflicts(recipe, avoid, ingIndex);
+    const omniConflicts = recipe.omnivore ? forkConflicts(recipe.omnivore, avoid, ingIndex) : [];
+    const vegConflicts = recipe.vegetarianSwap ? forkConflicts(recipe.vegetarianSwap, avoid, ingIndex) : [];
 
     // The same color the card carried, so the page you land on is visibly the
     // dish you tapped.
@@ -105,13 +119,25 @@ export function render(root, { navigate, params }) {
         ...(recipe.tags || []).slice(0, 3).map(t => pill(t.replace(/-/g, ' ')))
       ),
 
-      // Above everything else, because it changes how the rest is read. A dish
-      // you have cooked three times is not one you are evaluating; the question
-      // you arrived with is what you did last time.
+      // The warning first. Nothing below it matters to somebody who cannot eat
+      // the dish at all.
+      baseConflicts.length
+        ? h('div.allergy-alert', { role: 'alert' },
+            h('strong', `⚠️ This dish ${conflictPhrase(baseConflicts)}`),
+            h('p',
+              'That is flagged in this household, so it never comes up in a roll or a suggestion — ',
+              'it stays in the collection because hiding pages from a cookbook helps nobody. ',
+              'The call comes from the ingredient list; packages can carry more than a list says, so read labels.'))
+        : null,
+
+      // Then what this kitchen already knows about the dish, because it changes
+      // how the rest of the page is read. A dish you have cooked three times is
+      // not one you are evaluating; the question you arrived with is what you
+      // did last time.
       memoryBlock(base, st, ingIndex, { draw }),
 
-      // And the one technique this dish is worth cooking to learn — the reason
-      // to pick it over the other 241, stated in a line.
+      // And the one technique it is worth cooking to learn — the reason to pick
+      // it over the other 241, stated in a line.
       teachesLine(base, st, navigate),
 
       servingControl(recipe, servings, equiv, (n) => { servings = n; draw(); }),
@@ -160,8 +186,8 @@ export function render(root, { navigate, params }) {
         onRemove: (ing) => { removeFromDish(base.id, ing); play('uncheck'); draw(); }
       }),
 
-      recipe.omnivore ? forkBlock(recipe.omnivore, 'omnivore', scale, withOmnivore, (v) => { withOmnivore = v; draw(); }, st, draw) : null,
-      recipe.vegetarianSwap ? forkBlock(recipe.vegetarianSwap, 'veg', scale, withVegSwap, (v) => { withVegSwap = v; draw(); }, st, draw) : null,
+      recipe.omnivore ? forkBlock(recipe.omnivore, 'omnivore', scale, withOmnivore, (v) => { withOmnivore = v; draw(); }, st, draw, omniConflicts) : null,
+      recipe.vegetarianSwap ? forkBlock(recipe.vegetarianSwap, 'veg', scale, withVegSwap, (v) => { withVegSwap = v; draw(); }, st, draw, vegConflicts) : null,
 
       proteinBlock(base, ingIndex, {
         pantry: st.pantry,
@@ -313,6 +339,7 @@ function openSwapSheet(recipeId, line, scale, draw) {
     diet: recipe?.diet || [],
     pantry: state.pantry,
     likes: state.likes,
+    avoid: avoidedSet(state.prefs),
     limit: 6
   });
   if (!ladder) return;
@@ -492,7 +519,7 @@ function ingredientList(recipe, state, scale, draw) {
   );
 }
 
-function forkBlock(fork, kind, scale, on, onToggle, state, draw) {
+function forkBlock(fork, kind, scale, on, onToggle, state, draw, conflicts = []) {
   const { ingIndex } = getDb();
   return h('section', { class: `card fork-block fork-block--${kind}` },
     h('div.fork-block__head',
@@ -502,6 +529,9 @@ function forkBlock(fork, kind, scale, on, onToggle, state, draw) {
         h('span', on ? 'Included' : 'Skipped')
       )
     ),
+    conflicts.length
+      ? h('p.allergy-note', `⚠️ This add-on ${conflictPhrase(conflicts)} — flagged in this household, so it starts switched off.`)
+      : null,
     h('p.fork-block__label', fork.label),
     h('p.muted', fork.note),
     fork.add?.length

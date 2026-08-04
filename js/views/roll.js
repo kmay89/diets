@@ -14,6 +14,7 @@ import { play, tumble, stagger, pulse } from '../feedback.js';
 import { upcomingOccasion, recipesForOccasion } from '../occasions.js';
 import { iconCollage } from '../food-icon.js';
 import { cardLook } from '../palette.js';
+import { avoidedSet, forkConflicts, conflictPhrase } from '../allergy.js';
 
 /** Session-only: the current hand. Not persisted — a roll is a moment, not a document. */
 let hand = [];        // [{ recipe, locked }]
@@ -203,6 +204,12 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
   const servings = suggestedServings(recipe, equiv);
 
   const look = cardLook(recipe, getDb().ingIndex);
+  // The base of this recipe is clean — the roll filter saw to that — but the
+  // meat add-on can still carry something the house flagged, and an add-on
+  // that would hurt somebody is not offered, it is explained.
+  const forkConf = recipe.omnivore
+    ? forkConflicts(recipe.omnivore, avoidedSet(state.prefs), getDb().ingIndex)
+    : [];
   return h('article', {
     class: `card recipe-card ${locked ? 'is-locked' : ''} ${look.className}`,
     style: look.style
@@ -226,7 +233,7 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
       pill(`${minutes(recipe.activeMin)} active`),
       pill(minutes(recipe.totalMin) + ' total'),
       recipe.diet?.includes('vegan') ? pill('vegan', 'green') : recipe.diet?.includes('vegetarian') ? pill('vegetarian', 'green') : null,
-      recipe.omnivore ? pill('+ omnivore add-on', 'meat') : null,
+      recipe.omnivore && !forkConf.length ? pill('+ omnivore add-on', 'meat') : null,
       recipe.vegetarianSwap ? pill('+ vegetarian swap', 'green') : null,
       recipe.kidFriendly ? pill('kids eat it') : null,
       cov.total ? pill(`${cov.have}/${cov.total} in pantry`, cov.ratio > 0.5 ? 'green' : '') : null
@@ -235,7 +242,10 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
     reasons.length ? h('p.why', h('span.why__label', 'Why this one: '), reasons.slice(0, 3).join(', ')) : null,
 
     recipe.omnivore
-      ? h('p.fork', h('strong', '🍽 Fork in the road: '), recipe.omnivore.label, ' — ', recipe.omnivore.note)
+      ? forkConf.length
+        ? h('p.fork.fork--skipped', h('strong', '🍽 Fork skipped: '),
+            `the usual add-on ${conflictPhrase(forkConf)}, which this household avoids. The base is clear.`)
+        : h('p.fork', h('strong', '🍽 Fork in the road: '), recipe.omnivore.label, ' — ', recipe.omnivore.note)
       : null,
 
     h('div.recipe-card__actions',
