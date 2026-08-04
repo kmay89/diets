@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v3.5.0';
+const VERSION = 'v3.6.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
