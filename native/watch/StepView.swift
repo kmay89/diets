@@ -49,6 +49,25 @@ struct StepView: View {
                         .font(.body)
                         .fixedSize(horizontal: false, vertical: true)
 
+                    if let timer = step.timer {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Button(timer.label) { link.send("timer.start") }
+                                .buttonStyle(.borderedProminent)
+                            if !timer.cue.isEmpty {
+                                Text("until \(timer.cue)")
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(2)
+                            }
+                            if !timer.slack.isEmpty {
+                                Text(timer.slack)
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(.top, 2)
+                    }
+
                     HStack {
                         Button("Back") { link.send("step.back") }
                             .disabled(step.index == 0)

@@ -36,7 +36,7 @@ globalThis.localStorage ??= {
 
 const { snapshot, applyCommand, setWatchStep, clearWatchStep, hasWatch } =
   await import('../js/watch.js');
-const { startTimer, clearAllTimers, pauseTimer, timerFor } = await import('../js/timers.js');
+const { startTimer, clearAllTimers, pauseTimer, clearTimer, timerFor } = await import('../js/timers.js');
 
 const state = (over = {}) => ({ customItems: [], checked: {}, ...over });
 
@@ -162,4 +162,58 @@ test('leaving cook mode clears the step rather than leaving it on the wrist', ()
   setWatchStep({ recipe: 'x', index: 0, total: 2, text: 'y', wants: [] });
   clearWatchStep();
   assert.equal(snapshot(state()).step, null);
+});
+
+/* ------------------------------------------------------------------ *
+ * Starting the step's timer from the wrist
+ * ------------------------------------------------------------------ */
+
+test('the wrist can start the step\'s timer, on the step\'s own terms', () => {
+  // The button somebody was about to walk across the kitchen for. The terms
+  // come from the step rather than from the watch — a wrist is no place to
+  // pick a duration, and one picked there would not carry the cue or the slack.
+  clearAllTimers();
+  setWatchStep({
+    recipe: 'x', index: 0, total: 2, text: 'Cook 10-12 minutes.', wants: [],
+    timer: {
+      id: 'rec.x:0', seconds: 600, upto: 720,
+      cue: 'the onion is golden', label: 'x · cook', step: 0, recipeId: 'rec.x'
+    }
+  });
+
+  assert.equal(applyCommand({ type: 'timer.start' }), true);
+  const started = timerFor('rec.x:0');
+  assert.ok(started, 'nothing started');
+  assert.equal(started.cue, 'the onion is golden', 'the cue was left behind');
+  assert.equal(started.upto, 720, 'the slack was left behind');
+  clearWatchStep();
+  clearAllTimers();
+});
+
+test('a step with no timer offers none, and asking for one does nothing', () => {
+  clearAllTimers();
+  setWatchStep({ recipe: 'x', index: 0, total: 2, text: 'Season to taste.', wants: [], timer: null });
+  assert.equal(applyCommand({ type: 'timer.start' }), false,
+    'a step with no timer invented one');
+  clearWatchStep();
+});
+
+test('a timer already counting is not offered again', () => {
+  // Starting one from the watch does not redraw cook mode, so whether the offer
+  // still stands has to be decided when the snapshot is taken. Baked in at
+  // publish time, the wrist went on showing "Start 10 min" beside a pot that
+  // had been counting for four minutes — which is how a timer gets started
+  // twice and the pasta gets ten extra minutes.
+  clearAllTimers();
+  const timer = { id: 'rec.y:2', seconds: 600, upto: 720, cue: 'golden', label: 'y · cook' };
+  setWatchStep({ recipe: 'y', index: 2, total: 5, text: 'Cook 10 minutes.', wants: [], timer });
+
+  assert.equal(snapshot(state()).step.timer.seconds, 600, 'not offered before it was started');
+  applyCommand({ type: 'timer.start' });
+  assert.equal(snapshot(state()).step.timer, null, 'still on offer while it was counting');
+
+  clearTimer('rec.y:2');
+  assert.equal(snapshot(state()).step.timer.seconds, 600, 'not offered again after being stopped');
+  clearWatchStep();
+  clearAllTimers();
 });

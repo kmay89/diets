@@ -50,8 +50,32 @@ struct WatchStep: Codable, Equatable {
     let total: Int
     let text: String
     let wants: [WatchAmount]
+    /// Present only when this step has a timer and it is not already running.
+    let timer: WatchStepTimer?
 
     var position: String { "Step \(index + 1) of \(total)" }
+}
+
+/// What the step's timer would be, stated before it is set.
+///
+/// The terms travel with it so the wrist can make the same promise the phone
+/// makes — rings at the bottom of the range so you can look, with the rest of
+/// the range still in hand — rather than presenting a bare number.
+struct WatchStepTimer: Codable, Equatable {
+    let seconds: Int
+    let upto: Int
+    let cue: String
+
+    var label: String {
+        let mins = max(1, Int((Double(seconds) / 60).rounded()))
+        return seconds < 60 ? "Start \(seconds) sec" : "Start \(mins) min"
+    }
+
+    /// "up to 12 min if it needs it", or nothing when the step gave no range.
+    var slack: String {
+        guard upto > seconds else { return "" }
+        return "up to \(Int((Double(upto) / 60).rounded())) min if it needs it"
+    }
 }
 
 struct WatchAmount: Codable, Equatable, Identifiable {

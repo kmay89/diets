@@ -28,7 +28,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { list as timers, subscribeTimers, toggleTimer, addMinute, clearTimer } from './timers.js';
+import { list as timers, subscribeTimers, toggleTimer, addMinute, clearTimer, startTimer, timerFor } from './timers.js';
 import { getState, subscribe, toggleChecked } from './store.js';
 import { nativePlugin } from './native.js';
 
@@ -83,7 +83,13 @@ export function snapshot(state = getState()) {
         done: !!t.done,
         paused: !!t.paused
       })),
-    step: currentStep,
+    step: currentStep && {
+      ...currentStep,
+      // Offered only while it is not already running. A wrist showing "Start
+      // 10 min" beside a pot that has been counting for four minutes is the
+      // kind of small wrongness that gets a timer started twice.
+      timer: currentStep.timer && !timerFor(currentStep.timer.id) ? currentStep.timer : null
+    },
     list: shoppingRows(state).slice(0, 60)
   };
 }
@@ -141,6 +147,14 @@ export function applyCommand(cmd = {}, { onStep } = {}) {
     case 'timer.toggle': toggleTimer(cmd.id); return true;
     case 'timer.more': addMinute(cmd.id, Number(cmd.seconds) || 60); return true;
     case 'timer.clear': clearTimer(cmd.id); return true;
+    // Starting the step's own timer, which is the button somebody was about to
+    // walk across the kitchen for. The terms come from the step, not from the
+    // watch — a wrist is no place to pick a duration.
+    case 'timer.start': {
+      if (!currentStep?.timer) return false;
+      startTimer(currentStep.timer);
+      return true;
+    }
     case 'list.toggle': toggleChecked(cmd.key); return true;
     // Advancing the step is the one command that has to reach a screen rather
     // than the store: cook mode owns where it is.

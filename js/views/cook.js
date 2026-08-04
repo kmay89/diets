@@ -133,6 +133,7 @@ export function render(root, { navigate, params }) {
     session.step = Math.max(0, Math.min(texts.length - 1, session.step + delta));
     draw();
   };
+  session.recipeId = base.id;
   session.publish = () => publishStep(recipe, texts, plan, session);
   session.publish();
   // The one thing outside this module that needs to reach the live screen is a
@@ -162,8 +163,32 @@ function publishStep(recipe, texts, plan, session) {
     wants: (plan[i]?.wants || []).map(w => ({
       name: w.item.name,
       amount: w.amount || w.label
-    }))
+    })),
+    // The one button worth having on a wrist. Standing at the stove with a pan
+    // going, the phone is on the other counter and this is the thing you were
+    // going to reach for it to press.
+    //
+    // Always sent. Whether it is still *on offer* is decided when the snapshot
+    // is taken, because starting it from the watch does not redraw this screen
+    // — baked in here, the wrist went on showing Start for a pot already
+    // counting.
+    timer: timerOffer(texts[i]?.text || '', session.recipeId, i, recipe.title)
   });
+}
+
+/** The step's timer as the watch needs it, or null when the step has none. */
+function timerOffer(text, recipeId, index, title) {
+  const timing = stepTiming(text);
+  if (!timing.seconds) return null;
+  return {
+    id: `${recipeId}:${index}`,
+    seconds: timing.seconds,
+    upto: timing.upto,
+    cue: timing.cue,
+    label: timerLabel(title, text, index + 1),
+    step: index,
+    recipeId
+  };
 }
 
 /**
