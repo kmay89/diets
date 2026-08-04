@@ -55,12 +55,21 @@ test('the longest duration in a step wins', () => {
   assert.equal(parseDuration('Brown for 2 minutes, then simmer 20 minutes'), 20 * 60);
 });
 
-test('nothing worth standing over gets no timer', () => {
+test('a step with no time in it gets no timer', () => {
   assert.equal(parseDuration('Season with salt and pepper to taste'), 0);
   assert.equal(parseDuration('Serves 4 people'), 0);
-  // Over an hour is a braise or an overnight soak, not a stovetop watch.
+});
+
+test('long cooks get a timer now that timers outlive the screen', () => {
+  // This used to stop at an hour, because a timer that died the moment you left
+  // cook mode was no use to a braise — you would be somewhere else when it went
+  // off. Timers now live outside every view and are written to storage, so they
+  // survive navigation and a closed tab, and a two-hour braise is exactly the
+  // thing worth being told about.
+  assert.equal(parseDuration('bake 90 minutes'), 90 * 60);
+  assert.equal(parseDuration('braise 3 hours'), 3 * 3600);
+  // An overnight soak is a plan for tomorrow rather than a timer for tonight.
   assert.equal(parseDuration('refrigerate 8 hours or overnight'), 0);
-  assert.equal(parseDuration('bake 90 minutes'), 0);
 });
 
 test('the clock reads like a clock', () => {
@@ -105,7 +114,7 @@ test('no step in the collection claims a duration it does not have', () => {
       const seconds = parseDuration(step);
       if (!seconds) continue;
       assert.match(step, /\d/, `${recipe.id}: timer from a step with no number`);
-      assert.ok(seconds <= 3600, `${recipe.id}: ${seconds}s timer is too long to stand over`);
+      assert.ok(seconds <= 14400, `${recipe.id}: ${seconds}s is longer than any single cooking step`);
     }
   }
 });

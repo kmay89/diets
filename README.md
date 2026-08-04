@@ -98,10 +98,23 @@ finishers rather than filler, and acid doing the work salt usually does. Every s
 shows its work — including which ingredients are driving it.
 
 **🔥 Cook mode.** One step at a time, full screen, on a dark field that does not glare in a dim
-kitchen — at a size you can read from a step back with your hands full. It reads the instruction to
-work out which ingredients that step is about and draws them, and offers a timer for any duration
-written into the step, taking the top of a range because a timer that goes off early is a timer you
-learn to ignore.
+kitchen — at a size you can read from a step back with your hands full.
+
+Three things it does that a printed recipe cannot. It tells you **how much of each ingredient this
+step wants**, scaled to the servings you are actually cooking — half the oil now and the rest at the
+end, a cup of the pasta water held back — because an ingredient list says "2 tbsp olive oil" once and
+a method spends it twice. Where the words do not say how something is split, it says so rather than
+inventing a fraction. Beside the instruction runs a **minimap** of the whole ingredient list, shrunk:
+solid is already in, bright is going in now, faint is still to come, and a tap jumps to the step that
+calls for it. And the **timers float above everything and outlive the screen** — start one, walk away,
+open the shopping list, close the tab, and it is still counting, because the pot is.
+
+**🧩 The method as a diagram.** Ingredients down the left, brackets to the right, each one swallowing
+the ones before it under the thing you do — melt, mix, fold in, bake. It shows what a numbered list
+cannot: that the dry ingredients never meet the wet until step four, that the pasta is boiling in
+parallel rather than after, how many things are on the go at once. Derived from each recipe's own
+method rather than drawn by hand, and a recipe whose steps cannot be traced to its ingredients with
+enough confidence keeps its list instead of getting a diagram that guesses.
 
 **🍽 Build a plate.** Start from the shape of a dinner rather than from a recipe: a whole grain, a
 vegetable, a protein and something to finish. The heart-forward score and the fiber, sodium and
@@ -219,6 +232,9 @@ js/
   kitchen.js            kitchen jobs by age, and what a recipe asks for
   tips.js               the technique library, matched to the dish in front of you
   palette.js            what color a dish is, and what pattern its card carries
+  timers.js             timers that live outside every view and survive a reload
+  cook-steps.js         how much of what, per step, scaled to your servings
+  recipe-table.js       the method as a diagram of what meets what, and when
   ui.js                 ~200 lines of DOM helpers
   food-icon.js          the icon per ingredient, and which ones illustrate a step
   views/                one module per screen — today, create, plate, cook, plan,

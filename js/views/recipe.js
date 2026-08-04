@@ -27,6 +27,7 @@ import { kidsBlock, teachesBlock, asksPill } from './kitchen-panel.js';
 import { tipsBlock } from './tips-panel.js';
 import { proteinSwapLine } from '../proteins.js';
 import { cardLook } from '../palette.js';
+import { tableBlock as methodTableBlock } from './recipe-table.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -43,7 +44,11 @@ export function render(root, { navigate, params }) {
 
   const state = getState();
   const equiv = servingEquivalents(state.household.members, base.course);
-  let servings = Math.max(1, Math.ceil(equiv.total));
+  // An app nobody has entered a household into shows the recipe as written.
+  // Defaulting to one serving turned every amount into a fraction of a
+  // fraction — an eighth of a cup of flour — which reads as a broken page
+  // rather than as a helpful default.
+  let servings = equiv.total > 0 ? Math.max(1, Math.ceil(equiv.total)) : (base.servings || 1);
   let withOmnivore = !!base.omnivore;
   let withVegSwap = !!base.vegetarianSwap;
 
@@ -159,7 +164,7 @@ export function render(root, { navigate, params }) {
         }
       }),
 
-      stepsBlock(recipe),
+      stepsBlock(recipe, ingIndex, scale, draw),
 
       teachesBlock(recipe),
       tipsBlock(recipe),
@@ -494,8 +499,32 @@ function forkBlock(fork, kind, scale, on, onToggle, state, draw) {
   );
 }
 
-function stepsBlock(recipe) {
-  return block('Method', h('ol.steps', ...recipe.steps.map(s => h('li', s))));
+/**
+ * The method, either as sentences or as a diagram.
+ *
+ * The list is the default because it is the instruction. The table is the same
+ * method with its structure visible — what meets what, and what is happening in
+ * parallel — which is the thing a list genuinely cannot show. The choice is
+ * remembered for the session, because somebody who prefers one prefers it for
+ * every recipe.
+ */
+let methodAsTable = false;
+
+function stepsBlock(recipe, ingIndex, scale, draw) {
+  const table = ingIndex ? methodTableBlock(recipe, ingIndex, { scale }) : null;
+
+  return h('section.card.block',
+    h('div.balance__head',
+      h('h2.block__title', 'Method'),
+      table
+        ? h('div.chip-row.chip-row--tight',
+            chip('Steps', { on: !methodAsTable, onclick: () => { methodAsTable = false; play('tap'); draw(); } }),
+            chip('Diagram', { on: methodAsTable, onclick: () => { methodAsTable = true; play('tap'); draw(); } })
+          )
+        : null
+    ),
+    methodAsTable && table ? table : h('ol.steps', ...recipe.steps.map(s => h('li', s)))
+  );
 }
 
 function notesBlock(recipe) {
