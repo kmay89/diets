@@ -15,7 +15,7 @@
 import { getDb, gramsForLine } from './data.js';
 import { shoppingStores } from './store.js';
 import { formatQty } from './nutrition.js';
-import { withSwaps } from './swaps.js';
+import { asCooked } from './swaps.js';
 
 /* ------------------------------------------------------------------ *
  * Building
@@ -34,7 +34,9 @@ export function buildList(state, { includeOptional = false, includePantry = fals
     if (!original) continue;
     // A swap the cook made on the recipe page has to reach the list, or they
     // stand in the shop buying the thing they already decided not to use.
-    const recipe = withSwaps(original, state.swaps);
+    // As this household actually cooks it: their swaps, and anything the
+    // flavor panel talked them into adding.
+    const recipe = asCooked(original, { swaps: state.swaps, additions: state.additions });
     const scale = (entry.servings || recipe.servings) / recipe.servings;
 
     const lines = [...recipe.ingredients];

@@ -59,6 +59,12 @@ function defaultState() {
     recipeLikes: {},
     /** recipeId -> { ingredientId: substituteId } — "use this instead, here" */
     swaps: {},
+    /**
+     * recipeId -> [ingredient lines] the household added to that dish, usually
+     * from the flavor panel: the squeeze of lemon, the toasted almonds. Real
+     * lines, so the nutrition, the score, the dials and the list all follow.
+     */
+    additions: {},
     /** ingredientId -> true when it is already in the house */
     pantry: {},
     /** planned meals */
@@ -270,6 +276,45 @@ export function setSwap(recipeId, ingredientId, substituteId) {
 export function clearSwaps(recipeId) {
   update(s => { if (s.swaps) delete s.swaps[recipeId]; });
 }
+
+/**
+ * Add something to a dish — the squeeze of lemon, the handful of toasted
+ * almonds, the spoonful of miso the flavor panel suggested.
+ *
+ * The first version of that panel only put the suggestion on the shopping list,
+ * which meant tapping it appeared to do nothing: the dish was unchanged, so the
+ * panel went on saying there was no crunch in it. An addition is a real
+ * ingredient line now, kept per recipe like a swap, and everything downstream —
+ * the ingredient list, the nutrition panel, the heart score, the flavor dials
+ * and the shopping list — reads it.
+ */
+export function addToDish(recipeId, line) {
+  if (!line?.ing) return;
+  update(s => {
+    s.additions = s.additions || {};
+    const forRecipe = s.additions[recipeId] || (s.additions[recipeId] = []);
+    const existing = forRecipe.findIndex(l => l.ing === line.ing);
+    // Tapping the same suggestion twice means "yes, more of it" rather than a
+    // second identical line nobody can tell apart.
+    if (existing >= 0) forRecipe[existing] = { ...forRecipe[existing], qty: forRecipe[existing].qty + line.qty };
+    else forRecipe.push({ ...line, added: true });
+  });
+}
+
+export function removeFromDish(recipeId, ingredientId) {
+  update(s => {
+    const forRecipe = s.additions?.[recipeId];
+    if (!forRecipe) return;
+    s.additions[recipeId] = forRecipe.filter(l => l.ing !== ingredientId);
+    if (!s.additions[recipeId].length) delete s.additions[recipeId];
+  });
+}
+
+export function clearAdditions(recipeId) {
+  update(s => { if (s.additions) delete s.additions[recipeId]; });
+}
+
+export const additionsFor = (recipeId, s = state) => s.additions?.[recipeId] || [];
 
 /* ------------------------------------------------------------------ *
  * Pantry

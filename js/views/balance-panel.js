@@ -14,6 +14,7 @@
  */
 
 import { h, pill, sheet } from '../ui.js';
+import { formatQty } from '../nutrition.js';
 import { fixesFor, sayFor, balanceLessons } from '../balance.js';
 import { foodIcon } from '../food-icon.js';
 
@@ -23,7 +24,7 @@ import { foodIcon } from '../food-icon.js';
  * `delta` is what changed since the recipe as written — the output of
  * balanceDelta — and is null when nothing has been swapped.
  */
-export function balanceBlock(profile, ingIndex, { delta = [], onAdd = null } = {}) {
+export function balanceBlock(profile, ingIndex, { delta = [], added = [], onAdd = null, onRemove = null } = {}) {
   if (!profile) return null;
 
   const lost = (delta || []).filter(c => c.lost);
@@ -45,7 +46,9 @@ export function balanceBlock(profile, ingIndex, { delta = [], onAdd = null } = {
       ? h('p.balance__gained', `Your version adds ${gained.map(nameOf).join(' and ').toLowerCase()}.`)
       : null,
 
-    h('div.flavor-dials', ...profile.axes.map(axis => dial(axis))),
+    added.length ? addedRow(added, ingIndex, onRemove) : null,
+
+    h('div.flavor-dials', ...profile.axes.map(axis => dial(axis, ingIndex, onAdd))),
 
     h('div.finish-row',
       ...profile.finishers.map(f => h('button', {
@@ -64,7 +67,7 @@ export function balanceBlock(profile, ingIndex, { delta = [], onAdd = null } = {
 }
 
 /** One dial: a bar with the band marked on it, and a word for where it sits. */
-function dial(axis) {
+function dial(axis, ingIndex, onAdd) {
   const label = axis.state === 'low' ? (axis.carried ? 'light, and carried' : 'low')
     : axis.state === 'high' ? 'a lot'
       : axis.state === 'off' ? 'none'
@@ -73,7 +76,7 @@ function dial(axis) {
   return h('button', {
     type: 'button',
     class: `flavor-dial flavor-dial--${axis.state}${axis.carried ? ' is-carried' : ''}`,
-    onclick: () => openAxis(axis),
+    onclick: () => openAxis(axis, ingIndex, onAdd),
     'aria-label': `${axis.name}: ${label}. ${axis.short}`
   },
     h('span.flavor-dial__top',
@@ -142,18 +145,58 @@ function verdict(profile, low, high, missing, ingIndex, onAdd) {
   );
 }
 
-/** One suggested addition: what, how much, how, and why it works. */
+/**
+ * One suggested addition: what, how much, how, and why it works.
+ *
+ * The button puts it in the dish rather than on a list. That is the whole point
+ * of the panel — accept the crunch and the panel has to stop saying there is no
+ * crunch, or the suggestion was theater.
+ */
 function fixRow(fix, ingIndex, onAdd) {
   const item = fix.item || ingIndex.get(fix.ing);
+  const canAdd = onAdd && item && fix.qty > 0 && fix.unit;
   return h('div.fix',
     item ? foodIcon(item, { size: 26 }) : null,
     h('div.fix__body',
       h('p.fix__what', h('strong', fix.amount), ' ', item?.name || fix.ing, ' — ', fix.how),
       h('p.fix__why', fix.why)
     ),
-    onAdd && item
-      ? h('button.btn.btn--small', { type: 'button', onclick: () => onAdd(item) }, '+ list')
+    canAdd
+      ? h('button.btn.btn--small.btn--primary', {
+          type: 'button',
+          title: `Add ${fix.amount} of ${item.name.toLowerCase()} to this dish`,
+          onclick: () => onAdd(fix, item)
+        }, 'Add it')
       : null
+  );
+}
+
+/**
+ * What the household has already added, with a way back out.
+ *
+ * Shown at the top of the panel rather than buried, because these lines are the
+ * reason the dials below look the way they do.
+ */
+function addedRow(added, ingIndex, onRemove) {
+  return h('div.added-row',
+    h('p.field__label', 'You added to this dish'),
+    h('div.added-chips', ...added.map(line => {
+      const item = ingIndex.get(line.ing);
+      if (!item) return null;
+      return h('span.added-chip',
+        item ? foodIcon(item, { size: 20 }) : null,
+        h('span.added-chip__name', item.name),
+        h('span.added-chip__qty', formatQty(line.qty, line.unit)),
+        onRemove
+          ? h('button.added-chip__x', {
+              type: 'button',
+              'aria-label': `Take the ${item.name.toLowerCase()} back out`,
+              onclick: () => onRemove(line.ing)
+            }, '×')
+          : null
+      );
+    }).filter(Boolean)),
+    h('p.fine-print', 'These are real ingredient lines: the amounts, the nutrition, the score and the shopping list all follow them.')
   );
 }
 
@@ -161,7 +204,7 @@ function fixRow(fix, ingIndex, onAdd) {
  * The sheets behind it
  * ------------------------------------------------------------------ */
 
-function openAxis(axis) {
+function openAxis(axis, ingIndex, onAdd) {
   const dir = axis.state === 'high' ? 'high' : 'low';
   sheet(`${axis.icon} ${axis.name}`,
     h('div.axis-sheet',
@@ -187,7 +230,7 @@ function openAxis(axis) {
       axis.reference ? h('p.fine-print', axis.reference) : null,
       axis.cross ? h('p.fine-print', axis.cross) : null,
       h('h4.step__sub', dir === 'high' ? 'If it is too much' : 'If it needs more'),
-      h('div.fix-list', ...fixesFor(axis, dir, null).map(f => plainFix(f)))
+      h('div.fix-list', ...fixesFor(axis, dir, ingIndex).map(f => fixRow(f, ingIndex, onAdd)))
     )
   );
 }
@@ -219,15 +262,6 @@ function openAll(profile, ingIndex, onAdd) {
         h('p.balance__say', h('strong', `${source.icon} ${source.name}: `), sayFor(source, dir)),
         ...fixesFor(source, dir, ingIndex).slice(0, 2).map(f => fixRow(f, ingIndex, onAdd))
       ))
-    )
-  );
-}
-
-function plainFix(fix) {
-  return h('div.fix',
-    h('div.fix__body',
-      h('p.fix__what', h('strong', fix.amount), ' ', fix.ing.replace(/^ing\./, '').replace(/\./g, ' '), ' — ', fix.how),
-      h('p.fix__why', fix.why)
     )
   );
 }
