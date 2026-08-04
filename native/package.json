@@ -1,0 +1,26 @@
+{
+  "name": "veg-nourish-ios",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The iOS shell around the Veg-Nourish web app. Kept out of the site's own package.json so the web build stays dependency-free.",
+  "license": "MIT",
+  "scripts": {
+    "sync-web": "node scripts/sync-web.mjs",
+    "add:ios": "npm run sync-web && cap add ios",
+    "sync": "npm run sync-web && cap sync ios",
+    "open": "cap open ios",
+    "ship": "npm run sync && npm run open"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  },
+  "dependencies": {
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/haptics": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0",
+    "@capacitor/status-bar": "^7.0.0"
+  }
+}

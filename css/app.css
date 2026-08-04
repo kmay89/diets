@@ -3296,3 +3296,37 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 .printout__book-version { margin: 1px 0 0; font-size: 9pt; }
 .printout__book-note { margin: 2px 0 0 10pt; font-size: 9pt; font-style: italic; }
 .printout__foot { margin-top: 14pt; font-size: 8pt; color: #666; }
+
+/* ------------------------------------------------------------------ *
+ * Inside an app shell
+ * ------------------------------------------------------------------ *
+ *
+ * `is-native` is set by js/native.js and only ever inside a real app. None of
+ * this applies on the web, where the browser's own chrome does these jobs and
+ * taking them over would be worse than leaving them alone.
+ */
+
+/* The rubber-band bounce is a browser affordance. In an app it reads as the
+ * screen coming loose, because there is no address bar for it to reveal. */
+.is-native, .is-native body { overscroll-behavior: none; }
+
+/* No text selection on things that are buttons wearing a different hat, and no
+ * long-press magnifier on a recipe step somebody is holding the phone over. */
+.is-native .cookmode, .is-native .tabbar, .is-native .timer-dock,
+.is-native button, .is-native .book__entry, .is-native .craft__chip {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.is-native { -webkit-tap-highlight-color: transparent; }
+
+/* The status bar sits over the page rather than beside it, so the app's own
+ * header has to make room for it. */
+.is-ios .appbar { padding-top: max(10px, env(safe-area-inset-top, 0px)); }
+
+/* An installed app has no browser UI to fall back on, so nothing may sit under
+ * the home indicator. */
+.is-native .tabbar { padding-bottom: max(6px, env(safe-area-inset-bottom, 0px)); }
+
+/* Nothing to install: it is already installed. */
+.is-native .install-banner, .is-native .install-cta { display: none !important; }
