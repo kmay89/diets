@@ -15,6 +15,8 @@
  * ERRERLabs — MIT licensed.
  */
 
+import { haptic } from './native.js';
+
 const STORAGE_KEY = 'errerlabs.diets.sound';
 
 let ctx = null;
@@ -135,8 +137,23 @@ const VOICES = {
   warn: () => { tone(NOTE.F, { duration: 0.14, gain: 0.4, type: 'triangle' }); }
 };
 
+/**
+ * The physical half of a sound, on a phone that has one.
+ *
+ * Deliberately not keyed off the sound setting: somebody who turned the sound
+ * off in a quiet house usually wants the buzz *more*, not less, and a tap you
+ * can feel is a tap you do not have to look at — which is the point when your
+ * hands are wet and the phone is propped against the toaster.
+ */
+const FEEL = {
+  tap: 'light', check: 'success', uncheck: 'light', add: 'light',
+  remove: 'light', roll: 'medium', complete: 'success', cooked: 'success',
+  warn: 'warning'
+};
+
 /** Play a named sound. Silently does nothing if sound is off or unsupported. */
 export function play(name) {
+  if (FEEL[name]) haptic(FEEL[name]);
   if (!enabled || !unlocked) return;
   try {
     VOICES[name]?.();

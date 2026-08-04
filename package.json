@@ -36,7 +36,9 @@
     "verify": "node tools/verify-data.mjs",
     "test": "node --test \"test/*.test.mjs\" && node tools/verify-data.mjs",
     "build:icons.food": "node tools/make-food-icons.mjs",
-    "build:art": "node tools/art-manifest.mjs"
+    "build:art": "node tools/art-manifest.mjs",
+    "ios": "npm --prefix native run ship",
+    "ios:sync": "npm --prefix native run sync"
   },
   "engines": {
     "node": ">=18"

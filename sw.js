@@ -42,6 +42,7 @@ const PRECACHE = [
   './js/memory.js',
   './js/skills.js',
   './js/book.js',
+  './js/native.js',
   './js/cook-steps.js',
   './js/recipe-table.js',
   './js/views/member-card.js',

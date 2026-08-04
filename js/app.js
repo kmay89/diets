@@ -16,7 +16,8 @@ import { loadKitchen } from './kitchen.js';
 import { loadTips } from './tips.js';
 import { loadPalette } from './palette.js';
 import { loadSkills } from './skills.js';
-import { initTimers, setTimerAlarm } from './timers.js';
+import { initTimers, setTimerAlarm, timerFor } from './timers.js';
+import { initNative } from './native.js';
 import { initTimerDock } from './views/timer-dock.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
@@ -185,6 +186,16 @@ async function boot() {
 
   initTheme();
   buildChrome();
+  // Inside an app shell this wires up the status bar and notification taps. In
+  // a browser it does nothing and the site is unchanged.
+  initNative({
+    onOpenRef: (id) => {
+      const timer = timerFor(id);
+      if (!timer?.recipeId) return;
+      const step = Number.isInteger(timer.step) ? `?step=${timer.step + 1}` : '';
+      navigate(`#/cook/${timer.recipeId}${step}`);
+    }
+  });
   // Timers live outside every view, so they survive leaving cook mode.
   initTimerDock();
   // A chime, and the dock says the rest. It used to also throw a toast, which
