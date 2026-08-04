@@ -34,13 +34,24 @@ globalThis.window ??= {};
 globalThis.document ??= { createElement: () => ({ style: {}, setAttribute() {}, appendChild() {} }) };
 
 const { parseDuration, formatClock } = await import('../js/views/cook.js');
+const { stepTiming } = await import('../js/step-timing.js');
 const { ingredientsNamedIn } = await import('../js/food-icon.js');
 
-test('a range takes its upper bound, not its lower', () => {
-  // Going off five minutes early teaches people to ignore the timer.
-  assert.equal(parseDuration('Cook 10-12 minutes, stirring now and then'), 12 * 60);
-  assert.equal(parseDuration('simmer 30-35 minutes until tender'), 35 * 60);
-  assert.equal(parseDuration('roast 20 to 25 minutes'), 25 * 60);
+test('a range rings at its lower bound, and keeps the upper as slack', () => {
+  // This used to ring at the top of the range, on the reasoning that going off
+  // early teaches people to ignore the timer. That was the wrong way round.
+  // Arriving early with a spoon costs nothing; arriving at the top of the range
+  // is how a thing gets overcooked, and it turns the bell into a verdict on
+  // food the cook has not looked at yet. It rings at the bottom now and carries
+  // the top along, so the pill can offer the remaining minutes rather than
+  // imply they have been used up.
+  assert.equal(parseDuration('Cook 10-12 minutes, stirring now and then'), 10 * 60);
+  assert.equal(parseDuration('simmer 30-35 minutes until tender'), 30 * 60);
+  assert.equal(parseDuration('roast 20 to 25 minutes'), 20 * 60);
+
+  assert.deepEqual(stepTiming('roast 20 to 25 minutes'), { seconds: 1200, upto: 1500, cue: '' });
+  // A single number has no slack to offer and must not invent any.
+  assert.equal(stepTiming('bake 45 min').upto, 45 * 60);
 });
 
 test('durations are read in whatever unit the step used', () => {

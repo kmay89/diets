@@ -1801,12 +1801,21 @@ button.tabbar__item {
   color: color-mix(in srgb, var(--cream) 82%, transparent);
 }
 
+.cookmode__timerwrap { align-self: flex-start; margin-top: 24px; max-width: 42ch; }
+/* What the bell will mean, said before it is set: a timer whose terms you know
+ * in advance is a prompt, and one whose terms you learn when it goes off is a
+ * fright. */
+.cookmode__timernote {
+  margin: 8px 2px 0;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--cream) 62%, transparent);
+}
+
 .cookmode__timer {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-top: 24px;
   padding: 12px 20px;
   border: 1px solid color-mix(in srgb, var(--cream) 28%, transparent);
   border-radius: 30px;
@@ -2724,6 +2733,14 @@ button.tabbar__item {
 
 /* ---------- the timer dock ---------- */
 
+/*
+ * A running timer here is deliberately quiet. The anxious version of this
+ * component is red digits counting down over the tab bar, which turns an
+ * ordinary Tuesday dinner into three small emergencies; so nothing pulses,
+ * nothing is red, and the only thing that moves is a bar filling up. Color and
+ * size are held in reserve for the one moment they mean something — when a
+ * timer has run out and is asking you to go and look at a pan.
+ */
 .timer-dock {
   position: fixed;
   left: 50%;
@@ -2740,74 +2757,193 @@ button.tabbar__item {
 }
 .timer-dock.is-empty { display: none; }
 .timer-dock > * { pointer-events: auto; }
+.timer-dock__more {
+  margin: 0;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--green-900) 86%, transparent);
+  color: color-mix(in srgb, #F3E8CF 76%, transparent);
+  font-size: .7rem;
+}
 
 .timer-pill {
+  position: relative;
   display: flex;
   align-items: stretch;
-  gap: 0;
   border-radius: 999px;
   border: 1px solid var(--green-300);
   background: var(--green-900);
   color: #F3E8CF;
   box-shadow: var(--shadow-lift);
   overflow: hidden;
+  max-width: 100%;
 }
 .timer-pill__main {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 9px;
+  min-width: 0;
   padding: 9px 14px;
   border: 0;
   background: transparent;
   color: inherit;
   font: inherit;
+  text-align: left;
   cursor: pointer;
 }
-.timer-pill__dot {
-  align-self: center;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--green-300);
+.timer-pill__main:not(button) { cursor: default; }
+.timer-pill__clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
   flex: none;
 }
-.timer-pill.is-running .timer-pill__dot { background: #8FE0B4; }
-.timer-pill__clock { font-variant-numeric: tabular-nums; font-weight: 600; }
 .timer-pill__label {
   font-size: .76rem;
-  opacity: .7;
-  max-width: 15ch;
+  opacity: .78;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.timer-pill__state {
+  flex: none;
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .95;
+}
+
+/* Progress rather than a countdown: the same fact, told without urgency. */
+.timer-pill__track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: color-mix(in srgb, #F3E8CF 14%, transparent);
+}
+.timer-pill__fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  background: color-mix(in srgb, #8FE0B4 70%, transparent);
+  transition: transform .9s linear;
+}
+.timer-pill.is-paused .timer-pill__fill { background: color-mix(in srgb, #F3E8CF 40%, transparent); }
+.timer-pill.is-paused .timer-pill__clock { opacity: .7; }
+
 .timer-pill__act {
-  padding: 0 12px;
+  flex: none;
+  padding: 0 13px;
   border: 0;
   border-left: 1px solid color-mix(in srgb, #F3E8CF 22%, transparent);
   background: transparent;
   color: inherit;
   font: inherit;
-  font-size: .8rem;
+  font-size: .72rem;
+  line-height: 1;
   cursor: pointer;
 }
 .timer-pill__act:hover { background: color-mix(in srgb, #F3E8CF 12%, transparent); }
+
+/*
+ * Finished. This is the only loud thing in the app, and it earns it by being
+ * useful rather than urgent: which pot, what to look for, how long ago. It
+ * expands instead of flashing, because a shape change is impossible to miss
+ * from across a kitchen and does not feel like an alarm.
+ */
 .timer-pill.is-done {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 18px;
   border-color: var(--amber-500);
   background: var(--amber-500);
   color: #21160a;
+  width: min(94vw, 400px);
 }
-.timer-pill.is-done .timer-pill__dot { background: #21160a; }
-@media (prefers-reduced-motion: no-preference) {
-  .timer-pill.is-running .timer-pill__dot { animation: timer-pulse 2s var(--ease) infinite; }
-  .timer-pill.is-done { animation: timer-ring .9s var(--ease) 3; }
+.timer-pill__open {
+  display: block;
+  width: 100%;
+  padding: 11px 16px 9px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
-@keyframes timer-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
-@keyframes timer-ring { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.timer-pill__open:not(button) { cursor: default; }
+.timer-pill__head {
+  margin: 0;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .74;
+}
+.timer-pill__cue {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.timer-pill__since {
+  margin: 3px 0 0;
+  font-size: .74rem;
+  opacity: .72;
+}
+.timer-pill__acts {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 11px;
+}
+.timer-pill__more,
+.timer-pill__ok {
+  flex: 1;
+  padding: 9px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, #21160a 34%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.timer-pill__ok {
+  border-color: transparent;
+  background: color-mix(in srgb, #21160a 88%, transparent);
+  color: var(--amber-500);
+}
+.timer-pill__more:hover { background: color-mix(in srgb, #21160a 12%, transparent); }
 
-/* Cook mode covers the tab bar, so the dock sits lower there. */
+/*
+ * One rise, once, and then it holds its shape. The old version bounced three
+ * times; a thing that keeps moving after you have seen it is nagging, and being
+ * nagged by the oven is what people are trying to escape.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .timer-pill.is-done { animation: timer-arrive .42s var(--ease) 1; }
+}
+@keyframes timer-arrive {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/*
+ * Cook mode covers the tab bar, so the dock drops to the floor there — and cook
+ * mode's own Next button is on that floor, so the step makes room rather than
+ * the timer covering the way forward. A pill sitting on top of the button
+ * somebody was reaching for is worse than no pill at all, and the step behind it
+ * scrolls, so the room costs nothing but a moment of a shorter view.
+ */
 .cookmode ~ .timer-dock,
-body:has(.cookmode) .timer-dock { bottom: calc(env(safe-area-inset-bottom, 0px) + 92px); }
+body:has(.cookmode) .timer-dock { bottom: calc(env(safe-area-inset-bottom, 0px) + 12px); }
+body:has(.cookmode):has(.timer-dock:not(.is-empty)) .cookmode__foot { padding-bottom: 96px; }
+body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom: 216px; }
 
 .cookmode__timer.is-done { border-color: var(--amber-500); }
 

@@ -34,37 +34,21 @@ import { getState, markCooked } from '../store.js';
 import { asCooked } from '../swaps.js';
 import { servingEquivalents } from '../nutrition.js';
 import { stepsWithAmounts } from '../cook-steps.js';
-import { startTimer, timerFor, formatClock, toggleTimer } from '../timers.js';
-import { labelFor } from '../recipe-table.js';
+import { startTimer, timerFor, formatClock, toggleTimer, subscribeTimers } from '../timers.js';
+import { stepTiming, timerLabel, ringWords } from '../step-timing.js';
 
 /* ------------------------------------------------------------------ *
  * Deriving a timer from the instruction text
  * ------------------------------------------------------------------ */
 
-const UNIT_SECONDS = { second: 1, sec: 1, minute: 60, min: 60, hour: 3600, hr: 3600 };
-
 /**
- * "cook 10-12 minutes" -> 720. "60 seconds" -> 60. "1 hr" -> 3600.
- * A range takes its upper bound: a timer that goes off before the food is
- * ready teaches people to ignore timers.
+ * When to ring for a step. The reading lives in step-timing.js, which also
+ * pulls out the upper bound and the "until ..." clause — this is the thin
+ * spelling for callers and tests that only want the number.
  */
-export function parseDuration(text) {
-  const re = /(\d+)\s*(?:[-–—]|\s+to\s+)?\s*(\d+)?\s*(seconds?|secs?|minutes?|mins?|hours?|hrs?)\b/gi;
-  let best = 0;
-  for (const m of String(text).matchAll(re)) {
-    const unit = m[3].toLowerCase().replace(/s$/, '');
-    const mult = UNIT_SECONDS[unit] ?? UNIT_SECONDS[unit.replace(/s$/, '')] ?? 0;
-    const n = Number(m[2] ?? m[1]);
-    if (mult && Number.isFinite(n)) best = Math.max(best, n * mult);
-  }
-  // Over four hours is a marinade or a rise, not something to stand and watch.
-  return best > 0 && best <= 14400 ? best : 0;
-}
+export const parseDuration = (text) => stepTiming(text).seconds;
 
 export { formatClock };
-
-/** Enough of the dish's name to recognize it in a dock across the kitchen. */
-const shortTitle = (title) => String(title).split(/[,(—]/)[0].trim().split(/\s+/).slice(0, 3).join(' ');
 
 /** First sentence as the headline, the rest as the detail underneath. */
 function splitStep(text) {
@@ -112,12 +96,25 @@ export function render(root, { navigate, params }) {
   const texts = stepTexts(recipe, withOmnivore);
   const plan = stepsWithAmounts({ ...recipe, steps: texts.map(s => s.text) }, ingIndex, { scale, lines });
 
-  // Local to the visit: closing and reopening should start at step one.
-  const session = { step: 0 };
+  // Closing and reopening starts at step one, unless something sent you to a
+  // particular step — a timer in the dock going off is exactly that, and
+  // dropping you back at step one after it does is a small daily insult.
+  const asked = Number(new URLSearchParams(location.hash.split('?')[1] || '').get('step'));
+  const session = { step: Number.isFinite(asked) && asked > 0 ? Math.min(asked - 1, texts.length - 1) : 0, timer: null };
   const draw = () => mount(root, screen({
     recipe, base, texts, plan, lines, ingIndex, servings, session, draw, navigate
   }));
   draw();
+
+  // The step's timer is part of this screen, so it has to move when the timer
+  // does: a button still reading START after you pressed it is a button that
+  // gets pressed twice. Only the button's own text is repainted, never the
+  // screen — a redraw a second would snap a cook back to the top of the step
+  // every time they scrolled down to finish reading it.
+  const stop = subscribeTimers(() => {
+    if (!root.isConnected || !root.querySelector('.cookmode')) { stop(); return; }
+    if (session.timer) paintTimer(root, session.timer);
+  });
 }
 
 function stepTexts(recipe, withOmnivore) {
@@ -137,13 +134,10 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
   const current = texts[i];
   const wants = plan[i]?.wants || [];
   const { title, body } = splitStep(current.text);
-  const seconds = parseDuration(current.text);
+  const timing = stepTiming(current.text);
   const isLast = i === total - 1;
   const timerId = `${base.id}:${i}`;
-  // "Bolognese · simmer" rather than the first forty characters of the step —
-  // the dock is glanceable from another room and a truncated sentence is not.
-  const timerLabel = `${shortTitle(recipe.title)} · ${labelFor(current.text).verb.toLowerCase()}`;
-  const running = timerFor(timerId);
+  session.timer = timing.seconds ? { id: timerId, timing } : null;
 
   const goTo = (n) => { session.step = Math.max(0, Math.min(total - 1, n)); draw(); };
 
@@ -168,7 +162,15 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
         h('h1.cookmode__title', title),
         body ? h('p.cookmode__text', body) : null,
 
-        seconds ? timerButton(timerId, seconds, timerLabel, running) : null
+        timing.seconds
+          ? timerButton({
+              id: timerId,
+              timing,
+              label: timerLabel(recipe.title, current.text, i + 1),
+              recipeId: base.id,
+              step: i
+            })
+          : null
       ),
 
       minimap(lines, plan, i, ingIndex, goTo)
@@ -263,39 +265,105 @@ function minimap(lines, plan, current, ingIndex, goTo) {
 /**
  * The timer for this step, handed to the global store.
  *
- * The button only ever starts it. Pausing, extending and dismissing happen in
- * the dock, which is visible from every screen — so there is exactly one place
- * a running timer lives and no way to strand one behind a navigation.
+ * It says what it is going to do before you press it, which is the difference
+ * between a timer you set and one you set once and then watch anxiously. A
+ * range in the step becomes "rings at 20 min so you can look — up to 25 if it
+ * needs it", so running out is understood as a check-in from the beginning
+ * rather than a deadline you discover you have missed.
+ *
+ * One button for every state, dispatching on what the store says rather than on
+ * what was true when the screen was drawn. Extending and dismissing happen in
+ * the dock, which is visible from every screen — so there is exactly one place a
+ * running timer lives and no way to strand one behind a navigation.
  */
-function timerButton(id, seconds, label, running) {
-  if (running) {
-    return h('button', {
+function timerButton({ id, timing, label, recipeId, step }) {
+  const { seconds, upto, cue } = timing;
+
+  const wrap = h('div.cookmode__timerwrap',
+    h('button.cookmode__timer', {
       type: 'button',
-      class: `cookmode__timer ${running.running ? 'is-running' : ''} ${running.done ? 'is-done' : ''}`,
-      onclick: () => { play('tap'); toggleTimer(id); }
+      onclick: (e) => {
+        if (timerFor(id)) { play('tap'); toggleTimer(id); return; }
+        startTimer({ id, seconds, upto, cue, label, recipeId, step });
+        play('tap');
+        if (!prefersReducedMotion()) {
+          e.currentTarget.animate(
+            [{ transform: 'scale(1)' }, { transform: 'scale(1.03)' }, { transform: 'scale(1)' }],
+            { duration: 260 }
+          );
+        }
+      }
     },
       h('span.cookmode__timerdot'),
-      h('span.cookmode__clock', running.done ? 'time is up' : formatClock(running.left)),
-      h('span.cookmode__timerhint', running.done ? 'in the dock below' : running.running ? 'tap to pause' : 'tap to resume')
-    );
-  }
-
-  return h('button.cookmode__timer', {
-    type: 'button',
-    onclick: (e) => {
-      startTimer({ id, seconds, label });
-      play('tap');
-      if (!prefersReducedMotion()) {
-        e.currentTarget.animate(
-          [{ transform: 'scale(1)' }, { transform: 'scale(1.03)' }, { transform: 'scale(1)' }],
-          { duration: 260 }
-        );
-      }
-      toast('Timer started — it keeps running wherever you go');
-    }
-  },
-    h('span.cookmode__timerdot'),
-    h('span.cookmode__clock', formatClock(seconds)),
-    h('span.cookmode__timerhint', 'start timer')
+      h('span.cookmode__clock'),
+      h('span.cookmode__timerhint')
+    ),
+    h('p.cookmode__timernote')
   );
+
+  paintTimer(wrap, { id, timing });
+  return wrap;
+}
+
+/**
+ * Bring the button up to date with the store, in place.
+ *
+ * Text and classes only. Redrawing the screen once a second would throw away
+ * scroll position and any selection, and a cook who has scrolled down to finish
+ * reading a long step would be snapped back to the top of it every tick.
+ */
+function paintTimer(scope, { id, timing }) {
+  const button = scope.querySelector('.cookmode__timer');
+  if (!button) return;
+  const t = timerFor(id);
+
+  const [clock, hint, note] = [
+    button.querySelector('.cookmode__clock'),
+    button.querySelector('.cookmode__timerhint'),
+    scope.querySelector('.cookmode__timernote')
+  ];
+
+  button.classList.toggle('is-running', !!t?.running);
+  button.classList.toggle('is-done', !!t?.done);
+
+  if (!t) {
+    clock.textContent = formatClock(timing.seconds);
+    hint.textContent = 'start timer';
+    note.textContent = whenItRings(timing);
+  } else if (t.done) {
+    clock.textContent = 'have a look';
+    hint.textContent = 'answer it below';
+    note.textContent = hasRung(timing);
+  } else {
+    clock.textContent = formatClock(t.left);
+    hint.textContent = t.running ? 'tap to pause' : 'paused · tap to resume';
+    note.textContent = t.running
+      ? 'running — it stays with you wherever you go'
+      : 'paused — nothing is counting until you start it again';
+  }
+}
+
+/**
+ * The promise the button is making, before it is pressed.
+ *
+ * Saying the terms up front is most of the work: a cook who knows the bell
+ * means "come and look, there are five more minutes in hand" never has to feel
+ * the bell as a failure.
+ */
+function whenItRings({ seconds, upto, cue }) {
+  const at = seconds < 60 ? `${seconds} sec` : `${Math.round(seconds / 60)} min`;
+  return [
+    `Rings at ${at} so you can look`,
+    cue ? `until ${cue}` : null,
+    upto > seconds ? `up to ${Math.round(upto / 60)} min if it needs it` : null
+  ].filter(Boolean).join(' · ');
+}
+
+/**
+ * The same terms once it has gone off. The button beside it already says "have
+ * a look", so this is only what to look for and how much room is left.
+ */
+function hasRung({ seconds, upto, cue }) {
+  const { look, slack } = ringWords({ seconds, upto, cue });
+  return [look, slack].filter(Boolean).join(' · ');
 }

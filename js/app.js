@@ -183,7 +183,11 @@ async function boot() {
   buildChrome();
   // Timers live outside every view, so they survive leaving cook mode.
   initTimerDock();
-  setTimerAlarm((t) => { play('cooked'); toast(`${t.label} — time is up`, { duration: 6000 }); });
+  // A chime, and the dock says the rest. It used to also throw a toast, which
+  // meant one timer produced three simultaneous announcements of the same fact
+  // on top of a screen someone was reading — and being told a thing three times
+  // at once is what makes an app feel like it is panicking at you.
+  setTimerAlarm(() => play('cooked'));
   initTimers();
   initInstall();
   initFeedback();
