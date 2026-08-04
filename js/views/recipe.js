@@ -26,6 +26,7 @@ import { tableBlock } from './table-panel.js';
 import { kidsBlock, teachesBlock, asksPill } from './kitchen-panel.js';
 import { tipsBlock } from './tips-panel.js';
 import { proteinSwapLine } from '../proteins.js';
+import { cardLook } from '../palette.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -66,12 +67,20 @@ export function render(root, { navigate, params }) {
     const profile = computeBalance(recipe, ingIndex);
     const delta = swapped ? balanceDelta(computeBalance(base, ingIndex), profile) : [];
 
-    return h('section.view.recipe',
+    // The same color the card carried, so the page you land on is visibly the
+    // dish you tapped.
+    const look = cardLook(base, ingIndex);
+
+    return h('section.view.recipe', { style: look.style },
       h('button.linkish', { type: 'button', onclick: () => history.back() }, '← Back'),
 
       h('header.recipe__head',
         h('div',
-          h('h1.view__title', recipe.title),
+          h('h1.view__title',
+            look.look
+              ? h('span.color-dot', { title: `${look.look.group.name} — from ${look.look.from.join(' and ').toLowerCase()}` })
+              : null,
+            recipe.title),
           h('p.lede', recipe.blurb)
         ),
         scoreBadge(heart)
@@ -715,7 +724,10 @@ export function renderBrowse(root, { navigate }) {
         ...list.map(r => {
           const heart = heartFor(r);
           const cov = pantryCoverage(r, state.pantry);
-          return h('article.card.recipe-card',
+          // The card takes the color of what the dish is made of, so a grid of
+          // 242 of them can be scanned by sight rather than read in full.
+          const look = cardLook(r, getDb().ingIndex);
+          return h('article', { class: `card recipe-card ${look.className}`, style: look.style, title: look.look ? `${look.look.group.name} · ${look.look.texture?.name || ''}`.trim() : null },
             h('button.recipe-card__art', {
               type: 'button',
               'aria-label': `Open ${r.title}`,

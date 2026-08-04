@@ -7,6 +7,27 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **Every dish is the color of what it is made of.** A grid of 242 identical cards is a grid nobody
+  scans, so each card now takes its color from its own ingredient list — weighted by weight and by
+  how hard each ingredient actually stains what it is in. A pot of tomatoes is red, a dal is gold, a
+  mushroom braise is brown, and the runner-up ingredient tints the far corner so that two red dishes
+  are still told apart. Twelve color groups, and a saturated one gets a thumb on the scale against a
+  pale one, because people say "the red one" and never "the beige one with red in it".
+- **A pattern per way of cooking**, on top of the color. A crosshatch is a grill mark, a stipple is
+  browning, a ripple is a pot at a simmer, a scatter is a dish that was never cooked at all. All six
+  are CSS gradients — nothing to fetch and nothing for the content policy to argue with.
+- Nothing is random and nothing is stored. Open the same recipe next month and it is the same color,
+  because it is made of the same things. A recipe can override its own color for the rare dish whose
+  identity its ingredients cannot see, and exactly one in the collection does.
+- The roll screen's cards gained the art panel they never had, which is where four dinners dealt at
+  once most need to look like four different dinners. The recipe page carries a dot of the same
+  color, so the page you land on is visibly the dish you tapped.
+
+### Changed
+- The tint is mixed into whichever theme is running, at a percentage the stylesheet picks per theme,
+  so it never lands behind body text — contrast stays the theme's decision rather than the tomato's.
+
+### Added
 - **Where the flavor comes from.** A panel on every recipe that says what is carrying the dish: six
   dials with real numbers behind them — salt, fat, acid, savory depth, sweet and chile heat — and the
   two checks a cook makes in the last thirty seconds, whether anything fresh goes on and whether

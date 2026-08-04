@@ -26,6 +26,16 @@ npm start             # serve at http://localhost:8080
 
 ## What it does
 
+**🎨 Every dish is the color of what it is made of.** A grid of identical cards is a grid nobody
+scans. So each card takes its color from its own ingredient list, weighted by weight and by how hard
+each thing actually stains what it is in: a pot of tomatoes is red, a dal is gold, a mushroom braise
+is brown, and the runner-up ingredient tints the far corner so two red dishes still differ. On top of
+that sits a pattern derived from how the dish is cooked — a crosshatch is a grill mark, a stipple is
+browning, a ripple is a pot at a simmer. Nothing is random and nothing is stored: open the same
+recipe next month and it is the same color, because it is made of the same things. The tint is mixed
+into whichever theme is running, at a percentage the stylesheet chooses, so it never lands behind
+body text and contrast stays the theme's decision rather than the tomato's.
+
 **⚖️ Where the flavor comes from.** Six dials with numbers behind them — salt, fat, acid, savory
 depth, sweet and chile heat — plus the two checks a cook makes in the last thirty seconds: is there
 anything fresh on this, and is there anything that stays crisp. Salt and fat are counted from the
@@ -208,6 +218,7 @@ js/
   table.js              the countdown, the plate, and what to drink
   kitchen.js            kitchen jobs by age, and what a recipe asks for
   tips.js               the technique library, matched to the dish in front of you
+  palette.js            what color a dish is, and what pattern its card carries
   ui.js                 ~200 lines of DOM helpers
   food-icon.js          the icon per ingredient, and which ones illustrate a step
   views/                one module per screen — today, create, plate, cook, plan,
@@ -232,6 +243,7 @@ data/
   table.json            the countdown, plating, eating order, water and the myths
   kitchen.json          age-banded kitchen jobs, the asks ladder, techniques taught
   tips.json             43 technique notes in 9 groups — knives, heat, pans, storage
+  palette.json          12 color groups and 6 patterns, both derived from the recipe
   collections.json      54 saved filters in 5 groups — the ways into the collection
   occasions.json        the occasion taxonomy
   citations.json        every source, with its evidence type and its caveat

@@ -175,7 +175,8 @@ const craft = {
   proteins: read('data/proteins.json'),
   table: read('data/table.json'),
   kitchen: read('data/kitchen.json'),
-  tips: read('data/tips.json')
+  tips: read('data/tips.json'),
+  palette: read('data/palette.json')
 };
 
 const ingRef = (id, where) => { if (!index.has(id)) err(`${where}: unknown ingredient "${id}"`); };
@@ -268,6 +269,31 @@ for (const tip of craft.tips.tips) {
   if (tip.claim && !claimIds.has(tip.claim)) err(`tip ${tip.id}: claim "${tip.claim}" is not in claims.json`);
   for (const i of tip.match?.ingredients || []) ingRef(i, `tip ${tip.id}`);
   for (const a of tip.ages || []) if (!ageIds.has(a)) err(`tip ${tip.id}: unknown age band "${a}"`);
+}
+
+// The color of a card comes out of its ingredients, so a dangling reference
+// here is a card that quietly goes back to looking like every other card.
+const colorIds = new Set(craft.palette.groups.map(g => g.id));
+const inGroup = new Map();
+for (const g of craft.palette.groups) {
+  for (const [ing, strength] of Object.entries(g.members)) {
+    ingRef(ing, `color ${g.id}`);
+    if (!(strength > 0 && strength <= 20)) err(`color ${g.id}: ${ing} has strength ${strength}`);
+    if (inGroup.has(ing)) err(`${ing} is in two color groups: ${inGroup.get(ing)} and ${g.id}`);
+    inGroup.set(ing, g.id);
+  }
+}
+for (const [key, id] of Object.entries(craft.palette.byCuisine)) {
+  if (key !== 'note' && !colorIds.has(id)) err(`palette: cuisine "${key}" maps to unknown color "${id}"`);
+}
+for (const [key, id] of Object.entries(craft.palette.byCourse)) {
+  if (key !== 'note' && !colorIds.has(id)) err(`palette: course "${key}" maps to unknown color "${id}"`);
+}
+for (const c of [...new Set(recipes.map(r => r.cuisine))]) {
+  if (!craft.palette.byCuisine[c]) warn(`palette: cuisine "${c}" has no color fallback`);
+}
+for (const r of recipes) {
+  if (r.color && !colorIds.has(r.color)) err(`${r.id}: names unknown color group "${r.color}"`);
 }
 
 /* ---------- garden ---------- */
