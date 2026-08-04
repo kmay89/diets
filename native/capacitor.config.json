@@ -5,7 +5,9 @@
   "ios": {
     "contentInset": "never",
     "backgroundColor": "#f1f5f3",
-    "limitsNavigationsToAppBoundDomains": true
+    "limitsNavigationsToAppBoundDomains": true,
+    "scheme": "Veg-Nourish",
+    "preferredContentMode": "mobile"
   },
   "server": {
     "iosScheme": "app"

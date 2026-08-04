@@ -36,6 +36,16 @@ export const platform = () => cap()?.getPlatform?.() || 'web';
 
 const plugin = (name) => (isNative() ? cap()?.Plugins?.[name] : null) || null;
 
+/**
+ * A named plugin, or null off-device.
+ *
+ * Exported so a module with its own native surface — the watch link — can reach
+ * one without opening a second door to the runtime. One seam, so platform
+ * behavior lives in one file and a view can never quietly start branching on
+ * what it is running inside.
+ */
+export const nativePlugin = (name) => plugin(name);
+
 /* ------------------------------------------------------------------ *
  * Notifications
  * ------------------------------------------------------------------ */

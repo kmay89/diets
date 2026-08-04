@@ -18,6 +18,7 @@ import { loadPalette } from './palette.js';
 import { loadSkills } from './skills.js';
 import { initTimers, setTimerAlarm, timerFor } from './timers.js';
 import { initNative } from './native.js';
+import { initWatch } from './watch.js';
 import { initTimerDock } from './views/timer-dock.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
@@ -135,14 +136,27 @@ function paintNav(hash) {
 }
 
 function buildChrome() {
+  const link = (item) => h('a.tabbar__item', { href: item.href },
+    h('span.tabbar__icon', item.icon),
+    h('span.tabbar__label', item.label)
+  );
+
   const nav = h('nav.tabbar', { 'aria-label': 'Main' },
-    ...NAV.map(item => h('a.tabbar__item', { href: item.href },
-      h('span.tabbar__icon', item.icon),
-      h('span.tabbar__label', item.label)
-    )),
+    ...NAV.map(link),
     h('button.tabbar__item', { id: 'more-tab', type: 'button', onclick: openMore },
       h('span.tabbar__icon', '⋯'),
       h('span.tabbar__label', 'More')
+    ),
+
+    // The same destinations the More sheet holds, rendered inline and shown
+    // only once the window is wide enough to have room for them. On a phone,
+    // five tabs and an overflow is the right trade; on an iPad or a Mac there
+    // is space, and making somebody open a sheet to reach their own cookbook
+    // is the phone's compromise imported somewhere it was never needed.
+    h('div.tabbar__rest',
+      h('div.tabbar__rule'),
+      h('p.tabbar__section', 'Everything else'),
+      ...MORE.map(link)
     )
   );
   document.body.appendChild(nav);
@@ -188,6 +202,14 @@ async function boot() {
   buildChrome();
   // Inside an app shell this wires up the status bar and notification taps. In
   // a browser it does nothing and the site is unchanged.
+  // The wrist. Does nothing without a paired watch, and nothing at all on the
+  // web. The step command reaches cook mode through the session it published.
+  initWatch({
+    onStep: (delta) => {
+      const session = window.__cookSession;
+      session?.onStep?.(delta);
+    }
+  });
   initNative({
     onOpenRef: (id) => {
       const timer = timerFor(id);
