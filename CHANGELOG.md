@@ -7,6 +7,17 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Changed
+- **"Who is at the table?" now says what the minute buys.** The household step opens by saying the
+  quiet parts out loud: you do this once, about a minute a person, everything is editable later in
+  Settings — and in return the pots come out sized to your table, every dinner has a base each
+  person can eat, and the shopping list buys the right amounts the first time.
+- **The stuck cases, answered before they can ask.** A "Stuck on someone?" link on the household
+  step opens the questions that stall people mid-form: between two diets, vegetarian-at-home,
+  a picky or sensory-sensitive eater, allergies, someone only sometimes at dinner. Every answer
+  is the same reassurance from a different angle — the diet field is a small dial, not a
+  declaration of identity; it decides only whether the meat pan is offered, and no choice locks
+  anyone out of anything. The "?" beside the Diet field itself now carries the in-between advice
+  too, since mid-form is where the stall actually happens.
 - **The dice are back on the tab bar.** "Roll dinner. Cook once." is the promise on the tin, and the
   roll screen had drifted behind the More menu. Roll now sits second in the bottom bar, one thumb
   away from anywhere. Create — the hub of every other way in — moved to the top of More and stays

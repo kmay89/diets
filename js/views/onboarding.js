@@ -7,12 +7,13 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { h, mount, chip, toast, rangeField } from '../ui.js';
+import { h, mount, chip, toast, rangeField, sheet } from '../ui.js';
 import { getDb } from '../data.js';
 import { getState, update, newMember, setLike, togglePantry, setPref } from '../store.js';
 import { memberCard } from './member-card.js';
 import { openTasteEditor } from './taste-editor.js';
 import { energyNeeds } from '../nutrition.js';
+import { play } from '../feedback.js';
 
 const STEPS = ['welcome', 'household', 'health', 'time', 'tastes', 'pantry', 'done'];
 
@@ -137,15 +138,66 @@ function householdStep(state, draw) {
 
   return h('div.step',
     h('h1.step__title', 'Who is at the table?'),
-    h('p.lede', 'Ages and activity drive the portion math — how many servings to cook and how the calories split across the family. Height and weight are optional and only sharpen the estimate.'),
+    h('p.lede',
+      'You do this once — about a minute a person — and nothing is carved in stone: every answer ',
+      'can be changed later in Settings. Ages and activity drive the portion math; height and ',
+      'weight are optional and only sharpen the estimate.'),
+    h('div.card.info',
+      h('h3', 'What the minute buys you'),
+      h('ul.tight',
+        h('li', 'Pots sized to your actual table — no cooking for six when you are four, no coming up short when you are six.'),
+        h('li', 'Every dinner rolled has a base each person here can eat, whatever mix of diets sits at the table.'),
+        h('li', 'A shopping list that buys the right amounts the first time.')
+      )
+    ),
     h('div.chip-row', ...TEMPLATES.map(t => chip(`+ ${t.label}`, { onclick: () => add(t.partial) }))),
     members.length
       ? h('div.member-list', ...members.map(m => memberCard(m, { onStructuralChange: draw })))
       : h('p.empty', 'No one yet — tap a button above to add the first person.'),
     members.length
       ? h('p.fine-print', 'Diet matters. Mark anyone who does not eat meat and every dinner rolled will have a base they can eat, with meat kept to a separate pan.')
-      : null
+      : null,
+    h('button.linkish', {
+      type: 'button',
+      onclick: openHouseholdHelp
+    }, 'Stuck on someone? Between two diets, picky eater, complicated →')
   );
+}
+
+/**
+ * The cases that stall people on this screen, answered before they can ask.
+ *
+ * Every answer comes down to the same reassurance: the diet field is a small
+ * dial, not a declaration of identity. It decides one thing — whether the
+ * optional meat pan is offered with someone's dinner — and since the base of
+ * every dinner is meat-free, no choice here ever locks anyone out of anything.
+ */
+function openHouseholdHelp() {
+  play('tap');
+  const qa = (q, ...body) => h('div.help-qa', h('strong', q), h('p.muted', ...body));
+
+  sheet('Stuck on someone?', h('div',
+    qa('Somewhere between two diets?',
+      'Pick the way they eat most nights. This field decides exactly one thing: whether the ',
+      'optional meat pan is offered alongside their dinner. The base of every dinner is meat-free ',
+      'anyway, so someone marked omnivore can always eat everything a vegetarian can — and any ',
+      'night can simply skip the meat.'),
+    qa('Vegetarian at home, flexible out? Vegan-ish?',
+      'Choose the stricter answer if being offered the other would grate, the looser one if they ',
+      'want the option. It steers suggestions, never permissions — and you can change it in ',
+      'Settings the day it stops being true.'),
+    qa('A picky or sensory-sensitive eater?',
+      'Diet is the wrong dial for that. Two steps from here, the taste map takes loves and ',
+      'nevers — anything marked never disappears from every roll entirely, and that works for ',
+      'textures as well as flavors: mark the ingredient, not the whole diet. There is also a ',
+      '“kids eat it” filter, and most recipes carry a kid tweak.'),
+    qa('Allergies?',
+      'The next screen. Anything flagged there is removed from rolls completely — not labeled, removed.'),
+    qa('Someone only sometimes at the table?',
+      'Add the people you cook for on a normal night. Portions round up to whole servings on ',
+      'purpose — leftovers are a feature — and the list is a ten-second edit in Settings whenever ',
+      'the table changes.')
+  ));
 }
 
 const ALLERGENS = ['dairy', 'egg', 'gluten', 'soy', 'peanut', 'tree-nut', 'sesame', 'fish', 'shellfish'];
