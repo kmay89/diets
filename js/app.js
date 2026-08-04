@@ -64,19 +64,21 @@ const VIEWS = {
 // Five tabs, because a row of eight is a wall of icons nobody reads. The rest
 // live one tap away behind More, which is where people look for them anyway.
 //
-// Create is a hub rather than a screen of its own: the app has four honest ways
-// to start a meal — the dice, a plate, the pantry, the collection — and burning
-// four tabs on them would leave no room for the week or the list.
+// The dice get a tab because the dice are the promise on the tin — "Roll
+// dinner. Cook once." — and a front door does not belong behind an overflow
+// menu. Create stays the hub of every other way in (the plate, the pantry,
+// the collection); it sits in More and is linked from Today and from the roll
+// screen, so nothing got further away — the most-used way in just got closer.
 const NAV = [
   { href: '#/today', label: 'Today', icon: '🌅' },
+  { href: '#/roll', label: 'Roll', icon: '🎲' },
   { href: '#/plan', label: 'Plan', icon: '📋' },
-  { href: '#/create', label: 'Create', icon: '✚' },
   { href: '#/list', label: 'List', icon: '🛒' }
 ];
 
 const MORE = [
+  { href: '#/create', label: 'Create', icon: '✚', blurb: 'Every way to start a meal, on one screen' },
   { href: '#/browse', label: 'Recipes', icon: '📖', blurb: 'The whole collection' },
-  { href: '#/roll', label: 'Roll', icon: '🎲', blurb: 'Let the dice pick the week' },
   { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
   { href: '#/progress', label: 'Progress', icon: '🌱', blurb: 'What you have been eating' },
   { href: '#/garden', label: 'Garden', icon: '🌿', blurb: 'What to plant, and when' },

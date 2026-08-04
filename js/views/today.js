@@ -101,9 +101,13 @@ function view(draw, navigate) {
       )) : null
     ),
 
-    tonight ? tonightCard(tonight, ingIndex, navigate) : noPlanCard(navigate),
+    tonight ? tonightCard(tonight, ingIndex, navigate) : noPlanCard(state, recipeIndex, navigate),
 
+    // The on-ramps for a returning cook: three tiles, no more. The dice only
+    // join the row once a plan exists — before that, the card above IS the
+    // dice, and saying it twice on one screen is nagging.
     h('div.today__quick',
+      tonight ? rollTile(state, navigate) : null,
       quickTile('🏠', 'Use up', 'what is already here', () => navigate('#/pantry')),
       shoppingTile(state, navigate)
     ),
@@ -148,15 +152,39 @@ function tonightCard({ entry, recipe }, ingIndex, navigate) {
   );
 }
 
-function noPlanCard(navigate) {
+function noPlanCard(state, recipeIndex, navigate) {
+  // The cheapest possible decision for a tired cook is "the thing that worked
+  // last time, again" — so if there is a history, offer the most recent cooked
+  // meal by name. One tap, zero novelty, dinner solved.
+  const again = state.history.map(e => recipeIndex.get(e.id)).find(Boolean);
+
   return h('article.card.tonight--empty',
     h('h2.block__title', 'Nothing planned for tonight'),
     h('p.muted.small', 'Roll a few dinners and pin one to a night, and this screen will have something to say.'),
     h('div.row-actions',
       h('button.btn.btn--primary', { type: 'button', onclick: () => navigate('#/roll') }, '🎲 Roll dinner'),
       h('button.btn', { type: 'button', onclick: () => navigate('#/create') }, 'Other ways in')
-    )
+    ),
+    again
+      ? h('button.linkish', {
+          type: 'button',
+          onclick: () => navigate(`#/recipe/${again.id}`)
+        }, `Or cook ${again.title} again →`)
+      : null
   );
+}
+
+/**
+ * The dice tile for a returning cook. The subtitle knows where the week
+ * stands, so the tile is a status line and an invitation in one: either the
+ * dice have already dealt some dinners and can deal more, or the whole week is
+ * still theirs to roll.
+ */
+function rollTile(state, navigate) {
+  const dinners = state.plan.filter(e => (e.course || 'dinner') === 'dinner').length;
+  return quickTile('🎲', 'Roll',
+    dinners ? `${dinners} dinner${dinners === 1 ? '' : 's'} banked — deal more` : 'let the dice pick dinner',
+    () => navigate('#/roll'));
 }
 
 function quickTile(icon, strong, rest, onclick) {

@@ -6,6 +6,20 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Changed
+- **The dice are back on the tab bar.** "Roll dinner. Cook once." is the promise on the tin, and the
+  roll screen had drifted behind the More menu. Roll now sits second in the bottom bar, one thumb
+  away from anywhere. Create — the hub of every other way in — moved to the top of More and stays
+  linked from Today and from the roll screen itself, so no door closed; the most-used one just got
+  closer.
+- **Today greets a returning cook with on-ramps, not a menu.** Three tiles at most: the dice (whose
+  subtitle knows how many dinners are already banked), the pantry, and the shopping list. The dice
+  tile only appears once a plan exists — before that, the "nothing planned" card is already the
+  dice, and saying it twice on one screen is nagging.
+- When nothing is planned but something has been cooked before, Today offers the most recent meal
+  by name — *Or cook Red Lentil Dal again* — because the cheapest decision for a tired cook is the
+  thing that worked last time, again.
+
 ### Added
 - **Cook mode tells you how much.** An ingredient list says "2 tbsp olive oil" once; a method spends
   it twice. Each step now names its own ingredients with the amount *for that step*, scaled to the

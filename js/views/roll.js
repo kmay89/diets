@@ -155,7 +155,11 @@ function emptyState(state, draw) {
     h('p.muted', 'Pick a number and roll. Lock the ones you like, re-roll the rest, then send them to the plan.'),
     !state.household.members.length
       ? h('p.muted', h('a', { href: '#/onboarding' }, 'Set up your household first'), ' so portions and diets come out right.')
-      : null
+      : null,
+    // The dice are the front door, not the only door — the hub with the plate,
+    // the pantry and the collection is one link away for anyone the dice
+    // don't suit tonight.
+    h('p.muted', h('a', { href: '#/create' }, 'Not feeling lucky? Every other way to start a meal →'))
   );
 }
 

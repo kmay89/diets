@@ -1399,9 +1399,11 @@ button.tabbar__item {
   color: var(--ink-faint);
 }
 
-.today__quick { display: flex; gap: 9px; }
+/* Three tiles fit a phone side by side only just; when they don't, the row
+   wraps rather than squeezing the labels into hyphens. */
+.today__quick { display: flex; flex-wrap: wrap; gap: 9px; }
 .quick-tile {
-  flex: 1;
+  flex: 1 1 130px;
   display: flex;
   align-items: center;
   gap: 10px;
