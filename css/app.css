@@ -3011,3 +3011,120 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 }
 :root[data-theme="dark"] .method-table__op { background: color-mix(in srgb, var(--green-300) 10%, transparent); }
 :root[data-theme="dark"] .method-table__op:hover { background: color-mix(in srgb, var(--green-300) 18%, transparent); }
+
+/* ------------------------------------------------------------------ *
+ * Memory — what this kitchen has cooked, and what it said about it
+ * ------------------------------------------------------------------ */
+
+/*
+ * Sits high on the recipe page, so it is styled to be read past as easily as
+ * read: a rule, a line of fact, and then — if there is one — the note in the
+ * kitchen's own words. The note gets the emphasis because it is the only thing
+ * on this page the app did not work out for itself.
+ */
+.memory {
+  margin: 18px 0 22px;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+  background: color-mix(in srgb, var(--gold, #b9892f) 7%, var(--surface));
+}
+.memory__title {
+  margin: 0 0 4px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
+}
+.memory__when { margin: 0; font-size: .95rem; }
+.memory__did {
+  margin: 6px 0 0;
+  font-size: .88rem;
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
+}
+
+.memory__note {
+  margin: 12px 0 0;
+  padding: 0 0 0 14px;
+  border-left: 3px solid color-mix(in srgb, var(--gold, #b9892f) 60%, transparent);
+}
+.memory__note p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  line-height: 1.45;
+}
+.memory__note cite {
+  display: block;
+  margin-top: 3px;
+  font-size: .74rem;
+  font-style: normal;
+  color: color-mix(in srgb, var(--ink) 52%, transparent);
+}
+.memory__note--old p { font-size: .95rem; }
+
+.memory__more { margin-top: 10px; }
+.memory__more summary {
+  font-size: .78rem;
+  cursor: pointer;
+  color: color-mix(in srgb, var(--ink) 60%, transparent);
+}
+
+.memory__add {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: .82rem;
+  color: var(--green-700, #1f6f4a);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.memory__field {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+  resize: vertical;
+}
+
+/* The question asked once, at the plate. Two choices, both one tap, neither
+ * pre-selected — a default answer on a question about somebody's dinner is the
+ * app deciding it already knows. */
+.after__choices { display: flex; gap: 10px; margin: 12px 0 4px; }
+.after__choice {
+  flex: 1;
+  padding: 14px 10px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .95rem;
+  cursor: pointer;
+}
+.after__choice:hover { border-color: color-mix(in srgb, var(--ink) 40%, transparent); }
+.after__choice.is-on {
+  border-color: var(--green-700, #1f6f4a);
+  background: color-mix(in srgb, var(--green-700, #1f6f4a) 12%, transparent);
+  font-weight: 600;
+}
+.after__note { margin-top: 14px; }
+.after__note summary {
+  font-size: .84rem;
+  cursor: pointer;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+}
+
+.kitchen-memory { margin-top: 18px; }
+.kitchen-memory__line { margin: 2px 0 8px; font-size: 1rem; }
+.kitchen-memory .linkish { display: block; width: 100%; text-align: left; }

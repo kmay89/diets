@@ -31,6 +31,7 @@ import { getDb } from '../data.js';
 import { foodIcon } from '../food-icon.js';
 import { play, prefersReducedMotion } from '../feedback.js';
 import { getState, markCooked } from '../store.js';
+import { askAboutIt } from './after-cooking.js';
 import { asCooked } from '../swaps.js';
 import { servingEquivalents } from '../nutrition.js';
 import { stepsWithAmounts } from '../cook-steps.js';
@@ -102,7 +103,12 @@ export function render(root, { navigate, params }) {
   const asked = Number(new URLSearchParams(location.hash.split('?')[1] || '').get('step'));
   const session = { step: Number.isFinite(asked) && asked > 0 ? Math.min(asked - 1, texts.length - 1) : 0, timer: null };
   const draw = () => mount(root, screen({
-    recipe, base, texts, plan, lines, ingIndex, servings, session, draw, navigate
+    recipe, base, texts, plan, lines, ingIndex, servings, session, draw, navigate,
+    // Snapshotted at the end, not read back later: these are current settings
+    // and a household changes its mind.
+    swapsUsed: state.swaps?.[base.id] || {},
+    addedUsed: state.additions?.[base.id] || [],
+    withOmnivore
   }));
   draw();
 
@@ -128,7 +134,7 @@ function stepTexts(recipe, withOmnivore) {
   return base;
 }
 
-function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session, draw, navigate }) {
+function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session, draw, navigate, swapsUsed, addedUsed, withOmnivore }) {
   const total = texts.length;
   const i = Math.min(session.step, total - 1);
   const current = texts[i];
@@ -192,10 +198,18 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
           type: 'button',
           onclick: () => {
             if (!isLast) { play('tap'); goTo(i + 1); return; }
-            markCooked(base.id);
+            // Recorded as it was actually cooked — this household's swaps, the
+            // things they added, the size they made. Read a year later, that is
+            // the difference between "you made this" and "you made this like
+            // so, and here is what you said about it".
+            const entry = markCooked(base.id, new Date(), {
+              servings,
+              swaps: swapsUsed,
+              added: addedUsed,
+              fork: withOmnivore
+            });
             play('cooked');
-            toast('Nice. Marked as cooked.');
-            navigate('#/today');
+            askAboutIt(base, entry, () => navigate('#/today'));
           }
         }, isLast ? 'Finish · plate up' : 'Next step')
       )

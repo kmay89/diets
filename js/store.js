@@ -362,17 +362,68 @@ export function isPlanned(recipeId) {
 }
 
 /**
- * Record that a meal actually got cooked.
+ * How many cooks are kept. A kitchen cooking five nights a week fills a
+ * thousand entries in about four years, and an entry is a couple of hundred
+ * bytes, so the whole record is smaller than one of the recipe files. The old
+ * cap of 120 was three months — short enough that "we make this every winter"
+ * was a thing the app forgot every spring.
+ */
+const HISTORY_MAX = 1000;
+
+/**
+ * Record that a meal actually got cooked, as it was actually cooked.
  *
  * Entries carry the date because "what have we been eating lately" is a
  * different question from "have we ever cooked this", and only the first one
  * is worth anything on the progress screen. The same recipe cooked twice in a
  * fortnight is two entries, not one moved to the top — otherwise the record
  * quietly rewrites itself every time you repeat a favorite.
+ *
+ * The swaps and additions are *snapshotted* rather than looked up later. They
+ * live in state as current settings and a household changes its mind; a kitchen
+ * that swapped the feta out in June must not be told it did that in March. Only
+ * the swaps that touch this dish are kept, so an entry stays small.
  */
-export function markCooked(recipeId, at = new Date()) {
+export function markCooked(recipeId, at = new Date(), extra = {}) {
+  const entry = {
+    id: recipeId,
+    at: new Date(at).toISOString(),
+    ...clean({
+      servings: extra.servings,
+      fork: extra.fork,
+      swaps: Object.keys(extra.swaps || {}).length ? { ...extra.swaps } : undefined,
+      added: extra.added?.length ? extra.added.map(l => ({ ...l })) : undefined,
+      note: extra.note?.trim() || undefined,
+      again: extra.again || undefined
+    })
+  };
+  update(s => { s.history = [entry, ...s.history].slice(0, HISTORY_MAX); });
+  return entry;
+}
+
+/** Drop the keys with nothing in them, so an entry carries only what happened. */
+const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null));
+
+/**
+ * Attach a note, or an answer to "again sometime?", to a cook after the fact.
+ *
+ * Defaults to the most recent cook of that dish, because the moment somebody
+ * has something to say about a meal is while they are eating it — and by then
+ * the app has already moved on to another screen.
+ */
+export function annotateCook(recipeId, patch = {}, { at = null } = {}) {
   update(s => {
-    s.history = [{ id: recipeId, at: new Date(at).toISOString() }, ...s.history].slice(0, 120);
+    const entry = at
+      ? s.history.find(e => e.id === recipeId && e.at === at)
+      : s.history.find(e => e.id === recipeId);
+    if (!entry) return;
+    if ('note' in patch) {
+      const note = String(patch.note || '').trim();
+      if (note) entry.note = note; else delete entry.note;
+    }
+    if ('again' in patch) {
+      if (patch.again) entry.again = patch.again; else delete entry.again;
+    }
   });
 }
 

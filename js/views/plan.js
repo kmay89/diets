@@ -8,6 +8,7 @@ import { h, mount, pill, toast, minutes, scoreBadge, meter, titleCase, confirmSh
 import { getDb, nutritionFor, heartFor, sharesShoppingWith } from '../data.js';
 import { play } from '../feedback.js';
 import { getState, updatePlanEntry, removeFromPlan, clearPlan, addToPlan, markCooked, DAYS } from '../store.js';
+import { askAboutIt } from './after-cooking.js';
 import { servingEquivalents, householdTargets, NUTRIENT_LABELS } from '../nutrition.js';
 
 export function render(root, { navigate }) {
@@ -115,7 +116,17 @@ function planRow(entry, recipe, state, draw, navigate) {
       recipe.steps?.length
         ? h('button.btn', { type: 'button', onclick: () => navigate(`#/cook/${recipe.id}`) }, '🔥 Cook')
         : null,
-      h('button.btn', { type: 'button', onclick: () => { markCooked(recipe.id); removeFromPlan(entry.id); play('cooked'); toast('Nice. Marked as cooked.'); draw(); } }, '✓ Cooked'),
+      h('button.btn', { type: 'button', onclick: () => {
+        const logged = markCooked(recipe.id, new Date(), {
+          servings: entry.servings || undefined,
+          swaps: state.swaps?.[recipe.id] || {},
+          added: state.additions?.[recipe.id] || [],
+          fork: entry.withOmnivore !== false
+        });
+        removeFromPlan(entry.id);
+        play('cooked');
+        askAboutIt(recipe, logged, draw);
+      } }, '✓ Cooked'),
       entry.day
         ? h('button.btn.btn--ghost', { type: 'button', onclick: () => navigate(`#/day/${entry.day}`) }, `${entry.day} ›`)
         : null,

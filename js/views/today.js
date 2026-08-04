@@ -16,6 +16,7 @@ import { foodIcon, ingredientsNamedIn } from '../food-icon.js';
 import { buildList } from '../shopping.js';
 import { getState, DAYS } from '../store.js';
 import { recentNutrition } from './progress.js';
+import { worthRepeating, whenWords } from '../memory.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -154,9 +155,15 @@ function tonightCard({ entry, recipe }, ingIndex, navigate) {
 
 function noPlanCard(state, recipeIndex, navigate) {
   // The cheapest possible decision for a tired cook is "the thing that worked
-  // last time, again" — so if there is a history, offer the most recent cooked
-  // meal by name. One tap, zero novelty, dinner solved.
-  const again = state.history.map(e => recipeIndex.get(e.id)).find(Boolean);
+  // last time, again" — so offer one by name. One tap, zero novelty, dinner
+  // solved.
+  //
+  // Not literally the last thing cooked, though: that is usually last night,
+  // and nobody wants last night twice. It is the most recent meal old enough to
+  // want again, skipping anything the kitchen said no to.
+  const repeat = worthRepeating(state, { limit: 1 })[0]
+    || state.history.find(e => recipeIndex.has(e.id));
+  const again = repeat ? recipeIndex.get(repeat.id) : null;
 
   return h('article.card.tonight--empty',
     h('h2.block__title', 'Nothing planned for tonight'),
@@ -169,7 +176,7 @@ function noPlanCard(state, recipeIndex, navigate) {
       ? h('button.linkish', {
           type: 'button',
           onclick: () => navigate(`#/recipe/${again.id}`)
-        }, `Or cook ${again.title} again →`)
+        }, `Or cook ${again.title} again — you made it ${whenWords(repeat.at)} →`)
       : null
   );
 }

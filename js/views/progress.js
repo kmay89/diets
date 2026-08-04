@@ -15,6 +15,7 @@ import { h, mount, num } from '../ui.js';
 import { getDb, nutritionFor, heartFor } from '../data.js';
 import { foodIcon } from '../food-icon.js';
 import { getState } from '../store.js';
+import { kitchenMemory, timesWords } from '../memory.js';
 import { citeMarker, getCitations } from '../citations.js';
 import { dailyTargets, typicalBody, MEAL_SHARE } from '../nutrition.js';
 
@@ -107,10 +108,10 @@ export function render(root, { navigate }) {
 
 function view(navigate) {
   const state = getState();
-  const { ingIndex } = getDb();
+  const { ingIndex, recipeIndex } = getDb();
   const t = recentNutrition(state, 7);
 
-  if (!t.meals) return emptyView(state, navigate);
+  if (!t.meals) return emptyView(state, recipeIndex, navigate);
 
   const eaters = state.household.members.filter(m => m.eats !== false);
   const ref = eaters[0] || typicalBody();
@@ -136,6 +137,12 @@ function view(navigate) {
     h('div.trend-cards', ...t.metrics.map(m => trendCard(m, targetFor[m.key], t.days))),
 
     plantsCard(t, ingIndex),
+
+    // The seven days above are a window; this is the whole record. Deliberately
+    // placed after them and deliberately not a total to beat — how long this
+    // kitchen has been keeping notes is a nicer thing to know than a number
+    // going up.
+    kitchenCard(state, recipeIndex, navigate),
 
     h('p.fine-print', `Counted from ${t.meals} meal${t.meals === 1 ? '' : 's'} marked cooked in the last seven days. Meals you planned but did not cook are not in here, and nothing is graded against anyone else.`)
   );
@@ -210,7 +217,7 @@ function plantsCard(t, ingIndex) {
   );
 }
 
-function emptyView(state, navigate) {
+function emptyView(state, recipeIndex, navigate) {
   return h('section.view',
     h('div.view__head', h('h1.view__title', 'Nothing cooked yet')),
     h('div.empty-state',
@@ -220,6 +227,46 @@ function emptyView(state, navigate) {
         h('button.btn.btn--primary', { type: 'button', onclick: () => navigate('#/today') }, 'Back to today'),
         state.plan.length ? h('button.btn', { type: 'button', onclick: () => navigate('#/plan') }, 'See the plan') : null
       )
-    )
+    ),
+
+    // A quiet week is not an empty kitchen. Somebody who cooked thirty meals
+    // and then had a week of takeout should not be shown a blank screen that
+    // implies they have never cooked anything.
+    kitchenCard(state, recipeIndex, navigate)
+  );
+}
+
+/**
+ * The kitchen's whole record, in three sentences.
+ *
+ * No total to beat and no streak to break: a month where nobody cooked is a
+ * month where nobody cooked, and an app that makes somebody feel watched about
+ * that is an app they delete in January. What it does say is how long the
+ * record goes back and which dish this kitchen keeps coming back to, because
+ * the second one is a genuinely useful thing most people cannot name about
+ * themselves.
+ */
+function kitchenCard(state, recipeIndex, navigate) {
+  const m = kitchenMemory(state);
+  if (!m.total) return null;
+
+  const favorite = m.mostCooked ? recipeIndex.get(m.mostCooked.id) : null;
+
+  return h('article.card.kitchen-memory',
+    h('p.eyebrow', 'Everything, not just this week'),
+    h('p.kitchen-memory__line',
+      h('strong', `${m.total} meal${m.total === 1 ? '' : 's'}`),
+      m.distinct > 1 ? ` · ${m.distinct} different dishes` : '',
+      m.sinceWords ? ` · since ${m.sinceWords}` : ''
+    ),
+    favorite
+      ? h('button.linkish', {
+          type: 'button',
+          onclick: () => navigate(`#/recipe/${favorite.id}`)
+        }, `The one you keep making is ${favorite.title} — ${timesWords(m.mostCooked.times)} →`)
+      : null,
+    m.withNotes
+      ? h('p.muted.small', `${m.withNotes} of them have a note from you on the recipe.`)
+      : h('p.muted.small', 'Notes you write after cooking show up on the recipe next time.')
   );
 }
