@@ -106,8 +106,8 @@ export function timesWords(n) {
  * a memory that reads "ing.feta" is worse than a memory that stays quiet.
  */
 export function changesIn(entry, ingIndex) {
-  if (!entry) return [];
-  const name = (id) => ingIndex.get(id)?.name?.toLowerCase() || null;
+  if (!entry) return { swapped: [], added: [] };
+  const name = (id) => ingIndex?.get(id)?.name?.toLowerCase() || null;
   const swapped = [];
   const added = [];
 

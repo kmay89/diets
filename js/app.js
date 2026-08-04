@@ -37,6 +37,7 @@ import * as recipeView from './views/recipe.js';
 import * as pantryView from './views/pantry.js';
 import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
+import * as bookView from './views/book.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
 import * as learnView from './views/learn.js';
@@ -57,6 +58,7 @@ const VIEWS = {
   pantry: () => ({ render: pantryView.render, params: {} }),
   list: () => ({ render: listView.render, params: {} }),
   garden: () => ({ render: gardenView.render, params: {} }),
+  book: () => ({ render: bookView.render, params: {} }),
   settings: () => ({ render: settingsView.render, params: {} }),
   why: () => ({ render: whyView.render, params: {} }),
   learn: () => ({ render: learnView.render, params: {} })
@@ -79,6 +81,7 @@ const NAV = [
 
 const MORE = [
   { href: '#/create', label: 'Create', icon: '✚', blurb: 'Every way to start a meal, on one screen' },
+  { href: '#/book', label: 'Your cookbook', icon: '📔', blurb: 'The dishes you actually make, in your version' },
   { href: '#/browse', label: 'Recipes', icon: '📖', blurb: 'The whole collection' },
   { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
   { href: '#/progress', label: 'Progress', icon: '🌱', blurb: 'What you have been eating' },

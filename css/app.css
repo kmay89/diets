@@ -3236,3 +3236,63 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
   color: color-mix(in srgb, var(--ink) 66%, transparent);
 }
 .teaches-line__mark { color: var(--gold); }
+
+/* ------------------------------------------------------------------ *
+ * Your cookbook
+ * ------------------------------------------------------------------ */
+
+/*
+ * Rows rather than cards. A card grid says "browse me"; this is a list of
+ * things you already know, and the useful part of each row is the note, not the
+ * picture. The dish keeps the color it has everywhere else in the app, thinned
+ * to a stripe down the side, so a book of fifteen dishes is still scannable by
+ * the thing they are made of.
+ */
+.book__actions { margin: 0 0 18px; }
+.book__list { display: flex; flex-direction: column; gap: 2px; margin-top: 12px; }
+
+.book__entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px 12px 12px;
+  border: 0;
+  border-left: 4px solid color-mix(in srgb, hsl(var(--card-h, 90) 40% 50%) 62%, transparent);
+  border-radius: 4px 12px 12px 4px;
+  background: color-mix(in srgb, hsl(var(--card-h, 90) 40% 50%) 5%, transparent);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.book__entry:hover { background: color-mix(in srgb, hsl(var(--card-h, 90) 40% 50%) 11%, transparent); }
+
+.book__art { flex: none; display: flex; gap: 2px; padding-top: 2px; }
+.book__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.book__title { font-family: var(--font-display); font-size: 1.08rem; line-height: 1.25; }
+.book__meta { font-size: .76rem; color: color-mix(in srgb, var(--ink) 52%, transparent); }
+.book__version {
+  font-size: .82rem;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+
+/* The note above everything the recipe writer said. Somebody who has made this
+ * four times has the better description of it. */
+.book__note {
+  margin-top: 6px;
+  padding-left: 10px;
+  border-left: 2px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  font-size: .9rem;
+  line-height: 1.4;
+}
+.book__note-more { font-size: .76rem; color: color-mix(in srgb, var(--ink) 50%, transparent); }
+
+/* On paper: the parts nobody else has. The recipes are still in the app and
+ * would run to forty pages. */
+.printout__book-row { break-inside: avoid; margin-bottom: 10px; }
+.printout__book-title { margin: 0; font-size: 11pt; }
+.printout__book-meta { margin: 0; font-size: 8pt; color: #555; }
+.printout__book-version { margin: 1px 0 0; font-size: 9pt; }
+.printout__book-note { margin: 2px 0 0 10pt; font-size: 9pt; font-style: italic; }
+.printout__foot { margin-top: 14pt; font-size: 8pt; color: #666; }
