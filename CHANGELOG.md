@@ -7,6 +7,35 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **Cook mode tells you how much.** An ingredient list says "2 tbsp olive oil" once; a method spends
+  it twice. Each step now names its own ingredients with the amount *for that step*, scaled to the
+  servings actually being cooked — half the oil now and the rest off the heat, a cup of the pasta
+  water held back, the rest of the cilantro at the table. Anything that is not simply all of it is
+  marked, because that is the case a glance at the ingredient list gets wrong.
+- Where the words do not say how something is split, the app says so instead of inventing a fraction.
+  A guess printed as a quantity is the exact error this feature exists to prevent.
+- **A minimap of the ingredient list**, borrowed from a text editor: solid is already in, bright is
+  going in now, faint is still to come, and tapping a row jumps to the step that calls for it. It
+  answers the question cook mode could not — where am I, and what is still coming.
+- **Timers that outlive the screen.** They now live outside every view, in their own store, written
+  to storage on every change. Start one, move to the next step, leave cook mode, open the shopping
+  list, close the tab entirely — it is still counting, because it counts against a wall-clock end
+  time rather than accumulating in memory. Several at once, because a kitchen with one pot in it is
+  not a kitchen, and they float above every screen in a dock that can pause, extend or dismiss them.
+- A timer that finished while the app was closed rings on the way back in rather than disappearing.
+- **The method as a diagram**, on a toggle beside the steps. Ingredients down the left, brackets to
+  the right, each swallowing the ones before it under the thing you do. Derived from each recipe's
+  own method — 228 of 242 produce one, and the rest keep their list rather than getting a diagram
+  that guesses.
+
+### Changed
+- Timers used to stop at an hour, on the reasoning that anything longer was not something to stand
+  and watch. That was true when a timer died the moment you left the screen. Now that they survive,
+  a ninety-minute bake and a three-hour braise are exactly the things worth being told about.
+- An app with no household entered into it shows recipes as written rather than scaling them to a
+  single serving, which turned every amount into an eighth of a cup of something.
+
+### Added
 - **Every dish is the color of what it is made of.** A grid of 242 identical cards is a grid nobody
   scans, so each card now takes its color from its own ingredient list — weighted by weight and by
   how hard each ingredient actually stains what it is in. A pot of tomatoes is red, a dal is gold, a

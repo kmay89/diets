@@ -15,6 +15,8 @@ import { loadTable } from './table.js';
 import { loadKitchen } from './kitchen.js';
 import { loadTips } from './tips.js';
 import { loadPalette } from './palette.js';
+import { initTimers, setTimerAlarm } from './timers.js';
+import { initTimerDock } from './views/timer-dock.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
 import { matchRoute } from './routes.js';
@@ -177,6 +179,10 @@ async function boot() {
 
   initTheme();
   buildChrome();
+  // Timers live outside every view, so they survive leaving cook mode.
+  initTimerDock();
+  setTimerAlarm((t) => { play('cooked'); toast(`${t.label} — time is up`, { duration: 6000 }); });
+  initTimers();
   initInstall();
   initFeedback();
 

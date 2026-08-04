@@ -2621,3 +2621,250 @@ button.tabbar__item {
 @media (prefers-reduced-transparency: reduce) {
   .recipe-card__art::after { opacity: .3; }
 }
+
+/* ------------------------------------------------------------------ *
+ * Cook mode: how much, where you are, and timers that survive
+ * ------------------------------------------------------------------ */
+
+/* The stage holds the instruction and the minimap side by side. */
+.cookmode__stage { flex: 1; min-height: 0; display: flex; }
+.cookmode__stage .cookmode__body { flex: 1; min-width: 0; }
+.cookmode__servings { margin-left: auto; font-size: .78rem; opacity: .6; }
+
+/* What goes in, and how much of it. Sits above the sentence because it is what
+ * you reach for while reading it. */
+.amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 13px 8px 9px;
+  border: 1px solid color-mix(in srgb, var(--cream) 18%, transparent);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--cream) 7%, transparent);
+}
+.amount__qty {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.amount__name { margin: 0; font-size: .84rem; opacity: .78; }
+.amount__note { margin: 2px 0 0; font-size: .72rem; opacity: .62; }
+
+/* Anything that is not simply "all of it" — half the oil, the rest of the
+ * cilantro, a cup held back. This is the case a glance at the ingredient list
+ * gets wrong, so it is the case that gets a color. */
+.amount.is-careful {
+  border-color: color-mix(in srgb, var(--amber-500) 62%, transparent);
+  background: color-mix(in srgb, var(--amber-500) 13%, transparent);
+}
+.amount.is-unsure .amount__qty { font-size: .92rem; font-weight: 500; }
+.amount__flag { color: var(--amber-500); }
+
+/* The minimap. Every ingredient in the recipe, shrunk: solid is already in,
+ * bright is going in now, faint is still to come. */
+.minimap {
+  flex: 0 0 auto;
+  width: 122px;
+  overflow-y: auto;
+  padding: 14px 10px 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-left: 1px solid color-mix(in srgb, var(--cream) 12%, transparent);
+  scrollbar-width: none;
+}
+.minimap::-webkit-scrollbar { display: none; }
+.minimap__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 2px 0 2px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--cream);
+  font: inherit;
+  font-size: .62rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.minimap__bar { flex: 0 0 3px; height: 12px; border-radius: 2px; background: currentColor; opacity: .3; }
+.minimap__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.minimap__row.is-later { opacity: .34; }
+.minimap__row.is-done { opacity: .6; }
+.minimap__row.is-done .minimap__bar { opacity: .8; }
+.minimap__row.is-now {
+  opacity: 1;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--cream) 12%, transparent);
+}
+.minimap__row.is-now .minimap__bar { opacity: 1; background: var(--amber-500); height: 16px; }
+.minimap__row:hover { background: color-mix(in srgb, var(--cream) 9%, transparent); }
+
+/* On a phone the minimap becomes a thin strip with no words — position without
+ * taking a third of the screen away from the instruction. */
+@media (max-width: 620px) {
+  .minimap { width: 26px; padding-right: 4px; }
+  .minimap__name { display: none; }
+  .minimap__row { padding-left: 6px; justify-content: center; }
+  .minimap__bar { flex: 0 0 6px; height: 10px; }
+}
+
+/* ---------- the timer dock ---------- */
+
+.timer-dock {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--tabbar-h, 62px) + env(safe-area-inset-bottom, 0px) + 10px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  width: max-content;
+  max-width: min(94vw, 460px);
+  pointer-events: none;
+}
+.timer-dock.is-empty { display: none; }
+.timer-dock > * { pointer-events: auto; }
+
+.timer-pill {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 999px;
+  border: 1px solid var(--green-300);
+  background: var(--green-900);
+  color: #F3E8CF;
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+}
+.timer-pill__main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.timer-pill__dot {
+  align-self: center;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-300);
+  flex: none;
+}
+.timer-pill.is-running .timer-pill__dot { background: #8FE0B4; }
+.timer-pill__clock { font-variant-numeric: tabular-nums; font-weight: 600; }
+.timer-pill__label {
+  font-size: .76rem;
+  opacity: .7;
+  max-width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.timer-pill__act {
+  padding: 0 12px;
+  border: 0;
+  border-left: 1px solid color-mix(in srgb, #F3E8CF 22%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.timer-pill__act:hover { background: color-mix(in srgb, #F3E8CF 12%, transparent); }
+.timer-pill.is-done {
+  border-color: var(--amber-500);
+  background: var(--amber-500);
+  color: #21160a;
+}
+.timer-pill.is-done .timer-pill__dot { background: #21160a; }
+@media (prefers-reduced-motion: no-preference) {
+  .timer-pill.is-running .timer-pill__dot { animation: timer-pulse 2s var(--ease) infinite; }
+  .timer-pill.is-done { animation: timer-ring .9s var(--ease) 3; }
+}
+@keyframes timer-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes timer-ring { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+/* Cook mode covers the tab bar, so the dock sits lower there. */
+.cookmode ~ .timer-dock,
+body:has(.cookmode) .timer-dock { bottom: calc(env(safe-area-inset-bottom, 0px) + 92px); }
+
+.cookmode__timer.is-done { border-color: var(--amber-500); }
+
+/* ------------------------------------------------------------------ *
+ * The method as a diagram
+ * ------------------------------------------------------------------ */
+
+.method-table__wrap { overflow-x: auto; margin-top: var(--sp-2); }
+.method-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 460px;
+  font-size: .84rem;
+}
+.method-table__caption {
+  caption-side: top;
+  text-align: left;
+  font-size: .8rem;
+  color: var(--ink-soft);
+  padding-bottom: var(--sp-2);
+}
+.method-table__prep {
+  margin: 0 0 var(--sp-2);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: .84rem;
+}
+.method-table th,
+.method-table td { border: 1px solid var(--green-300); padding: 7px 10px; }
+.method-table__ing {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 400;
+  text-align: left;
+  min-width: 210px;
+}
+.method-table__qty { font-variant-numeric: tabular-nums; font-weight: 600; flex: none; }
+.method-table__name { overflow: hidden; text-overflow: ellipsis; }
+.method-table__prepnote { color: var(--ink-faint); font-size: .78rem; }
+.method-table__op {
+  vertical-align: middle;
+  text-align: center;
+  min-width: 84px;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--green-050) 55%, transparent);
+}
+.method-table__op:hover { background: var(--green-050); }
+.method-table__verb { display: block; font-weight: 600; }
+.method-table__time {
+  display: block;
+  font-size: .72rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .method-table__op { background: color-mix(in srgb, var(--green-300) 10%, transparent); }
+  :root:not([data-theme="light"]) .method-table__op:hover { background: color-mix(in srgb, var(--green-300) 18%, transparent); }
+}
+:root[data-theme="dark"] .method-table__op { background: color-mix(in srgb, var(--green-300) 10%, transparent); }
+:root[data-theme="dark"] .method-table__op:hover { background: color-mix(in srgb, var(--green-300) 18%, transparent); }
