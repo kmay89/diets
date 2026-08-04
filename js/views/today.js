@@ -16,6 +16,7 @@ import { foodIcon, ingredientsNamedIn } from '../food-icon.js';
 import { buildList } from '../shopping.js';
 import { getState, DAYS } from '../store.js';
 import { recentNutrition } from './progress.js';
+import { avoidedSet, recipeConflicts } from '../allergy.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -155,8 +156,14 @@ function tonightCard({ entry, recipe }, ingIndex, navigate) {
 function noPlanCard(state, recipeIndex, navigate) {
   // The cheapest possible decision for a tired cook is "the thing that worked
   // last time, again" — so if there is a history, offer the most recent cooked
-  // meal by name. One tap, zero novelty, dinner solved.
-  const again = state.history.map(e => recipeIndex.get(e.id)).find(Boolean);
+  // meal by name. One tap, zero novelty, dinner solved. Unless it has since
+  // become an allergen in this house: what got cooked before a flag was set
+  // does not get recommended after it.
+  const avoid = avoidedSet(state.prefs);
+  const again = state.history
+    .map(e => recipeIndex.get(e.id))
+    .filter(Boolean)
+    .find(r => !(avoid.size && recipeConflicts(r, avoid, getDb().ingIndex).length));
 
   return h('article.card.tonight--empty',
     h('h2.block__title', 'Nothing planned for tonight'),

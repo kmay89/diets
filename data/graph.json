@@ -18,7 +18,7 @@
  },
  "counts": {
   "nodes": 951,
-  "edges": 7965,
+  "edges": 7974,
   "ingredients": 353,
   "recipes": 242
  },
@@ -12427,7 +12427,9 @@
     "vegetarian-check",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "dairy"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -12481,7 +12483,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "dairy"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -12573,7 +12577,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "sesame"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -12620,7 +12626,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "peanut"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -13222,7 +13230,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "dairy"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -13713,7 +13723,9 @@
     "vegan",
     "vegetarian"
    ],
-   "allergens": [],
+   "allergens": [
+    "gluten"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -13757,7 +13769,9 @@
     "vegan",
     "vegetarian"
    ],
-   "allergens": [],
+   "allergens": [
+    "gluten"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -14131,7 +14145,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "egg"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -15715,7 +15731,9 @@
     "vegetarian",
     "gluten-free"
    ],
-   "allergens": [],
+   "allergens": [
+    "tree-nut"
+   ],
    "growable": false,
    "tips": null,
    "heartNote": null,
@@ -42184,6 +42202,11 @@
   },
   {
    "s": "ing.cheese.gruyere",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.dairy"
+  },
+  {
+   "s": "ing.cheese.gruyere",
    "p": "HAS_TAG",
    "o": "tag.cheese"
   },
@@ -42225,6 +42248,11 @@
    "s": "ing.paneer",
    "p": "SUITS_DIET",
    "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.paneer",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.dairy"
   },
   {
    "s": "ing.paneer",
@@ -42321,6 +42349,11 @@
   },
   {
    "s": "ing.sesame.seeds",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.sesame"
+  },
+  {
+   "s": "ing.sesame.seeds",
    "p": "HAS_TAG",
    "o": "tag.finishing"
   },
@@ -42367,6 +42400,11 @@
    "s": "ing.peanuts",
    "p": "SUITS_DIET",
    "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.peanuts",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.peanut"
   },
   {
    "s": "ing.peanuts",
@@ -42967,6 +43005,11 @@
   },
   {
    "s": "ing.cream.heavy",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.dairy"
+  },
+  {
+   "s": "ing.cream.heavy",
    "p": "HAS_TAG",
    "o": "tag.rich"
   },
@@ -43442,6 +43485,11 @@
   },
   {
    "s": "ing.noodle.wheat",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.gluten"
+  },
+  {
+   "s": "ing.noodle.wheat",
    "p": "HAS_TAG",
    "o": "tag.pantry"
   },
@@ -43483,6 +43531,11 @@
    "s": "ing.baguette",
    "p": "SUITS_DIET",
    "o": "diet.vegetarian"
+  },
+  {
+   "s": "ing.baguette",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.gluten"
   },
   {
    "s": "ing.baguette",
@@ -43833,6 +43886,11 @@
    "s": "ing.mayo.olive",
    "p": "SUITS_DIET",
    "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.mayo.olive",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.egg"
   },
   {
    "s": "ing.mayo.olive",
@@ -45340,6 +45398,11 @@
    "s": "ing.pistachios",
    "p": "SUITS_DIET",
    "o": "diet.gluten-free"
+  },
+  {
+   "s": "ing.pistachios",
+   "p": "CONTAINS_ALLERGEN",
+   "o": "allergen.tree-nut"
   },
   {
    "s": "ing.pistachios",

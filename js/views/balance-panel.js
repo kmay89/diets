@@ -15,8 +15,18 @@
 
 import { h, pill, sheet } from '../ui.js';
 import { formatQty } from '../nutrition.js';
-import { fixesFor, sayFor, balanceLessons } from '../balance.js';
+import { fixesFor as rawFixesFor, sayFor, balanceLessons } from '../balance.js';
 import { foodIcon } from '../food-icon.js';
+import { getState } from '../store.js';
+import { avoidedSet } from '../allergy.js';
+
+/**
+ * Every fix this panel shows goes through the household's allergen list. The
+ * filtering itself lives in balance.js; this wrapper just makes it impossible
+ * for a call site in this file to forget to pass it.
+ */
+const fixesFor = (axis, dir, ingIndex) =>
+  rawFixesFor(axis, dir, ingIndex, avoidedSet(getState().prefs));
 
 /**
  * The whole block for one recipe's profile.

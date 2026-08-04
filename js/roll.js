@@ -10,7 +10,8 @@
  * ERRERLabs — MIT licensed.
  */
 
-import { getDb, pantryCoverage, inSeason, seasonNow, allergensOf, heartFor, sharesShoppingWith } from './data.js';
+import { getDb, pantryCoverage, inSeason, seasonNow, heartFor, sharesShoppingWith } from './data.js';
+import { avoidedSet, recipeConflicts } from './allergy.js';
 
 /* ---------- seeded randomness ---------- */
 
@@ -70,10 +71,12 @@ export function isCandidate(recipe, state, { course = 'dinner' } = {}) {
     if (likes[line.ing] === -1 && !line.optional) return false;
   }
 
-  if (prefs.avoidAllergens?.length) {
-    const present = allergensOf(recipe);
-    if (present.some(a => prefs.avoidAllergens.includes(a))) return false;
-  }
+  // An allergen in the house is a hard no — including the jars that only
+  // commonly contain one. The base is what is judged here; a conflicting
+  // fork does not sink the dinner, it just is not offered (the views handle
+  // that), because a clean base with a shrimp add-on is still a dinner.
+  const avoid = avoidedSet(prefs);
+  if (avoid.size && recipeConflicts(recipe, avoid, getDb().ingIndex).length) return false;
 
   if (prefs.kidFriendlyOnly && !recipe.kidFriendly) return false;
 

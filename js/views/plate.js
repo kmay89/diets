@@ -22,6 +22,7 @@ import { foodIcon } from '../food-icon.js';
 import { play } from '../feedback.js';
 import { getState } from '../store.js';
 import { lineNutrients, heartScore, dailyTargets, typicalBody, dailyValue, MEAL_SHARE } from '../nutrition.js';
+import { avoidedSet, blocksItem, recipeConflicts } from '../allergy.js';
 
 function isProtein(item) {
   return (item.tags || []).some(t => t === 'protein' || t === 'lean-protein' || t === 'complete-protein')
@@ -200,14 +201,15 @@ function plateDial(chosen, heart, onSlot, openSlot) {
 function shelf(openSlot, picks, state, select) {
   const slot = SLOTS.find(s => s.id === openSlot);
   const { ingredients } = getDb();
-  const avoid = new Set(state.prefs.avoidAllergens || []);
+  const avoid = avoidedSet(state.prefs);
   const eaters = state.household.members.filter(m => m.eats !== false);
 
   const candidates = ingredients
     .filter(slot.fits)
-    // Anything marked "never" is gone, and an allergen in the house is gone.
+    // Anything marked "never" is gone, and an allergen in the house is gone —
+    // the jars that only commonly carry one included.
     .filter(i => state.likes[i.id] !== -1)
-    .filter(i => !(i.allergens || []).some(a => avoid.has(a)))
+    .filter(i => !blocksItem(i, avoid))
     .map(i => ({ item: i, rank: shelfRank(i, state, eaters) }))
     .sort((a, b) => b.rank - a.rank || a.item.name.localeCompare(b.item.name))
     .slice(0, SHELF_LIMIT);
@@ -349,10 +351,14 @@ function matches(filled, state, navigate) {
   }
 
   const wanted = filled.map(f => f.item.id);
+  const avoid = avoidedSet(state.prefs);
+  const { ingIndex } = getDb();
   const counts = new Map();
   for (const id of wanted) {
     for (const recipe of recipesUsing(id)) {
       if (recipe.course !== 'dinner') continue;
+      // These are recommendations, and the rule for recommendations holds.
+      if (avoid.size && recipeConflicts(recipe, avoid, ingIndex).length) continue;
       counts.set(recipe, (counts.get(recipe) || 0) + 1);
     }
   }

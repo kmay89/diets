@@ -19,6 +19,8 @@ import { foodIcon } from '../food-icon.js';
 import {
   proteinsIn, proteinOptionsFor, methodsFor, methodUsedBy, prepFor, methodTrade
 } from '../proteins.js';
+import { getState } from '../store.js';
+import { avoidedSet } from '../allergy.js';
 
 /**
  * The block, for every protein the recipe contains.
@@ -39,7 +41,9 @@ export function proteinBlock(recipe, ingIndex, { pantry = {}, scale = 1, onSwap 
 
 function proteinRow(recipe, current, ingIndex, { pantry, scale, onSwap }) {
   const item = ingIndex.get(current.line.ing);
-  const options = proteinOptionsFor(recipe, current, { ingIndex, pantry, limit: 6 });
+  const options = proteinOptionsFor(recipe, current, {
+    ingIndex, pantry, avoid: avoidedSet(getState().prefs), limit: 6
+  });
   const using = methodUsedBy(recipe, current.protein);
   const ways = methodsFor(current.protein.id);
   const prep = prepFor(current.protein.id);

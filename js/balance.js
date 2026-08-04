@@ -26,6 +26,7 @@
  */
 
 import { lineNutrients, gramsFor, clamp, topContributors } from './nutrition.js';
+import { blocksItem } from './allergy.js';
 
 let model = null;
 
@@ -320,12 +321,19 @@ export function balanceDelta(before, after) {
  *
  * Returned with the ingredient record attached where the database has one, so
  * the panel can show an icon and the shopping list can add it in one tap.
+ *
+ * `avoid` is the household's flagged allergens. A fix that is an allergen is
+ * not a fix for that house — "add fish sauce" to someone allergic to fish is
+ * the app recommending a reaction — so it is dropped here, at the source,
+ * rather than trusted to every panel that renders the list.
  */
-export function fixesFor(axis, direction, ingIndex) {
+export function fixesFor(axis, direction, ingIndex, avoid = null) {
   const list = direction === 'high'
     ? axis.whenHigh?.fixes
     : axis.whenMissing?.fixes || axis.whenLow?.fixes;
-  return (list || []).map(f => ({ ...f, item: ingIndex?.get?.(f.ing) || null }));
+  return (list || [])
+    .map(f => ({ ...f, item: ingIndex?.get?.(f.ing) || null }))
+    .filter(f => !(avoid?.size && f.item && blocksItem(f.item, avoid)));
 }
 
 /** The sentence for a dial that needs attention. */

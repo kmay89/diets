@@ -34,6 +34,7 @@
 import { getDb } from './data.js';
 import { gramsFor } from './nutrition.js';
 import { computeBalance, balanceDelta, getBalanceModel, axisPotency } from './balance.js';
+import { blocksItem, comboConflicts } from './allergy.js';
 
 let subModel = null;
 
@@ -338,6 +339,7 @@ export function buildLadder(ingredientId, {
   diet = [],
   pantry = {},
   likes = {},
+  avoid = null,
   limit = 8
 } = {}) {
   const from = ingIndex.get(ingredientId);
@@ -350,6 +352,11 @@ export function buildLadder(ingredientId, {
   const consider = (item, { tier, ratio = 1, note = null, via = null, role = null, assumed = false }) => {
     if (!item || seen.has(item.id)) return;
     if (!fits(item, diet)) return;
+    // A flagged allergen is never a substitute — not ranked low, not shown
+    // with a warning, not offered. Handing a peanut-allergic house "peanut
+    // butter, 1:1" as the answer to missing tahini is the whole failure mode
+    // this filter exists to prevent.
+    if (avoid?.size && blocksItem(item, avoid)) return;
     seen.add(item.id);
     options.push({
       item, tier, ratio, note, via, role, assumedRatio: assumed,
@@ -434,11 +441,16 @@ export function buildLadder(ingredientId, {
     second: byTier('second'),
     role: byTier('role'),
     best: options.slice(0, limit),
-    combos: combosFor(ingredientId, model).map(c => ({
-      ...c,
-      parts: c.from.map(f => ({ ...f, item: ingIndex.get(f.ing), inPantry: !!pantry[f.ing] })),
-      ready: c.from.every(f => pantry[f.ing])
-    })),
+    // "Make it out of what is in the house" is a recommendation like any
+    // other: a buttermilk combo built on milk is not advice for a dairy-free
+    // house.
+    combos: combosFor(ingredientId, model)
+      .filter(c => !(avoid?.size && comboConflicts(c, avoid, ingIndex).length))
+      .map(c => ({
+        ...c,
+        parts: c.from.map(f => ({ ...f, item: ingIndex.get(f.ing), inPantry: !!pantry[f.ing] })),
+        ready: c.from.every(f => pantry[f.ing])
+      })),
     omit: recipe && line ? omitAdvice(recipe, line, { ingIndex, balanceModel, model }) : null
   };
 }
