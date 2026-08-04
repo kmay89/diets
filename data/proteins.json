@@ -1,0 +1,1183 @@
+{
+  "schema": "vegnourish.proteins/1",
+  "note": "A recipe that names one protein is answering a question nobody asked. Almost every dish here works with four or five, and the choice is usually made by what is in the refrigerator rather than by what the writer had in mind. So this file separates the two decisions a cook is actually making: which protein, and what to do to it — because the second one changes dinner more than the first.",
+  "heatNote": "Samin Nosrat's fourth element is heat, meaning the heat you cook with rather than the chile kind. It does not live in an ingredient list, which is why it gets its own file: the same block of tofu is four different dinners depending on whether it is seared, roasted, simmered or crumbled, and nothing in a recipe's ingredients tells you that.",
+  "portionNote": "Amounts are per serving, at the size a normal plate uses rather than a nutrition target — around 20 to 30 grams of protein for a main. The swap ratio is by weight against a meat baseline of 1, which is how cooks actually substitute: a pound of chicken becomes a pound of tofu, not the weight that matches its protein.",
+  "proteins": [
+    {
+      "id": "prot.tofu",
+      "ing": "ing.tofu.firm",
+      "name": "Firm tofu",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 113,
+      "swapRatio": 1.0,
+      "minutes": 15,
+      "tastes": "Almost nothing on its own, which is the job. It carries whatever you put on it and contributes texture.",
+      "wants": "Dryness and salt. Press it or at least blot it hard, salt it before it hits the pan, and give it a surface that browns.",
+      "goesWrong": "Wet tofu in a crowded pan steams into gray cubes. That is the entire failure mode, and it is completely avoidable.",
+      "methods": [
+        "method.sear",
+        "method.airfry",
+        "method.roast",
+        "method.crumble",
+        "method.simmer",
+        "method.grill"
+      ],
+      "cuisines": [
+        "chinese",
+        "japanese",
+        "korean",
+        "thai",
+        "vietnamese",
+        "any"
+      ],
+      "buy": "Firm or extra-firm in water. Silken is a different ingredient — it belongs in soup and smoothies, not a hot pan."
+    },
+    {
+      "id": "prot.tempeh",
+      "ing": "ing.tempeh",
+      "name": "Tempeh",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 85,
+      "swapRatio": 0.75,
+      "minutes": 15,
+      "tastes": "Nutty, firm, faintly bitter. More assertive than tofu and it holds up to strong sauces.",
+      "wants": "Steaming or simmering for ten minutes before it goes anywhere near a marinade. That takes the bitterness out and opens it up to soak.",
+      "goesWrong": "Skipping the steam. Marinade sits on the outside of raw tempeh and never gets in.",
+      "methods": [
+        "method.sear",
+        "method.crumble",
+        "method.roast",
+        "method.grill",
+        "method.braise"
+      ],
+      "cuisines": [
+        "indonesian",
+        "american",
+        "any"
+      ],
+      "buy": "Plain, not pre-marinated. The flavored ones are mostly sugar and sodium."
+    },
+    {
+      "id": "prot.chickpeas",
+      "ing": "ing.chickpeas.canned",
+      "name": "Chickpeas",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 120,
+      "swapRatio": 1.0,
+      "minutes": 5,
+      "tastes": "Nutty and mild, with a texture between creamy and firm depending entirely on how long they cook.",
+      "wants": "Drying and browning. A can of chickpeas dumped into a sauce is fine; the same can dried and crisped in oil first is a different dish.",
+      "goesWrong": "Nothing much. They are the most forgiving protein in the kitchen, which is why they open this list for anybody starting out.",
+      "methods": [
+        "method.crisp",
+        "method.roast",
+        "method.airfry",
+        "method.simmer",
+        "method.crumble"
+      ],
+      "cuisines": [
+        "indian",
+        "middle-eastern",
+        "mediterranean",
+        "italian",
+        "any"
+      ],
+      "buy": "No-salt-added cans if you can find them, so the seasoning is yours. Save the liquid — it whips like egg white."
+    },
+    {
+      "id": "prot.blackbeans",
+      "ing": "ing.beans.black",
+      "name": "Black beans",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 130,
+      "swapRatio": 1.0,
+      "minutes": 5,
+      "tastes": "Earthy and a little sweet, and they hold their shape better than most beans.",
+      "wants": "Cumin, lime and something smoky. And salt — canned beans taste washed out until they are seasoned.",
+      "goesWrong": "Rinsing away all the starchy liquid when the dish wanted body. Keep a few spoonfuls if you want it creamy.",
+      "methods": [
+        "method.simmer",
+        "method.crisp",
+        "method.crumble"
+      ],
+      "cuisines": [
+        "mexican",
+        "caribbean",
+        "brazilian",
+        "southwestern",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.whitebeans",
+      "ing": "ing.beans.cannellini",
+      "name": "White beans",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 130,
+      "swapRatio": 1.0,
+      "minutes": 5,
+      "tastes": "Creamy and mild. Mash a third of them and the whole pot turns silky without any dairy.",
+      "wants": "Good olive oil, garlic, and a hardy herb — rosemary or sage.",
+      "goesWrong": "Boiling them hard, which turns them to mush in about four minutes.",
+      "methods": [
+        "method.simmer",
+        "method.crisp",
+        "method.roast",
+        "method.crumble"
+      ],
+      "cuisines": [
+        "italian",
+        "french",
+        "mediterranean",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.lentils",
+      "ing": "ing.lentil.brown",
+      "name": "Brown lentils",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 55,
+      "swapRatio": 0.42,
+      "minutes": 30,
+      "tastes": "Savory and meaty, especially browned with tomato paste. The one that convinces people.",
+      "wants": "A soffritto cooked properly, and salt added late — salt early can keep them firm.",
+      "goesWrong": "Cooking them to death. They go from tender to baby food in about five minutes.",
+      "methods": [
+        "method.simmer",
+        "method.braise"
+      ],
+      "cuisines": [
+        "italian",
+        "indian",
+        "french",
+        "middle-eastern",
+        "any"
+      ],
+      "buy": "Brown or green hold their shape. Red ones dissolve, which is the point in a dal and a problem in a salad."
+    },
+    {
+      "id": "prot.redlentils",
+      "ing": "ing.lentil.red",
+      "name": "Red lentils",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 55,
+      "swapRatio": 0.42,
+      "minutes": 20,
+      "tastes": "Sweet and mild, and they collapse into a thick golden purée.",
+      "wants": "Bloomed spices and something acidic at the end.",
+      "goesWrong": "Expecting them to stay whole. They will not, ever.",
+      "methods": [
+        "method.simmer"
+      ],
+      "cuisines": [
+        "indian",
+        "middle-eastern",
+        "turkish",
+        "ethiopian"
+      ]
+    },
+    {
+      "id": "prot.edamame",
+      "ing": "ing.edamame.frozen",
+      "name": "Edamame",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 90,
+      "swapRatio": 0.8,
+      "minutes": 5,
+      "tastes": "Green, sweet and firm — closer to a fresh vegetable than a bean.",
+      "wants": "Very little. Five minutes from frozen and a good pinch of salt.",
+      "goesWrong": "Overcooking them into something dull and gray-green.",
+      "methods": [
+        "method.steam",
+        "method.stirfry",
+        "method.simmer"
+      ],
+      "cuisines": [
+        "japanese",
+        "chinese",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.egg",
+      "ing": "ing.egg",
+      "name": "Eggs",
+      "diet": [
+        "vegetarian"
+      ],
+      "servingG": 100,
+      "swapRatio": 0.9,
+      "minutes": 6,
+      "tastes": "Rich and savory, and it makes almost any bowl of leftovers into dinner.",
+      "wants": "Lower heat than most people use, and being taken off the heat before it looks done.",
+      "goesWrong": "Heat. Every bad egg is an overcooked egg.",
+      "methods": [
+        "method.scramble",
+        "method.fry",
+        "method.poach",
+        "method.bake"
+      ],
+      "cuisines": [
+        "any"
+      ],
+      "note": "The cheapest way to turn rice and vegetables into a meal, and the fastest protein in this list."
+    },
+    {
+      "id": "prot.paneer",
+      "ing": "ing.paneer",
+      "name": "Paneer",
+      "diet": [
+        "vegetarian"
+      ],
+      "servingG": 85,
+      "swapRatio": 0.7,
+      "minutes": 10,
+      "tastes": "Milky and mild, squeaky when fresh. It browns without melting.",
+      "wants": "A hot pan and no crowding, then a rest in the sauce so it softens.",
+      "goesWrong": "Long simmering, which makes it rubbery. Add it near the end.",
+      "methods": [
+        "method.sear",
+        "method.grill",
+        "method.roast"
+      ],
+      "cuisines": [
+        "indian"
+      ]
+    },
+    {
+      "id": "prot.halloumi",
+      "ing": "ing.cheese.halloumi",
+      "name": "Halloumi",
+      "diet": [
+        "vegetarian"
+      ],
+      "servingG": 70,
+      "swapRatio": 0.6,
+      "minutes": 6,
+      "tastes": "Salty, squeaky, and browned at the edges. A small amount goes a long way.",
+      "wants": "A dry pan — it has enough fat of its own — and something acidic beside it.",
+      "goesWrong": "Salting the dish before you taste it with the halloumi in. It brings plenty.",
+      "methods": [
+        "method.sear",
+        "method.grill"
+      ],
+      "cuisines": [
+        "greek",
+        "middle-eastern",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "prot.cottagecheese",
+      "ing": "ing.cottagecheese",
+      "name": "Cottage cheese",
+      "diet": [
+        "vegetarian"
+      ],
+      "servingG": 120,
+      "swapRatio": 0.9,
+      "minutes": 0,
+      "tastes": "Mild and cool, tangier than it gets credit for. Blends into a smooth high-protein sauce.",
+      "wants": "Blending, if the texture is the objection. It disappears into pasta sauce and dips.",
+      "goesWrong": "Boiling it, which splits it.",
+      "methods": [
+        "method.raw"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.mushroom",
+      "ing": "ing.mushroom.portobello",
+      "name": "Portobello mushrooms",
+      "diet": [
+        "vegan",
+        "vegetarian"
+      ],
+      "servingG": 120,
+      "swapRatio": 1.1,
+      "minutes": 12,
+      "tastes": "Meaty and deeply savory once browned. Not much protein, but it does the job a piece of meat was doing on the plate.",
+      "wants": "A hot, uncrowded pan and patience. They release water first and brown second.",
+      "goesWrong": "Stirring too early and too often, so they poach in their own liquid.",
+      "methods": [
+        "method.sear",
+        "method.roast",
+        "method.grill",
+        "method.airfry"
+      ],
+      "cuisines": [
+        "italian",
+        "french",
+        "american",
+        "any"
+      ],
+      "note": "Counted here because it is what people reach for when they want the shape of a steak. Pair it with beans or a grain if the meal needs the protein as well as the bite."
+    },
+    {
+      "id": "prot.chicken.thigh",
+      "ing": "ing.chicken.thigh",
+      "name": "Chicken thighs",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 115,
+      "swapRatio": 1.0,
+      "minutes": 20,
+      "tastes": "Richer and more forgiving than breast. Hard to dry out.",
+      "wants": "Salt an hour ahead if you can. Skin down in a cold pan if it has skin, and left alone until it lets go.",
+      "goesWrong": "Very little. This is the cut to learn on.",
+      "methods": [
+        "method.sear",
+        "method.roast",
+        "method.braise",
+        "method.grill",
+        "method.airfry",
+        "method.slowcook"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.chicken.breast",
+      "ing": "ing.chicken.breast",
+      "name": "Chicken breast",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 115,
+      "swapRatio": 1.0,
+      "minutes": 15,
+      "tastes": "Lean and mild. Excellent when it is treated carefully and sawdust when it is not.",
+      "wants": "A dry brine — salt it and leave it uncovered in the refrigerator for an hour — and pulling it off the heat at 160°F, where carryover finishes it at 165°F.",
+      "goesWrong": "Cooking to a temperature instead of to a thermometer. Five degrees is the whole difference.",
+      "methods": [
+        "method.sear",
+        "method.roast",
+        "method.poach",
+        "method.grill",
+        "method.airfry"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.turkey",
+      "ing": "ing.turkey.ground93",
+      "name": "Ground turkey",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 100,
+      "swapRatio": 1.0,
+      "minutes": 10,
+      "tastes": "Mild. It takes on whatever it is cooked with, for better and worse.",
+      "wants": "Real browning — spread it out, leave it alone, let one side get dark before breaking it up.",
+      "goesWrong": "Stirring it constantly from the moment it hits the pan, which steams it gray.",
+      "methods": [
+        "method.crumble",
+        "method.sear",
+        "method.braise"
+      ],
+      "cuisines": [
+        "american",
+        "italian",
+        "mexican",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.beef.ground",
+      "ing": "ing.beef.ground90",
+      "name": "Ground beef",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 100,
+      "swapRatio": 1.0,
+      "minutes": 10,
+      "tastes": "Rich and savory, and it browns better than any other ground meat.",
+      "wants": "A hot pan, one layer, and no salt until after the crust forms.",
+      "goesWrong": "Crowding. Two batches beats one gray pan every time.",
+      "methods": [
+        "method.crumble",
+        "method.sear",
+        "method.braise"
+      ],
+      "cuisines": [
+        "american",
+        "italian",
+        "mexican",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.beef.chuck",
+      "ing": "ing.beef.chuck",
+      "name": "Beef chuck",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 115,
+      "swapRatio": 1.0,
+      "minutes": 150,
+      "tastes": "The cut braising was invented for. Tough, full of collagen, and transformed by three hours.",
+      "wants": "Browning first, then liquid halfway up, then low heat and time. Nothing about it is fast.",
+      "goesWrong": "Trying to cook it quickly, which produces something you cannot chew.",
+      "methods": [
+        "method.braise",
+        "method.slowcook"
+      ],
+      "cuisines": [
+        "french",
+        "american",
+        "mexican",
+        "any"
+      ]
+    },
+    {
+      "id": "prot.pork.tenderloin",
+      "ing": "ing.pork.tenderloin",
+      "name": "Pork tenderloin",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 115,
+      "swapRatio": 1.0,
+      "minutes": 25,
+      "tastes": "Lean, mild and quick. Closer to chicken breast than to anything else on the pig.",
+      "wants": "A hard sear then a moderate oven, and a rest. Pull it at 145°F.",
+      "goesWrong": "Cooking it to the temperature people were taught in 1980. It has been safe at 145°F since 2011.",
+      "methods": [
+        "method.sear",
+        "method.roast",
+        "method.grill"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.salmon",
+      "ing": "ing.salmon",
+      "name": "Salmon",
+      "diet": [
+        "pescatarian",
+        "omnivore"
+      ],
+      "servingG": 140,
+      "swapRatio": 1.15,
+      "minutes": 15,
+      "tastes": "Rich, fatty and forgiving, with enough character to stand up to bold seasoning.",
+      "wants": "A dry surface and either a very hot pan or a very low oven. The low-oven route — 275°F until it flakes — is nearly impossible to ruin.",
+      "goesWrong": "Guessing. It goes from silky to chalky in two minutes.",
+      "methods": [
+        "method.roast",
+        "method.sear",
+        "method.airfry",
+        "method.grill",
+        "method.poach"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.cod",
+      "ing": "ing.cod",
+      "name": "Cod or another white fish",
+      "diet": [
+        "pescatarian",
+        "omnivore"
+      ],
+      "servingG": 140,
+      "swapRatio": 1.15,
+      "minutes": 12,
+      "tastes": "Mild, sweet and flaky. It wants a sauce or a crust to be interesting.",
+      "wants": "Gentle heat and salt fifteen minutes ahead, which firms it up.",
+      "goesWrong": "Moving it in the pan before it releases, which shreds it.",
+      "methods": [
+        "method.roast",
+        "method.sear",
+        "method.poach",
+        "method.steam"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.shrimp",
+      "ing": "ing.shrimp",
+      "name": "Shrimp",
+      "diet": [
+        "pescatarian",
+        "omnivore"
+      ],
+      "servingG": 115,
+      "swapRatio": 1.0,
+      "minutes": 5,
+      "tastes": "Sweet and springy, and done faster than anything else in this list.",
+      "wants": "Two minutes, maybe three. Take them off when they curl into a C — a tight O means overcooked.",
+      "goesWrong": "One extra minute. That is all it takes.",
+      "methods": [
+        "method.sear",
+        "method.grill",
+        "method.stirfry",
+        "method.poach",
+        "method.airfry"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.tuna.canned",
+      "ing": "ing.tuna.canned",
+      "name": "Canned tuna",
+      "diet": [
+        "pescatarian",
+        "omnivore"
+      ],
+      "servingG": 85,
+      "swapRatio": 0.8,
+      "minutes": 0,
+      "tastes": "Salty and savory straight from the can. Cheap protein that needs no cooking at all.",
+      "wants": "Acid and something crunchy. Lemon, celery, red onion.",
+      "goesWrong": "Draining it dry and then wondering why it tastes like cardboard. Keep a little of the oil.",
+      "methods": [
+        "method.raw"
+      ],
+      "cuisines": [
+        "any"
+      ]
+    },
+    {
+      "id": "prot.sausage.chicken",
+      "ing": "ing.sausage.chicken.italian",
+      "name": "Chicken sausage",
+      "diet": [
+        "omnivore"
+      ],
+      "servingG": 85,
+      "swapRatio": 0.7,
+      "minutes": 10,
+      "tastes": "Seasoned for you — fennel, garlic, chile — which is why a little of it flavors a whole pot.",
+      "wants": "Browning, and being counted as seasoning rather than as the protein. It is salty.",
+      "goesWrong": "Adding your usual salt on top of it.",
+      "methods": [
+        "method.sear",
+        "method.crumble",
+        "method.roast"
+      ],
+      "cuisines": [
+        "italian",
+        "american",
+        "cajun"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "method.sear",
+      "name": "Sear",
+      "icon": "🔥",
+      "minutes": [
+        6,
+        14
+      ],
+      "heat": "Medium-high to high",
+      "what": "A dry surface pressed against a hot pan until it browns, then turned once.",
+      "why": "Browning is the Maillard reaction — proteins and sugars rearranging above about 300°F into hundreds of compounds that were not there before. It is the single largest flavor difference available for the least effort, and it is why the same ingredients taste better out of a hot pan than a warm one.",
+      "doneWhen": "It releases from the pan by itself. Food sticks while the crust is forming and lets go when the crust is done — the pan is telling you when to turn it.",
+      "goesWrong": "Wet food, a crowded pan, or a pan that was not hot enough. All three produce the same gray result, and all three are the cook adding water faster than it can evaporate.",
+      "scores": {
+        "flavor": 5,
+        "speed": 4,
+        "forgiving": 2,
+        "handsOff": 1,
+        "cleanup": 3
+      },
+      "teaches": "Patience with a pan. Almost everybody turns things too early.",
+      "proteins": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.paneer",
+        "prot.halloumi",
+        "prot.mushroom",
+        "prot.chicken.thigh",
+        "prot.chicken.breast",
+        "prot.pork.tenderloin",
+        "prot.salmon",
+        "prot.cod",
+        "prot.shrimp",
+        "prot.beef.ground",
+        "prot.turkey",
+        "prot.sausage.chicken",
+        "prot.beef.chuck"
+      ]
+    },
+    {
+      "id": "method.roast",
+      "name": "Roast on a sheet pan",
+      "icon": "🔆",
+      "minutes": [
+        20,
+        40
+      ],
+      "heat": "425°F, one layer, no crowding",
+      "what": "Dry oven heat from every direction, with the pan doing the browning underneath.",
+      "why": "Hot enough to drive off water and brown the outside before the middle overcooks. The oven does not need watching, which is the real reason it wins on a weeknight — it frees the cook to do the other four things dinner needs.",
+      "doneWhen": "Deep brown at the edges, not merely golden. Undersalted and pale is the usual home version.",
+      "goesWrong": "Too much on one pan. Vegetables release water, the water has nowhere to go, and everything steams. Two pans, or two batches.",
+      "scores": {
+        "flavor": 4,
+        "speed": 2,
+        "forgiving": 4,
+        "handsOff": 5,
+        "cleanup": 5
+      },
+      "teaches": "That empty space on a pan is an ingredient.",
+      "proteins": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.chickpeas",
+        "prot.whitebeans",
+        "prot.paneer",
+        "prot.mushroom",
+        "prot.chicken.thigh",
+        "prot.chicken.breast",
+        "prot.pork.tenderloin",
+        "prot.salmon",
+        "prot.cod",
+        "prot.sausage.chicken"
+      ]
+    },
+    {
+      "id": "method.airfry",
+      "name": "Air fry",
+      "icon": "🌀",
+      "minutes": [
+        10,
+        22
+      ],
+      "heat": "375–400°F",
+      "what": "A small convection oven. Fast-moving hot air, a small chamber, and a basket that lets the air reach every side.",
+      "why": "It gets crisp faster than an oven because the air is moving and the space is small, and it does not heat the kitchen. Genuinely better than an oven for small amounts of something that should be crunchy; no better at all for anything with a sauce.",
+      "doneWhen": "Crisp on the outside and shaking the basket makes a rattling sound rather than a thud.",
+      "goesWrong": "Overfilling the basket, which turns it back into a slow oven.",
+      "scores": {
+        "flavor": 4,
+        "speed": 4,
+        "forgiving": 4,
+        "handsOff": 4,
+        "cleanup": 4
+      },
+      "teaches": "That crispness is about moving air, not about oil.",
+      "proteins": [
+        "prot.tofu",
+        "prot.chickpeas",
+        "prot.mushroom",
+        "prot.chicken.thigh",
+        "prot.chicken.breast",
+        "prot.salmon",
+        "prot.shrimp"
+      ]
+    },
+    {
+      "id": "method.grill",
+      "name": "Grill",
+      "icon": "🍢",
+      "minutes": [
+        8,
+        20
+      ],
+      "heat": "Two zones: hot for color, cooler to finish",
+      "what": "Radiant heat from below, hot enough to char, with a cooler side to move things to.",
+      "why": "Char is a flavor nothing else makes, and smoke from dripping fat puts it back on the food. Two zones are what turns a grill from a burning device into a cooking one.",
+      "doneWhen": "Marked but not blackened, and firm rather than hard when pressed.",
+      "goesWrong": "One temperature everywhere, so anything that needs more than four minutes burns before it cooks.",
+      "scores": {
+        "flavor": 5,
+        "speed": 3,
+        "forgiving": 2,
+        "handsOff": 2,
+        "cleanup": 4
+      },
+      "teaches": "Managing heat by moving the food instead of turning a knob.",
+      "proteins": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.paneer",
+        "prot.halloumi",
+        "prot.mushroom",
+        "prot.chicken.thigh",
+        "prot.pork.tenderloin",
+        "prot.salmon",
+        "prot.shrimp",
+        "prot.chicken.breast"
+      ]
+    },
+    {
+      "id": "method.stirfry",
+      "name": "Stir-fry",
+      "icon": "🥢",
+      "minutes": [
+        5,
+        10
+      ],
+      "heat": "As high as the stove goes",
+      "what": "Everything cut small, everything prepared before anything is cooked, and then about six minutes of constant motion.",
+      "why": "Small pieces and high heat mean the outside browns before the inside overcooks. The whole technique is really a technique of preparation — once the pan is hot there is no time to chop anything.",
+      "doneWhen": "Vegetables are bright and still have snap. This is one of the few methods where done means barely cooked.",
+      "goesWrong": "Starting before the prep is finished, and adding the sauce too early so everything simmers.",
+      "scores": {
+        "flavor": 4,
+        "speed": 5,
+        "forgiving": 2,
+        "handsOff": 1,
+        "cleanup": 3
+      },
+      "teaches": "Mise en place. Not as a French affectation — as the only way this works at all.",
+      "proteins": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.edamame",
+        "prot.shrimp",
+        "prot.chicken.thigh",
+        "prot.chicken.breast",
+        "prot.beef.ground"
+      ]
+    },
+    {
+      "id": "method.braise",
+      "name": "Braise",
+      "icon": "🍲",
+      "minutes": [
+        60,
+        180
+      ],
+      "heat": "Brown hard, then barely a simmer",
+      "what": "Brown it dry, add liquid partway up, cover, and leave it at a temperature where the surface only just moves.",
+      "why": "Collagen — the connective tissue that makes tough cuts tough — melts into gelatin somewhere above 160°F, given hours. That is what makes braised food feel rich in the mouth. Beans and lentils get the same treatment for a different reason: time lets them absorb what they are sitting in.",
+      "doneWhen": "A fork goes in with no resistance and comes out clean.",
+      "goesWrong": "Boiling it. A hard boil makes meat fibers seize and go stringy no matter how long you wait.",
+      "scores": {
+        "flavor": 5,
+        "speed": 1,
+        "forgiving": 5,
+        "handsOff": 5,
+        "cleanup": 4
+      },
+      "teaches": "That time is an ingredient, and that low heat is not the same as slow heat.",
+      "proteins": [
+        "prot.beef.chuck",
+        "prot.chicken.thigh",
+        "prot.lentils",
+        "prot.tempeh",
+        "prot.turkey",
+        "prot.beef.ground"
+      ]
+    },
+    {
+      "id": "method.simmer",
+      "name": "Simmer",
+      "icon": "🥘",
+      "minutes": [
+        15,
+        45
+      ],
+      "heat": "Bubbles breaking the surface lazily, not rolling",
+      "what": "Cooking in liquid, gently, so everything softens together and the liquid takes on flavor.",
+      "why": "The most common way to cook a bean or a lentil, and the reason a pot of them tastes better on the second day. It is also where seasoning has time to spread, which is why the tasting happens near the end.",
+      "doneWhen": "Tender all the way through, and the liquid has thickened enough to coat a spoon.",
+      "goesWrong": "A hard boil, which breaks up whatever is in the pot and evaporates the liquid you wanted.",
+      "scores": {
+        "flavor": 3,
+        "speed": 2,
+        "forgiving": 5,
+        "handsOff": 4,
+        "cleanup": 5
+      },
+      "teaches": "The difference between a simmer and a boil, which is most of what liquid cooking is.",
+      "proteins": [
+        "prot.lentils",
+        "prot.redlentils",
+        "prot.chickpeas",
+        "prot.blackbeans",
+        "prot.whitebeans",
+        "prot.tofu",
+        "prot.edamame"
+      ]
+    },
+    {
+      "id": "method.crisp",
+      "name": "Crisp from the can",
+      "icon": "🫘",
+      "minutes": [
+        8,
+        12
+      ],
+      "heat": "Medium-high, a film of oil",
+      "what": "Drained, dried beans in hot oil, left alone until they blister and pop.",
+      "why": "The cheapest transformation in cooking. Beans go from a soft thing in a stew to something with a shell and a crunchy edge, and it takes ten minutes and one pan.",
+      "doneWhen": "Some of them have split and browned and a few have jumped out of the pan.",
+      "goesWrong": "Wet beans, which spit and then steam. Dry them on a towel first.",
+      "scores": {
+        "flavor": 4,
+        "speed": 4,
+        "forgiving": 4,
+        "handsOff": 2,
+        "cleanup": 3
+      },
+      "teaches": "That texture is a decision, not a property of the ingredient.",
+      "proteins": [
+        "prot.chickpeas",
+        "prot.blackbeans",
+        "prot.whitebeans"
+      ]
+    },
+    {
+      "id": "method.crumble",
+      "name": "Crumble and brown",
+      "icon": "🍳",
+      "minutes": [
+        8,
+        14
+      ],
+      "heat": "Medium-high, one layer",
+      "what": "Broken into pieces, spread out, and left completely alone until one side is dark.",
+      "why": "Works the same on ground meat, crumbled tempeh, mashed beans and torn tofu: surface area plus dry heat equals browning. The single mistake everybody makes is stirring, which keeps any surface from staying against the pan long enough to brown.",
+      "doneWhen": "There is a dark crust on the bottom before you break it up further.",
+      "goesWrong": "Constant stirring, a crowded pan, or salting too early — salt pulls out water and water stops browning.",
+      "scores": {
+        "flavor": 4,
+        "speed": 4,
+        "forgiving": 3,
+        "handsOff": 2,
+        "cleanup": 3
+      },
+      "teaches": "That doing nothing for four minutes is an active cooking skill.",
+      "proteins": [
+        "prot.turkey",
+        "prot.beef.ground",
+        "prot.tempeh",
+        "prot.tofu",
+        "prot.chickpeas",
+        "prot.sausage.chicken",
+        "prot.blackbeans",
+        "prot.whitebeans"
+      ]
+    },
+    {
+      "id": "method.poach",
+      "name": "Poach",
+      "icon": "💧",
+      "minutes": [
+        8,
+        20
+      ],
+      "heat": "Barely moving liquid, 160–180°F",
+      "what": "Submerged in liquid that never boils, so it cooks gently and evenly all the way through.",
+      "why": "Protein squeezes out water as it heats, and the hotter the surroundings the harder it squeezes. Poaching keeps the outside close to the finished temperature, so nothing dries out. It is the technique behind chicken that is actually juicy.",
+      "doneWhen": "Firm but yielding. There is no color to judge by, which is why this is the method to use a thermometer for.",
+      "goesWrong": "Letting it boil, which is the whole thing you are trying to avoid.",
+      "scores": {
+        "flavor": 2,
+        "speed": 3,
+        "forgiving": 4,
+        "handsOff": 3,
+        "cleanup": 4
+      },
+      "teaches": "That flavor and gentleness are a trade, and the poaching liquid is where you put the flavor back.",
+      "proteins": [
+        "prot.chicken.breast",
+        "prot.salmon",
+        "prot.cod",
+        "prot.shrimp",
+        "prot.egg"
+      ]
+    },
+    {
+      "id": "method.steam",
+      "name": "Steam",
+      "icon": "♨️",
+      "minutes": [
+        4,
+        12
+      ],
+      "heat": "Covered, over an inch of boiling water",
+      "what": "Cooked by vapor rather than by water or fat, so nothing washes away and nothing browns.",
+      "why": "The gentlest way to get something hot and tender, and the one that keeps color and water-soluble vitamins where they are. Also the required first step for tempeh.",
+      "doneWhen": "A knife slides in with slight resistance. Green vegetables go brilliant just before they go dull.",
+      "goesWrong": "Leaving it too long, at which point everything turns olive-colored and limp.",
+      "scores": {
+        "flavor": 1,
+        "speed": 4,
+        "forgiving": 3,
+        "handsOff": 4,
+        "cleanup": 5
+      },
+      "teaches": "What food tastes like with nothing added, which is a useful baseline to have.",
+      "proteins": [
+        "prot.tempeh",
+        "prot.edamame",
+        "prot.cod",
+        "prot.tofu"
+      ]
+    },
+    {
+      "id": "method.slowcook",
+      "name": "Slow cooker",
+      "icon": "⏲",
+      "minutes": [
+        240,
+        480
+      ],
+      "heat": "Low, all day",
+      "what": "Everything in at once in the morning, dinner waiting at six.",
+      "why": "The same chemistry as a braise, run slower and unattended. It cannot brown, which is why the recipes worth making take five minutes to brown things in a skillet first.",
+      "doneWhen": "The timer, mostly. This is the one method where the clock is more reliable than the cook.",
+      "goesWrong": "Skipping the browning, and adding dairy or fresh herbs at the start instead of the end.",
+      "scores": {
+        "flavor": 3,
+        "speed": 1,
+        "forgiving": 5,
+        "handsOff": 5,
+        "cleanup": 4
+      },
+      "teaches": "How to make dinner at 8 in the morning, which some weeks is the only slot there is.",
+      "proteins": [
+        "prot.beef.chuck",
+        "prot.chicken.thigh",
+        "prot.lentils",
+        "prot.blackbeans"
+      ]
+    },
+    {
+      "id": "method.scramble",
+      "name": "Scramble",
+      "icon": "🥚",
+      "minutes": [
+        3,
+        6
+      ],
+      "heat": "Low. Lower than that.",
+      "what": "Constant gentle motion over low heat, off the burner before it looks finished.",
+      "why": "Egg proteins set between 145°F and 160°F and squeeze out their water above that. Low and slow means small curds and a custardy texture; high heat means rubber and a puddle.",
+      "doneWhen": "Still glossy and slightly loose. The residual heat finishes them on the way to the plate.",
+      "goesWrong": "Heat, and salting several minutes ahead of the pan.",
+      "scores": {
+        "flavor": 3,
+        "speed": 5,
+        "forgiving": 2,
+        "handsOff": 1,
+        "cleanup": 3
+      },
+      "teaches": "Carryover cooking — that food keeps cooking after it leaves the heat.",
+      "proteins": [
+        "prot.egg",
+        "prot.tofu",
+        "prot.paneer"
+      ]
+    },
+    {
+      "id": "method.fry",
+      "name": "Fry an egg",
+      "icon": "🍳",
+      "minutes": [
+        2,
+        4
+      ],
+      "heat": "Medium, with real fat in the pan",
+      "what": "Cracked into hot fat and left alone. Covered for a minute if you want the top set.",
+      "why": "The fastest way to make a bowl of anything into dinner. A runny yolk is also a sauce — it is an emulsion of fat and protein, which is what a sauce is.",
+      "doneWhen": "The white is opaque and the edges are lacy and brown, if that is what you like.",
+      "goesWrong": "Not enough fat, or a pan that is too hot, which sets the bottom before the top is anywhere near done.",
+      "scores": {
+        "flavor": 4,
+        "speed": 5,
+        "forgiving": 3,
+        "handsOff": 2,
+        "cleanup": 3
+      },
+      "teaches": "That an egg on top is a legitimate answer to 'this needs something'.",
+      "proteins": [
+        "prot.egg"
+      ]
+    },
+    {
+      "id": "method.bake",
+      "name": "Bake into it",
+      "icon": "🥧",
+      "minutes": [
+        18,
+        45
+      ],
+      "heat": "350–400°F",
+      "what": "Cooked inside something else — a frittata, a strata, a shakshuka finished in the oven.",
+      "why": "Even, unattended heat that sets a mixture all the way through. It is how one pan feeds six people without anyone standing over it.",
+      "doneWhen": "Set at the edges and barely wobbling in the middle. It firms up as it rests.",
+      "goesWrong": "Waiting for the middle to look done in the oven, by which time the edges are dry.",
+      "scores": {
+        "flavor": 3,
+        "speed": 2,
+        "forgiving": 3,
+        "handsOff": 5,
+        "cleanup": 4
+      },
+      "teaches": "Carryover again, and reading the middle rather than the edge.",
+      "proteins": [
+        "prot.egg",
+        "prot.paneer",
+        "prot.tofu",
+        "prot.whitebeans"
+      ]
+    },
+    {
+      "id": "method.raw",
+      "name": "No cooking at all",
+      "icon": "🥗",
+      "minutes": [
+        0,
+        5
+      ],
+      "heat": "None",
+      "what": "Drained, seasoned, and onto the plate.",
+      "why": "A legitimate method, not a failure to cook one. Canned fish, cottage cheese, beans out of a can and yogurt are all finished food — what they need is salt, acid, fat and something crunchy, which is the whole of this app's flavor model applied without a stove.",
+      "doneWhen": "It is seasoned. That is the only step.",
+      "goesWrong": "Serving it unseasoned, which is where the reputation of cold food comes from.",
+      "scores": {
+        "flavor": 2,
+        "speed": 5,
+        "forgiving": 5,
+        "handsOff": 5,
+        "cleanup": 5
+      },
+      "teaches": "That seasoning, not heat, is what makes food taste like something.",
+      "proteins": [
+        "prot.tuna.canned",
+        "prot.cottagecheese",
+        "prot.chickpeas",
+        "prot.whitebeans",
+        "prot.blackbeans"
+      ]
+    }
+  ],
+  "before": [
+    {
+      "id": "prep.drybrine",
+      "name": "Salt it ahead",
+      "icon": "🧂",
+      "when": "40 minutes to overnight before cooking",
+      "what": "Salt the surface and put it back in the refrigerator, uncovered.",
+      "why": "Salt pulls water out, the water dissolves the salt, and the brine gets drawn back in. What you get is seasoning all the way through instead of only on the outside, and a drier surface that browns better. It is the single technique that most separates restaurant food from home food, and it costs nothing but planning.",
+      "worksOn": [
+        "prot.chicken.breast",
+        "prot.chicken.thigh",
+        "prot.pork.tenderloin",
+        "prot.tofu",
+        "prot.salmon",
+        "prot.cod"
+      ],
+      "skipWhen": "You have ten minutes. Salt it anyway, right before it goes in the pan — some is better than none."
+    },
+    {
+      "id": "prep.press",
+      "name": "Press the tofu",
+      "icon": "🧱",
+      "when": "15–30 minutes before, or 5 in a hurry",
+      "what": "Wrap the block in a towel, put something heavy on it, and walk away.",
+      "why": "Tofu is mostly water, and water is the enemy of browning. Pressing gets rid of enough that the surface can dry and crisp. In a hurry, tearing the block into rough pieces and blotting them hard gets most of the way there, and the torn edges brown better than cut ones.",
+      "worksOn": [
+        "prot.tofu"
+      ],
+      "skipWhen": "It is going into a soup or a braise, where the water does not matter."
+    },
+    {
+      "id": "prep.marinate",
+      "name": "Marinate",
+      "icon": "🥣",
+      "when": "30 minutes to a few hours",
+      "what": "Sit it in something with salt, fat, acid and aromatics.",
+      "why": "Less than people believe. Marinades penetrate a few millimeters at most, so what they mostly do is season and brown the surface — which is worth doing. Salt is the only part that really travels inward. Acid is the part to watch: too long in citrus or vinegar turns the outside chalky rather than tender.",
+      "worksOn": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.chicken.thigh",
+        "prot.paneer",
+        "prot.mushroom",
+        "prot.shrimp"
+      ],
+      "skipWhen": "The marinade is mostly acid and the food is delicate. Thirty minutes is plenty for shrimp or fish."
+    },
+    {
+      "id": "prep.dry",
+      "name": "Dry the surface",
+      "icon": "🧻",
+      "when": "Right before it hits the pan",
+      "what": "A paper towel or a clean cloth, pressed firmly.",
+      "why": "Every drop of surface water has to boil off before the surface can get above 212°F, and nothing browns below about 300°F. Ten seconds with a towel is the difference between a crust and a gray exterior, and it is the most skipped step in home cooking.",
+      "worksOn": [
+        "prot.tofu",
+        "prot.tempeh",
+        "prot.chickpeas",
+        "prot.chicken.thigh",
+        "prot.chicken.breast",
+        "prot.salmon",
+        "prot.cod",
+        "prot.shrimp",
+        "prot.mushroom",
+        "prot.paneer",
+        "prot.halloumi"
+      ],
+      "skipWhen": "Never. This one is free."
+    },
+    {
+      "id": "prep.rest",
+      "name": "Let it rest",
+      "icon": "⏸",
+      "when": "5–10 minutes after cooking, before cutting",
+      "what": "Off the heat, loosely covered, left alone.",
+      "why": "Heat is still moving inward when food comes off the stove, and the muscle fibers are contracted and holding their liquid under pressure. Resting lets the temperature even out and the fibers relax, so the juice stays in the food instead of on the board.",
+      "worksOn": [
+        "prot.chicken.breast",
+        "prot.chicken.thigh",
+        "prot.pork.tenderloin",
+        "prot.beef.chuck",
+        "prot.salmon"
+      ],
+      "skipWhen": "It is going straight into a sauce or a soup."
+    }
+  ],
+  "pairNote": "A method is right for a protein when both the texture and the clock agree. Choosing by clock is not a compromise — a Tuesday with twenty minutes genuinely wants a sear or a sheet pan, and a braise on a Tuesday is how people end up ordering food at nine."
+}

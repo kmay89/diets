@@ -1,0 +1,218 @@
+{
+  "schema": "vegnourish.table/1",
+  "note": "Cooking ends when the pan comes off the heat. Dinner does not. This file covers the twenty minutes on either side of that moment — when to start so everything lands together, how to get it onto a plate while it is still hot, what order to eat it in, and what to drink. All of it is the part of a recipe that never gets written down, which is why it is the part most often gotten wrong.",
+  "voice": "Guidance, not instructions. Some of it is technique with a mechanism behind it, some of it is sourced evidence with a claim id attached, and some of it is one way of doing things that happens to work. Each one says which it is.",
+
+  "timeline": {
+    "note": "Worked backward from when you want to sit down. The numbers come from the recipe's own times, so a thirty-minute skillet and a three-hour braise get different countdowns rather than the same generic advice.",
+    "platingMin": 4,
+    "restMin": 5,
+    "restWhen": ["roast", "grill", "braise"],
+    "marks": [
+      {
+        "id": "mark.start",
+        "offset": "total",
+        "title": "Start here",
+        "body": "Counted back from the recipe's own total time. It assumes the chopping is done — if it is not, add ten minutes and do that first, because a stir-fry started with an unchopped onion is not a stir-fry."
+      },
+      {
+        "id": "mark.prep",
+        "offset": "active",
+        "title": "Hands on from here",
+        "body": "Everything from this point wants you in the kitchen. Before it, the pot is mostly cooking itself."
+      },
+      {
+        "id": "mark.table",
+        "offset": 10,
+        "title": "Set the table now",
+        "body": "Not after the food is done. Plates, forks, water, whatever goes on the table — done while something is simmering, so that nothing sits and cools while somebody hunts for a serving spoon."
+      },
+      {
+        "id": "mark.warm",
+        "offset": 8,
+        "title": "Warm the plates",
+        "body": "A hot dish on a cold plate loses ten degrees before anyone picks up a fork, and food that is barely warm tastes noticeably duller — less aroma reaches your nose. Thirty seconds under hot tap water and a towel, or a low oven, or a minute in the microwave with a splash of water.",
+        "skipFor": ["salad", "no-cook", "dessert", "smoothie"]
+      },
+      {
+        "id": "mark.taste",
+        "offset": 4,
+        "title": "Taste it, and mean it",
+        "body": "A real spoonful, not a lick off the edge. This is the moment the flavor panel above is for — salt first, then acid, then whether anything fresh is going on top. Almost every fixable problem is fixable right here."
+      },
+      {
+        "id": "mark.rest",
+        "offset": 5,
+        "title": "Let it rest",
+        "body": "Anything roasted, seared or braised. Heat is still moving toward the middle and the fibers are holding their liquid under pressure; five minutes off the heat lets both settle, so the juice ends up in the food rather than on the board.",
+        "onlyFor": ["roast", "grill", "braise", "sheet-pan"]
+      },
+      {
+        "id": "mark.finish",
+        "offset": 1,
+        "title": "The last thirty seconds",
+        "body": "Raw oil, a squeeze of lemon, torn herbs, something toasted, flaky salt. None of it is cooking and all of it is the difference between food that tastes homemade and food that tastes like somebody meant it."
+      },
+      {
+        "id": "mark.sit",
+        "offset": 0,
+        "title": "Sit down",
+        "body": "Everyone at once if you can manage it. Eating together slows the meal down on its own, which is the single easiest thing on this page to do and the one with the most behind it."
+      }
+    ]
+  },
+
+  "plating": {
+    "note": "Not styling. The three things that change how food actually eats: how hot it is, how much of it there is, and whether anything is on top.",
+    "principles": [
+      {
+        "id": "plate.heat",
+        "title": "Hot food, warm plate, and move fast",
+        "body": "Aroma is most of flavor, and aroma comes off hot food and stops coming off cool food. Everything that can be done ahead should already be done, so the gap between the pan and the table is thirty seconds rather than five minutes."
+      },
+      {
+        "id": "plate.height",
+        "title": "Pile it, do not spread it",
+        "body": "Food spread flat across a plate cools fast and looks like less. The same amount gathered into the middle stays hot longer and reads as generous. This is most of what restaurant plating actually is."
+      },
+      {
+        "id": "plate.sauce",
+        "title": "Sauce under, not over",
+        "body": "Anything crisp goes on top of the sauce, never under it. Thirty seconds in liquid is all it takes to undo ten minutes of getting something crunchy."
+      },
+      {
+        "id": "plate.last",
+        "title": "The top layer is the first bite",
+        "body": "Whatever goes on last is what people smell and taste first. Herbs, zest, toasted nuts, a spoonful of yogurt, a drizzle of good oil. It is also the cheapest possible upgrade to a plate."
+      },
+      {
+        "id": "plate.contrast",
+        "title": "One cold thing, one crisp thing",
+        "body": "A plate where everything is the same temperature and the same softness gets boring long before it is finished, and people read that as not liking the food. Yogurt on a curry, a raw salad beside a braise, toasted seeds on a soup."
+      },
+      {
+        "id": "plate.serve",
+        "title": "Serve family style when you can",
+        "body": "Bowls in the middle rather than plates made in the kitchen. Everyone takes what they want, second helpings are a choice rather than an event, and nobody at the table is served a portion somebody else decided on. It also makes one dinner work for a table where people eat differently, which is the whole point of this app."
+      }
+    ],
+    "byCourse": {
+      "dinner": "A base, the protein, the vegetable, then the finish. Build in that order and nothing goes cold waiting for something else.",
+      "lunch": "Pack the crisp parts separately from the wet parts, and dress it when you eat it rather than at eight in the morning.",
+      "breakfast": "The one meal where the plate is usually assembled at the table. Put the toppings out and let people build it.",
+      "side": "Its own bowl, not crowded onto the main plate, or it gets treated as garnish and left.",
+      "dessert": "Smaller than you think. A dessert eaten slowly out of a small bowl is more satisfying than twice as much eaten fast.",
+      "snack": "On a plate rather than out of the bag. It is the difference between eating something and eating until it is gone.",
+      "component": "Into a jar, labeled with the date. Half the value of making a sauce is finding it on Thursday."
+    }
+  },
+
+  "eating": {
+    "order": {
+      "title": "What to eat first",
+      "body": "Vegetables and protein before the starch. In a small crossover trial in people with type 2 diabetes, eating the vegetables and protein of a meal before its carbohydrate lowered the blood-glucose rise afterward substantially compared with the same meal eaten in the opposite order.",
+      "claim": "table.order",
+      "practical": "It costs nothing. Start with the salad or the vegetables, eat the protein, and come to the rice or the bread last. On a mixed plate it makes less difference — the effect comes from actual separation — but on a plate with distinct parts it is free.",
+      "honest": "This was a small, short study measuring glucose after single meals, not a long-term trial of health outcomes. It is a reasonable, no-cost habit rather than a treatment, and it is not a reason to change medication or to skip advice from your own clinician."
+    },
+    "pace": {
+      "title": "Slow down",
+      "body": "Across many experiments, people eating the same meal more slowly ate less of it and were no hungrier afterward. Fullness signals take time to arrive, and eating fast simply outruns them.",
+      "claim": "table.pace",
+      "practical": "Put the fork down between bites. Serve from the middle of the table so there is a pause built in. Talk. A twenty-minute dinner is not a slow one — that is roughly the point where the signals catch up.",
+      "honest": "This is about comfort and how a meal feels, not a rule to enforce, and nothing here is worth turning a family dinner into a monitored exercise."
+    },
+    "after": {
+      "title": "Ten minutes on your feet",
+      "body": "A short, easy walk after eating blunts the rise in blood sugar afterward. A 2022 meta-analysis of studies interrupting sitting found that even very short bouts of light walking meaningfully lowered post-meal glucose compared with staying seated.",
+      "claim": "table.walk",
+      "practical": "Two to fifteen minutes. Clearing the table, washing up standing at the sink, or walking to the corner all count. It works best in the hour after eating, and it does not need to be exercise.",
+      "honest": "Measured on glucose after single meals rather than on long-term outcomes. It is one of the cheapest habits available, and that is the claim being made for it."
+    },
+    "late": {
+      "title": "Sitting up afterward",
+      "body": "Gastroesophageal reflux guidance from the American College of Gastroenterology recommends avoiding meals within two to three hours of lying down, for people who get reflux.",
+      "claim": "table.late",
+      "practical": "If heartburn is a regular visitor, the last big meal wants to be two to three hours before bed, and the couch is better than the bed. If it is not, this does not apply to you.",
+      "honest": "This is guidance for people with reflux symptoms, not general advice about when everybody should eat."
+    }
+  },
+
+  "water": {
+    "title": "What to drink, and when",
+    "base": {
+      "body": "The Institute of Medicine's adequate intake for total water is about 3.7 liters a day for men and 2.7 for women, from everything — drinks, coffee, tea, soup and food. Roughly a fifth of it arrives in food, so the amount you actually drink is lower than those numbers suggest.",
+      "claim": "table.water.total",
+      "practical": "A glass with the meal is the default. Thirst is a reasonable guide for most healthy adults; pale-yellow urine is a better one.",
+      "honest": "An adequate intake is a population estimate, not a target to hit. Hot weather, exercise, illness and some medications all move it, and a few conditions — heart failure and kidney disease among them — come with fluid limits from a clinician that override anything here."
+    },
+    "rules": [
+      {
+        "id": "water.before",
+        "title": "A glass before you start",
+        "when": null,
+        "say": "Pour the water when you set the table, not when the food arrives.",
+        "why": "Nothing dramatic — it means the glass is there and it gets drunk. Most people who do not drink enough are not resisting water, they simply never poured any."
+      },
+      {
+        "id": "water.salty",
+        "title": "This one is salty",
+        "when": { "metric": "sodium_mg", "op": ">", "value": 700 },
+        "say": "Keep the glass filled through the meal, and go easy on salt at the next one rather than trying to undo this one.",
+        "why": "You will be thirsty; that is the body managing the sodium concentration in your blood, and it is normal rather than alarming. Water does not remove sodium, so the useful move is the balance of the day, not a corrective glass. Potassium-rich food at the next meal — beans, potatoes, greens, yogurt, bananas — does more than anything you can drink."
+      },
+      {
+        "id": "water.sweet",
+        "title": "This one is sweet",
+        "when": { "metric": "sugar_g", "op": ">", "value": 22 },
+        "say": "Water rather than another sweet drink, and a walk afterward if there is one going.",
+        "why": "Sugary drinks alongside a sweet dish stack the same load twice. The walk is the part with evidence behind it."
+      },
+      {
+        "id": "water.fiber",
+        "title": "A lot of fiber in this one",
+        "when": { "metric": "fiber_g", "op": ">", "value": 12 },
+        "say": "Drink with it, and keep drinking through the afternoon.",
+        "why": "Fiber works by holding water. A sudden jump in fiber without the water alongside is exactly the combination that makes people uncomfortable and then blame the beans."
+      },
+      {
+        "id": "water.spicy",
+        "title": "This one is hot",
+        "when": { "axis": "heat", "op": ">", "value": 12 },
+        "say": "Yogurt, milk or rice for the heat. Water is the one thing that will not help.",
+        "why": "Capsaicin dissolves in fat, not in water. A glass of water spreads it around your mouth; a spoonful of yogurt carries it away. This is not folklore, it is solubility."
+      },
+      {
+        "id": "water.big",
+        "title": "A big plate",
+        "when": { "metric": "kcal", "op": ">", "value": 700 },
+        "say": "Slow it down and take the walk afterward.",
+        "why": "The two habits on this page with actual evidence behind them are both worth more on a big meal than a small one."
+      }
+    ],
+    "myths": [
+      {
+        "claim": "Drinking water with a meal dilutes your stomach acid and stops you digesting.",
+        "truth": "It does not. The stomach adjusts its own acid production and a glass of water leaves it long before digestion is finished. Drink with your meal if you want to."
+      },
+      {
+        "claim": "You need eight glasses of water a day.",
+        "truth": "There is no eight-glass rule in any dietary guideline. The actual adequate-intake figures count all fluids and all food, and coffee and tea count toward them."
+      },
+      {
+        "claim": "Eating late at night makes food turn to fat.",
+        "truth": "The clock does not change what food is. Late eating matters for reflux, and it matters if it means eating past the point of being hungry, and those are the reasons to think about it."
+      },
+      {
+        "claim": "A potato dropped into an over-salted pot absorbs the salt.",
+        "truth": "It absorbs salty liquid, at the same concentration as everything else in the pot. What actually helps is more unsalted food, which is the same thing said honestly."
+      }
+    ]
+  },
+
+  "leftovers": {
+    "title": "Before you sit down",
+    "body": "Portion out what you are keeping before the meal rather than after. It cools faster in a shallow container, it goes into the refrigerator inside two hours instead of at bedtime, and nobody has to decide at the end of dinner whether there is enough left to bother with.",
+    "practical": "Shallow container, lid off until it stops steaming, refrigerated within two hours. Label it — an unlabeled container is a container nobody opens."
+  }
+}

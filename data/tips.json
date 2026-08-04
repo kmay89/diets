@@ -1,0 +1,1004 @@
+{
+  "schema": "vegnourish.tips/1",
+  "note": "The things a recipe assumes you already know. How to hold a knife, why the pan matters, what medium heat actually means on your particular stove, which fat to reach for, why two ovens set to 375°F are rarely both at 375°F, and whether the dishwasher or the sink uses less water. None of it belongs inside a recipe, all of it changes how the recipe comes out.",
+  "voice": "Written for somebody who has cooked before and was never told any of this, which is nearly everybody. Nothing here is a rule. Where something is genuinely contested — fats, mostly — the argument is named rather than resolved by assertion.",
+  "groups": [
+    {
+      "id": "knife",
+      "name": "Knife work",
+      "icon": "🔪",
+      "blurb": "The five minutes of instruction that makes every recipe faster and safer for the rest of your life."
+    },
+    {
+      "id": "heat",
+      "name": "How heat works",
+      "icon": "🔥",
+      "blurb": "What is actually happening between the burner and the food, and why your stove is not the one the recipe was written on."
+    },
+    {
+      "id": "pans",
+      "name": "Pans and what they are for",
+      "icon": "🍳",
+      "blurb": "Four pans cover almost everything, and choosing the wrong one is why food sticks."
+    },
+    {
+      "id": "fats",
+      "name": "Fats",
+      "icon": "🫒",
+      "blurb": "Butter, oil, margarine, spray. What each one does in a pan, and what the evidence actually says."
+    },
+    {
+      "id": "oven",
+      "name": "Ovens and slow cookers",
+      "icon": "🔆",
+      "blurb": "The appliances you cannot see inside, and how much they lie to you."
+    },
+    {
+      "id": "kidskills",
+      "name": "First techniques",
+      "icon": "🧒",
+      "blurb": "How to crack an egg, whisk, measure flour and peel garlic. Taught properly once, useful forever."
+    },
+    {
+      "id": "baking",
+      "name": "Baking, honestly",
+      "icon": "🧁",
+      "blurb": "Why cookies and banana bread work, so you can make them without a recipe on the counter."
+    },
+    {
+      "id": "kitchen",
+      "name": "Running a kitchen",
+      "icon": "🧽",
+      "blurb": "Water, waste, washing up and the order you do things in."
+    },
+    {
+      "id": "storage",
+      "name": "Keeping food alive",
+      "icon": "🥬",
+      "blurb": "Why the berries went furry on Tuesday and the lettuce turned to slime. Mostly it is moisture, ethylene and cold — three things you can control."
+    }
+  ],
+  "tips": [
+    {
+      "id": "tip.grip",
+      "group": "knife",
+      "title": "Hold the knife by the blade",
+      "icon": "🔪",
+      "short": "Pinch the blade, do not grip the handle.",
+      "level": "first",
+      "body": [
+        "Pinch the base of the blade between your thumb and the side of your bent index finger, and let the other three fingers wrap the handle. It feels wrong for about a day and then it feels like the only way.",
+        "Holding a knife by the handle alone puts your hand behind the balance point, so the blade wanders and you compensate with your wrist. The pinch grip puts your hand at the pivot: the knife goes where you point it, with less effort and much less wobble."
+      ],
+      "why": "Control comes from where your hand is, not from how hard you squeeze.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.claw",
+      "group": "knife",
+      "title": "The other hand is the claw",
+      "icon": "🤚",
+      "short": "Curl your fingertips under and let your knuckles guide the blade.",
+      "level": "first",
+      "body": [
+        "Curl the fingertips of your guiding hand under so the first knuckles stick out furthest, and rest the flat of the blade against those knuckles. Move the hand back as you cut and the knife follows it.",
+        "Your fingertips are now physically behind the blade. You can cut fast without watching your fingers, which is the only way to cut fast safely."
+      ],
+      "why": "Almost every kitchen cut happens to a fingertip that was in front of the blade.",
+      "match": {
+        "words": [
+          "diced",
+          "chopped",
+          "sliced",
+          "minced"
+        ]
+      }
+    },
+    {
+      "id": "tip.sharp",
+      "group": "knife",
+      "title": "A sharp knife is the safe one",
+      "icon": "✨",
+      "short": "Dull knives slip. Sharp ones bite where you put them.",
+      "level": "first",
+      "body": [
+        "A dull blade needs force to get through a tomato skin or an onion's outer layer, and force plus a surface that suddenly gives way is how hands get cut. A sharp blade goes in where it touches.",
+        "Two habits keep an edge: a honing steel every few uses, which straightens an edge that has rolled over, and real sharpening once or twice a year, which removes metal to make a new edge. They are different things and only one of them is done weekly.",
+        "One sharp eight-inch chef's knife and one small paring knife will do ninety percent of everything. A block of fourteen dull knives is worse than either."
+      ],
+      "why": "The most common kitchen injury is a dull knife sliding off something round.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.onion",
+      "group": "knife",
+      "title": "Cutting an onion so it does not fall apart",
+      "icon": "🧅",
+      "short": "Keep the root end on until the very last cut.",
+      "level": "first",
+      "body": [
+        "Cut the onion in half through the root, from the pointed top down through the hairy end, and peel each half. Leave the root end attached — it is what holds every layer together.",
+        "Lay a half flat side down. Make lengthwise cuts toward the root, stopping short of it, then cut across. Dice falls off the onion in even pieces and nothing slides around, because the root is still doing the holding.",
+        "The flat side down part is the whole safety story. A rounded vegetable rolls; a vegetable with a flat face on the board does not."
+      ],
+      "why": "An onion is built in layers around a root. Work with that and the dice is even; work against it and you are chasing pieces around the board.",
+      "match": {
+        "ingredients": [
+          "ing.onion.yellow",
+          "ing.onion.red",
+          "ing.onion.sweet",
+          "ing.shallot"
+        ]
+      }
+    },
+    {
+      "id": "tip.round",
+      "group": "knife",
+      "title": "Flat side down, always",
+      "icon": "🥔",
+      "short": "Cut a slice off anything round before you cut anything else.",
+      "level": "first",
+      "body": [
+        "A potato, a butternut squash, a carrot, a cabbage: cut one flat face first and put that face on the board. Now it cannot roll, and the knife is not fighting a moving target.",
+        "For a large squash, cut off both ends first so it stands upright, then take the skin down in strips with the knife following the curve."
+      ],
+      "why": "Every round vegetable is a rolling hazard until it has a flat side.",
+      "match": {
+        "ingredients": [
+          "ing.potato.yukon",
+          "ing.sweetpotato",
+          "ing.squash.butternut",
+          "ing.squash.acorn",
+          "ing.cabbage.green",
+          "ing.beet",
+          "ing.cauliflower"
+        ]
+      }
+    },
+    {
+      "id": "tip.board",
+      "group": "knife",
+      "title": "Stop the board sliding",
+      "icon": "🧻",
+      "short": "A damp paper towel under the board, and it stays put.",
+      "level": "first",
+      "body": [
+        "Wet a paper towel or a thin cloth, wring it out, and lay it flat under the cutting board. The board stops moving entirely.",
+        "A board that shifts mid-cut is the second most common way people get hurt in a kitchen, after a dull knife."
+      ],
+      "why": "Ten seconds, no equipment, and it removes a whole category of accident.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.herbs-cut",
+      "group": "knife",
+      "title": "Do not mince soft herbs",
+      "icon": "🌿",
+      "short": "Chop once, or tear. Mincing turns basil black.",
+      "level": "first",
+      "body": [
+        "Basil, mint, parsley and cilantro bruise. Every extra pass of the knife crushes cells, and the aroma you were after ends up on the board as green stain instead of on the food.",
+        "Pile the leaves, roll them loosely, and make one pass with a sharp knife. Or tear them, which is better still for basil and takes no equipment."
+      ],
+      "why": "You are cutting for aroma, and aroma is what gets destroyed by over-cutting.",
+      "match": {
+        "ingredients": [
+          "ing.basil",
+          "ing.mint",
+          "ing.parsley.flat",
+          "ing.cilantro",
+          "ing.dill"
+        ]
+      }
+    },
+    {
+      "id": "tip.heat-basics",
+      "group": "heat",
+      "title": "Three ways heat gets into food",
+      "icon": "🔥",
+      "short": "Contact, moving air or liquid, and radiation. Every method is one of the three.",
+      "level": "deeper",
+      "body": [
+        "Conduction is contact: the pan touches the food and heat moves across the boundary. It is fast and uneven, which is why a seared side browns and the middle stays raw.",
+        "Convection is a moving fluid — air in an oven, water in a pot, oil in a fryer. It is slower and much more even, which is why an oven cooks a whole squash through and a skillet does not.",
+        "Radiation is heat traveling as waves with nothing in between: a broiler, a grill, glowing coals. It only reaches the surface facing it, and it is the fastest browning there is.",
+        "Almost every technique is a deliberate mix. A sear then a moderate oven is conduction for the crust and convection for the middle, which is exactly why that combination shows up in so many recipes."
+      ],
+      "why": "Once you can name which one a recipe is using, you can tell what will go wrong before it does.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.stoves",
+      "group": "heat",
+      "title": "Gas, electric and induction are not the same stove",
+      "icon": "🎚",
+      "short": "The difference is how fast the heat stops, not how hot it gets.",
+      "level": "deeper",
+      "body": [
+        "Gas responds instantly and is visible — you can see medium. The flame licks up the side of a pan, so the bottom edge runs hotter than the center, and a lot of the energy heats your kitchen rather than your food.",
+        "Electric coil and smooth-top radiant elements hold heat after you turn them down. Sliding the pan off the burner is the fast way to lower the temperature; the dial is the slow way. This one difference accounts for most burned garlic on electric stoves.",
+        "Induction heats the pan itself with a magnetic field, so response is as fast as gas and the surface stays comparatively cool. It needs pans a magnet sticks to — cast iron and most stainless, not aluminum or copper — and its low settings are genuinely low, which makes it the best of the three for melting chocolate or holding a bare simmer.",
+        "A recipe written on one is a rough guide on another. Trust the description — 'shimmering', 'golden at the edges', 'barely bubbling' — over the number on the dial."
+      ],
+      "why": "Recipes give times and dial settings. Your stove gives you neither of the ones the writer had.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.preheat",
+      "group": "heat",
+      "title": "How to tell a pan is hot enough",
+      "icon": "💧",
+      "short": "A drop of water should skate, not sizzle away.",
+      "level": "first",
+      "body": [
+        "Flick a few drops of water into a dry stainless or cast iron pan. If they sputter and vanish, it is not hot enough yet. If they gather into a bead and skate across the surface, the pan is at searing temperature — that is the Leidenfrost effect, and it is a genuinely reliable gauge.",
+        "With oil already in, look for a shimmer that moves like water when you tilt the pan. Wisps of smoke mean you have gone past it for most oils.",
+        "Two minutes of preheating is normal. Most home cooking that goes wrong went into a pan that had been on the heat for forty seconds."
+      ],
+      "why": "Food added to a cool pan sticks, then steams, then never browns.",
+      "match": {
+        "words": [
+          "skillet",
+          "sear",
+          "over medium-high",
+          "hot pan"
+        ]
+      }
+    },
+    {
+      "id": "tip.medium",
+      "group": "heat",
+      "title": "Most cooking happens at medium",
+      "icon": "🎯",
+      "short": "High is for water and searing. Almost everything else is medium.",
+      "level": "first",
+      "body": [
+        "Onions sweating, garlic softening, eggs setting, sauces reducing, pancakes: all medium or below. High heat on any of them cooks the outside before the inside knows anything happened.",
+        "High belongs to boiling water, searing a dry surface, and stir-frying with everything already chopped. That is close to the whole list.",
+        "If you are stirring something constantly to stop it burning, the answer is usually a lower flame rather than faster stirring."
+      ],
+      "why": "Impatience is the most common seasoning problem in home kitchens, and it is applied with a dial.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.carryover",
+      "group": "heat",
+      "title": "Food keeps cooking after you take it off",
+      "icon": "⏸",
+      "short": "Pull it early. It finishes on the plate.",
+      "level": "deeper",
+      "body": [
+        "The outside of anything hot is well above the temperature of its middle, and that heat keeps moving inward after the pan comes off. A thick piece of chicken can climb another five degrees; eggs can go from custardy to rubbery on the way to the table.",
+        "So the target is not 'done in the pan'. It is done a little short of done, then a rest.",
+        "This is also why scrambled eggs should look slightly underdone when they leave the heat, and why anybody who cooks them until they look right is eating them overcooked."
+      ],
+      "why": "The heat you already put in does not stop when the heat source does.",
+      "match": {
+        "words": [
+          "rest",
+          "let it rest",
+          "off the heat",
+          "carryover"
+        ]
+      }
+    },
+    {
+      "id": "tip.pan-choice",
+      "group": "pans",
+      "title": "Four pans do almost everything",
+      "icon": "🍳",
+      "short": "Stainless for browning, nonstick for eggs, cast iron for heat, a pot for water.",
+      "level": "first",
+      "body": [
+        "Stainless steel browns and makes fond — the stuck brown layer that becomes a pan sauce. It is the one to reach for whenever a recipe says deglaze. Food sticks to it and then releases when the crust forms; that is the pan working, not failing.",
+        "Nonstick is for eggs, pancakes, fish and anything delicate. It does not brown well, it does not make fond, and it should not go above medium — the coating degrades with high heat and an empty nonstick pan on a hot burner is the one genuinely bad idea in this section.",
+        "Cast iron holds a lot of heat, which means it barely drops in temperature when cold food goes in. That is what makes it good for searing and for cornbread. It is slow to change temperature in both directions, so preheat it longer and adjust it earlier.",
+        "A heavy-bottomed pot with a lid does soups, beans, pasta, braises and rice. Heavy matters: a thin pot scorches whatever settles on the bottom.",
+        "Carbon steel is worth knowing about — it behaves like a lighter, more responsive cast iron, and it is what most restaurant kitchens actually use."
+      ],
+      "why": "Half of 'my food stuck' is a pan-choice problem, not a technique problem.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.stick",
+      "group": "pans",
+      "title": "Why food sticks, and when it lets go",
+      "icon": "🧲",
+      "short": "It releases itself once a crust has formed. Wait.",
+      "level": "first",
+      "body": [
+        "Proteins bond chemically to hot metal. As the surface browns and dries, those bonds break and the food lifts freely. The pan is telling you when to turn it.",
+        "So if it is stuck, it is not ready. Prying at it tears the crust off and leaves it in the pan, which is the exact thing you were trying to avoid.",
+        "The three things that prevent sticking in the first place: a properly preheated pan, a dry food surface, and enough fat to fill the microscopic texture of the metal."
+      ],
+      "why": "Sticking is a timing signal, and almost everybody reads it as a failure.",
+      "match": {
+        "words": [
+          "sear",
+          "skillet",
+          "brown",
+          "until golden"
+        ]
+      }
+    },
+    {
+      "id": "tip.crowding",
+      "group": "pans",
+      "title": "The pan is too small",
+      "icon": "📏",
+      "short": "Food releases water. It needs somewhere to go.",
+      "level": "first",
+      "body": [
+        "Everything you put in a pan gives off steam. If the pan is full, the steam has nowhere to escape, the temperature drops to boiling point, and nothing above 212°F can happen — which means no browning, at all.",
+        "Two batches genuinely beat one crowded pan. So does a bigger pan, or a second sheet tray.",
+        "The visible sign is a pan that has gone quiet: sizzling means water leaving, silence means it has pooled."
+      ],
+      "why": "Empty space in a pan is an ingredient.",
+      "match": {
+        "words": [
+          "one layer",
+          "do not crowd",
+          "in batches",
+          "sheet pan",
+          "roast"
+        ]
+      }
+    },
+    {
+      "id": "tip.castiron",
+      "group": "pans",
+      "title": "Cast iron, without the folklore",
+      "icon": "⚫",
+      "short": "Soap is fine. Soaking is not.",
+      "level": "deeper",
+      "body": [
+        "Seasoning is polymerized oil bonded to the metal, not a layer of grease. A little dish soap will not remove it. What removes it is long soaking, the dishwasher, and scouring back to bare metal.",
+        "Wash it, dry it on the burner for a minute so no water sits in the pores, and rub in a very thin film of neutral oil while it is warm. Thin is the whole trick — a thick coat goes sticky.",
+        "Acidic food for a long time — tomato sauce simmered for an hour — will strip seasoning and pick up a metallic taste. A quick acidic finish is fine.",
+        "A rusted pan is not ruined. Scour it, wash it, and re-season it in an oven at 450°F."
+      ],
+      "why": "More cast iron is ruined by fear of soap than by soap.",
+      "match": {
+        "equipment": [
+          "cast iron",
+          "cast-iron skillet"
+        ]
+      }
+    },
+    {
+      "id": "tip.sheetpan",
+      "group": "pans",
+      "title": "Sheet pans are not all the same",
+      "icon": "🔆",
+      "short": "Heavy, rimmed, and light-colored unless you want it dark.",
+      "level": "deeper",
+      "body": [
+        "A thin sheet pan warps with a bang the moment it gets hot, and the food slides into a corner. A heavy half-sheet does not.",
+        "Dark pans absorb more radiant heat and brown bottoms faster — good for roasted vegetables, too fast for cookies, which is why cookie sheets are pale.",
+        "Parchment makes cleanup trivial and costs you a little browning. Foil is the opposite: more browning on the bottom, and it sticks to anything sugary."
+      ],
+      "why": "The tray is part of the recipe on anything roasted.",
+      "match": {
+        "equipment": [
+          "sheet pan",
+          "baking sheet",
+          "rimmed baking sheet"
+        ]
+      }
+    },
+    {
+      "id": "tip.fats-pan",
+      "group": "fats",
+      "title": "Which fat, and when",
+      "icon": "🫒",
+      "short": "Choose by smoke point first, then by flavor.",
+      "level": "first",
+      "body": [
+        "Extra-virgin olive oil starts smoking somewhere around 375°F, which is above every normal sauté and below a hard sear. It tastes of something, and heating it hard cooks that away — which is why it belongs in the pan at medium and over the top raw at the end.",
+        "Canola, avocado and refined olive oil handle high heat and taste of almost nothing. That is what you want under a sear.",
+        "Butter is about 16 percent water and contains milk solids that brown at around 250°F and burn shortly after. It browns beautifully and burns fast. Adding a spoon of oil raises the effective smoke point, and clarified butter or ghee has the solids removed so it takes real heat.",
+        "Coconut oil is solid at room temperature and carries a distinct flavor unless it is refined. Toasted sesame oil is a seasoning, not a cooking fat — it goes in at the end."
+      ],
+      "why": "A fat past its smoke point tastes acrid and takes the dish with it.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.fats-health",
+      "group": "fats",
+      "title": "Butter, margarine and olive oil, honestly",
+      "icon": "⚖️",
+      "short": "The evidence is about what replaces what, not about which is good.",
+      "level": "deeper",
+      "body": [
+        "The strongest finding in this area is about substitution: replacing saturated fat with polyunsaturated vegetable oil lowered cardiovascular events in randomized trials. Replacing it with refined starch or sugar did not. That is why this app cooks with olive oil rather than simply cooking with less fat.",
+        "Old stick margarines were genuinely worse than butter because of partially hydrogenated oils. Those trans fats have been removed from the US food supply since 2018, so a modern soft tub spread made from liquid oil is a different product from the one that earned the reputation.",
+        "Butter is not poison and there is no need to eliminate it. It is a concentrated source of saturated fat, so it is the thing to use where you will taste it — finishing, baking, a piece of toast — rather than as the default cooking fat for everything.",
+        "Nonstick spray is oil plus a propellant and usually a lecithin emulsifier. It works, and it builds up a varnish on nonstick coatings over time that is very hard to remove. A pastry brush and a teaspoon of oil does the same job."
+      ],
+      "why": "Fats are where food advice is loudest and least careful. The full argument, with sources, is on the Why this works screen.",
+      "claim": "heart.fats",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.oven-lies",
+      "group": "oven",
+      "title": "Your oven is not at the temperature it says",
+      "icon": "🌡",
+      "short": "Twenty-five degrees off is normal. Fifty is common.",
+      "level": "deeper",
+      "body": [
+        "Home ovens cycle their heating element on and off around a set point, and the sensor is in one spot while your food is in another. A swing of 25°F either side of the dial is ordinary and 50°F is not unusual, especially in an older oven.",
+        "A five-dollar oven thermometer hung from a rack tells you what yours actually does. Most people discover theirs runs cool, which is why their roasted vegetables never brown and their cookies spread.",
+        "Ovens are also uneven front to back and side to side. Rotating the pan halfway through is not fussiness, it is correcting for a real gradient.",
+        "Convection — a fan — moves air across the food and cooks faster and more evenly. The usual conversion is to drop the temperature about 25°F, or keep the temperature and check 20 percent earlier. It is excellent for roasting and browning and wrong for anything that needs to set gently, like a custard.",
+        "Preheating means the walls and racks are hot too, not just the air. Fifteen minutes after the beep is closer to right than the beep is."
+      ],
+      "why": "Every oven-baked failure gets blamed on the recipe, and half of them are the appliance.",
+      "match": {
+        "words": [
+          "oven to",
+          "preheat",
+          "bake",
+          "roast"
+        ]
+      }
+    },
+    {
+      "id": "tip.slowcooker",
+      "group": "oven",
+      "title": "How a slow cooker actually behaves",
+      "icon": "⏲",
+      "short": "Low and high reach the same temperature. High just gets there sooner.",
+      "level": "deeper",
+      "body": [
+        "Both settings climb to roughly the same simmer, around 200°F. The difference is how long they take to arrive — so low for eight hours and high for four end up in a similar place, and low is gentler on anything that can dry out.",
+        "Lifting the lid costs about twenty minutes of accumulated heat. Do it once at the end, to taste, and not before.",
+        "Nothing evaporates in a sealed cooker. Recipes designed for the stove need noticeably less liquid here or they come out thin and washed out.",
+        "It cannot brown. Five minutes browning the aromatics and the protein in a skillet first is the entire difference between a slow-cooker meal that tastes cooked and one that tastes boiled.",
+        "Dairy, fresh herbs and anything you want to stay green go in during the last twenty minutes. Eight hours turns cream grainy and basil brown."
+      ],
+      "why": "The appliance is unattended, so the mistakes are unattended too.",
+      "match": {
+        "equipment": [
+          "slow cooker"
+        ],
+        "tags": [
+          "slow-cooker"
+        ]
+      }
+    },
+    {
+      "id": "tip.airfryer",
+      "group": "oven",
+      "title": "An air fryer is a small convection oven",
+      "icon": "🌀",
+      "short": "Same physics, smaller box, faster air.",
+      "level": "first",
+      "body": [
+        "There is no frying involved. It is a fan and a heating element in a chamber small enough that the air changes direction constantly, which is why it crisps faster than a full-size oven and why it does not heat the kitchen.",
+        "The basket matters as much as the machine: air has to reach every surface. Anything piled up steams.",
+        "It is genuinely better than an oven for small batches of things that should be crunchy, and no better at all for anything wet or saucy.",
+        "Oven recipes convert at roughly 25°F lower and about 20 percent less time, checked early."
+      ],
+      "why": "Knowing it is a convection oven tells you everything it can and cannot do.",
+      "match": {
+        "equipment": [
+          "air fryer"
+        ],
+        "tags": [
+          "air-fryer"
+        ]
+      }
+    },
+    {
+      "id": "tip.crack-egg",
+      "group": "kidskills",
+      "title": "Cracking an egg",
+      "icon": "🥚",
+      "short": "Flat surface, one firm tap, thumbs in the crack.",
+      "level": "first",
+      "ages": [
+        "age.small",
+        "age.middle"
+      ],
+      "body": [
+        "Tap it once, firmly, on a flat counter — not on the rim of a bowl. The rim drives shell fragments inward; a flat surface makes a clean crack line.",
+        "Put both thumbs into the crack and pull the halves apart in one movement, over the bowl.",
+        "Crack into a small separate cup first. A stray shell or a bad egg costs you a cup instead of the whole batter, and it makes a nervous child's first attempt consequence-free.",
+        "To get a fragment out, use a half shell rather than a finger. The shell edge catches it; a fingertip pushes it around."
+      ],
+      "why": "The first cooking skill most children want, and the one most often taught wrong.",
+      "match": {
+        "ingredients": [
+          "ing.egg",
+          "ing.eggwhite"
+        ]
+      }
+    },
+    {
+      "id": "tip.whisk",
+      "group": "kidskills",
+      "title": "Whisking, and what it is for",
+      "icon": "🥄",
+      "short": "You are putting air in, or you are stopping lumps. Two different motions.",
+      "level": "first",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "body": [
+        "For air — eggs for scrambling, cream, a batter you want light — move fast in a wide circle with the whisk tilted, so it lifts and drops the mixture rather than just spinning it. You should see it change color and volume.",
+        "For smoothness — a sauce, a dressing, cocoa into milk — go in small tight circles right where the lumps are, and add the liquid a little at a time rather than all at once. Lumps form when dry meets too much wet at once.",
+        "Anchor the bowl with a damp towel underneath so it does not chase you across the counter."
+      ],
+      "why": "Children whisk enthusiastically and ineffectively for the same reason adults do: nobody said what it was supposed to accomplish.",
+      "match": {
+        "words": [
+          "whisk",
+          "beaten",
+          "beat the"
+        ]
+      }
+    },
+    {
+      "id": "tip.measure-flour",
+      "group": "kidskills",
+      "title": "Measuring flour",
+      "icon": "🥣",
+      "short": "Spoon it into the cup and level it. Never scoop.",
+      "level": "first",
+      "ages": [
+        "age.small",
+        "age.middle",
+        "age.older"
+      ],
+      "body": [
+        "Dipping the measuring cup into the bag compacts the flour. A scooped cup can hold twenty percent more than a spooned one, which is the difference between a tender cake and a dense one.",
+        "Fluff the flour with a fork, spoon it lightly into the cup until it heaps, then sweep the excess off with the back of a knife.",
+        "A kitchen scale removes the problem entirely, and it is the reason baking recipes written in grams work more reliably than the same recipe in cups."
+      ],
+      "why": "This one habit fixes more failed baking than any other single thing.",
+      "match": {
+        "ingredients": [
+          "ing.flour.ap",
+          "ing.flour.wholewheat",
+          "ing.flour.bread"
+        ]
+      }
+    },
+    {
+      "id": "tip.garlic",
+      "group": "kidskills",
+      "title": "Peeling and cutting garlic",
+      "icon": "🧄",
+      "short": "Smash it with the flat of the knife and the skin falls off.",
+      "level": "first",
+      "ages": [
+        "age.middle",
+        "age.older"
+      ],
+      "body": [
+        "Lay the clove under the flat side of a wide knife and press down with the heel of your hand until it cracks. The skin comes away in one piece.",
+        "How finely you cut it changes how strong it tastes. Cutting garlic ruptures cells and produces allicin, and the more cells you rupture the sharper it gets — sliced is mild and sweet, minced is strong, crushed to a paste is strongest.",
+        "Garlic burns in under a minute in hot fat and turns bitter for the whole dish. It goes in after the onions, near the end of the softening, not at the beginning."
+      ],
+      "why": "Burnt garlic is unrecoverable, and it happens to everybody once.",
+      "match": {
+        "ingredients": [
+          "ing.garlic"
+        ]
+      }
+    },
+    {
+      "id": "tip.scissors",
+      "group": "kidskills",
+      "title": "Scissors are the first knife",
+      "icon": "✂️",
+      "short": "Herbs, scallions, greens and pizza. No board, no slipping.",
+      "level": "first",
+      "ages": [
+        "age.middle"
+      ],
+      "body": [
+        "Kitchen scissors do a real job and nobody is frightened of them. Snipping scallions into a bowl, cutting herbs, trimming green beans, cutting broccoli into small florets.",
+        "It builds the actual skill — controlled cutting, an eye for even sizes — with none of the risk of a first knife lesson.",
+        "The next step up is a table knife on soft things: banana, cooked potato, mozzarella, tofu. After that, a small sharp knife with the claw grip taught properly."
+      ],
+      "why": "Waiting until a child is 'old enough for a knife' means they arrive at it with no cutting instincts at all.",
+      "match": {
+        "words": [
+          "chopped",
+          "sliced",
+          "trimmed",
+          "florets"
+        ]
+      }
+    },
+    {
+      "id": "tip.baking-why",
+      "group": "baking",
+      "title": "Baking is chemistry; savory cooking is taste",
+      "icon": "⚗️",
+      "short": "One is a set of ratios, the other is a set of decisions.",
+      "level": "deeper",
+      "body": [
+        "In a pan you can taste and adjust at every stage. In an oven, everything is decided before the door closes, and the ratios of flour to fat to sugar to liquid to leavening are what decide the result.",
+        "That is why baking recipes are strict and savory ones are loose, and why 'season to taste' never appears in a cake.",
+        "It also means baking is learnable in a way that feels impossible from the outside: the ratios repeat. Most quick breads, muffins and pancakes are the same handful of proportions with different flavorings."
+      ],
+      "why": "People who think they 'cannot bake' are usually measuring flour by scooping.",
+      "match": {
+        "tags": [
+          "baking",
+          "dessert"
+        ],
+        "course": [
+          "dessert"
+        ]
+      }
+    },
+    {
+      "id": "tip.cookies",
+      "group": "baking",
+      "title": "What makes a cookie the cookie it is",
+      "icon": "🍪",
+      "short": "Butter temperature and chilling decide everything about the shape.",
+      "level": "deeper",
+      "body": [
+        "Creaming softened butter with sugar beats air into it — the sugar crystals cut holes in the fat — and that trapped air is most of the lift. Melted butter skips it, which gives you a denser, chewier cookie. Neither is wrong; they are different cookies.",
+        "Warm dough spreads before it sets. Chilling the dough for even half an hour, or an hour, gives thicker cookies with more browning and deeper flavor, because the flour has hydrated and the fat is solid going in.",
+        "Pull them out when the edges are set and the middle still looks slightly underdone. They finish on the hot pan, and a cookie that looks done in the oven is a hard cookie by the time it cools.",
+        "Brown sugar is acidic and holds moisture: more of it means chewier and softer. White sugar means crisper and more spread."
+      ],
+      "why": "Every cookie complaint — too flat, too dry, too pale — traces back to one of these four things.",
+      "match": {
+        "tags": [
+          "cookies",
+          "bake-sale"
+        ],
+        "words": [
+          "cookie",
+          "creaming"
+        ]
+      }
+    },
+    {
+      "id": "tip.quickbread",
+      "group": "baking",
+      "title": "Banana bread and the muffin method",
+      "icon": "🍌",
+      "short": "Wet in one bowl, dry in another, combined until barely mixed.",
+      "level": "deeper",
+      "body": [
+        "Mix the dry ingredients together thoroughly, mix the wet ingredients together thoroughly, then fold them into each other and stop while the batter still looks lumpy. Lumps bake out; overmixing does not.",
+        "Stirring develops gluten, and gluten in a quick bread means tunnels, toughness and a domed cracked top. Twelve or so strokes is usually enough.",
+        "The blacker the bananas the better. As they ripen the starch converts to sugar and the flesh softens, which is both the sweetness and the moisture of the loaf.",
+        "It is done when a skewer comes out with a few moist crumbs, not clean. Clean means you have gone five minutes too far."
+      ],
+      "why": "One method covers banana bread, muffins, pancakes and cornbread.",
+      "match": {
+        "words": [
+          "until just combined",
+          "do not overmix",
+          "overmix",
+          "just combined",
+          "loaf pan",
+          "muffin",
+          "quick bread",
+          "banana"
+        ],
+        "tags": [
+          "baking"
+        ]
+      }
+    },
+    {
+      "id": "tip.dishwasher",
+      "group": "kitchen",
+      "title": "The dishwasher uses less water than the sink",
+      "icon": "🧽",
+      "short": "A full modern dishwasher, run without pre-rinsing.",
+      "level": "first",
+      "body": [
+        "A standard-size ENERGY STAR certified dishwasher uses about 3.2 gallons of water per cycle, against up to 27 gallons for washing the same load by hand with the tap running. The federal maximum for a new machine is 5 gallons.",
+        "Three conditions make that true: run it full, skip the pre-rinse, and use the normal cycle rather than heavy. Rinsing dishes first can use more water than the whole wash, and modern detergents actually need some food residue to work against.",
+        "Scrape, do not rinse. If you must rinse something greasy, use cold water in a bowl rather than running hot.",
+        "Hand washing efficiently — a basin of hot soapy water and a short rinse rather than a running tap — closes most of the gap. The gallons go down the drain while the tap runs, not while the dishes get clean."
+      ],
+      "why": "It is one of the largest water decisions in a household kitchen and most people have it backwards.",
+      "claim": "kitchen.dishwasher",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.water-cooking",
+      "group": "kitchen",
+      "title": "Boiling water without wasting it",
+      "icon": "💧",
+      "short": "A lid, and less water than you think.",
+      "level": "first",
+      "body": [
+        "A lid cuts the time to a boil substantially, because most of the heat leaving an uncovered pot leaves as steam. It is free and almost nobody does it.",
+        "Pasta does not need a gallon of water. Enough to cover it by an inch or two, stirred for the first minute, cooks perfectly well and leaves you with much starchier water — which is better for the sauce.",
+        "Salt the water properly regardless. It is the only chance to season pasta from the inside, and most of it goes down the drain.",
+        "Steaming vegetables uses an inch of water instead of a full pot, cooks faster, and keeps the water-soluble vitamins in the food rather than pouring them into the sink."
+      ],
+      "why": "Small, boring, and it happens four times a week for the rest of your life.",
+      "match": {
+        "words": [
+          "boil",
+          "boiling",
+          "pot of water",
+          "salted water"
+        ]
+      }
+    },
+    {
+      "id": "tip.order",
+      "group": "kitchen",
+      "title": "The order to do things in",
+      "icon": "📋",
+      "short": "Read it through, then start what takes longest.",
+      "level": "first",
+      "body": [
+        "Read the whole recipe before you touch anything. It takes ninety seconds and it is where you find out that something needed to be soaked, or chilled, or that two things happen at once.",
+        "Start whatever takes longest and cannot be hurried: water heating, the oven preheating, rice going on, an onion beginning to soften. Everything else fits around it.",
+        "Chop while something cooks itself, and wash as you go. A kitchen that is nearly clean when the food is ready is the difference between cooking again tomorrow and ordering something.",
+        "Get the things that go in together into one bowl. It is not fussiness — it is how you stop a stir-fry burning while you look for the sesame oil."
+      ],
+      "why": "Cooking is mostly scheduling, and the recipe never says so.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.storage",
+      "group": "kitchen",
+      "title": "Cooling and keeping",
+      "icon": "🧊",
+      "short": "Shallow container, lid off until it stops steaming, refrigerated within two hours.",
+      "level": "first",
+      "body": [
+        "A deep pot of hot soup put straight in the refrigerator cools from the outside in and stays warm in the middle for hours, which is the temperature range food safety cares about. Divided into shallow containers it drops fast.",
+        "Leave the lid off or ajar until the steam stops, then seal it. Sealing hot food traps condensation that lands back on it.",
+        "Label with the date. An unlabeled container is a container nobody opens, and every unlabeled container eventually gets thrown away full.",
+        "Most cooked leftovers are good for three to four days refrigerated. Freeze anything you will not get to by then, flat, in portions you would actually eat."
+      ],
+      "why": "The reason to cook once and eat twice is that the second meal is free.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.storage-why",
+      "group": "storage",
+      "title": "Three things kill food in a refrigerator",
+      "icon": "🧊",
+      "short": "Moisture, ethylene gas and the wrong temperature. Everything else is detail.",
+      "level": "first",
+      "body": [
+        "Moisture is the first. Water on a surface is where mold and bacteria start, which is why almost every rule below is some version of dry it, then let it breathe.",
+        "Ethylene is the second. Ripening fruit gives off ethylene gas, and that gas makes everything near it ripen faster. Apples, bananas, avocados, peaches, pears and tomatoes are the heavy emitters; leafy greens, broccoli, carrots and berries are the things most damaged by it. Keeping the two groups apart costs nothing.",
+        "Temperature is the third, and a refrigerator is not one temperature. The door is the warmest part and swings every time it opens — which is exactly the wrong place for milk and eggs, and exactly where most kitchens put them. The back of a lower shelf is the coldest and steadiest.",
+        "Set the refrigerator to 37–40°F and the freezer to 0°F. Most home refrigerators run warmer than their owners think, and a two-dollar thermometer settles it."
+      ],
+      "why": "Nearly every specific storage trick is one of these three principles applied to one ingredient.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.storage-berries",
+      "group": "storage",
+      "title": "Berries",
+      "icon": "🫐",
+      "short": "Do not wash them until you eat them. Store them dry, with the lid off.",
+      "level": "first",
+      "body": [
+        "Berries go furry because of mold spores that were already on them and moisture that lets those spores grow. Washing on the day you buy them puts water into every crevice and guarantees it.",
+        "Take them out of the clamshell, pick out any that are already soft or bruised — one going over takes the container with it — line a wide container with a paper towel, and leave the lid ajar so moisture can escape.",
+        "If they arrived damp or you want insurance, a quick bath in three parts water to one part vinegar kills surface spores. The critical step is what comes next: dry them completely, spread out on a towel, before they go back in the refrigerator. Damp berries after a vinegar rinse are worse off than unwashed ones.",
+        "Strawberries keep their hulls on until eaten — cutting the top off opens a wound. Raspberries and blackberries are the most fragile things in the produce aisle and are best eaten within two days or frozen on a tray.",
+        "Anything on the edge goes in the freezer on a tray, then into a bag. Frozen berries are a real ingredient rather than a consolation prize."
+      ],
+      "why": "Berries are the single most expensive thing most households throw away.",
+      "match": {
+        "ingredients": [
+          "ing.strawberries",
+          "ing.blueberries",
+          "ing.raspberries",
+          "ing.blackberries",
+          "ing.cherries.sweet"
+        ]
+      }
+    },
+    {
+      "id": "tip.storage-lettuce",
+      "group": "storage",
+      "title": "Lettuce and salad greens",
+      "icon": "🥬",
+      "short": "Wash, spin very dry, then store with a dry towel and a little air.",
+      "level": "first",
+      "body": [
+        "Greens turn to slime from water sitting on the leaves and from being squashed. Both are fixable.",
+        "Wash in a bowl of cold water, lift the leaves out rather than pouring — the grit stays at the bottom — and spin them properly dry. A salad spinner is the one unitasker worth owning; a clean pillowcase swung outdoors does the same job.",
+        "Store in a container lined with a dry paper towel, leaves loose rather than packed, towel changed if it gets damp. Whole heads of romaine or butter lettuce keep longer than anything pre-cut, because every cut edge is a place to go brown.",
+        "Bagged salad is engineered for a modified atmosphere inside the bag, so it does best left sealed until you open it and eaten fast afterward.",
+        "Wilted but not slimy is not gone. Fifteen minutes in ice water and most greens come back — the leaves reabsorb water and go crisp again."
+      ],
+      "why": "A washed, dried, properly stored head of lettuce lasts over a week. The same head in its bag lasts three days.",
+      "match": {
+        "ingredients": [
+          "ing.romaine",
+          "ing.lettuce.butter",
+          "ing.arugula",
+          "ing.spinach.baby",
+          "ing.kale.lacinato",
+          "ing.chard"
+        ]
+      }
+    },
+    {
+      "id": "tip.storage-herbs",
+      "group": "storage",
+      "title": "Fresh herbs",
+      "icon": "🌿",
+      "short": "Soft herbs in a jar of water like flowers. Hardy ones wrapped in a damp towel.",
+      "level": "first",
+      "body": [
+        "Parsley, cilantro, mint and dill: trim the stems, stand them in an inch of water in a jar, put a loose bag over the top and keep them in the refrigerator. Change the water when it clouds. Two to three weeks instead of four days.",
+        "Basil is the exception — it hates cold and turns black below about 50°F. Same jar of water, but leave it on the counter out of direct sun.",
+        "Thyme, rosemary, sage and oregano keep well wrapped loosely in a barely damp paper towel in a bag or container. They are hardy and they do not want to stand in water.",
+        "Anything about to turn goes into the freezer chopped in an ice cube tray with olive oil over it. Those cubes go straight into a hot pan later, and they are much better than dried."
+      ],
+      "why": "Herbs are bought by the bunch and used by the tablespoon, so most of a bunch has to survive a fortnight.",
+      "match": {
+        "ingredients": [
+          "ing.parsley.flat",
+          "ing.cilantro",
+          "ing.basil",
+          "ing.mint",
+          "ing.dill",
+          "ing.thyme.fresh",
+          "ing.rosemary",
+          "ing.sage.fresh",
+          "ing.chives"
+        ]
+      }
+    },
+    {
+      "id": "tip.storage-counter",
+      "group": "storage",
+      "title": "What does not belong in the refrigerator",
+      "icon": "🍅",
+      "short": "Tomatoes, potatoes, onions, garlic, bananas, whole melons, bread.",
+      "level": "first",
+      "body": [
+        "Tomatoes lose flavor below about 55°F — the cold shuts down the enzymes that make their aroma compounds, and the texture goes mealy. Counter, stem side down, out of the sun. Once cut, refrigerate and accept the trade.",
+        "Potatoes turn their starch to sugar in the cold, which makes them sweet and makes them brown too fast and unevenly when cooked. Cool, dark, ventilated, and never in a sealed bag.",
+        "Onions and garlic want dry and airy, in the dark. Refrigerated onions go soft, and a paper bag beats plastic every time.",
+        "Keep potatoes and onions apart. Onions give off moisture and ethylene, and potatoes stored next to them sprout much faster.",
+        "Bananas ripen fast in a bowl and their ethylene ripens everything near them, so give them their own spot. Bread goes stale roughly six times faster in a refrigerator than on the counter — freeze it sliced instead."
+      ],
+      "why": "Half of what people put in a refrigerator gets worse there.",
+      "match": {
+        "ingredients": [
+          "ing.tomato.roma",
+          "ing.tomato.cherry",
+          "ing.potato.yukon",
+          "ing.sweetpotato",
+          "ing.onion.yellow",
+          "ing.garlic",
+          "ing.banana",
+          "ing.bread.wholegrain"
+        ]
+      }
+    },
+    {
+      "id": "tip.storage-fridge-map",
+      "group": "storage",
+      "title": "Where things go in the refrigerator",
+      "icon": "🗺",
+      "short": "Door for condiments only. Crispers do one job each. Raw meat on the bottom.",
+      "level": "deeper",
+      "body": [
+        "The door swings between cold and room temperature every time it opens. Condiments are fine there. Milk and eggs are not — they belong on a back shelf where the temperature actually holds.",
+        "Crisper drawers have a humidity slider that does something real. High humidity (vent closed) is for things that wilt: greens, herbs, carrots, broccoli. Low humidity (vent open) is for things that rot, which is anything that gives off ethylene: apples, pears, avocados, stone fruit.",
+        "Raw meat and fish go on the lowest shelf, on a plate or tray. It is the coldest spot and, more importantly, nothing can drip onto anything below it.",
+        "Leftovers go at eye level, not at the back. Food you cannot see is food you will throw away.",
+        "Do not pack it solid. Cold air has to circulate; a jammed refrigerator has warm pockets in it."
+      ],
+      "why": "The same food in the right spot lasts about twice as long, with no extra effort.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.storage-freezer",
+      "group": "storage",
+      "title": "Freezing things properly",
+      "icon": "❄️",
+      "short": "Flat, fast, airless and labeled.",
+      "level": "deeper",
+      "body": [
+        "Freeze fast and in thin layers. Big slow-frozen blocks grow large ice crystals that rupture cell walls, which is why badly frozen food is watery when it thaws.",
+        "Air is what causes freezer burn — it is dehydration, not spoilage. Press bags flat, push the air out, and use containers that actually fit what is in them.",
+        "Freeze loose things on a tray first, then bag them: berries, meatballs, dumplings, portions of pesto. They stay separate and you can take out what you need.",
+        "Label with what it is and the date. Everything looks identical frozen, and an unlabeled container is a container nobody opens.",
+        "Thaw in the refrigerator overnight, not on the counter. If you need it faster, a sealed bag under cold running water works and a microwave defrost is fine if it is going straight into a pan.",
+        "Frozen food stays safe indefinitely at 0°F. Quality is the limit, not safety — a few months for most cooked things, longer for raw."
+      ],
+      "why": "A freezer is the difference between food you saved and food you deferred throwing away.",
+      "match": {
+        "tags": [
+          "freezer",
+          "make-ahead",
+          "meal-prep"
+        ],
+        "words": [
+          "freeze",
+          "frozen"
+        ]
+      }
+    },
+    {
+      "id": "tip.storage-leftovers",
+      "group": "storage",
+      "title": "Leftovers, and how long they really keep",
+      "icon": "🥡",
+      "short": "Shallow container, cooled fast, refrigerated inside two hours, eaten in three or four days.",
+      "level": "first",
+      "body": [
+        "Cool it fast and cool it shallow. A deep pot of hot soup takes hours to come down through the temperature range where bacteria multiply fastest; the same soup in shallow containers is cold in twenty minutes.",
+        "In the refrigerator within two hours of coming off the heat — one hour if the kitchen is over 90°F. It is fine to put warm food straight in a modern refrigerator; the old advice against it was about older machines.",
+        "Three to four days for most cooked leftovers. Rice and cooked grains are the ones to be strict about — cool them fast and eat them inside a day or two.",
+        "Reheat properly hot rather than warm, and only reheat the portion you are eating. Every cool-and-reheat cycle costs quality and adds risk.",
+        "Trust your nose but do not trust it alone. Some of what makes people ill has no smell, and 'it looked fine' is not a test."
+      ],
+      "why": "Cooking once and eating twice only works if the second meal is still good.",
+      "match": {
+        "always": true
+      }
+    },
+    {
+      "id": "tip.storage-produce-rescue",
+      "group": "storage",
+      "title": "Rescuing produce that is going",
+      "icon": "♻️",
+      "short": "Ice water for limp, the freezer for soft, the pan for everything else.",
+      "level": "first",
+      "body": [
+        "Limp carrots, celery, radishes and greens go crisp again after fifteen to thirty minutes in ice water. They lost water, and they take it back.",
+        "Soft berries, bananas and stone fruit go in the freezer for smoothies and baking. Black bananas are not a failure; they are banana bread that has done its own preparation.",
+        "Wilting herbs become a sauce — blitzed with olive oil, garlic, nuts and salt, that is pesto by definition and it freezes.",
+        "Vegetables past their best but not spoiled become soup or a roasting tray. High heat and salt cover a multitude of tiredness.",
+        "Bread going stale becomes croutons, breadcrumbs or a strata. Stale bread is an ingredient in about six different cuisines.",
+        "The line is spoilage, not appearance. Mold, sliminess, or an off smell means it goes; soft, limp or ugly does not."
+      ],
+      "why": "Most household food waste is thrown out at the point where it needed ten minutes of attention.",
+      "match": {
+        "always": true
+      }
+    }
+  ]
+}

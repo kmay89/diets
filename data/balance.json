@@ -1,0 +1,1057 @@
+{
+  "schema": "vegnourish.balance/1",
+  "note": "Where the flavor in a dish comes from, as something the app can count. Six dials with numbers behind them — salt, fat, acid, sweet, heat, savory depth — plus the two checks a cook makes in the last thirty seconds: is there anything fresh on this, and is there anything that stays crisp. The point is not a score. The point is that when a substitution takes the lemon out of a dish, the app can say so and hand back a way to put it in.",
+  "credit": "The four-dial way of thinking about this — salt, fat, acid, heat — is Samin Nosrat's, from Salt Fat Acid Heat (2017). Her 'heat' means the heat you cook with, which lives in the method rather than the ingredient list, so it is handled in data/proteins.json as a way of cooking. The chile kind of heat gets its own dial here, along with sweet and savory depth, because they are the other three things a cook reaches for when a dish tastes like it is missing something.",
+  "axes": [
+    {
+      "id": "salt",
+      "name": "Salt",
+      "icon": "🧂",
+      "kind": "measured",
+      "measure": "sodium_mg",
+      "unit": "mg",
+      "short": "Makes it taste like itself",
+      "does": "Salt is not a flavor you add. It is the thing that lets the flavors already there reach you — it suppresses bitterness, sharpens sweetness, and pulls aroma out of the pan. A dish that tastes flat is usually under-salted before it is under-anything-else.",
+      "taste": "Taste it. If you can name the ingredients but they seem to be sitting behind glass, it needs salt. If you taste salt before you taste food, it has too much.",
+      "when": "Salt in layers as you go, not all at the end. Salt added to onions at the start pulls water out and helps them brown; salt added to a finished pot only sits on top.",
+      "whenLow": {
+        "say": "Under-seasoned. This is the most common reason a home dish tastes thinner than the same dish in a restaurant.",
+        "fixes": [
+          {
+            "ing": "ing.salt.kosher",
+            "amount": "¼ tsp at a time",
+            "how": "Stir it in, wait thirty seconds, taste again.",
+            "why": "Salt takes a moment to dissolve and spread. Adding the second quarter-teaspoon before you have tasted the first is how a pot goes from flat to ruined in one step."
+          },
+          {
+            "ing": "ing.miso.white",
+            "amount": "1 tsp",
+            "how": "Melt it into a spoonful of the hot liquid first, then stir that back in.",
+            "why": "Salt and savory depth in the same move. Miso dropped straight into a pot goes to the bottom in lumps."
+          },
+          {
+            "ing": "ing.cheese.parmesan",
+            "amount": "1 tbsp grated, at the table",
+            "how": "Grate it over each bowl rather than into the pot.",
+            "why": "Salt you can see lands harder than salt stirred in, so you need less of it for the same effect."
+          },
+          {
+            "ing": "ing.olives.kalamata",
+            "amount": "a few, chopped",
+            "how": "Scatter on top.",
+            "why": "Briny bursts read as seasoning across the whole plate even though only some bites have one."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Salty. You cannot take salt out, but you can change what a bite of it looks like.",
+        "fixes": [
+          {
+            "ing": "ing.lemon",
+            "amount": "a squeeze",
+            "how": "Off the heat, then taste.",
+            "why": "Acid reads as brightness and pulls attention off the salt. It is the first thing to try, because it is the only one that does not mean cooking more food."
+          },
+          {
+            "ing": "ing.rice.brown",
+            "amount": "another cup, cooked",
+            "how": "Stretch the dish over more unsalted starch or vegetables.",
+            "why": "The salt per bite is what you taste. More unsalted bulk lowers it. The old trick of dropping in a potato to absorb salt does not work — a potato absorbs salty liquid, not salt, so it only helps by being extra unsalted food."
+          },
+          {
+            "ing": "ing.yogurt.greek.nonfat",
+            "amount": "a spoonful per bowl",
+            "how": "Dollop on top.",
+            "why": "Fat and cool dairy blunt the edge of salt without adding any more of it."
+          }
+        ]
+      },
+      "carriedBy": [
+        "acid",
+        "umami",
+        "fresh"
+      ],
+      "whenCarried": {
+        "say": "Lightly salted, and it does not need more. The acid and the savory depth in this dish are doing that work — which is the whole trick of cooking well with less salt, and the reason this collection can be heart-forward without tasting like it.",
+        "learn": "Salt, acid and glutamates all push on the same perception. Add lemon or a spoonful of miso and a dish reads as better seasoned at the same sodium. Take both away and no amount of salt makes it interesting."
+      },
+      "bands": {
+        "dinner": [
+          255,
+          800
+        ],
+        "lunch": [
+          210,
+          750
+        ],
+        "breakfast": [
+          120,
+          650
+        ],
+        "side": [
+          95,
+          480
+        ],
+        "snack": [
+          50,
+          400
+        ],
+        "dessert": [
+          0,
+          260
+        ],
+        "component": [
+          30,
+          700
+        ]
+      },
+      "cross": "The heart score reads this same number for a different reason: it cares about the whole day's sodium, this cares about whether dinner tastes like itself. A dish can be well seasoned and still be a lot of sodium for one sitting — when both say so, the fix is usually a smaller portion of it beside more unsalted food, not less salt in the pot."
+    },
+    {
+      "id": "fat",
+      "name": "Fat",
+      "icon": "🫒",
+      "kind": "measured",
+      "measure": "fat_g",
+      "unit": "g",
+      "short": "Carries flavor and coats the tongue",
+      "does": "Fat is the vehicle. Most aromatic compounds in garlic, chiles, spices and herbs dissolve in fat and not in water, which is why blooming spices in oil tastes like something and stirring them into broth does not. Fat also decides texture — it is what makes a sauce cling instead of run.",
+      "taste": "A dish with too little fat tastes correct for a second and then stops. Nothing lingers. A dish with too much coats your mouth and makes everything after it taste dull.",
+      "when": "Some at the start to cook in, some at the end raw. Good olive oil poured over at the table is a different ingredient from the same oil cooked for an hour.",
+      "whenLow": {
+        "say": "Lean. It will taste correct but short — the flavor arrives and then leaves without a trace.",
+        "fixes": [
+          {
+            "ing": "ing.oil.olive",
+            "amount": "1 tbsp, off the heat",
+            "how": "Pour it over just before serving and do not stir much.",
+            "why": "Raw olive oil keeps its peppery aroma. The same oil heated for twenty minutes has cooked that away."
+          },
+          {
+            "ing": "ing.almonds",
+            "amount": "2 tbsp, toasted and chopped",
+            "how": "Toast dry in a pan until they smell like almonds, then scatter.",
+            "why": "Fat and crunch in one move, and toasting is what turns a nut from filler into an ingredient."
+          },
+          {
+            "ing": "ing.tahini",
+            "amount": "1 tbsp thinned with water",
+            "how": "Whisk with water and lemon until it is pourable, then drizzle.",
+            "why": "Richness without dairy, and it brings its own faint bitterness that keeps the dish from going flat-sweet."
+          },
+          {
+            "ing": "ing.avocado",
+            "amount": "half, sliced",
+            "how": "Lay it on at the table.",
+            "why": "Cold creaminess against something hot is a contrast a plate rarely has too much of."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Rich. Nothing is wrong with rich — it just needs something on the plate cutting through it.",
+        "fixes": [
+          {
+            "ing": "ing.vinegar.redwine",
+            "amount": "1 tsp",
+            "how": "Stir in at the very end.",
+            "why": "Acid cuts fat. This is why a rich braise gets a splash of vinegar and why fish and chips come with malt vinegar."
+          },
+          {
+            "ing": "ing.arugula",
+            "amount": "a handful, dressed with lemon",
+            "how": "Serve alongside, not on top.",
+            "why": "Bitter and raw beside rich and cooked resets your palate between bites, so the last bite tastes like the first."
+          },
+          {
+            "ing": "ing.pickles.dill",
+            "amount": "a few spears",
+            "how": "On the side.",
+            "why": "The oldest fix in the book, and the reason a sandwich shop hands you one."
+          }
+        ]
+      },
+      "bands": {
+        "dinner": [
+          9,
+          32
+        ],
+        "lunch": [
+          7,
+          28
+        ],
+        "breakfast": [
+          6,
+          26
+        ],
+        "side": [
+          3,
+          20
+        ],
+        "snack": [
+          2,
+          22
+        ],
+        "dessert": [
+          3,
+          26
+        ],
+        "component": [
+          1,
+          40
+        ]
+      }
+    },
+    {
+      "id": "acid",
+      "name": "Acid",
+      "icon": "🍋",
+      "kind": "counted",
+      "unit": "units",
+      "reference": "One unit is roughly a gram of lemon juice. A tablespoon is about fourteen.",
+      "short": "Brightness — the thing missing when a dish is 'fine'",
+      "does": "Acid wakes a dish up. It cuts fat, sharpens salt so you need less of it, and stops long-cooked food from tasting muddy and sweet. Of everything on this list it is the one home cooks skip most often, and the one that most reliably fixes a dish nobody can find the fault in.",
+      "taste": "If it tastes heavy, dull or somehow tired, and adding salt only makes it saltier, it wants acid.",
+      "when": "Most of it goes in off the heat, at the end. Acid cooked for an hour loses its edge and turns into background sweetness — which is why a sauce that simmered with wine still wants a squeeze of lemon at the finish.",
+      "whenLow": {
+        "say": "Flat. There is nothing here to lift it.",
+        "fixes": [
+          {
+            "ing": "ing.lemon",
+            "amount": "½ lemon, juiced",
+            "how": "Off the heat, then taste, then decide about the other half.",
+            "why": "The single most useful correction in cooking. It is also the best substitute for salt: acid makes an under-salted dish taste seasoned."
+          },
+          {
+            "ing": "ing.vinegar.redwine",
+            "amount": "1 tsp",
+            "how": "Stir in at the end.",
+            "why": "For anything long-cooked and dark — beans, stews, braises — where lemon would read as out of place."
+          },
+          {
+            "ing": "ing.yogurt.greek.nonfat",
+            "amount": "a spoonful per bowl",
+            "how": "Dollop on top.",
+            "why": "Acid and cool fat together, which is why yogurt sits beside so much of the world's spiced food."
+          },
+          {
+            "ing": "ing.onion.red",
+            "amount": "¼ onion, sliced thin, in lime juice for 10 minutes",
+            "how": "Scatter over at the table.",
+            "why": "Quick-pickled onion is acid you can see, and it turns an even-textured dish into one with high notes."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Sharp. Easy to fix, and worth fixing before it hits the table.",
+        "fixes": [
+          {
+            "ing": "ing.honey",
+            "amount": "½ tsp",
+            "how": "Stir in and taste.",
+            "why": "A trace of sweetness rounds an acidic edge without making the dish sweet."
+          },
+          {
+            "ing": "ing.oil.olive",
+            "amount": "1 tbsp",
+            "how": "Stir in off the heat.",
+            "why": "Fat softens acid the same way acid cuts fat. The two dials pull against each other, which is why they are usually adjusted together."
+          }
+        ]
+      },
+      "bands": {
+        "dinner": [
+          3.5,
+          26
+        ],
+        "lunch": [
+          3,
+          26
+        ],
+        "breakfast": [
+          0,
+          22
+        ],
+        "side": [
+          1.5,
+          24
+        ],
+        "snack": [
+          0,
+          26
+        ],
+        "dessert": [
+          0,
+          30
+        ],
+        "component": [
+          0,
+          60
+        ]
+      }
+    },
+    {
+      "id": "umami",
+      "name": "Savory depth",
+      "icon": "🍄",
+      "kind": "counted",
+      "unit": "units",
+      "reference": "Counted from the ingredients that carry glutamates — aged cheese, tomato paste, mushrooms, miso, soy, seaweed, ferments.",
+      "short": "Why a dish tastes like it cooked all day",
+      "does": "Umami is the savory, mouth-filling taste of glutamates. It is what makes broth taste like more than salty water. In cooking without meat it is the dial that does the most work, because it is the one thing a pot of vegetables does not get for free.",
+      "taste": "Thin, watery, 'needs something' — and salt does not fix it. That is depth missing, not seasoning.",
+      "when": "Early, mostly, because most of these ingredients want cooking. Tomato paste fried until it darkens is a different ingredient from tomato paste stirred into liquid.",
+      "whenLow": {
+        "say": "Thin. It will taste like its parts rather than like a dish.",
+        "fixes": [
+          {
+            "ing": "ing.tomatopaste",
+            "amount": "1 tbsp",
+            "how": "Fry it in the bare pan for 60–90 seconds until it turns brick red and smells sweet, then stir it in.",
+            "why": "Frying concentrates it and browns its sugars. This is a minute of work that tastes like an extra hour of simmering."
+          },
+          {
+            "ing": "ing.mushroom.porcini.dried",
+            "amount": "a small handful",
+            "how": "Soak in hot water 20 minutes; chop them in and pour the soaking liquid in too, leaving the grit behind.",
+            "why": "Dried mushrooms are the most concentrated savory thing in most kitchens, and the soaking water is the better half."
+          },
+          {
+            "ing": "ing.miso.white",
+            "amount": "1–2 tsp",
+            "how": "Melt into a spoon of hot liquid, then stir back in off the boil.",
+            "why": "Depth plus salt. Keep it off a hard boil so it stays fragrant."
+          },
+          {
+            "ing": "ing.soysauce.lowsodium",
+            "amount": "1 tsp",
+            "how": "Stir in near the end.",
+            "why": "A teaspoon does not make a dish taste of soy sauce; it makes it taste more like itself. Watch the salt dial when you use it."
+          },
+          {
+            "ing": "ing.nutritionalyeast",
+            "amount": "1 tbsp",
+            "how": "Stir in or scatter over.",
+            "why": "Savory and cheesy with no dairy and almost no sodium."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Deeply savory, and usually salty with it — those ingredients travel together.",
+        "fixes": [
+          {
+            "ing": "ing.lemon",
+            "amount": "a squeeze",
+            "how": "Off the heat.",
+            "why": "Acid keeps a very savory dish from reading as heavy."
+          },
+          {
+            "ing": "ing.parsley.flat",
+            "amount": "a handful, chopped",
+            "how": "Over the top at the table.",
+            "why": "Something raw and green is the contrast a dark savory pot is usually missing."
+          }
+        ]
+      },
+      "bands": {
+        "dinner": [
+          3.2,
+          40
+        ],
+        "lunch": [
+          2.4,
+          40
+        ],
+        "breakfast": [
+          0,
+          40
+        ],
+        "side": [
+          0.8,
+          36
+        ],
+        "snack": [
+          0,
+          40
+        ],
+        "dessert": [
+          0,
+          40
+        ],
+        "component": [
+          0,
+          90
+        ]
+      }
+    },
+    {
+      "id": "sweet",
+      "name": "Sweet",
+      "icon": "🍯",
+      "kind": "counted",
+      "unit": "units",
+      "reference": "Counted from the sweetness you taste as sweetness — sugar, honey, maple, dried fruit, chocolate — rather than from total sugar. The sugar in a can of tomatoes is real, and nobody has ever described shakshuka as sweet.",
+      "short": "Rounds edges — a seasoning outside dessert",
+      "does": "Outside of dessert, sweetness is a corrector rather than a flavor. Half a teaspoon of honey in a tomato sauce does not make it sweet; it takes the metallic edge off the tomatoes. Sweetness also balances heat and bitterness, which is the whole architecture of Thai food.",
+      "taste": "A savory dish that is too sweet tastes like it came out of a jar. One with none at all can taste harsh or sour-edged, especially with tomatoes, vinegar or a lot of chile.",
+      "when": "At the end, in tiny amounts, tasting between each.",
+      "whenLow": {
+        "say": "No sweetness at all — fine for most savory dishes, worth a thought if it tastes harsh.",
+        "fixes": [
+          {
+            "ing": "ing.honey",
+            "amount": "½ tsp",
+            "how": "Stir in off the heat and taste.",
+            "why": "Enough to round an edge, not enough to notice as sweetness."
+          },
+          {
+            "ing": "ing.carrot",
+            "amount": "1, grated in early",
+            "how": "Cook it with the onions.",
+            "why": "The way a lot of Italian kitchens sweeten a sauce: a vegetable, cooked down, rather than sugar."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Sweet. Right for a dessert; worth a look on a dinner plate.",
+        "fixes": [
+          {
+            "ing": "ing.salt.kosher",
+            "amount": "a pinch",
+            "how": "Add and taste.",
+            "why": "Salt makes sweetness read as flavor instead of sugar. It is why salted caramel works."
+          },
+          {
+            "ing": "ing.lime",
+            "amount": "a squeeze",
+            "how": "Off the heat.",
+            "why": "Acid is the fastest way to make something over-sweet taste balanced."
+          },
+          {
+            "ing": "ing.spice.pepperflakes",
+            "amount": "a pinch",
+            "how": "Stir in.",
+            "why": "Heat against sweet is the Thai and Sichuan answer, and it works on a weeknight tomato sauce too."
+          }
+        ]
+      },
+      "optional": true,
+      "bands": {
+        "dinner": [
+          0,
+          9
+        ],
+        "lunch": [
+          0,
+          9
+        ],
+        "breakfast": [
+          0,
+          14
+        ],
+        "side": [
+          0,
+          8
+        ],
+        "snack": [
+          0,
+          14
+        ],
+        "dessert": [
+          7,
+          46
+        ],
+        "component": [
+          0,
+          26
+        ]
+      }
+    },
+    {
+      "id": "heat",
+      "name": "Chile heat",
+      "icon": "🌶",
+      "kind": "counted",
+      "unit": "units",
+      "optional": true,
+      "reference": "Weighted by how hot each chile actually is, so a teaspoon of cayenne counts for far more than a whole jalapeño.",
+      "short": "Optional — but it changes how everything else lands",
+      "does": "Capsaicin is not a taste; it is a pain signal your mouth reads as heat. It makes you salivate, which spreads every other flavor further, and it makes sweetness and fat more noticeable by contrast.",
+      "taste": "There is no correct amount. What matters is that it is deliberate, and that a table with different tolerances can still eat one dinner.",
+      "when": "Whole dried chiles and pepper flakes early, in fat, so the heat spreads evenly. Fresh chiles and chile oil at the end, so they stay sharp and anyone can skip them.",
+      "whenLow": {
+        "say": "No heat. That is a choice, not a fault.",
+        "fixes": [
+          {
+            "ing": "ing.spice.pepperflakes",
+            "amount": "¼ tsp, bloomed in the oil",
+            "how": "Add to hot fat for twenty seconds before the liquid goes in.",
+            "why": "Blooming spreads heat through the whole dish. Sprinkled on at the end it sits in hot spots."
+          },
+          {
+            "ing": "ing.chilicrisp",
+            "amount": "a spoonful, at the table",
+            "how": "Put the jar on the table.",
+            "why": "The one that keeps everybody eating the same dinner — the people who want heat add it to their own bowl."
+          }
+        ]
+      },
+      "whenHigh": {
+        "say": "Genuinely hot. Worth serving something cooling beside it.",
+        "fixes": [
+          {
+            "ing": "ing.yogurt.greek.nonfat",
+            "amount": "a spoonful",
+            "how": "On top or on the side.",
+            "why": "Capsaicin dissolves in fat, not water. Dairy carries it away; a glass of water spreads it around."
+          },
+          {
+            "ing": "ing.rice.jasmine",
+            "amount": "a bowl",
+            "how": "Serve it under or beside.",
+            "why": "Plain starch is the built-in off switch, and the reason very hot food is almost always served with some."
+          }
+        ]
+      },
+      "bands": {
+        "dinner": [
+          0,
+          14
+        ],
+        "lunch": [
+          0,
+          14
+        ],
+        "breakfast": [
+          0,
+          12
+        ],
+        "side": [
+          0,
+          14
+        ],
+        "snack": [
+          0,
+          18
+        ],
+        "dessert": [
+          0,
+          8
+        ],
+        "component": [
+          0,
+          40
+        ]
+      }
+    }
+  ],
+  "finishers": [
+    {
+      "id": "fresh",
+      "name": "Something fresh",
+      "icon": "🌿",
+      "short": "The handful of green that goes on last",
+      "does": "Soft herbs, citrus zest and raw alliums are aroma rather than taste, and aroma is most of what you experience as flavor. They are also volatile — they cook away in about a minute, which is exactly why they go on at the end and why the same herb stirred in early does nothing.",
+      "whenMissing": {
+        "say": "Nothing fresh goes on at the end. The dish will taste cooked all the way through, with no top note.",
+        "fixes": [
+          {
+            "ing": "ing.parsley.flat",
+            "amount": "a small handful, roughly chopped",
+            "how": "Over the top, at the table.",
+            "why": "The default. It goes with almost everything and costs a dollar."
+          },
+          {
+            "ing": "ing.lemon",
+            "amount": "the zest of half",
+            "how": "Grate it over just before serving.",
+            "why": "Zest is aroma without acid, so it lifts a dish that already has enough sharpness."
+          },
+          {
+            "ing": "ing.scallion",
+            "amount": "2, sliced thin",
+            "how": "Scatter the green parts over.",
+            "why": "Raw allium bite. Cheap, keeps for weeks, and works on anything."
+          }
+        ]
+      }
+    },
+    {
+      "id": "crunch",
+      "name": "Something crisp",
+      "icon": "🥜",
+      "short": "One texture that does not give way",
+      "does": "A plate where everything is the same softness is tiring to eat long before it is finished, and people read that tiredness as not liking the food. One crisp element resets every bite.",
+      "whenMissing": {
+        "say": "Everything here is soft. It will eat monotonously by the second half of the bowl.",
+        "fixes": [
+          {
+            "ing": "ing.almonds",
+            "amount": "2 tbsp, toasted and chopped",
+            "how": "Dry pan, medium, until they smell toasty, then scatter.",
+            "why": "Crunch and fat together. Toasting is not optional — it is the whole difference."
+          },
+          {
+            "ing": "ing.panko",
+            "amount": "¼ cup, toasted in a little olive oil with garlic",
+            "how": "Scatter over pasta, beans or roasted vegetables.",
+            "why": "Italian kitchens have used fried breadcrumbs as poor man's parmesan for centuries. It is the cheapest upgrade in this app."
+          },
+          {
+            "ing": "ing.pumpkinseeds",
+            "amount": "2 tbsp, toasted",
+            "how": "Scatter.",
+            "why": "For anything Mexican or fall-flavored, and they keep for months."
+          },
+          {
+            "ing": "ing.radish",
+            "amount": "3, sliced thin",
+            "how": "On top, raw.",
+            "why": "Crunch, peppery bite and cold against hot, with no cooking at all."
+          }
+        ]
+      }
+    }
+  ],
+  "potency": {
+    "unitNote": "A number is an intensity per gram, whatever unit the recipe used. An object is keyed by unit, because for some ingredients the unit is the whole point: a whole lemon weighs 84 grams and gives about 30 grams of juice, so 'each' and 'tbsp_juice' cannot share a number. 'default' covers the units not named.",
+    "sweet": {
+      "ing.sugar.granulated": 1.0,
+      "ing.sugar.brown": 0.98,
+      "ing.powdered.sugar": 1.0,
+      "ing.honey": 0.8,
+      "ing.maple": 0.72,
+      "ing.molasses": 0.68,
+      "ing.milk.condensed": 0.55,
+      "ing.chocolate.chips": 0.55,
+      "ing.dates.medjool": 0.62,
+      "ing.raisins": 0.6,
+      "ing.cranberries.dried": 0.62,
+      "ing.apricots.dried": 0.48,
+      "ing.chocolate.dark70": 0.3,
+      "ing.mirin": 0.4,
+      "ing.bbqsauce": 0.34,
+      "ing.hoisin": 0.32,
+      "ing.ketchup": 0.22,
+      "ing.pomegranate.molasses": 0.35,
+      "ing.applesauce": 0.11,
+      "ing.banana": 0.12,
+      "ing.mango": 0.14,
+      "ing.frozen.mango": 0.14,
+      "ing.pineapple": 0.1,
+      "ing.frozen.pineapple": 0.1,
+      "ing.grapes": 0.16,
+      "ing.cherries.sweet": 0.13,
+      "ing.frozen.cherries": 0.13,
+      "ing.peach": 0.08,
+      "ing.pear": 0.1,
+      "ing.apple": 0.1,
+      "ing.orange": 0.09,
+      "ing.clementine": 0.1,
+      "ing.strawberries": 0.05,
+      "ing.blueberries": 0.1,
+      "ing.frozen.berries": 0.08,
+      "ing.watermelon": 0.06,
+      "ing.cantaloupe": 0.08,
+      "ing.plantain": 0.15,
+      "ing.coconut.shredded": 0.07,
+      "ing.milk.oat": 0.04,
+      "ing.cider.apple": 0.11,
+      "ing.marinara.lowsodium": 0.04,
+      "ing.salsa": 0.03,
+      "ing.currypaste.red": 0.06,
+      "ing.currypaste.green": 0.06,
+      "ing.gochujang": 0.15,
+      "ing.sweetpotato": 0.045,
+      "ing.squash.butternut": 0.03,
+      "ing.corn.kernels": 0.06,
+      "ing.frozen.corn": 0.06,
+      "ing.carrot": 0.045,
+      "ing.onion.sweet": 0.05,
+      "ing.tomato.canned.crushed": 0.03,
+      "ing.pumpkin.canned": 0.03,
+      "ing.vanilla": 0.12,
+      "ing.ladyfingers": 0.25,
+      "ing.puffpastry": 0.05,
+      "ing.phyllo": 0.02
+    },
+    "acid": {
+      "ing.lemon": {
+        "default": 0.35,
+        "tbsp_juice": 1.0,
+        "tsp_zest": 0.1
+      },
+      "ing.lime": {
+        "default": 0.38,
+        "tbsp_juice": 1.05
+      },
+      "ing.orange": {
+        "default": 0.06,
+        "cup": 0.15
+      },
+      "ing.grapefruit": {
+        "default": 0.12
+      },
+      "ing.vinegar.white_wine": 1.1,
+      "ing.vinegar.redwine": 1.1,
+      "ing.vinegar.apple": 1.0,
+      "ing.vinegar.rice": 0.7,
+      "ing.vinegar.balsamic": 0.8,
+      "ing.blackvinegar": 0.85,
+      "ing.tamarind": 0.9,
+      "ing.pomegranate.molasses": 0.7,
+      "ing.wine.white": 0.35,
+      "ing.wine.red": 0.3,
+      "ing.cider.apple": 0.12,
+      "ing.buttermilk": 0.2,
+      "ing.yogurt.greek.nonfat": 0.16,
+      "ing.yogurt.greek.2": 0.16,
+      "ing.sourcream.light": 0.14,
+      "ing.cheese.goat": 0.2,
+      "ing.cheese.feta": 0.16,
+      "ing.pickles.dill": 0.35,
+      "ing.capers": 0.4,
+      "ing.olives.kalamata": 0.2,
+      "ing.sauerkraut": 0.4,
+      "ing.kimchi": 0.35,
+      "ing.tomatillo": 0.25,
+      "ing.tomato.roma": 0.1,
+      "ing.tomato.cherry": 0.1,
+      "ing.tomato.canned.crushed": 0.12,
+      "ing.tomato.canned.diced": 0.12,
+      "ing.tomatopaste": 0.14,
+      "ing.marinara.lowsodium": 0.12,
+      "ing.salsa": 0.2,
+      "ing.ketchup": 0.2,
+      "ing.mustard.dijon": 0.35,
+      "ing.mustard.yellow": 0.3,
+      "ing.hotsauce": 0.5,
+      "ing.sriracha": 0.25,
+      "ing.pineapple": 0.14,
+      "ing.rhubarb": 0.3,
+      "ing.cranberries.fresh": 0.35,
+      "ing.raspberries": 0.15,
+      "ing.strawberries": 0.1,
+      "ing.blackberries": 0.13,
+      "ing.mirin": 0.12,
+      "ing.shaoxing": 0.2,
+      "ing.worcestershire": 0.3,
+      "ing.horseradish": 0.2,
+      "ing.spice.sumac": 5.0,
+      "ing.gochujang": 0.15,
+      "ing.doubanjiang": 0.15,
+      "ing.mayo.olive": 0.1,
+      "ing.cottagecheese": 0.08,
+      "ing.milk.condensed": 0.04
+    },
+    "umami": {
+      "ing.mushroom.porcini.dried": 0.9,
+      "ing.kombu": 0.75,
+      "ing.fishsauce": 0.7,
+      "ing.miso.red": 0.6,
+      "ing.miso.white": 0.5,
+      "ing.nutritionalyeast": 0.55,
+      "ing.soysauce.lowsodium": 0.45,
+      "ing.tamari": 0.45,
+      "ing.nori": 0.45,
+      "ing.worcestershire": 0.4,
+      "ing.doubanjiang": 0.4,
+      "ing.stirfrysauce.mushroom": 0.4,
+      "ing.tomatopaste": 0.38,
+      "ing.cheese.parmesan": 0.34,
+      "ing.cheese.pecorino": 0.34,
+      "ing.sundriedtomato": 0.3,
+      "ing.gochujang": 0.28,
+      "ing.hoisin": 0.25,
+      "ing.cheese.gruyere": 0.2,
+      "ing.cheese.cheddar": 0.16,
+      "ing.olives.kalamata": 0.16,
+      "ing.capers": 0.16,
+      "ing.mushroom.shiitake": 0.16,
+      "ing.mushroom.oyster": 0.12,
+      "ing.mushroom.portobello": 0.11,
+      "ing.mushroom.cremini": 0.1,
+      "ing.kimchi": 0.15,
+      "ing.bbqsauce": 0.14,
+      "ing.chilicrisp": 0.14,
+      "ing.ketchup": 0.12,
+      "ing.sausage.chicken.italian": 0.12,
+      "ing.sausage.andouille.chicken": 0.12,
+      "ing.bacon": 0.14,
+      "ing.ham.deli": 0.12,
+      "ing.tempeh": 0.1,
+      "ing.sauerkraut": 0.09,
+      "ing.tomato.canned.crushed": 0.07,
+      "ing.tomato.canned.diced": 0.07,
+      "ing.marinara.lowsodium": 0.07,
+      "ing.salsa": 0.06,
+      "ing.tomato.roma": 0.05,
+      "ing.tomato.cherry": 0.05,
+      "ing.cheese.feta": 0.09,
+      "ing.cheese.mozzarella": 0.05,
+      "ing.clams.canned": 0.2,
+      "ing.tuna.canned": 0.15,
+      "ing.crab.lump": 0.14,
+      "ing.shrimp": 0.09,
+      "ing.salmon": 0.07,
+      "ing.beef.chuck": 0.07,
+      "ing.beef.ground90": 0.07,
+      "ing.beef.sirloin": 0.07,
+      "ing.pork.shoulder": 0.06,
+      "ing.pork.tenderloin": 0.05,
+      "ing.chicken.thigh": 0.05,
+      "ing.chicken.breast": 0.05,
+      "ing.turkey.ground93": 0.05,
+      "ing.broth.chicken": 0.03,
+      "ing.broth.veg": 0.025,
+      "ing.egg": 0.03,
+      "ing.corn.kernels": 0.02,
+      "ing.frozen.corn": 0.02,
+      "ing.peas.frozen": 0.02,
+      "ing.beans.black": 0.02,
+      "ing.beans.cannellini": 0.02,
+      "ing.chickpeas.canned": 0.02,
+      "ing.lentil.brown": 0.03,
+      "ing.lentil.red": 0.03,
+      "ing.walnuts": 0.03,
+      "ing.spice.smokedpaprika": 0.3,
+      "ing.currypaste.red": 0.2,
+      "ing.currypaste.green": 0.2,
+      "ing.harissa": 0.2,
+      "ing.spice.oldbay": 0.1
+    },
+    "heat": {
+      "ing.spice.cayenne": 42,
+      "ing.spice.pepperflakes": 20,
+      "ing.chile.thai": 14,
+      "ing.spice.gochugaru": 6,
+      "ing.spice.sichuanpeppercorn": 5,
+      "ing.harissa": 4.5,
+      "ing.pepper.serrano": 3.2,
+      "ing.chilicrisp": 3,
+      "ing.horseradish": 3,
+      "ing.currypaste.red": 2.6,
+      "ing.currypaste.green": 2.6,
+      "ing.sriracha": 2.2,
+      "ing.hotsauce": 2.2,
+      "ing.chipotle.adobo": 2,
+      "ing.spice.berbere": 2,
+      "ing.spice.blackpepper": 1.6,
+      "ing.spice.chili": 1.5,
+      "ing.doubanjiang": 1.3,
+      "ing.pepper.jalapeno": 1.1,
+      "ing.gochujang": 1.0,
+      "ing.chile.guajillo": 1.0,
+      "ing.spice.mustardseed": 0.8,
+      "ing.chile.ancho": 0.6,
+      "ing.spice.curry": 0.5,
+      "ing.spice.garam": 0.4,
+      "ing.ginger": 0.35,
+      "ing.pepper.poblano": 0.3,
+      "ing.mustard.dijon": 0.3,
+      "ing.spice.ginger.ground": 0.3,
+      "ing.mustard.yellow": 0.2,
+      "ing.salsa": 0.2,
+      "ing.spice.smokedpaprika": 0.1,
+      "ing.radish": 0.05
+    },
+    "fresh": {
+      "ing.cilantro": 1.0,
+      "ing.parsley.flat": 1.0,
+      "ing.basil": 1.0,
+      "ing.mint": 1.0,
+      "ing.dill": 1.0,
+      "ing.chives": 1.0,
+      "ing.scallion": 0.7,
+      "ing.arugula": 0.5,
+      "ing.thyme.fresh": 0.5,
+      "ing.sage.fresh": 0.4,
+      "ing.rosemary": 0.4,
+      "ing.lemongrass": 0.4,
+      "ing.lemon": 0.35,
+      "ing.lime": 0.35,
+      "ing.onion.red": 0.2,
+      "ing.ginger": 0.2,
+      "ing.pomegranate.seeds": 0.2,
+      "ing.lettuce.butter": 0.15,
+      "ing.romaine": 0.15,
+      "ing.cucumber": 0.12,
+      "ing.beansprouts": 0.2,
+      "ing.spice.zaatar": 0.4,
+      "ing.spice.sumac": 0.4
+    },
+    "crunch": {
+      "ing.almonds": 1.0,
+      "ing.peanuts": 1.0,
+      "ing.pistachios": 1.0,
+      "ing.walnuts": 0.9,
+      "ing.pecans": 0.9,
+      "ing.cashews": 0.9,
+      "ing.hazelnuts": 1.0,
+      "ing.macadamia": 0.9,
+      "ing.pinenuts": 0.7,
+      "ing.pumpkinseeds": 1.0,
+      "ing.sunflowerseeds": 1.0,
+      "ing.sesame.seeds": 0.6,
+      "ing.panko": 0.9,
+      "ing.popcorn.kernels": 0.9,
+      "ing.chilicrisp": 0.5,
+      "ing.coconut.shredded": 0.4,
+      "ing.tots.frozen": 0.3,
+      "ing.hemphearts": 0.3,
+      "ing.chia": 0.1
+    },
+    "crunchRaw": {
+      "note": "Vegetables are only crisp until they are cooked. These count toward the crunch check when the recipe does not cook them — a no-cook dish, a slaw, or a line the recipe puts on at the end.",
+      "ing.radish": 0.5,
+      "ing.jicama": 0.5,
+      "ing.snappeas": 0.5,
+      "ing.celery": 0.4,
+      "ing.cucumber": 0.35,
+      "ing.cabbage.red": 0.35,
+      "ing.cabbage.green": 0.35,
+      "ing.cabbage.napa": 0.3,
+      "ing.carrot": 0.3,
+      "ing.beansprouts": 0.4,
+      "ing.daikon": 0.4,
+      "ing.fennel": 0.35,
+      "ing.pepper.bell.red": 0.25,
+      "ing.pepper.bell.green": 0.25,
+      "ing.apple": 0.3,
+      "ing.pear": 0.2,
+      "ing.romaine": 0.2,
+      "ing.lettuce.butter": 0.15,
+      "ing.pickles.dill": 0.3,
+      "ing.onion.red": 0.2,
+      "ing.scallion": 0.2
+    }
+  },
+  "tagPotency": {
+    "acid": {
+      "acid": 0.5,
+      "tart": 0.5,
+      "fermented": 0.2,
+      "briny": 0.25,
+      "citrusy": 0.5
+    },
+    "umami": {
+      "umami": 0.3,
+      "meaty": 0.12,
+      "fermented": 0.15,
+      "cheese": 0.12
+    },
+    "heat": {
+      "chile": 1.2,
+      "heat": 1.2,
+      "peppery": 0.4
+    },
+    "fresh": {
+      "herb": 0.9,
+      "fresh": 0.4,
+      "garnish": 0.35,
+      "aroma": 0.3
+    },
+    "crunch": {
+      "crunch": 0.6,
+      "crouton": 0.6
+    },
+    "crunchRaw": {
+      "raw": 0.25,
+      "raw-friendly": 0.2
+    }
+  },
+  "rawRules": {
+    "note": "How the app decides a vegetable is still crisp when it reaches the table: the recipe never cooks it, or this particular line is a topping. Both are guesses made out loud rather than facts.",
+    "recipeTags": [
+      "no-cook",
+      "salad",
+      "slaw",
+      "raw",
+      "smoothie"
+    ],
+    "prepWords": [
+      "raw",
+      "thinly sliced",
+      "thin",
+      "shaved",
+      "sliced thin",
+      "for serving",
+      "to serve",
+      "on top",
+      "garnish",
+      "julienned",
+      "shredded raw",
+      "torn"
+    ],
+    "optionalCounts": true
+  },
+  "uncounted": {
+    "note": "Salt that never appears in an ingredient list. A recipe that says to cook pasta in well-salted water, or to taste and adjust at the end, is telling the cook to add an amount nobody wrote down — and the app should say it cannot see that rather than call the dish under-seasoned.",
+    "axis": "salt",
+    "phrases": [
+      "salted water",
+      "well-salted",
+      "generously salted",
+      "salt the water",
+      "salt to taste",
+      "season to taste",
+      "taste and adjust",
+      "taste and season",
+      "adjust the seasoning",
+      "adjust seasoning",
+      "salt as needed",
+      "more salt if",
+      "season with salt",
+      "a pinch of salt",
+      "flaky salt",
+      "salt at the table"
+    ],
+    "say": "The method tells you to salt as you go — salted pasta water, or a taste and adjust at the end. None of that is in the ingredient list, so this number is lower than what actually reaches the table."
+  },
+  "thresholds": {
+    "note": "A finishing check is a yes or no, so it needs a line. These are per serving, in the same units as the counted axes: about a quarter of a gram of soft herb, and about a gram of something crisp.",
+    "fresh": 0.22,
+    "crunch": 0.7
+  },
+  "cookedAway": {
+    "note": "Acid and fresh aroma are volatile. An ingredient that goes into a long cook contributes less of both than the same ingredient added at the end, so what the recipe does with it matters as much as how much of it there is. The app cannot read a cook's mind, so it uses the recipe's own total time as a rough proxy and says out loud that it is doing so.",
+    "axes": [
+      "acid",
+      "fresh"
+    ],
+    "keepUnder": 25,
+    "floor": 0.45,
+    "perMinute": 0.0075,
+    "exemptFinishers": true
+  },
+  "raise": {
+    "note": "The words the app uses when a dial sits below its band. Kept here rather than in the code so the tone can be edited without a deploy.",
+    "salt": "under-seasoned",
+    "fat": "lean",
+    "acid": "flat — nothing lifting it",
+    "umami": "thin on savory depth",
+    "sweet": "no sweetness",
+    "heat": "no heat"
+  },
+  "lessons": [
+    {
+      "id": "lesson.taste",
+      "title": "Taste at every stage",
+      "body": "Not once at the end. Taste the onions after they soften, the sauce after the tomatoes go in, and the pot before it leaves the stove. Most cooking decisions are made in those three moments, and a cook who tastes three times learns faster than one who follows a recipe exactly."
+    },
+    {
+      "id": "lesson.order",
+      "title": "Salt early, acid late",
+      "body": "Salt needs time and heat to spread and to do its work on texture. Acid and fresh herbs are volatile and go dull with either, so they go on at the end. Almost every 'my food tastes flat' problem is one of these two rules being run backwards."
+    },
+    {
+      "id": "lesson.fix",
+      "title": "When it tastes wrong, work the list",
+      "body": "Flat: acid. Boring but not flat: salt. Harsh: fat or a trace of sweet. Thin and watery: savory depth. Heavy: acid and something raw on top. Four questions, in that order, will diagnose almost anything coming off a home stove."
+    },
+    {
+      "id": "lesson.finish",
+      "title": "The last thirty seconds are half the dish",
+      "body": "Raw oil, a squeeze of lemon, torn herbs, toasted nuts, flaky salt. None of them are cooking, all of them are the difference between a dish that tastes homemade and one that tastes like somebody cooked it on purpose."
+    }
+  ]
+}

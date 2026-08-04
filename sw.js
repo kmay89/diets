@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v3.2.0';
+const VERSION = 'v3.3.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -31,6 +31,11 @@ const PRECACHE = [
   './js/nutrition.js',
   './js/food-icon.js',
   './js/swaps.js',
+  './js/balance.js',
+  './js/proteins.js',
+  './js/table.js',
+  './js/kitchen.js',
+  './js/tips.js',
   './js/views/member-card.js',
   './js/views/taste-editor.js',
   './js/views/onboarding.js',
@@ -49,6 +54,12 @@ const PRECACHE = [
   './js/views/garden.js',
   './js/views/settings.js',
   './js/views/why.js',
+  './js/views/learn.js',
+  './js/views/balance-panel.js',
+  './js/views/protein-panel.js',
+  './js/views/table-panel.js',
+  './js/views/kitchen-panel.js',
+  './js/views/tips-panel.js',
   './js/citations.js',
   './js/feedback.js',
   './js/occasions.js',
@@ -66,6 +77,12 @@ const PRECACHE = [
   './data/collections.json',
   './data/aisles.json',
   './data/garden.json',
+  './data/balance.json',
+  './data/substitutions.json',
+  './data/proteins.json',
+  './data/table.json',
+  './data/kitchen.json',
+  './data/tips.json',
   './data/graph.json',
   './icons/icon.svg',
   './icons/icon-192.png',

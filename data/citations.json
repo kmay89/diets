@@ -215,6 +215,88 @@
       "checked": "2026-08-03",
       "summary": "Self-reported diet and gut microbiome sequencing from more than 10,000 volunteers. People reporting more than 30 different plant foods a week carried more diverse gut bacterial communities than those reporting 10 or fewer.",
       "caveat": "An observational study of a self-selected, largely Western and health-interested volunteer cohort, with diet recorded by self-report. It shows an association between plant variety and microbiome diversity; it does not show that reaching a count of thirty causes better health, and greater microbiome diversity is not itself a clinical outcome."
+    },
+    {
+      "id": "shukla2015",
+      "type": "rct",
+      "authors": "Shukla, A. P., Iliescu, R. G., Thomas, C. E. & Aronne, L. J.",
+      "year": 2015,
+      "title": "Food order has a significant impact on postprandial glucose and insulin levels",
+      "publication": "Diabetes Care",
+      "detail": "38(7), e98–e99",
+      "doi": "10.2337/dc15-0429",
+      "url": "https://diabetesjournals.org/care/article/38/7/e98/30914/Food-Order-Has-a-Significant-Impact-on",
+      "checked": "2026-08-04",
+      "summary": "A randomized crossover trial in 11 adults with type 2 diabetes. The same 628-kcal meal was eaten on two days a week apart, once with carbohydrate first and once with vegetables and protein first. Eating the carbohydrate last lowered post-meal glucose by about 29% at 30 minutes, 37% at 60 and 17% at 120, with lower insulin at 60 and 120 minutes.",
+      "caveat": "Eleven participants, two meals, glucose measured for two hours. It shows that meal order changes the post-meal glucose curve; it does not show a long-term health outcome, and the effect depends on the parts of the meal actually being eaten separately."
+    },
+    {
+      "id": "buffey2022",
+      "type": "meta-analysis",
+      "authors": "Buffey, A. J., Herring, M. P., Langley, C. K., Donnelly, A. E. & Carson, B. P.",
+      "year": 2022,
+      "title": "The acute effects of interrupting prolonged sitting time in adults with standing and light-intensity walking on biomarkers of cardiometabolic health in adults: a systematic review and meta-analysis",
+      "publication": "Sports Medicine",
+      "detail": "52(8), 1765–1787",
+      "doi": "10.1007/s40279-022-01649-4",
+      "url": "https://link.springer.com/article/10.1007/s40279-022-01649-4",
+      "checked": "2026-08-04",
+      "summary": "Pooled seven studies comparing prolonged sitting with the same sitting broken up by standing or by short bouts of light-intensity walking. Light walking lowered post-meal glucose and insulin significantly; standing alone did much less.",
+      "caveat": "Acute studies measuring the hours after a meal, in small samples, mostly in healthy or overweight adults. It supports a short walk as a cheap habit, not as a treatment for anything."
+    },
+    {
+      "id": "katz2022",
+      "type": "guideline",
+      "authors": "Katz, P. O., Dunbar, K. B., Schnoll-Sussman, F. H., Greer, K. B., Yadlapati, R. & Spechler, S. J.",
+      "year": 2022,
+      "title": "ACG clinical guideline for the diagnosis and management of gastroesophageal reflux disease",
+      "publication": "The American Journal of Gastroenterology",
+      "detail": "117(1), 27–56",
+      "doi": "10.14309/ajg.0000000000001538",
+      "url": "https://journals.lww.com/ajg/fulltext/10.14309/ajg.0000000000001538~acg-clinical-guideline-for-the-diagnosis-and-management-of",
+      "checked": "2026-08-04",
+      "summary": "The American College of Gastroenterology's guidance on reflux disease. Among its lifestyle recommendations: avoid meals within two to three hours of lying down, and raise the head of the bed for people with nighttime symptoms.",
+      "caveat": "Guidance for people who have reflux symptoms. It is not general advice about when everybody should eat dinner."
+    },
+    {
+      "id": "robinson2014",
+      "type": "meta-analysis",
+      "authors": "Robinson, E., Almiron-Roig, E., Rutters, F., de Graaf, C., Forde, C. G., Tudur Smith, C., Nevitt, S. J. & Jebb, S. A.",
+      "year": 2014,
+      "title": "A systematic review and meta-analysis examining the effect of eating rate on energy intake and hunger",
+      "publication": "The American Journal of Clinical Nutrition",
+      "detail": "100(1), 123–151",
+      "doi": "10.3945/ajcn.113.081745",
+      "url": "https://ajcn.nutrition.org/article/S0002-9165(23)04681-6/fulltext",
+      "checked": "2026-08-04",
+      "summary": "Pooled experiments in which the same meal was eaten quickly or slowly. Eating more slowly reduced how much was eaten at that meal, with no increase in hunger reported afterward.",
+      "caveat": "Single-meal laboratory studies of intake, not trials of long-term eating or health. It describes how a meal feels and how much of it gets eaten, nothing more."
+    },
+    {
+      "id": "iom2005water",
+      "type": "guideline",
+      "authors": "Institute of Medicine, Panel on Dietary Reference Intakes for Electrolytes and Water",
+      "year": 2005,
+      "title": "Dietary Reference Intakes for water, potassium, sodium, chloride, and sulfate",
+      "publication": "National Academies Press, Washington DC",
+      "detail": "Chapter 4: Water",
+      "url": "https://nap.nationalacademies.org/read/10925/chapter/1",
+      "checked": "2026-08-04",
+      "summary": "Sets an adequate intake for total water of about 3.7 liters a day for men and 2.7 for women, counting all beverages and the water in food. Roughly 20% of total water comes from food.",
+      "caveat": "An adequate intake is the median of what apparently well-hydrated people consume, not a target anybody has to reach. Needs vary with climate, activity and health, and some conditions come with fluid limits set by a clinician."
+    },
+    {
+      "id": "energystar-dishwashers",
+      "type": "regulatory",
+      "authors": "US Environmental Protection Agency, ENERGY STAR program",
+      "year": 2025,
+      "title": "Dishwashers: product specification and savings",
+      "publication": "ENERGY STAR",
+      "detail": "Residential dishwashers, standard size",
+      "url": "https://www.energystar.gov/products/dishwashers",
+      "checked": "2026-08-04",
+      "summary": "Certified standard-size dishwashers use 3.2 gallons of water per cycle or less, against a federal maximum of 5.0 gallons, and the program compares this with up to 27 gallons for washing the same load by hand.",
+      "caveat": "The 27-gallon hand-washing figure assumes a running tap. Washing efficiently in a filled basin uses far less than that and closes most of the gap. The dishwasher advantage also depends on running full loads and skipping the pre-rinse."
     }
   ]
 }

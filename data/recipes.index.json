@@ -2,14 +2,55 @@
   "schema": "errerlabs.diets.recipe-index/1",
   "note": "The recipe collection is split across several files so a diff to the dessert list does not touch the dinner list. This is the one place that says which files exist — the app, the build scripts and the tests all read it, so adding a part file is a one-line change instead of an eight-file hunt.",
   "parts": [
-    { "file": "data/recipes.dinners.json", "title": "Dinners", "blurb": "The weeknight rotation: one dinner everybody eats, with a fork in the road for meat." },
-    { "file": "data/recipes.daily.json", "title": "Breakfast, lunch and components", "blurb": "Mornings, packable lunches, and the sauces and roasts the dinners lean on." },
-    { "file": "data/recipes.occasions.json", "title": "Occasions", "blurb": "Holidays, cookouts, potlucks, bake sales and the fifteen-minute nights." },
-    { "file": "data/recipes.world.json", "title": "Cuisines of the world", "blurb": "Dishes cooked the way they are cooked where they come from, with the technique that makes them work." },
-    { "file": "data/recipes.regional.json", "title": "American regional", "blurb": "The South, the Gulf, New England, the Southwest, the Midwest, the coasts and the islands." },
-    { "file": "data/recipes.methods.json", "title": "By method", "blurb": "Grill, air fryer, sheet pan, one pot and slow cooker — the appliance decides the recipe." },
-    { "file": "data/recipes.sandwiches.json", "title": "Sandwiches and handhelds", "blurb": "Lunch that travels: subs, pitas, tortas, wraps and the ones worth making at home." },
-    { "file": "data/recipes.snacks.json", "title": "Snacks, dips and smoothies", "blurb": "Between-meal food, the blender, and the things that make a plate of vegetables get eaten." },
-    { "file": "data/recipes.sweets.json", "title": "Desserts", "blurb": "Real desserts, honestly scored — plus a few built to be both good and good for you." }
+    {
+      "file": "data/recipes.dinners.json",
+      "title": "Dinners",
+      "blurb": "The weeknight rotation: one dinner everybody eats, with a fork in the road for meat."
+    },
+    {
+      "file": "data/recipes.daily.json",
+      "title": "Breakfast, lunch and components",
+      "blurb": "Mornings, packable lunches, and the sauces and roasts the dinners lean on."
+    },
+    {
+      "file": "data/recipes.occasions.json",
+      "title": "Occasions",
+      "blurb": "Holidays, cookouts, potlucks, bake sales and the fifteen-minute nights."
+    },
+    {
+      "file": "data/recipes.world.json",
+      "title": "Cuisines of the world",
+      "blurb": "Dishes cooked the way they are cooked where they come from, with the technique that makes them work."
+    },
+    {
+      "file": "data/recipes.regional.json",
+      "title": "American regional",
+      "blurb": "The South, the Gulf, New England, the Southwest, the Midwest, the coasts and the islands."
+    },
+    {
+      "file": "data/recipes.methods.json",
+      "title": "By method",
+      "blurb": "Grill, air fryer, sheet pan, one pot and slow cooker — the appliance decides the recipe."
+    },
+    {
+      "file": "data/recipes.sandwiches.json",
+      "title": "Sandwiches and handhelds",
+      "blurb": "Lunch that travels: subs, pitas, tortas, wraps and the ones worth making at home."
+    },
+    {
+      "file": "data/recipes.snacks.json",
+      "title": "Snacks, dips and smoothies",
+      "blurb": "Between-meal food, the blender, and the things that make a plate of vegetables get eaten."
+    },
+    {
+      "file": "data/recipes.sweets.json",
+      "title": "Desserts",
+      "blurb": "Real desserts, honestly scored — plus a few built to be both good and good for you."
+    },
+    {
+      "file": "data/recipes.easy.json",
+      "title": "Short and forgiving",
+      "blurb": "Dishes that ask very little and still taste like somebody meant them — with a real job in each one for whoever else is in the kitchen."
+    }
   ]
 }

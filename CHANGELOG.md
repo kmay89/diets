@@ -7,6 +7,74 @@ All notable changes to this project are documented here. Format follows
 ## [Unreleased]
 
 ### Added
+- **Where the flavor comes from.** A panel on every recipe that says what is carrying the dish: six
+  dials with real numbers behind them — salt, fat, acid, savory depth, sweet and chile heat — and the
+  two checks a cook makes in the last thirty seconds, whether anything fresh goes on and whether
+  anything stays crisp. Salt and fat are counted from the ingredient database. Acid, depth and heat
+  are weighted by how strong each ingredient actually is, so a teaspoon of cayenne is not scored as a
+  teaspoon of gochugaru, and a whole lemon is not scored as its weight in juice.
+- A dial below its band is a prompt with a fix attached — *half a lemon, off the heat, then taste* —
+  never a verdict. It also knows when a dial is being carried: a lightly salted pot with lemon and
+  miso in it does not taste under-seasoned, and telling somebody to add salt to it would make the
+  dish worse. And when the method says to salt the pasta water, the panel says out loud that it
+  cannot count seasoning nobody wrote down.
+- **Substitutions that keep going.** The old sheet listed the two substitutes in the database and
+  stopped; if you had neither, it had handed you nothing. It now walks a ladder — what the data says,
+  what *those* say, anything that plays the same part, making the missing thing out of what is in the
+  house, and leaving it out with an honest account of what that costs. 31 role groups and 18
+  make-it-yourself combinations, ranked pantry-first, with every option labeled by what it does to
+  the balance of the dish: *keeps the acid*, *loses the acid*.
+- Amounts across role groups are converted rather than copied. Dry chile heat scales by the heat
+  intensities in the flavor model, dried herb against fresh by an explicit three-to-one, a spoon of
+  miso against four cups of broth by its own table — and anything outside a plausible multiplier is
+  refused rather than printed.
+- **Pick the protein, then pick what happens to it.** 24 proteins with a per-serving amount converted
+  from the original, and 16 ways to cook them, each carrying what it does, why it works, how you know
+  it is done, and how it goes wrong — the part a recipe never prints. Plus the five things worth
+  doing before any heat: salting ahead, pressing, marinating, drying the surface, and resting.
+  Options are filtered to the recipe's own diet, except on the meat fork, which is the one place
+  another meat is the answer.
+- **At the table.** The twenty minutes on either side of the pan coming off the heat: a countdown
+  worked back from the recipe's own times, plating that says pile it rather than spread it, what to
+  eat first, and water guidance that adapts to a salty, sweet, fiber-heavy or genuinely hot meal.
+  Five new sources — food order, eating rate, post-meal walking, reflux guidance and the water
+  reference intakes — with their caveats attached, plus a short list of the confident nonsense that
+  is not true.
+- **Who else can help.** Kitchen jobs matched to a recipe's own steps and sorted into five age bands,
+  each saying what it teaches, because a five-year-old tearing basil is cooking rather than helping.
+  Steps with heat or a blade in them are marked as a grown-up's per step rather than per recipe, so
+  one pot of boiling water does not put a whole dinner out of reach of a four-year-old.
+- **How cooking works** — a technique library at `#/learn`, and matched to the dish in front of you.
+  43 notes in nine groups: knife grip and cutting an onion, what heat is and why gas, electric and
+  induction are three different stoves, which pan for what and why food lets go when it is ready, the
+  fats argument stated fairly, how much an oven lies about its temperature, slow cookers and air
+  fryers, first techniques to teach a child, why cookies do what they do, how to keep berries and
+  lettuce alive, and whether the dishwasher beats the sink.
+- **12 short, forgiving recipes** with real jobs for small hands in every one — pasta with peas,
+  stovetop mac with cauliflower blended into the sauce, tortilla pizzas, a rice bowl with a fried
+  egg, three-ingredient banana oat pancakes, smashed cucumbers, black bean and corn salad, and a
+  two-minute banana soft serve. Two new collections to find them by: **Cook with kids** and
+  **Short and forgiving**.
+- Recipes now carry what they *ask for* — short and forgiving, one thing to get right, a few things
+  at once, worth an afternoon — read off their own steps and times. Nothing is labeled easy, basic or
+  for beginners: a dish that asks for less is not a lesser dish, it is a Tuesday. The vocabulary
+  lives in `data/kitchen.json` so it can be argued with, and a test enforces it.
+- **What this one teaches you** — the technique hiding in a recipe's own method, matched from its
+  text: deglazing, blooming spices, emulsifying with pasta water, salting in layers, not crowding the
+  pan. Nobody learns emulsification from a chapter about it; they learn it holding a ladle of pasta
+  water.
+
+### Changed
+- Amounts now come out in units people count. Eight eggs rather than two and a bit cups of egg, one
+  can of chickpeas rather than 2.6 cups, five portobellos rather than seven cups of mushroom.
+- A direct substitution with no authored ratio is no longer assumed to be one for one when both sides
+  sit in a role group that knows how to scale between them. Swapping a whole lemon for white wine
+  vinegar used to suggest 5.6 tablespoons; it now suggests 1.8.
+- The swap button appears wherever the ladder has somewhere to go, which is now nearly everywhere,
+  rather than only where the database happened to list a direct substitute.
+- Storage advice sits on the Pantry screen, where somebody is already looking at what they own.
+
+### Added
 - **Shop at as many stores as you actually shop at.** Kroger and Costco, Meijer and Costco, Marc's
   and Aldi — the list splits into a run per store, in the order you tap them, each in its own walking
   order, and prints as headed sections on one sheet. A store you shop at but need nothing from this

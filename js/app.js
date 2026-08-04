@@ -8,6 +8,12 @@ import { h, mount, $, toast, sheet } from './ui.js';
 import { loadAll } from './data.js';
 import { loadCitations } from './citations.js';
 import { loadOccasions } from './occasions.js';
+import { loadBalance } from './balance.js';
+import { loadSubstitutions } from './swaps.js';
+import { loadProteins } from './proteins.js';
+import { loadTable } from './table.js';
+import { loadKitchen } from './kitchen.js';
+import { loadTips } from './tips.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
 import { matchRoute } from './routes.js';
@@ -29,6 +35,7 @@ import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
+import * as learnView from './views/learn.js';
 
 /** Route id → the view it draws. The patterns themselves live in routes.js. */
 const VIEWS = {
@@ -47,7 +54,8 @@ const VIEWS = {
   list: () => ({ render: listView.render, params: {} }),
   garden: () => ({ render: gardenView.render, params: {} }),
   settings: () => ({ render: settingsView.render, params: {} }),
-  why: () => ({ render: whyView.render, params: {} })
+  why: () => ({ render: whyView.render, params: {} }),
+  learn: () => ({ render: learnView.render, params: {} })
 };
 
 // Five tabs, because a row of eight is a wall of icons nobody reads. The rest
@@ -69,6 +77,7 @@ const MORE = [
   { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
   { href: '#/progress', label: 'Progress', icon: '🌱', blurb: 'What you have been eating' },
   { href: '#/garden', label: 'Garden', icon: '🌿', blurb: 'What to plant, and when' },
+  { href: '#/learn', label: 'How cooking works', icon: '🔪', blurb: 'Knife work, heat, pans, fats and the rest' },
   { href: '#/why', label: 'Why this works', icon: '💡', blurb: 'The research, with every source' },
   { href: '#/settings', label: 'Settings', icon: '⚙️', blurb: 'Household, preferences, your data' }
 ];
@@ -148,7 +157,13 @@ async function boot() {
   const main = $('#main');
   try {
     await loadAll();
-    await Promise.all([loadCitations(), loadOccasions()]);
+    // The craft models — flavor balance, substitutions, proteins, the table,
+    // kitchen jobs and the technique library. All small, all precached, and all
+    // needed by the recipe screen, which is where most sessions end up.
+    await Promise.all([
+      loadCitations(), loadOccasions(), loadBalance(), loadSubstitutions(),
+      loadProteins(), loadTable(), loadKitchen(), loadTips()
+    ]);
   } catch (err) {
     console.error(err);
     mount(main, h('section.view',
