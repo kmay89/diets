@@ -17,6 +17,7 @@ import { memberCard } from './member-card.js';
 import { openTasteEditor } from './taste-editor.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 import { promptInstall, isInstalled, isDismissed } from '../install.js';
+import { ALLERGENS } from '../allergy.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -54,6 +55,28 @@ function view(draw, navigate) {
       h('div.row-actions',
         h('button.btn', { type: 'button', onclick: () => { addMember({ name: 'New person' }); draw(); } }, '+ Add a person')
       )
+    ),
+
+    h('section.card.block',
+      h('h2.block__title', 'Allergies in the house'),
+      h('p.muted.small',
+        'Anything flagged here is never recommended, anywhere — not dealt in a roll, not offered ',
+        'as a substitute or a flavor fix, not suggested for the meat pan. A recipe you open ',
+        'yourself stays readable, with a warning at the top.'),
+      h('div.chip-row',
+        ...ALLERGENS.map(a => chip(a.label, {
+          on: state.prefs.avoidAllergens.includes(a.id),
+          onclick: () => {
+            const cur = state.prefs.avoidAllergens;
+            setPref('avoidAllergens', cur.includes(a.id) ? cur.filter(x => x !== a.id) : [...cur, a.id]);
+            draw();
+          }
+        }))
+      ),
+      h('p.fine-print',
+        'The app reads its own ingredient lists — it cannot see cross-contact or a "may contain" ',
+        'line on a package, and gluten here is not the same as certified celiac-safe. For a severe ',
+        'allergy, the label on the package outranks anything this app says.')
     ),
 
     h('section.card.block',

@@ -6,6 +6,32 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Added
+- **An allergy engine, with one rule and honest limits.** The rule: nothing the app *recommends*
+  may contain a flagged allergen. That was already true of the roll; it is now true everywhere a
+  suggestion happens — the substitution ladder, the flavor panel's fixes, the protein options for
+  the fork in the road, the plate's shelf and its recipe matches, and the "cook it again" ramp on
+  Today. Removed, not labeled. Enforced at the source in each engine, and proven by a test that
+  runs the real machinery against every recipe and every allergen.
+- **Jars that lie by omission are treated as containing what they usually contain.** Thai curry
+  paste and shrimp, chili crisp and peanuts, gochujang and wheat — a new `allergensMay` tag blocks
+  them the same as a certain hit, and the interface says "often contains, check the jar" instead of
+  claiming a certainty it does not have. Nine missing tags (gruyère, paneer, heavy cream, sesame
+  seeds, peanuts, pistachios, wheat noodles, baguette, mayonnaise) were also filled in, and a data
+  audit now fails the build when an ingredient's name implies a tag its data lacks.
+- **A conflicting fork is withheld, not the dinner.** A clean base with a shrimp add-on still
+  rolls; the card explains the add-on is skipped and why, and on the recipe page the fork starts
+  switched off with a note — it can be turned on by hand, because the person tapping knows their
+  own table.
+- **Opened by hand, a conflicting recipe warns instead of hiding.** The collection is a cookbook
+  and hiding pages helps nobody: a recipe browsed to directly shows an amber banner naming what it
+  contains, and says plainly that the call comes from the ingredient list — packages can carry
+  more, so read labels.
+- **Allergies are editable in Settings now, not just at onboarding** — a diagnosis that arrives
+  after setup is a two-tap change, and the onboarding step spells out what flagging does and
+  honestly does not do: no view into cross-contact or "may contain" labels, and gluten-free-by-
+  ingredients is not certified celiac-safe.
+
 ### Changed
 - **"Who is at the table?" now says what the minute buys.** The household step opens by saying the
   quiet parts out loud: you do this once, about a minute a person, everything is editable later in

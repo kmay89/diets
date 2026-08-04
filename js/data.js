@@ -91,17 +91,6 @@ export function ingredientsInAisle(aisleId) {
   return getDb().ingredients.filter(i => i.aisle === aisleId);
 }
 
-/** Every allergen referenced by a recipe's ingredients. */
-export function allergensOf(recipe, { withOmnivore = false } = {}) {
-  const { ingIndex } = getDb();
-  const lines = [...recipe.ingredients, ...(withOmnivore ? (recipe.omnivore?.add || []) : [])];
-  const set = new Set();
-  for (const l of lines) {
-    for (const a of ingIndex.get(l.ing)?.allergens || []) set.add(a);
-  }
-  return [...set];
-}
-
 /** Ingredients in a recipe that the user marked "never". */
 export function dislikedIn(recipe, likes) {
   return recipe.ingredients

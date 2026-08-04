@@ -2306,6 +2306,34 @@ button.tabbar__item {
 }
 .balance__alert p { margin: 0 0 var(--sp-2); }
 
+/* ---------- the allergy engine's voice ---------- */
+
+/* The banner on an opened recipe that conflicts with the household's flags.
+   Amber, not red: it is a warning about the dish, not an error by the cook. */
+.allergy-alert {
+  padding: var(--sp-3);
+  border: 1px solid var(--amber-500);
+  border-left-width: 4px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--amber-500) 10%, transparent);
+  margin: var(--sp-3) 0;
+}
+.allergy-alert strong { display: block; margin-bottom: 4px; }
+.allergy-alert p { margin: 0; font-size: .84rem; color: var(--ink-soft); }
+
+/* The one-line note on a fork block whose add-on conflicts. */
+.allergy-note {
+  font-size: .84rem;
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--amber-500) 10%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 8px 11px;
+  margin: 6px 0;
+}
+
+/* A rolled card whose usual add-on is withheld says so quietly. */
+.fork--skipped { background: color-mix(in srgb, var(--amber-500) 8%, transparent); }
+
 .fix {
   display: flex;
   align-items: flex-start;

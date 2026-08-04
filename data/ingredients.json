@@ -7693,7 +7693,10 @@
       ],
       "garden": {
         "grow": false
-      }
+      },
+      "allergensMay": [
+        "gluten"
+      ]
     },
     {
       "id": "ing.currypaste.red",
@@ -7743,7 +7746,11 @@
       "garden": {
         "grow": false
       },
-      "dietNote": "Many brands contain shrimp paste. Maesri and Thai Kitchen make vegetarian versions — check the label."
+      "dietNote": "Many brands contain shrimp paste. Maesri and Thai Kitchen make vegetarian versions — check the label.",
+      "allergensMay": [
+        "shellfish",
+        "fish"
+      ]
     },
     {
       "id": "ing.tahini",
@@ -11439,6 +11446,9 @@
       "subs": [
         "ing.cheese.parmesan",
         "ing.cheese.mozzarella"
+      ],
+      "allergens": [
+        "dairy"
       ]
     },
     {
@@ -11481,6 +11491,9 @@
       "subs": [
         "ing.tofu.firm",
         "ing.cheese.feta"
+      ],
+      "allergens": [
+        "dairy"
       ]
     },
     {
@@ -11529,6 +11542,10 @@
           "ratio": 0.12,
           "note": "The crunch is the point of chili crisp and flakes have none of it. Fry them in a spoonful of oil with a sliced garlic clove."
         }
+      ],
+      "allergensMay": [
+        "soy",
+        "peanut"
       ]
     },
     {
@@ -11573,6 +11590,9 @@
       "subs": [
         "ing.spice.everything",
         "ing.sunflowerseeds"
+      ],
+      "allergens": [
+        "sesame"
       ]
     },
     {
@@ -11618,6 +11638,9 @@
       "subs": [
         "ing.cashews",
         "ing.almonds"
+      ],
+      "allergens": [
+        "peanut"
       ]
     },
     {
@@ -12220,6 +12243,9 @@
           "ratio": 0.35,
           "note": "Soak them in boiling water for 15 minutes and blend with an equal volume of water until completely smooth."
         }
+      ],
+      "allergens": [
+        "dairy"
       ]
     },
     {
@@ -12709,6 +12735,9 @@
       "subs": [
         "ing.pasta.regular",
         "ing.noodle.rice"
+      ],
+      "allergens": [
+        "gluten"
       ]
     },
     {
@@ -12750,6 +12779,9 @@
       ],
       "subs": [
         "ing.bread.wholegrain"
+      ],
+      "allergens": [
+        "gluten"
       ]
     },
     {
@@ -13122,6 +13154,9 @@
       "subs": [
         "ing.yogurt.greek.2",
         "ing.tahini"
+      ],
+      "allergens": [
+        "egg"
       ]
     },
     {
@@ -14428,7 +14463,11 @@
       "garden": {
         "grow": false
       },
-      "dietNote": "Many brands contain shrimp paste. Maesri and Thai Kitchen make vegetarian versions — check the label."
+      "dietNote": "Many brands contain shrimp paste. Maesri and Thai Kitchen make vegetarian versions — check the label.",
+      "allergensMay": [
+        "shellfish",
+        "fish"
+      ]
     },
     {
       "id": "ing.tamarind",
@@ -14725,6 +14764,9 @@
       "subs": [
         "ing.almonds",
         "ing.walnuts"
+      ],
+      "allergens": [
+        "tree-nut"
       ]
     },
     {
