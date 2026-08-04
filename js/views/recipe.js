@@ -25,6 +25,7 @@ import { proteinBlock } from './protein-panel.js';
 import { tableBlock } from './table-panel.js';
 import { kidsBlock, teachesBlock, asksPill } from './kitchen-panel.js';
 import { memoryBlock } from './memory-panel.js';
+import { teachesLine } from './skills-panel.js';
 import { askAboutIt } from './after-cooking.js';
 import { tipsBlock } from './tips-panel.js';
 import { proteinSwapLine } from '../proteins.js';
@@ -108,6 +109,10 @@ export function render(root, { navigate, params }) {
       // you have cooked three times is not one you are evaluating; the question
       // you arrived with is what you did last time.
       memoryBlock(base, st, ingIndex, { draw }),
+
+      // And the one technique this dish is worth cooking to learn — the reason
+      // to pick it over the other 241, stated in a line.
+      teachesLine(base, st, navigate),
 
       servingControl(recipe, servings, equiv, (n) => { servings = n; draw(); }),
 
