@@ -37,6 +37,7 @@ import { servingEquivalents } from '../nutrition.js';
 import { stepsWithAmounts } from '../cook-steps.js';
 import { startTimer, timerFor, formatClock, toggleTimer, subscribeTimers } from '../timers.js';
 import { stepTiming, timerLabel, ringWords } from '../step-timing.js';
+import { setWatchStep, clearWatchStep } from '../watch.js';
 
 /* ------------------------------------------------------------------ *
  * Deriving a timer from the instruction text
@@ -121,6 +122,94 @@ export function render(root, { navigate, params }) {
     if (!root.isConnected || !root.querySelector('.cookmode')) { stop(); return; }
     if (session.timer) paintTimer(root, session.timer);
   });
+
+  bindKeys(root, session, draw);
+
+  // The wrist gets where this screen is, so a cook with their hands in a bowl
+  // can see what goes in next without finding the phone. Cleared on the way
+  // out: a step from a dish that came off the heat an hour ago is worse than
+  // a blank watch face.
+  session.onStep = (delta) => {
+    session.step = Math.max(0, Math.min(texts.length - 1, session.step + delta));
+    draw();
+  };
+  session.publish = () => publishStep(recipe, texts, plan, session);
+  session.publish();
+  // The one thing outside this module that needs to reach the live screen is a
+  // watch saying "next". A single named handle beats threading a callback
+  // through the router for one caller.
+  window.__cookSession = session;
+
+  subscribeToLeaving(root, clearWatchStep);
+}
+
+/**
+ * What the watch shows: the sentence, and what goes in for it.
+ *
+ * The first sentence only. A step in this collection runs to three hundred
+ * characters — the instruction, then why it matters, then what it looks like
+ * when it is right — and all of that is worth reading on a phone propped
+ * against the toaster. On a wrist it is four screens of scrolling to find the
+ * verb, so the wrist gets the instruction and the phone keeps the rest.
+ */
+function publishStep(recipe, texts, plan, session) {
+  const i = Math.min(session.step, texts.length - 1);
+  setWatchStep({
+    recipe: recipe.title,
+    index: i,
+    total: texts.length,
+    text: splitStep(texts[i]?.text || '').title,
+    wants: (plan[i]?.wants || []).map(w => ({
+      name: w.item.name,
+      amount: w.amount || w.label
+    }))
+  });
+}
+
+/**
+ * Notice when this screen has been replaced, so the watch stops showing a step
+ * nobody is standing over. The router swaps the contents of #main rather than
+ * calling any teardown, so there is no hook to hang this on — an observer that
+ * removes itself is the honest way to do it without inventing one.
+ */
+function subscribeToLeaving(root, fn) {
+  const observer = new MutationObserver(() => {
+    if (!root.isConnected || !root.querySelector('.cookmode')) {
+      observer.disconnect();
+      if (window.__cookSession) window.__cookSession = null;
+      fn();
+    }
+  });
+  observer.observe(root, { childList: true });
+}
+
+/**
+ * Advancing a step without touching the screen.
+ *
+ * On a Mac, and on an iPad with a keyboard, this is the difference between a
+ * cooking screen and a web page: space to move on is what every slideshow and
+ * every video player has taught everybody's hands already, and it works with
+ * one wet knuckle on the edge of the keyboard.
+ *
+ * Ignored while somebody is typing — a note with "next step" in it should be a
+ * note, not a navigation. Unhooks itself when the screen leaves.
+ */
+function bindKeys(root, session, draw) {
+  const onKey = (e) => {
+    if (!root.isConnected || !root.querySelector('.cookmode')) {
+      window.removeEventListener('keydown', onKey);
+      return;
+    }
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const el = document.activeElement;
+    if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+
+    const go = (n) => { session.step = n; draw(); e.preventDefault(); };
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') go(session.step + 1);
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') go(Math.max(0, session.step - 1));
+    else if (e.key === 'Home') go(0);
+  };
+  window.addEventListener('keydown', onKey);
 }
 
 function stepTexts(recipe, withOmnivore) {
@@ -146,6 +235,8 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
   session.timer = timing.seconds ? { id: timerId, timing } : null;
 
   const goTo = (n) => { session.step = Math.max(0, Math.min(total - 1, n)); draw(); };
+  // Every redraw is a step change as far as the wrist is concerned.
+  session.publish?.();
 
   return h('section.cookmode', { 'aria-label': `Cooking ${recipe.title}` },
     h('header.cookmode__bar',

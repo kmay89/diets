@@ -3358,3 +3358,105 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 
 /* Nothing to install: it is already installed. */
 .is-native .install-banner, .is-native .install-cta { display: none !important; }
+
+/* ------------------------------------------------------------------ *
+ * Wide screens — iPad, and a Mac window
+ * ------------------------------------------------------------------ *
+ *
+ * The app was drawn for a phone held in one hand, and on an iPad or a Mac that
+ * layout does not scale up, it just gets lonely: an 860px column of phone in
+ * the middle of a 1400px window, with a row of thumb-sized tabs pinned to the
+ * bottom edge where no thumb is.
+ *
+ * So past 900px the navigation stands up. The tab bar becomes a sidebar, which
+ * is the shape every app on those two platforms uses, and — the actual win —
+ * everything behind the More sheet comes out of hiding. On a phone, five tabs
+ * and an overflow is the right trade because there is no room; on a desk there
+ * is room, and making somebody open a sheet to reach their own cookbook is the
+ * phone layout's compromise imported into a place that never needed it.
+ */
+@media (min-width: 768px) {
+  .tabbar {
+    top: 0;
+    bottom: 0;
+    right: auto;
+    width: 236px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: calc(var(--appbar-h, 58px) + 16px) 12px 16px;
+    border-top: 0;
+    border-right: 1px solid var(--line);
+    overflow-y: auto;
+  }
+  .tabbar__item {
+    flex: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 9px 12px;
+    font-size: .92rem;
+    text-align: left;
+  }
+  .tabbar__icon { font-size: 17px; width: 22px; text-align: center; }
+  .tabbar__label { flex: 1; }
+
+  /* More stops being a button and becomes the rest of the list. */
+  #more-tab { display: none; }
+  .tabbar .tabbar__rest { display: flex; }
+
+  .main { margin-left: 236px; max-width: 1080px; padding: var(--sp-6) var(--sp-6) var(--sp-7); }
+  /* Everything that spans the window has to clear the sidebar, not sit under
+   * it. The install banner was losing its first four words to it. */
+  .appbar { padding-left: calc(236px + 20px); }
+  .install-banner { margin-left: 236px; }
+
+  /* Room for a second column where a second column says something. */
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .trend-cards { grid-template-columns: repeat(3, 1fr); }
+
+  /* The dock belongs to the content, not to a tab bar that is no longer there. */
+  .timer-dock { left: calc(50% + 118px); bottom: calc(env(safe-area-inset-bottom, 0px) + 18px); }
+
+  /* Long-form prose stops at a readable measure however wide the window gets:
+   * a 1080px line of body text is a line nobody finishes. */
+  .lede, .view__sub, .cookmode__text { max-width: 68ch; }
+}
+
+/* The rest of the navigation, which only exists on wide screens — on a phone
+ * these same destinations live in the More sheet. */
+.tabbar__rest { display: none; flex-direction: column; gap: 2px; width: 100%; margin-top: 14px; }
+.tabbar__rule {
+  height: 1px;
+  margin: 4px 12px 10px;
+  background: var(--line);
+}
+.tabbar__section {
+  padding: 0 12px 4px;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+@media (min-width: 1280px) {
+  .main { max-width: 1180px; }
+}
+
+/* Cook mode already owns the whole window. On a desk that is right — it is the
+ * one screen you look at from a step back — but the sentence still needs a
+ * measure, or a 1400px window sets the instruction as one very long line. */
+@media (min-width: 768px) {
+  .cookmode__body { padding: 32px 40px; }
+  .cookmode__title { max-width: 20ch; }
+  .minimap { min-width: 200px; }
+}
+
+/* A pointer is not a fingertip. Where there is one, the hit targets can relax
+ * and the hover states are worth having. */
+@media (hover: hover) and (pointer: fine) {
+  .tabbar__item:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+  .minimap__row:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+}
