@@ -265,6 +265,11 @@ button.tabbar__item {
 .tight { margin: 0 0 .6em; padding-left: 1.1em; }
 .tight li { margin-bottom: .3em; }
 
+/* Question-and-answer entries inside a help sheet. */
+.help-qa + .help-qa { margin-top: 16px; }
+.help-qa strong { display: block; margin-bottom: 3px; }
+.help-qa p { margin: 0; }
+
 .empty-state { text-align: center; padding: 34px 12px; }
 .empty-state__dice { font-size: 46px; margin-bottom: 8px; }
 

@@ -34,7 +34,7 @@ const WHY = {
   name: 'Only so you can tell rows apart. It never leaves this device.',
   age: 'Portion sizing. A nine-year-old and a fifteen-year-old need very different amounts, and getting this roughly right is what stops the app cooking too much or too little.',
   sex: 'It changes the calorie equation. If neither option fits, pick either — the difference is small next to activity level, and nothing else in the app uses it.',
-  diet: 'The one field that changes what gets cooked. Mark anyone who does not eat meat and every dinner will have a base they can eat, with meat kept to a separate pan.',
+  diet: 'The one field that changes what gets cooked. Mark anyone who does not eat meat and every dinner will have a base they can eat, with meat kept to a separate pan. Somewhere in between — flexitarian, vegan-ish, it depends? Pick the way they eat most nights. The base of every dinner is meat-free regardless, so no answer here ever locks anyone out of anything, and it is a two-tap change in Settings later.',
   activity: 'The single biggest factor in how much someone actually eats — bigger than height or weight.',
   height: 'Optional. With height and weight the estimate uses a real equation instead of a population average.',
   weight: 'Optional, and never shown as a judgment. It is one number in an equation that decides how big a pot of food to cook.',
