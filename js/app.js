@@ -15,7 +15,9 @@ import { loadTable } from './table.js';
 import { loadKitchen } from './kitchen.js';
 import { loadTips } from './tips.js';
 import { loadPalette } from './palette.js';
-import { initTimers, setTimerAlarm } from './timers.js';
+import { loadSkills } from './skills.js';
+import { initTimers, setTimerAlarm, timerFor } from './timers.js';
+import { initNative } from './native.js';
 import { initTimerDock } from './views/timer-dock.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
@@ -36,6 +38,7 @@ import * as recipeView from './views/recipe.js';
 import * as pantryView from './views/pantry.js';
 import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
+import * as bookView from './views/book.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
 import * as learnView from './views/learn.js';
@@ -56,6 +59,7 @@ const VIEWS = {
   pantry: () => ({ render: pantryView.render, params: {} }),
   list: () => ({ render: listView.render, params: {} }),
   garden: () => ({ render: gardenView.render, params: {} }),
+  book: () => ({ render: bookView.render, params: {} }),
   settings: () => ({ render: settingsView.render, params: {} }),
   why: () => ({ render: whyView.render, params: {} }),
   learn: () => ({ render: learnView.render, params: {} })
@@ -78,6 +82,7 @@ const NAV = [
 
 const MORE = [
   { href: '#/create', label: 'Create', icon: '✚', blurb: 'Every way to start a meal, on one screen' },
+  { href: '#/book', label: 'Your cookbook', icon: '📔', blurb: 'The dishes you actually make, in your version' },
   { href: '#/browse', label: 'Recipes', icon: '📖', blurb: 'The whole collection' },
   { href: '#/pantry', label: 'Pantry', icon: '🏠', blurb: 'What is already in the kitchen' },
   { href: '#/progress', label: 'Progress', icon: '🌱', blurb: 'What you have been eating' },
@@ -167,7 +172,7 @@ async function boot() {
     // needed by the recipe screen, which is where most sessions end up.
     await Promise.all([
       loadCitations(), loadOccasions(), loadBalance(), loadSubstitutions(),
-      loadProteins(), loadTable(), loadKitchen(), loadTips(), loadPalette()
+      loadProteins(), loadTable(), loadKitchen(), loadTips(), loadPalette(), loadSkills()
     ]);
   } catch (err) {
     console.error(err);
@@ -181,6 +186,16 @@ async function boot() {
 
   initTheme();
   buildChrome();
+  // Inside an app shell this wires up the status bar and notification taps. In
+  // a browser it does nothing and the site is unchanged.
+  initNative({
+    onOpenRef: (id) => {
+      const timer = timerFor(id);
+      if (!timer?.recipeId) return;
+      const step = Number.isInteger(timer.step) ? `?step=${timer.step + 1}` : '';
+      navigate(`#/cook/${timer.recipeId}${step}`);
+    }
+  });
   // Timers live outside every view, so they survive leaving cook mode.
   initTimerDock();
   // A chime, and the dock says the rest. It used to also throw a toast, which

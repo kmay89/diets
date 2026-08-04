@@ -16,6 +16,7 @@ import { foodIcon, ingredientsNamedIn } from '../food-icon.js';
 import { buildList } from '../shopping.js';
 import { getState, DAYS } from '../store.js';
 import { recentNutrition } from './progress.js';
+import { worthRepeating, whenWords } from '../memory.js';
 import { avoidedSet, recipeConflicts } from '../allergy.js';
 
 export function render(root, { navigate }) {
@@ -155,15 +156,22 @@ function tonightCard({ entry, recipe }, ingIndex, navigate) {
 
 function noPlanCard(state, recipeIndex, navigate) {
   // The cheapest possible decision for a tired cook is "the thing that worked
-  // last time, again" — so if there is a history, offer the most recent cooked
-  // meal by name. One tap, zero novelty, dinner solved. Unless it has since
-  // become an allergen in this house: what got cooked before a flag was set
-  // does not get recommended after it.
+  // last time, again" — so offer one by name. One tap, zero novelty, dinner
+  // solved.
+  //
+  // Not literally the last thing cooked, though: that is usually last night,
+  // and nobody wants last night twice. It is the most recent meal old enough to
+  // want again, skipping anything the kitchen said no to — and skipping
+  // anything that has since become an allergen in this house, because what got
+  // cooked before a flag was set does not get recommended after it.
   const avoid = avoidedSet(state.prefs);
-  const again = state.history
-    .map(e => recipeIndex.get(e.id))
-    .filter(Boolean)
-    .find(r => !(avoid.size && recipeConflicts(r, avoid, getDb().ingIndex).length));
+  const safe = (recipe) =>
+    recipe && !(avoid.size && recipeConflicts(recipe, avoid, getDb().ingIndex).length);
+
+  const repeat = worthRepeating(state, { limit: 8 })
+      .find(e => safe(recipeIndex.get(e.id)))
+    || state.history.find(e => safe(recipeIndex.get(e.id)));
+  const again = repeat ? recipeIndex.get(repeat.id) : null;
 
   return h('article.card.tonight--empty',
     h('h2.block__title', 'Nothing planned for tonight'),
@@ -176,7 +184,7 @@ function noPlanCard(state, recipeIndex, navigate) {
       ? h('button.linkish', {
           type: 'button',
           onclick: () => navigate(`#/recipe/${again.id}`)
-        }, `Or cook ${again.title} again →`)
+        }, `Or cook ${again.title} again — you made it ${whenWords(repeat.at)} →`)
       : null
   );
 }

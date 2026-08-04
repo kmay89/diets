@@ -24,6 +24,9 @@ import { balanceBlock } from './balance-panel.js';
 import { proteinBlock } from './protein-panel.js';
 import { tableBlock } from './table-panel.js';
 import { kidsBlock, teachesBlock, asksPill } from './kitchen-panel.js';
+import { memoryBlock } from './memory-panel.js';
+import { teachesLine } from './skills-panel.js';
+import { askAboutIt } from './after-cooking.js';
 import { tipsBlock } from './tips-panel.js';
 import { proteinSwapLine } from '../proteins.js';
 import { cardLook } from '../palette.js';
@@ -116,6 +119,8 @@ export function render(root, { navigate, params }) {
         ...(recipe.tags || []).slice(0, 3).map(t => pill(t.replace(/-/g, ' ')))
       ),
 
+      // The warning first. Nothing below it matters to somebody who cannot eat
+      // the dish at all.
       baseConflicts.length
         ? h('div.allergy-alert', { role: 'alert' },
             h('strong', `⚠️ This dish ${conflictPhrase(baseConflicts)}`),
@@ -124,6 +129,16 @@ export function render(root, { navigate, params }) {
               'it stays in the collection because hiding pages from a cookbook helps nobody. ',
               'The call comes from the ingredient list; packages can carry more than a list says, so read labels.'))
         : null,
+
+      // Then what this kitchen already knows about the dish, because it changes
+      // how the rest of the page is read. A dish you have cooked three times is
+      // not one you are evaluating; the question you arrived with is what you
+      // did last time.
+      memoryBlock(base, st, ingIndex, { draw }),
+
+      // And the one technique it is worth cooking to learn — the reason to pick
+      // it over the other 241, stated in a line.
+      teachesLine(base, st, navigate),
 
       servingControl(recipe, servings, equiv, (n) => { servings = n; draw(); }),
 
@@ -225,7 +240,18 @@ export function render(root, { navigate, params }) {
         }, isPlanned(recipe.id) ? 'In the plan' : `Add ${plural(servings, 'serving')} to the plan`),
         h('button.btn', {
           type: 'button',
-          onclick: () => { markCooked(recipe.id); play('cooked'); toast('Nice. Marked as cooked.'); }
+          onclick: () => {
+            // The same record cook mode writes, so a meal cooked from the page
+            // rather than from the steps is remembered just as well.
+            const logged = markCooked(base.id, new Date(), {
+              servings,
+              swaps: st.swaps?.[base.id] || {},
+              added: st.additions?.[base.id] || [],
+              fork: withOmnivore
+            });
+            play('cooked');
+            askAboutIt(base, logged, draw);
+          }
         }, '✓ Cooked it'),
         h('button.btn', {
           type: 'button',

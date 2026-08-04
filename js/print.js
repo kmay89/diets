@@ -16,6 +16,7 @@
 import { h, $, clear, plural } from './ui.js';
 import { formatQty } from './nutrition.js';
 import { getDb } from './data.js';
+import { changesIn } from './memory.js';
 
 const HOST_ID = 'print-sheet';
 
@@ -203,5 +204,51 @@ function recipeSheet(recipe, servings, { withOmnivore, withVegSwap }) {
     ),
 
     sheetFoot(recipe.leftovers ? h('span', `Leftovers: ${recipe.leftovers} `) : null)
+  );
+}
+
+/**
+ * The household's own cookbook, on paper.
+ *
+ * The one export that survives everything: a phone dies, a company folds, a
+ * file format stops opening, and a sheet of paper in a kitchen drawer still
+ * says what you put in the bolognese. So this prints the parts nobody else has
+ * — your version and your notes — and not the recipes themselves, which are
+ * still in the app and would run to forty pages.
+ */
+export function printBook(book, ingIndex, { title = 'Our cookbook' } = {}) {
+  printSheet('book', bookSheet(book, ingIndex, title));
+}
+
+function bookSheet(book, ingIndex, title) {
+  const group = (heading, entries) => entries.length
+    ? h('section.printout__group',
+        h('h2.printout__group-title', heading),
+        ...entries.map(e => bookRow(e, ingIndex)))
+    : null;
+
+  return h('article.printout',
+    sheetHead(title,
+      `${plural(book.total, 'dish', 'dishes')} · ${plural(book.cooks, 'time')} cooked`),
+    group('Dishes you make', book.owned),
+    group('Also cooked', book.cooked),
+    h('p.printout__foot',
+      'Kept on your own device. Nothing here was ever sent anywhere.')
+  );
+}
+
+function bookRow(entry, ingIndex) {
+  const { swapped, added } = changesIn({ swaps: entry.swaps, added: entry.added }, ingIndex);
+  const version = [
+    swapped.length ? swapped.join('; ') : null,
+    added.length ? `plus ${added.join(', ')}` : null
+  ].filter(Boolean).join(' · ');
+
+  return h('div.printout__book-row',
+    h('h3.printout__book-title', entry.recipe.title),
+    h('p.printout__book-meta',
+      `${entry.times} ${entry.times === 1 ? 'time' : 'times'} · made ${entry.lastWords}`),
+    version ? h('p.printout__book-version', version) : null,
+    ...entry.notes.map(n => h('p.printout__book-note', `“${n.note}”`))
   );
 }

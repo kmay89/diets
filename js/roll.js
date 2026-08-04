@@ -12,6 +12,7 @@
 
 import { getDb, pantryCoverage, inSeason, seasonNow, heartFor, sharesShoppingWith } from './data.js';
 import { avoidedSet, recipeConflicts } from './allergy.js';
+import { cookedRank } from './memory.js';
 
 /* ---------- seeded randomness ---------- */
 
@@ -88,7 +89,7 @@ export function isCandidate(recipe, state, { course = 'dinner' } = {}) {
 /* ---------- scoring ---------- */
 
 export function scoreRecipe(recipe, state, ctx = {}) {
-  const { prefs, likes, pantry, history, recipeLikes, household } = state;
+  const { prefs, likes, pantry, recipeLikes, household } = state;
   const chosen = ctx.chosen || [];
   const season = ctx.season || seasonNow();
   const parts = {};
@@ -132,7 +133,13 @@ export function scoreRecipe(recipe, state, ctx = {}) {
   }
 
   // Do not repeat what was cooked recently.
-  const recent = history.indexOf(recipe.id);
+  //
+  // This asked `history.indexOf(recipe.id)` for a long time after history
+  // stopped being a list of ids and became a list of entries, so it answered -1
+  // for everything and every dish scored as though it had never been made. The
+  // roll was happily dealing Tuesday's dinner again on Thursday, and the bug was
+  // invisible because the wrong answer is a plausible one.
+  const recent = cookedRank(recipe.id, state);
   parts.recency = recent === -1 ? 4 : -Math.max(30 - recent * 3, 4);
 
   // Kids at the table.

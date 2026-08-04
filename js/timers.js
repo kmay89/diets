@@ -28,6 +28,9 @@
  * ERRERLabs — MIT licensed.
  */
 
+import { notifyAt, cancelNotification } from './native.js';
+import { ringWords } from './step-timing.js';
+
 const KEY = 'errerlabs.diets.timers.v1';
 
 /** @type {{id:string,label:string,seconds:number,upto:number,cue:string,endsAt:number|null,left:number,rangAt:number|null,recipeId:string|null,step:number|null,done:boolean}[]} */
@@ -73,6 +76,30 @@ export function subscribeTimers(fn) {
 function remaining(t) {
   if (t.endsAt == null) return Math.max(0, t.left);
   return Math.max(0, Math.round((t.endsAt - Date.now()) / 1000));
+}
+
+/**
+ * Hand the timer to the operating system as well as to the app.
+ *
+ * In a browser this does nothing at all. On a phone it is the whole reason to
+ * be an app: a timer that only rings while the app is open is not a kitchen
+ * timer, it is a stopwatch, and the moment you most need one is the moment you
+ * have put the phone down and walked out of the room.
+ *
+ * Called from every path that moves a timer's end — start, resume, pause,
+ * extend, clear — so there is no way to change when a pot is due without the
+ * notification following it.
+ */
+function sync(timer) {
+  if (!timer || timer.endsAt == null || timer.done) {
+    cancelNotification(timer?.id);
+    return;
+  }
+  const { head, look } = ringWords(timer);
+  notifyAt(timer.id, timer.endsAt, {
+    title: timer.label || 'Timer',
+    body: `${head} — ${look}`
+  });
 }
 
 /**
@@ -131,6 +158,7 @@ export function startTimer({
   };
   timers = [...timers.filter(t => t.id !== timer.id), timer];
   persist();
+  sync(timer);
   ensureTicking();
   emit();
   return timer;
@@ -142,6 +170,7 @@ export function pauseTimer(id) {
   t.left = remaining(t);
   t.endsAt = null;
   persist();
+  sync(t);
   emit();
 }
 
@@ -152,6 +181,7 @@ export function resumeTimer(id) {
   t.done = false;
   t.rangAt = null;
   persist();
+  sync(t);
   ensureTicking();
   emit();
 }
@@ -179,11 +209,13 @@ export function addMinute(id, seconds = 60) {
   t.rangAt = null;
   t.seconds += seconds;
   persist();
+  sync(t);
   ensureTicking();
   emit();
 }
 
 export function clearTimer(id) {
+  cancelNotification(id);
   timers = timers.filter(t => t.id !== id);
   persist();
   emit();
@@ -191,6 +223,7 @@ export function clearTimer(id) {
 }
 
 export function clearAllTimers() {
+  for (const t of timers) cancelNotification(t.id);
   timers = [];
   persist();
   stopTicking();
@@ -215,6 +248,9 @@ function ensureTicking() {
     for (const t of timers) {
       if (t.endsAt == null || t.done) continue;
       if (remaining(t) <= 0) {
+        // The phone has already made the noise, if it was going to. Clear the
+        // scheduled one so a later resume cannot resurrect a stale alarm.
+        cancelNotification(t.id);
         t.done = true;
         t.rangAt = t.endsAt;
         t.endsAt = null;
