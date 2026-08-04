@@ -12,6 +12,8 @@ import { roll, rerollOne, newSeed, explainPick } from '../roll.js';
 import { servingEquivalents } from '../nutrition.js';
 import { play, tumble, stagger, pulse } from '../feedback.js';
 import { upcomingOccasion, recipesForOccasion } from '../occasions.js';
+import { iconCollage } from '../food-icon.js';
+import { cardLook } from '../palette.js';
 
 /** Session-only: the current hand. Not persisted — a roll is a moment, not a document. */
 let hand = [];        // [{ recipe, locked }]
@@ -196,7 +198,18 @@ function recipeCard(slot, index, state, equiv, draw, navigate) {
   const planned = isPlanned(recipe.id);
   const servings = suggestedServings(recipe, equiv);
 
-  return h('article', { class: `card recipe-card ${locked ? 'is-locked' : ''}` },
+  const look = cardLook(recipe, getDb().ingIndex);
+  return h('article', {
+    class: `card recipe-card ${locked ? 'is-locked' : ''} ${look.className}`,
+    style: look.style
+  },
+    // The roll screen deals four cards at a time, which is exactly where they
+    // most need to look like four different dinners.
+    h('button.recipe-card__art', {
+      type: 'button',
+      'aria-label': `Open ${recipe.title}`,
+      onclick: () => navigate(`#/recipe/${recipe.id}`)
+    }, iconCollage(recipe, getDb().ingIndex, { size: 52 })),
     h('div.recipe-card__head',
       h('div',
         h('h3.recipe-card__title', { onclick: () => navigate(`#/recipe/${recipe.id}`), role: 'button', tabindex: '0' }, recipe.title),

@@ -1,0 +1,546 @@
+{
+  "schema": "vegnourish.palette/1",
+  "note": "What color a dish is. Not decoration assigned at random — a tomato dish should be red because it is full of tomatoes, and the same recipe has to look the same every time you open it. So the color comes out of the ingredient list, weighted by how much of each thing is in the pot and by how strongly that thing actually colors what it is in.",
+  "why": "A wall of identical cards is a wall nobody scans. Giving each dish the color of its own dominant ingredient means the collection becomes recognizable by sight — you learn that the deep red one is the shakshuka before you read the title — and it costs nothing, because the app already knows exactly what is in every dish.",
+  "howItWorks": [
+    "Each color group names a hue and the ingredients that carry it, with a strength: how hard that ingredient pushes its color onto a dish, per gram. Tomato paste is ferocious, a can of tomatoes is strong, a broth is nearly nothing.",
+    "A recipe's score for a group is the sum of grams times strength across its members. The strongest group is the card's color; the runner-up tints the far corner of the gradient, so two red dishes still differ from each other.",
+    "Nothing scores? The cuisine decides, and failing that the course does. Every dish gets a color and none of them are random."
+  ],
+  "groups": [
+    {
+      "id": "color.tomato",
+      "name": "Tomato red",
+      "hue": 8,
+      "sat": 62,
+      "members": {
+        "ing.tomatopaste": 3.2,
+        "ing.tomato.canned.crushed": 1.0,
+        "ing.tomato.canned.diced": 0.9,
+        "ing.marinara.lowsodium": 1.0,
+        "ing.tomato.roma": 0.85,
+        "ing.tomato.cherry": 0.85,
+        "ing.sundriedtomato": 2.4,
+        "ing.ketchup": 1.1,
+        "ing.salsa": 0.8,
+        "ing.harissa": 2.6,
+        "ing.chipotle.adobo": 2.2,
+        "ing.pepper.roasted": 0.9,
+        "ing.beet": 2.6,
+        "ing.pepper.bell.red": 0.8
+      }
+    },
+    {
+      "id": "color.chile",
+      "name": "Chile crimson",
+      "hue": 355,
+      "sat": 66,
+      "members": {
+        "ing.spice.cayenne": 9,
+        "ing.spice.pepperflakes": 7,
+        "ing.spice.gochugaru": 6,
+        "ing.gochujang": 3.4,
+        "ing.doubanjiang": 3.4,
+        "ing.chilicrisp": 3.2,
+        "ing.sriracha": 2.4,
+        "ing.hotsauce": 2.2,
+        "ing.chile.guajillo": 5,
+        "ing.chile.ancho": 4.5,
+        "ing.chile.thai": 5,
+        "ing.spice.berbere": 5,
+        "ing.currypaste.red": 3,
+        "ing.spice.chili": 3.4,
+        "ing.spice.smokedpaprika": 4.5
+      }
+    },
+    {
+      "id": "color.green",
+      "name": "Leaf green",
+      "hue": 132,
+      "sat": 34,
+      "members": {
+        "ing.spinach.baby": 1.1,
+        "ing.frozen.spinach": 1.2,
+        "ing.kale.lacinato": 1.1,
+        "ing.chard": 1.0,
+        "ing.collards": 1.0,
+        "ing.arugula": 1.2,
+        "ing.romaine": 0.8,
+        "ing.lettuce.butter": 0.8,
+        "ing.broccoli": 0.9,
+        "ing.bokchoy": 0.8,
+        "ing.peas.frozen": 0.9,
+        "ing.edamame.frozen": 0.9,
+        "ing.greenbeans": 0.9,
+        "ing.asparagus": 0.9,
+        "ing.zucchini": 0.6,
+        "ing.brusselsprouts": 0.9,
+        "ing.snappeas": 0.9,
+        "ing.basil": 2.6,
+        "ing.cilantro": 2.4,
+        "ing.parsley.flat": 2.4,
+        "ing.mint": 2.4,
+        "ing.currypaste.green": 3,
+        "ing.tomatillo": 1.2,
+        "ing.pepper.poblano": 1.0,
+        "ing.avocado": 1.4,
+        "ing.olives.kalamata": 0.8,
+        "ing.cabbage.napa": 0.5,
+        "ing.cabbage.green": 0.5,
+        "ing.cucumber": 0.5,
+        "ing.okra": 0.9,
+        "ing.fennel": 0.6,
+        "ing.artichoke.canned": 0.8
+      }
+    },
+    {
+      "id": "color.gold",
+      "name": "Turmeric gold",
+      "hue": 40,
+      "sat": 62,
+      "members": {
+        "ing.spice.turmeric": 9,
+        "ing.spice.curry": 5,
+        "ing.spice.saffron": 12,
+        "ing.squash.butternut": 1.1,
+        "ing.squash.acorn": 1.0,
+        "ing.sweetpotato": 1.1,
+        "ing.pumpkin.canned": 1.2,
+        "ing.corn.kernels": 1.0,
+        "ing.frozen.corn": 1.0,
+        "ing.cornmeal": 1.2,
+        "ing.grits": 1.0,
+        "ing.masa": 1.1,
+        "ing.hominy": 0.8,
+        "ing.carrot": 1.0,
+        "ing.mango": 1.2,
+        "ing.frozen.mango": 1.2,
+        "ing.peach": 0.9,
+        "ing.honey": 1.4,
+        "ing.egg": 0.9,
+        "ing.cheese.cheddar": 1.6,
+        "ing.plantain": 1.0,
+        "ing.lentil.red": 1.4
+      }
+    },
+    {
+      "id": "color.citrus",
+      "name": "Citrus yellow",
+      "hue": 52,
+      "sat": 58,
+      "members": {
+        "ing.lemon": 1.6,
+        "ing.lime": 1.2,
+        "ing.grapefruit": 1.2,
+        "ing.orange": 1.2,
+        "ing.clementine": 1.2,
+        "ing.pineapple": 1.0,
+        "ing.frozen.pineapple": 1.0,
+        "ing.spice.sumac": 3,
+        "ing.pomegranate.molasses": 2,
+        "ing.mustard.dijon": 1.6,
+        "ing.mustard.yellow": 1.8
+      }
+    },
+    {
+      "id": "color.earth",
+      "name": "Braised brown",
+      "hue": 24,
+      "sat": 36,
+      "members": {
+        "ing.mushroom.cremini": 1.2,
+        "ing.mushroom.portobello": 1.3,
+        "ing.mushroom.shiitake": 1.4,
+        "ing.mushroom.porcini.dried": 4,
+        "ing.mushroom.oyster": 1.1,
+        "ing.lentil.brown": 1.4,
+        "ing.beans.pinto": 1.0,
+        "ing.beans.kidney": 1.1,
+        "ing.soysauce.lowsodium": 2.6,
+        "ing.tamari": 2.6,
+        "ing.miso.red": 2.8,
+        "ing.hoisin": 2.4,
+        "ing.bbqsauce": 1.8,
+        "ing.vinegar.balsamic": 2.2,
+        "ing.blackvinegar": 2.2,
+        "ing.tamarind": 2.4,
+        "ing.molasses": 3,
+        "ing.beef.chuck": 1.2,
+        "ing.beef.ground90": 1.2,
+        "ing.beef.sirloin": 1.2,
+        "ing.spice.cumin": 3,
+        "ing.spice.garam": 3,
+        "ing.tempeh": 1.1,
+        "ing.farro": 0.9,
+        "ing.barley.pearl": 0.9,
+        "ing.rice.wild": 1.4,
+        "ing.bread.rye": 1.0,
+        "ing.coffee.espresso": 3,
+        "ing.beans.black": 0.9
+      }
+    },
+    {
+      "id": "color.cocoa",
+      "name": "Cocoa",
+      "hue": 16,
+      "sat": 44,
+      "members": {
+        "ing.cocoa": 6,
+        "ing.chocolate.dark70": 4,
+        "ing.chocolate.chips": 3,
+        "ing.dates.medjool": 1.6,
+        "ing.raisins": 1.6,
+        "ing.sugar.brown": 1.2,
+        "ing.cranberries.dried": 1.4
+      }
+    },
+    {
+      "id": "color.berry",
+      "name": "Berry purple",
+      "hue": 320,
+      "sat": 40,
+      "members": {
+        "ing.blueberries": 1.8,
+        "ing.blackberries": 2.0,
+        "ing.raspberries": 1.8,
+        "ing.strawberries": 1.6,
+        "ing.frozen.berries": 1.8,
+        "ing.frozen.cherries": 1.8,
+        "ing.cherries.sweet": 1.6,
+        "ing.cranberries.fresh": 1.8,
+        "ing.pomegranate.seeds": 2.0,
+        "ing.cabbage.red": 1.6,
+        "ing.eggplant": 1.0,
+        "ing.onion.red": 0.55,
+        "ing.wine.red": 1.4,
+        "ing.grapes": 1.2,
+        "ing.rhubarb": 1.4,
+        "ing.kimchi": 1.2
+      }
+    },
+    {
+      "id": "color.cream",
+      "name": "Cream",
+      "hue": 38,
+      "sat": 24,
+      "members": {
+        "ing.coconutmilk.full": 0.9,
+        "ing.coconutmilk.light": 0.7,
+        "ing.yogurt.greek.nonfat": 0.7,
+        "ing.yogurt.greek.2": 0.7,
+        "ing.sourcream.light": 1.2,
+        "ing.cream.heavy": 1.6,
+        "ing.ricotta.partskim": 1.2,
+        "ing.cheese.mozzarella": 0.9,
+        "ing.cheese.feta": 1.2,
+        "ing.cheese.goat": 1.2,
+        "ing.cheese.creamcheese": 1.4,
+        "ing.mascarpone": 1.4,
+        "ing.paneer": 0.8,
+        "ing.tahini": 1.4,
+        "ing.cottagecheese": 0.6,
+        "ing.beans.cannellini": 0.45,
+        "ing.chickpeas.canned": 0.45,
+        "ing.tofu.firm": 0.28,
+        "ing.cauliflower": 0.4,
+        "ing.milk.condensed": 1.4,
+        "ing.mayo.olive": 1.2
+      }
+    },
+    {
+      "id": "color.olive",
+      "name": "Olive",
+      "hue": 88,
+      "sat": 30,
+      "members": {
+        "ing.oil.olive": 1.2,
+        "ing.pistachios": 1.4,
+        "ing.spice.zaatar": 3,
+        "ing.spice.oregano": 2.6,
+        "ing.spice.thyme.dried": 2.6,
+        "ing.spice.italian": 2.6,
+        "ing.spice.basil.dried": 2.6,
+        "ing.capers": 1.4,
+        "ing.pickles.dill": 0.9,
+        "ing.sauerkraut": 0.8,
+        "ing.pepper.jalapeno": 1.0,
+        "ing.pepper.serrano": 1.2,
+        "ing.pepper.bell.green": 0.9
+      }
+    },
+    {
+      "id": "color.salmon",
+      "name": "Salmon pink",
+      "hue": 14,
+      "sat": 52,
+      "members": {
+        "ing.salmon": 1.6,
+        "ing.shrimp": 1.5,
+        "ing.crab.lump": 1.4,
+        "ing.tuna.ahi": 1.5,
+        "ing.ham.deli": 1.2,
+        "ing.bacon": 1.4,
+        "ing.watermelon": 1.2,
+        "ing.radish": 1.2,
+        "ing.pork.tenderloin": 0.9,
+        "ing.pork.shoulder": 0.9
+      }
+    },
+    {
+      "id": "color.wheat",
+      "name": "Wheat",
+      "hue": 34,
+      "sat": 30,
+      "members": {
+        "ing.pasta.wholewheat": 0.6,
+        "ing.pasta.regular": 0.6,
+        "ing.noodle.wheat": 0.8,
+        "ing.noodle.udon": 0.7,
+        "ing.noodle.ramen": 0.7,
+        "ing.bread.wholegrain": 0.9,
+        "ing.bread.sourdough": 0.9,
+        "ing.baguette": 0.9,
+        "ing.pita.wholewheat": 0.9,
+        "ing.tortilla.wholewheat": 0.9,
+        "ing.tortilla.flour": 0.8,
+        "ing.naan": 0.9,
+        "ing.flour.ap": 0.8,
+        "ing.flour.wholewheat": 0.9,
+        "ing.panko": 1.0,
+        "ing.oats.rolled": 0.8,
+        "ing.couscous.wholewheat": 0.8,
+        "ing.bulgur": 0.9,
+        "ing.rice.brown": 0.5,
+        "ing.quinoa": 0.5,
+        "ing.almonds": 0.9,
+        "ing.peanuts": 0.9,
+        "ing.peanutbutter": 1.4,
+        "ing.walnuts": 0.9,
+        "ing.pecans": 0.9,
+        "ing.sesame.seeds": 1.0,
+        "ing.gnocchi": 0.8,
+        "ing.potato.yukon": 0.5,
+        "ing.puffpastry": 0.9,
+        "ing.phyllo": 0.9,
+        "ing.pizzadough.wholewheat": 0.9
+      }
+    }
+  ],
+  "byCuisine": {
+    "note": "For the handful of dishes whose ingredients carry no color of their own. Broad on purpose — it is a fallback, not a claim about a cuisine.",
+    "italian": "color.tomato",
+    "italian-american": "color.tomato",
+    "mexican": "color.chile",
+    "mexican-american": "color.chile",
+    "tex-mex": "color.chile",
+    "southwestern": "color.chile",
+    "new-mexican": "color.chile",
+    "indian": "color.gold",
+    "south-indian": "color.gold",
+    "thai": "color.green",
+    "vietnamese": "color.green",
+    "japanese": "color.earth",
+    "japanese-inspired": "color.earth",
+    "korean": "color.chile",
+    "korean-inspired": "color.chile",
+    "chinese": "color.earth",
+    "chinese-american": "color.earth",
+    "sichuan": "color.chile",
+    "cantonese": "color.earth",
+    "greek": "color.olive",
+    "mediterranean": "color.olive",
+    "middle-eastern": "color.olive",
+    "lebanese": "color.olive",
+    "turkish": "color.olive",
+    "persian": "color.olive",
+    "french": "color.cream",
+    "spanish": "color.gold",
+    "caribbean": "color.gold",
+    "jamaican": "color.green",
+    "cuban": "color.gold",
+    "puerto-rican": "color.gold",
+    "peruvian": "color.gold",
+    "brazilian": "color.earth",
+    "ethiopian": "color.chile",
+    "moroccan": "color.gold",
+    "north-african": "color.gold",
+    "west-african": "color.chile",
+    "southern": "color.gold",
+    "cajun": "color.chile",
+    "creole": "color.chile",
+    "new-england": "color.cream",
+    "mid-atlantic": "color.salmon",
+    "midwestern": "color.wheat",
+    "californian": "color.green",
+    "pacific-northwest": "color.salmon",
+    "hawaiian": "color.salmon",
+    "appalachian": "color.earth",
+    "american": "color.wheat",
+    "british": "color.earth",
+    "irish": "color.green",
+    "german": "color.earth",
+    "polish": "color.cream",
+    "hungarian": "color.chile",
+    "russian": "color.berry",
+    "swedish": "color.cream",
+    "filipino": "color.earth",
+    "indonesian": "color.earth",
+    "any": "color.green",
+    "argentinian": "color.green",
+    "asian-american": "color.earth",
+    "thai-inspired": "color.green"
+  },
+  "byCourse": {
+    "note": "The last resort, so that nothing is ever colorless.",
+    "breakfast": "color.gold",
+    "lunch": "color.green",
+    "dinner": "color.earth",
+    "side": "color.green",
+    "snack": "color.wheat",
+    "dessert": "color.cocoa",
+    "component": "color.olive"
+  },
+  "render": {
+    "note": "How much color a card is allowed. Kept low on purpose: the tint is a wash behind the art and a hairline at the edge, never behind body text, so contrast is decided by the theme and not by whatever is in the pot.",
+    "light": {
+      "wash": 14,
+      "washFar": 8,
+      "edge": 34,
+      "chipEdge": 40
+    },
+    "dark": {
+      "wash": 20,
+      "washFar": 12,
+      "edge": 32,
+      "chipEdge": 38
+    },
+    "angles": [
+      135,
+      160,
+      115,
+      145,
+      170,
+      125
+    ],
+    "maxSat": 66,
+    "minSat": 18,
+    "vividBonus": 1.35,
+    "vividFrom": 40,
+    "vividNote": "A pot is described by its most vivid thing — people say 'the red one', not 'the beige one with red in it'. So a saturated group gets a thumb on the scale against a pale one, which is both how a cook would name the dish and what makes a grid of cards easiest to scan."
+  },
+  "textures": {
+    "note": "A pattern per way of cooking, so two dishes the same color still read differently. Derived from what the recipe actually does — the crosshatch is a grill mark, the stipple is browning, the ripple is a pot at a simmer — rather than assigned for variety's sake. All of them are CSS gradients: no images, no requests, nothing for the content policy to argue with.",
+    "order": [
+      "grill",
+      "fresh",
+      "ripple",
+      "grain",
+      "steam",
+      "stipple"
+    ],
+    "rules": [
+      {
+        "id": "grill",
+        "name": "Crosshatch",
+        "means": "Live fire, and the marks it leaves.",
+        "tags": [
+          "grill",
+          "cookout"
+        ],
+        "words": [
+          "grill",
+          "grate over the coals",
+          "char"
+        ]
+      },
+      {
+        "id": "fresh",
+        "name": "Scatter",
+        "means": "Nothing cooked. Assembled, dressed and eaten.",
+        "tags": [
+          "no-cook",
+          "salad",
+          "slaw",
+          "smoothie",
+          "dip",
+          "raw"
+        ],
+        "words": [
+          "toss together",
+          "no cooking"
+        ]
+      },
+      {
+        "id": "ripple",
+        "name": "Ripple",
+        "means": "A pot with liquid in it, left alone.",
+        "tags": [
+          "soup",
+          "stew",
+          "one-pot",
+          "slow-cooker",
+          "braise"
+        ],
+        "words": [
+          "simmer",
+          "braise",
+          "stir in the broth",
+          "cover and cook"
+        ]
+      },
+      {
+        "id": "grain",
+        "name": "Grain",
+        "means": "Flour, dough and the oven — anything built rather than cooked.",
+        "tags": [
+          "pasta",
+          "noodles",
+          "baking",
+          "dessert",
+          "bread"
+        ],
+        "words": [
+          "knead",
+          "fold the dry",
+          "batter",
+          "dough"
+        ]
+      },
+      {
+        "id": "steam",
+        "name": "Steam",
+        "means": "Vapor and gentle heat.",
+        "tags": [
+          "steamed"
+        ],
+        "words": [
+          "steam",
+          "steamer",
+          "poach"
+        ]
+      },
+      {
+        "id": "stipple",
+        "name": "Stipple",
+        "means": "Dry heat and browning — a sheet pan, a hot skillet, an air fryer.",
+        "tags": [
+          "sheet-pan",
+          "roast",
+          "baked",
+          "air-fryer",
+          "skillet"
+        ],
+        "words": [
+          "roast",
+          "sear",
+          "until golden",
+          "sheet pan",
+          "air fryer"
+        ]
+      }
+    ],
+    "fallback": "stipple",
+    "orderNote": "Checked in this order, so the specific wins over the general: a soup that happens to say 'roast the peppers first' is still a soup. Stipple comes last because browning is what most cooking is, which makes it the honest catch-all rather than the interesting answer."
+  },
+  "overrideNote": "A recipe may set a \"color\" field naming one of these groups, and it wins over the arithmetic. Reserved for dishes whose identity the ingredient list genuinely cannot see — a white chili, a green curry that is mostly coconut milk by weight. It is not a way to make a card prettier: a smoothie with a cup and a half of frozen berries in it is purple, whatever it is called."
+}

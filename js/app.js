@@ -14,6 +14,7 @@ import { loadProteins } from './proteins.js';
 import { loadTable } from './table.js';
 import { loadKitchen } from './kitchen.js';
 import { loadTips } from './tips.js';
+import { loadPalette } from './palette.js';
 import { initFeedback, play } from './feedback.js';
 import { initInstall } from './install.js';
 import { matchRoute } from './routes.js';
@@ -162,7 +163,7 @@ async function boot() {
     // needed by the recipe screen, which is where most sessions end up.
     await Promise.all([
       loadCitations(), loadOccasions(), loadBalance(), loadSubstitutions(),
-      loadProteins(), loadTable(), loadKitchen(), loadTips()
+      loadProteins(), loadTable(), loadKitchen(), loadTips(), loadPalette()
     ]);
   } catch (err) {
     console.error(err);

@@ -2142,7 +2142,7 @@ button.tabbar__item {
   padding: var(--sp-4) var(--sp-4) var(--sp-3);
   border: 0;
   border-radius: var(--radius) var(--radius) 0 0;
-  background: linear-gradient(160deg, var(--green-050), color-mix(in srgb, var(--clay-300) 18%, transparent));
+  background: var(--card-wash, linear-gradient(160deg, var(--green-050), color-mix(in srgb, var(--clay-300) 18%, transparent)));
   cursor: pointer;
 }
 @media (max-width: 480px) {
@@ -2489,3 +2489,135 @@ button.tabbar__item {
 .added-chip__x:hover { color: var(--clay-600); }
 .ing.is-added { border-left: 3px solid var(--green-300); padding-left: 9px; }
 .ing__added { color: var(--green-600); font-size: .8rem; }
+
+/* ------------------------------------------------------------------ *
+ * The color of a dish
+ *
+ * Every card carries four numbers set by js/palette.js — two hues, two
+ * saturations and an angle — derived from what is actually in the pot. This is
+ * the only place that turns them into color, which is what keeps the tint from
+ * ever deciding contrast: the mix is always *into* the theme's own surface, at
+ * a percentage this file chooses, so light stays light and dark stays dark no
+ * matter how red the tomatoes are.
+ *
+ * A card with no look set falls back to the old green-and-clay wash, so an
+ * ingredient the palette has never heard of degrades to what shipped before.
+ * ------------------------------------------------------------------ */
+
+.recipe-card {
+  --tint-wash: 30%;
+  --tint-far: 16%;
+  --tint-edge: 46%;
+  --tint-pattern: 26%;
+  --card-c1: hsl(var(--card-h, 132) var(--card-s, 30%) 52%);
+  --card-c2: hsl(var(--card-h2, 88) var(--card-s2, 26%) 48%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .recipe-card {
+    --tint-wash: 26%;
+    --tint-far: 14%;
+    --tint-edge: 34%;
+    --tint-pattern: 26%;
+    /* Lifted a little in the dark: the same hue against a near-black surface
+     * reads muddier than it does against paper. */
+    --card-c1: hsl(var(--card-h, 132) var(--card-s, 30%) 62%);
+    --card-c2: hsl(var(--card-h2, 88) var(--card-s2, 26%) 56%);
+  }
+}
+:root[data-theme="dark"] .recipe-card {
+  --tint-wash: 26%;
+  --tint-far: 14%;
+  --tint-edge: 34%;
+  --tint-pattern: 26%;
+  --card-c1: hsl(var(--card-h, 132) var(--card-s, 30%) 62%);
+  --card-c2: hsl(var(--card-h2, 88) var(--card-s2, 26%) 56%);
+}
+
+/* The whole card takes a breath of its color; the art panel takes most of it. */
+.recipe-card[style*="--card-h"] {
+  border-color: color-mix(in srgb, var(--card-c1) var(--tint-edge), var(--line));
+  background:
+    linear-gradient(var(--card-angle, 150deg),
+      color-mix(in srgb, var(--card-c1) 7%, transparent),
+      transparent 58%),
+    var(--surface);
+}
+.recipe-card[style*="--card-h"] .recipe-card__art {
+  --card-wash: linear-gradient(var(--card-angle, 150deg),
+    color-mix(in srgb, var(--card-c1) var(--tint-wash), var(--surface)),
+    color-mix(in srgb, var(--card-c2) var(--tint-far), var(--surface)));
+  position: relative;
+  overflow: hidden;
+}
+
+/* The pattern, and what each one means.
+ *
+ * All of them are gradients rather than images: nothing to fetch, nothing for
+ * the content policy to argue about, and they scale to any card width. They
+ * sit on the art panel only, under the icons and above the wash, at an opacity
+ * low enough that the icons stay the thing you look at. */
+.recipe-card__art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .55;
+  background-image: var(--tex-image, none);
+  background-size: var(--tex-size, auto);
+  background-position: var(--tex-pos, 0 0);
+}
+.tex--grill .recipe-card__art,
+.recipe-card.tex--grill .recipe-card__art {
+  --tex-image:
+    repeating-linear-gradient(var(--card-angle, 150deg),
+      color-mix(in srgb, var(--card-c1) var(--tint-pattern), transparent) 0 2px, transparent 2px 13px),
+    repeating-linear-gradient(calc(var(--card-angle, 150deg) + 88deg),
+      color-mix(in srgb, var(--card-c1) calc(var(--tint-pattern) * .6), transparent) 0 2px, transparent 2px 15px);
+}
+.recipe-card.tex--stipple .recipe-card__art {
+  --tex-image: radial-gradient(color-mix(in srgb, var(--card-c1) var(--tint-pattern), transparent) 1.1px, transparent 1.2px);
+  --tex-size: 11px 11px;
+}
+.recipe-card.tex--ripple .recipe-card__art {
+  --tex-image: repeating-radial-gradient(circle at 18% 120%,
+    transparent 0 13px,
+    color-mix(in srgb, var(--card-c1) var(--tint-pattern), transparent) 13px 15px);
+}
+.recipe-card.tex--grain .recipe-card__art {
+  --tex-image: repeating-linear-gradient(calc(var(--card-angle, 150deg) + 40deg),
+    color-mix(in srgb, var(--card-c1) calc(var(--tint-pattern) * .8), transparent) 0 1px, transparent 1px 6px);
+}
+.recipe-card.tex--fresh .recipe-card__art {
+  --tex-image:
+    radial-gradient(circle at 22% 34%, color-mix(in srgb, var(--card-c1) var(--tint-pattern), transparent) 0 3px, transparent 3.5px),
+    radial-gradient(circle at 68% 22%, color-mix(in srgb, var(--card-c2) var(--tint-pattern), transparent) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 84% 66%, color-mix(in srgb, var(--card-c1) calc(var(--tint-pattern) * .7), transparent) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 40% 78%, color-mix(in srgb, var(--card-c2) calc(var(--tint-pattern) * .8), transparent) 0 2.5px, transparent 3px);
+  --tex-size: 74px 74px;
+}
+.recipe-card.tex--steam .recipe-card__art {
+  --tex-image: repeating-linear-gradient(100deg,
+    transparent 0 9px,
+    color-mix(in srgb, var(--card-c1) calc(var(--tint-pattern) * .7), transparent) 9px 11px,
+    transparent 11px 22px);
+}
+
+/* The score badge and the locked state are the two things that must stay
+ * legible against any of twelve hues, so neither of them takes the tint. */
+.recipe-card[style*="--card-h"].is-locked { border-color: var(--green-600); }
+
+/* A dot of the dish's own color beside its title on the recipe screen, so the
+ * page and the card that led to it are visibly the same dish. */
+.color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 7px;
+  vertical-align: baseline;
+  background: linear-gradient(140deg, var(--card-c1, var(--green-600)), var(--card-c2, var(--green-300)));
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .recipe-card__art::after { opacity: .3; }
+}
