@@ -3460,3 +3460,181 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
   .tabbar__item:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
   .minimap__row:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
 }
+
+/* ------------------------------------------------------------------ *
+ * Writing a recipe
+ * ------------------------------------------------------------------ *
+ *
+ * The chips are set inline in running text rather than laid out as a form,
+ * because the thing being described is a dish and a form makes it paperwork.
+ * They look like what they are: words you can press.
+ */
+.builder__ways { display: grid; gap: 10px; margin-top: 12px; }
+.builder__way {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.builder__way:hover { border-color: var(--green-600); }
+.builder__way-icon { font-size: 22px; flex: none; }
+.builder__way-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+
+.builder__paste {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: .9rem;
+  resize: vertical;
+}
+.builder__read { margin: 8px 0 0; font-size: .88rem; }
+.builder__read--gap { color: var(--clay-600); }
+
+/* The sentence at the top. Line height is generous because the chips are
+ * taller than the text around them and a tight leading makes them collide. */
+.builder__line {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  line-height: 2.1;
+}
+
+.chip-pick, .chip-num, .chip-text {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid color-mix(in srgb, var(--green-600) 45%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--green-600) 8%, transparent);
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.chip-pick { appearance: none; padding-right: 22px;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+                    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 10px top 55%, right 5px top 55%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.chip-pick.is-empty { opacity: .62; font-weight: 400; font-style: italic; }
+/* The spinner arrows eat about a character and a half of a chip this size, so
+ * "20" rendered as "2C". Removed rather than accommodated: nobody nudges a
+ * cooking time one minute at a time, and typing is faster than forty taps. */
+.chip-num {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.chip-num::-webkit-outer-spin-button,
+.chip-num::-webkit-inner-spin-button { appearance: none; margin: 0; }
+.chip-text { cursor: text; }
+.chip-pick:focus-visible, .chip-num:focus-visible, .chip-text:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 1px;
+}
+
+.builder__rows, .builder__steps { display: flex; flex-direction: column; gap: 6px; margin: 12px 0; }
+.builder__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.builder__row:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+.builder__row.is-guess { border-left: 3px solid var(--clay-600); padding-left: 8px; }
+.builder__name { flex: 1; min-width: 8ch; font-size: .95rem; }
+
+.builder__step { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; }
+.builder__stepno {
+  flex: none;
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--green-050);
+  color: var(--green-700);
+  font-size: .8rem; font-weight: 700;
+}
+.builder__stepbody { flex: 1; min-width: 0; }
+
+/* The sentence the pieces spell out, shown as it is assembled. Seeing the
+ * output is what stops the chips feeling like a form. */
+.builder__preview {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+/* And what the app will get out of it, said while it is being written rather
+ * than discovered in cook mode a week later. */
+.builder__gets {
+  margin: 4px 0 0;
+  font-size: .76rem;
+  color: var(--green-600);
+}
+.builder__write { font-size: .76rem; margin-top: 4px; }
+.builder__free {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+.builder__add {
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: .88rem;
+  color: var(--green-700);
+  cursor: pointer;
+}
+
+/* Lines that came across but landed on nothing. Deliberately prominent: the
+ * whole promise of the importer is that it never quietly drops one. */
+.builder__gap {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--clay-600) 34%, transparent);
+  background: color-mix(in srgb, var(--clay-600) 7%, transparent);
+}
+.builder__unmatched {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: .9rem;
+}
+.builder__unmatched > span { flex: 1; min-width: 0; }
+.builder__gaps { margin-bottom: 12px; }
+
+.builder__results { display: flex; flex-direction: column; gap: 2px; margin-top: 10px; max-height: 46vh; overflow-y: auto; }
+.builder__result {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px;
+  border: 0; border-radius: var(--radius-sm);
+  background: transparent; color: inherit; font: inherit;
+  text-align: left; cursor: pointer;
+}
+.builder__result:hover { background: var(--green-050); }

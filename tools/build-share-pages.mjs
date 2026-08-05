@@ -35,7 +35,6 @@ const recipes = RECIPE_FILES.flatMap(f => read(f).recipes);
 export const slugFor = (recipeId) => recipeId.replace(/^rec\./, '');
 
 const OUT_DIR = join(root, 'r');
-const ISO_DATE = new Date().toISOString().slice(0, 10);
 
 /* ------------------------------------------------------------------ *
  * Escaping. Recipe text is ours, but a generator that cannot be trusted
@@ -277,11 +276,28 @@ function sitemap() {
       changefreq: 'yearly'
     }))
   ];
+  // No <lastmod>.
+  //
+  // It used to be stamped with the date the generator ran, which meant this
+  // file went stale at midnight: CI regenerates it and checks the result is
+  // committed, so every pull request opened on a different day from the last
+  // commit failed on 243 changed lines that were all the same date bump. A
+  // check that fails for reasons unrelated to the change is a check people
+  // learn to re-run rather than read.
+  //
+  // The honest alternatives were all worse. A build-time date is what we had.
+  // A file mtime is not preserved by a git checkout, so CI would still churn.
+  // The real answer — when this recipe's content last changed — lives in git
+  // history, and a static-site generator that shells out to git to write a
+  // sitemap has bought a bigger problem than the one it solved.
+  //
+  // So it is omitted. lastmod is optional in the sitemap protocol, crawlers
+  // treat it as a hint and discount it when it is obviously auto-stamped, and
+  // a hint that breaks the build every night is worth less than nothing.
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${ISO_DATE}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`).join('\n')}

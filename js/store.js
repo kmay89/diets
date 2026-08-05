@@ -93,6 +93,11 @@ function defaultState() {
     bulkPicks: {},
     /** recipeIds recently cooked, newest first */
     history: [],
+    /**
+     * Recipes written or imported here. Kept in the same shape as the
+     * collection's, so every screen reads them without knowing the difference.
+     */
+    myRecipes: [],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
