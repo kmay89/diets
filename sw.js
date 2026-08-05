@@ -10,7 +10,7 @@
  * ERRERLabs — MIT licensed.
  */
 
-const VERSION = 'v3.7.0';
+const VERSION = 'v3.8.0';
 const CACHE = `errerlabs-diets-${VERSION}`;
 
 const PRECACHE = [
@@ -46,6 +46,9 @@ const PRECACHE = [
   './js/native.js',
   './js/watch.js',
   './js/recipe-parse.js',
+  './js/timeline.js',
+  './js/step-picture.js',
+  './js/read-aloud.js',
   './js/myrecipes.js',
   './js/cook-steps.js',
   './js/recipe-table.js',
@@ -79,6 +82,7 @@ const PRECACHE = [
   './js/views/skills-panel.js',
   './js/views/book.js',
   './js/views/recipe-builder.js',
+  './js/views/timeline-panel.js',
   './js/views/recipe-table.js',
   './js/citations.js',
   './js/feedback.js',

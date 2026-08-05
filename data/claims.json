@@ -8,7 +8,7 @@
       "icon": "🌾",
       "lede": "Most eating advice starts from restriction — what to cut, avoid, and feel guilty about. That framing is exhausting and it does not last. This app starts somewhere else: food is how you take care of the people at your table, and the meal that gets cooked again next month is worth more than the perfect meal that gets cooked once.",
       "body": [
-        "Nothing here asks you to eat less. It asks a different question — what could go *on* the plate that makes it better. More plants, more fiber, more color, more flavor built from technique instead of salt. The things that get crowded out get crowded out quietly.",
+        "Nothing here asks you to eat less. It asks a different question — what could go on the plate that makes it better. More plants, more fiber, more color, more flavor built from technique instead of salt. The things that get crowded out get crowded out quietly.",
         "There is no streak to break, no points, no red numbers. A week where you cook twice is a good week. The tool is here to make the cooking easier, not to keep score."
       ],
       "claims": [
@@ -297,6 +297,52 @@
           "cites": [],
           "strength": "editorial",
           "detail": "One table often holds a vegetarian, an omnivore, a teenager who has just announced something, and someone under doctor's orders. Cooking one base everybody can eat is simply the practical answer to that, and it happens to move all three of the numbers above."
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Every way to read a dish",
+      "icon": "👀",
+      "lede": "This app shows a recipe as words, as a diagram, as pictures, as a chart and — if you ask — out loud. That is not so you can pick the one that suits you. It is because the research says the opposite of what most people assume: matching instruction to somebody's stated learning style has never been shown to help, while showing everyone the same idea in words and pictures reliably does.",
+      "body": [
+        "\"I'm a visual learner\" is the most widely believed idea in education that does not survive testing. Testing it properly needs a specific design — teach the same material two ways, to people sorted by their stated preference, and check whether each group does better with its matching version. Almost nobody ran that study; the ones who did found the interaction was not there.",
+        "What does hold up is duller and more useful. Words and a picture of the same thing are held better than either alone, for everybody. The two belong close together rather than on separate tabs. And more channels is not automatically better — material that merely repeats what is already on screen can cost more attention than it gives back.",
+        "So nothing here asks what kind of learner you are, and nothing is hidden behind a preference you had to declare. The diagram sits above the steps, the pictures sit above the sentences, the chart comes with its own paragraph, and the voice is a button rather than a mode. Turn any of it off in Settings if it is in your way — that is a different thing from being sorted into a type."
+      ],
+      "claims": [
+        {
+          "id": "learning.meshing",
+          "text": "Teaching matched to a learner's self-reported style has not been shown to improve outcomes — the reviews found almost no studies using a design capable of testing the idea, and those that did contradicted it.",
+          "cites": [
+            "pashler2008"
+          ],
+          "strength": "meta-analysis"
+        },
+        {
+          "id": "learning.dual",
+          "text": "Information presented as words and as an image of the same idea is retained better than either channel alone, because the two are encoded by separate but connected systems.",
+          "cites": [
+            "clark1991",
+            "mayer2003"
+          ],
+          "strength": "meta-analysis"
+        },
+        {
+          "id": "learning.together",
+          "text": "Related words and pictures help most when they are next to each other rather than separated, and adding material that merely repeats what is already on screen can cost more attention than it returns.",
+          "cites": [
+            "mayer2003"
+          ],
+          "strength": "meta-analysis"
+        },
+        {
+          "id": "learning.expertise",
+          "text": "Support that measurably helps a beginner becomes useless and then counterproductive as experience grows — a real individual difference, but one that changes with practice rather than being a fixed type.",
+          "cites": [
+            "kalyuga2003"
+          ],
+          "strength": "meta-analysis"
         }
       ]
     }

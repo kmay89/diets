@@ -32,6 +32,9 @@ import { proteinSwapLine } from '../proteins.js';
 import { cardLook } from '../palette.js';
 import { tableBlock as methodTableBlock } from './recipe-table.js';
 import { avoidedSet, recipeConflicts, forkConflicts, conflictPhrase } from '../allergy.js';
+import { stepPicture, pictureWords, worthPicturing } from '../step-picture.js';
+import { canSpeak, say, hush } from '../read-aloud.js';
+import { timelineBlock } from './timeline-panel.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -171,6 +174,14 @@ export function render(root, { navigate, params }) {
       // — the flavor panel, the proteins, the forks — is answering a question
       // somebody only has once they know what they are being asked to do.
       stepsBlock(recipe, ingIndex, scale, draw),
+
+      // Straight after the method, because it answers the question reading the
+      // method just raised: that was eleven sentences — is my whole evening
+      // gone? Tapping a bar jumps into cook mode at that step, so the chart is
+      // a way in rather than only a picture.
+      st.prefs.timeChart !== false
+        ? timelineBlock(recipe, { onStep: (i) => navigate(`#/cook/${recipe.id}?step=${i + 1}`) })
+        : null,
 
       // The flavor panel next, because a swap happens in the ingredient list
       // just above and the whole point of it is to answer "is this still
@@ -580,8 +591,62 @@ function stepsBlock(recipe, ingIndex, scale, draw) {
     // before directions.
     table,
     table ? h('p.method__bridge', 'And in words:') : null,
-    h('ol.steps', ...recipe.steps.map(s => h('li', s)))
+
+    // Every step carries its own picture above the sentence — the same
+    // instruction, in the vocabulary that resolves before you have finished
+    // reading. Above rather than beside, because the eye lands on the picture,
+    // recognizes the shape of the step, and then reads the sentence knowing
+    // what it is about.
+    h('ol.steps',
+      ...recipe.steps.map((s, i) => {
+        const pic = ingIndex && getState().prefs.stepPictures !== false
+          ? stepPicture(s, recipe, ingIndex) : null;
+        return h('li',
+          pic && worthPicturing(pic) ? pictureRow(pic) : null,
+          h('span.steps__text', s),
+          readButton(s)
+        );
+      })
+    )
   );
+}
+
+/**
+ * The wordless version of a step.
+ *
+ * aria-hidden on the icons and nothing else: the sentence underneath is right
+ * there and says the same thing, so reading the pictures out as well would make
+ * a screen reader announce every step twice.
+ */
+function pictureRow(pic) {
+  return h('div.stepic', { 'aria-hidden': 'true', title: pictureWords(pic) },
+    h('span.stepic__act', h('span.stepic__glyph', pic.action.glyph), h('span.stepic__name', pic.action.name)),
+    ...pic.things.map(item => h('span.stepic__thing', foodIcon(item, { size: 22 }))),
+    pic.more ? h('span.stepic__more', `+${pic.more}`) : null,
+    pic.minutes ? h('span.stepic__time', `${pic.minutes}m`) : null
+  );
+}
+
+/**
+ * Read it out.
+ *
+ * Absent entirely where the device has no synthesizer, rather than present and
+ * dead — a button that does nothing when pressed teaches somebody the app is
+ * broken, which is a worse lesson than the button not being there.
+ */
+function readButton(text) {
+  if (!canSpeak()) return null;
+  const btn = h('button.steps__read', {
+    type: 'button',
+    'aria-label': 'Read this step aloud',
+    title: 'Read this step aloud',
+    onclick: () => {
+      if (btn.classList.contains('is-on')) { hush(); btn.classList.remove('is-on'); return; }
+      for (const other of document.querySelectorAll('.steps__read.is-on')) other.classList.remove('is-on');
+      if (say(text, { onEnd: () => btn.classList.remove('is-on') })) btn.classList.add('is-on');
+    }
+  }, '🔊');
+  return btn;
 }
 
 function notesBlock(recipe) {

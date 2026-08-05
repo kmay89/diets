@@ -31,7 +31,13 @@ const TOO_GENERIC = new Set([
   'fresh', 'ground', 'large', 'small', 'whole', 'plain', 'dried', 'frozen',
   'canned', 'sauce', 'powder', 'extra', 'virgin', 'sodium', 'added', 'unsalted',
   'nonfat', 'light', 'sliced', 'chopped', 'style', 'mixed', 'baby', 'wheat',
-  'free', 'part', 'skim', 'juice', 'leaves', 'seeds', 'grain', 'seasoning'
+  'free', 'part', 'skim', 'juice', 'leaves', 'seeds', 'grain', 'seasoning',
+  // How a thing was cut, not what it is. "Crushed fennel seed" was pulling in
+  // "Crushed tomatoes" — the word describes the knife work, and the same knife
+  // work happens to half the pantry. Where a preparation is genuinely part of an
+  // identity the recipes carry it in the line's own `prep`, not in the name.
+  'crushed', 'minced', 'grated', 'shredded', 'drained', 'rinsed', 'halved',
+  'quartered', 'cubed', 'torn'
 ]);
 
 /** The words that would let you point at this ingredient across a kitchen. */
@@ -46,6 +52,40 @@ function matchKeys(item) {
 }
 
 /**
+ * Which of a recipe's ingredients a given step actually names.
+ *
+ * The same reading the diagram does, exposed on its own so the wordless version
+ * of a step can draw the right pictures. Order follows the ingredient list
+ * rather than the sentence, so "oil, onion, garlic" comes out in the order they
+ * are stacked on the counter rather than the order the prose happened to use.
+ */
+export function ingredientsIn(stepText, recipe, ingIndex) {
+  const haystack = ` ${String(stepText).toLowerCase()} `;
+
+  // A key belonging to two of this recipe's own ingredients identifies neither.
+  // "Crushed tomatoes, no salt added" carries the key "salt", so every step that
+  // said "a pinch of salt" claimed the tomatoes were going in — which put a can
+  // of tomatoes in the picture of every step of the bolognese, including the one
+  // where you soften the onion. The diagram never showed this because it takes
+  // only the first step an ingredient matches; asking about every step exposed it.
+  const seen = new Map();
+  const lines = [];
+  for (const line of recipe?.ingredients || []) {
+    const item = ingIndex.get(line.ing);
+    if (!item) continue;
+    lines.push({ line, item, keys: matchKeys(item) });
+    for (const k of matchKeys(item)) seen.set(k, (seen.get(k) || 0) + 1);
+  }
+
+  const found = [];
+  for (const entry of lines) {
+    const own = entry.keys.filter(k => seen.get(k) === 1);
+    if (own.some(k => haystack.includes(k))) found.push({ line: entry.line, item: entry.item });
+  }
+  return found;
+}
+
+/**
  * A step that happens alongside the main thread rather than after it.
  *
  * "Meanwhile, cook the pasta" is the single most common branch in home cooking
@@ -56,6 +96,16 @@ const BRANCH_OPENERS = /^(meanwhile|while |in a separate|in another|in a second|
 
 /** The merge back: a step that pulls a parallel thread into the main one. */
 const MERGE_WORDS = /\b(toss|combine|add (?:the )?(?:drained|cooked)|fold|stir (?:it|them|the .*) (?:in|into)|return|serve (?:over|on)|top(?: the)?|assemble|pour over|spoon over)\b/i;
+
+/**
+ * Both tests, exported, because the timeline needs the same reading of a step.
+ *
+ * Two modules each deciding for themselves what "meanwhile" means is two modules
+ * that will eventually disagree about whether the pasta is cooking in parallel —
+ * on the same screen, in front of somebody holding a colander.
+ */
+export const opensBranch = (text) => BRANCH_OPENERS.test(String(text).trim());
+export const mergesBranch = (text) => MERGE_WORDS.test(String(text));
 
 /* ------------------------------------------------------------------ *
  * The label on an operation
@@ -105,7 +155,13 @@ export function labelFor(text) {
     // Whole words only. "Brownies" contains "brown", and a pan of brownies
     // labeled "Brown" is the kind of small wrongness that makes a diagram
     // untrustworthy everywhere else.
-    const m = lower.match(new RegExp(`\\b${needle}(?:e?[sd]|ing)?\\b`, 'i'));
+    //
+    // The boundaries are letter lookarounds rather than \b, because \b is
+    // defined on [A-Za-z0-9_] and an accented letter is not in it — so \bsauté\b
+    // could never match "sauté", there being no boundary between "é" and the
+    // space after it. Every sautéing step in the collection has been falling
+    // through to the diagram's "Then" since the day it was written.
+    const m = lower.match(new RegExp(`(?<!\\p{L})${needle}(?:e?[sd]|ing)?(?!\\p{L})`, 'iu'));
     if (m && m.index < at) { at = m.index; verb = label; }
   }
   return { verb: verb || 'Then', time: durationIn(text) };
