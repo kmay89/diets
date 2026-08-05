@@ -5,7 +5,7 @@
  */
 
 import { h, mount, $, toast, sheet } from './ui.js';
-import { loadAll } from './data.js';
+import { loadAll, mergeMyRecipes } from './data.js';
 import { loadCitations } from './citations.js';
 import { loadOccasions } from './occasions.js';
 import { loadBalance } from './balance.js';
@@ -25,6 +25,7 @@ import { initInstall } from './install.js';
 import { matchRoute } from './routes.js';
 import { initTheme, refreshThemeToggles } from './theme.js';
 import { getState, subscribe } from './store.js';
+import { myRecipes } from './myrecipes.js';
 
 import * as onboarding from './views/onboarding.js';
 import * as todayView from './views/today.js';
@@ -40,6 +41,7 @@ import * as pantryView from './views/pantry.js';
 import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
 import * as bookView from './views/book.js';
+import * as builderView from './views/recipe-builder.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
 import * as learnView from './views/learn.js';
@@ -61,6 +63,8 @@ const VIEWS = {
   list: () => ({ render: listView.render, params: {} }),
   garden: () => ({ render: gardenView.render, params: {} }),
   book: () => ({ render: bookView.render, params: {} }),
+  newRecipe: () => ({ render: builderView.render, params: {} }),
+  editRecipe: (m) => ({ render: builderView.render, params: { id: m[1] } }),
   settings: () => ({ render: settingsView.render, params: {} }),
   why: () => ({ render: whyView.render, params: {} }),
   learn: () => ({ render: learnView.render, params: {} })
@@ -198,6 +202,10 @@ async function boot() {
     return;
   }
 
+  // The household's own recipes join the collection before anything renders, so
+  // no screen ever has to ask where a recipe came from.
+  mergeMyRecipes(myRecipes());
+
   initTheme();
   buildChrome();
   // Inside an app shell this wires up the status bar and notification taps. In
@@ -235,8 +243,9 @@ async function boot() {
   window.addEventListener('hashchange', route);
   route();
 
-  // Re-render the current view when state changes elsewhere (e.g. a sheet).
-  subscribe(() => paintNav(location.hash));
+  // Re-render the current view when state changes elsewhere (e.g. a sheet), and
+  // keep the index in step with recipes being written, edited or deleted.
+  subscribe(() => { mergeMyRecipes(myRecipes()); paintNav(location.hash); });
 
   if ('serviceWorker' in navigator) {
     try {
