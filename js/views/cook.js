@@ -41,6 +41,8 @@ import { recipeTable } from '../recipe-table.js';
 import { setWatchStep, clearWatchStep } from '../watch.js';
 import { stepPicture, pictureWords, worthPicturing } from '../step-picture.js';
 import { canSpeak, say, hush, speaking } from '../read-aloud.js';
+import { momentsFor } from '../cook-moments.js';
+import { momentLine } from './moment-line.js';
 
 /* ------------------------------------------------------------------ *
  * Deriving a timer from the instruction text
@@ -300,6 +302,11 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
           cookPicture(current.text, recipe, ingIndex),
           speakButton(current.text)
         ),
+
+        // The one thing worth doing with the next half hour, said at the moment
+        // it becomes true rather than in a list somebody would have to leave
+        // this screen to find.
+        momentAt(recipe, i),
 
         timing.seconds
           ? timerButton({
@@ -591,6 +598,13 @@ function speakButton(text) {
     }
   }, '🔊 Read it');
   return btn;
+}
+
+/** The table advice for this step, if this is a step that has any. */
+function momentAt(recipe, step) {
+  if (getState().prefs.tableMoments === false) return null;
+  const moment = momentsFor(recipe).find(m => m.step === step);
+  return moment ? momentLine(moment, { tone: 'cook' }) : null;
 }
 
 function paintTimer(scope, { id, timing }) {

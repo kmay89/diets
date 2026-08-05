@@ -3756,15 +3756,15 @@ body:has(.cookmode) .timer-dock { left: 50%; }
 
 /* --- the time chart --- */
 
-.timeline__chart { margin: 14px 0 10px; }
+.timechart__chart { margin: 14px 0 10px; }
 
-.timeline__lane {
+.timechart__lane {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 6px;
 }
-.timeline__lane-tag {
+.timechart__lane-tag {
   flex: 0 0 auto;
   font-size: .62rem;
   font-weight: 700;
@@ -3772,7 +3772,7 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   text-transform: uppercase;
   color: color-mix(in srgb, var(--ink) 45%, transparent);
 }
-.timeline__track {
+.timechart__track {
   position: relative;
   flex: 1;
   height: 30px;
@@ -3781,7 +3781,7 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   overflow: hidden;
 }
 
-.timeline__blk {
+.timechart__blk {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3805,29 +3805,29 @@ body:has(.cookmode) .timer-dock { left: 50%; }
  * for dark mode. On a dark field the deep green of --green-surface sits almost
  * on top of the page background, so the busy stretch — the thing the chart
  * exists to point at — was the least visible mark on it. */
-.timeline {
+.timechart {
   --tl-attend: var(--green-surface);
   --tl-away: color-mix(in srgb, var(--green-surface) 26%, transparent);
   --tl-attend-ink: var(--cream);
   --tl-away-ink: var(--ink);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .timeline {
+  :root:not([data-theme="light"]) .timechart {
     --tl-attend: color-mix(in srgb, var(--green-surface) 62%, #9DC8AE 38%);
     --tl-away: color-mix(in srgb, var(--cream) 15%, transparent);
     --tl-attend-ink: #12241D;
   }
 }
-:root[data-theme="dark"] .timeline {
+:root[data-theme="dark"] .timechart {
   --tl-attend: color-mix(in srgb, var(--green-surface) 62%, #9DC8AE 38%);
   --tl-away: color-mix(in srgb, var(--cream) 15%, transparent);
   --tl-attend-ink: #12241D;
 }
 
-.timeline__blk.is-attend { background: var(--tl-attend); color: var(--tl-attend-ink); }
-.timeline__blk.is-away { background: var(--tl-away); color: var(--tl-away-ink); }
+.timechart__blk.is-attend { background: var(--tl-attend); color: var(--tl-attend-ink); }
+.timechart__blk.is-away { background: var(--tl-away); color: var(--tl-away-ink); }
 
-.timeline__axis {
+.timechart__axis {
   display: flex;
   justify-content: space-between;
   margin-top: 4px;
@@ -3835,7 +3835,7 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   color: color-mix(in srgb, var(--ink) 45%, transparent);
 }
 
-.timeline__legend {
+.timechart__legend {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -3843,22 +3843,22 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   font-size: .72rem;
   color: color-mix(in srgb, var(--ink) 58%, transparent);
 }
-.timeline__key {
+.timechart__key {
   display: inline-block;
   width: 11px;
   height: 11px;
   border-radius: 3px;
   vertical-align: -1px;
 }
-.timeline__key.is-attend { background: var(--tl-attend); }
-.timeline__key.is-away { background: var(--tl-away); }
+.timechart__key.is-attend { background: var(--tl-attend); }
+.timechart__key.is-away { background: var(--tl-away); }
 
-.timeline__words {
+.timechart__words {
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--ink) 78%, transparent);
 }
 
-.timeline__ahead {
+.timechart__ahead {
   margin: 0 0 4px;
   font-weight: 600;
   color: var(--gold);
@@ -3975,3 +3975,214 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   .cookmode__ways { gap: 8px; }
   .cookmode__speak { width: 100%; }
 }
+
+/* ------------------------------------------------------------------ *
+ * Who can do what, as a grid
+ * ------------------------------------------------------------------ *
+ *
+ * Jobs down, ages across. This replaced five stacked cards that between them
+ * printed "Set the table" five times, because a job that suits every age was
+ * listed under every age.
+ *
+ * One hue, two states. The household's own children are marked with a band and
+ * their name rather than a second color: a gold fill next to the green one
+ * measured ΔE 13.5 for normal vision in dark mode — under the floor where two
+ * marks stop being tellable apart — and the fix is not a better gold, it is not
+ * competing on the same channel.
+ */
+.jobgrid {
+  /* One name for the mark color, set once per theme. The first version themed
+   * `.is-on` in a dark-mode block written after `.is-partial`, so the override
+   * re-filled the hollow cells and "all but the step with heat in it" became
+   * invisible in dark mode — the chart quietly told a parent their five-year-old
+   * could work the stove. Naming the color means the state rules are declared
+   * once, in the right order, and a theme cannot reach past them. */
+  --cell: 34px;
+  display: grid;
+  grid-template-columns: minmax(11rem, 1.7fr) repeat(5, minmax(0, 1fr));
+  gap: 2px;                       /* the surface gap between marks */
+  margin: 14px 0 8px;
+  align-items: stretch;
+}
+/* Declared on the block, not on the grid: the legend is the grid's sibling, so
+ * a custom property scoped to .jobgrid did not reach it and both key swatches
+ * rendered as nothing at all — a legend explaining two marks with two invisible
+ * squares. */
+.kids { --mark: var(--green-600); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .kids { --mark: var(--green-300); }
+}
+:root[data-theme="dark"] .kids { --mark: var(--green-300); }
+
+.jobgrid__head,
+.jobgrid__row { display: contents; }
+
+.jobgrid__corner {
+  align-self: end;
+  padding-bottom: 8px;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 42%, transparent);
+}
+
+.jobgrid__age {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0 2px 8px;
+  text-align: center;
+  line-height: 1.15;
+}
+.jobgrid__age strong { font-size: .78rem; }
+.jobgrid__who {
+  font-size: .6rem;
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+
+/* The column belonging to a child who actually lives here.
+ *
+ * Marked in the header only, with a rule under it — never as a ring around each
+ * cell. Rings on two adjacent columns closed up across the 2px gap and read as
+ * one box drawn around both, and a fill would be a second color competing with
+ * the data on the same channel: gold beside this green measures ΔE 13.5 for
+ * normal vision on a dark surface, under the floor where two marks stop being
+ * tellable apart. The name is the marker. Nothing else needs to move. */
+.jobgrid__age.is-mine {
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 5px;
+}
+.jobgrid__age.is-mine strong { color: var(--gold); }
+.jobgrid__age.is-mine .jobgrid__who { color: var(--gold); font-weight: 700; }
+
+.jobgrid__job {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px 0 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-height: var(--cell);
+}
+.jobgrid__job .job__name { font-weight: 600; font-size: .86rem; line-height: 1.25; }
+.jobgrid__job .job__steps {
+  margin-left: auto;
+  font-size: .68rem;
+  white-space: nowrap;
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.jobgrid__job:hover .job__name { text-decoration: underline; }
+
+.jobgrid__cell {
+  min-height: var(--cell);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+.jobgrid__cell.is-on { background: var(--mark); }
+/* Form, not hue: the same green, hollowed out. "All of it except the part over
+ * the flame" is a different amount of the same thing, not a different thing. */
+.jobgrid__cell.is-on.is-partial {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--mark);
+}
+
+.jobgrid__legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0 0 6px;
+  font-size: .72rem;
+  color: color-mix(in srgb, var(--ink) 58%, transparent);
+}
+.jobgrid__legend > span { display: inline-flex; align-items: center; gap: 4px; }
+.jobgrid__key {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  vertical-align: -2px;
+}
+.jobgrid__key.is-on { background: var(--mark); }
+.jobgrid__key.is-partial { box-shadow: inset 0 0 0 2px var(--mark); }
+
+/* On a phone the job name and its steps cannot share a line with five columns.
+ * The steps drop under the name; the grid keeps its shape, which is the part
+ * that carries the meaning. */
+@media (max-width: 560px) {
+  .jobgrid { --cell: 30px; grid-template-columns: minmax(6.5rem, 1.3fr) repeat(5, minmax(0, 1fr)); }
+  .jobgrid__job { flex-wrap: wrap; gap: 2px 6px; padding-right: 4px; }
+  .jobgrid__job .job__name { font-size: .8rem; }
+  .jobgrid__job .job__steps { margin-left: 0; flex-basis: 100%; }
+  .jobgrid__age strong { font-size: .68rem; }
+  .jobgrid__who { display: none; }
+  .jobgrid__age.is-mine .jobgrid__who { display: block; font-size: .56rem; }
+}
+
+/* ------------------------------------------------------------------ *
+ * What to do while it cooks
+ * ------------------------------------------------------------------ *
+ *
+ * This content used to be a countdown at the bottom of the page — read there,
+ * "set the table ten minutes out" is a chore on a list nobody scrolls back to
+ * mid-cook. Placed on the step where the pot is working on its own, and led
+ * with the fact that makes it useful, it stops being an order and becomes an
+ * observation: you have half an hour, here is the thing worth doing with it.
+ *
+ * Deliberately quiet. It is an aside next to the instruction, never a second
+ * instruction competing with it.
+ */
+.moment {
+  margin: 8px 0 2px;
+  padding: 8px 10px;
+  border-left: 3px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--gold) 8%, transparent);
+}
+
+.moment__lede {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 5px;
+  font-size: .8rem;
+  color: color-mix(in srgb, var(--ink) 74%, transparent);
+}
+.moment__clock { flex: 0 0 auto; }
+
+.moment__marks { display: flex; flex-wrap: wrap; gap: 6px; }
+.moment__mark {
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--gold) 42%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.moment__mark:hover { background: color-mix(in srgb, var(--gold) 16%, transparent); }
+
+/* Cook mode is a dark field read from a step back, so the same aside needs more
+ * light behind it and a size that survives the distance. */
+.moment--cook {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-left-color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 15%, transparent);
+}
+.moment--cook .moment__lede {
+  font-size: .88rem;
+  color: color-mix(in srgb, var(--cream) 82%, transparent);
+}
+.moment--cook .moment__mark {
+  border-color: color-mix(in srgb, var(--cream) 34%, transparent);
+  color: var(--cream);
+  font-size: .84rem;
+}
+.moment--cook .moment__mark:hover { background: color-mix(in srgb, var(--cream) 14%, transparent); }

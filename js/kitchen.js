@@ -102,6 +102,95 @@ export function jobsFor(recipe, m = model) {
   }).filter(band => band.jobs.length);
 }
 
+/**
+ * The same jobs, turned ninety degrees.
+ *
+ * `jobsFor` is age-major, which is the shape a form wants and the wrong shape
+ * for a reader. It produces one card per age band, and since a job like setting
+ * the table suits every age from two to eighteen, that job is printed five
+ * times. A recipe with three matching jobs came out as five headed cards and
+ * eleven chips, and a parent looking for what their own six-year-old could do
+ * had to read all of it and hold the answer in their head.
+ *
+ * Job-major is one row per job, and because every job's age range turns out to
+ * be contiguous — checked across all eighteen — a row is a bar with a start and
+ * an end. Three jobs is three rows.
+ *
+ * The bands are all of them, always, even the ones this recipe has nothing for.
+ * A chart whose axis changes between recipes cannot be compared with the one
+ * before it, and the empty columns are information: they say plainly that there
+ * is nothing here for a toddler.
+ *
+ * @returns {{bands:Array, rows:Array}|null} each row carrying, per band, whether
+ *   the job is offered and whether it is offered for all of its steps or only
+ *   the ones without heat or a blade in them.
+ */
+export function jobsChart(recipe, m = model) {
+  const byAge = jobsFor(recipe, m);
+  if (!byAge.length) return null;
+
+  const bands = m.ages || [];
+  const rows = new Map();
+
+  for (const { age, jobs } of byAge) {
+    for (const job of jobs) {
+      if (!rows.has(job.id)) rows.set(job.id, { job, byBand: new Map(), steps: new Set() });
+      const row = rows.get(job.id);
+      row.byBand.set(age.id, job.steps);
+      for (const s of job.steps) row.steps.add(s);
+    }
+  }
+
+  const built = [...rows.values()].map(({ job, byBand, steps }) => {
+    const all = [...steps].sort((a, b) => a - b);
+    const cells = bands.map(band => {
+      const mine = byBand.get(band.id);
+      if (!mine) return { on: false, partial: false, steps: [] };
+      // Fewer steps than the job has in this recipe means the rest of them trip
+      // a hazard word at this age. Drawn differently rather than the same,
+      // because "your five-year-old can do this, but not the part over the
+      // flame" is the whole reason the model is per step instead of per recipe.
+      return { on: true, partial: all.length > 0 && mine.length < all.length, steps: mine };
+    });
+    const first = cells.findIndex(c => c.on);
+    return {
+      job,
+      cells,
+      steps: all,
+      anyTime: all.length === 0,
+      from: first,
+      to: cells.length - 1 - [...cells].reverse().findIndex(c => c.on)
+    };
+  });
+
+  // Youngest first, so the chart reads as a staircase rather than a scatter —
+  // and so the row a parent of a small child needs is at the top.
+  built.sort((a, b) => a.from - b.from || b.to - a.to || a.job.name.localeCompare(b.job.name));
+
+  return { bands, rows: built };
+}
+
+/**
+ * Which band each child in the house falls into.
+ *
+ * The point of the chart is answering "what can *mine* do", and the app already
+ * knows their ages. Without this it is a general-purpose reference table; with
+ * it, it is about the people in the room.
+ */
+export function bandsOfHousehold(members = [], m = model) {
+  const bands = m?.ages || [];
+  const found = new Map();
+  for (const person of members) {
+    const age = Number(person?.age);
+    if (!Number.isFinite(age) || age < 2 || age >= 18) continue;
+    const band = bands.find(b => age >= b.from && age <= b.to);
+    if (!band) continue;
+    if (!found.has(band.id)) found.set(band.id, []);
+    found.get(band.id).push(person.name || 'them');
+  }
+  return found;
+}
+
 /** The steps that belong to a grown-up, with the reason stated once. */
 export function grownUpSteps(recipe, m = model) {
   const steps = stepsByHand(recipe, m).filter(s => s.risky);

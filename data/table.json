@@ -2,66 +2,87 @@
   "schema": "vegnourish.table/1",
   "note": "Cooking ends when the pan comes off the heat. Dinner does not. This file covers the twenty minutes on either side of that moment — when to start so everything lands together, how to get it onto a plate while it is still hot, what order to eat it in, and what to drink. All of it is the part of a recipe that never gets written down, which is why it is the part most often gotten wrong.",
   "voice": "Guidance, not instructions. Some of it is technique with a mechanism behind it, some of it is sourced evidence with a claim id attached, and some of it is one way of doing things that happens to work. Each one says which it is.",
-
   "timeline": {
     "note": "Worked backward from when you want to sit down. The numbers come from the recipe's own times, so a thirty-minute skillet and a three-hour braise get different countdowns rather than the same generic advice.",
     "platingMin": 4,
     "restMin": 5,
-    "restWhen": ["roast", "grill", "braise"],
+    "restWhen": [
+      "roast",
+      "grill",
+      "braise"
+    ],
     "marks": [
       {
         "id": "mark.start",
         "offset": "total",
         "title": "Start here",
-        "body": "Counted back from the recipe's own total time. It assumes the chopping is done — if it is not, add ten minutes and do that first, because a stir-fry started with an unchopped onion is not a stir-fry."
+        "body": "Counted back from the recipe's own total time. It assumes the chopping is done — if it is not, add ten minutes and do that first, because a stir-fry started with an unchopped onion is not a stir-fry.",
+        "phase": "plan"
       },
       {
         "id": "mark.prep",
         "offset": "active",
         "title": "Hands on from here",
-        "body": "Everything from this point wants you in the kitchen. Before it, the pot is mostly cooking itself."
+        "body": "Everything from this point wants you in the kitchen. Before it, the pot is mostly cooking itself.",
+        "phase": "plan"
       },
       {
         "id": "mark.table",
         "offset": 10,
         "title": "Set the table now",
-        "body": "Not after the food is done. Plates, forks, water, whatever goes on the table — done while something is simmering, so that nothing sits and cools while somebody hunts for a serving spoon."
+        "body": "Not after the food is done. Plates, forks, water, whatever goes on the table — done while something is simmering, so that nothing sits and cools while somebody hunts for a serving spoon.",
+        "phase": "ahead"
       },
       {
         "id": "mark.warm",
         "offset": 8,
         "title": "Warm the plates",
         "body": "A hot dish on a cold plate loses ten degrees before anyone picks up a fork, and food that is barely warm tastes noticeably duller — less aroma reaches your nose. Thirty seconds under hot tap water and a towel, or a low oven, or a minute in the microwave with a splash of water.",
-        "skipFor": ["salad", "no-cook", "dessert", "smoothie"]
+        "skipFor": [
+          "salad",
+          "no-cook",
+          "dessert",
+          "smoothie"
+        ],
+        "phase": "ahead"
       },
       {
         "id": "mark.taste",
         "offset": 4,
         "title": "Taste it, and mean it",
-        "body": "A real spoonful, not a lick off the edge. This is the moment the flavor panel above is for — salt first, then acid, then whether anything fresh is going on top. Almost every fixable problem is fixable right here."
+        "body": "A real spoonful, not a lick off the edge. This is the moment the flavor panel above is for — salt first, then acid, then whether anything fresh is going on top. Almost every fixable problem is fixable right here.",
+        "phase": "end"
       },
       {
         "id": "mark.rest",
         "offset": 5,
         "title": "Let it rest",
         "body": "Anything roasted, seared or braised. Heat is still moving toward the middle and the fibers are holding their liquid under pressure; five minutes off the heat lets both settle, so the juice ends up in the food rather than on the board.",
-        "onlyFor": ["roast", "grill", "braise", "sheet-pan"]
+        "onlyFor": [
+          "roast",
+          "grill",
+          "braise",
+          "sheet-pan"
+        ],
+        "phase": "end"
       },
       {
         "id": "mark.finish",
         "offset": 1,
         "title": "The last thirty seconds",
-        "body": "Raw oil, a squeeze of lemon, torn herbs, something toasted, flaky salt. None of it is cooking and all of it is the difference between food that tastes homemade and food that tastes like somebody meant it."
+        "body": "Raw oil, a squeeze of lemon, torn herbs, something toasted, flaky salt. None of it is cooking and all of it is the difference between food that tastes homemade and food that tastes like somebody meant it.",
+        "phase": "end"
       },
       {
         "id": "mark.sit",
         "offset": 0,
         "title": "Sit down",
-        "body": "Everyone at once if you can manage it. Eating together slows the meal down on its own, which is the single easiest thing on this page to do and the one with the most behind it."
+        "body": "Everyone at once if you can manage it. Eating together slows the meal down on its own, which is the single easiest thing on this page to do and the one with the most behind it.",
+        "phase": "plan"
       }
-    ]
+    ],
+    "phaseNote": "Which part of the evening a mark belongs to. 'ahead' is done away from the pot while something else cooks, so it can be offered during a gap in the method; 'end' happens to the food as it comes off the heat; 'plan' describes the shape of the evening rather than a moment inside it."
   },
-
   "plating": {
     "note": "Not styling. The three things that change how food actually eats: how hot it is, how much of it there is, and whether anything is on top.",
     "principles": [
@@ -106,7 +127,6 @@
       "component": "Into a jar, labeled with the date. Half the value of making a sauce is finding it on Thursday."
     }
   },
-
   "eating": {
     "order": {
       "title": "What to eat first",
@@ -137,7 +157,6 @@
       "honest": "This is guidance for people with reflux symptoms, not general advice about when everybody should eat."
     }
   },
-
   "water": {
     "title": "What to drink, and when",
     "base": {
@@ -157,35 +176,55 @@
       {
         "id": "water.salty",
         "title": "This one is salty",
-        "when": { "metric": "sodium_mg", "op": ">", "value": 700 },
+        "when": {
+          "metric": "sodium_mg",
+          "op": ">",
+          "value": 700
+        },
         "say": "Keep the glass filled through the meal, and go easy on salt at the next one rather than trying to undo this one.",
         "why": "You will be thirsty; that is the body managing the sodium concentration in your blood, and it is normal rather than alarming. Water does not remove sodium, so the useful move is the balance of the day, not a corrective glass. Potassium-rich food at the next meal — beans, potatoes, greens, yogurt, bananas — does more than anything you can drink."
       },
       {
         "id": "water.sweet",
         "title": "This one is sweet",
-        "when": { "metric": "sugar_g", "op": ">", "value": 22 },
+        "when": {
+          "metric": "sugar_g",
+          "op": ">",
+          "value": 22
+        },
         "say": "Water rather than another sweet drink, and a walk afterward if there is one going.",
         "why": "Sugary drinks alongside a sweet dish stack the same load twice. The walk is the part with evidence behind it."
       },
       {
         "id": "water.fiber",
         "title": "A lot of fiber in this one",
-        "when": { "metric": "fiber_g", "op": ">", "value": 12 },
+        "when": {
+          "metric": "fiber_g",
+          "op": ">",
+          "value": 12
+        },
         "say": "Drink with it, and keep drinking through the afternoon.",
         "why": "Fiber works by holding water. A sudden jump in fiber without the water alongside is exactly the combination that makes people uncomfortable and then blame the beans."
       },
       {
         "id": "water.spicy",
         "title": "This one is hot",
-        "when": { "axis": "heat", "op": ">", "value": 12 },
+        "when": {
+          "axis": "heat",
+          "op": ">",
+          "value": 12
+        },
         "say": "Yogurt, milk or rice for the heat. Water is the one thing that will not help.",
         "why": "Capsaicin dissolves in fat, not in water. A glass of water spreads it around your mouth; a spoonful of yogurt carries it away. This is not folklore, it is solubility."
       },
       {
         "id": "water.big",
         "title": "A big plate",
-        "when": { "metric": "kcal", "op": ">", "value": 700 },
+        "when": {
+          "metric": "kcal",
+          "op": ">",
+          "value": 700
+        },
         "say": "Slow it down and take the walk afterward.",
         "why": "The two habits on this page with actual evidence behind them are both worth more on a big meal than a small one."
       }
@@ -209,7 +248,6 @@
       }
     ]
   },
-
   "leftovers": {
     "title": "Before you sit down",
     "body": "Portion out what you are keeping before the meal rather than after. It cools faster in a shallow container, it goes into the refrigerator inside two hours instead of at bedtime, and nobody has to decide at the end of dinner whether there is enough left to bother with.",

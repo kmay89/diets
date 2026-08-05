@@ -180,6 +180,16 @@ function view(draw, navigate) {
           h('p.muted', 'The chart that separates the minutes wanting your hands from the minutes the oven is working, so you can see whether an evening is really gone.')
         )
       ),
+      h('label.switch-row',
+        h('input', {
+          type: 'checkbox', checked: state.prefs.tableMoments !== false,
+          onchange: (e) => { setPref('tableMoments', e.target.checked); draw(); }
+        }),
+        h('div',
+          h('strong', 'What to do while it cooks'),
+          h('p.muted', 'Setting the table, warming the plates, resting the meat \u2014 offered inside the method at the moments the pot does not need you, rather than as a countdown underneath it.')
+        )
+      ),
       h('p.fine-print',
         canSpeak()
           ? 'Reading a step aloud uses the voice built into this device. Nothing is sent anywhere \u2014 the app has never made a network call of its own, and a cloud voice would be the first.'

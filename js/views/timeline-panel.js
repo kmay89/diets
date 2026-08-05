@@ -22,11 +22,11 @@ export function timelineBlock(recipe, { onStep } = {}) {
   const tl = timeline(recipe);
   if (!worthDrawing(tl)) return null;
 
-  return h('section.card.block.timeline',
+  return h('section.card.block.timechart',
     h('h2.block__title', 'How the time goes'),
 
     needsAhead(tl)
-      ? h('p.timeline__ahead', '⏳ Start this one well ahead — most of it is waiting.')
+      ? h('p.timechart__ahead', '⏳ Start this one well ahead — most of it is waiting.')
       : null,
 
     chart(tl, onStep),
@@ -34,7 +34,7 @@ export function timelineBlock(recipe, { onStep } = {}) {
 
     // The same information in prose. This is not a caption for the chart, it is
     // the other half of it.
-    h('p.timeline__words', timelineWords(tl, recipe))
+    h('p.timechart__words', timelineWords(tl, recipe))
   );
 }
 
@@ -53,10 +53,10 @@ function chart(tl, onStep) {
     const blocks = tl.blocks.filter(b => b.lane === lane && b.minutes > 0);
     if (!blocks.length) continue;
 
-    lanes.push(h('div.timeline__lane',
-      lane === 1 ? h('span.timeline__lane-tag', 'alongside') : null,
-      h('div.timeline__track',
-        ...blocks.map(b => h('button.timeline__blk', {
+    lanes.push(h('div.timechart__lane',
+      lane === 1 ? h('span.timechart__lane-tag', 'alongside') : null,
+      h('div.timechart__track',
+        ...blocks.map(b => h('button.timechart__blk', {
           type: 'button',
           class: `is-${b.kind}`,
           style: `left:${pct(b.at, tl.statedMin)}%;width:${pct(b.minutes, tl.statedMin)}%`,
@@ -73,17 +73,17 @@ function chart(tl, onStep) {
     ));
   }
 
-  return h('div.timeline__chart', ...lanes,
-    h('div.timeline__axis',
+  return h('div.timechart__chart', ...lanes,
+    h('div.timechart__axis',
       h('span', '0'),
       h('span', `${tl.statedMin} min`)
     )
   );
 }
 
-const legend = () => h('p.timeline__legend',
-  h('span.timeline__key.is-attend'), ' at the pan  ',
-  h('span.timeline__key.is-away'), ' the pot on its own'
+const legend = () => h('p.timechart__legend',
+  h('span.timechart__key.is-attend'), ' at the pan  ',
+  h('span.timechart__key.is-away'), ' the pot on its own'
 );
 
 const pct = (n, total) => Math.max(0, Math.min(100, (n / total) * 100)).toFixed(2);
