@@ -3744,3 +3744,234 @@ body:has(.cookmode) .timer-dock { left: 50%; }
   text-align: left; cursor: pointer;
 }
 .builder__result:hover { background: var(--green-050); }
+
+/* ------------------------------------------------------------------ *
+ * Every way to read a dish
+ * ------------------------------------------------------------------ *
+ *
+ * Three channels, and the rule that governs all of them: they appear together,
+ * never instead of one another. A picture that replaces the sentence is a
+ * puzzle; a picture beside it is a second way in.
+ */
+
+/* --- the time chart --- */
+
+.timeline__chart { margin: 14px 0 10px; }
+
+.timeline__lane {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.timeline__lane-tag {
+  flex: 0 0 auto;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.timeline__track {
+  position: relative;
+  flex: 1;
+  height: 30px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  overflow: hidden;
+}
+
+.timeline__blk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  border-right: 1px solid var(--surface);
+  padding: 0;
+  font: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--cream);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: filter .12s ease;
+}
+/* Lighter, and not a second hue: the difference being shown is how much of your
+ * attention a stretch wants, which is one dimension. Two colors say two kinds
+ * of thing, and somebody then has to remember which is which.
+ *
+ * Named here rather than written inline because the pair has to be re-picked
+ * for dark mode. On a dark field the deep green of --green-surface sits almost
+ * on top of the page background, so the busy stretch — the thing the chart
+ * exists to point at — was the least visible mark on it. */
+.timeline {
+  --tl-attend: var(--green-surface);
+  --tl-away: color-mix(in srgb, var(--green-surface) 26%, transparent);
+  --tl-attend-ink: var(--cream);
+  --tl-away-ink: var(--ink);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .timeline {
+    --tl-attend: color-mix(in srgb, var(--green-surface) 62%, #9DC8AE 38%);
+    --tl-away: color-mix(in srgb, var(--cream) 15%, transparent);
+    --tl-attend-ink: #12241D;
+  }
+}
+:root[data-theme="dark"] .timeline {
+  --tl-attend: color-mix(in srgb, var(--green-surface) 62%, #9DC8AE 38%);
+  --tl-away: color-mix(in srgb, var(--cream) 15%, transparent);
+  --tl-attend-ink: #12241D;
+}
+
+.timeline__blk.is-attend { background: var(--tl-attend); color: var(--tl-attend-ink); }
+.timeline__blk.is-away { background: var(--tl-away); color: var(--tl-away-ink); }
+
+.timeline__axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: .66rem;
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+
+.timeline__legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 0 0;
+  font-size: .72rem;
+  color: color-mix(in srgb, var(--ink) 58%, transparent);
+}
+.timeline__key {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  vertical-align: -1px;
+}
+.timeline__key.is-attend { background: var(--tl-attend); }
+.timeline__key.is-away { background: var(--tl-away); }
+
+.timeline__words {
+  margin: 10px 0 0;
+  color: color-mix(in srgb, var(--ink) 78%, transparent);
+}
+
+.timeline__ahead {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* --- the wordless step, on the recipe page --- */
+
+.stepic {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+.stepic__act {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px 2px 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+}
+.stepic__glyph { font-size: .95rem; line-height: 1; }
+/* The name is what makes the vocabulary readable on first sight rather than
+ * something to be learned. Twelve glyphs is a small language and still a
+ * language, and an unlabeled one is a quiz. */
+.stepic__name {
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+}
+.stepic__thing { display: inline-flex; }
+.stepic__more,
+.stepic__time {
+  font-size: .68rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--ink) 52%, transparent);
+}
+
+/* Inline, at the end of the sentence, rather than on a line of its own. Seven
+ * steps meant seven empty pills stacked down the page, which read as a column
+ * of unlabeled buttons — more visual weight than the feature deserves next to
+ * the instruction it is offering to read. */
+.steps__text { display: inline; }
+
+.steps__read {
+  margin-left: 6px;
+  padding: 1px 7px;
+  vertical-align: 1px;
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  font-size: .72rem;
+  line-height: 1.6;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .12s ease;
+}
+.steps__read:hover,
+.steps__read.is-on { opacity: 1; }
+.steps__read.is-on { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 15%, transparent); }
+
+/* --- both, in cook mode --- */
+
+.cookmode__ways {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 4px;
+}
+
+.cookpic {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px 7px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cream) 9%, transparent);
+}
+.cookpic__act { display: inline-flex; align-items: center; gap: 6px; }
+.cookpic__glyph { font-size: 1.35rem; line-height: 1; }
+.cookpic__name {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--cream) 72%, transparent);
+}
+.cookpic__thing { display: inline-flex; }
+.cookpic__more {
+  font-size: .8rem;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--cream) 60%, transparent);
+}
+
+.cookmode__speak {
+  padding: 8px 16px;
+  border: 1px solid color-mix(in srgb, var(--cream) 30%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream);
+  font: inherit;
+  font-size: .86rem;
+  cursor: pointer;
+}
+.cookmode__speak.is-on { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 22%, transparent); }
+
+/* A phone at a stove has no room for a picture row and a Read it button on one
+ * line. The pictures win the width; the button drops beneath them. */
+@media (max-width: 520px) {
+  .cookmode__ways { gap: 8px; }
+  .cookmode__speak { width: 100%; }
+}

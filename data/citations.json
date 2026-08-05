@@ -297,6 +297,62 @@
       "checked": "2026-08-04",
       "summary": "Certified standard-size dishwashers use 3.2 gallons of water per cycle or less, against a federal maximum of 5.0 gallons, and the program compares this with up to 27 gallons for washing the same load by hand.",
       "caveat": "The 27-gallon hand-washing figure assumes a running tap. Washing efficiently in a filled basin uses far less than that and closes most of the gap. The dishwasher advantage also depends on running full loads and skipping the pre-rinse."
+    },
+    {
+      "id": "pashler2008",
+      "type": "meta-analysis",
+      "authors": "Pashler, H., McDaniel, M., Rohrer, D. & Bjork, R.",
+      "year": 2008,
+      "title": "Learning styles: concepts and evidence",
+      "publication": "Psychological Science in the Public Interest",
+      "detail": "9(3), 105–119",
+      "doi": "10.1111/j.1539-6053.2009.01038.x",
+      "url": "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x",
+      "checked": "2026-08-05",
+      "summary": "Reviewed the evidence for the meshing hypothesis — that teaching matched to a learner's self-reported style improves outcomes. Found almost no studies using the experimental design capable of testing it, and the few that did produced results contradicting the hypothesis.",
+      "caveat": "A review of study designs rather than a single experiment. It does not claim people have no preferences; it claims that matching instruction to a stated preference has not been shown to help, which is a narrower and better-supported point."
+    },
+    {
+      "id": "clark1991",
+      "type": "meta-analysis",
+      "authors": "Clark, J. M. & Paivio, A.",
+      "year": 1991,
+      "title": "Dual coding theory and education",
+      "publication": "Educational Psychology Review",
+      "detail": "3(3), 149–210",
+      "doi": "10.1007/BF01320076",
+      "url": "https://link.springer.com/article/10.1007/BF01320076",
+      "checked": "2026-08-05",
+      "summary": "Sets out the case that verbal and visual information are processed by separate but connected systems, so material encoded both ways is retrieved more reliably than material encoded either way alone.",
+      "caveat": "A theoretical review with supporting studies, largely from laboratory learning tasks rather than kitchens. The effect is about presenting both channels to everyone, not about matching a channel to a person."
+    },
+    {
+      "id": "mayer2003",
+      "type": "meta-analysis",
+      "authors": "Mayer, R. E. & Moreno, R.",
+      "year": 2003,
+      "title": "Nine ways to reduce cognitive load in multimedia learning",
+      "publication": "Educational Psychologist",
+      "detail": "38(1), 43–52",
+      "doi": "10.1207/S15326985EP3801_6",
+      "url": "https://www.tandfonline.com/doi/abs/10.1207/S15326985EP3801_6",
+      "checked": "2026-08-05",
+      "summary": "Summarizes experiments on presenting words and pictures together, including that related words and images help most when placed near each other, and that adding redundant material can hurt rather than help.",
+      "caveat": "Drawn from short instructional multimedia experiments with students. The direction of the findings is well replicated; the sizes are specific to those materials."
+    },
+    {
+      "id": "kalyuga2003",
+      "type": "meta-analysis",
+      "authors": "Kalyuga, S., Ayres, P., Chandler, P. & Sweller, J.",
+      "year": 2003,
+      "title": "The expertise reversal effect",
+      "publication": "Educational Psychologist",
+      "detail": "38(1), 23–31",
+      "doi": "10.1207/S15326985EP3801_4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1207/S15326985EP3801_4",
+      "checked": "2026-08-05",
+      "summary": "Instructional support that measurably helps beginners becomes useless and then actively harmful as the learner gains experience, because processing the scaffolding costs effort the expert no longer needs to spend.",
+      "caveat": "Established across several domains in controlled instruction studies. It describes a difference that changes with experience, not a fixed trait of a person."
     }
   ]
 }

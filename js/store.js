@@ -31,6 +31,15 @@ function defaultState() {
     },
     prefs: {
       heartMode: true,
+      /**
+       * The extra ways a step can be shown. Both default on, because the whole
+       * point is that they sit alongside the words rather than replacing them —
+       * and because a channel nobody discovers helps nobody. They are here to be
+       * turned off by somebody who finds them noisy, which is a different thing
+       * from asking what kind of learner somebody is.
+       */
+      stepPictures: true,
+      timeChart: true,
       /** Roll for the crave list instead of the heart list. Off by default,
        *  and never sticky across sessions in spirit — it is a Friday switch. */
       treatNight: false,

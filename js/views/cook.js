@@ -39,6 +39,8 @@ import { startTimer, timerFor, formatClock, toggleTimer, subscribeTimers } from 
 import { stepTiming, timerLabel, ringWords } from '../step-timing.js';
 import { recipeTable } from '../recipe-table.js';
 import { setWatchStep, clearWatchStep } from '../watch.js';
+import { stepPicture, pictureWords, worthPicturing } from '../step-picture.js';
+import { canSpeak, say, hush, speaking } from '../read-aloud.js';
 
 /* ------------------------------------------------------------------ *
  * Deriving a timer from the instruction text
@@ -142,7 +144,10 @@ export function render(root, { navigate, params }) {
   // through the router for one caller.
   window.__cookSession = session;
 
-  subscribeToLeaving(root, clearWatchStep);
+  // Leaving takes the wrist and the voice with it. A step still being read out
+  // to an empty kitchen after somebody has closed the screen is the app talking
+  // to itself, and it keeps going for a good twenty seconds.
+  subscribeToLeaving(root, () => { clearWatchStep(); hush(); });
 }
 
 /**
@@ -260,7 +265,9 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
   const timerId = `${base.id}:${i}`;
   session.timer = timing.seconds ? { id: timerId, timing } : null;
 
-  const goTo = (n) => { session.step = Math.max(0, Math.min(total - 1, n)); draw(); };
+  // Moving on stops the voice mid-sentence. Letting it finish means step four
+  // being read over the top of step five's arrival, which is worse than either.
+  const goTo = (n) => { hush(); session.step = Math.max(0, Math.min(total - 1, n)); draw(); };
   // Every redraw is a step change as far as the wrist is concerned.
   session.publish?.();
 
@@ -284,6 +291,15 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
 
         h('h1.cookmode__title', title),
         body ? h('p.cookmode__text', body) : null,
+
+        // Both, at the size this screen is read from. The pictures are the
+        // thing you can take in from three feet back with steam in your face;
+        // the button is for when both hands are in a bowl and scrolling means
+        // wiping them first.
+        h('div.cookmode__ways',
+          cookPicture(current.text, recipe, ingIndex),
+          speakButton(current.text)
+        ),
 
         timing.seconds
           ? timerButton({
@@ -529,6 +545,54 @@ function timerButton({ id, timing, label, recipeId, step }) {
  * scroll position and any selection, and a cook who has scrolled down to finish
  * reading a long step would be snapped back to the top of it every tick.
  */
+/**
+ * The step as pictures, at cooking-screen size.
+ *
+ * Bigger than the recipe page's row and captioned, because the whole claim for
+ * showing this is that it can be read from further away than the sentence can.
+ * A picture row you have to lean in for is just decoration with extra steps.
+ */
+function cookPicture(text, recipe, ingIndex) {
+  if (!ingIndex || getState().prefs.stepPictures === false) return null;
+  const pic = stepPicture(text, recipe, ingIndex);
+  if (!worthPicturing(pic)) return null;
+
+  return h('div.cookpic', { 'aria-hidden': 'true', title: pictureWords(pic) },
+    h('span.cookpic__act',
+      h('span.cookpic__glyph', pic.action.glyph),
+      h('span.cookpic__name', pic.action.name)
+    ),
+    ...pic.things.map(item => h('span.cookpic__thing', foodIcon(item, { size: 34 }))),
+    pic.more ? h('span.cookpic__more', `+${pic.more}`) : null
+  );
+}
+
+/**
+ * Read the step out.
+ *
+ * The whole step, not the trimmed title — the detail in the body is exactly
+ * what somebody with their hands full cannot go and read for themselves, and a
+ * voice that only says the headline has helped with the easy half.
+ *
+ * Stopping when the step changes is handled by the render: a redraw replaces
+ * this button, and the hush below fires on the way out.
+ */
+function speakButton(text) {
+  if (!canSpeak()) return null;
+  const btn = h('button.cookmode__speak', {
+    type: 'button',
+    'aria-label': 'Read this step aloud',
+    onclick: () => {
+      if (speaking()) { hush(); btn.classList.remove('is-on'); btn.textContent = '🔊 Read it'; return; }
+      if (say(text, { onEnd: () => { btn.classList.remove('is-on'); btn.textContent = '🔊 Read it'; } })) {
+        btn.classList.add('is-on');
+        btn.textContent = '■ Stop';
+      }
+    }
+  }, '🔊 Read it');
+  return btn;
+}
+
 function paintTimer(scope, { id, timing }) {
   const button = scope.querySelector('.cookmode__timer');
   if (!button) return;

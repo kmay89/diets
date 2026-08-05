@@ -18,6 +18,7 @@ import { openTasteEditor } from './taste-editor.js';
 import { soundEnabled, setSoundEnabled, prefersReducedMotion, play } from '../feedback.js';
 import { promptInstall, isInstalled, isDismissed } from '../install.js';
 import { ALLERGENS } from '../allergy.js';
+import { canSpeak } from '../read-aloud.js';
 
 export function render(root, { navigate }) {
   const draw = () => mount(root, view(draw, navigate));
@@ -150,6 +151,41 @@ function view(draw, navigate) {
         prefersReducedMotion()
           ? 'Your device asks for reduced motion, so animations are already switched off throughout the app.'
           : 'Animations follow your device\u2019s reduced-motion setting automatically.')
+    ),
+
+    h('section.card.block',
+      h('h2.block__title', 'Ways to read a recipe'),
+      h('p.muted.small',
+        'A recipe here is shown as words, as a diagram, as pictures and as a chart of where the ',
+        'time goes \u2014 all at once, never as a choice. That is deliberate: words and a picture of ',
+        'the same thing are held better together than either alone, while sorting people into ',
+        'visual or verbal types and giving them less has never been shown to help anyone.'),
+      h('label.switch-row',
+        h('input', {
+          type: 'checkbox', checked: state.prefs.stepPictures !== false,
+          onchange: (e) => { setPref('stepPictures', e.target.checked); draw(); }
+        }),
+        h('div',
+          h('strong', 'Pictures on steps'),
+          h('p.muted', 'A row of icons above each instruction \u2014 what you are doing, what goes in, how long. Readable from further away than the sentence is.')
+        )
+      ),
+      h('label.switch-row',
+        h('input', {
+          type: 'checkbox', checked: state.prefs.timeChart !== false,
+          onchange: (e) => { setPref('timeChart', e.target.checked); draw(); }
+        }),
+        h('div',
+          h('strong', 'How the time goes'),
+          h('p.muted', 'The chart that separates the minutes wanting your hands from the minutes the oven is working, so you can see whether an evening is really gone.')
+        )
+      ),
+      h('p.fine-print',
+        canSpeak()
+          ? 'Reading a step aloud uses the voice built into this device. Nothing is sent anywhere \u2014 the app has never made a network call of its own, and a cloud voice would be the first.'
+          : 'This device has no speech synthesizer, so the read-aloud buttons are not shown.'),
+      h('p.fine-print',
+        h('a', { href: '#/why' }, 'The research behind this \u2192'))
     ),
 
     h('section.card.block',
