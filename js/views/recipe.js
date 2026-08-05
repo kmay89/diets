@@ -166,9 +166,15 @@ export function render(root, { navigate, params }) {
 
       ingredientList(recipe, st, scale, draw),
 
-      // The flavor panel sits directly under the ingredients, because that is
-      // where a swap happens and the whole point of it is to answer "is this
-      // still balanced" in the same breath as the change.
+      // What you do with them, immediately under what they are. Reading a
+      // recipe is two questions in that order, and everything else on this page
+      // — the flavor panel, the proteins, the forks — is answering a question
+      // somebody only has once they know what they are being asked to do.
+      stepsBlock(recipe, ingIndex, scale, draw),
+
+      // The flavor panel next, because a swap happens in the ingredient list
+      // just above and the whole point of it is to answer "is this still
+      // balanced" in the same breath as the change.
       balanceBlock(profile, ingIndex, {
         delta,
         added,
@@ -201,8 +207,6 @@ export function render(root, { navigate, params }) {
           draw();
         }
       }),
-
-      stepsBlock(recipe, ingIndex, scale, draw),
 
       teachesBlock(recipe),
       tipsBlock(recipe),
@@ -561,22 +565,22 @@ function forkBlock(fork, kind, scale, on, onToggle, state, draw, conflicts = [])
  * remembered for the session, because somebody who prefers one prefers it for
  * every recipe.
  */
-let methodAsTable = false;
-
 function stepsBlock(recipe, ingIndex, scale, draw) {
   const table = ingIndex ? methodTableBlock(recipe, ingIndex, { scale }) : null;
 
   return h('section.card.block',
-    h('div.balance__head',
-      h('h2.block__title', 'Method'),
-      table
-        ? h('div.chip-row.chip-row--tight',
-            chip('Steps', { on: !methodAsTable, onclick: () => { methodAsTable = false; play('tap'); draw(); } }),
-            chip('Diagram', { on: methodAsTable, onclick: () => { methodAsTable = true; play('tap'); draw(); } })
-          )
-        : null
-    ),
-    methodAsTable && table ? table : h('ol.steps', ...recipe.steps.map(s => h('li', s)))
+    h('h2.block__title', 'Method'),
+
+    // Both, always, in that order. These were a Steps/Diagram toggle, which
+    // made somebody choose which half of the answer they wanted — and they are
+    // not alternatives. The diagram says what meets what and how many things
+    // are on the go at once, which a numbered list genuinely cannot show; the
+    // list says what to actually do, which the diagram only gestures at. You
+    // read the shape, then you read the sentences, the way you read a map
+    // before directions.
+    table,
+    table ? h('p.method__bridge', 'And in words:') : null,
+    h('ol.steps', ...recipe.steps.map(s => h('li', s)))
   );
 }
 

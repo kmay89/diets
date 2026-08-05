@@ -37,6 +37,7 @@ import { servingEquivalents } from '../nutrition.js';
 import { stepsWithAmounts } from '../cook-steps.js';
 import { startTimer, timerFor, formatClock, toggleTimer, subscribeTimers } from '../timers.js';
 import { stepTiming, timerLabel, ringWords } from '../step-timing.js';
+import { recipeTable } from '../recipe-table.js';
 import { setWatchStep, clearWatchStep } from '../watch.js';
 
 /* ------------------------------------------------------------------ *
@@ -295,7 +296,7 @@ function screen({ recipe, base, texts, plan, lines, ingIndex, servings, session,
           : null
       ),
 
-      minimap(lines, plan, i, ingIndex, goTo)
+      minimap(recipe, lines, plan, i, ingIndex, goTo)
     ),
 
     h('footer.cookmode__foot',
@@ -365,29 +366,115 @@ function amountsPanel(wants) {
  * going in now, solid is already in, faint is still to come. Tapping a row
  * jumps to the step that calls for it.
  */
-function minimap(lines, plan, current, ingIndex, goTo) {
+function minimap(recipe, lines, plan, current, ingIndex, goTo) {
   const firstStepOf = new Map();
   const nowSet = new Set((plan[current]?.wants || []).map(w => w.line.ing));
   plan.forEach((step, index) => {
     for (const w of step.wants) if (!firstStepOf.has(w.line.ing)) firstStepOf.set(w.line.ing, index);
   });
 
+  const table = recipeTable(recipe, ingIndex);
+
+  // The diagram groups ingredients by what goes in together, which is a better
+  // order for this strip than the shopping order anyway — so when there is one,
+  // it drives the rows and the brackets line up by construction.
+  //
+  // The two lists are not the same set: the diagram covers the recipe as
+  // written, and cook mode also shows whichever fork is switched on. Matching
+  // on line identity rather than on position keeps the brackets true and lets
+  // the fork's ingredients sit underneath with no bracket, which is honest —
+  // the diagram never described them.
+  const ordered = table
+    ? [...table.rows.map(r => r.line), ...lines.filter(l => !table.rows.some(r => r.line === l))]
+    : lines;
+
+  const rows = ordered.map(line => {
+    const item = ingIndex.get(line.ing);
+    if (!item) return null;
+    const at = firstStepOf.get(line.ing);
+    return {
+      line, item, at,
+      state: nowSet.has(line.ing) ? 'now' : at != null && at < current ? 'done' : 'later'
+    };
+  }).filter(Boolean);
+
   return h('aside.minimap', { 'aria-label': 'Where you are in the ingredients' },
-    ...lines.map(line => {
-      const item = ingIndex.get(line.ing);
-      if (!item) return null;
-      const at = firstStepOf.get(line.ing);
-      const state = nowSet.has(line.ing) ? 'now' : at != null && at < current ? 'done' : 'later';
+    h('div.minimap__grid',
+      h('div.minimap__rows',
+        ...rows.map(row => h('button', {
+          type: 'button',
+          class: `minimap__row is-${row.state}`,
+          title: row.item.name,
+          'aria-label': `${row.item.name}${row.at != null ? `, step ${row.at + 1}` : ''}`,
+          onclick: () => { if (row.at != null) { play('tap'); goTo(row.at); } }
+        },
+          h('span.minimap__bar'),
+          h('span.minimap__name', row.item.name)
+        ))
+      ),
+      brackets(table, rows, current, goTo)
+    )
+  );
+}
+
+/**
+ * The method diagram, shrunk into the strip beside the ingredients.
+ *
+ * The recipe page already draws this full size: brackets to the right of the
+ * ingredient list, each one an operation swallowing everything that has gone
+ * into it so far. Here it is the same structure at a tenth the width, unlabeled
+ * except for the step you are standing in — which is exactly what a text
+ * editor's minimap is, and exactly what this strip was missing.
+ *
+ * A flat list of ingredient names answers "what is left". The brackets answer
+ * "how do these come together, and how many things are on the go at once",
+ * which is the question a cook has at step four of a recipe with three pans.
+ *
+ * Silent when the diagram cannot be trusted. `recipeTable` already refuses to
+ * draw below its confidence floor, and a shrunk guess is a guess nobody can
+ * check.
+ */
+function brackets(table, rows, current, goTo) {
+  if (!table) return null;
+
+  // Where each drawn line ended up in the strip. A bracket spanning rows 2-5 of
+  // the diagram has to span the same three ingredients here, and after a fork
+  // has been appended those are not the same numbers.
+  const at = new Map(rows.map((row, index) => [row.line, index]));
+
+  // The track sizes go on the element rather than into an injected <style>.
+  // A stylesheet emitted per render is global: with two recipes visited in one
+  // session the last one's column count won everywhere, and the brackets ran
+  // off the side of the strip.
+  return h('div.minimap__brackets', {
+    'aria-hidden': 'true',
+    style: {
+      gridTemplateRows: `repeat(${rows.length}, 1fr)`,
+      gridTemplateColumns: `repeat(${table.columns}, 1fr)`
+    }
+  },
+    ...table.cells.map(cell => {
+      const lo = at.get(table.rows[cell.lo]?.line);
+      const hi = at.get(table.rows[cell.hi]?.line);
+      if (lo == null || hi == null) return null;
       return h('button', {
-        type: 'button',
-        class: `minimap__row is-${state}`,
-        title: item.name,
-        'aria-label': `${item.name}${at != null ? `, step ${at + 1}` : ''}`,
-        onclick: () => { if (at != null) { play('tap'); goTo(at); } }
+      type: 'button',
+      class: `minimap__cell ${cell.step === current ? 'is-now' : cell.step < current ? 'is-done' : ''}`,
+      style: {
+        gridRow: `${Math.min(lo, hi) + 1} / ${Math.max(lo, hi) + 2}`,
+        gridColumn: `${cell.col + 1}`
       },
-        h('span.minimap__bar'),
-        h('span.minimap__name', item.name)
-      );
+      title: `${cell.verb}${cell.time ? ` · ${cell.time}` : ''}`,
+      tabindex: '-1',
+      onclick: () => { play('tap'); goTo(cell.step); }
+    },
+      // No labels. A column is eighteen pixels wide here, which turns every
+      // verb into "C…" — and the words are already on the left in the largest
+      // type on the screen. What this strip adds is the shape: which pans are
+      // running in parallel, how far in you are, and what is still to merge.
+      // The step you are standing in is the gold one.
+      null
+    );
     }).filter(Boolean)
   );
 }

@@ -66,6 +66,25 @@
   --font-display: 'Newsreader', ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
 
   --tabbar-h: 62px;
+  --appbar-h: 58px;
+
+  /*
+   * These seven were used across the stylesheet and never declared, which in
+   * CSS is silent: `background: var(--green-surface)` on an undefined property
+   * is not an error, it is `transparent`. So cook mode — which the code
+   * comments describe as a dark field that will not glare in a dim kitchen —
+   * has been rendering as a transparent overlay with inherited text since it
+   * was written, and every primary button has been an outline. Nothing looked
+   * broken enough on a phone to notice; putting a sidebar underneath cook mode
+   * made it obvious immediately.
+   */
+  --green-surface: #244C3F;
+  --green-surface-hover: #2F6B52;
+  --cream: #F3E8CF;
+  --gold: #B0812A;
+  --red: #B4453A;
+  --slate: #5C7A8C;
+  --radius-lg: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -3451,7 +3470,7 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 @media (min-width: 768px) {
   .cookmode__body { padding: 32px 40px; }
   .cookmode__title { max-width: 20ch; }
-  .minimap { min-width: 200px; }
+  .minimap { width: clamp(240px, 24vw, 340px); }
 }
 
 /* A pointer is not a fingertip. Where there is one, the hit targets can relax
@@ -3459,6 +3478,93 @@ body:has(.cookmode):has(.timer-dock.is-ringing) .cookmode__foot { padding-bottom
 @media (hover: hover) and (pointer: fine) {
   .tabbar__item:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
   .minimap__row:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Cook mode against a sidebar
+ * ------------------------------------------------------------------ *
+ *
+ * Cook mode is a full-attention screen — one instruction, read from a step
+ * back, nothing else competing. On a phone it covered the tab bar and that was
+ * the end of it. With a sidebar the same rule applies and has to be said out
+ * loud: navigation is exactly what somebody standing at a stove does not need,
+ * and a persistent nav rail beside a cooking screen is a row of places to
+ * accidentally tap with a wet finger.
+ */
+body:has(.cookmode) .tabbar,
+body:has(.cookmode) .appbar,
+body:has(.cookmode) .install-banner { display: none; }
+body:has(.cookmode) .main { margin-left: 0; }
+/* And the dock re-centers, because the thing it was offset for is gone. */
+body:has(.cookmode) .timer-dock { left: 50%; }
+
+/* ------------------------------------------------------------------ *
+ * The method diagram, shrunk into the cook-mode strip
+ * ------------------------------------------------------------------ *
+ *
+ * The same brackets the recipe page draws full size, at a tenth the width and
+ * unlabeled except for the step you are standing in. A flat list of names
+ * answers "what is left"; the brackets answer "how do these come together, and
+ * how many things are on the go at once" — which is the question a cook has at
+ * step four of a recipe with three pans.
+ */
+.minimap__grid { display: flex; gap: 6px; align-items: stretch; height: 100%; }
+.minimap__rows { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+
+.minimap__brackets {
+  flex: 0 0 42%;
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+.minimap__cell {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid color-mix(in srgb, var(--cream) 26%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--cream) 26%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--cream) 26%, transparent);
+  background: color-mix(in srgb, var(--cream) 5%, transparent);
+  border-radius: 3px 0 0 3px;
+  color: var(--cream);
+  font: inherit;
+  cursor: pointer;
+  overflow: hidden;
+}
+.minimap__cell.is-done {
+  background: color-mix(in srgb, var(--cream) 13%, transparent);
+  border-color: color-mix(in srgb, var(--cream) 38%, transparent);
+}
+.minimap__cell.is-now {
+  background: color-mix(in srgb, var(--gold) 40%, transparent);
+  border-color: var(--gold);
+}
+/*
+ * Not on a phone. The strip there is 26 pixels wide, which gives a six-column
+ * diagram four pixels a column — that is not a shape, it is noise beside the
+ * thing it was meant to clarify. The phone keeps the ingredient bars, which is
+ * what fits and what that strip was for; the diagram appears from tablet width
+ * up, where the columns are wide enough to read as brackets.
+ */
+@media (max-width: 620px) {
+  .minimap__brackets { display: none; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Method: the shape and then the sentences
+ * ------------------------------------------------------------------ */
+
+/* These were a Steps/Diagram toggle, which made somebody pick which half of the
+ * answer they wanted. They are not alternatives — you read the shape, then you
+ * read the words, the way you read a map before directions. */
+.method__bridge {
+  margin: 20px 0 6px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 48%, transparent);
 }
 
 /* ------------------------------------------------------------------ *
