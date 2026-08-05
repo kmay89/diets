@@ -69,7 +69,7 @@ test('every channel can be written down as words', () => {
   // the page rather than a label tucked into an attribute.
   assert.match(src('js/timeline.js'), /export function timelineWords/);
   assert.match(src('js/step-picture.js'), /export function pictureWords/);
-  assert.match(src('js/views/timeline-panel.js'), /timeline__words/);
+  assert.match(src('js/views/timeline-panel.js'), /timechart__words/);
 });
 
 test('nothing in the research copy relies on markup the page cannot render', () => {

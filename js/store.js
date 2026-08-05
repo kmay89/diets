@@ -40,6 +40,12 @@ function defaultState() {
        */
       stepPictures: true,
       timeChart: true,
+      /**
+       * The "at the table" advice, offered inside the method at the moments the
+       * pot does not need you, instead of as a countdown underneath it. Some
+       * people want the method and nothing else in it; this is the switch.
+       */
+      tableMoments: true,
       /** Roll for the crave list instead of the heart list. Off by default,
        *  and never sticky across sessions in spirit — it is a Friday switch. */
       treatNight: false,

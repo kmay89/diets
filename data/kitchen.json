@@ -31,35 +31,45 @@
       "label": "2 to 3",
       "short": "Tiny hands",
       "blurb": "Standing on a chair, in the way, delighted. Everything at this age is about touching food and being somewhere useful.",
-      "supervision": "Beside an adult the whole time, and nothing near heat."
+      "supervision": "Beside an adult the whole time, and nothing near heat.",
+      "from": 2,
+      "to": 3
     },
     {
       "id": "age.small",
       "label": "4 to 5",
       "short": "Small hands",
       "blurb": "Old enough to follow one instruction at a time and proud of finishing something. This is the age where measuring and mixing genuinely help.",
-      "supervision": "Adult in the kitchen, heat and blades still off limits."
+      "supervision": "Adult in the kitchen, heat and blades still off limits.",
+      "from": 4,
+      "to": 5
     },
     {
       "id": "age.middle",
       "label": "6 to 8",
       "short": "Real jobs",
       "blurb": "Can read a step, use a table knife on soft things, and be trusted with a task while you do something else in the same room.",
-      "supervision": "Adult nearby. First lessons with a peeler and scissors happen here."
+      "supervision": "Adult nearby. First lessons with a peeler and scissors happen here.",
+      "from": 6,
+      "to": 8
     },
     {
       "id": "age.older",
       "label": "9 to 12",
       "short": "At the stove",
       "blurb": "Ready for real knives and real heat, taught properly rather than avoided. Most children this age can cook a whole dish with somebody in the room.",
-      "supervision": "Taught once, then watched, then trusted."
+      "supervision": "Taught once, then watched, then trusted.",
+      "from": 9,
+      "to": 12
     },
     {
       "id": "age.teen",
       "label": "13 and up",
       "short": "Cooking dinner",
       "blurb": "Capable of the whole recipe, start to finish, including the deciding. The useful thing an adult can do here is get out of the way and eat what is made.",
-      "supervision": "None required. Being asked to cook one dinner a week is how this becomes a life skill instead of a chore."
+      "supervision": "None required. Being asked to cook one dinner a week is how this becomes a life skill instead of a chore.",
+      "from": 13,
+      "to": 99
     }
   ],
   "jobs": [

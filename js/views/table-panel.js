@@ -21,9 +21,17 @@ import { tableFor } from '../table.js';
  * marks stay relative, which is what a recipe page wants until somebody says
  * when they are eating.
  */
-export function tableBlock(recipe, { perServing, balance, serveAt = null, onSetTime = null } = {}) {
+export function tableBlock(recipe, { perServing, balance, serveAt = null, onSetTime = null, inMethod = true } = {}) {
   const t = tableFor(recipe, { perServing, balance, serveAt });
   if (!t) return null;
+
+  // Setting the table and warming the plates are now offered inside the method,
+  // on the step where the pot is working without you. Printing them here too
+  // would be the same advice twice on one page, and the second copy is the one
+  // phrased as a countdown to a dinner that has not started — which is what made
+  // this read as a chore list. What stays is the shape of the evening: when to
+  // start, when your hands are needed, when everybody sits down.
+  const marks = inMethod ? t.timeline.filter(m => m.phase === 'plan') : t.timeline;
 
   return h('section.card.block.table-block',
     h('h2.block__title', 'At the table'),
@@ -37,7 +45,7 @@ export function tableBlock(recipe, { perServing, balance, serveAt = null, onSetT
               serveAt ? clock(serveAt) : 'Set a time')
           : null
       ),
-      ...t.timeline.map(mark => h('div.timeline__row',
+      ...marks.map(mark => h('div.timeline__row',
         h('span.timeline__at', mark.time ? clock(mark.time) : (mark.at ? `−${mark.at}m` : 'now')),
         h('div.timeline__body',
           h('p.timeline__title', mark.title),

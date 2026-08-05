@@ -35,6 +35,8 @@ import { avoidedSet, recipeConflicts, forkConflicts, conflictPhrase } from '../a
 import { stepPicture, pictureWords, worthPicturing } from '../step-picture.js';
 import { canSpeak, say, hush } from '../read-aloud.js';
 import { timelineBlock } from './timeline-panel.js';
+import { momentsFor } from '../cook-moments.js';
+import { momentLine } from './moment-line.js';
 
 /* ------------------------------------------------------------------ *
  * Detail
@@ -221,7 +223,7 @@ export function render(root, { navigate, params }) {
 
       teachesBlock(recipe),
       tipsBlock(recipe),
-      kidsBlock(recipe),
+      kidsBlock(recipe, { members: st.household.members }),
 
       recipe.variations?.length
         ? block('Variations', h('ul.tight', ...recipe.variations.map(v => h('li', v))))
@@ -229,7 +231,7 @@ export function render(root, { navigate, params }) {
 
       notesBlock(recipe),
 
-      tableBlock(recipe, { perServing: nut.perServing, balance: profile }),
+      tableBlock(recipe, { perServing: nut.perServing, balance: profile, inMethod: st.prefs.tableMoments !== false }),
 
       nutritionBlock(recipe, nut, nutOmni, heart, st),
 
@@ -578,6 +580,9 @@ function forkBlock(fork, kind, scale, on, onToggle, state, draw, conflicts = [])
  */
 function stepsBlock(recipe, ingIndex, scale, draw) {
   const table = ingIndex ? methodTableBlock(recipe, ingIndex, { scale }) : null;
+  const moments = getState().prefs.tableMoments === false
+    ? new Map()
+    : new Map(momentsFor(recipe).map(m => [m.step, m]));
 
   return h('section.card.block',
     h('h2.block__title', 'Method'),
@@ -604,7 +609,10 @@ function stepsBlock(recipe, ingIndex, scale, draw) {
         return h('li',
           pic && worthPicturing(pic) ? pictureRow(pic) : null,
           h('span.steps__text', s),
-          readButton(s)
+          readButton(s),
+          // What is worth doing during this step, if this is one of the steps
+          // where the pot is working on its own.
+          moments.get(i) ? momentLine(moments.get(i)) : null
         );
       })
     )
