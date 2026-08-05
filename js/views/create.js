@@ -40,6 +40,13 @@ const ENTRIES = [
     tint: 'clay'
   },
   {
+    href: '#/new',
+    name: 'Add your own',
+    body: 'Paste one in from anywhere, or press it together here. Either way it ends up in the same shape as the rest, so it gets the flavor panel, cook mode and the diagram like any other dish.',
+    icons: ['ing.flour.ap', 'ing.egg'],
+    tint: 'green'
+  },
+  {
     href: '#/browse',
     name: 'Start from a recipe',
     body: 'Browse the collection, then fork it at the table — the vegetarian base everyone eats, and one extra pan for whoever wants meat.',

@@ -24,6 +24,8 @@ export const ROUTE_PATTERNS = [
   { id: 'list', pattern: /^#\/list$/ },
   { id: 'garden', pattern: /^#\/garden$/ },
   { id: 'book', pattern: /^#\/book$/ },
+  { id: 'newRecipe', pattern: /^#\/new$/ },
+  { id: 'editRecipe', pattern: /^#\/edit\/(.+)$/ },
   { id: 'settings', pattern: /^#\/settings$/ },
   { id: 'why', pattern: /^#\/why$/ },
   { id: 'learn', pattern: /^#\/learn$/ }

@@ -41,6 +41,7 @@ import * as pantryView from './views/pantry.js';
 import * as listView from './views/list.js';
 import * as gardenView from './views/garden.js';
 import * as bookView from './views/book.js';
+import * as builderView from './views/recipe-builder.js';
 import * as settingsView from './views/settings.js';
 import * as whyView from './views/why.js';
 import * as learnView from './views/learn.js';
@@ -62,6 +63,8 @@ const VIEWS = {
   list: () => ({ render: listView.render, params: {} }),
   garden: () => ({ render: gardenView.render, params: {} }),
   book: () => ({ render: bookView.render, params: {} }),
+  newRecipe: () => ({ render: builderView.render, params: {} }),
+  editRecipe: (m) => ({ render: builderView.render, params: { id: m[1] } }),
   settings: () => ({ render: settingsView.render, params: {} }),
   why: () => ({ render: whyView.render, params: {} }),
   learn: () => ({ render: learnView.render, params: {} })
