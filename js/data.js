@@ -29,6 +29,24 @@ const getJson = async (path) => {
   return res.json();
 };
 
+/**
+ * Fold the household's own recipes into the collection.
+ *
+ * Called after the data loads and again whenever one is saved or deleted. The
+ * whole design of `js/myrecipes.js` rests on this: a recipe you wrote is not a
+ * second-class kind of recipe, it is in the index under the same shape, which
+ * is what gets it the flavor panel, cook mode, the diagram, the substitutions
+ * and the shopping list without a single one of them being special-cased.
+ *
+ * Yours are put in front, so a search for a title you also gave a built-in dish
+ * finds the one you wrote first. That is the right default: you named it.
+ */
+export function mergeMyRecipes(mine = []) {
+  if (!db) return;
+  db.recipes = [...mine, ...db.builtIn];
+  db.recipeIndex = new Map(db.recipes.map(r => [r.id, r]));
+}
+
 export async function loadAll() {
   if (db) return db;
 
@@ -52,6 +70,8 @@ export async function loadAll() {
     ingIndex,
     recipes,
     recipeIndex,
+    /** The collection as shipped, kept apart so merging yours in is repeatable. */
+    builtIn: recipes,
     aisles: aisles.aisles,
     aisleIndex: new Map(aisles.aisles.map(a => [a.id, a])),
     storeLayouts: aisles.storeLayouts,

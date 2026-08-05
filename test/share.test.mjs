@@ -134,3 +134,37 @@ test('the sitemap lists the home page and every recipe', () => {
     assert.ok(xml.includes(`<loc>${origin}/r/${slugOf(r.id)}/</loc>`), `sitemap missing ${r.id}`);
   }
 });
+
+/* ------------------------------------------------------------------ *
+ * The generator against the clock
+ * ------------------------------------------------------------------ */
+
+test('nothing generated here changes because the date changed', () => {
+  // CI regenerates the share pages and the sitemap and fails if the result
+  // differs from what is committed. That check is only meaningful if the
+  // output is a function of the recipes — the moment anything is stamped with
+  // the time of the build, the file goes stale at midnight and every pull
+  // request opened on a new day fails on a diff nobody wrote.
+  //
+  // That is exactly what happened: <lastmod> carried the build date, so a
+  // perfectly good change failed on 243 lines that were all the same date bump.
+  // A check that fails for reasons unrelated to the change is one people learn
+  // to re-run rather than read, which costs more than the check is worth.
+  const sitemap = readFileSync(join(root, 'sitemap.xml'), 'utf8');
+  const today = new Date().toISOString().slice(0, 10);
+  const thisYear = String(new Date().getFullYear());
+
+  assert.doesNotMatch(sitemap, new RegExp(today), 'the sitemap carries the date it was built');
+  assert.doesNotMatch(sitemap, /<lastmod>/, 'lastmod is back, and it will go stale tonight');
+
+  for (const recipe of recipes.slice(0, 12)) {
+    const page = join(root, 'r', recipe.id.replace(/^rec\./, ''), 'index.html');
+    if (!existsSync(page)) continue;
+    const html = readFileSync(page, 'utf8');
+    assert.doesNotMatch(html, new RegExp(today),
+      `${recipe.id}'s share page carries the date it was built`);
+    // A year on its own is fine in prose; a full ISO date is the tell.
+    assert.doesNotMatch(html, new RegExp(`${thisYear}-\\d\\d-\\d\\d`),
+      `${recipe.id}'s share page carries a build timestamp`);
+  }
+});
